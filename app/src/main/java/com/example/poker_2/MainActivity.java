@@ -2,7 +2,11 @@ package com.example.poker_2;
 
 import static java.lang.Thread.sleep;
 
+import android.content.Context;
+import android.content.res.AssetFileDescriptor;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -36,6 +41,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int d8 = 3; int dob8;
     int d9 = 2; int dob9;
     int d10 = 1; int dob10;
+
+    int delay1 = 500;
+    int delay2 = 1000;
+
+    int delay3 = 2000;
+
+    Timer timer1 = new Timer();
+    Timer timer2 = new Timer();
+
+    MediaPlayer audiokredit;
+    MediaPlayer audioulog;
+    MediaPlayer audioautohold;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ImageView poljej4 = findViewById(R.id.polje_j4);
         ImageView poljej5 = findViewById(R.id.polje_j5);
 
-        new Timer().schedule(new TimerTask() {
+        timer1.schedule(new TimerTask() {
             @Override
             public void run() {
                 runOnUiThread(new Runnable() {
@@ -85,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                             desnodole.setVisibility(View.INVISIBLE);
                                         }
                                     }
-                                }, 500);
+                                }, delay1);
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
@@ -100,32 +117,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                             desnodole.setVisibility(View.INVISIBLE);
                                         }
                                     }
-                                }, 1000);
+                                }, delay2);
                         }
                     });
                 }
         }, 0,1000);
 
-        new Timer().schedule(new TimerTask() {
+        timer2.schedule(new TimerTask() {
             @Override
             public void run() {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        new android.os.Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        levodole.setVisibility(View.INVISIBLE);
-                                        desnodole.setVisibility(View.VISIBLE);
-                                    }
-                                }, 500);
-                        new android.os.Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        levodole.setVisibility(View.VISIBLE);
-                                        desnodole.setVisibility(View.INVISIBLE);
-                                    }
-                                }, 1000);
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
@@ -160,8 +163,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
-                                        polje1.setVisibility(View.VISIBLE);
                                         poljej1.setVisibility(View.INVISIBLE);
+                                        polje1.setVisibility(View.VISIBLE);
                                         polje2.setVisibility(View.INVISIBLE);
                                         poljej2.setVisibility(View.VISIBLE);
                                     }
@@ -169,8 +172,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
-                                        polje2.setVisibility(View.VISIBLE);
                                         poljej2.setVisibility(View.INVISIBLE);
+                                        polje2.setVisibility(View.VISIBLE);
                                         polje3.setVisibility(View.INVISIBLE);
                                         poljej3.setVisibility(View.VISIBLE);
                                     }
@@ -178,8 +181,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
-                                        polje3.setVisibility(View.VISIBLE);
                                         poljej3.setVisibility(View.INVISIBLE);
+                                        polje3.setVisibility(View.VISIBLE);
                                         polje4.setVisibility(View.INVISIBLE);
                                         poljej4.setVisibility(View.VISIBLE);
                                     }
@@ -187,8 +190,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
-                                        polje4.setVisibility(View.VISIBLE);
                                         poljej4.setVisibility(View.INVISIBLE);
+                                        polje4.setVisibility(View.VISIBLE);
                                         polje5.setVisibility(View.INVISIBLE);
                                         poljej5.setVisibility(View.VISIBLE);
                                     }
@@ -224,8 +227,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(c<4901) {
                 c+=100;
                 c1.setText(Integer.toString(c));
-                MediaPlayer audiokredit = MediaPlayer.create(MainActivity.this, R.raw.kredit);
-                audiokredit.start();
+                kredit();
                 return;
             }
             else {
@@ -272,8 +274,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 d_8.setText(Integer.toString(dob8));
                 d_9.setText(Integer.toString(dob9));
                 d_10.setText(Integer.toString(dob10));
-                MediaPlayer audioulog = MediaPlayer.create(MainActivity.this, R.raw.ulog);
-                audioulog.start();
+                ulog();
                 return;
             }
         }
@@ -295,8 +296,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
+
+    void kredit() {
+        if (audiokredit != null) {
+            audiokredit.stop();
+            audiokredit.release();
+        }
+        audiokredit = MediaPlayer.create(getApplicationContext(), R.raw.kredit);
+        audiokredit.start();
+    }
+    void ulog() {
+        if (audioulog != null) {
+            audioulog.stop();
+            audioulog.release();
+        }
+        audioulog = MediaPlayer.create(getApplicationContext(), R.raw.ulog);
+        audioulog.start();
+    }
     void autohold() {
-        MediaPlayer audioautohold = MediaPlayer.create(MainActivity.this, R.raw.autohold);
+        if (audioautohold != null) {
+            audioautohold.stop();
+            audioautohold.release();
+        }
+        audioautohold = MediaPlayer.create(getApplicationContext(), R.raw.autohold);
         audioautohold.start();
     }
 }
