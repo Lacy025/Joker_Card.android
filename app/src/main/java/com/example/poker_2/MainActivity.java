@@ -42,11 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int d9 = 2; int dob9;
     int d10 = 1; int dob10;
 
-    int delay1 = 500;
-    int delay2 = 1000;
-
-    int delay3 = 2000;
-
     Timer timer1 = new Timer();
     Timer timer2 = new Timer();
 
@@ -69,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView desnodole = findViewById(R.id.desno);
         TextView jokercard = findViewById(R.id.joker);
         TextView cardjoker = findViewById(R.id.card);
+        TextView centar1 = findViewById(R.id.centar1);
 
         ImageView polje1 = findViewById(R.id.polje_1);
         ImageView polje2 = findViewById(R.id.polje_2);
@@ -92,21 +88,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 new Runnable() {
                                     public void run() {
                                         if(c==0) {
-                                            levodole.setVisibility(View.INVISIBLE);
-                                            desnodole.setVisibility(View.VISIBLE);
-                                        }
-                                        else {
-                                            levodole.setText("");
-                                            desnodole.setText("");
-                                            levodole.setVisibility(View.INVISIBLE);
-                                            desnodole.setVisibility(View.INVISIBLE);
-                                        }
-                                    }
-                                }, delay1);
-                        new android.os.Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        if(c==0) {
                                             levodole.setVisibility(View.VISIBLE);
                                             desnodole.setVisibility(View.INVISIBLE);
                                         }
@@ -115,13 +96,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                             desnodole.setText("");
                                             levodole.setVisibility(View.INVISIBLE);
                                             desnodole.setVisibility(View.INVISIBLE);
+                                            centar1.setText("BIRAJTE ULOG");
+                                            centar1.setVisibility(View.VISIBLE);
                                         }
                                     }
-                                }, delay2);
+                                }, 1000);
+                        new android.os.Handler().postDelayed(
+                                new Runnable() {
+                                    public void run() {
+                                        if(c==0) {
+                                            levodole.setVisibility(View.INVISIBLE);
+                                            desnodole.setVisibility(View.VISIBLE);
+                                        }
+                                        else {
+                                            levodole.setText("");
+                                            desnodole.setText("");
+                                            levodole.setVisibility(View.INVISIBLE);
+                                            desnodole.setVisibility(View.INVISIBLE);
+                                            centar1.setText("PRITISNITE DELJENJE");
+                                            centar1.setVisibility(View.VISIBLE);
+                                        }
+                                    }
+                                }, 2000);
                         }
                     });
                 }
-        }, 0,1000);
+        }, 0, 2000);
 
         timer2.schedule(new TimerTask() {
             @Override
