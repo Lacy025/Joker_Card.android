@@ -285,10 +285,10 @@
 
     <LinearLayout
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp"
-        android:layout_width="700dp"
-        android:layout_height="200dp"
-        android:orientation="vertical">
+        android:layout_marginBottom="150dp"
+        android:layout_width="760dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/joker"
@@ -301,56 +301,208 @@
             android:textColor="#FF0303"
             android:textSize="90dp" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/kasa"
+            android:layout_width="96dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="-24dp"
+            android:backgroundTint="#FF0303"
+            android:gravity="center"
+            android:text="BRISANJE KASIRANJE"
+            android:textColor="#FBF701"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_width="760dp"
+        android:layout_height="110dp"
+        android:orientation="horizontal">
+
         <TextView
             android:id="@+id/card"
             android:layout_width="480dp"
             android:layout_height="100dp"
-            android:gravity="bottom|right"
+            android:gravity="top|right"
             android:text="CARD"
             android:fontFamily="arial"
             android:textStyle="italic"
             android:textColor="#FF0303"
             android:textSize="90dp" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deljenje"
+            android:layout_width="96dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:backgroundTint="#FF0303"
+            android:gravity="center"
+            android:text="DELJENJE POLOVINA"
+            android:textColor="#FBF701"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="700dp"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:gravity="right"
+            android:text=""
+            android:textColor="#FAD2B3"
+            android:textSize="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stop1"
+            android:layout_width="82dp"
+            android:layout_height="36dp"
+            android:backgroundTint="#404040"
+            android:gravity="bottom|center"
+            android:text="STOP"
+            android:textColor="#FBF701"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="20dp"
+            android:gravity="right"
+            android:text=""
+            android:textColor="#FAD2B3"
+            android:textSize="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stop2"
+            android:layout_width="82dp"
+            android:layout_height="36dp"
+            android:backgroundTint="#404040"
+            android:gravity="bottom|center"
+            android:text="STOP"
+            android:textColor="#FBF701"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="20dp"
+            android:gravity="right"
+            android:text=""
+            android:textColor="#FAD2B3"
+            android:textSize="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stop3"
+            android:layout_width="82dp"
+            android:layout_height="36dp"
+            android:backgroundTint="#404040"
+            android:gravity="bottom|center"
+            android:text="STOP"
+            android:textColor="#FBF701"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="20dp"
+            android:gravity="right"
+            android:text=""
+            android:textColor="#FAD2B3"
+            android:textSize="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stop4"
+            android:layout_width="82dp"
+            android:layout_height="36dp"
+            android:backgroundTint="#404040"
+            android:gravity="bottom|center"
+            android:text="STOP"
+            android:textColor="#FBF701"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="46dp"
+            android:layout_height="20dp"
+            android:gravity="right"
+            android:text=""
+            android:textColor="#FAD2B3"
+            android:textSize="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stop5"
+            android:layout_width="82dp"
+            android:layout_height="36dp"
+            android:backgroundTint="#404040"
+            android:gravity="bottom|center"
+            android:text="STOP"
+            android:textColor="#FBF701"
+            android:textSize="15dp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:layout_width="700dp"
-        android:layout_height="36dp"
+        android:layout_height="20dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/levo"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:layout_width="94dp"
+            android:layout_height="20dp"
             android:gravity="bottom|left"
             android:text="BAČI LACIKA"
             android:fontFamily="arial"
-            android:textColor="#FF0303"
-            android:textSize="24dp"
-            android:visibility="invisible"/>
-        <TextView
-            android:id="@+id/centar1"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
-            android:gravity="bottom|center"
-            android:text="BIRAJTE ULOG"
-            android:fontFamily="arial"
-            android:textColor="#FF0303"
-            android:textSize="24dp"
+            android:background="#FF0303"
+            android:textColor="#FFFF00"
+            android:textSize="16dp"
             android:visibility="invisible" />
 
         <TextView
-            android:id="@+id/desno"
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:text=""
+            android:gravity="right"
+            android:textColor="#FAD2B3"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/centar1"
             android:layout_width="220dp"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
+            android:gravity="bottom|center"
+            android:text="BIRAJTE ULOG"
+            android:fontFamily="arial"
+            android:background="#FF0303"
+            android:textColor="#FFFF00"
+            android:textSize="16dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:text=""
+            android:gravity="right"
+            android:textColor="#FAD2B3"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/desno"
+            android:layout_width="94dp"
+            android:layout_height="20dp"
             android:gravity="bottom|left"
             android:text="SRBIJA 2023"
             android:fontFamily="arial"
-            android:textColor="#FF0303"
-            android:textSize="24dp"
-            />
+            android:background="#FF0303"
+            android:textColor="#FFFF00"
+            android:textSize="16dp"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
@@ -406,7 +558,7 @@
 
     <LinearLayout
         android:layout_marginTop="120dp"
-        android:layout_width="700dp"
+        android:layout_width="760dp"
         android:layout_height="200dp"
         android:orientation="horizontal">
 
@@ -416,8 +568,7 @@
             android:layout_height="200dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/k00"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
 
         <ImageView
             android:id="@+id/polje_j2"
@@ -425,32 +576,32 @@
             android:layout_height="200dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/k00"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
+
         <ImageView
             android:id="@+id/polje_j3"
             android:layout_width="116dp"
             android:layout_height="200dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/k00"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
+
         <ImageView
             android:id="@+id/polje_j4"
             android:layout_width="116dp"
             android:layout_height="200dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/k00"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
+
         <ImageView
             android:id="@+id/polje_j5"
             android:layout_width="116dp"
             android:layout_height="200dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/k00"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
+
 
     </LinearLayout>
 
