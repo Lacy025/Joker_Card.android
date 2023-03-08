@@ -2,16 +2,12 @@ package com.example.poker_2;
 
 import static java.lang.Thread.sleep;
 
-import android.content.Context;
-import android.content.res.AssetFileDescriptor;
-import android.media.AudioManager;
+import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,13 +15,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 
-import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    MaterialButton button_kredit,button_ulog,button_autohold;
+    MaterialButton button_kredit,button_ulog,button_autohold,button_kasa,button_deljenje;
 
     int c = 0;
     int u = 1;
@@ -41,13 +36,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int d8 = 3; int dob8;
     int d9 = 2; int dob9;
     int d10 = 1; int dob10;
+    int deljenje = 0;
 
-    Timer timer1 = new Timer();
-    Timer timer2 = new Timer();
+    public Timer timer1;
+    public Timer timer2;
+
+    public TextView levodole;
+    public TextView desnodole;
+    public TextView jokercard;
+    public TextView cardjoker;
+    public TextView centar1;
+    public ImageView polje1;
+    public ImageView polje2;
+    public ImageView polje3;
+    public ImageView polje4;
+    public ImageView polje5;
+    public ImageView poljej1;
+    public ImageView poljej2;
+    public ImageView poljej3;
+    public ImageView poljej4;
+    public ImageView poljej5;
+    public Handler handler1;
 
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
     MediaPlayer audioautohold;
+    public TextView ah1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,24 +73,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         assignID(button_kredit, R.id.kredit);
         assignID(button_ulog, R.id.ulog);
         assignID(button_autohold, R.id.autohold);
+        assignID(button_kasa, R.id.kasa);
+        assignID(button_deljenje, R.id.deljenje);
 
-        TextView levodole = findViewById(R.id.levo);
-        TextView desnodole = findViewById(R.id.desno);
-        TextView jokercard = findViewById(R.id.joker);
-        TextView cardjoker = findViewById(R.id.card);
-        TextView centar1 = findViewById(R.id.centar1);
+        ah1 = findViewById(R.id.autohold);
 
-        ImageView polje1 = findViewById(R.id.polje_1);
-        ImageView polje2 = findViewById(R.id.polje_2);
-        ImageView polje3 = findViewById(R.id.polje_3);
-        ImageView polje4 = findViewById(R.id.polje_4);
-        ImageView polje5 = findViewById(R.id.polje_5);
+        timer1 = new Timer();
+        timer2 = new Timer();
 
-        ImageView poljej1 = findViewById(R.id.polje_j1);
-        ImageView poljej2 = findViewById(R.id.polje_j2);
-        ImageView poljej3 = findViewById(R.id.polje_j3);
-        ImageView poljej4 = findViewById(R.id.polje_j4);
-        ImageView poljej5 = findViewById(R.id.polje_j5);
+        levodole = findViewById(R.id.levo);
+        desnodole = findViewById(R.id.desno);
+        jokercard = findViewById(R.id.joker);
+        cardjoker = findViewById(R.id.card);
+        centar1 = findViewById(R.id.centar1);
+
+        polje1 = findViewById(R.id.polje_1);
+        polje2 = findViewById(R.id.polje_2);
+        polje3 = findViewById(R.id.polje_3);
+        polje4 = findViewById(R.id.polje_4);
+        polje5 = findViewById(R.id.polje_5);
+
+        poljej1 = findViewById(R.id.polje_j1);
+        poljej2 = findViewById(R.id.polje_j2);
+        poljej3 = findViewById(R.id.polje_j3);
+        poljej4 = findViewById(R.id.polje_j4);
+        poljej5 = findViewById(R.id.polje_j5);
+
 
         timer1.schedule(new TimerTask() {
             @Override
@@ -279,20 +301,57 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         if(buttonText.equals("AUTOHOLD")) {
-            TextView ah1 = findViewById(R.id.autohold);
+
             if(c > 0) {
                 if(ah==1) {
-                    ah1.setTextSize(0);
+                    ah1.setTextColor(Color.BLACK);
                     ah=0;
                     autohold();
                     return;
                 }
                 else {
-                    ah1.setTextSize(10);
+                    ah1.setTextColor(Color.BLUE);
                     ah=1;
                     autohold();
                     return;
                 }
+            }
+        }
+        if(buttonText.equals("BRISANJE KASIRANJE")) {
+            return;
+        }
+        if(buttonText.equals("DELJENJE POLOVINA")) {
+            if(c > 0) {
+
+                polje1.setVisibility(View.INVISIBLE);
+                polje2.setVisibility(View.INVISIBLE);
+                polje3.setVisibility(View.INVISIBLE);
+                polje4.setVisibility(View.INVISIBLE);
+                polje5.setVisibility(View.INVISIBLE);
+                poljej1.setVisibility(View.INVISIBLE);
+                poljej2.setVisibility(View.INVISIBLE);
+                poljej3.setVisibility(View.INVISIBLE);
+                poljej4.setVisibility(View.INVISIBLE);
+                poljej5.setVisibility(View.INVISIBLE);
+                jokercard.setVisibility(View.INVISIBLE);
+                cardjoker.setVisibility(View.INVISIBLE);
+                centar1.setVisibility(View.INVISIBLE);
+                timer1.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        timer1.cancel();
+                    }
+                },0,1);
+                timer2.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        timer2.cancel();
+                    }
+                },0,1);
+                return;
+            }
+            else {
+                return;
             }
         }
     }
@@ -320,5 +379,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         audioautohold = MediaPlayer.create(getApplicationContext(), R.raw.autohold);
         audioautohold.start();
+    }
+    public void deljenje1() {
+
     }
 }

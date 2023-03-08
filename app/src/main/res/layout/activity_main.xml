@@ -319,7 +319,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="70dp"
         android:layout_width="760dp"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
         android:orientation="horizontal">
 
         <TextView
