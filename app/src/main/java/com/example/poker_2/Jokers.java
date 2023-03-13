@@ -17,13 +17,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Jokers extends AppCompatActivity implements View.OnClickListener {
-
     MaterialButton button_kredit,button_ulog,button_autohold,button_kasa,button_deljenje;
     public int c = 0;
     public TextView c1;
     int u = 1;
     int ah = 1;
-
     int d1 = 1100; int dob1;
     int d2 = 500; int dob2;
     int d3 = 100; int dob3;
@@ -35,7 +33,6 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     int d9 = 2; int dob9;
     int d10 = 1; int dob10;
     int deljenje = 0;
-
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
     MediaPlayer audioautohold;
@@ -51,7 +48,6 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     public TextView cardjoker;
     public TextView centar1;
     ImageView jokers;
-
     Timer timer1;
 
     @Override
