@@ -36,19 +36,26 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
     MediaPlayer audioautohold;
+    MediaPlayer audiodeljenje1;
     public TextView ah1;
     public ImageView polje1;
     public ImageView polje2;
     public ImageView polje3;
     public ImageView polje4;
     public ImageView polje5;
+    public ImageView poljej1;
+    public ImageView poljej2;
+    public ImageView poljej3;
+    public ImageView poljej4;
+    public ImageView poljej5;
     public TextView levodole;
     public TextView desnodole;
-    public TextView jokercard;
-    public TextView cardjoker;
-    public TextView centar1;
-    ImageView jokers;
+    public TextView joker;
+    public TextView card;
+    public TextView centar;
+    //ImageView jokers;
     Timer timer1;
+    Timer timer2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,12 +75,12 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
 
         levodole = findViewById(R.id.levo);
         desnodole = findViewById(R.id.desno);
-        jokercard = findViewById(R.id.joker);
-        cardjoker = findViewById(R.id.card);
-        centar1 = findViewById(R.id.centar1);
-        jokers = findViewById((R.id.jokers));
+        joker = findViewById(R.id.joker);
+        card = findViewById(R.id.card);
+        centar = findViewById(R.id.centar1);
+        //jokers = findViewById((R.id.jokers));
 
-        jokers.setVisibility(View.VISIBLE);
+        //jokers.setVisibility(View.VISIBLE);
 
         polje1 = findViewById(R.id.polje_1);
         polje2 = findViewById(R.id.polje_2);
@@ -81,7 +88,14 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         polje4 = findViewById(R.id.polje_4);
         polje5 = findViewById(R.id.polje_5);
 
+        poljej1 = findViewById(R.id.polje_j1);
+        poljej2 = findViewById(R.id.polje_j2);
+        poljej3 = findViewById(R.id.polje_j3);
+        poljej4 = findViewById(R.id.polje_j4);
+        poljej5 = findViewById(R.id.polje_j5);
+
         timer1 = new Timer();
+        timer2 = new Timer();
 
         timer1.schedule(new TimerTask() {
             @Override
@@ -92,51 +106,151 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
-                                        if(c==0) {
+                                        if(c==0&&deljenje==0) {
                                             levodole.setVisibility(View.VISIBLE);
                                             desnodole.setVisibility(View.INVISIBLE);
                                         }
-                                        else {
+                                        if(c>0&&deljenje==0) {
                                             levodole.setText("");
                                             desnodole.setText("");
                                             levodole.setVisibility(View.INVISIBLE);
                                             desnodole.setVisibility(View.INVISIBLE);
-                                            centar1.setText("BIRAJTE ULOG");
-                                            if(deljenje==0) {
-                                                centar1.setVisibility(View.VISIBLE);
-                                            }
-                                            else {
-                                                centar1.setVisibility(View.INVISIBLE);
-                                            }
+                                            centar.setText("BIRAJTE ULOG");
+                                            centar.setVisibility(View.VISIBLE);
                                         }
                                     }
                                 }, 1000);
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
-                                        if(c==0) {
+                                        if(c==0&&deljenje==0) {
                                             levodole.setVisibility(View.INVISIBLE);
                                             desnodole.setVisibility(View.VISIBLE);
                                         }
-                                        else {
+                                        if(c>0&&deljenje==0) {
                                             levodole.setText("");
                                             desnodole.setText("");
                                             levodole.setVisibility(View.INVISIBLE);
                                             desnodole.setVisibility(View.INVISIBLE);
-                                            centar1.setText("PRITISNITE DELJENJE");
-                                            if(deljenje==0) {
-                                                centar1.setVisibility(View.VISIBLE);
-                                            }
-                                            else {
-                                                centar1.setVisibility(View.INVISIBLE);
-                                            }
+                                            centar.setText("PRITISNITE DELJENJE");
+                                            centar.setVisibility(View.VISIBLE);
                                         }
                                     }
-                                }, 2000);
+                                    }, 2000);
                     }
                 });
             }
         }, 0, 2000);
+
+        timer2.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        new android.os.Handler().postDelayed(
+                                new Runnable() {
+                                    public void run() {
+                                        if(deljenje==0) {
+                                            joker.setText("JOKER");
+                                            joker.setVisibility(View.VISIBLE);
+                                            card.setText("CARD");
+                                            card.setVisibility(View.VISIBLE);
+                                        }
+                                    }
+                                }, 0);
+                        new android.os.Handler().postDelayed(
+                                new Runnable() {
+                                    public void run() {
+                                        if(deljenje==0) {
+                                            joker.setText("");
+                                            joker.setVisibility(View.INVISIBLE);
+                                            card.setText("");
+                                            card.setVisibility(View.INVISIBLE);
+                                        }
+                                    }
+                                }, 6000);
+                            new android.os.Handler().postDelayed(
+                                    new Runnable() {
+                                        public void run() {
+                                            if(deljenje==0) {
+                                                polje1.setVisibility(View.VISIBLE);
+                                                polje2.setVisibility(View.VISIBLE);
+                                                polje3.setVisibility(View.VISIBLE);
+                                                polje4.setVisibility(View.VISIBLE);
+                                                polje5.setVisibility(View.VISIBLE);
+                                            }
+                                        }
+                                    }, 6000);
+                            new android.os.Handler().postDelayed(
+                                    new Runnable() {
+                                        public void run() {
+                                            if(deljenje==0) {
+                                                polje1.setVisibility(View.INVISIBLE);
+                                                poljej1.setVisibility(View.VISIBLE);
+                                            }
+                                        }
+                                    }, 7000);
+                                new android.os.Handler().postDelayed(
+                                        new Runnable() {
+                                            public void run() {
+                                                if(deljenje==0) {
+                                                    poljej1.setVisibility(View.INVISIBLE);
+                                                    polje1.setVisibility(View.VISIBLE);
+                                                    polje2.setVisibility(View.INVISIBLE);
+                                                    poljej2.setVisibility(View.VISIBLE);
+                                                }
+                                            }
+                                        }, 8000);
+                            new android.os.Handler().postDelayed(
+                                    new Runnable() {
+                                        public void run() {
+                                            if(deljenje==0) {
+                                                poljej2.setVisibility(View.INVISIBLE);
+                                                polje2.setVisibility(View.VISIBLE);
+                                                polje3.setVisibility(View.INVISIBLE);
+                                                poljej3.setVisibility(View.VISIBLE);
+                                            }
+                                        }
+                                    }, 9000);
+                            new android.os.Handler().postDelayed(
+                                    new Runnable() {
+                                        public void run() {
+                                            if(deljenje==0) {
+                                                poljej3.setVisibility(View.INVISIBLE);
+                                                polje3.setVisibility(View.VISIBLE);
+                                                polje4.setVisibility(View.INVISIBLE);
+                                                poljej4.setVisibility(View.VISIBLE);
+                                            }
+                                        }
+                                    }, 10000);
+                            new android.os.Handler().postDelayed(
+                                    new Runnable() {
+                                        public void run() {
+                                            if(deljenje==0) {
+                                                poljej4.setVisibility(View.INVISIBLE);
+                                                polje4.setVisibility(View.VISIBLE);
+                                                polje5.setVisibility(View.INVISIBLE);
+                                                poljej5.setVisibility(View.VISIBLE);
+                                            }
+                                        }
+                                    }, 11000);
+                            new android.os.Handler().postDelayed(
+                                    new Runnable() {
+                                        public void run() {
+                                            if(deljenje==0) {
+                                                polje1.setVisibility(View.INVISIBLE);
+                                                polje2.setVisibility(View.INVISIBLE);
+                                                polje3.setVisibility(View.INVISIBLE);
+                                                polje4.setVisibility(View.INVISIBLE);
+                                                poljej5.setVisibility(View.INVISIBLE);
+                                            }
+                                        }
+                                    }, 12000);
+                        }
+                });
+            }
+        }, 0,12000);
 
     }
     private void assignID(MaterialButton button, int id) {
@@ -231,18 +345,44 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
             return;
         }
         if(buttonText.equals("DELJENJE POLOVINA")) {
-            deljenje = 1;
-            timer1.cancel();
-            centar1.setVisibility(View.INVISIBLE);
-            jokers.setVisibility(View.INVISIBLE);
-            polje1.setVisibility(View.VISIBLE);
-            polje2.setVisibility(View.VISIBLE);
-            polje3.setVisibility(View.VISIBLE);
-            polje4.setVisibility(View.VISIBLE);
-            polje5.setVisibility(View.VISIBLE);
+            if(c > 0 && deljenje==0) {
+                deljenje = 1;
 
-            c = c - u;
-            c1.setText(Integer.toString(c));
+                polje1.setVisibility(View.INVISIBLE);
+                polje2.setVisibility(View.INVISIBLE);
+                polje3.setVisibility(View.INVISIBLE);
+                polje4.setVisibility(View.INVISIBLE);
+                polje5.setVisibility(View.INVISIBLE);
+                poljej1.setVisibility(View.INVISIBLE);
+                poljej2.setVisibility(View.INVISIBLE);
+                poljej3.setVisibility(View.INVISIBLE);
+                poljej4.setVisibility(View.INVISIBLE);
+                poljej5.setVisibility(View.INVISIBLE);
+                joker.setText("");
+                joker.setVisibility(View.INVISIBLE);
+                card.setText("");
+                card.setVisibility(View.INVISIBLE);
+                levodole.setText("");
+                levodole.setVisibility(View.INVISIBLE);
+                desnodole.setText("");
+                desnodole.setVisibility(View.INVISIBLE);
+                centar.setText("");
+                centar.setVisibility(View.INVISIBLE);
+
+                timer1.cancel();
+                timer2.cancel();
+
+                c = c - u;
+                c1.setText(Integer.toString(c));
+
+                polje1.setVisibility(View.VISIBLE);
+                polje2.setVisibility(View.VISIBLE);
+                polje3.setVisibility(View.VISIBLE);
+                polje4.setVisibility(View.VISIBLE);
+                polje5.setVisibility(View.VISIBLE);
+
+                deljenje1();
+            }
             return;
         }
     }
@@ -271,7 +411,12 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         audioautohold = MediaPlayer.create(getApplicationContext(), R.raw.autohold);
         audioautohold.start();
     }
-    public void deljenje1() {
-
+    void deljenje1() {
+        if (audiodeljenje1 != null) {
+            audiodeljenje1.stop();
+            audiodeljenje1.release();
+        }
+        audiodeljenje1 = MediaPlayer.create(getApplicationContext(), R.raw.deljenje1);
+        audiodeljenje1.start();
     }
 }
