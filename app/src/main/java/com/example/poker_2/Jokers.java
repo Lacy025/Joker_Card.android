@@ -3,6 +3,7 @@ package com.example.poker_2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -32,17 +33,23 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     int d8 = 3; int dob8;
     int d9 = 2; int dob9;
     int d10 = 1; int dob10;
-    int deljenje = 0;
+    public static int deljenje = 0;
+    public static int k1;
+    public static int k2;
+    public static int k3;
+    public static int k4;
+    public static int k5;
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
     MediaPlayer audioautohold;
-    MediaPlayer audiodeljenje1;
+    MediaPlayer audiodeljenje;
+    MediaPlayer audiokarta12345;
     public TextView ah1;
-    public ImageView polje1;
-    public ImageView polje2;
-    public ImageView polje3;
-    public ImageView polje4;
-    public ImageView polje5;
+    public static ImageView polje1;
+    public static ImageView polje2;
+    public static ImageView polje3;
+    public static ImageView polje4;
+    public static ImageView polje5;
     public ImageView poljej1;
     public ImageView poljej2;
     public ImageView poljej3;
@@ -346,7 +353,6 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         }
         if(buttonText.equals("DELJENJE POLOVINA")) {
             if(c > 0 && deljenje==0) {
-                deljenje = 1;
 
                 polje1.setVisibility(View.INVISIBLE);
                 polje2.setVisibility(View.INVISIBLE);
@@ -382,8 +388,25 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                 polje5.setVisibility(View.VISIBLE);
 
                 deljenje1();
+                deljenje();
+
+                while(k1==k2||k1==k3||k1==k4||k1==k5||k2==k3||k2==k4||k2==k5||k3==k4||k3==k5||k4==k5) {
+                    deljenje1();
+                }
+
+                karta12345();
+                deljenje = 1;
+
+                new Karta1(this);
+                new Karta2(this);
+                new Karta3(this);
+                new Karta4(this);
+                new Karta5(this);
+
             }
-            return;
+            else {
+                return;
+            }
         }
     }
 
@@ -411,12 +434,37 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         audioautohold = MediaPlayer.create(getApplicationContext(), R.raw.autohold);
         audioautohold.start();
     }
-    void deljenje1() {
-        if (audiodeljenje1 != null) {
-            audiodeljenje1.stop();
-            audiodeljenje1.release();
+    void deljenje() {
+        if (audiodeljenje != null) {
+            audiodeljenje.stop();
+            audiodeljenje.release();
         }
-        audiodeljenje1 = MediaPlayer.create(getApplicationContext(), R.raw.deljenje1);
-        audiodeljenje1.start();
+        audiodeljenje = MediaPlayer.create(getApplicationContext(), R.raw.deljenje1);
+        audiodeljenje.start();
+    }
+    void deljenje1() {
+
+        k1 = (int) Math.floor(Math.random() * 53);
+        k2 = (int) Math.floor(Math.random() * 53);
+        k3 = (int) Math.floor(Math.random() * 53);
+        k4 = (int) Math.floor(Math.random() * 53);
+        k5 = (int) Math.floor(Math.random() * 53);
+
+        /*
+        k1=1;
+        k2=2;
+        k3=3;
+        k4=4;
+        k5=5;
+
+         */
+    }
+    void karta12345() {
+        if (audiokarta12345 != null) {
+            audiokarta12345.stop();
+            audiokarta12345.release();
+        }
+        audiokarta12345 = MediaPlayer.create(getApplicationContext(), R.raw.karte12345);
+        audiokarta12345.start();
     }
 }
