@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -43,7 +44,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     MediaPlayer audioulog;
     MediaPlayer audioautohold;
     MediaPlayer audiodeljenje;
-    MediaPlayer audiokarta12345;
+    public static MediaPlayer audiokarta12345;
     public TextView ah1;
     public static ImageView polje1;
     public static ImageView polje2;
@@ -60,10 +61,9 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     public TextView joker;
     public TextView card;
     public TextView centar;
-    //ImageView jokers;
     Timer timer1;
     Timer timer2;
-
+    Timer timer3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,9 +85,6 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         joker = findViewById(R.id.joker);
         card = findViewById(R.id.card);
         centar = findViewById(R.id.centar1);
-        //jokers = findViewById((R.id.jokers));
-
-        //jokers.setVisibility(View.VISIBLE);
 
         polje1 = findViewById(R.id.polje_1);
         polje2 = findViewById(R.id.polje_2);
@@ -103,7 +100,9 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
 
         timer1 = new Timer();
         timer2 = new Timer();
+        timer3 = new Timer();
 
+        Handler handler = new Handler();
         timer1.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -259,6 +258,34 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
             }
         }, 0,12000);
 
+        timer3.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        new android.os.Handler().postDelayed(
+                                new Runnable() {
+                                    public void run() {
+                                        if(deljenje==1) {
+                                            timer3.cancel();
+                                            karta12345();
+                                            new Deljenje1(this);
+                                            new Karta1(this);
+                                            new Karta2(this);
+                                            new Karta3(this);
+                                            new Karta4(this);
+                                            new Karta5(this);
+                                        }
+                                    }
+                                }, 100);
+                    }
+                });
+            }
+        }, 0, 100);
+
+
+
     }
     private void assignID(MaterialButton button, int id) {
         View btn = findViewById(id);
@@ -393,16 +420,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                 while(k1==k2||k1==k3||k1==k4||k1==k5||k2==k3||k2==k4||k2==k5||k3==k4||k3==k5||k4==k5) {
                     deljenje1();
                 }
-
-                karta12345();
                 deljenje = 1;
-
-                new Karta1(this);
-                new Karta2(this);
-                new Karta3(this);
-                new Karta4(this);
-                new Karta5(this);
-
             }
             else {
                 return;
@@ -459,12 +477,11 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
 
          */
     }
-    void karta12345() {
+    public void karta12345() {
         if (audiokarta12345 != null) {
             audiokarta12345.stop();
             audiokarta12345.release();
         }
         audiokarta12345 = MediaPlayer.create(getApplicationContext(), R.raw.karte12345);
-        audiokarta12345.start();
     }
 }
