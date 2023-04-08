@@ -10,6 +10,104 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+
+        android:layout_width="452dp"
+        android:layout_height="124dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/rucno1"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/rucno2"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/rucno3"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/rucno4"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/rucno5"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/rucno6"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/rucno7"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/rucno8"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/rucno9"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/rucno10"
+            android:layout_width="452dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/rucno"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="110dp"
         android:layout_height="122dp"
         android:gravity="left"
@@ -640,26 +738,7 @@
             android:visibility="invisible" />
 
     </LinearLayout>
-    <!--
-       <LinearLayout
-
-                   android:layout_width="620dp"
-                   android:layout_height="220dp"
-                   android:layout_marginLeft="-5px"
-                   android:layout_marginTop="115dp"
-                   android:orientation="horizontal">
-
-                   <pl.droidsonroids.gif.GifImageView
-                       android:id="@+id/jokers"
-                       android:layout_width="618dp"
-                       android:layout_height="220dp"
-                       android:layout_marginTop="-10dp"
-                       android:layout_marginRight="10dp"
-                       android:src="@drawable/jokers"
-                       android:visibility="invisible"/>
-
-               </LinearLayout>
 
 
-   -->
+
 </RelativeLayout>

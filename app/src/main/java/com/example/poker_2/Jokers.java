@@ -2,8 +2,6 @@ package com.example.poker_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -19,7 +17,17 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Jokers extends AppCompatActivity implements View.OnClickListener {
-    MaterialButton button_kredit,button_ulog,button_autohold,button_kasa,button_deljenje;
+    public static Object Stop1;
+    MaterialButton button_kredit;
+    MaterialButton button_ulog;
+    MaterialButton button_autohold;
+    MaterialButton button_kasa;
+    MaterialButton button_deljenje;
+    public static MaterialButton button_stop1;
+    public static MaterialButton button_stop2;
+    public static MaterialButton button_stop3;
+    public static MaterialButton button_stop4;
+    public static MaterialButton button_stop5;
     public int c = 0;
     public TextView c1;
     int u = 1;
@@ -34,7 +42,8 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     int d8 = 3; int dob8;
     int d9 = 2; int dob9;
     int d10 = 1; int dob10;
-    public static int deljenje = 0;
+    public static int deljenje;
+    public static int stop;
     public static int k1;
     public static int k2;
     public static int k3;
@@ -45,7 +54,13 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     MediaPlayer audioautohold;
     MediaPlayer audiodeljenje;
     public static MediaPlayer audiokarta12345;
+    public static MediaPlayer audiostop;
     public TextView ah1;
+    public static TextView stop1;
+    public static TextView stop2;
+    public static TextView stop3;
+    public static TextView stop4;
+    public static TextView stop5;
     public static ImageView polje1;
     public static ImageView polje2;
     public static ImageView polje3;
@@ -56,6 +71,16 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     public ImageView poljej3;
     public ImageView poljej4;
     public ImageView poljej5;
+    public static ImageView rucno1;
+    public static ImageView rucno2;
+    public static ImageView rucno3;
+    public static ImageView rucno4;
+    public static ImageView rucno5;
+    public static ImageView rucno6;
+    public static ImageView rucno7;
+    public static ImageView rucno8;
+    public static ImageView rucno9;
+    public static ImageView rucno10;
     public TextView levodole;
     public TextView desnodole;
     public TextView joker;
@@ -76,9 +101,24 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         assignID(button_autohold, R.id.autohold);
         assignID(button_kasa, R.id.kasa);
         assignID(button_deljenje, R.id.deljenje);
-        ah1 = findViewById(R.id.autohold);
 
+        ah1 = findViewById(R.id.autohold);
         c1 = findViewById(R.id.vrednost_c);
+
+        deljenje = 0;
+        stop = 0;
+
+        assignID(button_stop1, R.id.stop1);
+        assignID(button_stop2, R.id.stop2);
+        assignID(button_stop3, R.id.stop3);
+        assignID(button_stop4, R.id.stop4);
+        assignID(button_stop5, R.id.stop5);
+
+        stop1 = findViewById(R.id.stop1);
+        stop2 = findViewById(R.id.stop2);
+        stop3 = findViewById(R.id.stop3);
+        stop4 = findViewById(R.id.stop4);
+        stop5 = findViewById(R.id.stop5);
 
         levodole = findViewById(R.id.levo);
         desnodole = findViewById(R.id.desno);
@@ -98,6 +138,17 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         poljej4 = findViewById(R.id.polje_j4);
         poljej5 = findViewById(R.id.polje_j5);
 
+        rucno1 = findViewById(R.id.rucno1);
+        rucno2 = findViewById(R.id.rucno2);
+        rucno3 = findViewById(R.id.rucno3);
+        rucno4 = findViewById(R.id.rucno4);
+        rucno5 = findViewById(R.id.rucno5);
+        rucno6 = findViewById(R.id.rucno6);
+        rucno7 = findViewById(R.id.rucno7);
+        rucno8 = findViewById(R.id.rucno8);
+        rucno9 = findViewById(R.id.rucno9);
+        rucno10 = findViewById(R.id.rucno10);
+
         timer1 = new Timer();
         timer2 = new Timer();
         timer3 = new Timer();
@@ -109,7 +160,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        new android.os.Handler().postDelayed(
+                        new Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
                                         if(c==0&&deljenje==0) {
@@ -126,7 +177,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                         }
                                     }
                                 }, 1000);
-                        new android.os.Handler().postDelayed(
+                        new Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
                                         if(c==0&&deljenje==0) {
@@ -154,7 +205,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        new android.os.Handler().postDelayed(
+                        new Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
                                         if(deljenje==0) {
@@ -165,7 +216,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                         }
                                     }
                                 }, 0);
-                        new android.os.Handler().postDelayed(
+                        new Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
                                         if(deljenje==0) {
@@ -176,7 +227,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                         }
                                     }
                                 }, 6000);
-                            new android.os.Handler().postDelayed(
+                            new Handler().postDelayed(
                                     new Runnable() {
                                         public void run() {
                                             if(deljenje==0) {
@@ -188,7 +239,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                             }
                                         }
                                     }, 6000);
-                            new android.os.Handler().postDelayed(
+                            new Handler().postDelayed(
                                     new Runnable() {
                                         public void run() {
                                             if(deljenje==0) {
@@ -197,7 +248,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                             }
                                         }
                                     }, 7000);
-                                new android.os.Handler().postDelayed(
+                                new Handler().postDelayed(
                                         new Runnable() {
                                             public void run() {
                                                 if(deljenje==0) {
@@ -208,7 +259,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                                 }
                                             }
                                         }, 8000);
-                            new android.os.Handler().postDelayed(
+                            new Handler().postDelayed(
                                     new Runnable() {
                                         public void run() {
                                             if(deljenje==0) {
@@ -219,7 +270,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                             }
                                         }
                                     }, 9000);
-                            new android.os.Handler().postDelayed(
+                            new Handler().postDelayed(
                                     new Runnable() {
                                         public void run() {
                                             if(deljenje==0) {
@@ -230,7 +281,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                             }
                                         }
                                     }, 10000);
-                            new android.os.Handler().postDelayed(
+                            new Handler().postDelayed(
                                     new Runnable() {
                                         public void run() {
                                             if(deljenje==0) {
@@ -241,7 +292,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                             }
                                         }
                                     }, 11000);
-                            new android.os.Handler().postDelayed(
+                            new Handler().postDelayed(
                                     new Runnable() {
                                         public void run() {
                                             if(deljenje==0) {
@@ -264,7 +315,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        new android.os.Handler().postDelayed(
+                        new Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
                                         if(deljenje==1) {
@@ -276,6 +327,9 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                             new Karta3(this);
                                             new Karta4(this);
                                             new Karta5(this);
+                                            new Dobitak1(this);
+                                            stop12345();
+                                            new Stop(this);
                                         }
                                     }
                                 }, 100);
@@ -287,9 +341,10 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
 
 
     }
-    private void assignID(MaterialButton button, int id) {
+    public Object assignID(MaterialButton button, int id) {
         View btn = findViewById(id);
         btn.setOnClickListener(this);
+        return null;
     }
     @Override
     public void onClick(View view) {
@@ -421,6 +476,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                     deljenje1();
                 }
                 deljenje = 1;
+                return;
             }
             else {
                 return;
@@ -468,14 +524,14 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
 
-        /*
-        k1=1;
+/*
+        k1=0;
         k2=2;
         k3=3;
         k4=4;
         k5=5;
+*/
 
-         */
     }
     public void karta12345() {
         if (audiokarta12345 != null) {
@@ -483,5 +539,12 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
             audiokarta12345.release();
         }
         audiokarta12345 = MediaPlayer.create(getApplicationContext(), R.raw.karte12345);
+    }
+    public void stop12345() {
+        if (audiostop != null) {
+            audiostop.stop();
+            audiostop.release();
+        }
+        audiostop = MediaPlayer.create(getApplicationContext(), R.raw.stop);
     }
 }
