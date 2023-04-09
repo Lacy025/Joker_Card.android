@@ -1408,7 +1408,7 @@ public class Dobitak1 extends Activity {
                     Jokers.rucno10.setVisibility(View.VISIBLE);
                 }
                 Jokers.stop = 1;
-
+                Jokers.izbor1 = 1;
             }
             }, 1000);
 

@@ -8,14 +8,16 @@ import static com.example.poker_2.Jokers.stop4;
 import static com.example.poker_2.Jokers.stop5;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
+import android.media.MediaPlayer;
+import android.view.View;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Stop extends Activity {
     Stop(Runnable runnable) {
-
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
@@ -29,7 +31,7 @@ public class Stop extends Activity {
                             throw new RuntimeException(e);
                         }
                         stop1.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        Jokers.audiostop.start();
                     }
                     if(Dobitak1.hold2 == 1) {
                         try {
@@ -38,7 +40,7 @@ public class Stop extends Activity {
                             throw new RuntimeException(e);
                         }
                         stop2.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        Jokers.audiostop.start();
                     }
                     if(Dobitak1.hold3 == 1) {
                         try {
@@ -47,7 +49,7 @@ public class Stop extends Activity {
                             throw new RuntimeException(e);
                         }
                         stop3.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        Jokers.audiostop.start();
                     }
                     if(Dobitak1.hold4 == 1) {
                         try {
@@ -56,7 +58,7 @@ public class Stop extends Activity {
                             throw new RuntimeException(e);
                         }
                         stop4.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        Jokers.audiostop.start();
                     }
                     if(Dobitak1.hold5 == 1) {
                         try {
@@ -65,12 +67,13 @@ public class Stop extends Activity {
                             throw new RuntimeException(e);
                         }
                         stop5.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        Jokers.audiostop.start();
                     }
                 }
             }
         }, 100,100);
 
     }
+
 
 }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +18,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Jokers extends AppCompatActivity implements View.OnClickListener {
-    public static Object Stop1;
+    //public static Object Stop1;
     MaterialButton button_kredit;
     MaterialButton button_ulog;
     MaterialButton button_autohold;
@@ -44,6 +45,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     int d10 = 1; int dob10;
     public static int deljenje;
     public static int stop;
+    public static int izbor1;
     public static int k1;
     public static int k2;
     public static int k3;
@@ -53,6 +55,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     MediaPlayer audioulog;
     MediaPlayer audioautohold;
     MediaPlayer audiodeljenje;
+    MediaPlayer audioponistavanje;
     public static MediaPlayer audiokarta12345;
     public static MediaPlayer audiostop;
     public TextView ah1;
@@ -107,6 +110,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
 
         deljenje = 0;
         stop = 0;
+        izbor1 = 0;
 
         assignID(button_stop1, R.id.stop1);
         assignID(button_stop2, R.id.stop2);
@@ -348,139 +352,199 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     }
     @Override
     public void onClick(View view) {
+        Button pressed = (Button) view;
+        switch (pressed.getId()) {
 
-        MaterialButton button = (MaterialButton) view;
-        String buttonText = button.getText().toString();
-
-        if(buttonText.equals("KREDIT")) {
-
-            if(c<4901 && deljenje==0) {
-                c+=100;
-                c1.setText(Integer.toString(c));
-                kredit();
-                return;
-            }
-            else {
-                return;
-            }
-        }
-        if(buttonText.equals("ULOG")) {
-            if(c > 0 && deljenje==0) {
-                final TextView u1 = findViewById(R.id.vrednost_u);
-                final TextView d_1 = findViewById(R.id.vrednost_1);
-                final TextView d_2 = findViewById(R.id.vrednost_2);
-                final TextView d_3 = findViewById(R.id.vrednost_3);
-                final TextView d_4 = findViewById(R.id.vrednost_4);
-                final TextView d_5 = findViewById(R.id.vrednost_5);
-                final TextView d_6 = findViewById(R.id.vrednost_6);
-                final TextView d_7 = findViewById(R.id.vrednost_7);
-                final TextView d_8 = findViewById(R.id.vrednost_8);
-                final TextView d_9 = findViewById(R.id.vrednost_9);
-                final TextView d_10 = findViewById(R.id.vrednost_10);
-
-                u+=1;
-                if(u==99) {
-                    u=1;
-                }
-                u1.setText(Integer.toString(u));
-                dob1 = d1 * u;
-                dob2 = d2 * u;
-                dob3 = d3 * u;
-                dob4 = d4 * u;
-                dob5 = d5 * u;
-                dob6 = d6 * u;
-                dob7 = d7 * u;
-                dob8 = d8 * u;
-                dob9 = d9 * u;
-                dob10 = d10 * u;
-
-                d_1.setText(Integer.toString(dob1));
-                d_2.setText(Integer.toString(dob2));
-                d_3.setText(Integer.toString(dob3));
-                d_4.setText(Integer.toString(dob4));
-                d_5.setText(Integer.toString(dob5));
-                d_6.setText(Integer.toString(dob6));
-                d_7.setText(Integer.toString(dob7));
-                d_8.setText(Integer.toString(dob8));
-                d_9.setText(Integer.toString(dob9));
-                d_10.setText(Integer.toString(dob10));
-                ulog();
-                return;
-            }
-            else {
-                return;
-            }
-        }
-        if(buttonText.equals("AUTOHOLD")) {
-            if(c > 0 && deljenje==0) {
-                if(ah==1) {
-                    ah1.setTextColor(Color.BLACK);
-                    ah=0;
-                    autohold();
+            case R.id.kredit:
+                if(c<4901 && deljenje==0) {
+                    c+=100;
+                    c1.setText(Integer.toString(c));
+                    kredit();
                     return;
                 }
                 else {
-                    ah1.setTextColor(Color.BLUE);
-                    ah=1;
-                    autohold();
                     return;
                 }
-            }
-            else {
-                return;
-            }
-        }
-        if(buttonText.equals("BRISANJE KASIRANJE")) {
-            return;
-        }
-        if(buttonText.equals("DELJENJE POLOVINA")) {
-            if(c > 0 && deljenje==0) {
+            case R.id.ulog:
+                if(c > 0 && deljenje==0) {
+                    final TextView u1 = findViewById(R.id.vrednost_u);
+                    final TextView d_1 = findViewById(R.id.vrednost_1);
+                    final TextView d_2 = findViewById(R.id.vrednost_2);
+                    final TextView d_3 = findViewById(R.id.vrednost_3);
+                    final TextView d_4 = findViewById(R.id.vrednost_4);
+                    final TextView d_5 = findViewById(R.id.vrednost_5);
+                    final TextView d_6 = findViewById(R.id.vrednost_6);
+                    final TextView d_7 = findViewById(R.id.vrednost_7);
+                    final TextView d_8 = findViewById(R.id.vrednost_8);
+                    final TextView d_9 = findViewById(R.id.vrednost_9);
+                    final TextView d_10 = findViewById(R.id.vrednost_10);
 
-                polje1.setVisibility(View.INVISIBLE);
-                polje2.setVisibility(View.INVISIBLE);
-                polje3.setVisibility(View.INVISIBLE);
-                polje4.setVisibility(View.INVISIBLE);
-                polje5.setVisibility(View.INVISIBLE);
-                poljej1.setVisibility(View.INVISIBLE);
-                poljej2.setVisibility(View.INVISIBLE);
-                poljej3.setVisibility(View.INVISIBLE);
-                poljej4.setVisibility(View.INVISIBLE);
-                poljej5.setVisibility(View.INVISIBLE);
-                joker.setText("");
-                joker.setVisibility(View.INVISIBLE);
-                card.setText("");
-                card.setVisibility(View.INVISIBLE);
-                levodole.setText("");
-                levodole.setVisibility(View.INVISIBLE);
-                desnodole.setText("");
-                desnodole.setVisibility(View.INVISIBLE);
-                centar.setText("");
-                centar.setVisibility(View.INVISIBLE);
+                    u+=1;
+                    if(u==99) {
+                        u=1;
+                    }
+                    u1.setText(Integer.toString(u));
+                    dob1 = d1 * u;
+                    dob2 = d2 * u;
+                    dob3 = d3 * u;
+                    dob4 = d4 * u;
+                    dob5 = d5 * u;
+                    dob6 = d6 * u;
+                    dob7 = d7 * u;
+                    dob8 = d8 * u;
+                    dob9 = d9 * u;
+                    dob10 = d10 * u;
 
-                timer1.cancel();
-                timer2.cancel();
-
-                c = c - u;
-                c1.setText(Integer.toString(c));
-
-                polje1.setVisibility(View.VISIBLE);
-                polje2.setVisibility(View.VISIBLE);
-                polje3.setVisibility(View.VISIBLE);
-                polje4.setVisibility(View.VISIBLE);
-                polje5.setVisibility(View.VISIBLE);
-
-                deljenje1();
-                deljenje();
-
-                while(k1==k2||k1==k3||k1==k4||k1==k5||k2==k3||k2==k4||k2==k5||k3==k4||k3==k5||k4==k5) {
-                    deljenje1();
+                    d_1.setText(Integer.toString(dob1));
+                    d_2.setText(Integer.toString(dob2));
+                    d_3.setText(Integer.toString(dob3));
+                    d_4.setText(Integer.toString(dob4));
+                    d_5.setText(Integer.toString(dob5));
+                    d_6.setText(Integer.toString(dob6));
+                    d_7.setText(Integer.toString(dob7));
+                    d_8.setText(Integer.toString(dob8));
+                    d_9.setText(Integer.toString(dob9));
+                    d_10.setText(Integer.toString(dob10));
+                    ulog();
+                    return;
                 }
-                deljenje = 1;
-                return;
-            }
-            else {
-                return;
-            }
+                else {
+                    return;
+                }
+            case R.id.autohold:
+                if(c > 0 && deljenje==0) {
+                    if(ah==1) {
+                        ah1.setTextColor(Color.BLACK);
+                        ah=0;
+                        autohold();
+                        return;
+                    }
+                    else {
+                        ah1.setTextColor(Color.BLUE);
+                        ah=1;
+                        autohold();
+                        return;
+                    }
+                }
+                else {
+                    return;
+                }
+            case R.id.kasa:
+                if(izbor1 == 1) {
+                    ponistavanje();
+                    stop1.setBackgroundColor(Color.parseColor("#404040"));
+                    stop2.setBackgroundColor(Color.parseColor("#404040"));
+                    stop3.setBackgroundColor(Color.parseColor("#404040"));
+                    stop4.setBackgroundColor(Color.parseColor("#404040"));
+                    stop5.setBackgroundColor(Color.parseColor("#404040"));
+                    Dobitak1.hold1 = 0;
+                    Dobitak1.hold2 = 0;
+                    Dobitak1.hold3 = 0;
+                    Dobitak1.hold4 = 0;
+                    Dobitak1.hold5 = 0;
+                    return;
+                }
+                else {
+                    return;
+                }
+            case R.id.deljenje:
+                if(c > 0 && deljenje==0) {
+
+                    polje1.setVisibility(View.INVISIBLE);
+                    polje2.setVisibility(View.INVISIBLE);
+                    polje3.setVisibility(View.INVISIBLE);
+                    polje4.setVisibility(View.INVISIBLE);
+                    polje5.setVisibility(View.INVISIBLE);
+                    poljej1.setVisibility(View.INVISIBLE);
+                    poljej2.setVisibility(View.INVISIBLE);
+                    poljej3.setVisibility(View.INVISIBLE);
+                    poljej4.setVisibility(View.INVISIBLE);
+                    poljej5.setVisibility(View.INVISIBLE);
+                    joker.setText("");
+                    joker.setVisibility(View.INVISIBLE);
+                    card.setText("");
+                    card.setVisibility(View.INVISIBLE);
+                    levodole.setText("");
+                    levodole.setVisibility(View.INVISIBLE);
+                    desnodole.setText("");
+                    desnodole.setVisibility(View.INVISIBLE);
+                    centar.setText("");
+                    centar.setVisibility(View.INVISIBLE);
+
+                    timer1.cancel();
+                    timer2.cancel();
+
+                    c = c - u;
+                    c1.setText(Integer.toString(c));
+
+                    polje1.setVisibility(View.VISIBLE);
+                    polje2.setVisibility(View.VISIBLE);
+                    polje3.setVisibility(View.VISIBLE);
+                    polje4.setVisibility(View.VISIBLE);
+                    polje5.setVisibility(View.VISIBLE);
+
+                    deljenje1();
+                    deljenje();
+
+                    while(k1==k2||k1==k3||k1==k4||k1==k5||k2==k3||k2==k4||k2==k5||k3==k4||k3==k5||k4==k5) {
+                        deljenje1();
+                    }
+                    deljenje = 1;
+                    return;
+                }
+                else {
+                    return;
+                }
+            case R.id.stop1:
+                if(izbor1 == 1) {
+                    audiostop.start();
+                    stop1.setBackgroundColor(Color.RED);
+                    Dobitak1.hold1 = 1;
+                    return;
+                }
+                else {
+                    return;
+                }
+            case R.id.stop2:
+                if(izbor1 == 1) {
+                    audiostop.start();
+                    stop2.setBackgroundColor(Color.RED);
+                    Dobitak1.hold2 = 1;
+                    return;
+                }
+                else {
+                    return;
+                }
+            case R.id.stop3:
+                if(izbor1 == 1) {
+                    audiostop.start();
+                    stop3.setBackgroundColor(Color.RED);
+                    Dobitak1.hold3 = 1;
+                    return;
+                }
+                else {
+                    return;
+                }
+            case R.id.stop4:
+                if(izbor1 == 1) {
+                    audiostop.start();
+                    stop4.setBackgroundColor(Color.RED);
+                    Dobitak1.hold4 = 1;
+                    return;
+                }
+                else {
+                    return;
+                }
+            case R.id.stop5:
+                if(izbor1 == 1) {
+                    audiostop.start();
+                    stop5.setBackgroundColor(Color.RED);
+                    Dobitak1.hold5 = 1;
+                    return;
+                }
+                else {
+                    return;
+                }
         }
     }
 
@@ -524,13 +588,13 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
 
-/*
+
         k1=0;
         k2=2;
         k3=3;
         k4=4;
         k5=5;
-*/
+
 
     }
     public void karta12345() {
@@ -546,5 +610,13 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
             audiostop.release();
         }
         audiostop = MediaPlayer.create(getApplicationContext(), R.raw.stop);
+    }
+    void ponistavanje() {
+        if (audioponistavanje != null) {
+            audioponistavanje.stop();
+            audioponistavanje.release();
+        }
+        audioponistavanje = MediaPlayer.create(getApplicationContext(), R.raw.ponistavanje);
+        audioponistavanje.start();
     }
 }
