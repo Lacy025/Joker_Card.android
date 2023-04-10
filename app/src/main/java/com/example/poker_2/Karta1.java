@@ -3,7 +3,6 @@ package com.example.poker_2;
 import static com.example.poker_2.Jokers.k1;
 
 import android.app.Activity;
-import android.media.MediaPlayer;
 import android.os.Handler;
 import android.view.View;
 
@@ -12,7 +11,7 @@ public class Karta1 extends Activity {
     public static int n1;
     public static int b1;
 
-    public Karta1(Runnable polje1) {
+    public Karta1() {
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -234,7 +233,10 @@ public class Karta1 extends Activity {
                     n1 = 13; b1 = 4;
                 }
                     Jokers.polje1.setVisibility(View.VISIBLE);
+                if(Jokers.deljenje == 2) {
+                    Jokers.audiokarta1.start();
+                }
             }
-        }, 500);
+        }, Jokers.pauzak);
     }
 }

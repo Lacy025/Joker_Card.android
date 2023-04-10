@@ -18,7 +18,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Jokers extends AppCompatActivity implements View.OnClickListener {
-    //public static Object Stop1;
     MaterialButton button_kredit;
     MaterialButton button_ulog;
     MaterialButton button_autohold;
@@ -51,11 +50,19 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
     public static int k3;
     public static int k4;
     public static int k5;
+    public static int pauzak;
+    int hold = 0;
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
     MediaPlayer audioautohold;
-    MediaPlayer audiodeljenje;
+    MediaPlayer audiodeljenje1;
     MediaPlayer audioponistavanje;
+    MediaPlayer audiodeljenje2;
+    public static MediaPlayer audiokarta1;
+    public static MediaPlayer audiokarta2;
+    public static MediaPlayer audiokarta3;
+    public static MediaPlayer audiokarta4;
+    public static MediaPlayer audiokarta5;
     public static MediaPlayer audiokarta12345;
     public static MediaPlayer audiostop;
     public TextView ah1;
@@ -179,6 +186,10 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                             centar.setText("BIRAJTE ULOG");
                                             centar.setVisibility(View.VISIBLE);
                                         }
+                                        if(c>0&&deljenje==1) {
+                                            centar.setText("BIRAJTE KARTE");
+                                            centar.setVisibility(View.VISIBLE);
+                                        }
                                     }
                                 }, 1000);
                         new Handler().postDelayed(
@@ -188,7 +199,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                             levodole.setVisibility(View.INVISIBLE);
                                             desnodole.setVisibility(View.VISIBLE);
                                         }
-                                        if(c>0&&deljenje==0) {
+                                        if((c>0&&deljenje==0)||(c>0&&deljenje==1)) {
                                             levodole.setText("");
                                             desnodole.setText("");
                                             levodole.setVisibility(View.INVISIBLE);
@@ -326,11 +337,16 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                                             timer3.cancel();
                                             karta12345();
                                             new Deljenje1(this);
-                                            new Karta1(this);
-                                            new Karta2(this);
-                                            new Karta3(this);
-                                            new Karta4(this);
-                                            new Karta5(this);
+                                            pauzak = 500;
+                                            new Karta1();
+                                            pauzak = 600;
+                                            new Karta2();
+                                            pauzak = 700;
+                                            new Karta3();
+                                            pauzak = 800;
+                                            new Karta4();
+                                            pauzak = 900;
+                                            new Karta5();
                                             new Dobitak1(this);
                                             stop12345();
                                             new Stop(this);
@@ -471,7 +487,6 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                     centar.setText("");
                     centar.setVisibility(View.INVISIBLE);
 
-                    timer1.cancel();
                     timer2.cancel();
 
                     c = c - u;
@@ -490,6 +505,88 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                         deljenje1();
                     }
                     deljenje = 1;
+                    return;
+                }
+                else if(izbor1 == 1) {
+                    izbor1 = 0;
+                    deljenje = 2;
+                    centar.setText("");
+                    centar.setVisibility(View.INVISIBLE);
+                    timer1.cancel();
+                    deljenje2();
+                    hold = 300;
+                    pauzak = 100;
+                    rucno1.setVisibility(View.INVISIBLE);
+                    rucno2.setVisibility(View.INVISIBLE);
+                    rucno3.setVisibility(View.INVISIBLE);
+                    rucno4.setVisibility(View.INVISIBLE);
+                    rucno5.setVisibility(View.INVISIBLE);
+                    rucno6.setVisibility(View.INVISIBLE);
+                    rucno7.setVisibility(View.INVISIBLE);
+                    rucno8.setVisibility(View.INVISIBLE);
+                    rucno9.setVisibility(View.INVISIBLE);
+                    rucno10.setVisibility(View.INVISIBLE);
+
+                    if(Dobitak1.hold1 == 0) {
+                        polje1.setVisibility(View.INVISIBLE);
+                        polje1.setImageResource(R.drawable.k53);
+                        polje1.setVisibility(View.VISIBLE);
+                        k1 = (int) Math.floor(Math.random() * 53);
+                        while (k1==k2||k1==k3||k1==k4||k1==k5) {
+                            k1 = (int) Math.floor(Math.random() * 53);
+                        }
+                        karta1();
+                        pauzak = pauzak + hold;
+                        new Karta1();
+                    }
+                    if(Dobitak1.hold2 == 0) {
+                        polje2.setVisibility(View.INVISIBLE);
+                        polje2.setImageResource(R.drawable.k53);
+                        polje2.setVisibility(View.VISIBLE);
+                        k2 = (int) Math.floor(Math.random() * 53);
+                        while (k2==k1||k2==k3||k2==k4||k2==k5) {
+                            k2 = (int) Math.floor(Math.random() * 53);
+                        }
+                        karta2();
+                        pauzak = pauzak + hold;
+                        new Karta2();
+                    }
+                    if(Dobitak1.hold3 == 0) {
+                        polje3.setVisibility(View.INVISIBLE);
+                        polje3.setImageResource(R.drawable.k53);
+                        polje3.setVisibility(View.VISIBLE);
+                        k3 = (int) Math.floor(Math.random() * 53);
+                        while (k3==k1||k3==k2||k3==k4||k3==k5) {
+                            k3 = (int) Math.floor(Math.random() * 53);
+                        }
+                        karta3();
+                        pauzak = pauzak + hold;
+                        new Karta3();
+                    }
+                    if(Dobitak1.hold4 == 0) {
+                        polje4.setVisibility(View.INVISIBLE);
+                        polje4.setImageResource(R.drawable.k53);
+                        polje4.setVisibility(View.VISIBLE);
+                        k4 = (int) Math.floor(Math.random() * 53);
+                        while (k4==k1||k4==k2||k4==k3||k4==k5) {
+                            k4 = (int) Math.floor(Math.random() * 53);
+                        }
+                        karta4();
+                        pauzak = pauzak + hold;
+                        new Karta4();
+                    }
+                    if(Dobitak1.hold5 == 0) {
+                        polje5.setVisibility(View.INVISIBLE);
+                        polje5.setImageResource(R.drawable.k53);
+                        polje5.setVisibility(View.VISIBLE);
+                        k5 = (int) Math.floor(Math.random() * 53);
+                        while (k5==k1||k5==k2||k5==k3||k5==k4) {
+                            k5 = (int) Math.floor(Math.random() * 53);
+                        }
+                        karta5();
+                        pauzak = pauzak + hold;
+                        new Karta5();
+                    }
                     return;
                 }
                 else {
@@ -573,12 +670,12 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         audioautohold.start();
     }
     void deljenje() {
-        if (audiodeljenje != null) {
-            audiodeljenje.stop();
-            audiodeljenje.release();
+        if (audiodeljenje1 != null) {
+            audiodeljenje1.stop();
+            audiodeljenje1.release();
         }
-        audiodeljenje = MediaPlayer.create(getApplicationContext(), R.raw.deljenje1);
-        audiodeljenje.start();
+        audiodeljenje1 = MediaPlayer.create(getApplicationContext(), R.raw.deljenje1);
+        audiodeljenje1.start();
     }
     void deljenje1() {
 
@@ -588,13 +685,13 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
 
-
+/*
         k1=0;
         k2=2;
         k3=3;
         k4=4;
         k5=5;
-
+*/
 
     }
     public void karta12345() {
@@ -618,5 +715,48 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         }
         audioponistavanje = MediaPlayer.create(getApplicationContext(), R.raw.ponistavanje);
         audioponistavanje.start();
+    }
+    void deljenje2() {
+        if (audiodeljenje2 != null) {
+            audiodeljenje2.stop();
+            audiodeljenje2.release();
+        }
+        audiodeljenje2 = MediaPlayer.create(getApplicationContext(), R.raw.deljenje2);
+        audiodeljenje2.start();
+    }
+    public void karta1() {
+        if (audiokarta1 != null) {
+            audiokarta1.stop();
+            audiokarta1.release();
+        }
+        audiokarta1 = MediaPlayer.create(getApplicationContext(), R.raw.karta1);
+    }
+    public void karta2() {
+        if (audiokarta2 != null) {
+            audiokarta2.stop();
+            audiokarta2.release();
+        }
+        audiokarta2 = MediaPlayer.create(getApplicationContext(), R.raw.karta2);
+    }
+    public void karta3() {
+        if (audiokarta3 != null) {
+            audiokarta3.stop();
+            audiokarta3.release();
+        }
+        audiokarta3 = MediaPlayer.create(getApplicationContext(), R.raw.karta3);
+    }
+    public void karta4() {
+        if (audiokarta4 != null) {
+            audiokarta4.stop();
+            audiokarta4.release();
+        }
+        audiokarta4 = MediaPlayer.create(getApplicationContext(), R.raw.karta4);
+    }
+    public void karta5() {
+        if (audiokarta5 != null) {
+            audiokarta5.stop();
+            audiokarta5.release();
+        }
+        audiokarta5 = MediaPlayer.create(getApplicationContext(), R.raw.karta5);
     }
 }

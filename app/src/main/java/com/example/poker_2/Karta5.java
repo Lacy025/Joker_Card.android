@@ -11,7 +11,7 @@ public class Karta5 extends Activity {
     public static int n5;
     public static int b5;
 
-    public Karta5(Runnable polje5) {
+    public Karta5() {
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -233,7 +233,10 @@ public class Karta5 extends Activity {
                     n5 = 13; b5 = 4;
                 }
                     Jokers.polje5.setVisibility(View.VISIBLE);
+                if(Jokers.deljenje == 2) {
+                    Jokers.audiokarta5.start();
+                }
             }
-        }, 900);
+        }, Jokers.pauzak);
     }
 }
