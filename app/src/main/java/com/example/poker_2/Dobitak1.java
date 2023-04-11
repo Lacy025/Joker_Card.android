@@ -105,7 +105,11 @@ public class Dobitak1 extends Activity {
                             ((n1 == n2) && (n3 == 0) && (n2 == n4) && (n4 == n5)) ||
                             ((n1 == n3) && (n2 == 0) && (n3 == n4) && (n4 == n5)) ||
                             ((n1 == 0) && (n2 == n3) && (n3 == n4) && (n4 == n5))) {
-
+                        hold1 = 1;
+                        hold2 = 1;
+                        hold3 = 1;
+                        hold4 = 1;
+                        hold5 = 1;
                         dobitak++;
                         Fiveofakind = 1;
                     }

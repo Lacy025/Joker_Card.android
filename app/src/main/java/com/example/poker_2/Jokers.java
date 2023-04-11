@@ -447,12 +447,8 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                 }
             case R.id.kasa:
                 if(izbor1 == 1) {
-                    ponistavanje();
-                    stop1.setBackgroundColor(Color.parseColor("#404040"));
-                    stop2.setBackgroundColor(Color.parseColor("#404040"));
-                    stop3.setBackgroundColor(Color.parseColor("#404040"));
-                    stop4.setBackgroundColor(Color.parseColor("#404040"));
-                    stop5.setBackgroundColor(Color.parseColor("#404040"));
+                    ponistavanje1();
+                    ponistavanje2();
                     Dobitak1.hold1 = 0;
                     Dobitak1.hold2 = 0;
                     Dobitak1.hold3 = 0;
@@ -587,6 +583,7 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
                         pauzak = pauzak + hold;
                         new Karta5();
                     }
+                    new Dobitak2();
                     return;
                 }
                 else {
@@ -687,10 +684,10 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
 
 /*
         k1=0;
-        k2=2;
-        k3=3;
-        k4=4;
-        k5=5;
+        k2=11;
+        k3=12;
+        k4=13;
+        k5=1;
 */
 
     }
@@ -708,13 +705,20 @@ public class Jokers extends AppCompatActivity implements View.OnClickListener {
         }
         audiostop = MediaPlayer.create(getApplicationContext(), R.raw.stop);
     }
-    void ponistavanje() {
+    void ponistavanje1() {
         if (audioponistavanje != null) {
             audioponistavanje.stop();
             audioponistavanje.release();
         }
         audioponistavanje = MediaPlayer.create(getApplicationContext(), R.raw.ponistavanje);
         audioponistavanje.start();
+    }
+    public static void ponistavanje2() {
+        stop1.setBackgroundColor(Color.parseColor("#404040"));
+        stop2.setBackgroundColor(Color.parseColor("#404040"));
+        stop3.setBackgroundColor(Color.parseColor("#404040"));
+        stop4.setBackgroundColor(Color.parseColor("#404040"));
+        stop5.setBackgroundColor(Color.parseColor("#404040"));
     }
     void deljenje2() {
         if (audiodeljenje2 != null) {
