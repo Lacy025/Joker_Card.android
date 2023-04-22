@@ -134,8 +134,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     TimerTask task2;
     Timer timer3;
     TimerTask task3;
-    Timer timer4;
-    TimerTask task4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -217,7 +215,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         timer1 = new Timer();
         timer2 = new Timer();
         timer3 = new Timer();
-        timer4 = new Timer();
 
         intro();
         audiointro.start();
@@ -261,8 +258,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             desnodole1.setVisibility(View.INVISIBLE);
                                         }
                                         if(c>0&&deljenje==0) {
-                                            levodole1.setText("");
-                                            desnodole1.setText("");
                                             levodole1.setVisibility(View.INVISIBLE);
                                             desnodole1.setVisibility(View.INVISIBLE);
                                             centar1.setText("BIRAJTE ULOG");
@@ -286,8 +281,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             desnodole1.setVisibility(View.VISIBLE);
                                         }
                                         if((c>0&&deljenje==0)||(c>0&&deljenje==2)) {
-                                            levodole1.setText("");
-                                            desnodole1.setText("");
                                             levodole1.setVisibility(View.INVISIBLE);
                                             desnodole1.setVisibility(View.INVISIBLE);
                                             centar1.setText("PRITISNITE DELJENJE");
@@ -337,35 +330,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 });
             }
         }, 0, 100);
-
-        timer4.schedule(task4 = new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        new Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        if(kasiranje == 1) {
-                                            centar2.setText("POBEDIO !");
-                                            centar2.setVisibility(View.VISIBLE);
-                                        }
-                                    }
-                                }, 400);
-                        new Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        if(kasiranje == 1) {
-                                            centar2.setText("");
-                                            centar2.setVisibility(View.INVISIBLE);
-                                        }
-                                    }
-                                }, 800);
-                    }
-                });
-            }
-        }, 0, 800);
     }
     public Object assignID(MaterialButton button, int id) {
         View btn = findViewById(id);

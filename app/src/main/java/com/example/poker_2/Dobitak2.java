@@ -11,6 +11,7 @@ import static com.example.poker_2.First.dob7;
 import static com.example.poker_2.First.dob8;
 import static com.example.poker_2.First.dob9;
 import static com.example.poker_2.First.dobitakdb;
+import static com.example.poker_2.First.ponistavanje2;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -54,6 +55,7 @@ public class Dobitak2 extends Activity {
     int STRFL8;
     int STRFL9;
     Dobitak2() {
+        ponistavanje2();
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
