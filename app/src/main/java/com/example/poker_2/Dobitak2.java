@@ -32,7 +32,6 @@ public class Dobitak2 extends Activity {
     int b4;
     int b5;
     public static int dobitak;
-    public static int cifra;
     int Fiveofakind;
     int Royalflush;
     int Streetflush;
@@ -54,7 +53,6 @@ public class Dobitak2 extends Activity {
     int STRFL7;
     int STRFL8;
     int STRFL9;
-
     Dobitak2() {
 
         final Handler handler = new Handler();
@@ -714,70 +712,70 @@ public class Dobitak2 extends Activity {
                     First.dobitak1.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob1));
-                    cifra = dob1;
+                    First.cifra = dob1;
                 }
                 if(Royalflush == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak2.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob2));
-                    cifra = dob2;
+                    First.cifra = dob2;
                 }
                 if(Streetflush == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak3.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob3));
-                    cifra = dob3;
+                    First.cifra = dob3;
                 }
                 if(Poker == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak4.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob4));
-                    cifra = dob4;
+                    First.cifra = dob4;
                 }
                 if(Fullhouse == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak5.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob5));
-                    cifra = dob5;
+                    First.cifra = dob5;
                 }
                 if(Flush == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak6.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob6));
-                    cifra = dob6;
+                    First.cifra = dob6;
                 }
                 if(Street == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak7.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob7));
-                    cifra = dob7;
+                    First.cifra = dob7;
                 }
                 if(Threeofakind == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak8.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob8));
-                    cifra = dob8;
+                    First.cifra = dob8;
                 }
                 if(Twopairs == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak9.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob9));
-                    cifra = dob9;
+                    First.cifra = dob9;
                 }
                 if(Highpair == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak10.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(Integer.toString(dob10));
-                    cifra = dob10;
+                    First.cifra = dob10;
                 }
                 if(dobitak == 1) {
                     First.izbor = 2;

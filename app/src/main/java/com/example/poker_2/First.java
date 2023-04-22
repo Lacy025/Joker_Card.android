@@ -62,6 +62,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static int k5;
     public static int pauzak;
     public static int kasiranje;
+    public static int cifra;
     int hold = 0;
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
@@ -133,6 +134,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     TimerTask task2;
     Timer timer3;
     TimerTask task3;
+    Timer timer4;
+    TimerTask task4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -152,6 +155,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         deljenje = 0;
         stop = 0;
         izbor = 0;
+        cifra = 0;
 
         assignID(button_stop1, R.id.stop1);
         assignID(button_stop2, R.id.stop2);
@@ -213,12 +217,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         timer1 = new Timer();
         timer2 = new Timer();
         timer3 = new Timer();
+        timer4 = new Timer();
 
         intro();
-        //audiointro.start();
+        audiointro.start();
         new Jokers();
-        //new Jokers();
-
         timer1.schedule(task1 = new TimerTask() {
             @Override
             public void run() {
@@ -244,8 +247,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             }
         }, 0, 12000);
 
-
-        Handler handler = new Handler();
         timer2.schedule(task2 = new TimerTask() {
             @Override
             public void run() {
@@ -303,119 +304,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             }
         }, 0, 2000);
 
-/*
-        timer2.schedule(task2 = new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        new Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        if(deljenje==0) {
-                                            joker.setText("JOKER");
-                                            joker.setVisibility(View.VISIBLE);
-                                            card.setText("CARD");
-                                            card.setVisibility(View.VISIBLE);
-                                        }
-                                    }
-                                }, 0);
-                        new Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        if(deljenje==0) {
-                                            joker.setText("");
-                                            joker.setVisibility(View.INVISIBLE);
-                                            card.setText("");
-                                            card.setVisibility(View.INVISIBLE);
-                                        }
-                                    }
-                                }, 6000);
-                            new Handler().postDelayed(
-                                    new Runnable() {
-                                        public void run() {
-                                            if(deljenje==0) {
-                                                polje1.setVisibility(View.VISIBLE);
-                                                polje2.setVisibility(View.VISIBLE);
-                                                polje3.setVisibility(View.VISIBLE);
-                                                polje4.setVisibility(View.VISIBLE);
-                                                polje5.setVisibility(View.VISIBLE);
-                                            }
-                                        }
-                                    }, 6000);
-                            new Handler().postDelayed(
-                                    new Runnable() {
-                                        public void run() {
-                                            if(deljenje==0) {
-                                                polje1.setVisibility(View.INVISIBLE);
-                                                poljej1.setVisibility(View.VISIBLE);
-                                            }
-                                        }
-                                    }, 7000);
-                                new Handler().postDelayed(
-                                        new Runnable() {
-                                            public void run() {
-                                                if(deljenje==0) {
-                                                    poljej1.setVisibility(View.INVISIBLE);
-                                                    polje1.setVisibility(View.VISIBLE);
-                                                    polje2.setVisibility(View.INVISIBLE);
-                                                    poljej2.setVisibility(View.VISIBLE);
-                                                }
-                                            }
-                                        }, 8000);
-                            new Handler().postDelayed(
-                                    new Runnable() {
-                                        public void run() {
-                                            if(deljenje==0) {
-                                                poljej2.setVisibility(View.INVISIBLE);
-                                                polje2.setVisibility(View.VISIBLE);
-                                                polje3.setVisibility(View.INVISIBLE);
-                                                poljej3.setVisibility(View.VISIBLE);
-                                            }
-                                        }
-                                    }, 9000);
-                            new Handler().postDelayed(
-                                    new Runnable() {
-                                        public void run() {
-                                            if(deljenje==0) {
-                                                poljej3.setVisibility(View.INVISIBLE);
-                                                polje3.setVisibility(View.VISIBLE);
-                                                polje4.setVisibility(View.INVISIBLE);
-                                                poljej4.setVisibility(View.VISIBLE);
-                                            }
-                                        }
-                                    }, 10000);
-                            new Handler().postDelayed(
-                                    new Runnable() {
-                                        public void run() {
-                                            if(deljenje==0) {
-                                                poljej4.setVisibility(View.INVISIBLE);
-                                                polje4.setVisibility(View.VISIBLE);
-                                                polje5.setVisibility(View.INVISIBLE);
-                                                poljej5.setVisibility(View.VISIBLE);
-                                            }
-                                        }
-                                    }, 11000);
-                            new Handler().postDelayed(
-                                    new Runnable() {
-                                        public void run() {
-                                            if(deljenje==0) {
-                                                polje1.setVisibility(View.INVISIBLE);
-                                                polje2.setVisibility(View.INVISIBLE);
-                                                polje3.setVisibility(View.INVISIBLE);
-                                                polje4.setVisibility(View.INVISIBLE);
-                                                poljej5.setVisibility(View.INVISIBLE);
-                                            }
-                                        }
-                                    }, 12000);
-                        }
-                });
-            }
-        }, 0,12000);
-
-*/
-
         timer3.schedule(task3 = new TimerTask() {
             @Override
             public void run() {
@@ -450,10 +338,35 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             }
         }, 0, 100);
 
-
+        timer4.schedule(task4 = new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        new Handler().postDelayed(
+                                new Runnable() {
+                                    public void run() {
+                                        if(kasiranje == 1) {
+                                            centar2.setText("POBEDIO !");
+                                            centar2.setVisibility(View.VISIBLE);
+                                        }
+                                    }
+                                }, 400);
+                        new Handler().postDelayed(
+                                new Runnable() {
+                                    public void run() {
+                                        if(kasiranje == 1) {
+                                            centar2.setText("");
+                                            centar2.setVisibility(View.INVISIBLE);
+                                        }
+                                    }
+                                }, 800);
+                    }
+                });
+            }
+        }, 0, 800);
     }
-
-
     public Object assignID(MaterialButton button, int id) {
         View btn = findViewById(id);
         btn.setOnClickListener(this);
@@ -589,11 +502,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     desnodole1.setVisibility(View.INVISIBLE);
                     centar1.setText("");
                     centar1.setVisibility(View.INVISIBLE);
-
-                    //timer2 = new Timer();
-                    //timer2.scheduleAtFixedRate(task2, 0, 100);
-                    //timer2.cancel();
-                    //timer2.purge();
 
                     c = c - u;
                     c1.setText(Integer.toString(c));

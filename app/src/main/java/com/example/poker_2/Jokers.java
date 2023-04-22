@@ -24,12 +24,12 @@ public class Jokers extends Activity {
     public static Runnable runnable7;
     public static Runnable runnable8;
     Jokers() {
-
-        First.joker.setText("JOKER");
-        First.card.setText("CARD");
-        First.joker.setVisibility(View.VISIBLE);
-        First.card.setVisibility(View.VISIBLE);
-
+        if(First.deljenje==0) {
+            First.joker.setText("JOKER");
+            First.card.setText("CARD");
+            First.joker.setVisibility(View.VISIBLE);
+            First.card.setVisibility(View.VISIBLE);
+        }
         handler1 = new Handler();
         runnable1 = new Runnable() {
             boolean isVisible1 = true;
