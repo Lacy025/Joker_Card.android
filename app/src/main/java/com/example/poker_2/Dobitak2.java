@@ -1,11 +1,26 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.dob1;
+import static com.example.poker_2.First.dob10;
+import static com.example.poker_2.First.dob2;
+import static com.example.poker_2.First.dob3;
+import static com.example.poker_2.First.dob4;
+import static com.example.poker_2.First.dob5;
+import static com.example.poker_2.First.dob6;
+import static com.example.poker_2.First.dob7;
+import static com.example.poker_2.First.dob8;
+import static com.example.poker_2.First.dob9;
+import static com.example.poker_2.First.dobitakdb;
+
 import android.app.Activity;
 import android.os.Handler;
 import android.view.View;
+import android.widget.TextView;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Dobitak2 extends Activity {
-
     int n1;
     int n2;
     int n3;
@@ -16,9 +31,8 @@ public class Dobitak2 extends Activity {
     int b3;
     int b4;
     int b5;
-
-    int dobitak;
-
+    public static int dobitak;
+    public static int cifra;
     int Fiveofakind;
     int Royalflush;
     int Streetflush;
@@ -693,42 +707,122 @@ public class Dobitak2 extends Activity {
                         }
                     }
                 }
-                Jokers.ponistavanje2();
+                First.ponistavanje2();
 
                 if(Fiveofakind == 1) {
-                    Jokers.rucno1.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak1.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob1));
+                    cifra = dob1;
                 }
                 if(Royalflush == 1) {
-                    Jokers.rucno2.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak2.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob2));
+                    cifra = dob2;
                 }
                 if(Streetflush == 1) {
-                    Jokers.rucno3.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak3.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob3));
+                    cifra = dob3;
                 }
                 if(Poker == 1) {
-                    Jokers.rucno4.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak4.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob4));
+                    cifra = dob4;
                 }
                 if(Fullhouse == 1) {
-                    Jokers.rucno5.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak5.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob5));
+                    cifra = dob5;
                 }
                 if(Flush == 1) {
-                    Jokers.rucno6.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak6.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob6));
+                    cifra = dob6;
                 }
                 if(Street == 1) {
-                    Jokers.rucno7.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak7.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob7));
+                    cifra = dob7;
                 }
                 if(Threeofakind == 1) {
-                    Jokers.rucno8.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak8.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob8));
+                    cifra = dob8;
                 }
                 if(Twopairs == 1) {
-                    Jokers.rucno9.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak9.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob9));
+                    cifra = dob9;
                 }
                 if(Highpair == 1) {
-                    Jokers.rucno10.setVisibility(View.VISIBLE);
+                    First.table.setVisibility(View.VISIBLE);
+                    First.dobitak10.setVisibility(View.VISIBLE);
+                    First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(Integer.toString(dob10));
+                    cifra = dob10;
                 }
-                Jokers.izbor1 = 2;
-
+                if(dobitak == 1) {
+                    First.izbor = 2;
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    dobitakdb.setVisibility(View.VISIBLE);
+                    First.audiodobitnik.start();
+                    First.stop1.setVisibility(View.INVISIBLE);
+                    First.stop2.setVisibility(View.INVISIBLE);
+                    First.stop3.setVisibility(View.INVISIBLE);
+                    First.stop4.setVisibility(View.INVISIBLE);
+                    First.stop5.setVisibility(View.INVISIBLE);
+                }
+                else {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    First.polje1.setImageResource(R.drawable.k53);
+                    First.polje2.setImageResource(R.drawable.k53);
+                    First.polje3.setImageResource(R.drawable.k53);
+                    First.polje4.setImageResource(R.drawable.k53);
+                    First.polje5.setImageResource(R.drawable.k53);
+                    First.polje1.setVisibility(View.INVISIBLE);
+                    First.polje2.setVisibility(View.INVISIBLE);
+                    First.polje3.setVisibility(View.INVISIBLE);
+                    First.polje4.setVisibility(View.INVISIBLE);
+                    First.polje5.setVisibility(View.INVISIBLE);
+                    First.deljenje = 0;
+                    Jokers.handler1.removeCallbacks(Jokers.runnable1);
+                    Jokers.handler2.removeCallbacks(Jokers.runnable2);
+                    Jokers.handler3.removeCallbacks(Jokers.runnable3);
+                    Jokers.handler4.removeCallbacks(Jokers.runnable4);
+                    Jokers.handler5.removeCallbacks(Jokers.runnable5);
+                    Jokers.handler6.removeCallbacks(Jokers.runnable6);
+                    Jokers.handler7.removeCallbacks(Jokers.runnable7);
+                    Jokers.handler8.removeCallbacks(Jokers.runnable8);
+                    new Jokers();
+                }
             }
-        },Jokers.pauzak);
+        },First.pauzak);
     }
     void ProveraBoje1() {
 

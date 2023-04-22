@@ -1,10 +1,10 @@
 package com.example.poker_2;
 
-import static com.example.poker_2.Jokers.stop1;
-import static com.example.poker_2.Jokers.stop2;
-import static com.example.poker_2.Jokers.stop3;
-import static com.example.poker_2.Jokers.stop4;
-import static com.example.poker_2.Jokers.stop5;
+import static com.example.poker_2.First.stop1;
+import static com.example.poker_2.First.stop2;
+import static com.example.poker_2.First.stop3;
+import static com.example.poker_2.First.stop4;
+import static com.example.poker_2.First.stop5;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -1382,37 +1382,37 @@ public class Dobitak1 extends Activity {
                 }
 
                 if(Fiveofakind == 1) {
-                    Jokers.rucno1.setVisibility(View.VISIBLE);
+                    First.rucno1.setVisibility(View.VISIBLE);
                 }
                 if(Royalflush == 1) {
-                    Jokers.rucno2.setVisibility(View.VISIBLE);
+                    First.rucno2.setVisibility(View.VISIBLE);
                 }
                 if(Streetflush == 1) {
-                    Jokers.rucno3.setVisibility(View.VISIBLE);
+                    First.rucno3.setVisibility(View.VISIBLE);
                 }
                 if(Poker == 1) {
-                    Jokers.rucno4.setVisibility(View.VISIBLE);
+                    First.rucno4.setVisibility(View.VISIBLE);
                 }
                 if(Fullhouse == 1) {
-                    Jokers.rucno5.setVisibility(View.VISIBLE);
+                    First.rucno5.setVisibility(View.VISIBLE);
                 }
                 if(Flush == 1) {
-                    Jokers.rucno6.setVisibility(View.VISIBLE);
+                    First.rucno6.setVisibility(View.VISIBLE);
                 }
                 if(Street == 1) {
-                    Jokers.rucno7.setVisibility(View.VISIBLE);
+                    First.rucno7.setVisibility(View.VISIBLE);
                 }
                 if(Threeofakind == 1) {
-                    Jokers.rucno8.setVisibility(View.VISIBLE);
+                    First.rucno8.setVisibility(View.VISIBLE);
                 }
                 if(Twopairs == 1) {
-                    Jokers.rucno9.setVisibility(View.VISIBLE);
+                    First.rucno9.setVisibility(View.VISIBLE);
                 }
                 if(Highpair == 1) {
-                    Jokers.rucno10.setVisibility(View.VISIBLE);
+                    First.rucno10.setVisibility(View.VISIBLE);
                 }
-                Jokers.stop = 1;
-                Jokers.izbor1 = 1;
+                First.stop = 1;
+                First.izbor = 1;
             }
             }, 1000);
 

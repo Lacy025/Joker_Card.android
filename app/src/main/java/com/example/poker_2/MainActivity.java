@@ -8,9 +8,6 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
-    int game = 1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-            Intent jokers = new Intent(this, Jokers.class);
-            startActivity(jokers);
+            Intent first = new Intent(this, First.class);
+            startActivity(first);
     }
 }

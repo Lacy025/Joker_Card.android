@@ -13,4 +13,17 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.MaterialComponents.DayNight.NoActionBar.Bridge.Fullscreen"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="android:actionBarStyle">
+            @style/Widget.Theme.MaterialComponents.DayNight.NoActionBar.Bridge.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.Poker_2.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
 </resources>
