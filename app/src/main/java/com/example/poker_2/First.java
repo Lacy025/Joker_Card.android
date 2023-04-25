@@ -31,7 +31,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static int c = 0;
     public static TextView c1;
     int u = 1;
-    int ah = 1;
+    static int ah = 1;
     int d1 = 1100;
     public static int dob1;
     int d2 = 500;
@@ -628,7 +628,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiointro.stop();
             audiointro.release();
         }
-        audiointro = MediaPlayer.create(getApplicationContext(), R.raw.intro);
+        audiointro = MediaPlayer.create(this, R.raw.intro);
     }
     void kredit() {
         if (c == 0) {
@@ -639,7 +639,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiokredit.stop();
             audiokredit.release();
         }
-        audiokredit = MediaPlayer.create(getApplicationContext(), R.raw.kredit);
+        audiokredit = MediaPlayer.create(this, R.raw.kredit);
         audiokredit.start();
     }
     void ulog() {
@@ -647,7 +647,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audioulog.stop();
             audioulog.release();
         }
-        audioulog = MediaPlayer.create(getApplicationContext(), R.raw.ulog);
+        audioulog = MediaPlayer.create(this, R.raw.ulog);
         audioulog.start();
     }
     void autohold() {
@@ -655,7 +655,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audioautohold.stop();
             audioautohold.release();
         }
-        audioautohold = MediaPlayer.create(getApplicationContext(), R.raw.autohold);
+        audioautohold = MediaPlayer.create(this, R.raw.autohold);
         audioautohold.start();
     }
     void deljenje() {
@@ -663,7 +663,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiodeljenje1.stop();
             audiodeljenje1.release();
         }
-        audiodeljenje1 = MediaPlayer.create(getApplicationContext(), R.raw.deljenje1);
+        audiodeljenje1 = MediaPlayer.create(this, R.raw.deljenje1);
         audiodeljenje1.start();
     }
     void deljenje1() {
@@ -689,21 +689,21 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiokarta12345.stop();
             audiokarta12345.release();
         }
-        audiokarta12345 = MediaPlayer.create(getApplicationContext(), R.raw.karte12345);
+        audiokarta12345 = MediaPlayer.create(this, R.raw.karte12345);
     }
     public void stop12345() {
         if (audiostop != null) {
             audiostop.stop();
             audiostop.release();
         }
-        audiostop = MediaPlayer.create(getApplicationContext(), R.raw.stop);
+        audiostop = MediaPlayer.create(this, R.raw.stop);
     }
     void ponistavanje1() {
         if (audioponistavanje != null) {
             audioponistavanje.stop();
             audioponistavanje.release();
         }
-        audioponistavanje = MediaPlayer.create(getApplicationContext(), R.raw.ponistavanje);
+        audioponistavanje = MediaPlayer.create(this, R.raw.ponistavanje);
         audioponistavanje.start();
     }
     public static void ponistavanje2() {
@@ -718,7 +718,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiodeljenje2.stop();
             audiodeljenje2.release();
         }
-        audiodeljenje2 = MediaPlayer.create(getApplicationContext(), R.raw.deljenje2);
+        audiodeljenje2 = MediaPlayer.create(this, R.raw.deljenje2);
         audiodeljenje2.start();
     }
     public void karta1() {
@@ -726,55 +726,55 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiokarta1.stop();
             audiokarta1.release();
         }
-        audiokarta1 = MediaPlayer.create(getApplicationContext(), R.raw.karta1);
+        audiokarta1 = MediaPlayer.create(this, R.raw.karta1);
     }
     public void karta2() {
         if (audiokarta2 != null) {
             audiokarta2.stop();
             audiokarta2.release();
         }
-        audiokarta2 = MediaPlayer.create(getApplicationContext(), R.raw.karta2);
+        audiokarta2 = MediaPlayer.create(this, R.raw.karta2);
     }
     public void karta3() {
         if (audiokarta3 != null) {
             audiokarta3.stop();
             audiokarta3.release();
         }
-        audiokarta3 = MediaPlayer.create(getApplicationContext(), R.raw.karta3);
+        audiokarta3 = MediaPlayer.create(this, R.raw.karta3);
     }
     public void karta4() {
         if (audiokarta4 != null) {
             audiokarta4.stop();
             audiokarta4.release();
         }
-        audiokarta4 = MediaPlayer.create(getApplicationContext(), R.raw.karta4);
+        audiokarta4 = MediaPlayer.create(this, R.raw.karta4);
     }
     public void karta5() {
         if (audiokarta5 != null) {
             audiokarta5.stop();
             audiokarta5.release();
         }
-        audiokarta5 = MediaPlayer.create(getApplicationContext(), R.raw.karta5);
+        audiokarta5 = MediaPlayer.create(this, R.raw.karta5);
     }
     public void dobitnik() {
         if (audiodobitnik != null) {
             audiodobitnik.stop();
             audiodobitnik.release();
         }
-        audiodobitnik = MediaPlayer.create(getApplicationContext(), R.raw.dobitnik);
+        audiodobitnik = MediaPlayer.create(this, R.raw.dobitnik);
     }
     public void count1() {
         if (audiocount1 != null) {
             audiocount1.stop();
             audiocount1.release();
         }
-        audiocount1 = MediaPlayer.create(getApplicationContext(), R.raw.isplata1);
+        audiocount1 = MediaPlayer.create(this, R.raw.isplata1);
     }
     public void count100() {
         if (audiocount100 != null) {
             audiocount100.stop();
             audiocount100.release();
         }
-        audiocount100 = MediaPlayer.create(getApplicationContext(), R.raw.isplata100);
+        audiocount100 = MediaPlayer.create(this, R.raw.isplata100);
     }
 }

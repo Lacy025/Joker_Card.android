@@ -1,15 +1,20 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.audiocount1;
 import static com.example.poker_2.First.audiocount100;
 import static com.example.poker_2.First.audiointro;
 import static com.example.poker_2.First.centar2;
+import static com.example.poker_2.First.cifra;
 
 import static java.lang.Thread.sleep;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Handler;
 import android.view.View;
 
+import java.io.File;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -19,6 +24,7 @@ public class Kasiranje extends Activity {
     public static Runnable runnable9;
     public static Runnable runnable10;
     Kasiranje() {
+        int pobeda = cifra;
         centar2.setText("POBEDIO !");
         centar2.setVisibility(View.VISIBLE);
         First.audiodobitnik.stop();
@@ -37,26 +43,32 @@ public class Kasiranje extends Activity {
         };
         handler9.post(runnable9);
 
+        minusjedan();
+
         handler10 = new Handler();
         runnable10 = new Runnable() {
             @Override
             public void run() {
-                if(First.cifra > 0) {
-                    try {
-                        minusjedan();
-                        handler10.postDelayed(this, 60);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+                double x1 = cifra;
+                if(((int)(x1/100) * 100) != ((x1/100) * 100)) {
+                    minusjedan();
+                    handler10.postDelayed(this, 60);
                 }
-                else {
-                    audiocount100.start();
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
+                else if((((int)(x1/100) * 100) == ((x1/100) * 100)) && x1 > 0) {
+                    minussto();
+                    handler10.postDelayed(this, 1000);
+                }
+                else  {
+                    if(pobeda < 101) {
+                        audiocount100.start();
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
                     }
                     First.kasiranje = 0;
+                    audiointro.start();
                     centar2.setVisibility(View.VISIBLE);
                     First.polje1.setImageResource(R.drawable.k53);
                     First.polje2.setImageResource(R.drawable.k53);
@@ -112,15 +124,14 @@ public class Kasiranje extends Activity {
         };
         handler10.post(runnable10);
     }
-    public void minusjedan() throws InterruptedException {
+    public void minusjedan() {
         First.c +=1;
         First.c1.setText(Integer.toString(First.c));
         First.cifra -=1;
         First.dobitakdb.setText(Integer.toString(First.cifra));
-        First.audiocount1.start();
+        audiocount1.start();
         if(First.cifra == 0) {
-            centar2.setText("POBEDIO !");
-            centar2.setVisibility(View.VISIBLE);
+            pobedio();
         }
     }
     public void minussto() {
@@ -129,5 +140,12 @@ public class Kasiranje extends Activity {
         First.cifra -=100;
         First.dobitakdb.setText(Integer.toString(First.cifra));
         audiocount100.start();
+        if(First.cifra == 0) {
+            pobedio();
+        }
+    }
+    void pobedio() {
+        centar2.setText("POBEDIO !");
+        centar2.setVisibility(View.VISIBLE);
     }
 }

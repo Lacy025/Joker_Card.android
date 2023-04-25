@@ -24,45 +24,45 @@ public class Stop extends Activity {
                 if(First.stop == 1) {
                     First.stop = 0;
 
-                    if(Dobitak1.hold1 == 1) {
+                    if(Dobitak1.hold1 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(320);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                         stop1.setBackgroundColor(Color.RED);
                         First.audiostop.start();
                     }
-                    if(Dobitak1.hold2 == 1) {
+                    if(Dobitak1.hold2 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(320);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                         stop2.setBackgroundColor(Color.RED);
                         First.audiostop.start();
                     }
-                    if(Dobitak1.hold3 == 1) {
+                    if(Dobitak1.hold3 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(320);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                         stop3.setBackgroundColor(Color.RED);
                         First.audiostop.start();
                     }
-                    if(Dobitak1.hold4 == 1) {
+                    if(Dobitak1.hold4 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(320);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                         stop4.setBackgroundColor(Color.RED);
                         First.audiostop.start();
                     }
-                    if(Dobitak1.hold5 == 1) {
+                    if(Dobitak1.hold5 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(320);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
