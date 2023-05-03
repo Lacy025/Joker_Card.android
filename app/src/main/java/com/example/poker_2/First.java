@@ -30,6 +30,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static MaterialButton button_stop5;
     public static int c = 0;
     public static TextView c1;
+    int game;
     int u = 1;
     static int ah = 1;
     int d1 = 1100;
@@ -63,6 +64,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static int pauzak;
     public static int kasiranje;
     public static int cifra;
+    public static int biodobitak;
+    public static int kasirano;
     int hold = 0;
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
@@ -154,6 +157,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         stop = 0;
         izbor = 0;
         cifra = 0;
+        game = 1;
 
         assignID(button_stop1, R.id.stop1);
         assignID(button_stop2, R.id.stop2);
@@ -254,6 +258,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                 new Runnable() {
                                     public void run() {
                                         if(c==0&&deljenje==0) {
+                                            levodole1.setText("LACIKA BAČI");
                                             levodole1.setVisibility(View.VISIBLE);
                                             desnodole1.setVisibility(View.INVISIBLE);
                                         }
@@ -267,7 +272,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             centar1.setText("BIRAJTE KARTE");
                                             centar1.setVisibility(View.VISIBLE);
                                         }
-                                        if(Dobitak2.dobitak == 1) {
+                                        if(biodobitak == 1) {
                                             levodole2.setVisibility(View.VISIBLE);
                                             desnodole2.setVisibility(View.INVISIBLE);
                                         }
@@ -278,15 +283,17 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                     public void run() {
                                         if(c==0&&deljenje==0) {
                                             levodole1.setVisibility(View.INVISIBLE);
+                                            desnodole1.setText("SRBIJA 2023");
                                             desnodole1.setVisibility(View.VISIBLE);
                                         }
                                         if((c>0&&deljenje==0)||(c>0&&deljenje==2)) {
+                                            levodole1.setText("");
                                             levodole1.setVisibility(View.INVISIBLE);
                                             desnodole1.setVisibility(View.INVISIBLE);
                                             centar1.setText("PRITISNITE DELJENJE");
                                             centar1.setVisibility(View.VISIBLE);
                                         }
-                                        if(Dobitak2.dobitak == 1) {
+                                        if(biodobitak == 1) {
                                             levodole2.setVisibility(View.INVISIBLE);
                                             desnodole2.setVisibility(View.VISIBLE);
                                         }
@@ -306,6 +313,14 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                         new Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
+                                        if(deljenje == 0 && c > 0 && u > c) {
+                                            u = c;
+                                            Ulog();
+                                        }
+                                        if(deljenje == 0 && c==0 && game==1) {
+                                            u = 1;
+                                            Ulog();
+                                        }
                                         if(deljenje==1) {
                                             deljenje = 2;
                                             karta12345();
@@ -323,6 +338,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             new Dobitak1(this);
                                             stop12345();
                                             new Stop(this);
+                                        }
+                                        if(kasirano==1) {
+                                            new Kasirano();
                                         }
                                     }
                                 }, 100);
@@ -344,6 +362,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             case R.id.kredit:
                 if(c<4901 && deljenje==0) {
                     kredit();
+                    game = 1;
                     c+=100;
                     c1.setText(Integer.toString(c));
                     return;
@@ -353,46 +372,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 }
             case R.id.ulog:
                 if(c > 0 && deljenje==0) {
-                    final TextView u1 = findViewById(R.id.vrednost_u);
-                    final TextView d_1 = findViewById(R.id.vrednost_1);
-                    final TextView d_2 = findViewById(R.id.vrednost_2);
-                    final TextView d_3 = findViewById(R.id.vrednost_3);
-                    final TextView d_4 = findViewById(R.id.vrednost_4);
-                    final TextView d_5 = findViewById(R.id.vrednost_5);
-                    final TextView d_6 = findViewById(R.id.vrednost_6);
-                    final TextView d_7 = findViewById(R.id.vrednost_7);
-                    final TextView d_8 = findViewById(R.id.vrednost_8);
-                    final TextView d_9 = findViewById(R.id.vrednost_9);
-                    final TextView d_10 = findViewById(R.id.vrednost_10);
-                    dobitakdb = findViewById(R.id.vrednostdb);
-
                     u+=1;
-                    if(u==99) {
+                    if(u==99 || u > c) {
                         u=1;
                     }
-                    u1.setText(Integer.toString(u));
-                    dob1 = d1 * u;
-                    dob2 = d2 * u;
-                    dob3 = d3 * u;
-                    dob4 = d4 * u;
-                    dob5 = d5 * u;
-                    dob6 = d6 * u;
-                    dob7 = d7 * u;
-                    dob8 = d8 * u;
-                    dob9 = d9 * u;
-                    dob10 = d10 * u;
-
-                    d_1.setText(Integer.toString(dob1));
-                    d_2.setText(Integer.toString(dob2));
-                    d_3.setText(Integer.toString(dob3));
-                    d_4.setText(Integer.toString(dob4));
-                    d_5.setText(Integer.toString(dob5));
-                    d_6.setText(Integer.toString(dob6));
-                    d_7.setText(Integer.toString(dob7));
-                    d_8.setText(Integer.toString(dob8));
-                    d_9.setText(Integer.toString(dob9));
-                    d_10.setText(Integer.toString(dob10));
-
+                    Ulog();
                     ulog();
                     return;
                 }
@@ -429,7 +413,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     return;
                 }
                 else if(izbor == 2) {
-                    Dobitak2.dobitak = 0;
+                    biodobitak = 0;
                     levodole2.setVisibility(View.INVISIBLE);
                     desnodole2.setVisibility(View.INVISIBLE);
                     audiointro = MediaPlayer.create(getApplicationContext(), R.raw.intro);
@@ -444,7 +428,66 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     return;
                 }
             case R.id.deljenje:
-                if(c > 0 && deljenje==0) {
+                if((c > 0 && deljenje==0) || (c > 0 && kasirano==1)) {
+                    if(kasirano==1) {
+                        Kasirano.handler9.removeCallbacks(Kasirano.runnable9);
+
+                        centar2.setVisibility(View.VISIBLE);
+
+                        First.stop1.setVisibility(View.VISIBLE);
+                        First.stop2.setVisibility(View.VISIBLE);
+                        First.stop3.setVisibility(View.VISIBLE);
+                        First.stop4.setVisibility(View.VISIBLE);
+                        First.stop5.setVisibility(View.VISIBLE);
+                        First.table.setVisibility(View.INVISIBLE);
+                        First.dobitak.setVisibility(View.INVISIBLE);
+                        First.dobitak1.setVisibility(View.INVISIBLE);
+                        First.dobitak2.setVisibility(View.INVISIBLE);
+                        First.dobitak3.setVisibility(View.INVISIBLE);
+                        First.dobitak4.setVisibility(View.INVISIBLE);
+                        First.dobitak5.setVisibility(View.INVISIBLE);
+                        First.dobitak6.setVisibility(View.INVISIBLE);
+                        First.dobitak7.setVisibility(View.INVISIBLE);
+                        First.dobitak8.setVisibility(View.INVISIBLE);
+                        First.dobitak9.setVisibility(View.INVISIBLE);
+                        First.dobitak10.setVisibility(View.INVISIBLE);
+                        First.dobitakdb.setVisibility(View.INVISIBLE);
+                        First.levodole2.setVisibility(View.INVISIBLE);
+                        First.desnodole2.setVisibility(View.INVISIBLE);
+                        First.polje1.setVisibility(View.INVISIBLE);
+                        First.polje2.setVisibility(View.INVISIBLE);
+                        First.polje3.setVisibility(View.INVISIBLE);
+                        First.polje4.setVisibility(View.INVISIBLE);
+                        First.polje5.setVisibility(View.INVISIBLE);
+
+                        centar2.setText("");
+                        centar2.setVisibility(View.INVISIBLE);
+                        centar2.setText("");
+                        centar2.setVisibility(View.INVISIBLE);
+
+                        kasiranje = 0;
+                        //deljenje = 1;
+                        biodobitak = 0;
+                        izbor = 0;
+                        kasirano = 0;
+
+                        audiointro.stop();
+                        audiointro.release();
+                    }
+                    Jokers.handler1.removeCallbacks(Jokers.runnable1);
+                    Jokers.handler2.removeCallbacks(Jokers.runnable2);
+                    Jokers.handler3.removeCallbacks(Jokers.runnable3);
+                    Jokers.handler4.removeCallbacks(Jokers.runnable4);
+                    Jokers.handler5.removeCallbacks(Jokers.runnable5);
+                    Jokers.handler6.removeCallbacks(Jokers.runnable6);
+                    Jokers.handler7.removeCallbacks(Jokers.runnable7);
+                    Jokers.handler8.removeCallbacks(Jokers.runnable8);
+
+                    First.polje1.setImageResource(R.drawable.k53);
+                    First.polje2.setImageResource(R.drawable.k53);
+                    First.polje3.setImageResource(R.drawable.k53);
+                    First.polje4.setImageResource(R.drawable.k53);
+                    First.polje5.setImageResource(R.drawable.k53);
 
                     polje1.setVisibility(View.INVISIBLE);
                     polje2.setVisibility(View.INVISIBLE);
@@ -642,6 +685,43 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiokredit = MediaPlayer.create(this, R.raw.kredit);
         audiokredit.start();
     }
+    void Ulog() {
+        final TextView u1 = findViewById(R.id.vrednost_u);
+        final TextView d_1 = findViewById(R.id.vrednost_1);
+        final TextView d_2 = findViewById(R.id.vrednost_2);
+        final TextView d_3 = findViewById(R.id.vrednost_3);
+        final TextView d_4 = findViewById(R.id.vrednost_4);
+        final TextView d_5 = findViewById(R.id.vrednost_5);
+        final TextView d_6 = findViewById(R.id.vrednost_6);
+        final TextView d_7 = findViewById(R.id.vrednost_7);
+        final TextView d_8 = findViewById(R.id.vrednost_8);
+        final TextView d_9 = findViewById(R.id.vrednost_9);
+        final TextView d_10 = findViewById(R.id.vrednost_10);
+        dobitakdb = findViewById(R.id.vrednostdb);
+
+        u1.setText(Integer.toString(u));
+        dob1 = d1 * u;
+        dob2 = d2 * u;
+        dob3 = d3 * u;
+        dob4 = d4 * u;
+        dob5 = d5 * u;
+        dob6 = d6 * u;
+        dob7 = d7 * u;
+        dob8 = d8 * u;
+        dob9 = d9 * u;
+        dob10 = d10 * u;
+
+        d_1.setText(Integer.toString(dob1));
+        d_2.setText(Integer.toString(dob2));
+        d_3.setText(Integer.toString(dob3));
+        d_4.setText(Integer.toString(dob4));
+        d_5.setText(Integer.toString(dob5));
+        d_6.setText(Integer.toString(dob6));
+        d_7.setText(Integer.toString(dob7));
+        d_8.setText(Integer.toString(dob8));
+        d_9.setText(Integer.toString(dob9));
+        d_10.setText(Integer.toString(dob10));
+    }
     void ulog() {
         if (audioulog != null) {
             audioulog.stop();
@@ -763,12 +843,13 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         }
         audiodobitnik = MediaPlayer.create(this, R.raw.dobitnik);
     }
+
     public void count1() {
         if (audiocount1 != null) {
             audiocount1.stop();
             audiocount1.release();
         }
-        audiocount1 = MediaPlayer.create(this, R.raw.isplata1);
+        audiocount1 = MediaPlayer.create(this,R.raw.isplata1);
     }
     public void count100() {
         if (audiocount100 != null) {

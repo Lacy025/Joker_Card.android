@@ -14,7 +14,6 @@ import android.view.View;
 import com.google.android.material.button.MaterialButton;
 
 public class Dobitak1 extends Activity {
-
     int n1;
     int n2;
     int n3;
@@ -25,11 +24,9 @@ public class Dobitak1 extends Activity {
     int b3;
     int b4;
     int b5;
-
-    int dobitak;
+    int prvidobitak;
     int dveiste;
     int cetiriboje;
-
     int Fiveofakind;
     int Royalflush;
     int Streetflush;
@@ -51,13 +48,11 @@ public class Dobitak1 extends Activity {
     int STRFL7;
     int STRFL8;
     int STRFL9;
-
     public static int hold1;
     public static int hold2;
     public static int hold3;
     public static int hold4;
     public static int hold5;
-
     Dobitak1(Runnable rucno) {
 
         final Handler handler = new Handler();
@@ -76,7 +71,7 @@ public class Dobitak1 extends Activity {
                 b4 = Karta4.b4;
                 b5 = Karta5.b5;
 
-                dobitak = 0;
+                prvidobitak = 0;
                 dveiste = 0;
                 cetiriboje = 0;
 
@@ -99,7 +94,7 @@ public class Dobitak1 extends Activity {
 
                 // FIVE OF A KIND
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
                     if (((n1 == n2) && (n2 == n3) && (n3 == n4) && (n5 == 0)) ||
                             ((n1 == n2) && (n2 == n3) && (n4 == 0) && (n3 == n5)) ||
                             ((n1 == n2) && (n3 == 0) && (n2 == n4) && (n4 == n5)) ||
@@ -110,7 +105,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Fiveofakind = 1;
                     }
                 }
@@ -129,7 +124,7 @@ public class Dobitak1 extends Activity {
                 STRFL8 = 0;
                 STRFL9 = 0;
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         ROYAL++;
@@ -178,7 +173,7 @@ public class Dobitak1 extends Activity {
                 // STREET FLUSH OR STREET
                 // 9-13
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL9++;
@@ -227,7 +222,7 @@ public class Dobitak1 extends Activity {
                 // STREET FLUSH OR STREET
                 // 8-12
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL8++;
@@ -276,7 +271,7 @@ public class Dobitak1 extends Activity {
                 // STREET FLUSH OR STREET
                 // 7-11
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL7++;
@@ -325,7 +320,7 @@ public class Dobitak1 extends Activity {
                 // STREET FLUSH OR STREET
                 // 6-10
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL6++;
@@ -374,7 +369,7 @@ public class Dobitak1 extends Activity {
                 // STREET FLUSH OR STREET
                 // 5-9
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL5++;
@@ -423,7 +418,7 @@ public class Dobitak1 extends Activity {
                 // STREET FLUSH OR STREET
                 // 4-8
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL4++;
@@ -472,7 +467,7 @@ public class Dobitak1 extends Activity {
                 // STREET FLUSH OR STREET
                 // 3-7
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL3++;
@@ -521,7 +516,7 @@ public class Dobitak1 extends Activity {
                 // STREET FLUSH OR STREET
                 // 2-6
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL2++;
@@ -570,7 +565,7 @@ public class Dobitak1 extends Activity {
                 // STREET FLUSH OR STREET
                 // 1-5
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL1++;
@@ -618,7 +613,7 @@ public class Dobitak1 extends Activity {
 
                 // POKER
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (((n1 == n2) && (n2 == n3) && (n3 == n4)) ||
                             ((n1 == n2) && (n2 == n3) && (n4 == 0)) ||
@@ -630,7 +625,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 0;
-                        dobitak++;
+                        prvidobitak++;
                         Poker = 1;
                     }
 
@@ -644,7 +639,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 0;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Poker = 1;
                     }
 
@@ -658,7 +653,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 0;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Poker = 1;
                     }
 
@@ -672,7 +667,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Poker = 1;
                     }
 
@@ -686,14 +681,14 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Poker = 1;
                     }
                 }
 
                 //FULL HOUSE
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (((n1 == n2) && (n2 == n3) && (n4 == n5)) ||
                             ((n1 == n2) && (n3 == n4) && (n4 == n5)) ||
@@ -726,14 +721,14 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Fullhouse = 1;
                     }
                 }
 
                 //FLUSH
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (((b1 == b2) && (b2 == b3) && (b3 == b4) && (b4 == b5)) ||
                             ((b1 == b2) && (b2 == b3) && (b3 == b4) && (n5 == 0)) ||
@@ -747,14 +742,14 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Flush = 1;
                     }
                 }
 
                 //THREE OF A KIND
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (((n1 == n2) && (n2 == n3)) || ((n1 == n2) && (n3 == 0)) || ((n1 == n3) && (n2 == 0)) || ((n2 == n3) && (n1 == 0))) {
                         hold1 = 1;
@@ -762,7 +757,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 0;
                         hold5 = 0;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
 
@@ -772,7 +767,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 0;
                         hold4 = 1;
                         hold5 = 0;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
 
@@ -782,7 +777,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 0;
                         hold4 = 0;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
 
@@ -792,7 +787,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 0;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
 
@@ -802,7 +797,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 0;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
 
@@ -812,7 +807,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 0;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
 
@@ -822,7 +817,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 0;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
 
@@ -832,7 +827,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 0;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
 
@@ -842,7 +837,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 0;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
 
@@ -852,14 +847,14 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Threeofakind = 1;
                     }
                 }
 
                 //2 PAIRS
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (((n1 == n2) && (n3 == n4)) || ((n1 == n3) && (n2 == n4)) || ((n1 == n4) && (n2 == n3))) {
                         hold1 = 1;
@@ -867,7 +862,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 0;
-                        dobitak++;
+                        prvidobitak++;
                         Twopairs = 1;
                     }
 
@@ -877,7 +872,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 0;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Twopairs = 1;
                     }
 
@@ -887,7 +882,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 0;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Twopairs = 1;
                     }
 
@@ -897,7 +892,7 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Twopairs = 1;
                     }
 
@@ -907,14 +902,14 @@ public class Dobitak1 extends Activity {
                         hold3 = 1;
                         hold4 = 1;
                         hold5 = 1;
-                        dobitak++;
+                        prvidobitak++;
                         Twopairs = 1;
                     }
                 }
 
                 //HIGH PAIR
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (n1 == n2) {
                         if (HALFSTREET == 0) {
@@ -925,7 +920,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 0;
                         }
                         if (n1 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n1 < 11) {
@@ -941,7 +936,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 0;
                         }
                         if (n1 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n1 < 11) {
@@ -957,7 +952,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 0;
                         }
                         if (n1 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n1 < 11) {
@@ -973,7 +968,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 1;
                         }
                         if (n1 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n1 < 11) {
@@ -989,7 +984,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 0;
                         }
                         if (n2 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n2 < 11) {
@@ -1005,7 +1000,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 0;
                         }
                         if (n2 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n2 < 11) {
@@ -1021,7 +1016,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 1;
                         }
                         if (n2 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n2 < 11) {
@@ -1037,7 +1032,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 0;
                         }
                         if (n3 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n3 < 11) {
@@ -1053,7 +1048,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 1;
                         }
                         if (n3 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n3 < 11) {
@@ -1069,7 +1064,7 @@ public class Dobitak1 extends Activity {
                             hold5 = 1;
                         }
                         if (n4 > 10) {
-                            dobitak++;
+                            prvidobitak++;
                             Highpair = 1;
                         }
                         if (n4 < 11) {
@@ -1081,37 +1076,37 @@ public class Dobitak1 extends Activity {
 
                 //HIGH PAIR WITH JOKER
 
-                if (dobitak == 0) {
+                if (prvidobitak == 0) {
 
                     if (HALFSTREET == 1) {
 
                         if (n1 == 0) {
                             if (n2 > 10 || n3 > 10 || n4 > 10 || n5 > 10) {
-                                dobitak++;
+                                prvidobitak++;
                                 Highpair = 1;
                             }
                         }
                         if (n2 == 0) {
                             if (n1 > 10 || n3 > 10 || n4 > 10 || n5 > 10) {
-                                dobitak++;
+                                prvidobitak++;
                                 Highpair = 1;
                             }
                         }
                         if (n3 == 0) {
                             if (n1 > 10 || n2 > 10 || n4 > 10 || n5 > 10) {
-                                dobitak++;
+                                prvidobitak++;
                                 Highpair = 1;
                             }
                         }
                         if (n4 == 0) {
                             if (n1 > 10 || n2 > 10 || n3 > 10 || n5 > 10) {
-                                dobitak++;
+                                prvidobitak++;
                                 Highpair = 1;
                             }
                         }
                         if (n5 == 0) {
                             if (n1 > 10 || n2 > 10 || n3 > 10 || n4 > 10) {
-                                dobitak++;
+                                prvidobitak++;
                                 Highpair = 1;
                             }
                         }
@@ -1120,169 +1115,169 @@ public class Dobitak1 extends Activity {
                         if (n1 == 0) {
                             hold1 = 1;
                             if (n2 > 10) {
-                                dobitak++;
+                                prvidobitak++;
                                 Highpair = 1;
                                 hold2 = 1;
                             }
-                            if (dobitak == 0) {
+                            if (prvidobitak == 0) {
 
                                 if (n3 > 10) {
-                                    dobitak++;
+                                    prvidobitak++;
                                     Highpair = 1;
                                     hold3 = 1;
                                 }
                             }
-                            if (dobitak == 0) {
+                            if (prvidobitak == 0) {
 
                                 if (n4 > 10) {
-                                    dobitak++;
+                                    prvidobitak++;
                                     Highpair = 1;
                                     hold4 = 1;
                                 }
                             }
-                            if (dobitak == 0) {
+                            if (prvidobitak == 0) {
 
                                 if (n5 > 10) {
-                                    dobitak++;
+                                    prvidobitak++;
                                     Highpair = 1;
                                     hold5 = 1;
                                 }
                             }
                         }
-                        if (dobitak == 0) {
+                        if (prvidobitak == 0) {
 
                             if (n2 == 0) {
                                 hold2 = 1;
                                 if (n1 > 10) {
-                                    dobitak++;
+                                    prvidobitak++;
                                     Highpair = 1;
                                     hold1 = 1;
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n3 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold3 = 1;
                                     }
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n4 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold4 = 1;
                                     }
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n5 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold5 = 1;
                                     }
                                 }
                             }
                         }
-                        if (dobitak == 0) {
+                        if (prvidobitak == 0) {
 
                             if (n3 == 0) {
                                 hold3 = 1;
                                 if (n1 > 10) {
-                                    dobitak++;
+                                    prvidobitak++;
                                     Highpair = 1;
                                     hold1 = 1;
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n2 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold2 = 1;
                                     }
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n4 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold4 = 1;
                                     }
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n5 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold5 = 1;
                                     }
                                 }
                             }
                         }
-                        if (dobitak == 0) {
+                        if (prvidobitak == 0) {
 
                             if (n4 == 0) {
                                 hold4 = 1;
                                 if (n1 > 10) {
-                                    dobitak++;
+                                    prvidobitak++;
                                     Highpair = 1;
                                     hold1 = 1;
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n2 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold2 = 1;
                                     }
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n3 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold3 = 1;
                                     }
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n5 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold5 = 1;
                                     }
                                 }
                             }
                         }
-                        if (dobitak == 0) {
+                        if (prvidobitak == 0) {
 
                             if (n5 == 0) {
                                 hold5 = 1;
                                 if (n1 > 10) {
-                                    dobitak++;
+                                    prvidobitak++;
                                     Highpair = 1;
                                     hold1 = 1;
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n2 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold2 = 1;
                                     }
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n3 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold3 = 1;
                                     }
                                 }
-                                if (dobitak == 0) {
+                                if (prvidobitak == 0) {
 
                                     if (n4 > 10) {
-                                        dobitak++;
+                                        prvidobitak++;
                                         Highpair = 1;
                                         hold4 = 1;
                                     }
@@ -1294,7 +1289,7 @@ public class Dobitak1 extends Activity {
 
                 // 4 BOJE
 
-                if ((dobitak == 0 && Highpair == 0) || (dobitak == 1 && Highpair == 1)) {
+                if ((prvidobitak == 0 && Highpair == 0) || (prvidobitak == 1 && Highpair == 1)) {
 
                     if (((b1 == b2) && (b2 == b3) && (b3 == b4)) ||
                             ((b1 == b2) && (b2 == b3) && (b4 == 0)) ||
@@ -1419,7 +1414,7 @@ public class Dobitak1 extends Activity {
     }
     void ProveraBoje1() {
 
-        dobitak++;
+        prvidobitak++;
         hold1=1;hold2=1;hold3=1;hold4=1;hold5=1;
 
         if (((b1==b2)&&(b2==b3)&&(b3==b4)&&(n5==0)) ||
@@ -1437,7 +1432,7 @@ public class Dobitak1 extends Activity {
     }
     void ProveraBoje2() {
 
-        dobitak++;
+        prvidobitak++;
         hold1=1;hold2=1;hold3=1;hold4=1;hold5=1;
 
         if (((b1==b2)&&(b2==b3)&&(b3==b4)&&(n5==0)) ||

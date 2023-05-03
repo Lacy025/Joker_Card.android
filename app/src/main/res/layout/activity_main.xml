@@ -553,8 +553,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/kasa"
-            android:layout_width="96dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="-24dp"
             android:backgroundTint="#FF0303"
@@ -585,13 +585,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/deljenje"
-            android:layout_width="96dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="150dp"
             android:layout_marginTop="-30dp"
             android:backgroundTint="#FF0303"
             android:gravity="center"
-            android:text="DELJENJE POLOVINA"
+            android:text="DELJENJE DUPLIRANJE"
             android:textColor="#FBF701"
             android:textSize="10dp" />
 
@@ -708,7 +708,7 @@
             android:layout_width="120dp"
             android:layout_height="24dp"
             android:gravity="bottom|left"
-            android:text="BAČI LACIKA"
+            android:text="LACIKA BAČI"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
@@ -855,8 +855,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="115dp"
-        android:layout_width="560dp"
+        android:layout_marginTop="125dp"
+        android:layout_width="620dp"
         android:layout_height="240dp"
         android:orientation="vertical">
 
@@ -864,10 +864,10 @@
             android:id="@+id/joker"
             android:layout_marginTop="-20px"
             android:layout_marginLeft="150px"
-            android:layout_width="360dp"
+            android:layout_width="380dp"
             android:layout_height="120dp"
             android:text="JOKER"
-            android:fontFamily="verdana"
+            android:fontFamily="@font/algerian"
             android:textStyle="italic"
             android:textAlignment="center"
             android:textColor="#FF0000"
@@ -877,11 +877,11 @@
         <TextView
             android:id="@+id/card"
             android:layout_marginTop="-80px"
-            android:layout_marginLeft="440px"
-            android:layout_width="260dp"
+            android:layout_marginLeft="340px"
+            android:layout_width="380dp"
             android:layout_height="120dp"
             android:text="CARD"
-            android:fontFamily="verdana"
+            android:fontFamily="@font/algerian"
             android:textStyle="italic"
             android:textAlignment="center"
             android:textColor="#FF0000"

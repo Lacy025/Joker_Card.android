@@ -52,7 +52,7 @@ public class Kasiranje extends Activity {
                 double x1 = cifra;
                 if(((int)(x1/100) * 100) != ((x1/100) * 100)) {
                     minusjedan();
-                    handler10.postDelayed(this, 60);
+                    handler10.postDelayed(this, 40);
                 }
                 else if((((int)(x1/100) * 100) == ((x1/100) * 100)) && x1 > 0) {
                     minussto();
@@ -67,8 +67,9 @@ public class Kasiranje extends Activity {
                             throw new RuntimeException(e);
                         }
                     }
-                    First.kasiranje = 0;
                     audiointro.start();
+                    First.kasirano = 1;
+                    /*
                     centar2.setVisibility(View.VISIBLE);
                     First.polje1.setImageResource(R.drawable.k53);
                     First.polje2.setImageResource(R.drawable.k53);
@@ -98,17 +99,21 @@ public class Kasiranje extends Activity {
                     handler9.removeCallbacks(runnable9);
 
                     try {
-                        Thread.sleep(4000);
+                        Thread.sleep(3600);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
 
+
+                    centar2.setText("");
+                    centar2.setVisibility(View.INVISIBLE);
+                    First.kasiranje = 0;
+                    First.deljenje = 0;
                     centar2.setText("");
                     centar2.setVisibility(View.INVISIBLE);
 
-                    Dobitak2.dobitak = 0;
                     First.izbor = 0;
-                    First.deljenje = 0;
+
                     Jokers.handler1.removeCallbacks(Jokers.runnable1);
                     Jokers.handler2.removeCallbacks(Jokers.runnable2);
                     Jokers.handler3.removeCallbacks(Jokers.runnable3);
@@ -118,7 +123,14 @@ public class Kasiranje extends Activity {
                     Jokers.handler7.removeCallbacks(Jokers.runnable7);
                     Jokers.handler8.removeCallbacks(Jokers.runnable8);
                     handler10.removeCallbacks(runnable10);
-                    new Jokers();
+
+                    new Kasirano();
+                    if(First.deljenje == 0) {
+                        //new Jokers();
+
+                    }
+
+                     */
                 }
             }
         };
@@ -130,6 +142,7 @@ public class Kasiranje extends Activity {
         First.cifra -=1;
         First.dobitakdb.setText(Integer.toString(First.cifra));
         audiocount1.start();
+        //new Isplata1();
         if(First.cifra == 0) {
             pobedio();
         }
