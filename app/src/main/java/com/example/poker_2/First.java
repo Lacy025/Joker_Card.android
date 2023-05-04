@@ -157,7 +157,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         stop = 0;
         izbor = 0;
         cifra = 0;
-        game = 1;
 
         assignID(button_stop1, R.id.stop1);
         assignID(button_stop2, R.id.stop2);
@@ -413,6 +412,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     return;
                 }
                 else if(izbor == 2) {
+                    izbor = 3;
                     biodobitak = 0;
                     levodole2.setVisibility(View.INVISIBLE);
                     desnodole2.setVisibility(View.INVISIBLE);
@@ -674,7 +674,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiointro = MediaPlayer.create(this, R.raw.intro);
     }
     void kredit() {
-        if (c == 0) {
+        if (c==0 && game==0) {
+            game = 1;
             audiointro.stop();
             audiointro.release();
         }
