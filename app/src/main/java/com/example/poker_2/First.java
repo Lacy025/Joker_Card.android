@@ -434,31 +434,31 @@ public class First extends AppCompatActivity implements View.OnClickListener {
 
                         centar2.setVisibility(View.VISIBLE);
 
-                        First.stop1.setVisibility(View.VISIBLE);
-                        First.stop2.setVisibility(View.VISIBLE);
-                        First.stop3.setVisibility(View.VISIBLE);
-                        First.stop4.setVisibility(View.VISIBLE);
-                        First.stop5.setVisibility(View.VISIBLE);
-                        First.table.setVisibility(View.INVISIBLE);
-                        First.dobitak.setVisibility(View.INVISIBLE);
-                        First.dobitak1.setVisibility(View.INVISIBLE);
-                        First.dobitak2.setVisibility(View.INVISIBLE);
-                        First.dobitak3.setVisibility(View.INVISIBLE);
-                        First.dobitak4.setVisibility(View.INVISIBLE);
-                        First.dobitak5.setVisibility(View.INVISIBLE);
-                        First.dobitak6.setVisibility(View.INVISIBLE);
-                        First.dobitak7.setVisibility(View.INVISIBLE);
-                        First.dobitak8.setVisibility(View.INVISIBLE);
-                        First.dobitak9.setVisibility(View.INVISIBLE);
-                        First.dobitak10.setVisibility(View.INVISIBLE);
-                        First.dobitakdb.setVisibility(View.INVISIBLE);
-                        First.levodole2.setVisibility(View.INVISIBLE);
-                        First.desnodole2.setVisibility(View.INVISIBLE);
-                        First.polje1.setVisibility(View.INVISIBLE);
-                        First.polje2.setVisibility(View.INVISIBLE);
-                        First.polje3.setVisibility(View.INVISIBLE);
-                        First.polje4.setVisibility(View.INVISIBLE);
-                        First.polje5.setVisibility(View.INVISIBLE);
+                        stop1.setVisibility(View.VISIBLE);
+                        stop2.setVisibility(View.VISIBLE);
+                        stop3.setVisibility(View.VISIBLE);
+                        stop4.setVisibility(View.VISIBLE);
+                        stop5.setVisibility(View.VISIBLE);
+                        table.setVisibility(View.INVISIBLE);
+                        dobitak.setVisibility(View.INVISIBLE);
+                        dobitak1.setVisibility(View.INVISIBLE);
+                        dobitak2.setVisibility(View.INVISIBLE);
+                        dobitak3.setVisibility(View.INVISIBLE);
+                        dobitak4.setVisibility(View.INVISIBLE);
+                        dobitak5.setVisibility(View.INVISIBLE);
+                        dobitak6.setVisibility(View.INVISIBLE);
+                        dobitak7.setVisibility(View.INVISIBLE);
+                        dobitak8.setVisibility(View.INVISIBLE);
+                        dobitak9.setVisibility(View.INVISIBLE);
+                        dobitak10.setVisibility(View.INVISIBLE);
+                        dobitakdb.setVisibility(View.INVISIBLE);
+                        levodole2.setVisibility(View.INVISIBLE);
+                        desnodole2.setVisibility(View.INVISIBLE);
+                        polje1.setVisibility(View.INVISIBLE);
+                        polje2.setVisibility(View.INVISIBLE);
+                        polje3.setVisibility(View.INVISIBLE);
+                        polje4.setVisibility(View.INVISIBLE);
+                        polje5.setVisibility(View.INVISIBLE);
 
                         centar2.setText("");
                         centar2.setVisibility(View.INVISIBLE);
@@ -483,11 +483,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     Jokers.handler7.removeCallbacks(Jokers.runnable7);
                     Jokers.handler8.removeCallbacks(Jokers.runnable8);
 
-                    First.polje1.setImageResource(R.drawable.k53);
-                    First.polje2.setImageResource(R.drawable.k53);
-                    First.polje3.setImageResource(R.drawable.k53);
-                    First.polje4.setImageResource(R.drawable.k53);
-                    First.polje5.setImageResource(R.drawable.k53);
+                    polje1.setImageResource(R.drawable.k53);
+                    polje2.setImageResource(R.drawable.k53);
+                    polje3.setImageResource(R.drawable.k53);
+                    polje4.setImageResource(R.drawable.k53);
+                    polje5.setImageResource(R.drawable.k53);
 
                     polje1.setVisibility(View.INVISIBLE);
                     polje2.setVisibility(View.INVISIBLE);
