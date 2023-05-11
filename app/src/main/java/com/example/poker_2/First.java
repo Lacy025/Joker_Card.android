@@ -342,11 +342,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             new Kasirano();
                                         }
                                     }
-                                }, 100);
+                                }, 200);
                     }
                 });
             }
-        }, 0, 100);
+        }, 0, 200);
     }
     public Object assignID(MaterialButton button, int id) {
         View btn = findViewById(id);
@@ -466,7 +466,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                         centar2.setVisibility(View.INVISIBLE);
 
                         kasiranje = 0;
-                        //deljenje = 1;
                         biodobitak = 0;
                         izbor = 0;
                         kasirano = 0;

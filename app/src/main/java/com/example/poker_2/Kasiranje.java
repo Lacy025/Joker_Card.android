@@ -69,68 +69,6 @@ public class Kasiranje extends Activity {
                     }
                     audiointro.start();
                     First.kasirano = 1;
-                    /*
-                    centar2.setVisibility(View.VISIBLE);
-                    First.polje1.setImageResource(R.drawable.k53);
-                    First.polje2.setImageResource(R.drawable.k53);
-                    First.polje3.setImageResource(R.drawable.k53);
-                    First.polje4.setImageResource(R.drawable.k53);
-                    First.polje5.setImageResource(R.drawable.k53);
-                    First.stop1.setVisibility(View.VISIBLE);
-                    First.stop2.setVisibility(View.VISIBLE);
-                    First.stop3.setVisibility(View.VISIBLE);
-                    First.stop4.setVisibility(View.VISIBLE);
-                    First.stop5.setVisibility(View.VISIBLE);
-                    First.table.setVisibility(View.INVISIBLE);
-                    First.dobitak.setVisibility(View.INVISIBLE);
-                    First.dobitak1.setVisibility(View.INVISIBLE);
-                    First.dobitak2.setVisibility(View.INVISIBLE);
-                    First.dobitak3.setVisibility(View.INVISIBLE);
-                    First.dobitak4.setVisibility(View.INVISIBLE);
-                    First.dobitak5.setVisibility(View.INVISIBLE);
-                    First.dobitak6.setVisibility(View.INVISIBLE);
-                    First.dobitak7.setVisibility(View.INVISIBLE);
-                    First.dobitak8.setVisibility(View.INVISIBLE);
-                    First.dobitak9.setVisibility(View.INVISIBLE);
-                    First.dobitak10.setVisibility(View.INVISIBLE);
-                    First.dobitakdb.setVisibility(View.INVISIBLE);
-                    First.levodole2.setVisibility(View.INVISIBLE);
-                    First.desnodole2.setVisibility(View.INVISIBLE);
-                    handler9.removeCallbacks(runnable9);
-
-                    try {
-                        Thread.sleep(3600);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
-
-
-                    centar2.setText("");
-                    centar2.setVisibility(View.INVISIBLE);
-                    First.kasiranje = 0;
-                    First.deljenje = 0;
-                    centar2.setText("");
-                    centar2.setVisibility(View.INVISIBLE);
-
-                    First.izbor = 0;
-
-                    Jokers.handler1.removeCallbacks(Jokers.runnable1);
-                    Jokers.handler2.removeCallbacks(Jokers.runnable2);
-                    Jokers.handler3.removeCallbacks(Jokers.runnable3);
-                    Jokers.handler4.removeCallbacks(Jokers.runnable4);
-                    Jokers.handler5.removeCallbacks(Jokers.runnable5);
-                    Jokers.handler6.removeCallbacks(Jokers.runnable6);
-                    Jokers.handler7.removeCallbacks(Jokers.runnable7);
-                    Jokers.handler8.removeCallbacks(Jokers.runnable8);
-                    handler10.removeCallbacks(runnable10);
-
-                    new Kasirano();
-                    if(First.deljenje == 0) {
-                        //new Jokers();
-
-                    }
-
-                     */
                 }
             }
         };
@@ -142,7 +80,6 @@ public class Kasiranje extends Activity {
         First.cifra -=1;
         First.dobitakdb.setText(Integer.toString(First.cifra));
         audiocount1.start();
-        //new Isplata1();
         if(First.cifra == 0) {
             pobedio();
         }

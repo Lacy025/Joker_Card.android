@@ -26,7 +26,7 @@ public class Stop extends Activity {
 
                     if(Dobitak1.hold1 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(320);
+                            Thread.sleep(300);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
@@ -35,7 +35,7 @@ public class Stop extends Activity {
                     }
                     if(Dobitak1.hold2 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(320);
+                            Thread.sleep(300);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
@@ -44,7 +44,7 @@ public class Stop extends Activity {
                     }
                     if(Dobitak1.hold3 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(320);
+                            Thread.sleep(300);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
@@ -53,7 +53,7 @@ public class Stop extends Activity {
                     }
                     if(Dobitak1.hold4 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(320);
+                            Thread.sleep(300);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
@@ -62,7 +62,7 @@ public class Stop extends Activity {
                     }
                     if(Dobitak1.hold5 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(320);
+                            Thread.sleep(300);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }

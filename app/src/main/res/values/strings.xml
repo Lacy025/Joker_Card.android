@@ -3,4 +3,25 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="five_of_a_kind">FIVE OF A KIND</string>
+    <string name="royal_flush">ROYAL FLUSH</string>
+    <string name="street_flush">STREET FLUSH</string>
+    <string name="poker">POKER</string>
+    <string name="full_house">FULL HOUSE</string>
+    <string name="flush">FLUSH</string>
+    <string name="street">STREET</string>
+    <string name="three_of_a_kind">THREE OF A KIND</string>
+    <string name="_2_pairs">2 PAIRS</string>
+    <string name="high_pair">HIGH PAIR</string>
+    <string name="_1100">1100</string>
+    <string name="_500">500</string>
+    <string name="_100">100</string>
+    <string name="_40">40</string>
+    <string name="_10">10</string>
+    <string name="_7">7</string>
+    <string name="_5">5</string>
+    <string name="_3">3</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="todo">TODO</string>
 </resources>
