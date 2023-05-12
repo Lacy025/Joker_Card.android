@@ -11,222 +11,232 @@
 
     <LinearLayout
 
-        android:layout_width="452dp"
-        android:layout_height="124dp"
+        android:layout_width="452sp"
+        android:layout_height="124sp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/rucno1"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-2dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-2sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/rucno2"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/rucno3"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/rucno4"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/rucno5"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/rucno6"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/rucno7"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/rucno8"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/rucno9"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/rucno10"
-            android:layout_width="452dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="-8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="452sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/rucno"
             android:visibility="invisible"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="110dp"
-        android:layout_height="122dp"
+        android:layout_width="110sp"
+        android:layout_height="122sp"
         android:gravity="left"
         android:orientation="vertical"
         tools:ignore="RtlHardcoded">
 
         <TextView
             android:id="@+id/id_dobitak_1"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/five_of_a_kind"
             android:textColor="#FFFF00"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
             android:id="@+id/id_dobitak_2"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/royal_flush"
             android:textColor="#FF0000"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
             android:id="@+id/id_dobitak_3"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/street_flush"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
             android:id="@+id/id_dobitak_4"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/poker"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
             android:id="@+id/id_dobitak_5"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/full_house"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
             android:id="@+id/id_dobitak_6"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/flush"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
             android:id="@+id/id_dobitak_7"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/street"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
             android:id="@+id/id_dobitak_8"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/three_of_a_kind"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
             android:id="@+id/id_dobitak_9"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/_2_pairs"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
             android:id="@+id/id_dobitak_10"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:text="@string/high_pair"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="450dp"
-        android:layout_height="122dp"
+        android:layout_width="450sp"
+        android:layout_height="122sp"
         android:gravity="right"
         android:orientation="vertical"
         tools:ignore="RtlHardcoded">
 
         <TextView
             android:id="@+id/vrednost_1"
-            android:layout_width="40dp"
-            android:layout_height="12dp"
+            android:layout_width="40sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_1100"
             android:textColor="#FFFF00"
@@ -235,8 +245,8 @@
 
         <TextView
             android:id="@+id/vrednost_2"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_500"
             android:textColor="#FF0000"
@@ -245,8 +255,8 @@
 
         <TextView
             android:id="@+id/vrednost_3"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_100"
             android:textColor="#FAD2B3"
@@ -255,8 +265,8 @@
 
         <TextView
             android:id="@+id/vrednost_4"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_40"
             android:textColor="#FAD2B3"
@@ -265,8 +275,8 @@
 
         <TextView
             android:id="@+id/vrednost_5"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_10"
             android:textColor="#FAD2B3"
@@ -275,8 +285,8 @@
 
         <TextView
             android:id="@+id/vrednost_6"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_7"
             android:textColor="#FAD2B3"
@@ -285,8 +295,8 @@
 
         <TextView
             android:id="@+id/vrednost_7"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_5"
             android:textColor="#FAD2B3"
@@ -295,8 +305,8 @@
 
         <TextView
             android:id="@+id/vrednost_8"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_3"
             android:textColor="#FAD2B3"
@@ -305,8 +315,8 @@
 
         <TextView
             android:id="@+id/vrednost_9"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_2"
             android:textColor="#FAD2B3"
@@ -315,8 +325,8 @@
 
         <TextView
             android:id="@+id/vrednost_10"
-            android:layout_width="120dp"
-            android:layout_height="12dp"
+            android:layout_width="120sp"
+            android:layout_height="12sp"
             android:gravity="right"
             android:text="@string/_1"
             android:textColor="#FAD2B3"
@@ -327,627 +337,678 @@
 
     <LinearLayout
 
-        android:layout_width="456dp"
-        android:layout_height="140dp"
+        android:layout_width="456sp"
+        android:layout_height="140sp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/table"
-            android:layout_width="456dp"
-            android:layout_height="140dp"
-            android:layout_marginTop="-9dp"
-            android:layout_marginStart="0dp"
+            android:layout_width="456sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="-9sp"
+            android:layout_marginStart="0sp"
             android:src="@drawable/table"
             android:visibility="invisible"
             android:contentDescription="@string/todo"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription,VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak1"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-130dp"
-            android:layout_marginLeft="10dp"
-            android:text="FIVE OF A KIND"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-130sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/five_of_a_kind2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak2"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="10dp"
-            android:text="ROYAL FLUSH"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/royal_flush2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak3"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="10dp"
-            android:text="STREET FLUSH"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/street_flush2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak4"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="10dp"
-            android:text="POKER"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/poker2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak5"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="10dp"
-            android:text="FULL HOUSE"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/full_house2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak6"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="10dp"
-            android:text="FLUSH"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/flush2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak7"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="10dp"
-            android:text="STREET"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/street2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak8"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="10dp"
-            android:text="THREE OF A KIND"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/three_of_a_kind2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak9"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="10dp"
-            android:text="2 PAIRS"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/_2_pairs2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak10"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="10dp"
-            android:text="HIGH PAIR"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/high_pair2"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="10dp"
-            android:text="DOBITAK = "
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginStart="10sp"
+            android:text="@string/dobitak"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/vrednostdb"
-            android:layout_width="420dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="-50dp"
-            android:layout_marginLeft="25dp"
+            android:layout_width="420sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="-50sp"
+            android:layout_marginStart="25sp"
             android:gravity="right"
-            android:text="0"
+            android:text="@string/_0"
             android:textColor="#FFFF00"
             android:textSize="40sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="RtlHardcoded,VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="600dp"
-        android:layout_height="122dp"
+        android:layout_width="600sp"
+        android:layout_height="122sp"
         android:gravity="right"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded">
 
         <TextView
-            android:layout_width="60dp"
-            android:layout_height="5dp"
+            android:layout_width="60sp"
+            android:layout_height="5sp"
             android:gravity="right"
             android:text=""
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/kredit"
-            android:layout_width="87dp"
-            android:layout_height="32dp"
+            android:layout_width="87sp"
+            android:layout_height="32sp"
             android:background="#00000000"
             android:gravity="left"
-            android:text="KREDIT"
+            android:text="@string/kredit"
             android:textColor="#FB0000"
             android:textSize="10sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="SmallSp,TouchTargetSizeCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/ulog"
-            android:layout_width="82dp"
-            android:layout_height="32dp"
+            android:layout_width="82sp"
+            android:layout_height="32sp"
             android:background="#00000000"
             android:gravity="left"
-            android:text="ULOG"
+            android:text="@string/ulog"
             android:textColor="#FBF701"
             android:textSize="10sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="SmallSp,TouchTargetSizeCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/autohold"
-            android:layout_width="110dp"
-            android:layout_height="42dp"
+            android:layout_width="110sp"
+            android:layout_height="42sp"
             android:background="#00000000"
             android:gravity="center"
-            android:text="AUTOHOLD"
+            android:text="@string/autohold"
             android:textColor="#0000FF"
             android:textSize="10sp"
             android:visibility="visible"
-            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+            tools:ignore="SmallSp,TextContrastCheck,TouchTargetSizeCheck" />
 
     </LinearLayout>
 
     <LinearLayout
 
-        android:layout_width="588dp"
-        android:layout_height="122dp"
+        android:layout_width="588sp"
+        android:layout_height="122sp"
         android:gravity="right"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded">
 
         <TextView
-            android:layout_width="60dp"
-            android:layout_height="26dp"
+            android:layout_width="60sp"
+            android:layout_height="26sp"
             android:text=""
             android:gravity="right"
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
 
         <TextView
             android:id="@+id/vrednost_c"
-            android:layout_width="50dp"
-            android:layout_height="12dp"
+            android:layout_width="50sp"
+            android:layout_height="12sp"
             android:gravity="left"
-            android:text="0"
+            android:text="@string/_0_2"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:layout_width="60dp"
-            android:layout_height="20dp"
+            android:layout_width="60sp"
+            android:layout_height="20sp"
             android:text=""
             android:gravity="right"
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
 
         <TextView
             android:id="@+id/vrednost_u"
-            android:layout_width="46dp"
-            android:layout_height="12dp"
+            android:layout_width="46sp"
+            android:layout_height="12sp"
             android:gravity="left"
-            android:text="1"
+            android:text="@string/_1_2"
             android:textColor="#FAD2B3"
             android:textSize="10sp"
-            tools:ignore="TextSizeCheck" />
+            tools:ignore="SmallSp,TextSizeCheck" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="110dp"
-        android:layout_width="760dp"
-        android:layout_height="100dp"
+        android:layout_marginTop="110sp"
+        android:layout_width="760sp"
+        android:layout_height="100sp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/jokerspace"
-            android:layout_width="580dp"
-            android:layout_height="100dp"
+            android:layout_width="580sp"
+            android:layout_height="100sp"
             android:gravity="top|center"
             android:text=""
             android:fontFamily="arial"
             android:textStyle="italic"
             android:textColor="#FF0303"
-            android:textSize="90sp" />
+            android:textSize="90sp"
+            tools:ignore="VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/kasa"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="-24dp"
+            android:layout_width="100sp"
+            android:layout_height="60sp"
+            android:layout_marginStart="50sp"
+            android:layout_marginTop="-24sp"
             android:backgroundTint="#FF0303"
             android:gravity="center"
-            android:text="BRISANJE KASIRANJE"
+            android:text="@string/brisanje_kasiranje"
             android:textColor="#FBF701"
             android:textSize="10sp"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="SmallSp,TextContrastCheck,VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="190dp"
-        android:layout_width="760dp"
-        android:layout_height="100dp"
+        android:layout_marginTop="190sp"
+        android:layout_width="760sp"
+        android:layout_height="100sp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/cardspace"
-            android:layout_width="480dp"
-            android:layout_height="100dp"
+            android:layout_width="480sp"
+            android:layout_height="100sp"
             android:gravity="top|right"
             android:text=""
             android:fontFamily="arial"
             android:textStyle="italic"
             android:textColor="#FF0303"
-            android:textSize="90sp" />
+            android:textSize="90sp"
+            tools:ignore="RtlHardcoded,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/deljenje"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="-30dp"
+            android:layout_width="100sp"
+            android:layout_height="60sp"
+            android:layout_marginStart="150sp"
+            android:layout_marginTop="-30sp"
             android:backgroundTint="#FF0303"
             android:gravity="center"
-            android:text="DELJENJE DUPLIRANJE"
+            android:text="@string/deljenje_dupliranje"
             android:textColor="#FBF701"
             android:textSize="10sp"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="SmallSp,TextContrastCheck,VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="296dp"
-        android:layout_width="700dp"
-        android:layout_height="40dp"
+        android:layout_marginTop="296sp"
+        android:layout_width="700sp"
+        android:layout_height="40sp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="10dp"
-            android:layout_height="30dp"
+            android:layout_width="10sp"
+            android:layout_height="30sp"
             android:gravity="right"
             android:text=""
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop1"
-            android:layout_width="96dp"
-            android:layout_height="40dp"
+            android:layout_width="96sp"
+            android:layout_height="40sp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
-            android:text="STOP"
+            android:text="@string/stop1"
             android:textColor="#FBF701"
             android:textSize="20sp"
             tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
 
         <TextView
-            android:layout_width="28dp"
-            android:layout_height="20dp"
+            android:layout_width="28sp"
+            android:layout_height="20sp"
             android:gravity="right"
             android:text=""
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop2"
-            android:layout_width="96dp"
-            android:layout_height="40dp"
+            android:layout_width="96sp"
+            android:layout_height="40sp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
-            android:text="STOP"
+            android:text="@string/stop2"
             android:textColor="#FBF701"
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
-            android:layout_width="28dp"
-            android:layout_height="20dp"
+            android:layout_width="28sp"
+            android:layout_height="20sp"
             android:gravity="right"
             android:text=""
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop3"
-            android:layout_width="96dp"
-            android:layout_height="40dp"
+            android:layout_width="96sp"
+            android:layout_height="40sp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
-            android:text="STOP"
+            android:text="@string/stop3"
             android:textColor="#FBF701"
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
-            android:layout_width="28dp"
-            android:layout_height="20dp"
+            android:layout_width="28sp"
+            android:layout_height="20sp"
             android:gravity="right"
             android:text=""
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop4"
-            android:layout_width="96dp"
-            android:layout_height="40dp"
+            android:layout_width="96sp"
+            android:layout_height="40sp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
-            android:text="STOP"
+            android:text="@string/stop4"
             android:textColor="#FBF701"
             android:textSize="20sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:layout_width="28dp"
-            android:layout_height="20dp"
+            android:layout_width="28sp"
+            android:layout_height="20sp"
             android:gravity="right"
             android:text=""
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop5"
-            android:layout_width="96dp"
-            android:layout_height="40dp"
+            android:layout_width="96sp"
+            android:layout_height="40sp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
-            android:text="STOP"
+            android:text="@string/stop5"
             android:textColor="#FBF701"
             android:textSize="20sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="332dp"
-        android:layout_width="700dp"
-        android:layout_height="24dp"
+        android:layout_marginTop="332sp"
+        android:layout_width="700sp"
+        android:layout_height="24sp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/levo"
-            android:layout_width="120dp"
-            android:layout_height="24dp"
+            android:layout_width="120sp"
+            android:layout_height="24sp"
             android:gravity="bottom|left"
-            android:text="LACIKA BAČI"
+            android:text="@string/lacika_baci"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
             android:textSize="20sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="RtlHardcoded" />
 
         <TextView
-            android:layout_width="80dp"
-            android:layout_height="20dp"
+            android:layout_width="80sp"
+            android:layout_height="20sp"
             android:text=""
             android:gravity="right"
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
 
         <TextView
             android:id="@+id/centar1"
-            android:layout_width="220dp"
-            android:layout_height="24dp"
+            android:layout_width="220sp"
+            android:layout_height="24sp"
             android:gravity="bottom|center"
-            android:text="BIRAJTE ULOG"
+            android:text="@string/birajte_ulog"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
             android:textSize="20sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:layout_width="74dp"
-            android:layout_height="20dp"
+            android:layout_width="74sp"
+            android:layout_height="20sp"
             android:text=""
             android:gravity="right"
             android:textColor="#FAD2B3"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="RtlHardcoded,SmallSp,TooManyViews,VisualLintBounds" />
 
         <TextView
             android:id="@+id/desno"
-            android:layout_width="120dp"
-            android:layout_height="24dp"
+            android:layout_width="120sp"
+            android:layout_height="24sp"
             android:gravity="bottom|center"
-            android:text="SRBIJA 2023"
+            android:text="@string/srbija_2023"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
             android:textSize="20sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="113dp"
-        android:layout_width="620dp"
-        android:layout_height="206dp"
+        android:layout_marginTop="113sp"
+        android:layout_width="620sp"
+        android:layout_height="206sp"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/polje_1"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="6dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/k53"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo1"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/polje_2"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="6dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/k53"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo2"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/polje_3"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="6dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/k53"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo3"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/polje_4"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="6dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/k53"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo4"
+            tools:ignore="ContentDescription,VisualLintBounds" />
 
         <ImageView
             android:id="@+id/polje_5"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="10dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="10sp"
             android:src="@drawable/k53"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo5"
+            tools:ignore="ContentDescription,VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="113dp"
-        android:layout_width="620dp"
-        android:layout_height="206dp"
+        android:layout_marginTop="113sp"
+        android:layout_width="620sp"
+        android:layout_height="206sp"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/polje_j1"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="6dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/k00"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo11"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/polje_j2"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="6dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/k00"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo22"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/polje_j3"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="6dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/k00"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo33"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/polje_j4"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="6dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/k00"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo44"
+            tools:ignore="ContentDescription,VisualLintBounds" />
 
         <ImageView
             android:id="@+id/polje_j5"
-            android:layout_width="118dp"
-            android:layout_height="206dp"
-            android:layout_marginRight="10dp"
+            android:layout_width="118sp"
+            android:layout_height="206sp"
+            android:layout_marginEnd="10sp"
             android:src="@drawable/k00"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/todo55"
+            tools:ignore="ContentDescription,VisualLintBounds" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="125dp"
-        android:layout_width="620dp"
-        android:layout_height="240dp"
+        android:layout_marginTop="125sp"
+        android:layout_width="620sp"
+        android:layout_height="240sp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/joker"
-            android:layout_marginTop="-10dp"
-            android:layout_marginLeft="100dp"
-            android:layout_width="380dp"
-            android:layout_height="120dp"
-            android:text="JOKER"
+            android:layout_marginTop="-10sp"
+            android:layout_marginStart="100sp"
+            android:layout_width="380sp"
+            android:layout_height="120sp"
+            android:text="@string/joker"
             android:fontFamily="@font/algerian"
             android:textStyle="italic"
             android:textAlignment="center"
             android:textColor="#FF0000"
             android:textSize="100sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/card"
-            android:layout_marginTop="-40dp"
-            android:layout_marginLeft="170dp"
-            android:layout_width="380dp"
-            android:layout_height="120dp"
-            android:text="CARD"
+            android:layout_marginTop="-40sp"
+            android:layout_marginStart="170sp"
+            android:layout_width="380sp"
+            android:layout_height="120sp"
+            android:text="@string/card"
             android:fontFamily="@font/algerian"
             android:textStyle="italic"
             android:textAlignment="center"
             android:textColor="#FF0000"
             android:textSize="100sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="308dp"
-        android:layout_width="620dp"
-        android:layout_height="86dp"
+        android:layout_marginTop="308sp"
+        android:layout_width="620sp"
+        android:layout_height="86sp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/dupliranje"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:layout_width="200sp"
+            android:layout_height="40sp"
             android:gravity="bottom|center"
-            android:text="DUPLIRANJE"
+            android:text="@string/dupliranje"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
@@ -956,27 +1017,29 @@
 
         <TextView
             android:id="@+id/pobedio"
-            android:layout_width="214dp"
-            android:layout_height="40dp"
+            android:layout_width="214sp"
+            android:layout_height="40sp"
             android:gravity="bottom|center"
-            android:text="POBEDIO !"
+            android:text="@string/pobedio"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
             android:textSize="32sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/kasiranje"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:layout_width="200sp"
+            android:layout_height="40sp"
             android:gravity="bottom|center"
-            android:text="KASIRANJE"
+            android:text="@string/kasiranje"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
             android:textSize="32sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
