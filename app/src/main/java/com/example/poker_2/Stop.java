@@ -71,6 +71,12 @@ public class Stop extends Activity {
                         stop5.setBackgroundColor(Color.RED);
                         audiostop.start();
                     }
+                    try {
+                        Thread.sleep(200);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    First.izbor = 1;
                 }
             }
         }, 100,100);

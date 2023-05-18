@@ -1407,7 +1407,6 @@ public class Dobitak1 extends Activity {
                     First.rucno10.setVisibility(View.VISIBLE);
                 }
                 First.stop = 1;
-                First.izbor = 1;
             }
             }, 1000);
 

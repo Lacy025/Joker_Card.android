@@ -150,7 +150,7 @@
             android:text="@string/royal_flush"
             android:textColor="#FF0000"
             android:textSize="10sp"
-            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds,TextContrastCheck" />
 
         <TextView
             android:id="@+id/id_dobitak_3"
@@ -674,17 +674,9 @@
         android:layout_height="40sp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="10sp"
-            android:layout_height="30sp"
-            android:gravity="right"
-            android:text=""
-            android:textColor="#FAD2B3"
-            android:textSize="10sp"
-            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop1"
+            android:layout_marginLeft="12sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"
@@ -694,17 +686,9 @@
             android:textSize="20sp"
             tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
 
-        <TextView
-            android:layout_width="28sp"
-            android:layout_height="20sp"
-            android:gravity="right"
-            android:text=""
-            android:textColor="#FAD2B3"
-            android:textSize="10sp"
-            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop2"
+            android:layout_marginLeft="28sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"
@@ -714,17 +698,9 @@
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
-        <TextView
-            android:layout_width="28sp"
-            android:layout_height="20sp"
-            android:gravity="right"
-            android:text=""
-            android:textColor="#FAD2B3"
-            android:textSize="10sp"
-            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop3"
+            android:layout_marginLeft="28sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"
@@ -734,17 +710,9 @@
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck" />
 
-        <TextView
-            android:layout_width="28sp"
-            android:layout_height="20sp"
-            android:gravity="right"
-            android:text=""
-            android:textColor="#FAD2B3"
-            android:textSize="10sp"
-            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop4"
+            android:layout_marginLeft="28sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"
@@ -754,17 +722,9 @@
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
 
-        <TextView
-            android:layout_width="28sp"
-            android:layout_height="20sp"
-            android:gravity="right"
-            android:text=""
-            android:textColor="#FAD2B3"
-            android:textSize="10sp"
-            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop5"
+            android:layout_marginLeft="28sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"
