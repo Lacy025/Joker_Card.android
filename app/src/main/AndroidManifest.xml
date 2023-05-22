@@ -108,6 +108,12 @@
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
+        <activity
+            android:name=".Stopcard"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" >
+        </activity>
     </application>
 
 </manifest>

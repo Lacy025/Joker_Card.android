@@ -2,7 +2,7 @@ package com.example.poker_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
+import android.app.Activity;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -18,7 +18,7 @@ import com.google.android.material.button.MaterialButton;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class First extends AppCompatActivity implements View.OnClickListener {
+public class First<audiostop> extends AppCompatActivity implements View.OnClickListener {
     MaterialButton button_kredit;
     MaterialButton button_ulog;
     MaterialButton button_autohold;
@@ -80,11 +80,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static MediaPlayer audiokarta4;
     public static MediaPlayer audiokarta5;
     public static MediaPlayer audiokarta12345;
-    public static MediaPlayer audiostop;
     public static MediaPlayer audiodobitnik;
     public static MediaPlayer audiointro;
     public static MediaPlayer audiocount1;
     public static MediaPlayer audiocount100;
+    public static MediaPlayer audiostop;
     public TextView ah1;
     public static TextView stop1;
     public static TextView stop2;
@@ -432,6 +432,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             case R.id.deljenje:
                 if((c > 0 && deljenje==0) || (c > 0 && kasirano==1)) {
                     if(kasirano==1) {
+                        intro();
                         Kasirano.handler9.removeCallbacks(Kasirano.runnable9);
 
                         centar2.setVisibility(View.VISIBLE);
@@ -471,8 +472,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                         biodobitak = 0;
                         izbor = 0;
                         kasirano = 0;
-
-                        intro();
                     }
                     Jokers.handler1.removeCallbacks(Jokers.runnable1);
                     Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -807,6 +806,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiokarta12345 = MediaPlayer.create(this, R.raw.karte12345);
     }
     void stopcard() {
+
         if (audiostop != null) {
             if (audiostop.isPlaying()) {
                 audiostop.stop();
