@@ -1,7 +1,5 @@
 package com.example.poker_2;
 
-import static com.example.poker_2.First.centar2;
-
 import android.app.Activity;
 import android.os.Handler;
 import android.view.View;
@@ -91,7 +89,7 @@ public class Jokers extends Activity {
                 isVisible4 = !isVisible4;
                 if(First.deljenje==0) {
                     First.polje1.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
-                    First.poljej1.setVisibility(isVisible4 ? View.INVISIBLE : View.INVISIBLE);
+                    First.poljej1.setVisibility(View.INVISIBLE);
                     First.polje2.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
                     First.poljej2.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
                     First.polje3.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
@@ -112,7 +110,7 @@ public class Jokers extends Activity {
                 if(First.deljenje==0) {
                     First.polje1.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
                     First.polje2.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
-                    First.poljej2.setVisibility(isVisible5 ? View.INVISIBLE : View.INVISIBLE);
+                    First.poljej2.setVisibility(View.INVISIBLE);
                     First.polje3.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
                     First.poljej3.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
                     First.polje4.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
@@ -133,7 +131,7 @@ public class Jokers extends Activity {
                     First.polje1.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
                     First.polje2.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
                     First.polje3.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
-                    First.poljej3.setVisibility(isVisible6 ? View.INVISIBLE : View.INVISIBLE);
+                    First.poljej3.setVisibility(View.INVISIBLE);
                     First.polje4.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
                     First.poljej4.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
                     First.polje5.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
@@ -154,7 +152,7 @@ public class Jokers extends Activity {
                     First.polje2.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
                     First.polje3.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
                     First.polje4.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
-                    First.poljej4.setVisibility(isVisible7 ? View.INVISIBLE : View.INVISIBLE);
+                    First.poljej4.setVisibility(View.INVISIBLE);
                     First.polje5.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
                     First.poljej5.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
                     handler7.postDelayed(this, 11000);
@@ -175,7 +173,7 @@ public class Jokers extends Activity {
                     First.polje3.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
                     First.polje4.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
                     First.polje5.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
-                    First.poljej5.setVisibility(isVisible8 ? View.INVISIBLE : View.INVISIBLE);
+                    First.poljej5.setVisibility(View.INVISIBLE);
                     handler8.postDelayed(this, 12000);
                 }
             }

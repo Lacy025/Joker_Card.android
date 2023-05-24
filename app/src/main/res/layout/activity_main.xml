@@ -676,7 +676,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop1"
-            android:layout_marginLeft="12sp"
+            android:layout_marginStart="12sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"
@@ -688,7 +688,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop2"
-            android:layout_marginLeft="28sp"
+            android:layout_marginStart="28sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"
@@ -700,7 +700,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop3"
-            android:layout_marginLeft="28sp"
+            android:layout_marginStart="28sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"
@@ -712,7 +712,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop4"
-            android:layout_marginLeft="28sp"
+            android:layout_marginStart="28sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"
@@ -724,7 +724,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop5"
-            android:layout_marginLeft="28sp"
+            android:layout_marginStart="28sp"
             android:layout_width="96sp"
             android:layout_height="40sp"
             android:backgroundTint="#404040"

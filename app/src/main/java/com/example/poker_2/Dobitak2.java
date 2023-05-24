@@ -16,10 +16,6 @@ import static com.example.poker_2.First.ponistavanje2;
 import android.app.Activity;
 import android.os.Handler;
 import android.view.View;
-import android.widget.TextView;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Dobitak2 extends Activity {
     int n1;
@@ -56,9 +52,7 @@ public class Dobitak2 extends Activity {
         ponistavanje2();
 
         final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        handler.postDelayed(() -> {
 
                 n1 = Karta1.n1;
                 n2 = Karta2.n2;
@@ -819,7 +813,6 @@ public class Dobitak2 extends Activity {
                     Jokers.handler8.removeCallbacks(Jokers.runnable8);
                     new Jokers();
                 }
-            }
         },First.pauzak);
     }
     void ProveraBoje1() {

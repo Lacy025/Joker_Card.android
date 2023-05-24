@@ -2,7 +2,6 @@ package com.example.poker_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -18,7 +17,7 @@ import com.google.android.material.button.MaterialButton;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class First<audiostop> extends AppCompatActivity implements View.OnClickListener {
+public class First extends AppCompatActivity implements View.OnClickListener {
     MaterialButton button_kredit;
     MaterialButton button_ulog;
     MaterialButton button_autohold;
@@ -34,25 +33,25 @@ public class First<audiostop> extends AppCompatActivity implements View.OnClickL
     int game;
     int u = 1;
     static int ah = 1;
-    int d1 = 1100;
+    final int d1 = 1100;
     public static int dob1;
-    int d2 = 500;
+    final int d2 = 500;
     public static int dob2;
-    int d3 = 100;
+    final int d3 = 100;
     public static int dob3;
-    int d4 = 40;
+    final int d4 = 40;
     public static int dob4;
-    int d5 = 10;
+    final int d5 = 10;
     public static int dob5;
-    int d6 = 7;
+    final int d6 = 7;
     public static int dob6;
-    int d7 = 5;
+    final int d7 = 5;
     public static int dob7;
-    int d8 = 3;
+    final int d8 = 3;
     public static int dob8;
-    int d9 = 2;
+    final int d9 = 2;
     public static int dob9;
-    int d10 = 1;
+    final int d10 = 1;
     public static int dob10;
     public static int deljenje;
     public static int stop;
@@ -226,80 +225,66 @@ public class First<audiostop> extends AppCompatActivity implements View.OnClickL
         timer1.schedule(task1 = new TimerTask() {
             @Override
             public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        new Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        Jokers.handler1.removeCallbacks(Jokers.runnable1);
-                                        Jokers.handler2.removeCallbacks(Jokers.runnable2);
-                                        Jokers.handler3.removeCallbacks(Jokers.runnable3);
-                                        Jokers.handler4.removeCallbacks(Jokers.runnable4);
-                                        Jokers.handler5.removeCallbacks(Jokers.runnable5);
-                                        Jokers.handler6.removeCallbacks(Jokers.runnable6);
-                                        Jokers.handler7.removeCallbacks(Jokers.runnable7);
-                                        Jokers.handler8.removeCallbacks(Jokers.runnable8);
-                                        new Jokers();
-                                    }
-                                }, 0);
-                    }
-                });
+                runOnUiThread(() -> new Handler().postDelayed(
+                        () -> {
+                            Jokers.handler1.removeCallbacks(Jokers.runnable1);
+                            Jokers.handler2.removeCallbacks(Jokers.runnable2);
+                            Jokers.handler3.removeCallbacks(Jokers.runnable3);
+                            Jokers.handler4.removeCallbacks(Jokers.runnable4);
+                            Jokers.handler5.removeCallbacks(Jokers.runnable5);
+                            Jokers.handler6.removeCallbacks(Jokers.runnable6);
+                            Jokers.handler7.removeCallbacks(Jokers.runnable7);
+                            Jokers.handler8.removeCallbacks(Jokers.runnable8);
+                            new Jokers();
+                        }, 0));
             }
         }, 0, 12000);
 
         timer2.schedule(task2 = new TimerTask() {
             @Override
             public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
+                runOnUiThread(() -> {
                         new Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        if(c==0&&deljenje==0) {
-                                            levodole1.setText("LACIKA BAČI");
-                                            levodole1.setVisibility(View.VISIBLE);
-                                            desnodole1.setVisibility(View.INVISIBLE);
-                                        }
-                                        if(c>0&&deljenje==0) {
-                                            levodole1.setVisibility(View.INVISIBLE);
-                                            desnodole1.setVisibility(View.INVISIBLE);
-                                            centar1.setText("BIRAJTE ULOG");
-                                            centar1.setVisibility(View.VISIBLE);
-                                        }
-                                        if(c>0&&deljenje==2) {
-                                            centar1.setText("BIRAJTE KARTE");
-                                            centar1.setVisibility(View.VISIBLE);
-                                        }
-                                        if(biodobitak == 1) {
-                                            levodole2.setVisibility(View.VISIBLE);
-                                            desnodole2.setVisibility(View.INVISIBLE);
-                                        }
+                                () -> {
+                                    if(c==0&&deljenje==0) {
+                                        levodole1.setText("LACIKA BAČI");
+                                        levodole1.setVisibility(View.VISIBLE);
+                                        desnodole1.setVisibility(View.INVISIBLE);
+                                    }
+                                    if(c>0&&deljenje==0) {
+                                        levodole1.setVisibility(View.INVISIBLE);
+                                        desnodole1.setVisibility(View.INVISIBLE);
+                                        centar1.setText("BIRAJTE ULOG");
+                                        centar1.setVisibility(View.VISIBLE);
+                                    }
+                                    if(c>0&&deljenje==2) {
+                                        centar1.setText("BIRAJTE KARTE");
+                                        centar1.setVisibility(View.VISIBLE);
+                                    }
+                                    if(biodobitak == 1) {
+                                        levodole2.setVisibility(View.VISIBLE);
+                                        desnodole2.setVisibility(View.INVISIBLE);
                                     }
                                 }, 1000);
                         new Handler().postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        if(c==0&&deljenje==0) {
-                                            levodole1.setVisibility(View.INVISIBLE);
-                                            desnodole1.setText("SRBIJA 2023");
-                                            desnodole1.setVisibility(View.VISIBLE);
-                                        }
-                                        if((c>0&&deljenje==0)||(c>0&&deljenje==2)) {
-                                            levodole1.setText("");
-                                            levodole1.setVisibility(View.INVISIBLE);
-                                            desnodole1.setVisibility(View.INVISIBLE);
-                                            centar1.setText("PRITISNITE DELJENJE");
-                                            centar1.setVisibility(View.VISIBLE);
-                                        }
-                                        if(biodobitak == 1) {
-                                            levodole2.setVisibility(View.INVISIBLE);
-                                            desnodole2.setVisibility(View.VISIBLE);
-                                        }
+                                () -> {
+                                    if(c==0&&deljenje==0) {
+                                        levodole1.setVisibility(View.INVISIBLE);
+                                        desnodole1.setText("SRBIJA 2023");
+                                        desnodole1.setVisibility(View.VISIBLE);
                                     }
-                                    }, 2000);
-                    }
+                                    if((c>0&&deljenje==0)||(c>0&&deljenje==2)) {
+                                        levodole1.setText("");
+                                        levodole1.setVisibility(View.INVISIBLE);
+                                        desnodole1.setVisibility(View.INVISIBLE);
+                                        centar1.setText("PRITISNITE DELJENJE");
+                                        centar1.setVisibility(View.VISIBLE);
+                                    }
+                                    if(biodobitak == 1) {
+                                        levodole2.setVisibility(View.INVISIBLE);
+                                        desnodole2.setVisibility(View.VISIBLE);
+                                    }
+                                }, 2000);
                 });
             }
         }, 0, 2000);
@@ -366,38 +351,30 @@ public class First<audiostop> extends AppCompatActivity implements View.OnClickL
                     game = 1;
                     c+=100;
                     c1.setText(Integer.toString(c));
-                    return;
                 }
-                else {
-                    return;
-                }
+                return;
             case R.id.ulog:
                 if(c > 0 && deljenje==0) {
+                    ulog();
                     u+=1;
                     if(u==99 || u > c) {
                         u=1;
                     }
                     Ulog();
-                    ulog();
-                    return;
                 }
-                else {
-                    return;
-                }
+                return;
             case R.id.autohold:
                 if(c > 0 && deljenje==0) {
                     if(ah==1) {
                         ah1.setTextColor(Color.BLACK);
                         ah=0;
-                        autohold();
-                        return;
                     }
                     else {
                         ah1.setTextColor(Color.BLUE);
                         ah=1;
-                        autohold();
-                        return;
                     }
+                    autohold();
+                    return;
                 }
                 else {
                     return;
@@ -620,61 +597,47 @@ public class First<audiostop> extends AppCompatActivity implements View.OnClickL
                     audiostop.start();
                     stop1.setBackgroundColor(Color.RED);
                     Dobitak1.hold1 = 1;
-                    return;
                 }
-                else {
-                    return;
-                }
+                return;
             case R.id.stop2:
                 if(izbor == 1) {
                     stopcard();
                     audiostop.start();
                     stop2.setBackgroundColor(Color.RED);
                     Dobitak1.hold2 = 1;
-                    return;
                 }
-                else {
-                    return;
-                }
+                return;
             case R.id.stop3:
                 if(izbor == 1) {
                     stopcard();
                     audiostop.start();
                     stop3.setBackgroundColor(Color.RED);
                     Dobitak1.hold3 = 1;
-                    return;
                 }
-                else {
-                    return;
-                }
+                return;
             case R.id.stop4:
                 if(izbor == 1) {
                     stopcard();
                     audiostop.start();
                     stop4.setBackgroundColor(Color.RED);
                     Dobitak1.hold4 = 1;
-                    return;
                 }
-                else {
-                    return;
-                }
+                return;
             case R.id.stop5:
                 if(izbor == 1) {
                     stopcard();
                     audiostop.start();
                     stop5.setBackgroundColor(Color.RED);
                     Dobitak1.hold5 = 1;
-                    return;
                 }
-                else {
-                    return;
-                }
+                return;
         }
     }
     void intro() {
         if (audiointro != null) {
             if (audiointro.isPlaying()) {
                 audiointro.stop();
+
             }
             audiointro.reset();
             audiointro.release();
@@ -687,18 +650,18 @@ public class First<audiostop> extends AppCompatActivity implements View.OnClickL
             game = 1;
             if(audiointro.isPlaying()) {
                 audiointro.stop();
+                audiointro.reset();
+                audiointro.release();
+                audiointro = null;
             }
-            audiointro.reset();
-            audiointro.release();
-            audiointro = null;
         }
         if (audiokredit != null) {
             if (audiokredit.isPlaying()) {
                 audiokredit.stop();
+                audiokredit.reset();
+                audiokredit.release();
+                audiokredit = null;
             }
-            audiokredit.reset();
-            audiokredit.release();
-            audiokredit = null;
         }
         audiokredit = MediaPlayer.create(this, R.raw.kredit);
         audiokredit.start();
@@ -744,10 +707,10 @@ public class First<audiostop> extends AppCompatActivity implements View.OnClickL
         if (audioulog != null) {
             if (audioulog.isPlaying()) {
                 audioulog.stop();
+                audioulog.reset();
+                audioulog.release();
+                audioulog = null;
             }
-            audioulog.reset();
-            audioulog.release();
-            audioulog = null;
         }
         audioulog = MediaPlayer.create(this, R.raw.ulog);
         audioulog.start();
@@ -806,7 +769,6 @@ public class First<audiostop> extends AppCompatActivity implements View.OnClickL
         audiokarta12345 = MediaPlayer.create(this, R.raw.karte12345);
     }
     void stopcard() {
-
         if (audiostop != null) {
             if (audiostop.isPlaying()) {
                 audiostop.stop();

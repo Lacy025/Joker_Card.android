@@ -6,17 +6,9 @@ import static com.example.poker_2.First.audiointro;
 import static com.example.poker_2.First.centar2;
 import static com.example.poker_2.First.cifra;
 
-import static java.lang.Thread.sleep;
-
 import android.app.Activity;
-import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Handler;
 import android.view.View;
-
-import java.io.File;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Kasiranje extends Activity {
     public static Handler handler9;
@@ -74,7 +66,7 @@ public class Kasiranje extends Activity {
         };
         handler10.post(runnable10);
     }
-    public void minusjedan() {
+    void minusjedan() {
         First.c +=1;
         First.c1.setText(Integer.toString(First.c));
         First.cifra -=1;
@@ -84,7 +76,7 @@ public class Kasiranje extends Activity {
             pobedio();
         }
     }
-    public void minussto() {
+    void minussto() {
         First.c +=100;
         First.c1.setText(Integer.toString(First.c));
         First.cifra -=100;

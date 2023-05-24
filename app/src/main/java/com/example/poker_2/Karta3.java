@@ -14,9 +14,7 @@ public class Karta3 extends Activity {
     public Karta3() {
 
         final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        handler.postDelayed(() -> {
 
                 First.polje3.setVisibility(View.INVISIBLE);
 
@@ -236,7 +234,6 @@ public class Karta3 extends Activity {
                 if(First.deljenje == 3) {
                     First.audiokarta3.start();
                 }
-            }
         }, First.pauzak);
     }
 }

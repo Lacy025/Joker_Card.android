@@ -1,7 +1,6 @@
 package com.example.poker_2;
 
 import static com.example.poker_2.First.centar2;
-import static com.example.poker_2.First.kasirano;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -14,9 +13,8 @@ public class Kasirano extends Activity {
     Kasirano() {
 
         handler9 = new Handler();
-        runnable9 = new Runnable() {
-            @Override
-            public void run() {
+        runnable9 = () -> {
+
                 if(First.kasiranje == 1) {
                     centar2.setVisibility(View.VISIBLE);
                     First.stop1.setVisibility(View.VISIBLE);
@@ -74,7 +72,6 @@ public class Kasirano extends Activity {
                     First.biodobitak = 0;
                     First.izbor = 0;
                 }
-            }
         };
         handler9.postDelayed(runnable9,3600);
     }

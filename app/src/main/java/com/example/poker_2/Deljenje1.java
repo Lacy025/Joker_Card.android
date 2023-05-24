@@ -3,9 +3,6 @@ package com.example.poker_2;
 import static com.example.poker_2.First.audiokarta12345;
 
 import android.app.Activity;
-import android.media.MediaPlayer;
-import android.os.Handler;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
