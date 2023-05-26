@@ -17,6 +17,8 @@ import android.app.Activity;
 import android.os.Handler;
 import android.view.View;
 
+import java.util.Locale;
+
 public class Dobitak2 extends Activity {
     int n1;
     int n2;
@@ -705,6 +707,7 @@ public class Dobitak2 extends Activity {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak1.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob1)));
                     dobitakdb.setText(Integer.toString(dob1));
                     First.cifra = dob1;
                 }
@@ -712,63 +715,63 @@ public class Dobitak2 extends Activity {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak2.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(Integer.toString(dob2));
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob2)));
                     First.cifra = dob2;
                 }
                 if(Streetflush == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak3.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(Integer.toString(dob3));
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob3)));
                     First.cifra = dob3;
                 }
                 if(Poker == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak4.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(Integer.toString(dob4));
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob4)));
                     First.cifra = dob4;
                 }
                 if(Fullhouse == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak5.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(Integer.toString(dob5));
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob5)));
                     First.cifra = dob5;
                 }
                 if(Flush == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak6.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(Integer.toString(dob6));
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob6)));
                     First.cifra = dob6;
                 }
                 if(Street == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak7.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(Integer.toString(dob7));
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob7)));
                     First.cifra = dob7;
                 }
                 if(Threeofakind == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak8.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(Integer.toString(dob8));
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob8)));
                     First.cifra = dob8;
                 }
                 if(Twopairs == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak9.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(Integer.toString(dob9));
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob9)));
                     First.cifra = dob9;
                 }
                 if(Highpair == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak10.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(Integer.toString(dob10));
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob10)));
                     First.cifra = dob10;
                 }
                 if(First.biodobitak == 1) {

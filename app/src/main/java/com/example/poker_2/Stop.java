@@ -1,6 +1,10 @@
 package com.example.poker_2;
 
-import static com.example.poker_2.First.audiostop;
+import static com.example.poker_2.First.audiostop1;
+import static com.example.poker_2.First.audiostop2;
+import static com.example.poker_2.First.audiostop3;
+import static com.example.poker_2.First.audiostop4;
+import static com.example.poker_2.First.audiostop5;
 import static com.example.poker_2.First.stop1;
 import static com.example.poker_2.First.stop2;
 import static com.example.poker_2.First.stop3;
@@ -24,48 +28,48 @@ public class Stop extends AppCompatActivity {
 
                     if (Dobitak1.hold1 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(280);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                         stop1.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        audiostop1.start();
                     }
                     if (Dobitak1.hold2 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(280);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                         stop2.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        audiostop2.start();
                     }
                     if (Dobitak1.hold3 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(280);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                         stop3.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        audiostop3.start();
                     }
                     if (Dobitak1.hold4 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(280);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                         stop4.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        audiostop4.start();
                     }
                     if (Dobitak1.hold5 == 1 && First.ah == 1) {
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(280);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                         stop5.setBackgroundColor(Color.RED);
-                        audiostop.start();
+                        audiostop5.start();
                     }
                     try {
                         Thread.sleep(200);

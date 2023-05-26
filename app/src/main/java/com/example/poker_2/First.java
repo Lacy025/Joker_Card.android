@@ -84,6 +84,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static MediaPlayer audiocount1;
     public static MediaPlayer audiocount100;
     public static MediaPlayer audiostop;
+    public static MediaPlayer audiostop1;
+    public static MediaPlayer audiostop2;
+    public static MediaPlayer audiostop3;
+    public static MediaPlayer audiostop4;
+    public static MediaPlayer audiostop5;
     public TextView ah1;
     public static TextView stop1;
     public static TextView stop2;
@@ -321,7 +326,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             pauzak = 900;
                                             new Karta5();
                                             new Dobitak1(this);
-                                            stopcard();
+                                            stopcard1();
+                                            stopcard2();
+                                            stopcard3();
+                                            stopcard4();
+                                            stopcard5();
                                             new Stop(this);
                                         }
                                         if(kasirano==1) {
@@ -341,296 +350,280 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     @Override
     public void onClick(View view) {
-        Button pressed = (Button) view;
-        switch (pressed.getId()) {
-
-            case R.id.kredit:
-                if(c<4901 && deljenje==0) {
+        int id = view.getId();
+            if(id == R.id.kredit) {
+                if (c < 4901 && deljenje == 0) {
                     intro();
                     kredit();
                     game = 1;
-                    c+=100;
+                    c += 100;
                     c1.setText(Integer.toString(c));
                 }
-                return;
-            case R.id.ulog:
-                if(c > 0 && deljenje==0) {
-                    ulog();
-                    u+=1;
-                    if(u==99 || u > c) {
-                        u=1;
-                    }
-                    Ulog();
+            }
+        if(id == R.id.ulog) {
+            if(c > 0 && deljenje==0) {
+                ulog();
+                u+=1;
+                if(u==99 || u > c) {
+                    u=1;
                 }
-                return;
-            case R.id.autohold:
-                if(c > 0 && deljenje==0) {
-                    if(ah==1) {
-                        ah1.setTextColor(Color.BLACK);
-                        ah=0;
-                    }
-                    else {
-                        ah1.setTextColor(Color.BLUE);
-                        ah=1;
-                    }
-                    autohold();
-                    return;
+                Ulog();
+            }
+        }
+        if(id == R.id.autohold) {
+            if (c > 0 && deljenje == 0) {
+                if (ah == 1) {
+                    ah1.setTextColor(Color.BLACK);
+                    ah = 0;
+                } else {
+                    ah1.setTextColor(Color.BLUE);
+                    ah = 1;
                 }
-                else {
-                    return;
-                }
-            case R.id.kasa:
-                if(izbor == 1) {
-                    ponistavanje1();
-                    ponistavanje2();
-                    Dobitak1.hold1 = 0;
-                    Dobitak1.hold2 = 0;
-                    Dobitak1.hold3 = 0;
-                    Dobitak1.hold4 = 0;
-                    Dobitak1.hold5 = 0;
-                    return;
-                }
-                else if(izbor == 2) {
-                    izbor = 3;
-                    biodobitak = 0;
+                autohold();
+            }
+        }
+        if(id == R.id.kasa) {
+            if(izbor == 1) {
+                ponistavanje1();
+                ponistavanje2();
+                Dobitak1.hold1 = 0;
+                Dobitak1.hold2 = 0;
+                Dobitak1.hold3 = 0;
+                Dobitak1.hold4 = 0;
+                Dobitak1.hold5 = 0;
+            }
+            else if(izbor == 2) {
+                izbor = 3;
+                biodobitak = 0;
+                levodole2.setVisibility(View.INVISIBLE);
+                desnodole2.setVisibility(View.INVISIBLE);
+                audiointro = MediaPlayer.create(getApplicationContext(), R.raw.intro);
+                count1();
+                count100();
+                kasiranje = 1;
+                new Kasiranje();
+            }
+        }
+        if(id == R.id.deljenje) {
+            if((c > 0 && deljenje==0) || (c > 0 && kasirano==1)) {
+                if(kasirano==1) {
+                    intro();
+                    Kasirano.handler9.removeCallbacks(Kasirano.runnable9);
+
+                    centar2.setVisibility(View.VISIBLE);
+
+                    stop1.setVisibility(View.VISIBLE);
+                    stop2.setVisibility(View.VISIBLE);
+                    stop3.setVisibility(View.VISIBLE);
+                    stop4.setVisibility(View.VISIBLE);
+                    stop5.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.INVISIBLE);
+                    dobitak.setVisibility(View.INVISIBLE);
+                    dobitak1.setVisibility(View.INVISIBLE);
+                    dobitak2.setVisibility(View.INVISIBLE);
+                    dobitak3.setVisibility(View.INVISIBLE);
+                    dobitak4.setVisibility(View.INVISIBLE);
+                    dobitak5.setVisibility(View.INVISIBLE);
+                    dobitak6.setVisibility(View.INVISIBLE);
+                    dobitak7.setVisibility(View.INVISIBLE);
+                    dobitak8.setVisibility(View.INVISIBLE);
+                    dobitak9.setVisibility(View.INVISIBLE);
+                    dobitak10.setVisibility(View.INVISIBLE);
+                    dobitakdb.setVisibility(View.INVISIBLE);
                     levodole2.setVisibility(View.INVISIBLE);
                     desnodole2.setVisibility(View.INVISIBLE);
-                    audiointro = MediaPlayer.create(getApplicationContext(), R.raw.intro);
-                    count1();
-                    count100();
-
-                    kasiranje = 1;
-                    new Kasiranje();
-                    return;
-                }
-                else {
-                    return;
-                }
-            case R.id.deljenje:
-                if((c > 0 && deljenje==0) || (c > 0 && kasirano==1)) {
-                    if(kasirano==1) {
-                        intro();
-                        Kasirano.handler9.removeCallbacks(Kasirano.runnable9);
-
-                        centar2.setVisibility(View.VISIBLE);
-
-                        stop1.setVisibility(View.VISIBLE);
-                        stop2.setVisibility(View.VISIBLE);
-                        stop3.setVisibility(View.VISIBLE);
-                        stop4.setVisibility(View.VISIBLE);
-                        stop5.setVisibility(View.VISIBLE);
-                        table.setVisibility(View.INVISIBLE);
-                        dobitak.setVisibility(View.INVISIBLE);
-                        dobitak1.setVisibility(View.INVISIBLE);
-                        dobitak2.setVisibility(View.INVISIBLE);
-                        dobitak3.setVisibility(View.INVISIBLE);
-                        dobitak4.setVisibility(View.INVISIBLE);
-                        dobitak5.setVisibility(View.INVISIBLE);
-                        dobitak6.setVisibility(View.INVISIBLE);
-                        dobitak7.setVisibility(View.INVISIBLE);
-                        dobitak8.setVisibility(View.INVISIBLE);
-                        dobitak9.setVisibility(View.INVISIBLE);
-                        dobitak10.setVisibility(View.INVISIBLE);
-                        dobitakdb.setVisibility(View.INVISIBLE);
-                        levodole2.setVisibility(View.INVISIBLE);
-                        desnodole2.setVisibility(View.INVISIBLE);
-                        polje1.setVisibility(View.INVISIBLE);
-                        polje2.setVisibility(View.INVISIBLE);
-                        polje3.setVisibility(View.INVISIBLE);
-                        polje4.setVisibility(View.INVISIBLE);
-                        polje5.setVisibility(View.INVISIBLE);
-
-                        centar2.setText("");
-                        centar2.setVisibility(View.INVISIBLE);
-                        centar2.setText("");
-                        centar2.setVisibility(View.INVISIBLE);
-
-                        kasiranje = 0;
-                        biodobitak = 0;
-                        izbor = 0;
-                        kasirano = 0;
-                    }
-                    Jokers.handler1.removeCallbacks(Jokers.runnable1);
-                    Jokers.handler2.removeCallbacks(Jokers.runnable2);
-                    Jokers.handler3.removeCallbacks(Jokers.runnable3);
-                    Jokers.handler4.removeCallbacks(Jokers.runnable4);
-                    Jokers.handler5.removeCallbacks(Jokers.runnable5);
-                    Jokers.handler6.removeCallbacks(Jokers.runnable6);
-                    Jokers.handler7.removeCallbacks(Jokers.runnable7);
-                    Jokers.handler8.removeCallbacks(Jokers.runnable8);
-
-                    polje1.setImageResource(R.drawable.k53);
-                    polje2.setImageResource(R.drawable.k53);
-                    polje3.setImageResource(R.drawable.k53);
-                    polje4.setImageResource(R.drawable.k53);
-                    polje5.setImageResource(R.drawable.k53);
-
                     polje1.setVisibility(View.INVISIBLE);
                     polje2.setVisibility(View.INVISIBLE);
                     polje3.setVisibility(View.INVISIBLE);
                     polje4.setVisibility(View.INVISIBLE);
                     polje5.setVisibility(View.INVISIBLE);
-                    poljej1.setVisibility(View.INVISIBLE);
-                    poljej2.setVisibility(View.INVISIBLE);
-                    poljej3.setVisibility(View.INVISIBLE);
-                    poljej4.setVisibility(View.INVISIBLE);
-                    poljej5.setVisibility(View.INVISIBLE);
-                    joker.setText("");
-                    joker.setVisibility(View.INVISIBLE);
-                    card.setText("");
-                    card.setVisibility(View.INVISIBLE);
-                    levodole1.setText("");
-                    levodole1.setVisibility(View.INVISIBLE);
-                    desnodole1.setText("");
-                    desnodole1.setVisibility(View.INVISIBLE);
-                    centar1.setText("");
-                    centar1.setVisibility(View.INVISIBLE);
 
-                    c = c - u;
-                    c1.setText(Integer.toString(c));
+                    centar2.setText("");
+                    centar2.setVisibility(View.INVISIBLE);
+                    centar2.setText("");
+                    centar2.setVisibility(View.INVISIBLE);
 
-                    polje1.setVisibility(View.VISIBLE);
-                    polje2.setVisibility(View.VISIBLE);
-                    polje3.setVisibility(View.VISIBLE);
-                    polje4.setVisibility(View.VISIBLE);
-                    polje5.setVisibility(View.VISIBLE);
-
-                    deljenje1();
-                    deljenje();
-
-                    while(k1==k2||k1==k3||k1==k4||k1==k5||k2==k3||
-                            k2==k4||k2==k5||k3==k4||k3==k5||k4==k5) {
-                        deljenje1();
-                    }
-                    deljenje = 1;
-                    return;
-                }
-                else if(izbor == 1) {
+                    kasiranje = 0;
+                    biodobitak = 0;
                     izbor = 0;
-                    deljenje = 3;
-                    centar1.setText("");
-                    centar1.setVisibility(View.INVISIBLE);
-                    deljenje2();
-                    hold = 300;
-                    pauzak = 100;
-                    rucno1.setVisibility(View.INVISIBLE);
-                    rucno2.setVisibility(View.INVISIBLE);
-                    rucno3.setVisibility(View.INVISIBLE);
-                    rucno4.setVisibility(View.INVISIBLE);
-                    rucno5.setVisibility(View.INVISIBLE);
-                    rucno6.setVisibility(View.INVISIBLE);
-                    rucno7.setVisibility(View.INVISIBLE);
-                    rucno8.setVisibility(View.INVISIBLE);
-                    rucno9.setVisibility(View.INVISIBLE);
-                    rucno10.setVisibility(View.INVISIBLE);
+                    kasirano = 0;
+                }
+                Jokers.handler1.removeCallbacks(Jokers.runnable1);
+                Jokers.handler2.removeCallbacks(Jokers.runnable2);
+                Jokers.handler3.removeCallbacks(Jokers.runnable3);
+                Jokers.handler4.removeCallbacks(Jokers.runnable4);
+                Jokers.handler5.removeCallbacks(Jokers.runnable5);
+                Jokers.handler6.removeCallbacks(Jokers.runnable6);
+                Jokers.handler7.removeCallbacks(Jokers.runnable7);
+                Jokers.handler8.removeCallbacks(Jokers.runnable8);
 
-                    if(Dobitak1.hold1 == 0) {
-                        polje1.setVisibility(View.INVISIBLE);
-                        polje1.setImageResource(R.drawable.k53);
-                        polje1.setVisibility(View.VISIBLE);
+                polje1.setImageResource(R.drawable.k53);
+                polje2.setImageResource(R.drawable.k53);
+                polje3.setImageResource(R.drawable.k53);
+                polje4.setImageResource(R.drawable.k53);
+                polje5.setImageResource(R.drawable.k53);
+
+                polje1.setVisibility(View.INVISIBLE);
+                polje2.setVisibility(View.INVISIBLE);
+                polje3.setVisibility(View.INVISIBLE);
+                polje4.setVisibility(View.INVISIBLE);
+                polje5.setVisibility(View.INVISIBLE);
+                poljej1.setVisibility(View.INVISIBLE);
+                poljej2.setVisibility(View.INVISIBLE);
+                poljej3.setVisibility(View.INVISIBLE);
+                poljej4.setVisibility(View.INVISIBLE);
+                poljej5.setVisibility(View.INVISIBLE);
+                joker.setText("");
+                joker.setVisibility(View.INVISIBLE);
+                card.setText("");
+                card.setVisibility(View.INVISIBLE);
+                levodole1.setText("");
+                levodole1.setVisibility(View.INVISIBLE);
+                desnodole1.setText("");
+                desnodole1.setVisibility(View.INVISIBLE);
+                centar1.setText("");
+                centar1.setVisibility(View.INVISIBLE);
+
+                c = c - u;
+                c1.setText(Integer.toString(c));
+
+                polje1.setVisibility(View.VISIBLE);
+                polje2.setVisibility(View.VISIBLE);
+                polje3.setVisibility(View.VISIBLE);
+                polje4.setVisibility(View.VISIBLE);
+                polje5.setVisibility(View.VISIBLE);
+
+                deljenje1();
+                deljenje();
+
+                while(k1==k2||k1==k3||k1==k4||k1==k5||k2==k3||
+                        k2==k4||k2==k5||k3==k4||k3==k5||k4==k5) {
+                    deljenje1();
+                }
+                deljenje = 1;
+            }
+            else if(izbor == 1) {
+                izbor = 0;
+                deljenje = 3;
+                centar1.setText("");
+                centar1.setVisibility(View.INVISIBLE);
+                deljenje2();
+                hold = 300;
+                pauzak = 100;
+                rucno1.setVisibility(View.INVISIBLE);
+                rucno2.setVisibility(View.INVISIBLE);
+                rucno3.setVisibility(View.INVISIBLE);
+                rucno4.setVisibility(View.INVISIBLE);
+                rucno5.setVisibility(View.INVISIBLE);
+                rucno6.setVisibility(View.INVISIBLE);
+                rucno7.setVisibility(View.INVISIBLE);
+                rucno8.setVisibility(View.INVISIBLE);
+                rucno9.setVisibility(View.INVISIBLE);
+                rucno10.setVisibility(View.INVISIBLE);
+
+                if(Dobitak1.hold1 == 0) {
+                    polje1.setVisibility(View.INVISIBLE);
+                    polje1.setImageResource(R.drawable.k53);
+                    polje1.setVisibility(View.VISIBLE);
+                    k1 = (int) Math.floor(Math.random() * 53);
+                    while (k1==k2||k1==k3||k1==k4||k1==k5) {
                         k1 = (int) Math.floor(Math.random() * 53);
-                        while (k1==k2||k1==k3||k1==k4||k1==k5) {
-                            k1 = (int) Math.floor(Math.random() * 53);
-                        }
-                        karta1();
-                        pauzak = pauzak + hold;
-                        new Karta1();
                     }
-                    if(Dobitak1.hold2 == 0) {
-                        polje2.setVisibility(View.INVISIBLE);
-                        polje2.setImageResource(R.drawable.k53);
-                        polje2.setVisibility(View.VISIBLE);
+                    karta1();
+                    pauzak = pauzak + hold;
+                    new Karta1();
+                }
+                if(Dobitak1.hold2 == 0) {
+                    polje2.setVisibility(View.INVISIBLE);
+                    polje2.setImageResource(R.drawable.k53);
+                    polje2.setVisibility(View.VISIBLE);
+                    k2 = (int) Math.floor(Math.random() * 53);
+                    while (k2==k1||k2==k3||k2==k4||k2==k5) {
                         k2 = (int) Math.floor(Math.random() * 53);
-                        while (k2==k1||k2==k3||k2==k4||k2==k5) {
-                            k2 = (int) Math.floor(Math.random() * 53);
-                        }
-                        karta2();
-                        pauzak = pauzak + hold;
-                        new Karta2();
                     }
-                    if(Dobitak1.hold3 == 0) {
-                        polje3.setVisibility(View.INVISIBLE);
-                        polje3.setImageResource(R.drawable.k53);
-                        polje3.setVisibility(View.VISIBLE);
+                    karta2();
+                    pauzak = pauzak + hold;
+                    new Karta2();
+                }
+                if(Dobitak1.hold3 == 0) {
+                    polje3.setVisibility(View.INVISIBLE);
+                    polje3.setImageResource(R.drawable.k53);
+                    polje3.setVisibility(View.VISIBLE);
+                    k3 = (int) Math.floor(Math.random() * 53);
+                    while (k3==k1||k3==k2||k3==k4||k3==k5) {
                         k3 = (int) Math.floor(Math.random() * 53);
-                        while (k3==k1||k3==k2||k3==k4||k3==k5) {
-                            k3 = (int) Math.floor(Math.random() * 53);
-                        }
-                        karta3();
-                        pauzak = pauzak + hold;
-                        new Karta3();
                     }
-                    if(Dobitak1.hold4 == 0) {
-                        polje4.setVisibility(View.INVISIBLE);
-                        polje4.setImageResource(R.drawable.k53);
-                        polje4.setVisibility(View.VISIBLE);
+                    karta3();
+                    pauzak = pauzak + hold;
+                    new Karta3();
+                }
+                if(Dobitak1.hold4 == 0) {
+                    polje4.setVisibility(View.INVISIBLE);
+                    polje4.setImageResource(R.drawable.k53);
+                    polje4.setVisibility(View.VISIBLE);
+                    k4 = (int) Math.floor(Math.random() * 53);
+                    while (k4==k1||k4==k2||k4==k3||k4==k5) {
                         k4 = (int) Math.floor(Math.random() * 53);
-                        while (k4==k1||k4==k2||k4==k3||k4==k5) {
-                            k4 = (int) Math.floor(Math.random() * 53);
-                        }
-                        karta4();
-                        pauzak = pauzak + hold;
-                        new Karta4();
                     }
-                    if(Dobitak1.hold5 == 0) {
-                        polje5.setVisibility(View.INVISIBLE);
-                        polje5.setImageResource(R.drawable.k53);
-                        polje5.setVisibility(View.VISIBLE);
+                    karta4();
+                    pauzak = pauzak + hold;
+                    new Karta4();
+                }
+                if(Dobitak1.hold5 == 0) {
+                    polje5.setVisibility(View.INVISIBLE);
+                    polje5.setImageResource(R.drawable.k53);
+                    polje5.setVisibility(View.VISIBLE);
+                    k5 = (int) Math.floor(Math.random() * 53);
+                    while (k5==k1||k5==k2||k5==k3||k5==k4) {
                         k5 = (int) Math.floor(Math.random() * 53);
-                        while (k5==k1||k5==k2||k5==k3||k5==k4) {
-                            k5 = (int) Math.floor(Math.random() * 53);
-                        }
-                        karta5();
-                        pauzak = pauzak + hold;
-                        new Karta5();
                     }
-                    dobitnik();
-                    new Dobitak2();
-                    return;
+                    karta5();
+                    pauzak = pauzak + hold;
+                    new Karta5();
                 }
-                else {
-                    return;
-                }
-            case R.id.stop1:
-                if(izbor == 1) {
-                    stopcard();
-                    audiostop.start();
-                    stop1.setBackgroundColor(Color.RED);
-                    Dobitak1.hold1 = 1;
-                }
-                return;
-            case R.id.stop2:
-                if(izbor == 1) {
-                    stopcard();
-                    audiostop.start();
-                    stop2.setBackgroundColor(Color.RED);
-                    Dobitak1.hold2 = 1;
-                }
-                return;
-            case R.id.stop3:
-                if(izbor == 1) {
-                    stopcard();
-                    audiostop.start();
-                    stop3.setBackgroundColor(Color.RED);
-                    Dobitak1.hold3 = 1;
-                }
-                return;
-            case R.id.stop4:
-                if(izbor == 1) {
-                    stopcard();
-                    audiostop.start();
-                    stop4.setBackgroundColor(Color.RED);
-                    Dobitak1.hold4 = 1;
-                }
-                return;
-            case R.id.stop5:
-                if(izbor == 1) {
-                    stopcard();
-                    audiostop.start();
-                    stop5.setBackgroundColor(Color.RED);
-                    Dobitak1.hold5 = 1;
-                }
-                return;
+                dobitnik();
+                new Dobitak2();
+            }
+        }
+        if(id == R.id.stop1) {
+            if(izbor == 1) {
+                stopcard();
+                audiostop.start();
+                stop1.setBackgroundColor(Color.RED);
+                Dobitak1.hold1 = 1;
+            }
+        }
+        if(id == R.id.stop2) {
+            if(izbor == 1) {
+                stopcard();
+                audiostop.start();
+                stop2.setBackgroundColor(Color.RED);
+                Dobitak1.hold2 = 1;
+            }
+        }
+        if(id == R.id.stop3) {
+            if(izbor == 1) {
+                stopcard();
+                audiostop.start();
+                stop3.setBackgroundColor(Color.RED);
+                Dobitak1.hold3 = 1;
+            }
+        }
+        if(id == R.id.stop4) {
+            if(izbor == 1) {
+                stopcard();
+                audiostop.start();
+                stop4.setBackgroundColor(Color.RED);
+                Dobitak1.hold4 = 1;
+            }
+        }
+        if(id == R.id.stop5) {
+            if(izbor == 1) {
+                stopcard();
+                audiostop.start();
+                stop5.setBackgroundColor(Color.RED);
+                Dobitak1.hold5 = 1;
+            }
         }
     }
     void intro() {
@@ -751,9 +744,10 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k1=0;
 
         k2=1;
-        k3=14;
-        k4=27;
-        k5=40;
+        k3=13;
+        k4=17;
+        k5=19;
+
 */
 
     }
@@ -778,6 +772,61 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop = null;
         }
         audiostop = MediaPlayer.create(this, R.raw.stop);
+    }
+    void stopcard1() {
+        if (audiostop1 != null) {
+            if (audiostop1.isPlaying()) {
+                audiostop1.stop();
+            }
+            audiostop1.reset();
+            audiostop1.release();
+            audiostop1 = null;
+        }
+        audiostop1 = MediaPlayer.create(this, R.raw.stop);
+    }
+    void stopcard2() {
+        if (audiostop2 != null) {
+            if (audiostop2.isPlaying()) {
+                audiostop2.stop();
+            }
+            audiostop2.reset();
+            audiostop2.release();
+            audiostop2 = null;
+        }
+        audiostop2 = MediaPlayer.create(this, R.raw.stop);
+    }
+    void stopcard3() {
+        if (audiostop3 != null) {
+            if (audiostop3.isPlaying()) {
+                audiostop3.stop();
+            }
+            audiostop3.reset();
+            audiostop3.release();
+            audiostop3 = null;
+        }
+        audiostop3 = MediaPlayer.create(this, R.raw.stop);
+    }
+    void stopcard4() {
+        if (audiostop4 != null) {
+            if (audiostop4.isPlaying()) {
+                audiostop4.stop();
+            }
+            audiostop4.reset();
+            audiostop4.release();
+            audiostop4 = null;
+        }
+        audiostop4 = MediaPlayer.create(this, R.raw.stop);
+    }
+    void stopcard5() {
+        if (audiostop5 != null) {
+            if (audiostop5.isPlaying()) {
+                audiostop5.stop();
+            }
+            audiostop5.reset();
+            audiostop5.release();
+            audiostop5 = null;
+        }
+        audiostop5 = MediaPlayer.create(this, R.raw.stop);
     }
     void ponistavanje1() {
         if (audioponistavanje != null) {
