@@ -326,163 +326,169 @@
 
     <LinearLayout
 
-        android:layout_width="456sp"
-        android:layout_height="140sp"
+        android:layout_width="@dimen/_380sdp"
+        android:layout_height="@dimen/_110sdp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/table"
-            android:layout_width="456sp"
-            android:layout_height="140sp"
-            android:layout_marginTop="-9sp"
-            android:layout_marginStart="0sp"
+            android:layout_width="@dimen/_376sdp"
+            android:layout_height="@dimen/_106sdp"
             android:src="@drawable/table"
             android:visibility="invisible"
             android:contentDescription="@string/todo"
             tools:ignore="ContentDescription,VisualLintBounds" />
 
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="@dimen/_380sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/dobitak1"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-130sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/five_of_a_kind2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak2"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_minus40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/royal_flush2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak3"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_minus41sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/street_flush2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak4"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_minus40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/poker2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak5"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_minus41sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/full_house2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak6"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_minus40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/flush2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak7"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_minus41sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/street2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak8"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_minus40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/three_of_a_kind2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak9"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_minus40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/_2_pairs2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak10"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_320sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_minus40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/high_pair2"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/dobitak"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="15sp"
-            android:layout_marginStart="10sp"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/dobitak"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/vrednostdb"
-            android:layout_width="420sp"
-            android:layout_height="50sp"
-            android:layout_marginTop="-50sp"
-            android:layout_marginStart="25sp"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_186sdp"
             android:gravity="right"
             android:text="@string/_0"
             android:textColor="#FFFF00"
-            android:textSize="40sp"
+            android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
             tools:ignore="RtlHardcoded,VisualLintBounds" />
 
