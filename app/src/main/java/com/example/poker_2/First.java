@@ -401,7 +401,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 count1();
                 count100();
                 kasiranje = 1;
-                new Kasiranje();
+                try {
+                    new Kasiranje();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
         if(id == R.id.deljenje) {
@@ -628,10 +632,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void intro() {
         if (audiointro != null) {
-            if (audiointro.isPlaying()) {
-                audiointro.stop();
-
-            }
             audiointro.reset();
             audiointro.release();
             audiointro = null;
@@ -641,20 +641,17 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void kredit() {
         if (c==0 && game==0) {
             game = 1;
-            if(audiointro.isPlaying()) {
-                audiointro.stop();
+            if(audiointro != null) {
                 audiointro.reset();
                 audiointro.release();
                 audiointro = null;
             }
         }
         if (audiokredit != null) {
-            if (audiokredit.isPlaying()) {
-                audiokredit.stop();
                 audiokredit.reset();
                 audiokredit.release();
                 audiokredit = null;
-            }
+
         }
         audiokredit = MediaPlayer.create(this, R.raw.kredit);
         audiokredit.start();
@@ -698,21 +695,15 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void ulog() {
         if (audioulog != null) {
-            if (audioulog.isPlaying()) {
-                audioulog.stop();
                 audioulog.reset();
                 audioulog.release();
                 audioulog = null;
-            }
         }
         audioulog = MediaPlayer.create(this, R.raw.ulog);
         audioulog.start();
     }
     void autohold() {
         if (audioautohold != null) {
-            if (audioautohold.isPlaying()) {
-                audioautohold.stop();
-            }
             audioautohold.reset();
             audioautohold.release();
             audioautohold = null;
@@ -722,9 +713,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void deljenje() {
         if (audiodeljenje1 != null) {
-            if (audiodeljenje1.isPlaying()) {
-                audiodeljenje1.stop();
-            }
             audiodeljenje1.reset();
             audiodeljenje1.release();
             audiodeljenje1 = null;
@@ -739,7 +727,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-
 /*
         k1=0;
 
@@ -753,9 +740,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void karta12345() {
         if (audiokarta12345 != null) {
-            if (audiokarta12345.isPlaying()) {
-                audiokarta12345.stop();
-            }
             audiokarta12345.reset();
             audiokarta12345.release();
             audiokarta12345 = null;
@@ -764,9 +748,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void stopcard() {
         if (audiostop != null) {
-            if (audiostop.isPlaying()) {
-                audiostop.stop();
-            }
             audiostop.reset();
             audiostop.release();
             audiostop = null;
@@ -775,9 +756,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void stopcard1() {
         if (audiostop1 != null) {
-            if (audiostop1.isPlaying()) {
-                audiostop1.stop();
-            }
             audiostop1.reset();
             audiostop1.release();
             audiostop1 = null;
@@ -786,9 +764,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void stopcard2() {
         if (audiostop2 != null) {
-            if (audiostop2.isPlaying()) {
-                audiostop2.stop();
-            }
             audiostop2.reset();
             audiostop2.release();
             audiostop2 = null;
@@ -797,9 +772,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void stopcard3() {
         if (audiostop3 != null) {
-            if (audiostop3.isPlaying()) {
-                audiostop3.stop();
-            }
             audiostop3.reset();
             audiostop3.release();
             audiostop3 = null;
@@ -808,9 +780,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void stopcard4() {
         if (audiostop4 != null) {
-            if (audiostop4.isPlaying()) {
-                audiostop4.stop();
-            }
             audiostop4.reset();
             audiostop4.release();
             audiostop4 = null;
@@ -819,9 +788,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void stopcard5() {
         if (audiostop5 != null) {
-            if (audiostop5.isPlaying()) {
-                audiostop5.stop();
-            }
             audiostop5.reset();
             audiostop5.release();
             audiostop5 = null;
@@ -830,9 +796,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void ponistavanje1() {
         if (audioponistavanje != null) {
-            if (audioponistavanje.isPlaying()) {
-                audioponistavanje.stop();
-            }
             audioponistavanje.reset();
             audioponistavanje.release();
             audioponistavanje = null;
@@ -849,9 +812,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void deljenje2() {
         if (audiodeljenje2 != null) {
-            if (audiodeljenje2.isPlaying()) {
-                audiodeljenje2.stop();
-            }
             audiodeljenje2.reset();
             audiodeljenje2.release();
             audiodeljenje2 = null;
@@ -861,9 +821,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void karta1() {
         if (audiokarta1 != null) {
-            if (audiokarta1.isPlaying()) {
-                audiokarta1.stop();
-            }
             audiokarta1.reset();
             audiokarta1.release();
             audiokarta1 = null;
@@ -872,9 +829,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void karta2() {
         if (audiokarta2 != null) {
-            if (audiokarta2.isPlaying()) {
-                audiokarta2.stop();
-            }
             audiokarta2.reset();
             audiokarta2.release();
             audiokarta2 = null;
@@ -883,9 +837,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void karta3() {
         if (audiokarta3 != null) {
-            if (audiokarta3.isPlaying()) {
-                audiokarta3.stop();
-            }
             audiokarta3.reset();
             audiokarta3.release();
             audiokarta3 = null;
@@ -894,9 +845,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void karta4() {
         if (audiokarta4 != null) {
-            if (audiokarta4.isPlaying()) {
-                audiokarta4.stop();
-            }
             audiokarta4.reset();
             audiokarta4.release();
             audiokarta4 = null;
@@ -905,9 +853,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void karta5() {
         if (audiokarta5 != null) {
-            if (audiokarta5.isPlaying()) {
-                audiokarta5.stop();
-            }
             audiokarta5.reset();
             audiokarta5.release();
             audiokarta5 = null;
@@ -916,9 +861,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void dobitnik() {
         if (audiodobitnik != null) {
-            if (audiodobitnik.isPlaying()) {
-                audiodobitnik.stop();
-            }
             audiodobitnik.reset();
             audiodobitnik.release();
             audiodobitnik = null;
@@ -928,9 +870,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
 
     void count1() {
         if (audiocount1 != null) {
-            if (audiocount1.isPlaying()) {
-                audiocount1.stop();
-            }
             audiocount1.reset();
             audiocount1.release();
             audiocount1 = null;
@@ -939,9 +878,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void count100() {
         if (audiocount100 != null) {
-            if (audiocount100.isPlaying()) {
-                audiocount100.stop();
-            }
             audiocount100.reset();
             audiocount100.release();
             audiocount100 = null;

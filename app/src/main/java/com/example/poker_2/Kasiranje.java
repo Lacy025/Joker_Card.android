@@ -15,7 +15,7 @@ public class Kasiranje extends Activity {
     public static Handler handler10;
     public static Runnable runnable9;
     public static Runnable runnable10;
-    Kasiranje() {
+    Kasiranje() throws InterruptedException {
         int pobeda = cifra;
         centar2.setText("POBEDIO !");
         centar2.setVisibility(View.VISIBLE);
@@ -36,6 +36,7 @@ public class Kasiranje extends Activity {
         handler9.post(runnable9);
 
         minusjedan();
+        Thread.sleep(40);
 
         handler10 = new Handler();
         runnable10 = new Runnable() {
