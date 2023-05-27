@@ -636,69 +636,69 @@
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="296sp"
-        android:layout_width="700sp"
-        android:layout_height="40sp"
+        android:layout_marginTop="@dimen/_244sdp"
+        android:layout_width="@dimen/_510sdp"
+        android:layout_height="@dimen/_32sdp"
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop1"
-            android:layout_marginStart="12sp"
-            android:layout_width="96sp"
-            android:layout_height="40sp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_width="@dimen/_76sdp"
+            android:layout_height="@dimen/_36sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop1"
             android:textColor="#FBF701"
-            android:textSize="20sp"
+            android:textSize="@dimen/_16sdp"
             tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop2"
-            android:layout_marginStart="28sp"
-            android:layout_width="96sp"
-            android:layout_height="40sp"
+            android:layout_marginStart="@dimen/_26sdp"
+            android:layout_width="@dimen/_76sdp"
+            android:layout_height="@dimen/_36sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop2"
             android:textColor="#FBF701"
-            android:textSize="20sp"
+            android:textSize="@dimen/_16sdp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop3"
-            android:layout_marginStart="28sp"
-            android:layout_width="96sp"
-            android:layout_height="40sp"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:layout_width="@dimen/_76sdp"
+            android:layout_height="@dimen/_36sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop3"
             android:textColor="#FBF701"
-            android:textSize="20sp"
+            android:textSize="@dimen/_16sdp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop4"
-            android:layout_marginStart="28sp"
-            android:layout_width="96sp"
-            android:layout_height="40sp"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:layout_width="@dimen/_76sdp"
+            android:layout_height="@dimen/_36sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop4"
             android:textColor="#FBF701"
-            android:textSize="20sp"
+            android:textSize="@dimen/_16sdp"
             tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop5"
-            android:layout_marginStart="28sp"
-            android:layout_width="96sp"
-            android:layout_height="40sp"
+            android:layout_marginStart="@dimen/_28sdp"
+            android:layout_width="@dimen/_76sdp"
+            android:layout_height="@dimen/_36sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop5"
             android:textColor="#FBF701"
-            android:textSize="20sp"
+            android:textSize="@dimen/_16sdp"
             tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
 
     </LinearLayout>
@@ -770,7 +770,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="113sp"
+        android:layout_marginTop="@dimen/_94sdp"
         android:layout_width="620sp"
         android:layout_height="206sp"
         android:orientation="horizontal">
@@ -828,7 +828,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="113sp"
+        android:layout_marginTop="@dimen/_94sdp"
         android:layout_width="620sp"
         android:layout_height="206sp"
         android:orientation="horizontal"
@@ -878,7 +878,7 @@
             android:id="@+id/polje_j5"
             android:layout_width="118sp"
             android:layout_height="206sp"
-            android:layout_marginEnd="10sp"
+            android:layout_marginEnd="6sp"
             android:src="@drawable/k00"
             android:visibility="invisible"
             android:contentDescription="@string/todo55"
@@ -910,7 +910,7 @@
         <TextView
             android:id="@+id/card"
             android:layout_marginStart="@dimen/_100sdp"
-            android:layout_marginTop="@dimen/_minus20sdp"
+            android:layout_marginTop="@dimen/_minus18sdp"
             android:layout_width="@dimen/_380sdp"
             android:layout_height="@dimen/_80sdp"
             android:text="@string/card"
@@ -932,12 +932,12 @@
 
         <TextView
             android:id="@+id/dupliranje"
-            android:layout_width="200sp"
+            android:layout_width="203dp"
             android:layout_height="40sp"
+            android:background="#FF0303"
+            android:fontFamily="arial"
             android:gravity="bottom|center"
             android:text="@string/dupliranje"
-            android:fontFamily="arial"
-            android:background="#FF0303"
             android:textColor="#FFFF00"
             android:textSize="32sp"
             android:visibility="invisible" />
