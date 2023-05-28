@@ -649,63 +649,63 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop1"
-            android:layout_marginStart="@dimen/_12sdp"
             android:layout_width="@dimen/_76sdp"
             android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_12sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop1"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
-            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop2"
-            android:layout_marginStart="@dimen/_26sdp"
             android:layout_width="@dimen/_76sdp"
             android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_26sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop2"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop3"
-            android:layout_marginStart="@dimen/_28sdp"
             android:layout_width="@dimen/_76sdp"
             android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_28sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop3"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop4"
-            android:layout_marginStart="@dimen/_28sdp"
             android:layout_width="@dimen/_76sdp"
             android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_28sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop4"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
-            tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
+            tools:ignore="TouchTargetSizeCheck,VisualLintBounds,TextSizeCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop5"
-            android:layout_marginStart="@dimen/_28sdp"
             android:layout_width="@dimen/_76sdp"
             android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_28sdp"
             android:backgroundTint="#404040"
             android:gravity="bottom|center"
             android:text="@string/stop5"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
-            tools:ignore="TouchTargetSizeCheck,VisualLintBounds" />
+            tools:ignore="TouchTargetSizeCheck,VisualLintBounds,TextSizeCheck" />
 
     </LinearLayout>
 
@@ -777,15 +777,15 @@
 
     <LinearLayout
         android:layout_marginTop="@dimen/_94sdp"
-        android:layout_width="620sp"
-        android:layout_height="206sp"
+        android:layout_width="@dimen/_520sdp"
+        android:layout_height="@dimen/_170sdp"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/polje_1"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="6sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo1"
@@ -793,9 +793,9 @@
 
         <ImageView
             android:id="@+id/polje_2"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="6sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo2"
@@ -803,9 +803,9 @@
 
         <ImageView
             android:id="@+id/polje_3"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="6sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo3"
@@ -813,9 +813,9 @@
 
         <ImageView
             android:id="@+id/polje_4"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="6sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo4"
@@ -823,28 +823,28 @@
 
         <ImageView
             android:id="@+id/polje_5"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="10sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo5"
-            tools:ignore="ContentDescription,VisualLintBounds" />
+            tools:ignore="ContentDescription,TooManyViews,VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_marginTop="@dimen/_94sdp"
-        android:layout_width="620sp"
-        android:layout_height="206sp"
+        android:layout_width="@dimen/_520sdp"
+        android:layout_height="@dimen/_170sdp"
         android:orientation="horizontal"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_j1"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="6sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
             android:contentDescription="@string/todo11"
@@ -852,9 +852,9 @@
 
         <ImageView
             android:id="@+id/polje_j2"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="6sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
             android:contentDescription="@string/todo22"
@@ -862,9 +862,9 @@
 
         <ImageView
             android:id="@+id/polje_j3"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="6sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
             android:contentDescription="@string/todo33"
@@ -872,9 +872,9 @@
 
         <ImageView
             android:id="@+id/polje_j4"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="6sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
             android:contentDescription="@string/todo44"
@@ -882,9 +882,9 @@
 
         <ImageView
             android:id="@+id/polje_j5"
-            android:layout_width="118sp"
-            android:layout_height="206sp"
-            android:layout_marginEnd="6sp"
+            android:layout_width="@dimen/_98sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
             android:contentDescription="@string/todo55"
