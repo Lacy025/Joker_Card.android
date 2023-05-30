@@ -685,65 +685,49 @@
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="332sp"
-        android:layout_width="700sp"
-        android:layout_height="24sp"
+        android:layout_marginTop="@dimen/_277sdp"
+        android:layout_width="@dimen/_520sdp"
+        android:layout_height="@dimen/_24sdp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/levo"
-            android:layout_width="120sp"
-            android:layout_height="24sp"
-            android:gravity="bottom|left"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:gravity="bottom|center"
             android:text="@string/lacika_baci"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
-            android:textSize="20sp"
+            android:textSize="@dimen/_18sdp"
             android:visibility="invisible"
             tools:ignore="RtlHardcoded" />
 
         <TextView
-            android:layout_width="80sp"
-            android:layout_height="20sp"
-            android:text=""
-            android:gravity="right"
-            android:textColor="#FAD2B3"
-            android:textSize="10sp"
-            tools:ignore="RtlHardcoded,SmallSp,VisualLintBounds" />
-
-        <TextView
             android:id="@+id/centar1"
-            android:layout_width="220sp"
-            android:layout_height="24sp"
+            android:layout_marginLeft="@dimen/_34sdp"
+            android:layout_width="@dimen/_204sdp"
+            android:layout_height="@dimen/_22sdp"
             android:gravity="bottom|center"
             android:text="@string/birajte_ulog"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
-            android:textSize="20sp"
+            android:textSize="@dimen/_18sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:layout_width="74sp"
-            android:layout_height="20sp"
-            android:text=""
-            android:gravity="right"
-            android:textColor="#FAD2B3"
-            android:textSize="10sp"
-            tools:ignore="RtlHardcoded,SmallSp,TooManyViews,VisualLintBounds" />
-
-        <TextView
             android:id="@+id/desno"
-            android:layout_width="120sp"
-            android:layout_height="24sp"
+            android:layout_marginLeft="@dimen/_34sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_22sdp"
             android:gravity="bottom|center"
             android:text="@string/srbija_2023"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
-            android:textSize="20sp"
+            android:textSize="@dimen/_18sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
