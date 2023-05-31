@@ -575,10 +575,11 @@
     <LinearLayout
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/_120sdp"
-        android:layout_marginLeft="@dimen/_520sdp"
+        android:layout_marginStart="@dimen/_520sdp"
         android:layout_width="@dimen/_90sdp"
         android:layout_height="@dimen/_50sdp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="VisualLintBounds">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/kasa"
@@ -589,17 +590,18 @@
             android:text="@string/brisanje_kasiranje"
             android:textColor="#FBF701"
             android:textSize="@dimen/_9sdp"
-            tools:ignore="TextContrastCheck,VisualLintBounds" />
+            tools:ignore="TextContrastCheck,VisualLintBounds,TextSizeCheck" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/_186sdp"
-        android:layout_marginLeft="@dimen/_520sdp"
+        android:layout_marginStart="@dimen/_520sdp"
         android:layout_width="@dimen/_90sdp"
         android:layout_height="@dimen/_50sdp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="VisualLintBounds">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/deljenje"
@@ -610,7 +612,7 @@
             android:text="@string/deljenje_dupliranje"
             android:textColor="#FBF701"
             android:textSize="@dimen/_9sdp"
-            tools:ignore="TextContrastCheck,VisualLintBounds" />
+            tools:ignore="TextContrastCheck,VisualLintBounds,TextSizeCheck" />
 
     </LinearLayout>
 
@@ -701,11 +703,11 @@
             android:textColor="#FFFF00"
             android:textSize="@dimen/_18sdp"
             android:visibility="invisible"
-            tools:ignore="RtlHardcoded" />
+            tools:ignore="RtlHardcoded,VisualLintBounds" />
 
         <TextView
             android:id="@+id/centar1"
-            android:layout_marginLeft="@dimen/_34sdp"
+            android:layout_marginStart="@dimen/_34sdp"
             android:layout_width="@dimen/_204sdp"
             android:layout_height="@dimen/_22sdp"
             android:gravity="bottom|center"
@@ -719,7 +721,7 @@
 
         <TextView
             android:id="@+id/desno"
-            android:layout_marginLeft="@dimen/_34sdp"
+            android:layout_marginStart="@dimen/_34sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_22sdp"
             android:gravity="bottom|center"
@@ -918,7 +920,7 @@
             android:textColor="#FFFF00"
             android:textSize="@dimen/_24sdp"
             android:visibility="invisible"
-            />
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/kasiranje"
@@ -931,7 +933,7 @@
             android:textColor="#FFFF00"
             android:textSize="@dimen/_24sdp"
             android:visibility="invisible"
-            />
+            tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
