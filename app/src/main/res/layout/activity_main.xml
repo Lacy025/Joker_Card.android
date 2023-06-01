@@ -905,7 +905,7 @@
             android:gravity="bottom|center"
             android:text="@string/dupliranje"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_24sdp"
+            android:textSize="@dimen/_26sdp"
             android:visibility="invisible"
             />
 
@@ -918,7 +918,7 @@
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_24sdp"
+            android:textSize="@dimen/_26sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
@@ -931,7 +931,7 @@
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_24sdp"
+            android:textSize="@dimen/_26sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 

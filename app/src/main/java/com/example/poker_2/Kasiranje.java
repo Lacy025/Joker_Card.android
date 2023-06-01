@@ -19,8 +19,9 @@ public class Kasiranje extends Activity {
         int pobeda = cifra;
         centar2.setText("POBEDIO !");
         centar2.setVisibility(View.VISIBLE);
-        First.audiodobitnik.stop();
-
+        First.audiodobitnik.reset();
+        First.audiodobitnik.release();
+        First.audiodobitnik = null;
         handler9 = new Handler();
         runnable9 = new Runnable() {
             boolean isVisible1 = true;

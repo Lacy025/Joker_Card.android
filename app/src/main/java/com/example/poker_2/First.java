@@ -397,7 +397,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 biodobitak = 0;
                 levodole2.setVisibility(View.INVISIBLE);
                 desnodole2.setVisibility(View.INVISIBLE);
-                audiointro = MediaPlayer.create(getApplicationContext(), R.raw.intro);
+                intro();
                 count1();
                 count100();
                 kasiranje = 1;
