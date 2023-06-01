@@ -15,6 +15,7 @@ import static com.example.poker_2.First.ponistavanje2;
 
 import android.app.Activity;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 
 import java.util.Locale;
@@ -53,8 +54,9 @@ public class Dobitak2 extends Activity {
     Dobitak2() {
         ponistavanje2();
 
-        final Handler handler = new Handler();
-        handler.postDelayed(() -> {
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
 
                 n1 = Karta1.n1;
                 n2 = Karta2.n2;
@@ -703,7 +705,7 @@ public class Dobitak2 extends Activity {
                 }
                 First.ponistavanje2();
 
-                if(Fiveofakind == 1) {
+                if (Fiveofakind == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak1.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
@@ -711,70 +713,70 @@ public class Dobitak2 extends Activity {
                     dobitakdb.setText(Integer.toString(dob1));
                     First.cifra = dob1;
                 }
-                if(Royalflush == 1) {
+                if (Royalflush == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak2.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob2)));
                     First.cifra = dob2;
                 }
-                if(Streetflush == 1) {
+                if (Streetflush == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak3.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob3)));
                     First.cifra = dob3;
                 }
-                if(Poker == 1) {
+                if (Poker == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak4.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob4)));
                     First.cifra = dob4;
                 }
-                if(Fullhouse == 1) {
+                if (Fullhouse == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak5.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob5)));
                     First.cifra = dob5;
                 }
-                if(Flush == 1) {
+                if (Flush == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak6.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob6)));
                     First.cifra = dob6;
                 }
-                if(Street == 1) {
+                if (Street == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak7.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob7)));
                     First.cifra = dob7;
                 }
-                if(Threeofakind == 1) {
+                if (Threeofakind == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak8.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob8)));
                     First.cifra = dob8;
                 }
-                if(Twopairs == 1) {
+                if (Twopairs == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak9.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob9)));
                     First.cifra = dob9;
                 }
-                if(Highpair == 1) {
+                if (Highpair == 1) {
                     First.table.setVisibility(View.VISIBLE);
                     First.dobitak10.setVisibility(View.VISIBLE);
                     First.dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob10)));
                     First.cifra = dob10;
                 }
-                if(First.biodobitak == 1) {
+                if (First.biodobitak == 1) {
                     First.izbor = 2;
                     try {
                         Thread.sleep(500);
@@ -788,8 +790,7 @@ public class Dobitak2 extends Activity {
                     First.stop3.setVisibility(View.INVISIBLE);
                     First.stop4.setVisibility(View.INVISIBLE);
                     First.stop5.setVisibility(View.INVISIBLE);
-                }
-                else {
+                } else {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
@@ -816,6 +817,7 @@ public class Dobitak2 extends Activity {
                     Jokers.handler8.removeCallbacks(Jokers.runnable8);
                     new Jokers();
                 }
+            }
         },First.pauzak);
     }
     void ProveraBoje1() {
