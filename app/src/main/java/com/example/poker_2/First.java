@@ -148,11 +148,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        assignID(button_kredit, R.id.kredit);
-        assignID(button_ulog, R.id.ulog);
+        assignID(button_kredit, R.id.credit);
+        assignID(button_ulog, R.id.bet);
         assignID(button_autohold, R.id.autohold);
-        assignID(button_kasa, R.id.kasa);
-        assignID(button_deljenje, R.id.deljenje);
+        assignID(button_kasa, R.id.take);
+        assignID(button_deljenje, R.id.deal);
 
         ah1 = findViewById(R.id.autohold);
         c1 = findViewById(R.id.vrednost_c);
@@ -179,9 +179,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         joker = findViewById(R.id.joker);
         card = findViewById(R.id.card);
         centar1 = findViewById(R.id.centar1);
-        centar2 = findViewById(R.id.pobedio);
-        levodole2 = findViewById(R.id.dupliranje);
-        desnodole2 = findViewById(R.id.kasiranje);
+        centar2 = findViewById(R.id.win);
+        levodole2 = findViewById(R.id.gamble);
+        desnodole2 = findViewById(R.id.cash);
 
         polje1 = findViewById(R.id.polje_1);
         polje2 = findViewById(R.id.polje_2);
@@ -258,11 +258,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                     if(c>0&&deljenje==0) {
                                         levodole1.setVisibility(View.INVISIBLE);
                                         desnodole1.setVisibility(View.INVISIBLE);
-                                        centar1.setText("BIRAJTE ULOG");
+                                        centar1.setText("CHOOSE BET");
                                         centar1.setVisibility(View.VISIBLE);
                                     }
                                     if(c>0&&deljenje==2) {
-                                        centar1.setText("BIRAJTE KARTE");
+                                        centar1.setText("PICK CARDS");
                                         centar1.setVisibility(View.VISIBLE);
                                     }
                                     if(biodobitak == 1) {
@@ -274,14 +274,14 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                 () -> {
                                     if(c==0&&deljenje==0) {
                                         levodole1.setVisibility(View.INVISIBLE);
-                                        desnodole1.setText("SRBIJA 2023");
+                                        desnodole1.setText("SERBIA 2023");
                                         desnodole1.setVisibility(View.VISIBLE);
                                     }
                                     if((c>0&&deljenje==0)||(c>0&&deljenje==2)) {
                                         levodole1.setText("");
                                         levodole1.setVisibility(View.INVISIBLE);
                                         desnodole1.setVisibility(View.INVISIBLE);
-                                        centar1.setText("PRITISNITE DELJENJE");
+                                        centar1.setText("PRESS DEAL CARDS");
                                         centar1.setVisibility(View.VISIBLE);
                                     }
                                     if(biodobitak == 1) {
@@ -350,7 +350,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         int id = view.getId();
-            if(id == R.id.kredit) {
+            if(id == R.id.credit) {
                 if (c < 4901 && deljenje == 0) {
                     intro();
                     kredit();
@@ -359,7 +359,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     c1.setText(Integer.toString(c));
                 }
             }
-        if(id == R.id.ulog) {
+        if(id == R.id.bet) {
             if(c > 0 && deljenje==0) {
                 ulog();
                 u+=1;
@@ -369,7 +369,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 Ulog();
             }
         }
-        if(id == R.id.autohold) {
+        if(id == R.id.take) {
             if (c > 0 && deljenje == 0) {
                 if (ah == 1) {
                     ah1.setTextColor(Color.BLACK);
@@ -380,9 +380,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 }
                 autohold();
             }
-        }
-        if(id == R.id.kasa) {
-            if(izbor == 1) {
+            else if(izbor == 1) {
                 ponistavanje1();
                 ponistavanje2();
                 Dobitak1.hold1 = 0;
@@ -407,7 +405,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 }
             }
         }
-        if(id == R.id.deljenje) {
+        if(id == R.id.deal) {
             if((c > 0 && deljenje==0) || (c > 0 && kasirano==1)) {
                 if(kasirano==1) {
                     intro();

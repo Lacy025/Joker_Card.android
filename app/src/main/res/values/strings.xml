@@ -34,23 +34,23 @@
     <string name="three_of_a_kind2">THREE OF A KIND</string>
     <string name="_2_pairs2">2 PAIRS</string>
     <string name="high_pair2">HIGH PAIR</string>
-    <string name="dobitak">DOBITAK =</string>
+    <string name="dobitak">WIN =</string>
     <string name="_0">0</string>
-    <string name="kredit">KREDIT</string>
-    <string name="ulog">ULOG</string>
+    <string name="credit">CREDIT</string>
+    <string name="bet">BET</string>
     <string name="autohold">AUTOHOLD</string>
     <string name="_0_2">0</string>
     <string name="_1_2">1</string>
-    <string name="brisanje_kasiranje">BRISANJE KASIRANJE</string>
-    <string name="deljenje_dupliranje">DELJENJE DUPLANJE</string>
+    <string name="auto_hold">AUTO HOLD</string>
+    <string name="deal_cards">DEAL CARDS</string>
     <string name="stop1">STOP</string>
     <string name="stop2">STOP</string>
     <string name="stop3">STOP</string>
     <string name="stop4">STOP</string>
     <string name="stop5">STOP</string>
     <string name="lacika_baci">LACIKA BAČI</string>
-    <string name="birajte_ulog">BIRAJTE ULOG</string>
-    <string name="srbija_2023">SRBIJA 2023</string>
+    <string name="choose_bet">CHOOSE BET</string>
+    <string name="serbia_2023">SERBIA 2023</string>
     <string name="todo1">TODO</string>
     <string name="todo2">TODO</string>
     <string name="todo3">TODO</string>
@@ -63,7 +63,7 @@
     <string name="todo55">TODO</string>
     <string name="joker">JOKER</string>
     <string name="card">CARD</string>
-    <string name="dupliranje">DUPLIRANJE</string>
-    <string name="pobedio">POBEDIO !</string>
-    <string name="kasiranje">KASIRANJE</string>
+    <string name="gamble">GAMBLE</string>
+    <string name="win">YOU WIN !</string>
+    <string name="cash">TAKE ALL</string>
 </resources>

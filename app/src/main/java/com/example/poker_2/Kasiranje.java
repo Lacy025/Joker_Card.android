@@ -17,7 +17,7 @@ public class Kasiranje extends Activity {
     public static Runnable runnable10;
     Kasiranje() throws InterruptedException {
         int pobeda = cifra;
-        centar2.setText("POBEDIO !");
+        centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
         First.audiodobitnik.reset();
         First.audiodobitnik.release();
@@ -89,7 +89,7 @@ public class Kasiranje extends Activity {
         }
     }
     void pobedio() {
-        centar2.setText("POBEDIO !");
+        centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
     }
 }
