@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,16 +18,15 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class First extends AppCompatActivity implements View.OnClickListener {
-    MaterialButton button_kredit;
-    MaterialButton button_ulog;
-    MaterialButton button_autohold;
-    MaterialButton button_kasa;
-    MaterialButton button_deljenje;
-    public static MaterialButton button_stop1;
-    public static MaterialButton button_stop2;
-    public static MaterialButton button_stop3;
-    public static MaterialButton button_stop4;
-    public static MaterialButton button_stop5;
+    Button button_credit;
+    Button button_bet;
+    public static Button button_take;
+    public static Button button_deal;
+    public static Button button_stop1;
+    public static Button button_stop2;
+    public static Button button_stop3;
+    public static Button button_stop4;
+    public static Button button_stop5;
     public static int c = 0;
     public static TextView c1;
     int game;
@@ -148,11 +148,16 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        assignID(button_kredit, R.id.credit);
-        assignID(button_ulog, R.id.bet);
-        assignID(button_autohold, R.id.autohold);
-        assignID(button_kasa, R.id.take);
-        assignID(button_deljenje, R.id.deal);
+        button_credit = (Button) findViewById(R.id.credit);
+        button_credit.setOnClickListener(this);
+        button_bet = (Button) findViewById(R.id.bet);
+        button_bet.setOnClickListener(this);
+        button_take = (Button) findViewById(R.id.take);
+        button_take.setOnClickListener(this);
+        button_bet = (Button) findViewById(R.id.bet);
+        button_bet.setOnClickListener(this);
+        button_deal = (Button) findViewById(R.id.deal);
+        button_deal.setOnClickListener(this);
 
         ah1 = findViewById(R.id.autohold);
         c1 = findViewById(R.id.vrednost_c);
@@ -162,17 +167,16 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         izbor = 0;
         cifra = 0;
 
-        assignID(button_stop1, R.id.stop1);
-        assignID(button_stop2, R.id.stop2);
-        assignID(button_stop3, R.id.stop3);
-        assignID(button_stop4, R.id.stop4);
-        assignID(button_stop5, R.id.stop5);
-
-        stop1 = findViewById(R.id.stop1);
-        stop2 = findViewById(R.id.stop2);
-        stop3 = findViewById(R.id.stop3);
-        stop4 = findViewById(R.id.stop4);
-        stop5 = findViewById(R.id.stop5);
+        button_stop1 = (Button) findViewById(R.id.stop1);
+        button_stop1.setOnClickListener(this);
+        button_stop2 = (Button) findViewById(R.id.stop2);
+        button_stop2.setOnClickListener(this);
+        button_stop3 = (Button) findViewById(R.id.stop3);
+        button_stop3.setOnClickListener(this);
+        button_stop4 = (Button) findViewById(R.id.stop4);
+        button_stop4.setOnClickListener(this);
+        button_stop5 = (Button) findViewById(R.id.stop5);
+        button_stop5.setOnClickListener(this);
 
         levodole1 = findViewById(R.id.levo);
         desnodole1 = findViewById(R.id.desno);
@@ -260,10 +264,13 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                         desnodole1.setVisibility(View.INVISIBLE);
                                         centar1.setText("CHOOSE BET");
                                         centar1.setVisibility(View.VISIBLE);
+                                        button_take.setText("AUTO HOLD");
+                                        button_deal.setText("DEAL CARDS");
                                     }
                                     if(c>0&&deljenje==2) {
                                         centar1.setText("PICK CARDS");
                                         centar1.setVisibility(View.VISIBLE);
+                                        button_take.setText("CLEAR CARDS");
                                     }
                                     if(biodobitak == 1) {
                                         levodole2.setVisibility(View.VISIBLE);
@@ -342,11 +349,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             }
         }, 0, 200);
     }
-    public Object assignID(MaterialButton button, int id) {
-        View btn = findViewById(id);
-        btn.setOnClickListener(this);
-        return null;
-    }
     @Override
     public void onClick(View view) {
         int id = view.getId();
@@ -413,11 +415,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
 
                     centar2.setVisibility(View.VISIBLE);
 
-                    stop1.setVisibility(View.VISIBLE);
-                    stop2.setVisibility(View.VISIBLE);
-                    stop3.setVisibility(View.VISIBLE);
-                    stop4.setVisibility(View.VISIBLE);
-                    stop5.setVisibility(View.VISIBLE);
+                    button_stop1.setVisibility(View.VISIBLE);
+                    button_stop2.setVisibility(View.VISIBLE);
+                    button_stop3.setVisibility(View.VISIBLE);
+                    button_stop4.setVisibility(View.VISIBLE);
+                    button_stop5.setVisibility(View.VISIBLE);
                     table.setVisibility(View.INVISIBLE);
                     dobitak.setVisibility(View.INVISIBLE);
                     dobitak1.setVisibility(View.INVISIBLE);
@@ -590,7 +592,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             if(izbor == 1) {
                 stopcard();
                 audiostop.start();
-                stop1.setBackgroundColor(Color.RED);
+                button_stop1.setBackgroundColor(Color.RED);
                 Dobitak1.hold1 = 1;
             }
         }
@@ -598,7 +600,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             if(izbor == 1) {
                 stopcard();
                 audiostop.start();
-                stop2.setBackgroundColor(Color.RED);
+                button_stop2.setBackgroundColor(Color.RED);
                 Dobitak1.hold2 = 1;
             }
         }
@@ -606,7 +608,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             if(izbor == 1) {
                 stopcard();
                 audiostop.start();
-                stop3.setBackgroundColor(Color.RED);
+                button_stop3.setBackgroundColor(Color.RED);
                 Dobitak1.hold3 = 1;
             }
         }
@@ -614,7 +616,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             if(izbor == 1) {
                 stopcard();
                 audiostop.start();
-                stop4.setBackgroundColor(Color.RED);
+                button_stop4.setBackgroundColor(Color.RED);
                 Dobitak1.hold4 = 1;
             }
         }
@@ -622,7 +624,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             if(izbor == 1) {
                 stopcard();
                 audiostop.start();
-                stop5.setBackgroundColor(Color.RED);
+                button_stop5.setBackgroundColor(Color.RED);
                 Dobitak1.hold5 = 1;
             }
         }
@@ -801,11 +803,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audioponistavanje.start();
     }
     public static void ponistavanje2() {
-        stop1.setBackgroundColor(Color.parseColor("#404040"));
-        stop2.setBackgroundColor(Color.parseColor("#404040"));
-        stop3.setBackgroundColor(Color.parseColor("#404040"));
-        stop4.setBackgroundColor(Color.parseColor("#404040"));
-        stop5.setBackgroundColor(Color.parseColor("#404040"));
+        button_stop1.setBackgroundColor(Color.parseColor("#404040"));
+        button_stop2.setBackgroundColor(Color.parseColor("#404040"));
+        button_stop3.setBackgroundColor(Color.parseColor("#404040"));
+        button_stop4.setBackgroundColor(Color.parseColor("#404040"));
+        button_stop5.setBackgroundColor(Color.parseColor("#404040"));
     }
     void deljenje2() {
         if (audiodeljenje2 != null) {

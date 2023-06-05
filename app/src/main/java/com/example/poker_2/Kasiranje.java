@@ -3,6 +3,7 @@ package com.example.poker_2;
 import static com.example.poker_2.First.audiocount1;
 import static com.example.poker_2.First.audiocount100;
 import static com.example.poker_2.First.audiointro;
+import static com.example.poker_2.First.button_deal;
 import static com.example.poker_2.First.centar2;
 import static com.example.poker_2.First.cifra;
 
@@ -76,6 +77,7 @@ public class Kasiranje extends Activity {
         audiocount1.start();
         if(First.cifra == 0) {
             pobedio();
+            button_deal.setText("DEAL CARDS");
         }
     }
     void minussto() {
@@ -86,6 +88,7 @@ public class Kasiranje extends Activity {
         audiocount100.start();
         if(First.cifra == 0) {
             pobedio();
+            button_deal.setText("DEAL CARDS");
         }
     }
     void pobedio() {

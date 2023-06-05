@@ -1,5 +1,11 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.button_stop1;
+import static com.example.poker_2.First.button_stop2;
+import static com.example.poker_2.First.button_stop3;
+import static com.example.poker_2.First.button_stop4;
+import static com.example.poker_2.First.button_stop5;
+import static com.example.poker_2.First.button_take;
 import static com.example.poker_2.First.centar2;
 
 import android.app.Activity;
@@ -17,11 +23,11 @@ public class Kasirano extends Activity {
 
                 if(First.kasiranje == 1) {
                     centar2.setVisibility(View.VISIBLE);
-                    First.stop1.setVisibility(View.VISIBLE);
-                    First.stop2.setVisibility(View.VISIBLE);
-                    First.stop3.setVisibility(View.VISIBLE);
-                    First.stop4.setVisibility(View.VISIBLE);
-                    First.stop5.setVisibility(View.VISIBLE);
+                    button_stop1.setVisibility(View.VISIBLE);
+                    button_stop2.setVisibility(View.VISIBLE);
+                    button_stop3.setVisibility(View.VISIBLE);
+                    button_stop4.setVisibility(View.VISIBLE);
+                    button_stop5.setVisibility(View.VISIBLE);
                     First.table.setVisibility(View.INVISIBLE);
                     First.dobitak.setVisibility(View.INVISIBLE);
                     First.dobitak1.setVisibility(View.INVISIBLE);
@@ -64,6 +70,7 @@ public class Kasirano extends Activity {
                     First.polje5.setImageResource(R.drawable.k53);
                     First.joker.setText("JOKER");
                     First.card.setText("CARD");
+                    button_take.setText("AUTO HOLD");
                     First.joker.setVisibility(View.VISIBLE);
                     First.card.setVisibility(View.VISIBLE);
                     First.deljenje = 0;

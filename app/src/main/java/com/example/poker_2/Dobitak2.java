@@ -1,5 +1,12 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.button_deal;
+import static com.example.poker_2.First.button_stop1;
+import static com.example.poker_2.First.button_stop2;
+import static com.example.poker_2.First.button_stop3;
+import static com.example.poker_2.First.button_stop4;
+import static com.example.poker_2.First.button_stop5;
+import static com.example.poker_2.First.button_take;
 import static com.example.poker_2.First.dob1;
 import static com.example.poker_2.First.dob10;
 import static com.example.poker_2.First.dob2;
@@ -777,6 +784,8 @@ public class Dobitak2 extends Activity {
                     First.cifra = dob10;
                 }
                 if (First.biodobitak == 1) {
+                    button_take.setText("TAKE ALL");
+                    button_deal.setText("GAMBLE");
                     First.izbor = 2;
                     try {
                         Thread.sleep(500);
@@ -785,12 +794,13 @@ public class Dobitak2 extends Activity {
                     }
                     dobitakdb.setVisibility(View.VISIBLE);
                     First.audiodobitnik.start();
-                    First.stop1.setVisibility(View.INVISIBLE);
-                    First.stop2.setVisibility(View.INVISIBLE);
-                    First.stop3.setVisibility(View.INVISIBLE);
-                    First.stop4.setVisibility(View.INVISIBLE);
-                    First.stop5.setVisibility(View.INVISIBLE);
+                    button_stop1.setVisibility(View.INVISIBLE);
+                    button_stop2.setVisibility(View.INVISIBLE);
+                    button_stop3.setVisibility(View.INVISIBLE);
+                    button_stop4.setVisibility(View.INVISIBLE);
+                    button_stop5.setVisibility(View.INVISIBLE);
                 } else {
+                    button_take.setText("AUTO HOLD");
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {

@@ -5,11 +5,11 @@ import static com.example.poker_2.First.audiostop2;
 import static com.example.poker_2.First.audiostop3;
 import static com.example.poker_2.First.audiostop4;
 import static com.example.poker_2.First.audiostop5;
-import static com.example.poker_2.First.stop1;
-import static com.example.poker_2.First.stop2;
-import static com.example.poker_2.First.stop3;
-import static com.example.poker_2.First.stop4;
-import static com.example.poker_2.First.stop5;
+import static com.example.poker_2.First.button_stop1;
+import static com.example.poker_2.First.button_stop2;
+import static com.example.poker_2.First.button_stop3;
+import static com.example.poker_2.First.button_stop4;
+import static com.example.poker_2.First.button_stop5;
 
 import android.graphics.Color;
 
@@ -32,7 +32,7 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stop1.setBackgroundColor(Color.RED);
+                        button_stop1.setBackgroundColor(Color.RED);
                         audiostop1.start();
                     }
                     if (Dobitak1.hold2 == 1 && First.ah == 1) {
@@ -41,7 +41,7 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stop2.setBackgroundColor(Color.RED);
+                        button_stop2.setBackgroundColor(Color.RED);
                         audiostop2.start();
                     }
                     if (Dobitak1.hold3 == 1 && First.ah == 1) {
@@ -50,7 +50,7 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stop3.setBackgroundColor(Color.RED);
+                        button_stop3.setBackgroundColor(Color.RED);
                         audiostop3.start();
                     }
                     if (Dobitak1.hold4 == 1 && First.ah == 1) {
@@ -59,7 +59,7 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stop4.setBackgroundColor(Color.RED);
+                        button_stop4.setBackgroundColor(Color.RED);
                         audiostop4.start();
                     }
                     if (Dobitak1.hold5 == 1 && First.ah == 1) {
@@ -68,7 +68,7 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stop5.setBackgroundColor(Color.RED);
+                        button_stop5.setBackgroundColor(Color.RED);
                         audiostop5.start();
                     }
                     try {
