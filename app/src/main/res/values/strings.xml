@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Poker_2</string>
-    <string name="title_activity_fullscreen">FullscreenActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="five_of_a_kind">FIVE OF A KIND</string>
     <string name="royal_flush">ROYAL FLUSH</string>
     <string name="street_flush">STREET FLUSH</string>
@@ -65,5 +62,5 @@
     <string name="card">CARD</string>
     <string name="gamble">GAMBLE</string>
     <string name="win">YOU WIN !</string>
-    <string name="cash">TAKE ALL</string>
+    <string name="cash">TAKE</string>
 </resources>

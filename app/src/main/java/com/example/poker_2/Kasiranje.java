@@ -2,6 +2,7 @@ package com.example.poker_2;
 
 import static com.example.poker_2.First.audiocount1;
 import static com.example.poker_2.First.audiocount100;
+import static com.example.poker_2.First.audiodobitnik;
 import static com.example.poker_2.First.audiointro;
 import static com.example.poker_2.First.button_deal;
 import static com.example.poker_2.First.centar2;
@@ -20,9 +21,9 @@ public class Kasiranje extends Activity {
         int pobeda = cifra;
         centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
-        First.audiodobitnik.reset();
-        First.audiodobitnik.release();
-        First.audiodobitnik = null;
+        audiodobitnik.reset();
+        audiodobitnik.release();
+        audiodobitnik = null;
         handler9 = new Handler();
         runnable9 = new Runnable() {
             boolean isVisible1 = true;

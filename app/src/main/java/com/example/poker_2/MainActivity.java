@@ -12,10 +12,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-            Intent first = new Intent(this, First.class);
-            startActivity(first);
+        Intent first = new Intent(this, First.class);
+        startActivity(first);
     }
 }

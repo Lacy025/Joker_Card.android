@@ -4,15 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.google.android.material.button.MaterialButton;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -89,11 +91,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static MediaPlayer audiostop4;
     public static MediaPlayer audiostop5;
     public TextView ah1;
-    public static TextView stop1;
-    public static TextView stop2;
-    public static TextView stop3;
-    public static TextView stop4;
-    public static TextView stop5;
     public static ImageView polje1;
     public static ImageView polje2;
     public static ImageView polje3;
@@ -145,6 +142,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -233,7 +231,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         timer1.schedule(task1 = new TimerTask() {
             @Override
             public void run() {
-                runOnUiThread(() -> new Handler().postDelayed(
+                runOnUiThread(() -> new Handler(Looper.getMainLooper()).postDelayed(
                         () -> {
                             Jokers.handler1.removeCallbacks(Jokers.runnable1);
                             Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -252,7 +250,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void run() {
                 runOnUiThread(() -> {
-                        new Handler().postDelayed(
+                        new Handler(Looper.getMainLooper()).postDelayed(
                                 () -> {
                                     if(c==0&&deljenje==0) {
                                         levodole1.setText("LACIKA BAČI");
@@ -277,7 +275,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                         desnodole2.setVisibility(View.INVISIBLE);
                                     }
                                 }, 1000);
-                        new Handler().postDelayed(
+                        new Handler(Looper.getMainLooper()).postDelayed(
                                 () -> {
                                     if(c==0&&deljenje==0) {
                                         levodole1.setVisibility(View.INVISIBLE);
@@ -306,7 +304,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        new Handler().postDelayed(
+                        new Handler((Looper.getMainLooper())).postDelayed(
                                 new Runnable() {
                                     public void run() {
                                         if(deljenje == 0 && c > 0 && u > c) {
@@ -759,7 +757,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop1.release();
             audiostop1 = null;
         }
-        audiostop1 = MediaPlayer.create(this, R.raw.stop);
+        audiostop1 = MediaPlayer.create(this, R.raw.stop1);
     }
     void stopcard2() {
         if (audiostop2 != null) {
@@ -767,7 +765,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop2.release();
             audiostop2 = null;
         }
-        audiostop2 = MediaPlayer.create(this, R.raw.stop);
+        audiostop2 = MediaPlayer.create(this, R.raw.stop2);
     }
     void stopcard3() {
         if (audiostop3 != null) {
@@ -775,7 +773,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop3.release();
             audiostop3 = null;
         }
-        audiostop3 = MediaPlayer.create(this, R.raw.stop);
+        audiostop3 = MediaPlayer.create(this, R.raw.stop3);
     }
     void stopcard4() {
         if (audiostop4 != null) {
@@ -783,7 +781,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop4.release();
             audiostop4 = null;
         }
-        audiostop4 = MediaPlayer.create(this, R.raw.stop);
+        audiostop4 = MediaPlayer.create(this, R.raw.stop4);
     }
     void stopcard5() {
         if (audiostop5 != null) {
@@ -791,7 +789,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop5.release();
             audiostop5 = null;
         }
-        audiostop5 = MediaPlayer.create(this, R.raw.stop);
+        audiostop5 = MediaPlayer.create(this, R.raw.stop5);
     }
     void ponistavanje1() {
         if (audioponistavanje != null) {

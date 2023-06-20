@@ -122,7 +122,6 @@
         tools:ignore="RtlHardcoded">
 
         <TextView
-            android:id="@+id/id_dobitak_1"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/five_of_a_kind"
@@ -131,16 +130,14 @@
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/id_dobitak_2"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/royal_flush"
             android:textColor="#FF0000"
             android:textSize="@dimen/_8sdp"
-            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds,TextContrastCheck" />
+            tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/id_dobitak_3"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/street_flush"
@@ -149,7 +146,6 @@
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/id_dobitak_4"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/poker"
@@ -158,7 +154,6 @@
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/id_dobitak_5"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/full_house"
@@ -167,7 +162,6 @@
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/id_dobitak_6"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/flush"
@@ -176,7 +170,6 @@
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/id_dobitak_7"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/street"
@@ -185,7 +178,6 @@
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/id_dobitak_8"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/three_of_a_kind"
@@ -194,7 +186,6 @@
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/id_dobitak_9"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/_2_pairs"
@@ -203,7 +194,6 @@
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/id_dobitak_10"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
             android:text="@string/high_pair"
@@ -529,10 +519,10 @@
             android:background="#00000000"
             android:gravity="center"
             android:text="@string/autohold"
-            android:textColor="#0000FF"
+            android:textColor="#536DFE"
             android:textSize="@dimen/_8sdp"
             android:visibility="visible"
-            tools:ignore="SmallSp,TextContrastCheck,TouchTargetSizeCheck,TextSizeCheck,VisualLintButtonSize" />
+            tools:ignore="SmallSp,TouchTargetSizeCheck,TextSizeCheck,VisualLintButtonSize" />
 
     </LinearLayout>
 
@@ -581,13 +571,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/take"
-            android:layout_width="@dimen/_84sdp"
+            android:layout_width="@dimen/_86sdp"
             android:layout_height="@dimen/_50sdp"
             android:backgroundTint="#FF0303"
             android:gravity="center"
             android:text="@string/auto_hold"
             android:textColor="#FBF701"
-            android:textSize="@dimen/_12sdp"
+            android:textSize="@dimen/_13sdp"
             tools:ignore="TextContrastCheck,VisualLintBounds,TextSizeCheck" />
 
     </LinearLayout>
@@ -603,13 +593,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/deal"
-            android:layout_width="@dimen/_84sdp"
+            android:layout_width="@dimen/_86sdp"
             android:layout_height="@dimen/_50sdp"
             android:backgroundTint="#FF0303"
             android:gravity="center"
             android:text="@string/deal_cards"
             android:textColor="#FBF701"
-            android:textSize="@dimen/_12sdp"
+            android:textSize="@dimen/_13sdp"
             tools:ignore="TextContrastCheck,VisualLintBounds,TextSizeCheck" />
 
     </LinearLayout>
@@ -631,7 +621,7 @@
             android:text="@string/stop1"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
-            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds" />
+            tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds,DuplicateSpeakableTextCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop2"
@@ -701,7 +691,7 @@
             android:textColor="#FFFF00"
             android:textSize="@dimen/_18sdp"
             android:visibility="invisible"
-            tools:ignore="RtlHardcoded,VisualLintBounds" />
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/centar1"
@@ -767,7 +757,7 @@
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo3"
-            tools:ignore="ContentDescription,TooManyViews" />
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/polje_4"
@@ -787,7 +777,7 @@
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo5"
-            tools:ignore="ContentDescription,TooManyViews,VisualLintBounds" />
+            tools:ignore="ContentDescription,VisualLintBounds" />
 
     </LinearLayout>
 
@@ -895,13 +885,13 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/gamble"
+            android:id="@+id/cash"
             android:layout_width="@dimen/_166sdp"
             android:layout_height="@dimen/_32sdp"
             android:background="#FF0303"
             android:fontFamily="arial"
             android:gravity="bottom|center"
-            android:text="@string/gamble"
+            android:text="@string/cash"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_26sdp"
             android:visibility="invisible"
@@ -921,11 +911,11 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/cash"
+            android:id="@+id/gamble"
             android:layout_width="@dimen/_166sdp"
             android:layout_height="@dimen/_32sdp"
             android:gravity="bottom|center"
-            android:text="@string/cash"
+            android:text="@string/gamble"
             android:fontFamily="arial"
             android:background="#FF0303"
             android:textColor="#FFFF00"

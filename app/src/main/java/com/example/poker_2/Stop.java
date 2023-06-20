@@ -19,7 +19,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Stop extends AppCompatActivity {
-    Stop(Runnable runnable) {
+    Stop(Runnable stop) {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {

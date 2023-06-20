@@ -1,5 +1,6 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.audiodobitnik;
 import static com.example.poker_2.First.button_deal;
 import static com.example.poker_2.First.button_stop1;
 import static com.example.poker_2.First.button_stop2;
@@ -710,7 +711,7 @@ public class Dobitak2 extends Activity {
                         }
                     }
                 }
-                First.ponistavanje2();
+                ponistavanje2();
 
                 if (Fiveofakind == 1) {
                     First.table.setVisibility(View.VISIBLE);
@@ -784,7 +785,7 @@ public class Dobitak2 extends Activity {
                     First.cifra = dob10;
                 }
                 if (First.biodobitak == 1) {
-                    button_take.setText("TAKE ALL");
+                    button_take.setText("TAKE");
                     button_deal.setText("GAMBLE");
                     First.izbor = 2;
                     try {
@@ -793,7 +794,7 @@ public class Dobitak2 extends Activity {
                         throw new RuntimeException(e);
                     }
                     dobitakdb.setVisibility(View.VISIBLE);
-                    First.audiodobitnik.start();
+                    audiodobitnik.start();
                     button_stop1.setVisibility(View.INVISIBLE);
                     button_stop2.setVisibility(View.INVISIBLE);
                     button_stop3.setVisibility(View.INVISIBLE);
