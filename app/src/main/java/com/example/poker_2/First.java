@@ -801,11 +801,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audioponistavanje.start();
     }
     public static void ponistavanje2() {
-        button_stop1.setBackgroundColor(Color.parseColor("#404040"));
-        button_stop2.setBackgroundColor(Color.parseColor("#404040"));
-        button_stop3.setBackgroundColor(Color.parseColor("#404040"));
-        button_stop4.setBackgroundColor(Color.parseColor("#404040"));
-        button_stop5.setBackgroundColor(Color.parseColor("#404040"));
+        button_stop1.setBackgroundColor(Color.parseColor("#000000"));
+        button_stop2.setBackgroundColor(Color.parseColor("#000000"));
+        button_stop3.setBackgroundColor(Color.parseColor("#000000"));
+        button_stop4.setBackgroundColor(Color.parseColor("#000000"));
+        button_stop5.setBackgroundColor(Color.parseColor("#000000"));
     }
     void deljenje2() {
         if (audiodeljenje2 != null) {

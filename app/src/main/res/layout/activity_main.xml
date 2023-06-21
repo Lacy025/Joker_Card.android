@@ -606,17 +606,17 @@
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="@dimen/_244sdp"
+        android:layout_marginTop="@dimen/_104sdp"
         android:layout_width="@dimen/_510sdp"
-        android:layout_height="@dimen/_32sdp"
+        android:layout_height="@dimen/_174sdp"
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop1"
             android:layout_width="@dimen/_76sdp"
-            android:layout_height="@dimen/_36sdp"
+            android:layout_height="@dimen/_176sdp"
             android:layout_marginStart="@dimen/_12sdp"
-            android:backgroundTint="#404040"
+            android:backgroundTint="#000000"
             android:gravity="bottom|center"
             android:text="@string/stop1"
             android:textColor="#FBF701"
@@ -626,9 +626,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop2"
             android:layout_width="@dimen/_76sdp"
-            android:layout_height="@dimen/_36sdp"
+            android:layout_height="@dimen/_176sdp"
             android:layout_marginStart="@dimen/_26sdp"
-            android:backgroundTint="#404040"
+            android:backgroundTint="#000000"
             android:gravity="bottom|center"
             android:text="@string/stop2"
             android:textColor="#FBF701"
@@ -638,9 +638,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop3"
             android:layout_width="@dimen/_76sdp"
-            android:layout_height="@dimen/_36sdp"
+            android:layout_height="@dimen/_176sdp"
             android:layout_marginStart="@dimen/_28sdp"
-            android:backgroundTint="#404040"
+            android:backgroundTint="#000000"
             android:gravity="bottom|center"
             android:text="@string/stop3"
             android:textColor="#FBF701"
@@ -650,9 +650,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop4"
             android:layout_width="@dimen/_76sdp"
-            android:layout_height="@dimen/_36sdp"
+            android:layout_height="@dimen/_176sdp"
             android:layout_marginStart="@dimen/_28sdp"
-            android:backgroundTint="#404040"
+            android:backgroundTint="#000000"
             android:gravity="bottom|center"
             android:text="@string/stop4"
             android:textColor="#FBF701"
@@ -662,9 +662,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/stop5"
             android:layout_width="@dimen/_76sdp"
-            android:layout_height="@dimen/_36sdp"
+            android:layout_height="@dimen/_176sdp"
             android:layout_marginStart="@dimen/_28sdp"
-            android:backgroundTint="#404040"
+            android:backgroundTint="#000000"
             android:gravity="bottom|center"
             android:text="@string/stop5"
             android:textColor="#FBF701"
