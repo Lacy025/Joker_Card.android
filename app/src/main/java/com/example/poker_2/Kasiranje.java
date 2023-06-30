@@ -21,9 +21,20 @@ public class Kasiranje extends Activity {
         int pobeda = cifra;
         centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
-        audiodobitnik.reset();
-        audiodobitnik.release();
-        audiodobitnik = null;
+        if(First.cifra>9999) {
+            First.izbor = 3;
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        else{
+            audiodobitnik.reset();
+            audiodobitnik.release();
+            audiodobitnik = null;
+        }
+
         handler9 = new Handler();
         runnable9 = new Runnable() {
             boolean isVisible1 = true;

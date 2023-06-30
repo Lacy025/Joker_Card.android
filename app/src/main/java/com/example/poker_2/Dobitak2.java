@@ -8,6 +8,7 @@ import static com.example.poker_2.First.button_stop3;
 import static com.example.poker_2.First.button_stop4;
 import static com.example.poker_2.First.button_stop5;
 import static com.example.poker_2.First.button_take;
+import static com.example.poker_2.First.centar2;
 import static com.example.poker_2.First.dob1;
 import static com.example.poker_2.First.dob10;
 import static com.example.poker_2.First.dob2;
@@ -787,7 +788,6 @@ public class Dobitak2 extends Activity {
                 if (First.biodobitak == 1) {
                     button_take.setText("TAKE");
                     button_deal.setText("GAMBLE");
-                    First.izbor = 2;
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException e) {
@@ -800,6 +800,15 @@ public class Dobitak2 extends Activity {
                     button_stop3.setVisibility(View.INVISIBLE);
                     button_stop4.setVisibility(View.INVISIBLE);
                     button_stop5.setVisibility(View.INVISIBLE);
+
+                    First.izbor = 2;
+                    if(First.cifra>9999) {
+                        First.blokada = 1;
+                        centar2.setText("YOU WIN !");
+                        centar2.setVisibility(View.VISIBLE);
+                        button_take.setText("WIN !");
+                        button_deal.setText("WIN !");
+                    }
                 } else {
                     button_take.setText("AUTO HOLD");
                     try {

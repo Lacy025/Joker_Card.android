@@ -4,13 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-import android.view.WindowInsets;
-import android.view.WindowInsetsController;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -67,7 +64,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static int cifra;
     public static int biodobitak;
     public static int kasirano;
-    int hold = 0;
+    public static int blokada;
+    int hold;
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
     MediaPlayer audioautohold;
@@ -337,6 +335,10 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             stopcard5();
                                             new Stop(this);
                                         }
+                                        if(blokada==1) {
+                                            blokada = 0;
+                                            kasa();
+                                        }
                                         if(kasirano==1) {
                                             new Kasirano();
                                         }
@@ -390,19 +392,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 Dobitak1.hold5 = 0;
             }
             else if(izbor == 2) {
-                izbor = 3;
-                biodobitak = 0;
-                levodole2.setVisibility(View.INVISIBLE);
-                desnodole2.setVisibility(View.INVISIBLE);
-                intro();
-                count1();
-                count100();
-                kasiranje = 1;
-                try {
-                    new Kasiranje();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+                kasa();
             }
         }
         if(id == R.id.deal) {
@@ -726,13 +716,12 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k5 = (int) Math.floor(Math.random() * 53);
 /*
         k1=0;
-
         k2=1;
         k3=13;
-        k4=17;
-        k5=19;
-
+        k4=10;
+        k5=11;
 */
+
 
     }
     void karta12345() {
@@ -880,5 +869,20 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiocount100 = null;
         }
         audiocount100 = MediaPlayer.create(this, R.raw.isplata100);
+    }
+    void kasa() {
+        izbor = 3;
+        biodobitak = 0;
+        levodole2.setVisibility(View.INVISIBLE);
+        desnodole2.setVisibility(View.INVISIBLE);
+        intro();
+        count1();
+        count100();
+        kasiranje = 1;
+        try {
+            new Kasiranje();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

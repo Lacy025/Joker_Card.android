@@ -1396,6 +1396,9 @@ public class Dobitak1 extends Activity {
                 if (Highpair == 1) {
                     First.rucno10.setVisibility(View.VISIBLE);
                 }
+                if(First.ah==0) {
+                    hold1=0;hold2=0;hold3=0;hold4=0;hold5=0;
+                }
                 First.stop = 1;
             }
         }, 1000);
