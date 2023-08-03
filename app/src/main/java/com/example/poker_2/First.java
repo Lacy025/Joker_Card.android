@@ -343,11 +343,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             new Kasirano();
                                         }
                                     }
-                                }, 200);
+                                }, 50);
                     }
                 });
             }
-        }, 0, 200);
+        }, 0, 50);
     }
     @Override
     public void onClick(View view) {
@@ -715,10 +715,10 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
 /*
-        k1=0;
-        k2=1;
-        k3=13;
-        k4=10;
+        k1=10;
+        k2=11;
+        k3=0;
+        k4=13;
         k5=11;
 */
 

@@ -757,7 +757,7 @@
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo3"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription,VisualLintBounds" />
 
         <ImageView
             android:id="@+id/polje_4"
@@ -816,7 +816,7 @@
             android:src="@drawable/k00"
             android:visibility="invisible"
             android:contentDescription="@string/todo33"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription,VisualLintBounds" />
 
         <ImageView
             android:id="@+id/polje_j4"

@@ -5,6 +5,7 @@ import static com.example.poker_2.First.audiocount100;
 import static com.example.poker_2.First.audiodobitnik;
 import static com.example.poker_2.First.audiointro;
 import static com.example.poker_2.First.button_deal;
+import static com.example.poker_2.First.button_take;
 import static com.example.poker_2.First.centar2;
 import static com.example.poker_2.First.cifra;
 
@@ -19,6 +20,8 @@ public class Kasiranje extends Activity {
     public static Runnable runnable10;
     Kasiranje() throws InterruptedException {
         int pobeda = cifra;
+        button_take.setText("WIN !");
+        button_deal.setText("WIN !");
         centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
         if(First.cifra>9999) {
