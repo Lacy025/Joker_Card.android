@@ -79,7 +79,7 @@ public class Stop extends AppCompatActivity {
                     First.izbor = 1;
                 }
             }
-        }, 0,200);
+        }, 0,50);
     }
 }
 
