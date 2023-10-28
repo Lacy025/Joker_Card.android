@@ -328,12 +328,17 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             pauzak = 900;
                                             new Karta5();
                                             new Dobitak1(this);
-                                            stopcard1();
-                                            stopcard2();
-                                            stopcard3();
-                                            stopcard4();
-                                            stopcard5();
-                                            new Stop(this);
+                                            if(ah==1) {
+                                                stopcard1();
+                                                stopcard2();
+                                                stopcard3();
+                                                stopcard4();
+                                                stopcard5();
+                                                new Stop(this);
+                                            }
+                                            else {
+                                                izbor=1;
+                                            }
                                         }
                                         if(blokada==1) {
                                             blokada = 0;

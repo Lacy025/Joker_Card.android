@@ -26,7 +26,7 @@ public class Stop extends AppCompatActivity {
                 if (First.stop == 1) {
                     First.stop = 0;
 
-                    if (Dobitak1.hold1 == 1 && First.ah == 1) {
+                    if (Dobitak1.hold1 == 1) {
                         try {
                             Thread.sleep(280);
                         } catch (InterruptedException e) {
@@ -35,7 +35,7 @@ public class Stop extends AppCompatActivity {
                         button_stop1.setBackgroundColor(Color.RED);
                         audiostop1.start();
                     }
-                    if (Dobitak1.hold2 == 1 && First.ah == 1) {
+                    if (Dobitak1.hold2 == 1) {
                         try {
                             Thread.sleep(280);
                         } catch (InterruptedException e) {
@@ -44,7 +44,7 @@ public class Stop extends AppCompatActivity {
                         button_stop2.setBackgroundColor(Color.RED);
                         audiostop2.start();
                     }
-                    if (Dobitak1.hold3 == 1 && First.ah == 1) {
+                    if (Dobitak1.hold3 == 1) {
                         try {
                             Thread.sleep(280);
                         } catch (InterruptedException e) {
@@ -53,7 +53,7 @@ public class Stop extends AppCompatActivity {
                         button_stop3.setBackgroundColor(Color.RED);
                         audiostop3.start();
                     }
-                    if (Dobitak1.hold4 == 1 && First.ah == 1) {
+                    if (Dobitak1.hold4 == 1) {
                         try {
                             Thread.sleep(280);
                         } catch (InterruptedException e) {
@@ -62,7 +62,7 @@ public class Stop extends AppCompatActivity {
                         button_stop4.setBackgroundColor(Color.RED);
                         audiostop4.start();
                     }
-                    if (Dobitak1.hold5 == 1 && First.ah == 1) {
+                    if (Dobitak1.hold5 == 1) {
                         try {
                             Thread.sleep(280);
                         } catch (InterruptedException e) {
@@ -79,7 +79,7 @@ public class Stop extends AppCompatActivity {
                     First.izbor = 1;
                 }
             }
-        }, 0,200);
+        }, 0,500);
     }
 }
 
