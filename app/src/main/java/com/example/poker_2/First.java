@@ -329,12 +329,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             new Karta5();
                                             new Dobitak1();
                                             if(ah==1) {
-                                                stopcard1();
-                                                stopcard2();
-                                                stopcard3();
-                                                stopcard4();
-                                                stopcard5();
-                                                new Stop();
+                                                Stop();
                                             }
                                             else {
                                                 izbor=1;
@@ -583,42 +578,27 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         }
         if(id == R.id.stop1) {
             if(izbor == 1) {
-                stopcard();
-                audiostop.start();
-                button_stop1.setBackgroundColor(Color.RED);
-                Dobitak1.hold1 = 1;
+                stopcard1();
             }
         }
         if(id == R.id.stop2) {
             if(izbor == 1) {
-                stopcard();
-                audiostop.start();
-                button_stop2.setBackgroundColor(Color.RED);
-                Dobitak1.hold2 = 1;
+                stopcard2();
             }
         }
         if(id == R.id.stop3) {
             if(izbor == 1) {
-                stopcard();
-                audiostop.start();
-                button_stop3.setBackgroundColor(Color.RED);
-                Dobitak1.hold3 = 1;
+                stopcard3();
             }
         }
         if(id == R.id.stop4) {
             if(izbor == 1) {
-                stopcard();
-                audiostop.start();
-                button_stop4.setBackgroundColor(Color.RED);
-                Dobitak1.hold4 = 1;
+                stopcard4();
             }
         }
         if(id == R.id.stop5) {
             if(izbor == 1) {
-                stopcard();
-                audiostop.start();
-                button_stop5.setBackgroundColor(Color.RED);
-                Dobitak1.hold5 = 1;
+                stopcard5();
             }
         }
     }
@@ -729,6 +709,63 @@ public class First extends AppCompatActivity implements View.OnClickListener {
 
 
     }
+    void Stop() {
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (stop == 1) {
+                    stop = 0;
+
+                    if (Dobitak1.hold1 == 1) {
+                        try {
+                            Thread.sleep(280);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        stopcard1();
+                    }
+                    if (Dobitak1.hold2 == 1) {
+                        try {
+                            Thread.sleep(250);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        stopcard2();
+                    }
+                    if (Dobitak1.hold3 == 1) {
+                        try {
+                            Thread.sleep(250);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        stopcard3();
+                    }
+                    if (Dobitak1.hold4 == 1) {
+                        try {
+                            Thread.sleep(250);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        stopcard4();
+                    }
+                    if (Dobitak1.hold5 == 1) {
+                        try {
+                            Thread.sleep(250);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        stopcard5();
+                    }
+                    try {
+                        Thread.sleep(200);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    izbor = 1;
+                }
+            }
+        }, 100,100);
+    }
     void karta12345() {
         if (audiokarta12345 != null) {
             audiokarta12345.reset();
@@ -737,14 +774,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         }
         audiokarta12345 = MediaPlayer.create(this, R.raw.karte12345);
     }
-    void stopcard() {
-        if (audiostop != null) {
-            audiostop.reset();
-            audiostop.release();
-            audiostop = null;
-        }
-        audiostop = MediaPlayer.create(this, R.raw.stop);
-    }
     void stopcard1() {
         if (audiostop1 != null) {
             audiostop1.reset();
@@ -752,6 +781,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop1 = null;
         }
         audiostop1 = MediaPlayer.create(this, R.raw.stop1);
+        audiostop1.start();
+        button_stop1.setBackgroundColor(Color.RED);
+        Dobitak1.hold1 = 1;
     }
     void stopcard2() {
         if (audiostop2 != null) {
@@ -760,6 +792,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop2 = null;
         }
         audiostop2 = MediaPlayer.create(this, R.raw.stop2);
+        audiostop2.start();
+        button_stop2.setBackgroundColor(Color.RED);
+        Dobitak1.hold2 = 1;
     }
     void stopcard3() {
         if (audiostop3 != null) {
@@ -768,6 +803,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop3 = null;
         }
         audiostop3 = MediaPlayer.create(this, R.raw.stop3);
+        audiostop3.start();
+        button_stop3.setBackgroundColor(Color.RED);
+        Dobitak1.hold3 = 1;
     }
     void stopcard4() {
         if (audiostop4 != null) {
@@ -776,6 +814,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop4 = null;
         }
         audiostop4 = MediaPlayer.create(this, R.raw.stop4);
+        audiostop4.start();
+        button_stop4.setBackgroundColor(Color.RED);
+        Dobitak1.hold4 = 1;
     }
     void stopcard5() {
         if (audiostop5 != null) {
@@ -784,6 +825,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiostop5 = null;
         }
         audiostop5 = MediaPlayer.create(this, R.raw.stop5);
+        audiostop5.start();
+        button_stop5.setBackgroundColor(Color.RED);
+        Dobitak1.hold5 = 1;
     }
     void ponistavanje1() {
         if (audioponistavanje != null) {

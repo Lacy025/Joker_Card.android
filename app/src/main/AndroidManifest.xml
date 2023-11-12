@@ -78,12 +78,6 @@
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Stop"
-            android:exported="true"
-            android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity" >
-        </activity>
-        <activity
             android:name=".Dobitak2"
             android:exported="true"
             android:screenOrientation="landscape"
