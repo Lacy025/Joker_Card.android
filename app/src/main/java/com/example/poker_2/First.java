@@ -316,7 +316,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                         if(deljenje==1) {
                                             deljenje = 2;
                                             karta12345();
-                                            new Deljenje1(this);
+                                            new Deljenje1();
                                             pauzak = 500;
                                             new Karta1();
                                             pauzak = 600;
@@ -327,14 +327,14 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             new Karta4();
                                             pauzak = 900;
                                             new Karta5();
-                                            new Dobitak1(this);
+                                            new Dobitak1();
                                             if(ah==1) {
                                                 stopcard1();
                                                 stopcard2();
                                                 stopcard3();
                                                 stopcard4();
                                                 stopcard5();
-                                                new Stop(this);
+                                                new Stop();
                                             }
                                             else {
                                                 izbor=1;
@@ -348,11 +348,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             new Kasirano();
                                         }
                                     }
-                                }, 50);
+                                }, 100);
                     }
                 });
             }
-        }, 0, 50);
+        }, 0, 100);
     }
     @Override
     public void onClick(View view) {

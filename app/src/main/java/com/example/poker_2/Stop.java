@@ -1,16 +1,5 @@
 package com.example.poker_2;
 
-import static com.example.poker_2.First.audiostop1;
-import static com.example.poker_2.First.audiostop2;
-import static com.example.poker_2.First.audiostop3;
-import static com.example.poker_2.First.audiostop4;
-import static com.example.poker_2.First.audiostop5;
-import static com.example.poker_2.First.button_stop1;
-import static com.example.poker_2.First.button_stop2;
-import static com.example.poker_2.First.button_stop3;
-import static com.example.poker_2.First.button_stop4;
-import static com.example.poker_2.First.button_stop5;
-
 import android.graphics.Color;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +8,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Stop extends AppCompatActivity {
-    Stop(Runnable stop) {
+    public Stop() {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
@@ -32,8 +21,8 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        button_stop1.setBackgroundColor(Color.RED);
-                        audiostop1.start();
+                        First.button_stop1.setBackgroundColor(Color.RED);
+                        First.audiostop1.start();
                     }
                     if (Dobitak1.hold2 == 1) {
                         try {
@@ -41,8 +30,8 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        button_stop2.setBackgroundColor(Color.RED);
-                        audiostop2.start();
+                        First.button_stop2.setBackgroundColor(Color.RED);
+                        First.audiostop2.start();
                     }
                     if (Dobitak1.hold3 == 1) {
                         try {
@@ -50,8 +39,8 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        button_stop3.setBackgroundColor(Color.RED);
-                        audiostop3.start();
+                        First.button_stop3.setBackgroundColor(Color.RED);
+                        First.audiostop3.start();
                     }
                     if (Dobitak1.hold4 == 1) {
                         try {
@@ -59,8 +48,8 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        button_stop4.setBackgroundColor(Color.RED);
-                        audiostop4.start();
+                        First.button_stop4.setBackgroundColor(Color.RED);
+                        First.audiostop4.start();
                     }
                     if (Dobitak1.hold5 == 1) {
                         try {
@@ -68,8 +57,8 @@ public class Stop extends AppCompatActivity {
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        button_stop5.setBackgroundColor(Color.RED);
-                        audiostop5.start();
+                        First.button_stop5.setBackgroundColor(Color.RED);
+                        First.audiostop5.start();
                     }
                     try {
                         Thread.sleep(200);
@@ -79,7 +68,7 @@ public class Stop extends AppCompatActivity {
                     First.izbor = 1;
                 }
             }
-        }, 0,500);
+        }, 500,500);
     }
 }
 

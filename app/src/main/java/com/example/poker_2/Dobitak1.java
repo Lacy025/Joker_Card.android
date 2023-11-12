@@ -45,7 +45,7 @@ public class Dobitak1 extends Activity {
     public static int hold3;
     public static int hold4;
     public static int hold5;
-    Dobitak1(Runnable dobitak1) {
+    Dobitak1() {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
