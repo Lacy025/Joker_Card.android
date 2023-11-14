@@ -36,12 +36,6 @@
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Deljenje1"
-            android:exported="true"
-            android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity" >
-        </activity>
-        <activity
             android:name=".Karta1"
             android:exported="true"
             android:screenOrientation="landscape"

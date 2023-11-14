@@ -315,8 +315,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                         }
                                         if(deljenje==1) {
                                             deljenje = 2;
-                                            karta12345();
-                                            new Deljenje1();
+                                            Deljenje1();
                                             pauzak = 500;
                                             new Karta1();
                                             pauzak = 600;
@@ -709,6 +708,14 @@ public class First extends AppCompatActivity implements View.OnClickListener {
 
 
     }
+    void Deljenje1() {
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                karta12345();
+            }
+        }, 500);
+    }
     void Stop() {
         new Timer().schedule(new TimerTask() {
             @Override
@@ -773,6 +780,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiokarta12345 = null;
         }
         audiokarta12345 = MediaPlayer.create(this, R.raw.karte12345);
+        audiokarta12345.start();
     }
     void stopcard1() {
         if (audiostop1 != null) {
