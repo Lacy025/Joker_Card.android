@@ -2,6 +2,7 @@ package com.example.poker_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -139,7 +140,14 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        Configuration config = getResources().getConfiguration();
+
+        if (config.smallestScreenWidthDp >= 600) {
+            setContentView(R.layout.activity_tablet);
+        } else {
+            setContentView(R.layout.activity_main);
+        }
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -699,14 +707,12 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
 /*
-        k1=10;
-        k2=11;
-        k3=0;
-        k4=13;
-        k5=11;
+        k1=1;
+        k2=14;
+        k3=10;
+        k4=3;
+        k5=18;
 */
-
-
     }
     void Deljenje1() {
         new Timer().schedule(new TimerTask() {
