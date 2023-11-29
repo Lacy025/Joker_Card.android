@@ -937,15 +937,15 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
-        tools:ignore="TooManyViews">
+        android:layout_marginTop="@dimen/_80sdp"
+        android:layout_width="@dimen/_400sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/polje_d1"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_140sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo111"
@@ -954,51 +954,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_120sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_110sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch1"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch1"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief1"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief1"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_18sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d2"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo222"
@@ -1007,51 +1007,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_138sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_125sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch2"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch2"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief2"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief2"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_36sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d3"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo333"
@@ -1060,51 +1060,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_156sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_140sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch3"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch3"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief3"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief3"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_54sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_45sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d4"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo444"
@@ -1113,51 +1113,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_174sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_155sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch4"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch4"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief4"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief4"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_72sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d5"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo555"
@@ -1166,51 +1166,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_192sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_170sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch5"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch5"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief5"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief5"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_90sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_75sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d6"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo666"
@@ -1219,51 +1219,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_210sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_185sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch6"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch6"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief6"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief6"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_108sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_90sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d7"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo777"
@@ -1272,51 +1272,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_228sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_200sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch7"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch7"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief7"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief7"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_126sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_105sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d8"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo888"
@@ -1325,51 +1325,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_246sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_215sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch8"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch8"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief8"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="bottom|center"
             android:text="@string/tief8"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_144sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_120sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d9"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo999"
@@ -1378,51 +1378,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_264sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_230sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch9"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch9"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief9"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief9"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_162sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_135sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d10"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo101010"
@@ -1431,51 +1431,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_282sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_245sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch10"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch10"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief10"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief10"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_180sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_150sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d11"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo111111"
@@ -1484,51 +1484,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_300sdp"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_260sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch11"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/hoch11"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
             android:id="@+id/tief11"
-            android:layout_marginTop="@dimen/_minus59sdp"
-            android:layout_marginStart="@dimen/_minus16sdp"
-            android:layout_width="@dimen/_160sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_minus50sdp"
+            android:layout_marginStart="@dimen/_minus10sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
-            android:gravity="bottom|center"
+            android:gravity="center"
             android:text="@string/tief11"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_48sdp"
+            android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_94sdp"
-        android:layout_marginStart="@dimen/_198sdp"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_170sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_165sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
         tools:ignore="TooManyViews">
 
         <ImageView
             android:id="@+id/polje_d12"
-            android:layout_width="@dimen/_98sdp"
-            android:layout_height="@dimen/_170sdp"
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_120sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
             android:contentDescription="@string/todo121212"
@@ -1537,42 +1537,42 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_256sdp"
-        android:layout_marginStart="@dimen/_174sdp"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_210sdp"
+        android:layout_marginStart="@dimen/_110sdp"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_16sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/hoch"
-            android:layout_width="@dimen/_200sdp"
+            android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_20sdp"
             android:fontFamily="arial"
             android:gravity="bottom|center"
             android:text="@string/hoch"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_18sdp"
+            android:textSize="@dimen/_16sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds,TextSizeCheck" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_276sdp"
-        android:layout_marginStart="@dimen/_174sdp"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_226sdp"
+        android:layout_marginStart="@dimen/_110sdp"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_16sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tief"
-            android:layout_width="@dimen/_200sdp"
+            android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_20sdp"
             android:fontFamily="arial"
             android:gravity="bottom|center"
             android:text="@string/tief"
             android:textColor="#FFFF00"
-            android:textSize="@dimen/_18sdp"
+            android:textSize="@dimen/_16sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds,TextSizeCheck" />
 
@@ -1580,8 +1580,8 @@
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="@dimen/_250sdp"
-        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_206sdp"
+        android:layout_marginStart="@dimen/_20sdp"
         android:layout_width="@dimen/_102sdp"
         android:layout_height="@dimen/_50sdp"
         android:orientation="horizontal"
@@ -1589,13 +1589,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/doubletief"
-            android:layout_width="@dimen/_102sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
             android:backgroundTint="#FF0303"
             android:gravity="center"
             android:text="@string/doubletief"
             android:textColor="#FBF701"
-            android:textSize="@dimen/_24sdp"
+            android:textSize="@dimen/_16sdp"
             android:visibility="invisible"
             tools:ignore="TextContrastCheck,VisualLintBounds,TextSizeCheck,VisualLintButtonSize" />
 
@@ -1603,8 +1603,8 @@
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="@dimen/_250sdp"
-        android:layout_marginStart="@dimen/_392sdp"
+        android:layout_marginTop="@dimen/_206sdp"
+        android:layout_marginStart="@dimen/_300sdp"
         android:layout_width="@dimen/_102sdp"
         android:layout_height="@dimen/_50sdp"
         android:orientation="horizontal"
@@ -1612,15 +1612,15 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/doublehoch"
-            android:layout_width="@dimen/_102sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_40sdp"
             android:backgroundTint="#FF0303"
             android:gravity="center"
             android:text="@string/doublehoch"
             android:textColor="#FBF701"
-            android:textSize="@dimen/_24sdp"
+            android:textSize="@dimen/_16sdp"
             android:visibility="invisible"
-            tools:ignore="TextContrastCheck,VisualLintBounds,TextSizeCheck,VisualLintButtonSize" />
+            tools:ignore="TextContrastCheck,VisualLintBounds,TextSizeCheck,VisualLintButtonSize,DuplicateSpeakableTextCheck" />
 
     </LinearLayout>
 
