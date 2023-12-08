@@ -1576,7 +1576,7 @@
         tools:ignore="VisualLintBounds">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/doubletief"
+            android:id="@+id/double_tief"
             android:layout_width="@dimen/_102sdp"
             android:layout_height="@dimen/_50sdp"
             android:backgroundTint="#FF0303"
@@ -1599,7 +1599,7 @@
         tools:ignore="VisualLintBounds">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/doublehoch"
+            android:id="@+id/double_hoch"
             android:layout_width="@dimen/_102sdp"
             android:layout_height="@dimen/_50sdp"
             android:backgroundTint="#FF0303"

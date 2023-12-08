@@ -1,13 +1,5 @@
 package com.example.poker_2;
 
-import static com.example.poker_2.First.button_stop1;
-import static com.example.poker_2.First.button_stop2;
-import static com.example.poker_2.First.button_stop3;
-import static com.example.poker_2.First.button_stop4;
-import static com.example.poker_2.First.button_stop5;
-import static com.example.poker_2.First.button_take;
-import static com.example.poker_2.First.centar2;
-
 import android.app.Activity;
 import android.os.Handler;
 import android.view.View;
@@ -20,40 +12,12 @@ public class Kasirano extends Activity {
 
         handler9 = new Handler();
         runnable9 = () -> {
-
                 if(First.kasiranje == 1) {
-                    centar2.setVisibility(View.VISIBLE);
-                    button_stop1.setVisibility(View.VISIBLE);
-                    button_stop2.setVisibility(View.VISIBLE);
-                    button_stop3.setVisibility(View.VISIBLE);
-                    button_stop4.setVisibility(View.VISIBLE);
-                    button_stop5.setVisibility(View.VISIBLE);
-                    First.table.setVisibility(View.INVISIBLE);
-                    First.dobitak.setVisibility(View.INVISIBLE);
-                    First.dobitak1.setVisibility(View.INVISIBLE);
-                    First.dobitak2.setVisibility(View.INVISIBLE);
-                    First.dobitak3.setVisibility(View.INVISIBLE);
-                    First.dobitak4.setVisibility(View.INVISIBLE);
-                    First.dobitak5.setVisibility(View.INVISIBLE);
-                    First.dobitak6.setVisibility(View.INVISIBLE);
-                    First.dobitak7.setVisibility(View.INVISIBLE);
-                    First.dobitak8.setVisibility(View.INVISIBLE);
-                    First.dobitak9.setVisibility(View.INVISIBLE);
-                    First.dobitak10.setVisibility(View.INVISIBLE);
-                    First.dobitakdb.setVisibility(View.INVISIBLE);
-                    First.levodole2.setVisibility(View.INVISIBLE);
-                    First.desnodole2.setVisibility(View.INVISIBLE);
-                    First.polje1.setVisibility(View.INVISIBLE);
-                    First.polje2.setVisibility(View.INVISIBLE);
-                    First.polje3.setVisibility(View.INVISIBLE);
-                    First.polje4.setVisibility(View.INVISIBLE);
-                    First.polje5.setVisibility(View.INVISIBLE);
-
-                    centar2.setText("");
-                    centar2.setVisibility(View.INVISIBLE);
-                    centar2.setText("");
-                    centar2.setVisibility(View.INVISIBLE);
-
+                    First.deljenje = 0;
+                    First.kasirano = 0;
+                    First.kasiranje = 0;
+                    First.biodobitak = 0;
+                    First.izbor = 0;
                     Jokers.handler1.removeCallbacks(Jokers.runnable1);
                     Jokers.handler2.removeCallbacks(Jokers.runnable2);
                     Jokers.handler3.removeCallbacks(Jokers.runnable3);
@@ -62,22 +26,12 @@ public class Kasirano extends Activity {
                     Jokers.handler6.removeCallbacks(Jokers.runnable6);
                     Jokers.handler7.removeCallbacks(Jokers.runnable7);
                     Jokers.handler8.removeCallbacks(Jokers.runnable8);
-
-                    First.polje1.setImageResource(R.drawable.k53);
-                    First.polje2.setImageResource(R.drawable.k53);
-                    First.polje3.setImageResource(R.drawable.k53);
-                    First.polje4.setImageResource(R.drawable.k53);
-                    First.polje5.setImageResource(R.drawable.k53);
                     First.joker.setText("JOKER");
                     First.card.setText("CARD");
-                    button_take.setText("AUTO HOLD");
                     First.joker.setVisibility(View.VISIBLE);
                     First.card.setVisibility(View.VISIBLE);
-                    First.deljenje = 0;
-                    First.kasirano = 0;
-                    First.kasiranje = 0;
-                    First.biodobitak = 0;
-                    First.izbor = 0;
+                    First.button_take.setText("AUTO HOLD");
+                    new Kliring();
                 }
         };
         handler9.postDelayed(runnable9,3600);
