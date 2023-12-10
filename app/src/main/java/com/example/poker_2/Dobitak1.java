@@ -1,5 +1,18 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.rucno1;
+import static com.example.poker_2.First.rucno2;
+import static com.example.poker_2.First.rucno3;
+import static com.example.poker_2.First.rucno4;
+import static com.example.poker_2.First.rucno5;
+import static com.example.poker_2.First.rucno6;
+import static com.example.poker_2.First.rucno7;
+import static com.example.poker_2.First.rucno8;
+import static com.example.poker_2.First.rucno9;
+import static com.example.poker_2.First.rucno10;
+import static com.example.poker_2.First.ah;
+import static com.example.poker_2.First.stop;
+
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
@@ -1367,39 +1380,39 @@ public class Dobitak1 extends Activity {
                 }
 
                 if (Fiveofakind == 1) {
-                    First.rucno1.setVisibility(View.VISIBLE);
+                    rucno1.setVisibility(View.VISIBLE);
                 }
                 if (Royalflush == 1) {
-                    First.rucno2.setVisibility(View.VISIBLE);
+                    rucno2.setVisibility(View.VISIBLE);
                 }
                 if (Streetflush == 1) {
-                    First.rucno3.setVisibility(View.VISIBLE);
+                    rucno3.setVisibility(View.VISIBLE);
                 }
                 if (Poker == 1) {
-                    First.rucno4.setVisibility(View.VISIBLE);
+                    rucno4.setVisibility(View.VISIBLE);
                 }
                 if (Fullhouse == 1) {
-                    First.rucno5.setVisibility(View.VISIBLE);
+                    rucno5.setVisibility(View.VISIBLE);
                 }
                 if (Flush == 1) {
-                    First.rucno6.setVisibility(View.VISIBLE);
+                    rucno6.setVisibility(View.VISIBLE);
                 }
                 if (Street == 1) {
-                    First.rucno7.setVisibility(View.VISIBLE);
+                    rucno7.setVisibility(View.VISIBLE);
                 }
                 if (Threeofakind == 1) {
-                    First.rucno8.setVisibility(View.VISIBLE);
+                    rucno8.setVisibility(View.VISIBLE);
                 }
                 if (Twopairs == 1) {
-                    First.rucno9.setVisibility(View.VISIBLE);
+                    rucno9.setVisibility(View.VISIBLE);
                 }
                 if (Highpair == 1) {
-                    First.rucno10.setVisibility(View.VISIBLE);
+                    rucno10.setVisibility(View.VISIBLE);
                 }
-                if(First.ah==0) {
+                if(ah==0) {
                     hold1=0;hold2=0;hold3=0;hold4=0;hold5=0;
                 }
-                First.stop = 1;
+                stop = 1;
             }
         }, 1000);
 
@@ -1449,6 +1462,4 @@ public class Dobitak1 extends Activity {
 
         HALFSTREET = 1;
     }
-
-
 }

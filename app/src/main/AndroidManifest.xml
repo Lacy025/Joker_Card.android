@@ -96,6 +96,30 @@
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
+        <activity
+            android:name=".Kliring"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" >
+        </activity>
+        <activity
+            android:name=".Duplakarta"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" >
+        </activity>
+        <activity
+            android:name=".Tief"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" >
+        </activity>
+        <activity
+            android:name=".Hoch"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" >
+        </activity>
     </application>
 
 </manifest>

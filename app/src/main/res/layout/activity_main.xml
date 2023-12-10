@@ -894,7 +894,8 @@
             android:text="@string/cash"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_26sdp"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/win"
@@ -949,7 +950,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch1"
+            android:id="@+id/hoch_1"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -961,7 +962,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief1"
+            android:id="@+id/tief_1"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1002,7 +1003,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch2"
+            android:id="@+id/hoch_2"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1014,7 +1015,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief2"
+            android:id="@+id/tief_2"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1055,7 +1056,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch3"
+            android:id="@+id/hoch_3"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1067,7 +1068,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief3"
+            android:id="@+id/tief_3"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1108,7 +1109,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch4"
+            android:id="@+id/hoch_4"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1120,7 +1121,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief4"
+            android:id="@+id/tief_4"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1161,7 +1162,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch5"
+            android:id="@+id/hoch_5"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1173,7 +1174,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief5"
+            android:id="@+id/tief_5"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1214,7 +1215,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch6"
+            android:id="@+id/hoch_6"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1226,7 +1227,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief6"
+            android:id="@+id/tief_6"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1267,7 +1268,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch7"
+            android:id="@+id/hoch_7"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1279,7 +1280,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief7"
+            android:id="@+id/tief_7"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1320,7 +1321,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch8"
+            android:id="@+id/hoch_8"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1332,7 +1333,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief8"
+            android:id="@+id/tief_8"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1373,7 +1374,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch9"
+            android:id="@+id/hoch_9"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1385,7 +1386,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief9"
+            android:id="@+id/tief_9"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1426,7 +1427,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch10"
+            android:id="@+id/hoch_10"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1438,7 +1439,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief10"
+            android:id="@+id/tief_10"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1479,7 +1480,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch11"
+            android:id="@+id/hoch_11"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_60sdp"
             android:fontFamily="arial"
@@ -1491,7 +1492,7 @@
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief11"
+            android:id="@+id/tief_11"
             android:layout_marginTop="@dimen/_minus59sdp"
             android:layout_marginStart="@dimen/_minus16sdp"
             android:layout_width="@dimen/_160sdp"
@@ -1526,7 +1527,7 @@
 
     <LinearLayout
         android:layout_marginTop="@dimen/_256sdp"
-        android:layout_marginStart="@dimen/_174sdp"
+        android:layout_marginStart="@dimen/_154sdp"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_20sdp"
         android:orientation="vertical">
@@ -1547,7 +1548,7 @@
 
     <LinearLayout
         android:layout_marginTop="@dimen/_276sdp"
-        android:layout_marginStart="@dimen/_174sdp"
+        android:layout_marginStart="@dimen/_154sdp"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_20sdp"
         android:orientation="vertical">
@@ -1569,7 +1570,7 @@
     <LinearLayout
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/_250sdp"
-        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_34sdp"
         android:layout_width="@dimen/_102sdp"
         android:layout_height="@dimen/_50sdp"
         android:orientation="horizontal"
@@ -1592,7 +1593,7 @@
     <LinearLayout
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/_250sdp"
-        android:layout_marginStart="@dimen/_392sdp"
+        android:layout_marginStart="@dimen/_374sdp"
         android:layout_width="@dimen/_102sdp"
         android:layout_height="@dimen/_50sdp"
         android:orientation="horizontal"

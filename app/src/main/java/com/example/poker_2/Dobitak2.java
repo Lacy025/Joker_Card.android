@@ -20,6 +20,28 @@ import static com.example.poker_2.First.dob7;
 import static com.example.poker_2.First.dob8;
 import static com.example.poker_2.First.dob9;
 import static com.example.poker_2.First.dobitakdb;
+import static com.example.poker_2.First.biodobitak;
+import static com.example.poker_2.First.dobitak;
+import static com.example.poker_2.First.dobitak1;
+import static com.example.poker_2.First.dobitak2;
+import static com.example.poker_2.First.dobitak3;
+import static com.example.poker_2.First.dobitak4;
+import static com.example.poker_2.First.dobitak5;
+import static com.example.poker_2.First.dobitak6;
+import static com.example.poker_2.First.dobitak7;
+import static com.example.poker_2.First.dobitak8;
+import static com.example.poker_2.First.dobitak9;
+import static com.example.poker_2.First.dobitak10;
+import static com.example.poker_2.First.table;
+import static com.example.poker_2.First.cifra;
+import static com.example.poker_2.First.izbor;
+import static com.example.poker_2.First.blokada;
+import static com.example.poker_2.First.polje1;
+import static com.example.poker_2.First.polje2;
+import static com.example.poker_2.First.polje3;
+import static com.example.poker_2.First.polje4;
+import static com.example.poker_2.First.polje5;
+import static com.example.poker_2.First.deljenje;
 import static com.example.poker_2.First.ponistavanje2;
 
 import android.app.Activity;
@@ -78,7 +100,7 @@ public class Dobitak2 extends Activity {
                 b4 = Karta4.b4;
                 b5 = Karta5.b5;
 
-                First.biodobitak = 0;
+                biodobitak = 0;
 
                 Fiveofakind = 0;
                 Royalflush = 0;
@@ -93,14 +115,14 @@ public class Dobitak2 extends Activity {
 
                 // FIVE OF A KIND
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
                     if (((n1 == n2) && (n2 == n3) && (n3 == n4) && (n5 == 0)) ||
                             ((n1 == n2) && (n2 == n3) && (n4 == 0) && (n3 == n5)) ||
                             ((n1 == n2) && (n3 == 0) && (n2 == n4) && (n4 == n5)) ||
                             ((n1 == n3) && (n2 == 0) && (n3 == n4) && (n4 == n5)) ||
                             ((n1 == 0) && (n2 == n3) && (n3 == n4) && (n4 == n5))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Fiveofakind = 1;
                     }
                 }
@@ -118,7 +140,7 @@ public class Dobitak2 extends Activity {
                 STRFL8 = 0;
                 STRFL9 = 0;
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         ROYAL++;
@@ -147,7 +169,7 @@ public class Dobitak2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 9-13
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL9++;
@@ -176,7 +198,7 @@ public class Dobitak2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 8-12
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL8++;
@@ -205,7 +227,7 @@ public class Dobitak2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 7-11
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL7++;
@@ -234,7 +256,7 @@ public class Dobitak2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 6-10
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL6++;
@@ -263,7 +285,7 @@ public class Dobitak2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 5-9
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL5++;
@@ -292,7 +314,7 @@ public class Dobitak2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 4-8
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL4++;
@@ -321,7 +343,7 @@ public class Dobitak2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 3-7
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL3++;
@@ -350,7 +372,7 @@ public class Dobitak2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 2-6
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL2++;
@@ -379,7 +401,7 @@ public class Dobitak2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 1-5
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL1++;
@@ -407,7 +429,7 @@ public class Dobitak2 extends Activity {
 
                 // POKER
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (((n1 == n2) && (n2 == n3) && (n3 == n4)) ||
                             ((n1 == n2) && (n2 == n3) && (n4 == 0)) ||
@@ -415,7 +437,7 @@ public class Dobitak2 extends Activity {
                             ((n1 == n3) && (n2 == 0) && (n3 == n4)) ||
                             ((n1 == 0) && (n2 == n3) && (n3 == n4))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Poker = 1;
                     }
 
@@ -425,7 +447,7 @@ public class Dobitak2 extends Activity {
                             ((n1 == n3) && (n2 == 0) && (n3 == n5)) ||
                             ((n1 == 0) && (n2 == n3) && (n3 == n5))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Poker = 1;
                     }
 
@@ -435,7 +457,7 @@ public class Dobitak2 extends Activity {
                             ((n1 == n4) && (n2 == 0) && (n4 == n5)) ||
                             ((n1 == 0) && (n2 == n4) && (n4 == n5))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Poker = 1;
                     }
 
@@ -445,7 +467,7 @@ public class Dobitak2 extends Activity {
                             ((n1 == n4) && (n3 == 0) && (n4 == n5)) ||
                             ((n1 == 0) && (n3 == n4) && (n4 == n5))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Poker = 1;
                     }
 
@@ -455,14 +477,14 @@ public class Dobitak2 extends Activity {
                             ((n2 == n4) && (n3 == 0) && (n4 == n5)) ||
                             ((n2 == 0) && (n3 == n4) && (n4 == n5))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Poker = 1;
                     }
                 }
 
                 //FULL HOUSE
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (((n1 == n2) && (n2 == n3) && (n4 == n5)) ||
                             ((n1 == n2) && (n3 == n4) && (n4 == n5)) ||
@@ -490,14 +512,14 @@ public class Dobitak2 extends Activity {
                             ((n1 == 0) && (n2 == n4) && (n3 == n5)) ||
                             ((n1 == 0) && (n2 == n5) && (n3 == n4))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Fullhouse = 1;
                     }
                 }
 
                 //FLUSH
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (((b1 == b2) && (b2 == b3) && (b3 == b4) && (b4 == b5)) ||
                             ((b1 == b2) && (b2 == b3) && (b3 == b4) && (n5 == 0)) ||
@@ -506,171 +528,171 @@ public class Dobitak2 extends Activity {
                             ((b1 == b3) && (n2 == 0) && (b3 == b4) && (b4 == b5)) ||
                             ((n1 == 0) && (b2 == b3) && (b3 == b4) && (b4 == b5))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Flush = 1;
                     }
                 }
 
                 //THREE OF A KIND
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (((n1 == n2) && (n2 == n3)) || ((n1 == n2) && (n3 == 0)) || ((n1 == n3) && (n2 == 0)) || ((n2 == n3) && (n1 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n2) && (n2 == n4)) || ((n1 == n2) && (n4 == 0)) || ((n1 == n4) && (n2 == 0)) || ((n2 == n4) && (n1 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n2) && (n2 == n5)) || ((n1 == n2) && (n5 == 0)) || ((n1 == n5) && (n2 == 0)) || ((n2 == n5) && (n1 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n3) && (n3 == n4)) || ((n1 == n3) && (n4 == 0)) || ((n1 == n4) && (n3 == 0)) || ((n3 == n4) && (n1 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n3) && (n3 == n5)) || ((n1 == n3) && (n5 == 0)) || ((n1 == n5) && (n3 == 0)) || ((n3 == n5) && (n1 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n4) && (n4 == n5)) || ((n1 == n4) && (n5 == 0)) || ((n1 == n5) && (n4 == 0)) || ((n4 == n5) && (n1 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
 
                     if (((n2 == n3) && (n3 == n4)) || ((n2 == n3) && (n4 == 0)) || ((n2 == n4) && (n3 == 0)) || ((n3 == n4) && (n2 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
 
                     if (((n2 == n3) && (n3 == n5)) || ((n2 == n3) && (n5 == 0)) || ((n2 == n5) && (n3 == 0)) || ((n3 == n5) && (n2 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
 
                     if (((n2 == n4) && (n4 == n5)) || ((n2 == n4) && (n5 == 0)) || ((n2 == n5) && (n4 == 0)) || ((n4 == n5) && (n2 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
 
                     if (((n3 == n4) && (n4 == n5)) || ((n3 == n4) && (n5 == 0)) || ((n3 == n5) && (n4 == 0)) || ((n4 == n5) && (n3 == 0))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Threeofakind = 1;
                     }
                 }
 
                 //2 PAIRS
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (((n1 == n2) && (n3 == n4)) || ((n1 == n3) && (n2 == n4)) || ((n1 == n4) && (n2 == n3))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Twopairs = 1;
                     }
 
                     if (((n1 == n2) && (n3 == n5)) || ((n1 == n3) && (n2 == n5)) || ((n1 == n5) && (n2 == n3))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Twopairs = 1;
                     }
 
                     if (((n1 == n2) && (n4 == n5)) || ((n1 == n5) && (n2 == n4)) || ((n1 == n4) && (n2 == n5))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Twopairs = 1;
                     }
 
                     if (((n1 == n3) && (n4 == n5)) || ((n1 == n5) && (n3 == n4)) || ((n1 == n4) && (n3 == n5))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Twopairs = 1;
                     }
 
                     if (((n2 == n3) && (n4 == n5)) || ((n3 == n5) && (n2 == n4)) || ((n3 == n4) && (n2 == n5))) {
 
-                        First.biodobitak++;
+                        biodobitak++;
                         Twopairs = 1;
                     }
                 }
 
                 //HIGH PAIR
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
                     if (n1 == n2) {
                         if (n1 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n1 == n3) {
                         if (n1 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n1 == n4) {
                         if (n1 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n1 == n5) {
                         if (n1 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n2 == n3) {
                         if (n2 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n2 == n4) {
                         if (n2 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n2 == n5) {
                         if (n2 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n3 == n4) {
                         if (n3 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n3 == n5) {
                         if (n3 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n4 == n5) {
                         if (n4 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
@@ -679,35 +701,35 @@ public class Dobitak2 extends Activity {
 
                 //HIGH PAIR WITH JOKER
 
-                if (First.biodobitak == 0) {
+                if (biodobitak == 0) {
 
                     if (n1 == 0) {
                         if (n2 > 10 || n3 > 10 || n4 > 10 || n5 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n2 == 0) {
                         if (n1 > 10 || n3 > 10 || n4 > 10 || n5 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n3 == 0) {
                         if (n1 > 10 || n2 > 10 || n4 > 10 || n5 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n4 == 0) {
                         if (n1 > 10 || n2 > 10 || n3 > 10 || n5 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
                     if (n5 == 0) {
                         if (n1 > 10 || n2 > 10 || n3 > 10 || n4 > 10) {
-                            First.biodobitak++;
+                            biodobitak++;
                             Highpair = 1;
                         }
                     }
@@ -715,77 +737,77 @@ public class Dobitak2 extends Activity {
                 ponistavanje2();
 
                 if (Fiveofakind == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak1.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak1.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob1)));
                     dobitakdb.setText(Integer.toString(dob1));
-                    First.cifra = dob1;
+                    cifra = dob1;
                 }
                 if (Royalflush == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak2.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak2.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob2)));
-                    First.cifra = dob2;
+                    cifra = dob2;
                 }
                 if (Streetflush == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak3.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak3.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob3)));
-                    First.cifra = dob3;
+                    cifra = dob3;
                 }
                 if (Poker == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak4.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak4.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob4)));
-                    First.cifra = dob4;
+                    cifra = dob4;
                 }
                 if (Fullhouse == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak5.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak5.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob5)));
-                    First.cifra = dob5;
+                    cifra = dob5;
                 }
                 if (Flush == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak6.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak6.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob6)));
-                    First.cifra = dob6;
+                    cifra = dob6;
                 }
                 if (Street == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak7.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak7.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob7)));
-                    First.cifra = dob7;
+                    cifra = dob7;
                 }
                 if (Threeofakind == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak8.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak8.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob8)));
-                    First.cifra = dob8;
+                    cifra = dob8;
                 }
                 if (Twopairs == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak9.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak9.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob9)));
-                    First.cifra = dob9;
+                    cifra = dob9;
                 }
                 if (Highpair == 1) {
-                    First.table.setVisibility(View.VISIBLE);
-                    First.dobitak10.setVisibility(View.VISIBLE);
-                    First.dobitak.setVisibility(View.VISIBLE);
+                    table.setVisibility(View.VISIBLE);
+                    dobitak10.setVisibility(View.VISIBLE);
+                    dobitak.setVisibility(View.VISIBLE);
                     dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob10)));
-                    First.cifra = dob10;
+                    cifra = dob10;
                 }
-                if (First.biodobitak == 1) {
+                if (biodobitak == 1) {
                     button_take.setText("TAKE");
                     button_deal.setText("GAMBLE");
                     try {
@@ -801,9 +823,9 @@ public class Dobitak2 extends Activity {
                     button_stop4.setVisibility(View.INVISIBLE);
                     button_stop5.setVisibility(View.INVISIBLE);
 
-                    First.izbor = 2;
-                    if(First.cifra>9999) {
-                        First.blokada = 1;
+                    izbor = 2;
+                    if(cifra>9999) {
+                        blokada = 1;
                         centar2.setText("YOU WIN !");
                         centar2.setVisibility(View.VISIBLE);
                         button_take.setText("WIN !");
@@ -816,17 +838,17 @@ public class Dobitak2 extends Activity {
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    First.polje1.setImageResource(R.drawable.k53);
-                    First.polje2.setImageResource(R.drawable.k53);
-                    First.polje3.setImageResource(R.drawable.k53);
-                    First.polje4.setImageResource(R.drawable.k53);
-                    First.polje5.setImageResource(R.drawable.k53);
-                    First.polje1.setVisibility(View.INVISIBLE);
-                    First.polje2.setVisibility(View.INVISIBLE);
-                    First.polje3.setVisibility(View.INVISIBLE);
-                    First.polje4.setVisibility(View.INVISIBLE);
-                    First.polje5.setVisibility(View.INVISIBLE);
-                    First.deljenje = 0;
+                    polje1.setImageResource(R.drawable.k53);
+                    polje2.setImageResource(R.drawable.k53);
+                    polje3.setImageResource(R.drawable.k53);
+                    polje4.setImageResource(R.drawable.k53);
+                    polje5.setImageResource(R.drawable.k53);
+                    polje1.setVisibility(View.INVISIBLE);
+                    polje2.setVisibility(View.INVISIBLE);
+                    polje3.setVisibility(View.INVISIBLE);
+                    polje4.setVisibility(View.INVISIBLE);
+                    polje5.setVisibility(View.INVISIBLE);
+                    deljenje = 0;
                     Jokers.handler1.removeCallbacks(Jokers.runnable1);
                     Jokers.handler2.removeCallbacks(Jokers.runnable2);
                     Jokers.handler3.removeCallbacks(Jokers.runnable3);
@@ -842,7 +864,7 @@ public class Dobitak2 extends Activity {
     }
     void ProveraBoje1() {
 
-        First.biodobitak++;
+        biodobitak++;
 
         if (((b1==b2)&&(b2==b3)&&(b3==b4)&&(n5==0)) ||
                 ((b1==b2)&&(b2==b3)&&(n4==0)&&(b3==b5)) ||
@@ -859,7 +881,7 @@ public class Dobitak2 extends Activity {
     }
     void ProveraBoje2() {
 
-        First.biodobitak++;
+        biodobitak++;
 
         if (((b1==b2)&&(b2==b3)&&(b3==b4)&&(n5==0)) ||
                 ((b1==b2)&&(b2==b3)&&(n4==0)&&(b3==b5)) ||
@@ -875,5 +897,3 @@ public class Dobitak2 extends Activity {
         }
     }
 }
-
-

@@ -56,5 +56,27 @@ public class Kliring {
         First.polje3.setImageResource(R.drawable.k53);
         First.polje4.setImageResource(R.drawable.k53);
         First.polje5.setImageResource(R.drawable.k53);
+        First.tief1.setVisibility(View.INVISIBLE);
+        First.tief2.setVisibility(View.INVISIBLE);
+        First.tief3.setVisibility(View.INVISIBLE);
+        First.tief4.setVisibility(View.INVISIBLE);
+        First.tief5.setVisibility(View.INVISIBLE);
+        First.tief6.setVisibility(View.INVISIBLE);
+        First.tief7.setVisibility(View.INVISIBLE);
+        First.tief8.setVisibility(View.INVISIBLE);
+        First.tief9.setVisibility(View.INVISIBLE);
+        First.tief10.setVisibility(View.INVISIBLE);
+        First.tief11.setVisibility(View.INVISIBLE);
+        First.hoch1.setVisibility(View.INVISIBLE);
+        First.hoch2.setVisibility(View.INVISIBLE);
+        First.hoch3.setVisibility(View.INVISIBLE);
+        First.hoch4.setVisibility(View.INVISIBLE);
+        First.hoch5.setVisibility(View.INVISIBLE);
+        First.hoch6.setVisibility(View.INVISIBLE);
+        First.hoch7.setVisibility(View.INVISIBLE);
+        First.hoch8.setVisibility(View.INVISIBLE);
+        First.hoch9.setVisibility(View.INVISIBLE);
+        First.hoch10.setVisibility(View.INVISIBLE);
+        First.hoch11.setVisibility(View.INVISIBLE);
     }
 }

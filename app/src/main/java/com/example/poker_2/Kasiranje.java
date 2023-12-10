@@ -8,6 +8,11 @@ import static com.example.poker_2.First.button_deal;
 import static com.example.poker_2.First.button_take;
 import static com.example.poker_2.First.centar2;
 import static com.example.poker_2.First.cifra;
+import static com.example.poker_2.First.izbor;
+import static com.example.poker_2.First.kasirano;
+import static com.example.poker_2.First.dobitakdb;
+import static com.example.poker_2.First.c;
+import static com.example.poker_2.First.c1;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -24,8 +29,9 @@ public class Kasiranje extends Activity {
         button_deal.setText("WIN !");
         centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
-        if(First.cifra>9999) {
-            First.izbor = 3;
+
+        if(cifra>9999) {
+            izbor = 3;
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
@@ -44,7 +50,7 @@ public class Kasiranje extends Activity {
             @Override
             public void run() {
                 isVisible1 = !isVisible1;
-                if(First.cifra > 0) {
+                if(cifra > 0) {
                     centar2.setVisibility(isVisible1 ? View.INVISIBLE : View.VISIBLE);
                     handler9.postDelayed(this, 400);
                 }
@@ -78,30 +84,30 @@ public class Kasiranje extends Activity {
                         }
                     }
                     audiointro.start();
-                    First.kasirano = 1;
+                    kasirano = 1;
                 }
             }
         };
         handler10.post(runnable10);
     }
     void minusjedan() {
-        First.c +=1;
-        First.c1.setText(Integer.toString(First.c));
-        First.cifra -=1;
-        First.dobitakdb.setText(Integer.toString(First.cifra));
+        c +=1;
+        c1.setText(Integer.toString(First.c));
+        cifra -=1;
+        dobitakdb.setText(Integer.toString(cifra));
         audiocount1.start();
-        if(First.cifra == 0) {
+        if(cifra == 0) {
             pobedio();
             button_deal.setText("DEAL CARDS");
         }
     }
     void minussto() {
-        First.c +=100;
-        First.c1.setText(Integer.toString(First.c));
-        First.cifra -=100;
-        First.dobitakdb.setText(Integer.toString(First.cifra));
+        c +=100;
+        c1.setText(Integer.toString(First.c));
+        cifra -=100;
+        dobitakdb.setText(Integer.toString(cifra));
         audiocount100.start();
-        if(First.cifra == 0) {
+        if(cifra == 0) {
             pobedio();
             button_deal.setText("DEAL CARDS");
         }

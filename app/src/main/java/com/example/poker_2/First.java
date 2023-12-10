@@ -62,6 +62,18 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static int k3;
     public static int k4;
     public static int k5;
+    public static int dk;
+    public static int dk1;
+    public static int dk2;
+    public static int dk3;
+    public static int dk4;
+    public static int dk5;
+    public static int dk6;
+    public static int dk7;
+    public static int dk8;
+    public static int dk9;
+    public static int dk10;
+    public static int dk11;
     public static int pauzak;
     public static int kasiranje;
     public static int cifra;
@@ -69,6 +81,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static int kasirano;
     public static int blokada;
     public static int duplanje;
+    public static int duplakarta;
     int hold;
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
@@ -149,10 +162,32 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static TextView dobitak10;
     public static TextView dobitak;
     public static TextView dobitakdb;
-    public TextView tief;
-    public TextView hoch;
+    public static TextView tief;
+    public static TextView hoch;
     public TextView doubletief;
     public TextView doublehoch;
+    public static TextView tief1;
+    public static TextView tief2;
+    public static TextView tief3;
+    public static TextView tief4;
+    public static TextView tief5;
+    public static TextView tief6;
+    public static TextView tief7;
+    public static TextView tief8;
+    public static TextView tief9;
+    public static TextView tief10;
+    public static TextView tief11;
+    public static TextView hoch1;
+    public static TextView hoch2;
+    public static TextView hoch3;
+    public static TextView hoch4;
+    public static TextView hoch5;
+    public static TextView hoch6;
+    public static TextView hoch7;
+    public static TextView hoch8;
+    public static TextView hoch9;
+    public static TextView hoch10;
+    public static TextView hoch11;
     Timer timer1;
     TimerTask task1;
     Timer timer2;
@@ -271,6 +306,30 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         poljeD10 = findViewById(R.id.polje_d10);
         poljeD11 = findViewById(R.id.polje_d11);
         poljeD12 = findViewById(R.id.polje_d12);
+
+        tief1 = findViewById(R.id.tief_1);
+        tief2 = findViewById(R.id.tief_2);
+        tief3 = findViewById(R.id.tief_3);
+        tief4 = findViewById(R.id.tief_4);
+        tief5 = findViewById(R.id.tief_5);
+        tief6 = findViewById(R.id.tief_6);
+        tief7 = findViewById(R.id.tief_7);
+        tief8 = findViewById(R.id.tief_8);
+        tief9 = findViewById(R.id.tief_9);
+        tief10 = findViewById(R.id.tief_10);
+        tief11 = findViewById(R.id.tief_11);
+
+        hoch1 = findViewById(R.id.hoch_1);
+        hoch2 = findViewById(R.id.hoch_2);
+        hoch3 = findViewById(R.id.hoch_3);
+        hoch4 = findViewById(R.id.hoch_4);
+        hoch5 = findViewById(R.id.hoch_5);
+        hoch6 = findViewById(R.id.hoch_6);
+        hoch7 = findViewById(R.id.hoch_7);
+        hoch8 = findViewById(R.id.hoch_8);
+        hoch9 = findViewById(R.id.hoch_9);
+        hoch10 = findViewById(R.id.hoch_10);
+        hoch11 = findViewById(R.id.hoch_11);
 
         timer1 = new Timer();
         timer2 = new Timer();
@@ -410,16 +469,16 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                 if(duplanje==1) {
                                     Hoch();
                                 }
-                            }, 200);
+                            }, 400);
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
                                 if(duplanje==1) {
                                     Tief();
                                 }
-                            }, 400);
+                            }, 800);
                 });
             }
-        }, 0, 400);
+        }, 0, 800);
     }
     @Override
     public void onClick(View view) {
@@ -638,6 +697,30 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 stopcard5();
             }
         }
+        if(id == R.id.double_tief) {
+            if(duplanje==1) {
+                duplanje = 0;
+                tief.setVisibility(View.INVISIBLE);
+                hoch.setVisibility(View.INVISIBLE);
+                try {
+                    new Tief();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+        if(id == R.id.double_hoch) {
+            if(duplanje==1) {
+                duplanje = 0;
+                tief.setVisibility(View.INVISIBLE);
+                hoch.setVisibility(View.INVISIBLE);
+                try {
+                    new Hoch();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
     }
     void intro() {
         if (audiointro != null) {
@@ -736,8 +819,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
+
+        k1=0;
 /*
-        k1=1;
         k2=14;
         k3=10;
         k4=3;
@@ -987,7 +1071,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiobingo  = null;
         }
         audiobingo  = MediaPlayer.create(this, R.raw.bingo);
-        audiobingo.start();
     }
     void kasa() {
         izbor = 3;
@@ -1017,18 +1100,110 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         count100();
         tief1();
         hoch1();
+        bingo();
         polje1.setVisibility(View.INVISIBLE);
         polje2.setVisibility(View.INVISIBLE);
         polje3.setVisibility(View.INVISIBLE);
         polje4.setVisibility(View.INVISIBLE);
         polje5.setVisibility(View.INVISIBLE);
-        poljeD1.setVisibility(View.VISIBLE);
+        poljeD1.setImageResource(R.drawable.k53);
+        poljeD2.setImageResource(R.drawable.k53);
+        poljeD3.setImageResource(R.drawable.k53);
+        poljeD4.setImageResource(R.drawable.k53);
+        poljeD5.setImageResource(R.drawable.k53);
+        poljeD6.setImageResource(R.drawable.k53);
+        poljeD7.setImageResource(R.drawable.k53);
+        poljeD8.setImageResource(R.drawable.k53);
+        poljeD9.setImageResource(R.drawable.k53);
+        poljeD10.setImageResource(R.drawable.k53);
+        poljeD11.setImageResource(R.drawable.k53);
+        poljeD12.setImageResource(R.drawable.k53);
         audiodobitnik.stop();
         duplanje = 1;
+        duplakarta = 1;
+        dk = 0;
         Duplanje();
     }
-    void Duplanje() {
-
+    public static void Duplanje() {
+        if(duplakarta == 1) {
+            poljeD1.setVisibility(View.VISIBLE);
+            dk1 = (int) Math.floor(Math.random() * 48);
+        }
+        if(duplakarta == 2) {
+            poljeD2.setVisibility(View.VISIBLE);
+            dk2 = (int) Math.floor(Math.random() * 48);
+            while(dk2==dk1) {
+                dk2 = (int) Math.floor(Math.random() * 48);
+            }
+        }
+        if(duplakarta == 3) {
+            poljeD3.setVisibility(View.VISIBLE);
+            dk3 = (int) Math.floor(Math.random() * 48);
+            while(dk3==dk1||dk3==dk2) {
+                dk3 = (int) Math.floor(Math.random() * 48);
+            }
+        }
+        if(duplakarta == 4) {
+            poljeD4.setVisibility(View.VISIBLE);
+            dk4 = (int) Math.floor(Math.random() * 48);
+            while(dk4==dk1||dk4==dk2||dk4==dk3) {
+                dk4 = (int) Math.floor(Math.random() * 48);
+            }
+        }
+        if(duplakarta == 5) {
+            poljeD5.setVisibility(View.VISIBLE);
+            dk5 = (int) Math.floor(Math.random() * 48);
+            while(dk5==dk1||dk5==dk2||dk5==dk3||dk5==dk4) {
+                dk5 = (int) Math.floor(Math.random() * 48);
+            }
+        }
+        if(duplakarta == 6) {
+            poljeD6.setVisibility(View.VISIBLE);
+            dk6 = (int) Math.floor(Math.random() * 48);
+            while(dk6==dk1||dk6==dk2||dk6==dk3||dk6==dk4||dk6==dk5) {
+                dk6 = (int) Math.floor(Math.random() * 48);
+            }
+        }
+        if(duplakarta == 7) {
+            poljeD7.setVisibility(View.VISIBLE);
+            dk7 = (int) Math.floor(Math.random() * 48);
+            while(dk7==dk1||dk7==dk2||dk7==dk3||dk7==dk4||dk7==dk5||
+                    dk7==dk6) {
+                dk7 = (int) Math.floor(Math.random() * 48);
+            }
+        }
+        if(duplakarta == 8) {
+            poljeD8.setVisibility(View.VISIBLE);
+            dk8 = (int) Math.floor(Math.random() * 48);
+            while(dk8==dk1||dk8==dk2||dk8==dk3||dk8==dk4||dk8==dk5||
+                    dk8==dk6||dk8==dk7) {
+                dk8 = (int) Math.floor(Math.random() * 48);
+            }
+        }
+        if(duplakarta == 9) {
+            poljeD9.setVisibility(View.VISIBLE);
+            dk9 = (int) Math.floor(Math.random() * 48);
+            while(dk9==dk1||dk9==dk2||dk9==dk3||dk9==dk4||dk9==dk5||
+                    dk9==dk6||dk9==dk7||dk9==dk8) {
+                dk9 = (int) Math.floor(Math.random() * 48);
+            }
+        }
+        if(duplakarta == 10) {
+            poljeD10.setVisibility(View.VISIBLE);
+            dk10 = (int) Math.floor(Math.random() * 48);
+            while(dk10==dk1||dk10==dk2||dk10==dk3||dk10==dk4||dk10==dk5||
+                    dk10==dk6||dk10==dk7||dk10==dk8||dk10==dk9) {
+                dk10 = (int) Math.floor(Math.random() * 48);
+            }
+        }
+        if(duplakarta == 11) {
+            poljeD11.setVisibility(View.VISIBLE);
+            dk11 = (int) Math.floor(Math.random() * 48);
+            while(dk11==dk1||dk11==dk2||dk11==dk3||dk11==dk4||dk11==dk5||
+                    dk11==dk6||dk11==dk7||dk11==dk8||dk11==dk9||dk11==dk10) {
+                dk11 = (int) Math.floor(Math.random() * 48);
+            }
+        }
     }
     void Tief() {
         audiotief.start();
