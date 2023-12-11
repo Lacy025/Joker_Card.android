@@ -819,9 +819,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-
-        k1=0;
 /*
+        k1=0;
+
         k2=14;
         k3=10;
         k4=3;
@@ -1127,81 +1127,81 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static void Duplanje() {
         if(duplakarta == 1) {
             poljeD1.setVisibility(View.VISIBLE);
-            dk1 = (int) Math.floor(Math.random() * 48);
+            dk1 = (int) Math.floor(Math.random() * 48) + 1;
         }
         if(duplakarta == 2) {
             poljeD2.setVisibility(View.VISIBLE);
-            dk2 = (int) Math.floor(Math.random() * 48);
+            dk2 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk2==dk1) {
-                dk2 = (int) Math.floor(Math.random() * 48);
+                dk2 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 3) {
             poljeD3.setVisibility(View.VISIBLE);
-            dk3 = (int) Math.floor(Math.random() * 48);
+            dk3 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk3==dk1||dk3==dk2) {
-                dk3 = (int) Math.floor(Math.random() * 48);
+                dk3 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 4) {
             poljeD4.setVisibility(View.VISIBLE);
-            dk4 = (int) Math.floor(Math.random() * 48);
+            dk4 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk4==dk1||dk4==dk2||dk4==dk3) {
-                dk4 = (int) Math.floor(Math.random() * 48);
+                dk4 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 5) {
             poljeD5.setVisibility(View.VISIBLE);
-            dk5 = (int) Math.floor(Math.random() * 48);
+            dk5 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk5==dk1||dk5==dk2||dk5==dk3||dk5==dk4) {
-                dk5 = (int) Math.floor(Math.random() * 48);
+                dk5 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 6) {
             poljeD6.setVisibility(View.VISIBLE);
-            dk6 = (int) Math.floor(Math.random() * 48);
+            dk6 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk6==dk1||dk6==dk2||dk6==dk3||dk6==dk4||dk6==dk5) {
-                dk6 = (int) Math.floor(Math.random() * 48);
+                dk6 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 7) {
             poljeD7.setVisibility(View.VISIBLE);
-            dk7 = (int) Math.floor(Math.random() * 48);
+            dk7 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk7==dk1||dk7==dk2||dk7==dk3||dk7==dk4||dk7==dk5||
                     dk7==dk6) {
-                dk7 = (int) Math.floor(Math.random() * 48);
+                dk7 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 8) {
             poljeD8.setVisibility(View.VISIBLE);
-            dk8 = (int) Math.floor(Math.random() * 48);
+            dk8 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk8==dk1||dk8==dk2||dk8==dk3||dk8==dk4||dk8==dk5||
                     dk8==dk6||dk8==dk7) {
-                dk8 = (int) Math.floor(Math.random() * 48);
+                dk8 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 9) {
             poljeD9.setVisibility(View.VISIBLE);
-            dk9 = (int) Math.floor(Math.random() * 48);
+            dk9 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk9==dk1||dk9==dk2||dk9==dk3||dk9==dk4||dk9==dk5||
                     dk9==dk6||dk9==dk7||dk9==dk8) {
-                dk9 = (int) Math.floor(Math.random() * 48);
+                dk9 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 10) {
             poljeD10.setVisibility(View.VISIBLE);
-            dk10 = (int) Math.floor(Math.random() * 48);
+            dk10 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk10==dk1||dk10==dk2||dk10==dk3||dk10==dk4||dk10==dk5||
                     dk10==dk6||dk10==dk7||dk10==dk8||dk10==dk9) {
-                dk10 = (int) Math.floor(Math.random() * 48);
+                dk10 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 11) {
             poljeD11.setVisibility(View.VISIBLE);
-            dk11 = (int) Math.floor(Math.random() * 48);
+            dk11 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk11==dk1||dk11==dk2||dk11==dk3||dk11==dk4||dk11==dk5||
                     dk11==dk6||dk11==dk7||dk11==dk8||dk11==dk9||dk11==dk10) {
-                dk11 = (int) Math.floor(Math.random() * 48);
+                dk11 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
     }
