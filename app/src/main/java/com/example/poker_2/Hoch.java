@@ -7,6 +7,7 @@ import static com.example.poker_2.First.cifra;
 import static com.example.poker_2.First.dobitakdb;
 import static com.example.poker_2.First.duplanje;
 import static com.example.poker_2.First.duplakarta;
+import static com.example.poker_2.First.promasaj;
 import static com.example.poker_2.First.dk;
 import static com.example.poker_2.First.dk1;
 import static com.example.poker_2.First.dk2;
@@ -161,6 +162,8 @@ public class Hoch extends Activity {
                 else {
                     cifra = 0;
                     dobitakdb.setText(Integer.toString(cifra));
+                    promasaj = 1;
+                    new Kasirano();
                 }
             }
         };

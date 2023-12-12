@@ -27,8 +27,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static Button button_stop3;
     public static Button button_stop4;
     public static Button button_stop5;
-    Button button_tief;
-    Button button_hoch;
+    static Button button_tief;
+    static Button button_hoch;
     public static int c = 0;
     public static TextView c1;
     int game;
@@ -82,6 +82,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static int blokada;
     public static int duplanje;
     public static int duplakarta;
+    public static int promasaj;
     int hold;
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
@@ -819,9 +820,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-/*
-        k1=0;
 
+        k1=0;
+/*
         k2=14;
         k3=10;
         k4=3;

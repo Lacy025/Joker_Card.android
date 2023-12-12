@@ -1,9 +1,11 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.button_deal;
 import static com.example.poker_2.First.kasiranje;
 import static com.example.poker_2.First.deljenje;
 import static com.example.poker_2.First.kasirano;
 import static com.example.poker_2.First.biodobitak;
+import static com.example.poker_2.First.promasaj;
 import static com.example.poker_2.First.izbor;
 import static com.example.poker_2.First.joker;
 import static com.example.poker_2.First.card;
@@ -15,13 +17,24 @@ import android.view.View;
 public class Kasirano extends Activity {
     public static Handler handler9;
     public static Runnable runnable9;
+    int pauzad;
     Kasirano() {
+        if(promasaj == 1) {
+            pauzad = 2600;
+        }
+        else {
+            pauzad = 3600;
+        }
         handler9 = new Handler();
         runnable9 = () -> {
-                if(kasiranje == 1) {
+                if(kasiranje == 1 || promasaj == 1) {
+                    if(promasaj == 1) {
+                        button_deal.setText("DEAL CARDS");
+                    }
+                    kasiranje = 0;
+                    promasaj = 0;
                     deljenje = 0;
                     kasirano = 0;
-                    kasiranje = 0;
                     biodobitak = 0;
                     izbor = 0;
                     Jokers.handler1.removeCallbacks(Jokers.runnable1);
@@ -40,6 +53,6 @@ public class Kasirano extends Activity {
                     new Kliring();
                 }
         };
-        handler9.postDelayed(runnable9,3600);
+        handler9.postDelayed(runnable9, pauzad);
     }
 }

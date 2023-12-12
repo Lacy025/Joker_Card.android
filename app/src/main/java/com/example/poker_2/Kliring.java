@@ -78,5 +78,7 @@ public class Kliring {
         First.hoch9.setVisibility(View.INVISIBLE);
         First.hoch10.setVisibility(View.INVISIBLE);
         First.hoch11.setVisibility(View.INVISIBLE);
+        First.button_tief.setVisibility(View.INVISIBLE);
+        First.button_hoch.setVisibility(View.INVISIBLE);
     }
 }
