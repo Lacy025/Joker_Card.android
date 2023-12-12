@@ -20,7 +20,7 @@ public class Kasirano extends Activity {
     int pauzad;
     Kasirano() {
         if(promasaj == 1) {
-            pauzad = 2600;
+            pauzad = 2000;
         }
         else {
             pauzad = 3600;

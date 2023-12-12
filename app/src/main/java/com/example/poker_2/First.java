@@ -332,6 +332,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         hoch10 = findViewById(R.id.hoch_10);
         hoch11 = findViewById(R.id.hoch_11);
 
+        hoch1();
+        tief1();
+
         timer1 = new Timer();
         timer2 = new Timer();
         timer3 = new Timer();
@@ -1101,8 +1104,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         button_hoch.setVisibility(View.VISIBLE);
         count1();
         count100();
-        tief1();
-        hoch1();
         bingo();
         polje1.setVisibility(View.INVISIBLE);
         polje2.setVisibility(View.INVISIBLE);
