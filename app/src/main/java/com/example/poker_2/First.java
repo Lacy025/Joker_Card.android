@@ -364,12 +364,12 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 runOnUiThread(() -> {
                         new Handler(Looper.getMainLooper()).postDelayed(
                                 () -> {
-                                    if(c==0&&deljenje==0) {
+                                    if(c == 0 && deljenje == 0) {
                                         levodole1.setText("LACIKA BAČI");
                                         levodole1.setVisibility(View.VISIBLE);
                                         desnodole1.setVisibility(View.INVISIBLE);
                                     }
-                                    if(c>0&&deljenje==0) {
+                                    if(c > 0 && deljenje == 0) {
                                         levodole1.setVisibility(View.INVISIBLE);
                                         desnodole1.setVisibility(View.INVISIBLE);
                                         centar1.setText("CHOOSE BET");
@@ -377,7 +377,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                         button_take.setText("AUTO HOLD");
                                         button_deal.setText("DEAL CARDS");
                                     }
-                                    if(c>0&&deljenje==2) {
+                                    if(c > 0 && deljenje == 2) {
                                         centar1.setText("PICK CARDS");
                                         centar1.setVisibility(View.VISIBLE);
                                         button_take.setText("CLEAR CARDS");
@@ -389,12 +389,12 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                 }, 1000);
                         new Handler(Looper.getMainLooper()).postDelayed(
                                 () -> {
-                                    if(c==0&&deljenje==0) {
+                                    if(c == 0 && deljenje == 0) {
                                         levodole1.setVisibility(View.INVISIBLE);
                                         desnodole1.setText("SERBIA 2023");
                                         desnodole1.setVisibility(View.VISIBLE);
                                     }
-                                    if((c>0&&deljenje==0)||(c>0&&deljenje==2)) {
+                                    if((c > 0 && deljenje == 0) || (c > 0 && deljenje == 2)) {
                                         levodole1.setText("");
                                         levodole1.setVisibility(View.INVISIBLE);
                                         desnodole1.setVisibility(View.INVISIBLE);
@@ -427,7 +427,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             u = 1;
                                             Ulog();
                                         }
-                                        if(deljenje==1) {
+                                        if(deljenje == 1) {
                                             deljenje = 2;
                                             Deljenje1();
                                             pauzak = 500;
@@ -441,18 +441,18 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             pauzak = 900;
                                             new Karta5();
                                             new Dobitak1();
-                                            if(ah==1) {
+                                            if(ah == 1) {
                                                 Stop();
                                             }
                                             else {
-                                                izbor=1;
+                                                izbor = 1;
                                             }
                                         }
-                                        if(blokada==1) {
+                                        if(blokada == 1) {
                                             blokada = 0;
                                             kasa();
                                         }
-                                        if(kasirano==1) {
+                                        if(kasirano == 1) {
                                             new Kasirano();
                                         }
                                     }
@@ -467,13 +467,13 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 runOnUiThread(() -> {
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
-                                if(duplanje==1) {
+                                if(duplanje == 1) {
                                     Hoch();
                                 }
                             }, 400);
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
-                                if(duplanje==1) {
+                                if(duplanje == 1) {
                                     Tief();
                                 }
                             }, 800);
@@ -496,9 +496,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         if(id == R.id.bet) {
             if(c > 0 && deljenje==0) {
                 ulog();
-                u+=1;
+                u += 1;
                 if(u==99 || u > c) {
-                    u=1;
+                    u = 1;
                 }
                 Ulog();
             }
@@ -508,7 +508,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 if (ah == 1) {
                     ah1.setTextColor(Color.BLACK);
                     ah = 0;
-                } else {
+                }
+                else {
                     ah1.setTextColor(Color.BLUE);
                     ah = 1;
                 }
@@ -526,7 +527,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             else if(izbor == 2) {
                 kasa();
             }
-            else if (duplanje==1) {
+            else if (duplanje == 1) {
                 duplanje = 0;
                 button_tief.setVisibility(View.INVISIBLE);
                 button_hoch.setVisibility(View.INVISIBLE);
@@ -536,8 +537,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             }
         }
         if(id == R.id.deal) {
-            if((c > 0 && deljenje==0) || (c > 0 && kasirano==1)) {
-                if(kasirano==1) {
+            if((c > 0 && deljenje == 0) || (c > 0 && kasirano == 1)) {
+                if(kasirano == 1) {
                     intro();
                     Kasirano.handler9.removeCallbacks(Kasirano.runnable9);
                     kasiranje = 0;
@@ -581,8 +582,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 deljenje1();
                 deljenje();
 
-                while(k1==k2||k1==k3||k1==k4||k1==k5||k2==k3||
-                        k2==k4||k2==k5||k3==k4||k3==k5||k4==k5) {
+                while(k1 == k2 || k1 == k3 || k1 == k4 ||
+                        k1 == k5 || k2 == k3 || k2 == k4 ||
+                        k2 == k5 || k3 == k4 || k3 == k5 || k4 == k5) {
                     deljenje1();
                 }
                 deljenje = 1;
@@ -611,7 +613,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     polje1.setImageResource(R.drawable.k53);
                     polje1.setVisibility(View.VISIBLE);
                     k1 = (int) Math.floor(Math.random() * 53);
-                    while (k1==k2||k1==k3||k1==k4||k1==k5) {
+                    while (k1 == k2 || k1 == k3 || k1 == k4 || k1 == k5) {
                         k1 = (int) Math.floor(Math.random() * 53);
                     }
                     karta1();
@@ -623,7 +625,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     polje2.setImageResource(R.drawable.k53);
                     polje2.setVisibility(View.VISIBLE);
                     k2 = (int) Math.floor(Math.random() * 53);
-                    while (k2==k1||k2==k3||k2==k4||k2==k5) {
+                    while (k2 == k1 || k2 == k3 || k2 == k4 || k2 == k5) {
                         k2 = (int) Math.floor(Math.random() * 53);
                     }
                     karta2();
@@ -635,7 +637,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     polje3.setImageResource(R.drawable.k53);
                     polje3.setVisibility(View.VISIBLE);
                     k3 = (int) Math.floor(Math.random() * 53);
-                    while (k3==k1||k3==k2||k3==k4||k3==k5) {
+                    while (k3 == k1 || k3 == k2 || k3 == k4 || k3 == k5) {
                         k3 = (int) Math.floor(Math.random() * 53);
                     }
                     karta3();
@@ -647,7 +649,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     polje4.setImageResource(R.drawable.k53);
                     polje4.setVisibility(View.VISIBLE);
                     k4 = (int) Math.floor(Math.random() * 53);
-                    while (k4==k1||k4==k2||k4==k3||k4==k5) {
+                    while (k4 == k1 || k4 == k2 || k4 == k3 || k4 == k5) {
                         k4 = (int) Math.floor(Math.random() * 53);
                     }
                     karta4();
@@ -659,7 +661,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     polje5.setImageResource(R.drawable.k53);
                     polje5.setVisibility(View.VISIBLE);
                     k5 = (int) Math.floor(Math.random() * 53);
-                    while (k5==k1||k5==k2||k5==k3||k5==k4) {
+                    while (k5 == k1 || k5 == k2 || k5 == k3 || k5 == k4) {
                         k5 = (int) Math.floor(Math.random() * 53);
                     }
                     karta5();
@@ -699,7 +701,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             }
         }
         if(id == R.id.double_tief) {
-            if(duplanje==1) {
+            if(duplanje == 1) {
                 duplanje = 0;
                 tief.setVisibility(View.INVISIBLE);
                 hoch.setVisibility(View.INVISIBLE);
@@ -711,7 +713,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             }
         }
         if(id == R.id.double_hoch) {
-            if(duplanje==1) {
+            if(duplanje == 1) {
                 duplanje = 0;
                 tief.setVisibility(View.INVISIBLE);
                 hoch.setVisibility(View.INVISIBLE);
@@ -732,7 +734,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiointro = MediaPlayer.create(this, R.raw.intro);
     }
     void kredit() {
-        if (c==0 && game==0) {
+        if (c == 0 && game == 0) {
             game = 1;
             if(audiointro != null) {
                 audiointro.reset();
@@ -820,9 +822,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-
-        k1=0;
 /*
+        k1=0;
+
         k2=14;
         k3=10;
         k4=3;
@@ -1133,75 +1135,79 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         if(duplakarta == 2) {
             poljeD2.setVisibility(View.VISIBLE);
             dk2 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk2==dk1) {
+            while(dk2 == dk1) {
                 dk2 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 3) {
             poljeD3.setVisibility(View.VISIBLE);
             dk3 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk3==dk1||dk3==dk2) {
+            while(dk3 == dk1 || dk3 == dk2) {
                 dk3 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 4) {
             poljeD4.setVisibility(View.VISIBLE);
             dk4 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk4==dk1||dk4==dk2||dk4==dk3) {
+            while(dk4 == dk1 || dk4 == dk2 || dk4 == dk3) {
                 dk4 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 5) {
             poljeD5.setVisibility(View.VISIBLE);
             dk5 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk5==dk1||dk5==dk2||dk5==dk3||dk5==dk4) {
+            while(dk5 == dk1 || dk5 == dk2 ||
+                    dk5 == dk3 || dk5 == dk4) {
                 dk5 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 6) {
             poljeD6.setVisibility(View.VISIBLE);
             dk6 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk6==dk1||dk6==dk2||dk6==dk3||dk6==dk4||dk6==dk5) {
+            while(dk6 == dk1 || dk6 == dk2 || dk6 == dk3 ||
+                    dk6 == dk4 || dk6 == dk5) {
                 dk6 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 7) {
             poljeD7.setVisibility(View.VISIBLE);
             dk7 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk7==dk1||dk7==dk2||dk7==dk3||dk7==dk4||dk7==dk5||
-                    dk7==dk6) {
+            while(dk7 == dk1 || dk7 == dk2 || dk7 == dk3 ||
+                    dk7 == dk4 || dk7 == dk5|| dk7 == dk6) {
                 dk7 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 8) {
             poljeD8.setVisibility(View.VISIBLE);
             dk8 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk8==dk1||dk8==dk2||dk8==dk3||dk8==dk4||dk8==dk5||
-                    dk8==dk6||dk8==dk7) {
+            while(dk8 == dk1 || dk8 == dk2 || dk8 == dk3 || dk8 == dk4 ||
+                    dk8 == dk5 || dk8 == dk6 || dk8 == dk7) {
                 dk8 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 9) {
             poljeD9.setVisibility(View.VISIBLE);
             dk9 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk9==dk1||dk9==dk2||dk9==dk3||dk9==dk4||dk9==dk5||
-                    dk9==dk6||dk9==dk7||dk9==dk8) {
+            while(dk9 == dk1 || dk9 == dk2 || dk9 == dk3 || dk9 == dk4 ||
+                    dk9 == dk5 || dk9 == dk6 || dk9 == dk7 || dk9 == dk8) {
                 dk9 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 10) {
             poljeD10.setVisibility(View.VISIBLE);
             dk10 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk10==dk1||dk10==dk2||dk10==dk3||dk10==dk4||dk10==dk5||
-                    dk10==dk6||dk10==dk7||dk10==dk8||dk10==dk9) {
+            while(dk10 == dk1 || dk10 == dk2 || dk10 == dk3 ||
+                    dk10 == dk4 || dk10 == dk5 || dk10 == dk6 ||
+                    dk10 == dk7 || dk10 == dk8 || dk10 == dk9) {
                 dk10 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }
         if(duplakarta == 11) {
             poljeD11.setVisibility(View.VISIBLE);
             dk11 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk11==dk1||dk11==dk2||dk11==dk3||dk11==dk4||dk11==dk5||
-                    dk11==dk6||dk11==dk7||dk11==dk8||dk11==dk9||dk11==dk10) {
+            while(dk11 == dk1 || dk11 == dk2 || dk11 == dk3 || dk11 == dk4 ||
+                    dk11 == dk5 || dk11 == dk6|| dk11 == dk7 || dk11 == dk8 ||
+                    dk11 == dk9 || dk11 == dk10) {
                 dk11 = (int) Math.floor(Math.random() * 48) + 1;
             }
         }

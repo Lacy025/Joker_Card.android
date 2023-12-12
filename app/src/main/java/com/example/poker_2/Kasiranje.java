@@ -30,7 +30,7 @@ public class Kasiranje extends Activity {
         centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
 
-        if(cifra>9999) {
+        if(cifra > 9999) {
             izbor = 3;
             try {
                 Thread.sleep(3000);
@@ -38,7 +38,7 @@ public class Kasiranje extends Activity {
                 throw new RuntimeException(e);
             }
         }
-        else{
+        else {
             audiodobitnik.reset();
             audiodobitnik.release();
             audiodobitnik = null;
@@ -91,9 +91,9 @@ public class Kasiranje extends Activity {
         handler10.post(runnable10);
     }
     void minusjedan() {
-        c +=1;
+        c += 1;
         c1.setText(Integer.toString(First.c));
-        cifra -=1;
+        cifra -= 1;
         dobitakdb.setText(Integer.toString(cifra));
         audiocount1.start();
         if(cifra == 0) {
@@ -102,9 +102,9 @@ public class Kasiranje extends Activity {
         }
     }
     void minussto() {
-        c +=100;
+        c += 100;
         c1.setText(Integer.toString(First.c));
-        cifra -=100;
+        cifra -= 100;
         dobitakdb.setText(Integer.toString(cifra));
         audiocount100.start();
         if(cifra == 0) {

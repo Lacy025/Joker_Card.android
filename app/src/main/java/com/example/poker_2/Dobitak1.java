@@ -1410,7 +1410,11 @@ public class Dobitak1 extends Activity {
                     rucno10.setVisibility(View.VISIBLE);
                 }
                 if(ah==0) {
-                    hold1=0;hold2=0;hold3=0;hold4=0;hold5=0;
+                    hold1=0;
+                    hold2=0;
+                    hold3=0;
+                    hold4=0;
+                    hold5=0;
                 }
                 stop = 1;
             }
@@ -1420,14 +1424,18 @@ public class Dobitak1 extends Activity {
     void ProveraBoje1() {
 
         prvidobitak++;
-        hold1=1;hold2=1;hold3=1;hold4=1;hold5=1;
+        hold1=1;
+        hold2=1;
+        hold3=1;
+        hold4=1;
+        hold5=1;
 
-        if (((b1==b2)&&(b2==b3)&&(b3==b4)&&(n5==0)) ||
-                ((b1==b2)&&(b2==b3)&&(n4==0)&&(b3==b5)) ||
-                ((b1==b2)&&(n3==0)&&(b2==b4)&&(b4==b5)) ||
-                ((b1==b3)&&(n2==0)&&(b3==b4)&&(b4==b5)) ||
-                ((n1==0)&&(b2==b3)&&(b3==b4)&&(b4==b5)) ||
-                (b1==b2)&&(b2==b3)&&(b3==b4)&&(b4==b5)) {
+        if (((b1 == b2) && (b2 == b3) && (b3 == b4) && (n5 == 0)) ||
+                ((b1 == b2) && (b2 == b3) && (n4 == 0) && (b3 == b5)) ||
+                ((b1 == b2) && (n3 == 0) && (b2 == b4) && (b4 == b5)) ||
+                ((b1 == b3) && (n2 == 0) && (b3 == b4) && (b4 == b5)) ||
+                ((n1 == 0) && (b2 == b3) && (b3 == b4) && (b4 == b5)) ||
+                (b1 == b2) && (b2 == b3) && (b3 == b4) && (b4 == b5)) {
 
             Royalflush = 1;
         }
@@ -1438,14 +1446,18 @@ public class Dobitak1 extends Activity {
     void ProveraBoje2() {
 
         prvidobitak++;
-        hold1=1;hold2=1;hold3=1;hold4=1;hold5=1;
+        hold1=1;
+        hold2=1;
+        hold3=1;
+        hold4=1;
+        hold5=1;
 
-        if (((b1==b2)&&(b2==b3)&&(b3==b4)&&(n5==0)) ||
-                ((b1==b2)&&(b2==b3)&&(n4==0)&&(b3==b5)) ||
-                ((b1==b2)&&(n3==0)&&(b2==b4)&&(b4==b5)) ||
-                ((b1==b3)&&(n2==0)&&(b3==b4)&&(b4==b5)) ||
-                ((n1==0)&&(b2==b3)&&(b3==b4)&&(b4==b5)) ||
-                (b1==b2)&&(b2==b3)&&(b3==b4)&&(b4==b5)) {
+        if (((b1 == b2) && (b2 == b3) && (b3 == b4) && (n5 == 0)) ||
+                ((b1 == b2) && (b2 == b3) && (n4 == 0) && (b3 == b5)) ||
+                ((b1 == b2) && (n3 == 0) && (b2 == b4) && (b4 == b5)) ||
+                ((b1 == b3) && (n2 == 0) && (b3 == b4) && (b4 == b5)) ||
+                ((n1 == 0) && (b2 == b3) && (b3 == b4) && (b4 == b5)) ||
+                (b1 == b2) && (b2 == b3) && (b3 == b4) && (b4 == b5)) {
 
             Streetflush = 1;
         }
@@ -1455,11 +1467,18 @@ public class Dobitak1 extends Activity {
     }
     void DveIste() {
 
-        if(n5==n4||n5==n3||n5==n2||n5==n1) {hold5=0;}
-        if(n4==n3||n4==n2||n4==n1) {hold4=0;}
-        if(n3==n2||n3==n1) {hold3=0;}
-        if(n2==n1) {hold2=0;}
-
+        if(n5 == n4 || n5 == n3 || n5 == n2 || n5 == n1) {
+            hold5=0;
+        }
+        if(n4 == n3 || n4 == n2 || n4 == n1) {
+            hold4=0;
+        }
+        if(n3 == n2 || n3 == n1) {
+            hold3=0;
+        }
+        if(n2 == n1) {
+            hold2=0;
+        }
         HALFSTREET = 1;
     }
 }

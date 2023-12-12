@@ -84,7 +84,6 @@ public class Dobitak2 extends Activity {
     int STRFL9;
     Dobitak2() {
         ponistavanje2();
-
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -824,14 +823,15 @@ public class Dobitak2 extends Activity {
                     button_stop5.setVisibility(View.INVISIBLE);
 
                     izbor = 2;
-                    if(cifra>9999) {
+                    if(cifra > 9999) {
                         blokada = 1;
                         centar2.setText("YOU WIN !");
                         centar2.setVisibility(View.VISIBLE);
                         button_take.setText("WIN !");
                         button_deal.setText("WIN !");
                     }
-                } else {
+                }
+                else {
                     button_take.setText("AUTO HOLD");
                     try {
                         Thread.sleep(1000);
@@ -866,12 +866,12 @@ public class Dobitak2 extends Activity {
 
         biodobitak++;
 
-        if (((b1==b2)&&(b2==b3)&&(b3==b4)&&(n5==0)) ||
-                ((b1==b2)&&(b2==b3)&&(n4==0)&&(b3==b5)) ||
-                ((b1==b2)&&(n3==0)&&(b2==b4)&&(b4==b5)) ||
-                ((b1==b3)&&(n2==0)&&(b3==b4)&&(b4==b5)) ||
-                ((n1==0)&&(b2==b3)&&(b3==b4)&&(b4==b5)) ||
-                (b1==b2)&&(b2==b3)&&(b3==b4)&&(b4==b5)) {
+        if (((b1 == b2) && (b2 == b3) && (b3 == b4) && (n5 == 0)) ||
+                ((b1 == b2) && (b2 == b3) && (n4 == 0) && (b3 == b5)) ||
+                ((b1 == b2) && (n3 == 0) && (b2 == b4) && (b4 == b5)) ||
+                ((b1 == b3) && (n2 == 0) && (b3 == b4) && (b4 == b5)) ||
+                ((n1 == 0) && (b2 == b3) && (b3 == b4) && (b4 == b5)) ||
+                (b1 == b2) && (b2 == b3) && (b3 == b4) && (b4 == b5)) {
 
             Royalflush = 1;
         }
@@ -883,12 +883,12 @@ public class Dobitak2 extends Activity {
 
         biodobitak++;
 
-        if (((b1==b2)&&(b2==b3)&&(b3==b4)&&(n5==0)) ||
-                ((b1==b2)&&(b2==b3)&&(n4==0)&&(b3==b5)) ||
-                ((b1==b2)&&(n3==0)&&(b2==b4)&&(b4==b5)) ||
-                ((b1==b3)&&(n2==0)&&(b3==b4)&&(b4==b5)) ||
-                ((n1==0)&&(b2==b3)&&(b3==b4)&&(b4==b5)) ||
-                (b1==b2)&&(b2==b3)&&(b3==b4)&&(b4==b5)) {
+        if (((b1 == b2) && (b2 == b3) && (b3 == b4) && (n5 == 0)) ||
+                ((b1 == b2) && (b2 == b3) && (n4 == 0) && (b3 == b5)) ||
+                ((b1 == b2) && (n3 == 0) && (b2 == b4) && (b4 == b5)) ||
+                ((b1 == b3) && (n2 == 0) && (b3 == b4) && (b4 == b5)) ||
+                ((n1 == 0) && (b2 == b3) && (b3 == b4) && (b4 == b5)) ||
+                (b1 == b2) && (b2 == b3) && (b3 == b4) && (b4 == b5)) {
 
             Streetflush = 1;
         }
