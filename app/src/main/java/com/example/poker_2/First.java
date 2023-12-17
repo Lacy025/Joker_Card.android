@@ -1216,14 +1216,14 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             audiotief.reset();
             audiotief = null;
         }
-        audiotief = MediaPlayer.create(this, R.raw.tief1);
+        audiotief = MediaPlayer.create(this, R.raw.tief);
     }
     void Hoch() {
         if(audiohoch != null) {
             audiohoch.reset();
             audiohoch = null;
         }
-        audiohoch = MediaPlayer.create(this, R.raw.hoch1);
+        audiohoch = MediaPlayer.create(this, R.raw.hoch);
     }
     public static void Bingo() {
         handler0.removeCallbacks(runnable0);
