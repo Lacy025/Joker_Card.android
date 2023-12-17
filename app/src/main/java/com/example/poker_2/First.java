@@ -805,9 +805,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-
-        k1=0;
 /*
+        k1=0;
+
         k2=1;
         k3=10;
         k4=13;
@@ -1240,7 +1240,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     static void Cheating() {
         /*
-         */
+
         if(cheat < 25) {
             button_stop1.setVisibility(View.VISIBLE);
             button_stop5.setVisibility(View.INVISIBLE);
@@ -1249,7 +1249,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             button_stop5.setVisibility(View.VISIBLE);
             button_stop1.setVisibility(View.INVISIBLE);
         }
-
+*/
         if(cifra > 9999) {
             Blokada();
         }
