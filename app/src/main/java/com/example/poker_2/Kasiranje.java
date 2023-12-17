@@ -4,10 +4,13 @@ import static com.example.poker_2.First.audiocount1;
 import static com.example.poker_2.First.audiocount100;
 import static com.example.poker_2.First.audiodobitnik;
 import static com.example.poker_2.First.audiointro;
+import static com.example.poker_2.First.biodobitak;
+import static com.example.poker_2.First.blokada;
 import static com.example.poker_2.First.button_deal;
 import static com.example.poker_2.First.button_take;
 import static com.example.poker_2.First.centar2;
 import static com.example.poker_2.First.cifra;
+import static com.example.poker_2.First.duplanje;
 import static com.example.poker_2.First.izbor;
 import static com.example.poker_2.First.kasirano;
 import static com.example.poker_2.First.dobitakdb;
@@ -30,8 +33,7 @@ public class Kasiranje extends Activity {
         centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
 
-        if(cifra > 9999 && izbor == 2) {
-            izbor = 3;
+        if(cifra > 9999 && duplanje == 0) {
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
@@ -43,6 +45,7 @@ public class Kasiranje extends Activity {
             audiodobitnik.release();
             audiodobitnik = null;
         }
+        duplanje = 0;
 
         handler9 = new Handler();
         runnable9 = new Runnable() {

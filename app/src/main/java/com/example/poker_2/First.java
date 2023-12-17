@@ -808,10 +808,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
 
         k1=0;
 /*
-        k2=14;
+        k2=1;
         k3=10;
-        k4=3;
-        k5=18;
+        k4=13;
+        k5=12;
+
 */
     }
     void Deljenje1() {
@@ -886,7 +887,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void karta12345() {
         if (audiokarta12345 != null) {
             audiokarta12345.reset();
-            //audiokarta12345.release();
+            audiokarta12345.release();
             audiokarta12345 = null;
         }
         audiokarta12345 = MediaPlayer.create(this, R.raw.karte12345);
@@ -950,7 +951,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void ponistavanje1() {
         if (audioponistavanje != null) {
             audioponistavanje.reset();
-            //audioponistavanje.release();
+            audioponistavanje.release();
             audioponistavanje = null;
         }
         audioponistavanje = MediaPlayer.create(this, R.raw.ponistavanje);
@@ -966,7 +967,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void deljenje2() {
         if (audiodeljenje2 != null) {
             audiodeljenje2.reset();
-            //audiodeljenje2.release();
+            audiodeljenje2.release();
             audiodeljenje2 = null;
         }
         audiodeljenje2 = MediaPlayer.create(this, R.raw.deljenje2);
@@ -975,7 +976,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void karta1() {
         if (audiokarta1 != null) {
             audiokarta1.reset();
-            //audiokarta1.release();
+            audiokarta1.release();
             audiokarta1 = null;
         }
         audiokarta1 = MediaPlayer.create(this, R.raw.karta1);
@@ -983,7 +984,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void karta2() {
         if (audiokarta2 != null) {
             audiokarta2.reset();
-            //audiokarta2.release();
+            audiokarta2.release();
             audiokarta2 = null;
         }
         audiokarta2 = MediaPlayer.create(this, R.raw.karta2);
@@ -991,7 +992,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void karta3() {
         if (audiokarta3 != null) {
             audiokarta3.reset();
-            //audiokarta3.release();
+            audiokarta3.release();
             audiokarta3 = null;
         }
         audiokarta3 = MediaPlayer.create(this, R.raw.karta3);
@@ -999,7 +1000,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void karta4() {
         if (audiokarta4 != null) {
             audiokarta4.reset();
-            //audiokarta4.release();
+            audiokarta4.release();
             audiokarta4 = null;
         }
         audiokarta4 = MediaPlayer.create(this, R.raw.karta4);
@@ -1007,7 +1008,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void karta5() {
         if (audiokarta5 != null) {
             audiokarta5.reset();
-            //audiokarta5.release();
+            audiokarta5.release();
             audiokarta5 = null;
         }
         audiokarta5 = MediaPlayer.create(this, R.raw.karta5);
@@ -1015,7 +1016,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void dobitnik() {
         if (audiodobitnik != null) {
             audiodobitnik.reset();
-            //audiodobitnik.release();
+            audiodobitnik.release();
             audiodobitnik = null;
         }
         audiodobitnik = MediaPlayer.create(this, R.raw.dobitnik);
@@ -1024,7 +1025,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void count1() {
         if (audiocount1 != null) {
             audiocount1.reset();
-            //audiocount1.release();
+            audiocount1.release();
             audiocount1 = null;
         }
         audiocount1 = MediaPlayer.create(this,R.raw.isplata1);
@@ -1032,7 +1033,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void count100() {
         if (audiocount100 != null) {
             audiocount100.reset();
-            //audiocount100.release();
+            audiocount100.release();
             audiocount100 = null;
         }
         audiocount100 = MediaPlayer.create(this, R.raw.isplata100);
@@ -1040,8 +1041,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void bingo() {
         if (audiobingo != null) {
             audiobingo .reset();
+            audiobingo.release();
             audiobingo  = null;
         }
+        Hoch();
+        Tief();
         audiobingo  = MediaPlayer.create(this, R.raw.bingo);
     }
     void Kasa() {
@@ -1073,8 +1077,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         count1();
         count100();
         bingo();
-        Hoch();
-        Tief();
         polje1.setVisibility(View.INVISIBLE);
         polje2.setVisibility(View.INVISIBLE);
         polje3.setVisibility(View.INVISIBLE);
@@ -1214,6 +1216,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void Tief() {
         if(audiotief != null) {
             audiotief.reset();
+            audiotief.release();
             audiotief = null;
         }
         audiotief = MediaPlayer.create(this, R.raw.tief);
@@ -1221,6 +1224,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void Hoch() {
         if(audiohoch != null) {
             audiohoch.reset();
+            audiohoch.release();
             audiohoch = null;
         }
         audiohoch = MediaPlayer.create(this, R.raw.hoch);
@@ -1279,7 +1283,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     static void Blokada() {
         izbor = 3;
-        duplanje = 0;
+        duplanje = 1;
         biodobitak = 0;
         kasiranje = 1;
         try {
