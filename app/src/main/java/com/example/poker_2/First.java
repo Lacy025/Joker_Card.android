@@ -83,6 +83,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     public static int duplanje;
     public static int duplakarta;
     public static int promasaj;
+    static int pauzad;
+    static int cheat;
     int hold;
     MediaPlayer audiokredit;
     MediaPlayer audioulog;
@@ -195,8 +197,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     TimerTask task2;
     Timer timer3;
     TimerTask task3;
-    Timer timer4;
-    TimerTask task4;
+    static Handler handler0;
+    static Runnable runnable0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -332,16 +334,13 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         hoch10 = findViewById(R.id.hoch_10);
         hoch11 = findViewById(R.id.hoch_11);
 
-        hoch1();
-        tief1();
-
         timer1 = new Timer();
         timer2 = new Timer();
         timer3 = new Timer();
-        timer4 = new Timer();
 
         intro();
         audiointro.start();
+        Ulog();
         new Jokers();
         timer1.schedule(task1 = new TimerTask() {
             @Override
@@ -365,50 +364,50 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void run() {
                 runOnUiThread(() -> {
-                        new Handler(Looper.getMainLooper()).postDelayed(
-                                () -> {
-                                    if(c == 0 && deljenje == 0) {
-                                        levodole1.setText("LACIKA BAČI");
-                                        levodole1.setVisibility(View.VISIBLE);
-                                        desnodole1.setVisibility(View.INVISIBLE);
-                                    }
-                                    if(c > 0 && deljenje == 0) {
-                                        levodole1.setVisibility(View.INVISIBLE);
-                                        desnodole1.setVisibility(View.INVISIBLE);
-                                        centar1.setText("CHOOSE BET");
-                                        centar1.setVisibility(View.VISIBLE);
-                                        button_take.setText("AUTO HOLD");
-                                        button_deal.setText("DEAL CARDS");
-                                    }
-                                    if(c > 0 && deljenje == 2) {
-                                        centar1.setText("PICK CARDS");
-                                        centar1.setVisibility(View.VISIBLE);
-                                        button_take.setText("CLEAR CARDS");
-                                    }
-                                    if(biodobitak == 1) {
-                                        levodole2.setVisibility(View.VISIBLE);
-                                        desnodole2.setVisibility(View.INVISIBLE);
-                                    }
-                                }, 1000);
-                        new Handler(Looper.getMainLooper()).postDelayed(
-                                () -> {
-                                    if(c == 0 && deljenje == 0) {
-                                        levodole1.setVisibility(View.INVISIBLE);
-                                        desnodole1.setText("SERBIA 2023");
-                                        desnodole1.setVisibility(View.VISIBLE);
-                                    }
-                                    if((c > 0 && deljenje == 0) || (c > 0 && deljenje == 2)) {
-                                        levodole1.setText("");
-                                        levodole1.setVisibility(View.INVISIBLE);
-                                        desnodole1.setVisibility(View.INVISIBLE);
-                                        centar1.setText("PRESS DEAL CARDS");
-                                        centar1.setVisibility(View.VISIBLE);
-                                    }
-                                    if(biodobitak == 1) {
-                                        levodole2.setVisibility(View.INVISIBLE);
-                                        desnodole2.setVisibility(View.VISIBLE);
-                                    }
-                                }, 2000);
+                    new Handler(Looper.getMainLooper()).postDelayed(
+                            () -> {
+                                if(c == 0 && deljenje == 0) {
+                                    levodole1.setText("LACIKA BAČI");
+                                    levodole1.setVisibility(View.VISIBLE);
+                                    desnodole1.setVisibility(View.INVISIBLE);
+                                }
+                                if(c > 0 && deljenje == 0) {
+                                    levodole1.setVisibility(View.INVISIBLE);
+                                    desnodole1.setVisibility(View.INVISIBLE);
+                                    centar1.setText("CHOOSE BET");
+                                    centar1.setVisibility(View.VISIBLE);
+                                    button_take.setText("AUTO HOLD");
+                                    button_deal.setText("DEAL CARDS");
+                                }
+                                if(c > 0 && deljenje == 2) {
+                                    centar1.setText("PICK CARDS");
+                                    centar1.setVisibility(View.VISIBLE);
+                                    button_take.setText("CLEAR CARDS");
+                                }
+                                if(biodobitak == 1) {
+                                    levodole2.setVisibility(View.VISIBLE);
+                                    desnodole2.setVisibility(View.INVISIBLE);
+                                }
+                            }, 1000);
+                    new Handler(Looper.getMainLooper()).postDelayed(
+                            () -> {
+                                if(c == 0 && deljenje == 0) {
+                                    levodole1.setVisibility(View.INVISIBLE);
+                                    desnodole1.setText("SERBIA 2023");
+                                    desnodole1.setVisibility(View.VISIBLE);
+                                }
+                                if((c > 0 && deljenje == 0) || (c > 0 && deljenje == 2)) {
+                                    levodole1.setText("");
+                                    levodole1.setVisibility(View.INVISIBLE);
+                                    desnodole1.setVisibility(View.INVISIBLE);
+                                    centar1.setText("PRESS DEAL CARDS");
+                                    centar1.setVisibility(View.VISIBLE);
+                                }
+                                if(biodobitak == 1) {
+                                    levodole2.setVisibility(View.INVISIBLE);
+                                    desnodole2.setVisibility(View.VISIBLE);
+                                }
+                            }, 2000);
                 });
             }
         }, 0, 2000);
@@ -453,7 +452,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                         }
                                         if(blokada == 1) {
                                             blokada = 0;
-                                            kasa();
+                                            Kasa();
                                         }
                                         if(kasirano == 1) {
                                             new Kasirano();
@@ -464,38 +463,19 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 });
             }
         }, 0, 100);
-        timer4.schedule(task4 = new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(() -> {
-                    new Handler(Looper.getMainLooper()).postDelayed(
-                            () -> {
-                                if(duplanje == 1) {
-                                    Hoch();
-                                }
-                            }, 400);
-                    new Handler(Looper.getMainLooper()).postDelayed(
-                            () -> {
-                                if(duplanje == 1) {
-                                    Tief();
-                                }
-                            }, 800);
-                });
-            }
-        }, 0, 800);
     }
     @Override
     public void onClick(View view) {
         int id = view.getId();
-            if(id == R.id.credit) {
-                if (c < 4901 && deljenje == 0) {
-                    intro();
-                    kredit();
-                    game = 1;
-                    c += 100;
-                    c1.setText(Integer.toString(c));
-                }
+        if(id == R.id.credit) {
+            if (c < 4901 && deljenje == 0) {
+                intro();
+                kredit();
+                game = 1;
+                c += 100;
+                c1.setText(Integer.toString(c));
             }
+        }
         if(id == R.id.bet) {
             if(c > 0 && deljenje==0) {
                 ulog();
@@ -528,7 +508,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 Dobitak1.hold5 = 0;
             }
             else if(izbor == 2) {
-                kasa();
+                Kasa();
             }
             else if (duplanje == 1) {
                 duplanje = 0;
@@ -536,7 +516,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 button_hoch.setVisibility(View.INVISIBLE);
                 tief.setVisibility(View.INVISIBLE);
                 hoch.setVisibility(View.INVISIBLE);
-                kasa();
+                Kasa();
             }
         }
         if(id == R.id.deal) {
@@ -746,9 +726,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             }
         }
         if (audiokredit != null) {
-                audiokredit.reset();
-                audiokredit.release();
-                audiokredit = null;
+            audiokredit.reset();
+            audiokredit.release();
+            audiokredit = null;
 
         }
         audiokredit = MediaPlayer.create(this, R.raw.kredit);
@@ -793,9 +773,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     void ulog() {
         if (audioulog != null) {
-                audioulog.reset();
-                audioulog.release();
-                audioulog = null;
+            audioulog.reset();
+            audioulog.release();
+            audioulog = null;
         }
         audioulog = MediaPlayer.create(this, R.raw.ulog);
         audioulog.start();
@@ -825,9 +805,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-/*
-        k1=0;
 
+        k1=0;
+/*
         k2=14;
         k3=10;
         k4=3;
@@ -1057,20 +1037,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         }
         audiocount100 = MediaPlayer.create(this, R.raw.isplata100);
     }
-    void tief1() {
-        if (audiotief != null) {
-            audiotief.reset();
-            audiotief = null;
-        }
-        audiotief = MediaPlayer.create(this, R.raw.tief1);
-    }
-    void hoch1() {
-        if (audiohoch != null) {
-            audiohoch.reset();
-            audiohoch = null;
-        }
-        audiohoch = MediaPlayer.create(this, R.raw.hoch1);
-    }
     void bingo() {
         if (audiobingo != null) {
             audiobingo .reset();
@@ -1078,7 +1044,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         }
         audiobingo  = MediaPlayer.create(this, R.raw.bingo);
     }
-    void kasa() {
+    void Kasa() {
         izbor = 3;
         biodobitak = 0;
         levodole2.setVisibility(View.INVISIBLE);
@@ -1096,15 +1062,19 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     void duplanje() {
         izbor = 3;
         biodobitak = 0;
+        pauzad = 400;
         levodole2.setVisibility(View.INVISIBLE);
         desnodole2.setVisibility(View.INVISIBLE);
         button_take.setText("TAKE ALL");
         button_deal.setText("TAKE HALF");
         button_tief.setVisibility(View.VISIBLE);
         button_hoch.setVisibility(View.VISIBLE);
+        intro();
         count1();
         count100();
         bingo();
+        Hoch();
+        Tief();
         polje1.setVisibility(View.INVISIBLE);
         polje2.setVisibility(View.INVISIBLE);
         polje3.setVisibility(View.INVISIBLE);
@@ -1123,6 +1093,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         poljeD11.setImageResource(R.drawable.k53);
         poljeD12.setImageResource(R.drawable.k53);
         audiodobitnik.stop();
+        pauzad = 400;
         duplanje = 1;
         duplakarta = 1;
         dk = 0;
@@ -1132,6 +1103,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         if(duplakarta == 1) {
             poljeD1.setVisibility(View.VISIBLE);
             dk1 = (int) Math.floor(Math.random() * 48) + 1;
+            cheat = dk1;
+            Cheating();
         }
         if(duplakarta == 2) {
             poljeD2.setVisibility(View.VISIBLE);
@@ -1139,6 +1112,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             while(dk2 == dk1) {
                 dk2 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk2;
+            Cheating();
         }
         if(duplakarta == 3) {
             poljeD3.setVisibility(View.VISIBLE);
@@ -1146,6 +1121,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             while(dk3 == dk1 || dk3 == dk2) {
                 dk3 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk3;
+            Cheating();
         }
         if(duplakarta == 4) {
             poljeD4.setVisibility(View.VISIBLE);
@@ -1153,6 +1130,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             while(dk4 == dk1 || dk4 == dk2 || dk4 == dk3) {
                 dk4 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk4;
+            Cheating();
         }
         if(duplakarta == 5) {
             poljeD5.setVisibility(View.VISIBLE);
@@ -1161,6 +1140,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     dk5 == dk3 || dk5 == dk4) {
                 dk5 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk5;
+            Cheating();
         }
         if(duplakarta == 6) {
             poljeD6.setVisibility(View.VISIBLE);
@@ -1169,6 +1150,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     dk6 == dk4 || dk6 == dk5) {
                 dk6 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk6;
+            Cheating();
         }
         if(duplakarta == 7) {
             poljeD7.setVisibility(View.VISIBLE);
@@ -1177,6 +1160,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     dk7 == dk4 || dk7 == dk5|| dk7 == dk6) {
                 dk7 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk7;
+            Cheating();
         }
         if(duplakarta == 8) {
             poljeD8.setVisibility(View.VISIBLE);
@@ -1185,6 +1170,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     dk8 == dk5 || dk8 == dk6 || dk8 == dk7) {
                 dk8 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk8;
+            Cheating();
         }
         if(duplakarta == 9) {
             poljeD9.setVisibility(View.VISIBLE);
@@ -1193,6 +1180,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     dk9 == dk5 || dk9 == dk6 || dk9 == dk7 || dk9 == dk8) {
                 dk9 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk9;
+            Cheating();
         }
         if(duplakarta == 10) {
             poljeD10.setVisibility(View.VISIBLE);
@@ -1202,6 +1191,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     dk10 == dk7 || dk10 == dk8 || dk10 == dk9) {
                 dk10 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk10;
+            Cheating();
         }
         if(duplakarta == 11) {
             poljeD11.setVisibility(View.VISIBLE);
@@ -1211,16 +1202,90 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     dk11 == dk9 || dk11 == dk10) {
                 dk11 = (int) Math.floor(Math.random() * 48) + 1;
             }
+            cheat = dk11;
+            Cheating();
+        }
+        if(duplakarta == 12) {
+            handler0.removeCallbacks(runnable0);
+            poljeD12.setVisibility(View.VISIBLE);
+            Blokada();
         }
     }
     void Tief() {
-        audiotief.start();
-        hoch.setVisibility(View.INVISIBLE);
-        tief.setVisibility(View.VISIBLE);
+        if(audiotief != null) {
+            audiotief.reset();
+            audiotief = null;
+        }
+        audiotief = MediaPlayer.create(this, R.raw.tief1);
     }
     void Hoch() {
-        audiohoch.start();
-        tief.setVisibility(View.INVISIBLE);
-        hoch.setVisibility(View.VISIBLE);
+        if(audiohoch != null) {
+            audiohoch.reset();
+            audiohoch = null;
+        }
+        audiohoch = MediaPlayer.create(this, R.raw.hoch1);
+    }
+    public static void Bingo() {
+        handler0.removeCallbacks(runnable0);
+        cifra *= 2;
+        dobitakdb.setText(Integer.toString(cifra));
+        centar2.setText("YOU WIN !");
+        centar2.setVisibility(View.VISIBLE);
+        audiobingo.start();
+        pauzad -=25;
+    }
+    static void Cheating() {
+        /*
+         */
+        if(cheat < 25) {
+            button_stop1.setVisibility(View.VISIBLE);
+            button_stop5.setVisibility(View.INVISIBLE);
+        }
+        else {
+            button_stop5.setVisibility(View.VISIBLE);
+            button_stop1.setVisibility(View.INVISIBLE);
+        }
+
+        if(cifra > 9999) {
+            Blokada();
+        }
+        else {
+            final int[] HochTief = {1};
+
+            handler0 = new Handler();
+            runnable0 = new Runnable() {
+                @Override
+                public void run() {
+                    if(duplanje == 1) {
+                        if(HochTief[0] == 1) {
+                            audiohoch.start();
+                            tief.setVisibility(View.INVISIBLE);
+                            hoch.setVisibility(View.VISIBLE);
+                            HochTief[0] = 2;
+
+                        }
+                        else {
+                            audiotief.start();
+                            hoch.setVisibility(View.INVISIBLE);
+                            tief.setVisibility(View.VISIBLE);
+                            HochTief[0] = 1;
+                        }
+                        handler0.postDelayed(this, pauzad);
+                    }
+                }
+            };
+            handler0.post(runnable0);
+        }
+    }
+    static void Blokada() {
+        izbor = 3;
+        duplanje = 0;
+        biodobitak = 0;
+        kasiranje = 1;
+        try {
+            new Kasiranje();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

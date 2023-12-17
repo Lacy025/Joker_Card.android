@@ -1,5 +1,7 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.button_stop1;
+import static com.example.poker_2.First.button_stop5;
 import static com.example.poker_2.First.duplakarta;
 import static com.example.poker_2.First.dk1;
 import static com.example.poker_2.First.dk2;

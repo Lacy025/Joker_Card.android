@@ -30,7 +30,7 @@ public class Kasiranje extends Activity {
         centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
 
-        if(cifra > 9999) {
+        if(cifra > 9999 && izbor == 2) {
             izbor = 3;
             try {
                 Thread.sleep(3000);

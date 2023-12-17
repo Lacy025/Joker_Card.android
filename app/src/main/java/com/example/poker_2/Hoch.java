@@ -1,7 +1,7 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.Bingo;
 import static com.example.poker_2.First.Duplanje;
-import static com.example.poker_2.First.audiobingo;
 import static com.example.poker_2.First.centar2;
 import static com.example.poker_2.First.cifra;
 import static com.example.poker_2.First.dobitakdb;
@@ -141,7 +141,7 @@ public class Hoch extends Activity {
         new Duplakarta();
 
         if (dk > 24) {
-            hochbingo();
+            Bingo();
         }
         handler12 = new Handler();
         runnable12 = new Runnable() {
@@ -168,12 +168,5 @@ public class Hoch extends Activity {
             }
         };
         handler12.post(runnable12);
-    }
-    void hochbingo() {
-        cifra *= 2;
-        dobitakdb.setText(Integer.toString(cifra));
-        centar2.setText("YOU WIN !");
-        centar2.setVisibility(View.VISIBLE);
-        audiobingo.start();
     }
 }

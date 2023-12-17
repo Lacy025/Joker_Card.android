@@ -17,13 +17,13 @@ import android.view.View;
 public class Kasirano extends Activity {
     public static Handler handler9;
     public static Runnable runnable9;
-    int pauzad;
+    int pauzap;
     Kasirano() {
         if(promasaj == 1) {
-            pauzad = 2000;
+            pauzap = 2000;
         }
         else {
-            pauzad = 3600;
+            pauzap = 3600;
         }
         handler9 = new Handler();
         runnable9 = () -> {
@@ -45,6 +45,7 @@ public class Kasirano extends Activity {
                     Jokers.handler6.removeCallbacks(Jokers.runnable6);
                     Jokers.handler7.removeCallbacks(Jokers.runnable7);
                     Jokers.handler8.removeCallbacks(Jokers.runnable8);
+                    First.handler0.removeCallbacks(First.runnable0);
                     joker.setText("JOKER");
                     card.setText("CARD");
                     joker.setVisibility(View.VISIBLE);
@@ -53,6 +54,6 @@ public class Kasirano extends Activity {
                     new Kliring();
                 }
         };
-        handler9.postDelayed(runnable9, pauzad);
+        handler9.postDelayed(runnable9, pauzap);
     }
 }

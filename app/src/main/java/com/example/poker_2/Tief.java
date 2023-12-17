@@ -1,7 +1,7 @@
 package com.example.poker_2;
 
+import static com.example.poker_2.First.Bingo;
 import static com.example.poker_2.First.Duplanje;
-import static com.example.poker_2.First.audiobingo;
 import static com.example.poker_2.First.centar2;
 import static com.example.poker_2.First.cifra;
 import static com.example.poker_2.First.dobitakdb;
@@ -140,7 +140,7 @@ public class Tief extends Activity {
         new Duplakarta();
 
         if (dk < 25) {
-            tiefbingo();
+            Bingo();
         }
         handler11 = new Handler();
         runnable11 = new Runnable() {
@@ -167,12 +167,5 @@ public class Tief extends Activity {
             }
         };
         handler11.post(runnable11);
-    }
-    void tiefbingo() {
-        cifra *= 2;
-        dobitakdb.setText(Integer.toString(cifra));
-        centar2.setText("YOU WIN !");
-        centar2.setVisibility(View.VISIBLE);
-        audiobingo.start();
     }
 }
