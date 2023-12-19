@@ -120,6 +120,12 @@
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
+        <activity
+            android:name=".Polovina"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" >
+        </activity>
     </application>
 
 </manifest>

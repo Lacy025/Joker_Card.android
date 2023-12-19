@@ -22,10 +22,12 @@ import android.view.View;
 public class Polovina extends Activity {
     public static Handler handler11;
     public static Handler handler12;
+    public static Handler handler13;
     public static Runnable runnable11;
     public static Runnable runnable12;
+    public static Runnable runnable13;
     private double x2;
-
+    private int pola1;
     Polovina() throws InterruptedException {
 
         x2 = (Math.floor(cifra / 2));
@@ -49,24 +51,51 @@ public class Polovina extends Activity {
         };
         handler11.post(runnable11);
 
-        handler12 = new Handler();
-        runnable12 = new Runnable() {
-            @Override
-            public void run() {
-                if(cifra < 101) {
-                    if(cifra != x2) {
-                        minusjedan();
-                        handler12.postDelayed(this, 40);
+        if(cifra < 200) {
+
+            handler12 = new Handler();
+            runnable12 = new Runnable() {
+                @Override
+                public void run() {
+                    if(cifra < 101) {
+                        if(cifra != x2) {
+                            minusjedan();
+                            handler12.postDelayed(this, 40);
+                        }
+                        else {
+                            centar2.setVisibility(View.VISIBLE);
+                            pobedio();
+                            handler12.removeCallbacks(runnable12);
+                        }
+                    }
+                    else if(cifra > 100 && cifra < 200) {
+                        pola1 = cifra - 100;
+                        prvideo();
+                        handler12.postDelayed(this, 1000);
+                    }
+
+                }
+            };
+            handler12.post(runnable12);
+        }
+        if(cifra == 200) {
+            handler13 = new Handler();
+            runnable13 = new Runnable() {
+                @Override
+                public void run() {
+                    if(cifra == 200) {
+                        minussto();
+                        handler13.postDelayed(this, 1000);
                     }
                     else {
-                        centar2.setVisibility(View.VISIBLE);
                         pobedio();
+                        handler13.removeCallbacks(runnable13);
                     }
                 }
+            };
+            handler13.post(runnable13);
+        }
 
-            }
-        };
-        handler12.post(runnable12);
     }
     void minusjedan() {
         c += 1;
@@ -82,6 +111,16 @@ public class Polovina extends Activity {
         dobitakdb.setText(Integer.toString(cifra));
         audiocount100.start();
     }
+    void prvideo() {
+        c += pola1;
+        c1.setText(Integer.toString(c));
+        cifra -= pola1;
+        dobitakdb.setText(Integer.toString(cifra));
+        audiocount100.start();
+    }
+    void drugideo() {
+
+    }
     void pobedio() {
         audiocount100.start();
         try {
@@ -90,7 +129,8 @@ public class Polovina extends Activity {
             throw new RuntimeException(e);
         }
         handler11.removeCallbacks(runnable11);
-        handler12.removeCallbacks(runnable12);
+
+
         duplanje = 1;
         Duplanje();
     }

@@ -214,6 +214,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        deljenje = 0;
+        stop = 0;
+        izbor = 0;
+        cifra = 0;
+
         button_credit = (Button) findViewById(R.id.credit);
         button_credit.setOnClickListener(this);
         button_bet = (Button) findViewById(R.id.bet);
@@ -225,11 +230,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
 
         ah1 = findViewById(R.id.autohold);
         c1 = findViewById(R.id.vrednost_c);
-
-        deljenje = 0;
-        stop = 0;
-        izbor = 0;
-        cifra = 0;
 
         button_stop1 = (Button) findViewById(R.id.stop1);
         button_stop1.setOnClickListener(this);
@@ -247,9 +247,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         button_hoch= (Button) findViewById(R.id.double_hoch);
         button_hoch.setOnClickListener(this);
 
-        tief = findViewById(R.id.tief);
-        hoch = findViewById(R.id.hoch);
-
         levodole1 = findViewById(R.id.levo);
         desnodole1 = findViewById(R.id.desno);
         joker = findViewById(R.id.joker);
@@ -258,6 +255,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         centar2 = findViewById(R.id.win);
         levodole2 = findViewById(R.id.gamble);
         desnodole2 = findViewById(R.id.cash);
+
+        tief = findViewById(R.id.tief);
+        hoch = findViewById(R.id.hoch);
 
         polje1 = findViewById(R.id.polje_1);
         polje2 = findViewById(R.id.polje_2);
@@ -1011,13 +1011,13 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-
-        k1=0;
 /*
+        k1=0;
+
         k2=1;
-        k3=10;
-        k4=13;
-        k5=12;
+        k3=14;
+        k4=27;
+        k5=5;
 
 */
     }
