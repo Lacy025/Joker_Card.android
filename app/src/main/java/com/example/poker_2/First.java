@@ -220,8 +220,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         button_bet.setOnClickListener(this);
         button_take = (Button) findViewById(R.id.take);
         button_take.setOnClickListener(this);
-        button_bet = (Button) findViewById(R.id.bet);
-        button_bet.setOnClickListener(this);
         button_deal = (Button) findViewById(R.id.deal);
         button_deal.setOnClickListener(this);
 
@@ -657,6 +655,17 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             else if(izbor==2) {
                 duplanje();
             }
+            else if(duplanje == 1 && cifra > 1) {
+                id = 0;
+                handler0.removeCallbacks(runnable0);
+                tief.setVisibility(View.INVISIBLE);
+                hoch.setVisibility(View.INVISIBLE);
+                try {
+                    new Polovina();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
         if(id == R.id.stop1) {
             if(izbor == 1) {
@@ -706,6 +715,203 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     throw new RuntimeException(e);
                 }
             }
+        }
+    }
+    void duplanje() {
+        izbor = 3;
+        biodobitak = 0;
+        pauzad = 400;
+        levodole2.setVisibility(View.INVISIBLE);
+        desnodole2.setVisibility(View.INVISIBLE);
+        button_take.setText("TAKE ALL");
+        button_deal.setText("TAKE HALF");
+        button_tief.setVisibility(View.VISIBLE);
+        button_hoch.setVisibility(View.VISIBLE);
+        intro();
+        count1();
+        count100();
+        bingo();
+        polje1.setVisibility(View.INVISIBLE);
+        polje2.setVisibility(View.INVISIBLE);
+        polje3.setVisibility(View.INVISIBLE);
+        polje4.setVisibility(View.INVISIBLE);
+        polje5.setVisibility(View.INVISIBLE);
+        poljeD1.setImageResource(R.drawable.k53);
+        poljeD2.setImageResource(R.drawable.k53);
+        poljeD3.setImageResource(R.drawable.k53);
+        poljeD4.setImageResource(R.drawable.k53);
+        poljeD5.setImageResource(R.drawable.k53);
+        poljeD6.setImageResource(R.drawable.k53);
+        poljeD7.setImageResource(R.drawable.k53);
+        poljeD8.setImageResource(R.drawable.k53);
+        poljeD9.setImageResource(R.drawable.k53);
+        poljeD10.setImageResource(R.drawable.k53);
+        poljeD11.setImageResource(R.drawable.k53);
+        poljeD12.setImageResource(R.drawable.k53);
+        audiodobitnik.stop();
+        pauzad = 400;
+        duplanje = 1;
+        duplakarta = 1;
+        dk = 0;
+        Duplanje();
+    }
+    public static void Duplanje() {
+
+        centar2.setVisibility(View.INVISIBLE);
+
+        if(duplakarta == 1) {
+            poljeD1.setVisibility(View.VISIBLE);
+            dk1 = (int) Math.floor(Math.random() * 48) + 1;
+            cheat = dk1;
+            TiefHoch();
+        }
+        if(duplakarta == 2) {
+            poljeD2.setVisibility(View.VISIBLE);
+            dk2 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk2 == dk1) {
+                dk2 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk2;
+            TiefHoch();
+        }
+        if(duplakarta == 3) {
+            poljeD3.setVisibility(View.VISIBLE);
+            dk3 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk3 == dk1 || dk3 == dk2) {
+                dk3 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk3;
+            TiefHoch();
+        }
+        if(duplakarta == 4) {
+            poljeD4.setVisibility(View.VISIBLE);
+            dk4 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk4 == dk1 || dk4 == dk2 || dk4 == dk3) {
+                dk4 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk4;
+            TiefHoch();
+        }
+        if(duplakarta == 5) {
+            poljeD5.setVisibility(View.VISIBLE);
+            dk5 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk5 == dk1 || dk5 == dk2 ||
+                    dk5 == dk3 || dk5 == dk4) {
+                dk5 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk5;
+            TiefHoch();
+        }
+        if(duplakarta == 6) {
+            poljeD6.setVisibility(View.VISIBLE);
+            dk6 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk6 == dk1 || dk6 == dk2 || dk6 == dk3 ||
+                    dk6 == dk4 || dk6 == dk5) {
+                dk6 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk6;
+            TiefHoch();
+        }
+        if(duplakarta == 7) {
+            poljeD7.setVisibility(View.VISIBLE);
+            dk7 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk7 == dk1 || dk7 == dk2 || dk7 == dk3 ||
+                    dk7 == dk4 || dk7 == dk5|| dk7 == dk6) {
+                dk7 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk7;
+            TiefHoch();
+        }
+        if(duplakarta == 8) {
+            poljeD8.setVisibility(View.VISIBLE);
+            dk8 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk8 == dk1 || dk8 == dk2 || dk8 == dk3 || dk8 == dk4 ||
+                    dk8 == dk5 || dk8 == dk6 || dk8 == dk7) {
+                dk8 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk8;
+            TiefHoch();
+        }
+        if(duplakarta == 9) {
+            poljeD9.setVisibility(View.VISIBLE);
+            dk9 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk9 == dk1 || dk9 == dk2 || dk9 == dk3 || dk9 == dk4 ||
+                    dk9 == dk5 || dk9 == dk6 || dk9 == dk7 || dk9 == dk8) {
+                dk9 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk9;
+            TiefHoch();
+        }
+        if(duplakarta == 10) {
+            poljeD10.setVisibility(View.VISIBLE);
+            dk10 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk10 == dk1 || dk10 == dk2 || dk10 == dk3 ||
+                    dk10 == dk4 || dk10 == dk5 || dk10 == dk6 ||
+                    dk10 == dk7 || dk10 == dk8 || dk10 == dk9) {
+                dk10 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk10;
+            TiefHoch();
+        }
+        if(duplakarta == 11) {
+            poljeD11.setVisibility(View.VISIBLE);
+            dk11 = (int) Math.floor(Math.random() * 48) + 1;
+            while(dk11 == dk1 || dk11 == dk2 || dk11 == dk3 || dk11 == dk4 ||
+                    dk11 == dk5 || dk11 == dk6|| dk11 == dk7 || dk11 == dk8 ||
+                    dk11 == dk9 || dk11 == dk10) {
+                dk11 = (int) Math.floor(Math.random() * 48) + 1;
+            }
+            cheat = dk11;
+            TiefHoch();
+        }
+        if(duplakarta == 12) {
+            handler0.removeCallbacks(runnable0);
+            poljeD12.setVisibility(View.VISIBLE);
+            Blokada();
+        }
+    }
+
+    static void TiefHoch() {
+        /*
+
+        if(cheat < 25) {
+            button_stop1.setVisibility(View.VISIBLE);
+            button_stop5.setVisibility(View.INVISIBLE);
+        }
+        else {
+            button_stop5.setVisibility(View.VISIBLE);
+            button_stop1.setVisibility(View.INVISIBLE);
+        }
+*/
+        if(cifra > 9999) {
+            Blokada();
+        }
+        else {
+            final int[] HochTief = {1};
+
+            handler0 = new Handler();
+            runnable0 = new Runnable() {
+                @Override
+                public void run() {
+                    if(duplanje == 1) {
+                        if(HochTief[0] == 1) {
+                            audiohoch.start();
+                            tief.setVisibility(View.INVISIBLE);
+                            hoch.setVisibility(View.VISIBLE);
+                            HochTief[0] = 2;
+
+                        }
+                        else {
+                            audiotief.start();
+                            hoch.setVisibility(View.INVISIBLE);
+                            tief.setVisibility(View.VISIBLE);
+                            HochTief[0] = 1;
+                        }
+                        handler0.postDelayed(this, pauzad);
+                    }
+                }
+            };
+            handler0.post(runnable0);
         }
     }
     void intro() {
@@ -805,9 +1011,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-/*
-        k1=0;
 
+        k1=0;
+/*
         k2=1;
         k3=10;
         k4=13;
@@ -1038,181 +1244,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         }
         audiocount100 = MediaPlayer.create(this, R.raw.isplata100);
     }
-    void bingo() {
-        if (audiobingo != null) {
-            audiobingo .reset();
-            audiobingo.release();
-            audiobingo  = null;
-        }
-        Hoch();
-        Tief();
-        audiobingo  = MediaPlayer.create(this, R.raw.bingo);
-    }
-    void Kasa() {
-        izbor = 3;
-        biodobitak = 0;
-        levodole2.setVisibility(View.INVISIBLE);
-        desnodole2.setVisibility(View.INVISIBLE);
-        intro();
-        count1();
-        count100();
-        kasiranje = 1;
-        try {
-            new Kasiranje();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    void duplanje() {
-        izbor = 3;
-        biodobitak = 0;
-        pauzad = 400;
-        levodole2.setVisibility(View.INVISIBLE);
-        desnodole2.setVisibility(View.INVISIBLE);
-        button_take.setText("TAKE ALL");
-        button_deal.setText("TAKE HALF");
-        button_tief.setVisibility(View.VISIBLE);
-        button_hoch.setVisibility(View.VISIBLE);
-        intro();
-        count1();
-        count100();
-        bingo();
-        polje1.setVisibility(View.INVISIBLE);
-        polje2.setVisibility(View.INVISIBLE);
-        polje3.setVisibility(View.INVISIBLE);
-        polje4.setVisibility(View.INVISIBLE);
-        polje5.setVisibility(View.INVISIBLE);
-        poljeD1.setImageResource(R.drawable.k53);
-        poljeD2.setImageResource(R.drawable.k53);
-        poljeD3.setImageResource(R.drawable.k53);
-        poljeD4.setImageResource(R.drawable.k53);
-        poljeD5.setImageResource(R.drawable.k53);
-        poljeD6.setImageResource(R.drawable.k53);
-        poljeD7.setImageResource(R.drawable.k53);
-        poljeD8.setImageResource(R.drawable.k53);
-        poljeD9.setImageResource(R.drawable.k53);
-        poljeD10.setImageResource(R.drawable.k53);
-        poljeD11.setImageResource(R.drawable.k53);
-        poljeD12.setImageResource(R.drawable.k53);
-        audiodobitnik.stop();
-        pauzad = 400;
-        duplanje = 1;
-        duplakarta = 1;
-        dk = 0;
-        Duplanje();
-    }
-    public static void Duplanje() {
-        if(duplakarta == 1) {
-            poljeD1.setVisibility(View.VISIBLE);
-            dk1 = (int) Math.floor(Math.random() * 48) + 1;
-            cheat = dk1;
-            Cheating();
-        }
-        if(duplakarta == 2) {
-            poljeD2.setVisibility(View.VISIBLE);
-            dk2 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk2 == dk1) {
-                dk2 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk2;
-            Cheating();
-        }
-        if(duplakarta == 3) {
-            poljeD3.setVisibility(View.VISIBLE);
-            dk3 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk3 == dk1 || dk3 == dk2) {
-                dk3 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk3;
-            Cheating();
-        }
-        if(duplakarta == 4) {
-            poljeD4.setVisibility(View.VISIBLE);
-            dk4 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk4 == dk1 || dk4 == dk2 || dk4 == dk3) {
-                dk4 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk4;
-            Cheating();
-        }
-        if(duplakarta == 5) {
-            poljeD5.setVisibility(View.VISIBLE);
-            dk5 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk5 == dk1 || dk5 == dk2 ||
-                    dk5 == dk3 || dk5 == dk4) {
-                dk5 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk5;
-            Cheating();
-        }
-        if(duplakarta == 6) {
-            poljeD6.setVisibility(View.VISIBLE);
-            dk6 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk6 == dk1 || dk6 == dk2 || dk6 == dk3 ||
-                    dk6 == dk4 || dk6 == dk5) {
-                dk6 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk6;
-            Cheating();
-        }
-        if(duplakarta == 7) {
-            poljeD7.setVisibility(View.VISIBLE);
-            dk7 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk7 == dk1 || dk7 == dk2 || dk7 == dk3 ||
-                    dk7 == dk4 || dk7 == dk5|| dk7 == dk6) {
-                dk7 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk7;
-            Cheating();
-        }
-        if(duplakarta == 8) {
-            poljeD8.setVisibility(View.VISIBLE);
-            dk8 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk8 == dk1 || dk8 == dk2 || dk8 == dk3 || dk8 == dk4 ||
-                    dk8 == dk5 || dk8 == dk6 || dk8 == dk7) {
-                dk8 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk8;
-            Cheating();
-        }
-        if(duplakarta == 9) {
-            poljeD9.setVisibility(View.VISIBLE);
-            dk9 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk9 == dk1 || dk9 == dk2 || dk9 == dk3 || dk9 == dk4 ||
-                    dk9 == dk5 || dk9 == dk6 || dk9 == dk7 || dk9 == dk8) {
-                dk9 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk9;
-            Cheating();
-        }
-        if(duplakarta == 10) {
-            poljeD10.setVisibility(View.VISIBLE);
-            dk10 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk10 == dk1 || dk10 == dk2 || dk10 == dk3 ||
-                    dk10 == dk4 || dk10 == dk5 || dk10 == dk6 ||
-                    dk10 == dk7 || dk10 == dk8 || dk10 == dk9) {
-                dk10 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk10;
-            Cheating();
-        }
-        if(duplakarta == 11) {
-            poljeD11.setVisibility(View.VISIBLE);
-            dk11 = (int) Math.floor(Math.random() * 48) + 1;
-            while(dk11 == dk1 || dk11 == dk2 || dk11 == dk3 || dk11 == dk4 ||
-                    dk11 == dk5 || dk11 == dk6|| dk11 == dk7 || dk11 == dk8 ||
-                    dk11 == dk9 || dk11 == dk10) {
-                dk11 = (int) Math.floor(Math.random() * 48) + 1;
-            }
-            cheat = dk11;
-            Cheating();
-        }
-        if(duplakarta == 12) {
-            handler0.removeCallbacks(runnable0);
-            poljeD12.setVisibility(View.VISIBLE);
-            Blokada();
-        }
-    }
     void Tief() {
         if(audiotief != null) {
             audiotief.reset();
@@ -1238,47 +1269,29 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiobingo.start();
         pauzad -=25;
     }
-    static void Cheating() {
-        /*
-
-        if(cheat < 25) {
-            button_stop1.setVisibility(View.VISIBLE);
-            button_stop5.setVisibility(View.INVISIBLE);
+    void bingo() {
+        if (audiobingo != null) {
+            audiobingo .reset();
+            audiobingo.release();
+            audiobingo  = null;
         }
-        else {
-            button_stop5.setVisibility(View.VISIBLE);
-            button_stop1.setVisibility(View.INVISIBLE);
-        }
-*/
-        if(cifra > 9999) {
-            Blokada();
-        }
-        else {
-            final int[] HochTief = {1};
-
-            handler0 = new Handler();
-            runnable0 = new Runnable() {
-                @Override
-                public void run() {
-                    if(duplanje == 1) {
-                        if(HochTief[0] == 1) {
-                            audiohoch.start();
-                            tief.setVisibility(View.INVISIBLE);
-                            hoch.setVisibility(View.VISIBLE);
-                            HochTief[0] = 2;
-
-                        }
-                        else {
-                            audiotief.start();
-                            hoch.setVisibility(View.INVISIBLE);
-                            tief.setVisibility(View.VISIBLE);
-                            HochTief[0] = 1;
-                        }
-                        handler0.postDelayed(this, pauzad);
-                    }
-                }
-            };
-            handler0.post(runnable0);
+        Hoch();
+        Tief();
+        audiobingo  = MediaPlayer.create(this, R.raw.bingo);
+    }
+    void Kasa() {
+        izbor = 3;
+        biodobitak = 0;
+        levodole2.setVisibility(View.INVISIBLE);
+        desnodole2.setVisibility(View.INVISIBLE);
+        intro();
+        count1();
+        count100();
+        kasiranje = 1;
+        try {
+            new Kasiranje();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
     static void Blokada() {

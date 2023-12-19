@@ -27,7 +27,9 @@ public class Kasiranje extends Activity {
     public static Runnable runnable9;
     public static Runnable runnable10;
     Kasiranje() throws InterruptedException {
+
         int pobeda = cifra;
+
         button_take.setText("WIN !");
         button_deal.setText("WIN !");
         centar2.setText("YOU WIN !");
@@ -95,7 +97,7 @@ public class Kasiranje extends Activity {
     }
     void minusjedan() {
         c += 1;
-        c1.setText(Integer.toString(First.c));
+        c1.setText(Integer.toString(c));
         cifra -= 1;
         dobitakdb.setText(Integer.toString(cifra));
         audiocount1.start();
@@ -106,7 +108,7 @@ public class Kasiranje extends Activity {
     }
     void minussto() {
         c += 100;
-        c1.setText(Integer.toString(First.c));
+        c1.setText(Integer.toString(c));
         cifra -= 100;
         dobitakdb.setText(Integer.toString(cifra));
         audiocount100.start();

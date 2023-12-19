@@ -10,12 +10,12 @@
               <deviceKey>
                 <Key>
                   <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\Lacy\.android\avd\10.1_WXGA_Tablet_API_29.avd" />
+                  <value value="C:\Users\Lacy\.android\avd\TCL30se_API_31.avd" />
                 </Key>
               </deviceKey>
             </Target>
           </runningDeviceTargetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2023-12-17T22:28:48.801476200Z" />
+          <timeTargetWasSelectedWithDropDown value="2023-12-17T23:13:28.322444700Z" />
         </State>
       </entry>
     </value>
