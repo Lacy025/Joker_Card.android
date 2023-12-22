@@ -51,12 +51,12 @@ public class Kasiranje extends Activity {
 
         handler9 = new Handler();
         runnable9 = new Runnable() {
-            boolean isVisible1 = true;
+            boolean isVisible = true;
             @Override
             public void run() {
-                isVisible1 = !isVisible1;
+                isVisible = !isVisible;
                 if(cifra > 0) {
-                    centar2.setVisibility(isVisible1 ? View.INVISIBLE : View.VISIBLE);
+                    centar2.setVisibility(isVisible ? View.INVISIBLE : View.VISIBLE);
                     handler9.postDelayed(this, 400);
                 }
             }

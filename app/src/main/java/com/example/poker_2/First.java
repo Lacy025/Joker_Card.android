@@ -660,11 +660,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 handler0.removeCallbacks(runnable0);
                 tief.setVisibility(View.INVISIBLE);
                 hoch.setVisibility(View.INVISIBLE);
-                try {
-                    new Polovina();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+                new Polovina();
             }
         }
         if(id == R.id.stop1) {
@@ -1018,8 +1014,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3=14;
         k4=27;
         k5=5;
-
 */
+
     }
     void Deljenje1() {
         new Timer().schedule(new TimerTask() {
