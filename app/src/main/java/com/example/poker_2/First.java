@@ -197,8 +197,8 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     TimerTask task2;
     Timer timer3;
     TimerTask task3;
-    static Handler handler0;
-    static Runnable runnable0;
+    public static Handler handler0;
+    public static Runnable runnable0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -753,8 +753,6 @@ public class First extends AppCompatActivity implements View.OnClickListener {
     }
     public static void Duplanje() {
 
-        centar2.setVisibility(View.INVISIBLE);
-
         if(duplakarta == 1) {
             poljeD1.setVisibility(View.VISIBLE);
             dk1 = (int) Math.floor(Math.random() * 48) + 1;
@@ -1007,9 +1005,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-/*
-        k1=0;
 
+        k1=0;
+/*
         k2=1;
         k3=14;
         k4=27;

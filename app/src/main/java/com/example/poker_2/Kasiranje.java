@@ -70,12 +70,12 @@ public class Kasiranje extends Activity {
         runnable10 = new Runnable() {
             @Override
             public void run() {
-                double x1 = cifra;
-                if(((int)(x1/100) * 100) != ((x1/100) * 100)) {
+                double kasa = cifra;
+                if(((int)(kasa/100) * 100) != ((kasa/100) * 100)) {
                     minusjedan();
                     handler10.postDelayed(this, 40);
                 }
-                else if((((int)(x1/100) * 100) == ((x1/100) * 100)) && x1 > 0) {
+                else if((((int)(kasa/100) * 100) == ((kasa/100) * 100)) && kasa > 0) {
                     minussto();
                     handler10.postDelayed(this, 1000);
                 }

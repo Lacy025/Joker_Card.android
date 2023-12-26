@@ -17,19 +17,26 @@ import static com.example.poker_2.First.kasirano;
 
 import android.app.Activity;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Polovina extends Activity {
-    Handler handler11;
-    Handler handler12;
-    Handler handler13;
-    Runnable runnable11;
-    Runnable runnable12;
-    Runnable runnable13;
+    public static Handler handler0;
+    Handler handler14;
+    Handler handler15;
+    public static Runnable runnable0;
+    Runnable runnable14;
+    Runnable runnable15;
+    Timer timer4;
+    TimerTask task4;
     private double pola;
     private double deo;
     private double pola1;
     private double pola2;
+    int countdown;
     Polovina() {
         button_take.setText("WIN !");
         button_deal.setText("WIN !");
@@ -37,34 +44,51 @@ public class Polovina extends Activity {
         centar2.setText("YOU WIN !");
         centar2.setVisibility(View.VISIBLE);
         duplanje = 0;
+        countdown = 1;
 
-        handler11 = new Handler();
-        runnable11 = new Runnable() {
+        timer4 = new Timer();
+        timer4.schedule(task4 = new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(() -> new Handler(Looper.getMainLooper()).postDelayed(
+                        () -> {
+                            if(cifra == pola) {
+                                handler0.removeCallbacks(runnable0);
+                                centar2.setVisibility(View.VISIBLE);
+                                timer4.cancel();
+                                timer4.purge();
+                            }
+                        }, 0));
+            }
+        }, 0, 20);
+
+        handler0 = new Handler();
+        runnable0 = new Runnable() {
             boolean isVisible = true;
             @Override
             public void run() {
                 isVisible = !isVisible;
                 if(cifra > 0) {
                     centar2.setVisibility(isVisible ? View.INVISIBLE : View.VISIBLE);
-                    handler11.postDelayed(this, 400);
+                    handler0.postDelayed(this, 400);
                 }
             }
         };
-        handler11.post(runnable11);
+        handler0.post(runnable0);
 
         if(cifra < 200) {
-            handler12 = new Handler();
-            runnable12 = new Runnable() {
+            handler14 = new Handler();
+            runnable14 = new Runnable() {
                 @Override
                 public void run() {
                     if(cifra < 101) {
                         if(cifra != pola) {
                             minusjedan();
-                            handler12.postDelayed(this, 40);
+                            handler14.postDelayed(this, 40);
                         }
                         else {
-                            centar2.setVisibility(View.VISIBLE);
-                            handler12.postDelayed(this, 1000);
+                            countdown = 0;
+                            //handler14.postDelayed(this, 1000);
                             audiocount100.start();
                             pobedio();
                             try {
@@ -72,49 +96,49 @@ public class Polovina extends Activity {
                             } catch (InterruptedException e) {
                                 throw new RuntimeException(e);
                             }
-                            handler12.removeCallbacks(runnable12);
+                            handler14.removeCallbacks(runnable14);
                         }
                     }
                     else if(cifra > 100 && cifra < 200) {
                         pola1 = cifra - 100;
                         prvideo();
-                        handler12.postDelayed(this, 1000);
+                        handler14.postDelayed(this, 1000);
                     }
 
                 }
             };
-            handler12.post(runnable12);
+            handler14.post(runnable14);
         }
         else {
             deo = cifra;
-            handler13 = new Handler();
-            runnable13 = new Runnable() {
+            handler15 = new Handler();
+            runnable15 = new Runnable() {
                 @Override
                 public void run() {
                     if((Math.floor(deo/100)) != (deo/100)) {
                         pola1 = Math.round(((deo/100)-(Math.floor(deo/100))) * 100);
                         prvideo();
-                        handler13.postDelayed(this, 1000);
+                        handler15.postDelayed(this, 1000);
                     }
                     else {
                         if(cifra - pola > 99) {
                             minussto();
-                            handler13.postDelayed(this, 1000);
+                            handler15.postDelayed(this, 1000);
                         }
                         else if(cifra - pola > 0) {
                             pola2 = cifra - pola;
                             drugideo();
-                            handler13.postDelayed(this, 1000);
+                            handler15.postDelayed(this, 1000);
                         }
                         else if(cifra - pola == 0) {
-                            handler13.postDelayed(this, 1000);
+                            handler15.postDelayed(this, 1000);
                             pobedio();
-                            handler13.removeCallbacks(runnable13);
+                            handler15.removeCallbacks(runnable15);
                         }
                     }
                 }
             };
-            handler13.post(runnable13);
+            handler15.post(runnable15);
         }
     }
     void minusjedan() {
@@ -147,8 +171,7 @@ public class Polovina extends Activity {
         audiocount100.start();
     }
     void pobedio() {
-        handler11.removeCallbacks(runnable11);
-        centar2.setVisibility(View.VISIBLE);
+        centar2.setVisibility(View.INVISIBLE);
         duplanje = 1;
         button_take.setText("TAKE ALL");
         button_deal.setText("TAKE HALF");
