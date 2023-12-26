@@ -1005,9 +1005,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-
-        k1=0;
 /*
+        k1=0;
+
         k2=1;
         k3=14;
         k4=27;
