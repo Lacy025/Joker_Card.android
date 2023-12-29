@@ -1,15 +1,15 @@
-package com.example.poker_2;
+package com.example.Joker_Card;
 
-import static com.example.poker_2.First.button_deal;
-import static com.example.poker_2.First.kasiranje;
-import static com.example.poker_2.First.deljenje;
-import static com.example.poker_2.First.kasirano;
-import static com.example.poker_2.First.biodobitak;
-import static com.example.poker_2.First.promasaj;
-import static com.example.poker_2.First.izbor;
-import static com.example.poker_2.First.joker;
-import static com.example.poker_2.First.card;
-import static com.example.poker_2.First.button_take;
+import static com.example.Joker_Card.First.button_deal;
+import static com.example.Joker_Card.First.kasiranje;
+import static com.example.Joker_Card.First.deljenje;
+import static com.example.Joker_Card.First.kasirano;
+import static com.example.Joker_Card.First.biodobitak;
+import static com.example.Joker_Card.First.promasaj;
+import static com.example.Joker_Card.First.izbor;
+import static com.example.Joker_Card.First.joker;
+import static com.example.Joker_Card.First.card;
+import static com.example.Joker_Card.First.button_take;
 
 import android.app.Activity;
 import android.os.Handler;

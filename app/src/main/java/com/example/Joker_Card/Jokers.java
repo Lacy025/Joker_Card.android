@@ -1,18 +1,18 @@
-package com.example.poker_2;
+package com.example.Joker_Card;
 
-import static com.example.poker_2.First.deljenje;
-import static com.example.poker_2.First.joker;
-import static com.example.poker_2.First.card;
-import static com.example.poker_2.First.polje1;
-import static com.example.poker_2.First.polje2;
-import static com.example.poker_2.First.polje3;
-import static com.example.poker_2.First.polje4;
-import static com.example.poker_2.First.polje5;
-import static com.example.poker_2.First.poljej1;
-import static com.example.poker_2.First.poljej2;
-import static com.example.poker_2.First.poljej3;
-import static com.example.poker_2.First.poljej4;
-import static com.example.poker_2.First.poljej5;
+import static com.example.Joker_Card.First.deljenje;
+import static com.example.Joker_Card.First.joker;
+import static com.example.Joker_Card.First.card;
+import static com.example.Joker_Card.First.polje1;
+import static com.example.Joker_Card.First.polje2;
+import static com.example.Joker_Card.First.polje3;
+import static com.example.Joker_Card.First.polje4;
+import static com.example.Joker_Card.First.polje5;
+import static com.example.Joker_Card.First.poljej1;
+import static com.example.Joker_Card.First.poljej2;
+import static com.example.Joker_Card.First.poljej3;
+import static com.example.Joker_Card.First.poljej4;
+import static com.example.Joker_Card.First.poljej5;
 
 import android.app.Activity;
 import android.os.Handler;

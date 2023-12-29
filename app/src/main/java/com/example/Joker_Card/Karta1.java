@@ -1,10 +1,10 @@
-package com.example.poker_2;
+package com.example.Joker_Card;
 
-import static com.example.poker_2.First.k1;
-import static com.example.poker_2.First.polje1;
-import static com.example.poker_2.First.pauzak;
-import static com.example.poker_2.First.deljenje;
-import static com.example.poker_2.First.audiokarta1;
+import static com.example.Joker_Card.First.k1;
+import static com.example.Joker_Card.First.polje1;
+import static com.example.Joker_Card.First.pauzak;
+import static com.example.Joker_Card.First.deljenje;
+import static com.example.Joker_Card.First.audiokarta1;
 
 import android.app.Activity;
 import android.os.Handler;

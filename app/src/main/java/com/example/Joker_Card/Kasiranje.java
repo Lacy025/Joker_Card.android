@@ -1,21 +1,18 @@
-package com.example.poker_2;
+package com.example.Joker_Card;
 
-import static com.example.poker_2.First.audiocount1;
-import static com.example.poker_2.First.audiocount100;
-import static com.example.poker_2.First.audiodobitnik;
-import static com.example.poker_2.First.audiointro;
-import static com.example.poker_2.First.biodobitak;
-import static com.example.poker_2.First.blokada;
-import static com.example.poker_2.First.button_deal;
-import static com.example.poker_2.First.button_take;
-import static com.example.poker_2.First.centar2;
-import static com.example.poker_2.First.cifra;
-import static com.example.poker_2.First.duplanje;
-import static com.example.poker_2.First.izbor;
-import static com.example.poker_2.First.kasirano;
-import static com.example.poker_2.First.dobitakdb;
-import static com.example.poker_2.First.c;
-import static com.example.poker_2.First.c1;
+import static com.example.Joker_Card.First.audiocount1;
+import static com.example.Joker_Card.First.audiocount100;
+import static com.example.Joker_Card.First.audiodobitnik;
+import static com.example.Joker_Card.First.audiointro;
+import static com.example.Joker_Card.First.button_deal;
+import static com.example.Joker_Card.First.button_take;
+import static com.example.Joker_Card.First.centar2;
+import static com.example.Joker_Card.First.cifra;
+import static com.example.Joker_Card.First.duplanje;
+import static com.example.Joker_Card.First.kasirano;
+import static com.example.Joker_Card.First.dobitakdb;
+import static com.example.Joker_Card.First.c;
+import static com.example.Joker_Card.First.c1;
 
 import android.app.Activity;
 import android.os.Handler;

@@ -1,17 +1,17 @@
-package com.example.poker_2;
+package com.example.Joker_Card;
 
-import static com.example.poker_2.First.rucno1;
-import static com.example.poker_2.First.rucno2;
-import static com.example.poker_2.First.rucno3;
-import static com.example.poker_2.First.rucno4;
-import static com.example.poker_2.First.rucno5;
-import static com.example.poker_2.First.rucno6;
-import static com.example.poker_2.First.rucno7;
-import static com.example.poker_2.First.rucno8;
-import static com.example.poker_2.First.rucno9;
-import static com.example.poker_2.First.rucno10;
-import static com.example.poker_2.First.ah;
-import static com.example.poker_2.First.stop;
+import static com.example.Joker_Card.First.rucno1;
+import static com.example.Joker_Card.First.rucno2;
+import static com.example.Joker_Card.First.rucno3;
+import static com.example.Joker_Card.First.rucno4;
+import static com.example.Joker_Card.First.rucno5;
+import static com.example.Joker_Card.First.rucno6;
+import static com.example.Joker_Card.First.rucno7;
+import static com.example.Joker_Card.First.rucno8;
+import static com.example.Joker_Card.First.rucno9;
+import static com.example.Joker_Card.First.rucno10;
+import static com.example.Joker_Card.First.ah;
+import static com.example.Joker_Card.First.stop;
 
 import android.app.Activity;
 import android.os.Handler;
