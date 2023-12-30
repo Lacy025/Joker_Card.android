@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Joker_Card</string>
+    <string name="app_name">Joker Card</string>
     <string name="five_of_a_kind">FIVE OF A KIND</string>
     <string name="royal_flush">ROYAL FLUSH</string>
     <string name="street_flush">STREET FLUSH</string>
