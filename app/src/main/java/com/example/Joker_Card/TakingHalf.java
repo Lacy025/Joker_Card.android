@@ -35,10 +35,10 @@ public class TakingHalf extends Activity {
     private double pola2;
     int countdown;
     TakingHalf() {
-        button_take.setText("WIN !");
-        button_deal.setText("WIN !");
+        button_take.setText(R.string.win_win);
+        button_deal.setText(R.string.win_win);
         pola = (Math.floor(cifra / 2));
-        centar2.setText("YOU WIN !");
+        centar2.setText(R.string.win);
         centar2.setVisibility(View.VISIBLE);
         duplanje = 0;
         countdown = 1;
@@ -170,8 +170,8 @@ public class TakingHalf extends Activity {
     void pobedio() {
         centar2.setVisibility(View.INVISIBLE);
         duplanje = 1;
-        button_take.setText("TAKE ALL");
-        button_deal.setText("TAKE HALF");
+        button_take.setText(R.string.take_all);
+        button_deal.setText(R.string.take_half);
         Duplanje();
     }
 }

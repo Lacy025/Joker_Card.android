@@ -27,9 +27,9 @@ public class TakingAll extends Activity {
 
         int pobeda = cifra;
 
-        button_take.setText("WIN !");
-        button_deal.setText("WIN !");
-        centar2.setText("YOU WIN !");
+        button_take.setText(R.string.win_win);
+        button_deal.setText(R.string.win_win);
+        centar2.setText(R.string.win);
         centar2.setVisibility(View.VISIBLE);
 
         if(cifra > 9999 && duplanje == 0) {
@@ -100,7 +100,7 @@ public class TakingAll extends Activity {
         audiocount1.start();
         if(cifra == 0) {
             pobedio();
-            button_deal.setText("DEAL CARDS");
+            button_deal.setText(R.string.deal_cards);
         }
     }
     void minussto() {
@@ -111,11 +111,11 @@ public class TakingAll extends Activity {
         audiocount100.start();
         if(cifra == 0) {
             pobedio();
-            button_deal.setText("DEAL CARDS");
+            button_deal.setText(R.string.deal_cards);
         }
     }
     void pobedio() {
-        centar2.setText("YOU WIN !");
+        centar2.setText(R.string.win);
         centar2.setVisibility(View.VISIBLE);
     }
 }

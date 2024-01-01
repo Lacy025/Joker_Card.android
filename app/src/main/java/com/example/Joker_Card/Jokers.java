@@ -37,8 +37,8 @@ public class Jokers extends Activity {
     public static Runnable runnable8;
     Jokers() {
         if(deljenje==0) {
-            joker.setText("JOKER");
-            card.setText("CARD");
+            joker.setText(R.string.joker);
+            card.setText(R.string.card);
             joker.setVisibility(View.VISIBLE);
             card.setVisibility(View.VISIBLE);
         }

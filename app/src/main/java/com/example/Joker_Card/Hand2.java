@@ -807,8 +807,8 @@ public class Hand2 extends Activity {
                     cifra = dob10;
                 }
                 if (biodobitak == 1) {
-                    button_take.setText("TAKE");
-                    button_deal.setText("GAMBLE");
+                    button_take.setText(R.string.cash);
+                    button_deal.setText(R.string.gamble);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException e) {
@@ -825,14 +825,14 @@ public class Hand2 extends Activity {
                     izbor = 2;
                     if(cifra > 9999) {
                         blokada = 1;
-                        centar2.setText("YOU WIN !");
+                        centar2.setText(R.string.win);
                         centar2.setVisibility(View.VISIBLE);
-                        button_take.setText("WIN !");
-                        button_deal.setText("WIN !");
+                        button_take.setText(R.string.win);
+                        button_deal.setText(R.string.win);
                     }
                 }
                 else {
-                    button_take.setText("AUTO HOLD");
+                    button_take.setText(R.string.auto_hold);
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {

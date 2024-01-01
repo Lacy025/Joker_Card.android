@@ -29,7 +29,7 @@ public class Cashed extends Activity {
         runnable9 = () -> {
                 if(kasiranje == 1 || promasaj == 1) {
                     if(promasaj == 1) {
-                        button_deal.setText("DEAL CARDS");
+                        button_deal.setText(R.string.deal_cards);
                     }
                     kasiranje = 0;
                     promasaj = 0;
@@ -46,11 +46,11 @@ public class Cashed extends Activity {
                     Jokers.handler7.removeCallbacks(Jokers.runnable7);
                     Jokers.handler8.removeCallbacks(Jokers.runnable8);
                     MainClass.handler0.removeCallbacks(MainClass.runnable0);
-                    joker.setText("JOKER");
-                    card.setText("CARD");
+                    joker.setText(R.string.joker);
+                    card.setText(R.string.card);
                     joker.setVisibility(View.VISIBLE);
                     card.setVisibility(View.VISIBLE);
-                    button_take.setText("AUTO HOLD");
+                    button_take.setText(R.string.auto_hold);
                     new Clearing();
                 }
         };

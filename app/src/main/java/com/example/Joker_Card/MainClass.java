@@ -365,22 +365,22 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
                                 if(c == 0 && deljenje == 0) {
-                                    levodole1.setText("LACIKA BAČI");
+                                    levodole1.setText(R.string.lacika_baci);
                                     levodole1.setVisibility(View.VISIBLE);
                                     desnodole1.setVisibility(View.INVISIBLE);
                                 }
                                 if(c > 0 && deljenje == 0) {
                                     levodole1.setVisibility(View.INVISIBLE);
                                     desnodole1.setVisibility(View.INVISIBLE);
-                                    centar1.setText("CHOOSE BET");
+                                    centar1.setText(R.string.choose_bet);
                                     centar1.setVisibility(View.VISIBLE);
-                                    button_take.setText("AUTO HOLD");
-                                    button_deal.setText("DEAL CARDS");
+                                    button_take.setText(R.string.auto_hold);
+                                    button_deal.setText(R.string.deal_cards);
                                 }
                                 if(c > 0 && deljenje == 2) {
-                                    centar1.setText("PICK CARDS");
+                                    centar1.setText(R.string.pick_cards);
                                     centar1.setVisibility(View.VISIBLE);
-                                    button_take.setText("CLEAR CARDS");
+                                    button_take.setText(R.string.clear_cards);
                                 }
                                 if(biodobitak == 1) {
                                     levodole2.setVisibility(View.VISIBLE);
@@ -391,14 +391,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             () -> {
                                 if(c == 0 && deljenje == 0) {
                                     levodole1.setVisibility(View.INVISIBLE);
-                                    desnodole1.setText("SERBIA 2023");
+                                    desnodole1.setText(R.string.serbia_2023);
                                     desnodole1.setVisibility(View.VISIBLE);
                                 }
                                 if((c > 0 && deljenje == 0) || (c > 0 && deljenje == 2)) {
                                     levodole1.setText("");
                                     levodole1.setVisibility(View.INVISIBLE);
                                     desnodole1.setVisibility(View.INVISIBLE);
-                                    centar1.setText("PRESS DEAL CARDS");
+                                    centar1.setText(R.string.press_deal_cards);
                                     centar1.setVisibility(View.VISIBLE);
                                 }
                                 if(biodobitak == 1) {
@@ -719,8 +719,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         pauzad = 400;
         levodole2.setVisibility(View.INVISIBLE);
         desnodole2.setVisibility(View.INVISIBLE);
-        button_take.setText("TAKE ALL");
-        button_deal.setText("TAKE HALF");
+        button_take.setText(R.string.take_all);
+        button_deal.setText(R.string.take_half);
         button_tief.setVisibility(View.VISIBLE);
         button_hoch.setVisibility(View.VISIBLE);
         intro();
@@ -1239,7 +1239,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         handler0.removeCallbacks(runnable0);
         cifra *= 2;
         dobitakdb.setText(Integer.toString(cifra));
-        centar2.setText("YOU WIN !");
+        centar2.setText(R.string.win);
         centar2.setVisibility(View.VISIBLE);
         audiobingo.start();
         pauzad -=25;

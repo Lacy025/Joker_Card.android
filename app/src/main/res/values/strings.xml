@@ -48,6 +48,9 @@
     <string name="lacika_baci">LACIKA BAČI</string>
     <string name="choose_bet">CHOOSE BET</string>
     <string name="serbia_2023">SERBIA 2023</string>
+    <string name="pick_cards">PICK CARDS</string>
+    <string name="clear_cards">CLEAR CARDS</string>
+    <string name="press_deal_cards">PRESS DEAL CARDS</string>
     <string name="todo1">TODO</string>
     <string name="todo2">TODO</string>
     <string name="todo3">TODO</string>
@@ -101,4 +104,7 @@
     <string name="gamble">GAMBLE</string>
     <string name="win">YOU WIN !</string>
     <string name="cash">TAKE</string>
+    <string name="take_all">TAKE ALL</string>
+    <string name="take_half">TAKE HALF</string>
+    <string name="win_win">WIN !</string>
 </resources>
