@@ -1,36 +1,36 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.First.duplakarta;
-import static com.example.Joker_Card.First.dk1;
-import static com.example.Joker_Card.First.dk2;
-import static com.example.Joker_Card.First.dk3;
-import static com.example.Joker_Card.First.dk4;
-import static com.example.Joker_Card.First.dk5;
-import static com.example.Joker_Card.First.dk6;
-import static com.example.Joker_Card.First.dk7;
-import static com.example.Joker_Card.First.dk8;
-import static com.example.Joker_Card.First.dk9;
-import static com.example.Joker_Card.First.dk10;
-import static com.example.Joker_Card.First.dk11;
-import static com.example.Joker_Card.First.poljeD1;
-import static com.example.Joker_Card.First.poljeD2;
-import static com.example.Joker_Card.First.poljeD3;
-import static com.example.Joker_Card.First.poljeD4;
-import static com.example.Joker_Card.First.poljeD5;
-import static com.example.Joker_Card.First.poljeD6;
-import static com.example.Joker_Card.First.poljeD7;
-import static com.example.Joker_Card.First.poljeD8;
-import static com.example.Joker_Card.First.poljeD9;
-import static com.example.Joker_Card.First.poljeD10;
-import static com.example.Joker_Card.First.poljeD11;
+import static com.example.Joker_Card.MainClass.duplakarta;
+import static com.example.Joker_Card.MainClass.dk1;
+import static com.example.Joker_Card.MainClass.dk2;
+import static com.example.Joker_Card.MainClass.dk3;
+import static com.example.Joker_Card.MainClass.dk4;
+import static com.example.Joker_Card.MainClass.dk5;
+import static com.example.Joker_Card.MainClass.dk6;
+import static com.example.Joker_Card.MainClass.dk7;
+import static com.example.Joker_Card.MainClass.dk8;
+import static com.example.Joker_Card.MainClass.dk9;
+import static com.example.Joker_Card.MainClass.dk10;
+import static com.example.Joker_Card.MainClass.dk11;
+import static com.example.Joker_Card.MainClass.poljeD1;
+import static com.example.Joker_Card.MainClass.poljeD2;
+import static com.example.Joker_Card.MainClass.poljeD3;
+import static com.example.Joker_Card.MainClass.poljeD4;
+import static com.example.Joker_Card.MainClass.poljeD5;
+import static com.example.Joker_Card.MainClass.poljeD6;
+import static com.example.Joker_Card.MainClass.poljeD7;
+import static com.example.Joker_Card.MainClass.poljeD8;
+import static com.example.Joker_Card.MainClass.poljeD9;
+import static com.example.Joker_Card.MainClass.poljeD10;
+import static com.example.Joker_Card.MainClass.poljeD11;
 
 import android.view.View;
 import android.widget.ImageView;
 
-public class Duplakarta {
+public class GambleCard {
     int dkx;
     ImageView poljeD;
-    Duplakarta() {
+    GambleCard() {
         if(duplakarta == 1) {
             dkx = dk1;
             poljeD = poljeD1;

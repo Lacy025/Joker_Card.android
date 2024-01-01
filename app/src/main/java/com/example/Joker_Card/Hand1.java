@@ -1,24 +1,24 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.First.rucno1;
-import static com.example.Joker_Card.First.rucno2;
-import static com.example.Joker_Card.First.rucno3;
-import static com.example.Joker_Card.First.rucno4;
-import static com.example.Joker_Card.First.rucno5;
-import static com.example.Joker_Card.First.rucno6;
-import static com.example.Joker_Card.First.rucno7;
-import static com.example.Joker_Card.First.rucno8;
-import static com.example.Joker_Card.First.rucno9;
-import static com.example.Joker_Card.First.rucno10;
-import static com.example.Joker_Card.First.ah;
-import static com.example.Joker_Card.First.stop;
+import static com.example.Joker_Card.MainClass.rucno1;
+import static com.example.Joker_Card.MainClass.rucno2;
+import static com.example.Joker_Card.MainClass.rucno3;
+import static com.example.Joker_Card.MainClass.rucno4;
+import static com.example.Joker_Card.MainClass.rucno5;
+import static com.example.Joker_Card.MainClass.rucno6;
+import static com.example.Joker_Card.MainClass.rucno7;
+import static com.example.Joker_Card.MainClass.rucno8;
+import static com.example.Joker_Card.MainClass.rucno9;
+import static com.example.Joker_Card.MainClass.rucno10;
+import static com.example.Joker_Card.MainClass.ah;
+import static com.example.Joker_Card.MainClass.stop;
 
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 
-public class Dobitak1 extends Activity {
+public class Hand1 extends Activity {
     int n1;
     int n2;
     int n3;
@@ -58,21 +58,21 @@ public class Dobitak1 extends Activity {
     public static int hold3;
     public static int hold4;
     public static int hold5;
-    Dobitak1() {
+    Hand1() {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                n1 = Karta1.n1;
-                n2 = Karta2.n2;
-                n3 = Karta3.n3;
-                n4 = Karta4.n4;
-                n5 = Karta5.n5;
-                b1 = Karta1.b1;
-                b2 = Karta2.b2;
-                b3 = Karta3.b3;
-                b4 = Karta4.b4;
-                b5 = Karta5.b5;
+                n1 = Card1.n1;
+                n2 = Card2.n2;
+                n3 = Card3.n3;
+                n4 = Card4.n4;
+                n5 = Card5.n5;
+                b1 = Card1.b1;
+                b2 = Card2.b2;
+                b3 = Card3.b3;
+                b4 = Card4.b4;
+                b5 = Card5.b5;
 
                 prvidobitak = 0;
                 dveiste = 0;

@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent first = new Intent(this, First.class);
+        Intent first = new Intent(this, MainClass.class);
         startActivity(first);
     }
 }

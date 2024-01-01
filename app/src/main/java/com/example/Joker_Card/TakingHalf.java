@@ -1,16 +1,16 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.First.Duplanje;
-import static com.example.Joker_Card.First.audiocount1;
-import static com.example.Joker_Card.First.audiocount100;
-import static com.example.Joker_Card.First.button_deal;
-import static com.example.Joker_Card.First.button_take;
-import static com.example.Joker_Card.First.c;
-import static com.example.Joker_Card.First.c1;
-import static com.example.Joker_Card.First.centar2;
-import static com.example.Joker_Card.First.cifra;
-import static com.example.Joker_Card.First.dobitakdb;
-import static com.example.Joker_Card.First.duplanje;
+import static com.example.Joker_Card.MainClass.Duplanje;
+import static com.example.Joker_Card.MainClass.audiocount1;
+import static com.example.Joker_Card.MainClass.audiocount100;
+import static com.example.Joker_Card.MainClass.button_deal;
+import static com.example.Joker_Card.MainClass.button_take;
+import static com.example.Joker_Card.MainClass.c;
+import static com.example.Joker_Card.MainClass.c1;
+import static com.example.Joker_Card.MainClass.centar2;
+import static com.example.Joker_Card.MainClass.cifra;
+import static com.example.Joker_Card.MainClass.dobitakdb;
+import static com.example.Joker_Card.MainClass.duplanje;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -20,7 +20,7 @@ import android.view.View;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Polovina extends Activity {
+public class TakingHalf extends Activity {
     public static Handler handler0;
     Handler handler14;
     Handler handler15;
@@ -34,7 +34,7 @@ public class Polovina extends Activity {
     private double pola1;
     private double pola2;
     int countdown;
-    Polovina() {
+    TakingHalf() {
         button_take.setText("WIN !");
         button_deal.setText("WIN !");
         pola = (Math.floor(cifra / 2));

@@ -1,19 +1,19 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.First.k5;
-import static com.example.Joker_Card.First.polje5;
-import static com.example.Joker_Card.First.pauzak;
-import static com.example.Joker_Card.First.deljenje;
-import static com.example.Joker_Card.First.audiokarta5;
+import static com.example.Joker_Card.MainClass.k5;
+import static com.example.Joker_Card.MainClass.polje5;
+import static com.example.Joker_Card.MainClass.pauzak;
+import static com.example.Joker_Card.MainClass.deljenje;
+import static com.example.Joker_Card.MainClass.audiokarta5;
 
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-public class Karta5 extends Activity {
+public class Card5 extends Activity {
     public static int n5;
     public static int b5;
-    public Karta5() {
+    public Card5() {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {

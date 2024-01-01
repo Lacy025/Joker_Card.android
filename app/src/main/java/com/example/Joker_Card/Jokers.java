@@ -1,18 +1,18 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.First.deljenje;
-import static com.example.Joker_Card.First.joker;
-import static com.example.Joker_Card.First.card;
-import static com.example.Joker_Card.First.polje1;
-import static com.example.Joker_Card.First.polje2;
-import static com.example.Joker_Card.First.polje3;
-import static com.example.Joker_Card.First.polje4;
-import static com.example.Joker_Card.First.polje5;
-import static com.example.Joker_Card.First.poljej1;
-import static com.example.Joker_Card.First.poljej2;
-import static com.example.Joker_Card.First.poljej3;
-import static com.example.Joker_Card.First.poljej4;
-import static com.example.Joker_Card.First.poljej5;
+import static com.example.Joker_Card.MainClass.deljenje;
+import static com.example.Joker_Card.MainClass.joker;
+import static com.example.Joker_Card.MainClass.card;
+import static com.example.Joker_Card.MainClass.polje1;
+import static com.example.Joker_Card.MainClass.polje2;
+import static com.example.Joker_Card.MainClass.polje3;
+import static com.example.Joker_Card.MainClass.polje4;
+import static com.example.Joker_Card.MainClass.polje5;
+import static com.example.Joker_Card.MainClass.poljej1;
+import static com.example.Joker_Card.MainClass.poljej2;
+import static com.example.Joker_Card.MainClass.poljej3;
+import static com.example.Joker_Card.MainClass.poljej4;
+import static com.example.Joker_Card.MainClass.poljej5;
 
 import android.app.Activity;
 import android.os.Handler;

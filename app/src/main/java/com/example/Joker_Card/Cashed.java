@@ -1,24 +1,24 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.First.button_deal;
-import static com.example.Joker_Card.First.kasiranje;
-import static com.example.Joker_Card.First.deljenje;
-import static com.example.Joker_Card.First.kasirano;
-import static com.example.Joker_Card.First.biodobitak;
-import static com.example.Joker_Card.First.promasaj;
-import static com.example.Joker_Card.First.izbor;
-import static com.example.Joker_Card.First.joker;
-import static com.example.Joker_Card.First.card;
-import static com.example.Joker_Card.First.button_take;
+import static com.example.Joker_Card.MainClass.button_deal;
+import static com.example.Joker_Card.MainClass.kasiranje;
+import static com.example.Joker_Card.MainClass.deljenje;
+import static com.example.Joker_Card.MainClass.kasirano;
+import static com.example.Joker_Card.MainClass.biodobitak;
+import static com.example.Joker_Card.MainClass.promasaj;
+import static com.example.Joker_Card.MainClass.izbor;
+import static com.example.Joker_Card.MainClass.joker;
+import static com.example.Joker_Card.MainClass.card;
+import static com.example.Joker_Card.MainClass.button_take;
 
 import android.app.Activity;
 import android.os.Handler;
 import android.view.View;
-public class Kasirano extends Activity {
+public class Cashed extends Activity {
     public static Handler handler9;
     public static Runnable runnable9;
     int pauzap;
-    Kasirano() {
+    Cashed() {
         if(promasaj == 1) {
             pauzap = 2000;
         }
@@ -45,13 +45,13 @@ public class Kasirano extends Activity {
                     Jokers.handler6.removeCallbacks(Jokers.runnable6);
                     Jokers.handler7.removeCallbacks(Jokers.runnable7);
                     Jokers.handler8.removeCallbacks(Jokers.runnable8);
-                    First.handler0.removeCallbacks(First.runnable0);
+                    MainClass.handler0.removeCallbacks(MainClass.runnable0);
                     joker.setText("JOKER");
                     card.setText("CARD");
                     joker.setVisibility(View.VISIBLE);
                     card.setVisibility(View.VISIBLE);
                     button_take.setText("AUTO HOLD");
-                    new Kliring();
+                    new Clearing();
                 }
         };
         handler9.postDelayed(runnable9, pauzap);

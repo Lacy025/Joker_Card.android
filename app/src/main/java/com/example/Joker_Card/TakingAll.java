@@ -1,29 +1,29 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.First.audiocount1;
-import static com.example.Joker_Card.First.audiocount100;
-import static com.example.Joker_Card.First.audiodobitnik;
-import static com.example.Joker_Card.First.audiointro;
-import static com.example.Joker_Card.First.button_deal;
-import static com.example.Joker_Card.First.button_take;
-import static com.example.Joker_Card.First.centar2;
-import static com.example.Joker_Card.First.cifra;
-import static com.example.Joker_Card.First.duplanje;
-import static com.example.Joker_Card.First.kasirano;
-import static com.example.Joker_Card.First.dobitakdb;
-import static com.example.Joker_Card.First.c;
-import static com.example.Joker_Card.First.c1;
+import static com.example.Joker_Card.MainClass.audiocount1;
+import static com.example.Joker_Card.MainClass.audiocount100;
+import static com.example.Joker_Card.MainClass.audiodobitnik;
+import static com.example.Joker_Card.MainClass.audiointro;
+import static com.example.Joker_Card.MainClass.button_deal;
+import static com.example.Joker_Card.MainClass.button_take;
+import static com.example.Joker_Card.MainClass.centar2;
+import static com.example.Joker_Card.MainClass.cifra;
+import static com.example.Joker_Card.MainClass.duplanje;
+import static com.example.Joker_Card.MainClass.kasirano;
+import static com.example.Joker_Card.MainClass.dobitakdb;
+import static com.example.Joker_Card.MainClass.c;
+import static com.example.Joker_Card.MainClass.c1;
 
 import android.app.Activity;
 import android.os.Handler;
 import android.view.View;
 
-public class Kasiranje extends Activity {
+public class TakingAll extends Activity {
     public static Handler handler9;
     public static Handler handler10;
     public static Runnable runnable9;
     public static Runnable runnable10;
-    Kasiranje() throws InterruptedException {
+    TakingAll() throws InterruptedException {
 
         int pobeda = cifra;
 

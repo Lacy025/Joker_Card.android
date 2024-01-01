@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".First"
+            android:name=".MainClass"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
@@ -43,67 +43,67 @@
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Karta1"
+            android:name=".Card1"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Karta2"
+            android:name=".Card2"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Karta3"
+            android:name=".Card3"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Karta4"
+            android:name=".Card4"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Karta5"
+            android:name=".Card5"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Dobitak1"
+            android:name=".Hand1"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Dobitak2"
+            android:name=".Hand2"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Kasiranje"
+            android:name=".TakingAll"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Kasirano"
+            android:name=".Cashed"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Kliring"
+            android:name=".Clearing"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Duplakarta"
+            android:name=".GambleCard"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
@@ -121,7 +121,7 @@
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Polovina"
+            android:name=".TakingHalf"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >

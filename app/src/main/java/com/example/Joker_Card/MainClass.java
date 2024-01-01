@@ -17,7 +17,7 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class First extends AppCompatActivity implements View.OnClickListener {
+public class MainClass extends AppCompatActivity implements View.OnClickListener {
     Button button_credit;
     Button button_bet;
     public static Button button_take;
@@ -431,16 +431,16 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             deljenje = 2;
                                             Deljenje1();
                                             pauzak = 500;
-                                            new Karta1();
+                                            new Card1();
                                             pauzak = 600;
-                                            new Karta2();
+                                            new Card2();
                                             pauzak = 700;
-                                            new Karta3();
+                                            new Card3();
                                             pauzak = 800;
-                                            new Karta4();
+                                            new Card4();
                                             pauzak = 900;
-                                            new Karta5();
-                                            new Dobitak1();
+                                            new Card5();
+                                            new Hand1();
                                             if(ah == 1) {
                                                 Stop();
                                             }
@@ -453,7 +453,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                                             Kasa();
                                         }
                                         if(kasirano == 1) {
-                                            new Kasirano();
+                                            new Cashed();
                                         }
                                     }
                                 }, 100);
@@ -499,11 +499,11 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             else if(izbor == 1) {
                 ponistavanje1();
                 ponistavanje2();
-                Dobitak1.hold1 = 0;
-                Dobitak1.hold2 = 0;
-                Dobitak1.hold3 = 0;
-                Dobitak1.hold4 = 0;
-                Dobitak1.hold5 = 0;
+                Hand1.hold1 = 0;
+                Hand1.hold2 = 0;
+                Hand1.hold3 = 0;
+                Hand1.hold4 = 0;
+                Hand1.hold5 = 0;
             }
             else if(izbor == 2) {
                 Kasa();
@@ -521,13 +521,13 @@ public class First extends AppCompatActivity implements View.OnClickListener {
             if((c > 0 && deljenje == 0) || (c > 0 && kasirano == 1)) {
                 if(kasirano == 1) {
                     intro();
-                    Kasirano.handler9.removeCallbacks(Kasirano.runnable9);
+                    Cashed.handler9.removeCallbacks(Cashed.runnable9);
                     kasiranje = 0;
                     biodobitak = 0;
                     izbor = 0;
                     kasirano = 0;
 
-                    new Kliring();
+                    new Clearing();
                 }
                 Jokers.handler1.removeCallbacks(Jokers.runnable1);
                 Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -538,7 +538,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 Jokers.handler7.removeCallbacks(Jokers.runnable7);
                 Jokers.handler8.removeCallbacks(Jokers.runnable8);
 
-                new Kliring();
+                new Clearing();
 
                 joker.setText("");
                 joker.setVisibility(View.INVISIBLE);
@@ -589,7 +589,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 rucno9.setVisibility(View.INVISIBLE);
                 rucno10.setVisibility(View.INVISIBLE);
 
-                if(Dobitak1.hold1 == 0) {
+                if(Hand1.hold1 == 0) {
                     polje1.setVisibility(View.INVISIBLE);
                     polje1.setImageResource(R.drawable.k53);
                     polje1.setVisibility(View.VISIBLE);
@@ -599,9 +599,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     }
                     karta1();
                     pauzak = pauzak + hold;
-                    new Karta1();
+                    new Card1();
                 }
-                if(Dobitak1.hold2 == 0) {
+                if(Hand1.hold2 == 0) {
                     polje2.setVisibility(View.INVISIBLE);
                     polje2.setImageResource(R.drawable.k53);
                     polje2.setVisibility(View.VISIBLE);
@@ -611,9 +611,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     }
                     karta2();
                     pauzak = pauzak + hold;
-                    new Karta2();
+                    new Card2();
                 }
-                if(Dobitak1.hold3 == 0) {
+                if(Hand1.hold3 == 0) {
                     polje3.setVisibility(View.INVISIBLE);
                     polje3.setImageResource(R.drawable.k53);
                     polje3.setVisibility(View.VISIBLE);
@@ -623,9 +623,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     }
                     karta3();
                     pauzak = pauzak + hold;
-                    new Karta3();
+                    new Card3();
                 }
-                if(Dobitak1.hold4 == 0) {
+                if(Hand1.hold4 == 0) {
                     polje4.setVisibility(View.INVISIBLE);
                     polje4.setImageResource(R.drawable.k53);
                     polje4.setVisibility(View.VISIBLE);
@@ -635,9 +635,9 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     }
                     karta4();
                     pauzak = pauzak + hold;
-                    new Karta4();
+                    new Card4();
                 }
-                if(Dobitak1.hold5 == 0) {
+                if(Hand1.hold5 == 0) {
                     polje5.setVisibility(View.INVISIBLE);
                     polje5.setImageResource(R.drawable.k53);
                     polje5.setVisibility(View.VISIBLE);
@@ -647,10 +647,10 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     }
                     karta5();
                     pauzak = pauzak + hold;
-                    new Karta5();
+                    new Card5();
                 }
                 dobitnik();
-                new Dobitak2();
+                new Hand2();
             }
             else if(izbor==2) {
                 duplanje();
@@ -660,7 +660,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                 handler0.removeCallbacks(runnable0);
                 tief.setVisibility(View.INVISIBLE);
                 hoch.setVisibility(View.INVISIBLE);
-                new Polovina();
+                new TakingHalf();
             }
         }
         if(id == R.id.stop1) {
@@ -1033,7 +1033,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    if (Dobitak1.hold1 == 1) {
+                    if (Hand1.hold1 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1041,7 +1041,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                         }
                         stopcard1();
                     }
-                    if (Dobitak1.hold2 == 1) {
+                    if (Hand1.hold2 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1049,7 +1049,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                         }
                         stopcard2();
                     }
-                    if (Dobitak1.hold3 == 1) {
+                    if (Hand1.hold3 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1057,7 +1057,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                         }
                         stopcard3();
                     }
-                    if (Dobitak1.hold4 == 1) {
+                    if (Hand1.hold4 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1065,7 +1065,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
                         }
                         stopcard4();
                     }
-                    if (Dobitak1.hold5 == 1) {
+                    if (Hand1.hold5 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1099,7 +1099,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiostop1 = MediaPlayer.create(this, R.raw.stop1);
         audiostop1.start();
         button_stop1.setBackgroundColor(Color.RED);
-        Dobitak1.hold1 = 1;
+        Hand1.hold1 = 1;
     }
     void stopcard2() {
         if (audiostop2 != null) {
@@ -1109,7 +1109,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiostop2 = MediaPlayer.create(this, R.raw.stop2);
         audiostop2.start();
         button_stop2.setBackgroundColor(Color.RED);
-        Dobitak1.hold2 = 1;
+        Hand1.hold2 = 1;
     }
     void stopcard3() {
         if (audiostop3 != null) {
@@ -1119,7 +1119,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiostop3 = MediaPlayer.create(this, R.raw.stop3);
         audiostop3.start();
         button_stop3.setBackgroundColor(Color.RED);
-        Dobitak1.hold3 = 1;
+        Hand1.hold3 = 1;
     }
     void stopcard4() {
         if (audiostop4 != null) {
@@ -1129,7 +1129,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiostop4 = MediaPlayer.create(this, R.raw.stop4);
         audiostop4.start();
         button_stop4.setBackgroundColor(Color.RED);
-        Dobitak1.hold4 = 1;
+        Hand1.hold4 = 1;
     }
     void stopcard5() {
         if (audiostop5 != null) {
@@ -1139,7 +1139,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         audiostop5 = MediaPlayer.create(this, R.raw.stop5);
         audiostop5.start();
         button_stop5.setBackgroundColor(Color.RED);
-        Dobitak1.hold5 = 1;
+        Hand1.hold5 = 1;
     }
     void ponistavanje1() {
         if (audioponistavanje != null) {
@@ -1263,7 +1263,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         count100();
         kasiranje = 1;
         try {
-            new Kasiranje();
+            new TakingAll();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -1274,7 +1274,7 @@ public class First extends AppCompatActivity implements View.OnClickListener {
         biodobitak = 0;
         kasiranje = 1;
         try {
-            new Kasiranje();
+            new TakingAll();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

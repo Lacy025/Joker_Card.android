@@ -1,48 +1,48 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.First.audiodobitnik;
-import static com.example.Joker_Card.First.button_deal;
-import static com.example.Joker_Card.First.button_stop1;
-import static com.example.Joker_Card.First.button_stop2;
-import static com.example.Joker_Card.First.button_stop3;
-import static com.example.Joker_Card.First.button_stop4;
-import static com.example.Joker_Card.First.button_stop5;
-import static com.example.Joker_Card.First.button_take;
-import static com.example.Joker_Card.First.centar2;
-import static com.example.Joker_Card.First.dob1;
-import static com.example.Joker_Card.First.dob10;
-import static com.example.Joker_Card.First.dob2;
-import static com.example.Joker_Card.First.dob3;
-import static com.example.Joker_Card.First.dob4;
-import static com.example.Joker_Card.First.dob5;
-import static com.example.Joker_Card.First.dob6;
-import static com.example.Joker_Card.First.dob7;
-import static com.example.Joker_Card.First.dob8;
-import static com.example.Joker_Card.First.dob9;
-import static com.example.Joker_Card.First.dobitakdb;
-import static com.example.Joker_Card.First.biodobitak;
-import static com.example.Joker_Card.First.dobitak;
-import static com.example.Joker_Card.First.dobitak1;
-import static com.example.Joker_Card.First.dobitak2;
-import static com.example.Joker_Card.First.dobitak3;
-import static com.example.Joker_Card.First.dobitak4;
-import static com.example.Joker_Card.First.dobitak5;
-import static com.example.Joker_Card.First.dobitak6;
-import static com.example.Joker_Card.First.dobitak7;
-import static com.example.Joker_Card.First.dobitak8;
-import static com.example.Joker_Card.First.dobitak9;
-import static com.example.Joker_Card.First.dobitak10;
-import static com.example.Joker_Card.First.table;
-import static com.example.Joker_Card.First.cifra;
-import static com.example.Joker_Card.First.izbor;
-import static com.example.Joker_Card.First.blokada;
-import static com.example.Joker_Card.First.polje1;
-import static com.example.Joker_Card.First.polje2;
-import static com.example.Joker_Card.First.polje3;
-import static com.example.Joker_Card.First.polje4;
-import static com.example.Joker_Card.First.polje5;
-import static com.example.Joker_Card.First.deljenje;
-import static com.example.Joker_Card.First.ponistavanje2;
+import static com.example.Joker_Card.MainClass.audiodobitnik;
+import static com.example.Joker_Card.MainClass.button_deal;
+import static com.example.Joker_Card.MainClass.button_stop1;
+import static com.example.Joker_Card.MainClass.button_stop2;
+import static com.example.Joker_Card.MainClass.button_stop3;
+import static com.example.Joker_Card.MainClass.button_stop4;
+import static com.example.Joker_Card.MainClass.button_stop5;
+import static com.example.Joker_Card.MainClass.button_take;
+import static com.example.Joker_Card.MainClass.centar2;
+import static com.example.Joker_Card.MainClass.dob1;
+import static com.example.Joker_Card.MainClass.dob10;
+import static com.example.Joker_Card.MainClass.dob2;
+import static com.example.Joker_Card.MainClass.dob3;
+import static com.example.Joker_Card.MainClass.dob4;
+import static com.example.Joker_Card.MainClass.dob5;
+import static com.example.Joker_Card.MainClass.dob6;
+import static com.example.Joker_Card.MainClass.dob7;
+import static com.example.Joker_Card.MainClass.dob8;
+import static com.example.Joker_Card.MainClass.dob9;
+import static com.example.Joker_Card.MainClass.dobitakdb;
+import static com.example.Joker_Card.MainClass.biodobitak;
+import static com.example.Joker_Card.MainClass.dobitak;
+import static com.example.Joker_Card.MainClass.dobitak1;
+import static com.example.Joker_Card.MainClass.dobitak2;
+import static com.example.Joker_Card.MainClass.dobitak3;
+import static com.example.Joker_Card.MainClass.dobitak4;
+import static com.example.Joker_Card.MainClass.dobitak5;
+import static com.example.Joker_Card.MainClass.dobitak6;
+import static com.example.Joker_Card.MainClass.dobitak7;
+import static com.example.Joker_Card.MainClass.dobitak8;
+import static com.example.Joker_Card.MainClass.dobitak9;
+import static com.example.Joker_Card.MainClass.dobitak10;
+import static com.example.Joker_Card.MainClass.table;
+import static com.example.Joker_Card.MainClass.cifra;
+import static com.example.Joker_Card.MainClass.izbor;
+import static com.example.Joker_Card.MainClass.blokada;
+import static com.example.Joker_Card.MainClass.polje1;
+import static com.example.Joker_Card.MainClass.polje2;
+import static com.example.Joker_Card.MainClass.polje3;
+import static com.example.Joker_Card.MainClass.polje4;
+import static com.example.Joker_Card.MainClass.polje5;
+import static com.example.Joker_Card.MainClass.deljenje;
+import static com.example.Joker_Card.MainClass.ponistavanje2;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -51,7 +51,7 @@ import android.view.View;
 
 import java.util.Locale;
 
-public class Dobitak2 extends Activity {
+public class Hand2 extends Activity {
     int n1;
     int n2;
     int n3;
@@ -82,22 +82,22 @@ public class Dobitak2 extends Activity {
     int STRFL7;
     int STRFL8;
     int STRFL9;
-    Dobitak2() {
+    Hand2() {
         ponistavanje2();
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                n1 = Karta1.n1;
-                n2 = Karta2.n2;
-                n3 = Karta3.n3;
-                n4 = Karta4.n4;
-                n5 = Karta5.n5;
-                b1 = Karta1.b1;
-                b2 = Karta2.b2;
-                b3 = Karta3.b3;
-                b4 = Karta4.b4;
-                b5 = Karta5.b5;
+                n1 = Card1.n1;
+                n2 = Card2.n2;
+                n3 = Card3.n3;
+                n4 = Card4.n4;
+                n5 = Card5.n5;
+                b1 = Card1.b1;
+                b2 = Card2.b2;
+                b3 = Card3.b3;
+                b4 = Card4.b4;
+                b5 = Card5.b5;
 
                 biodobitak = 0;
 
@@ -860,7 +860,7 @@ public class Dobitak2 extends Activity {
                     new Jokers();
                 }
             }
-        },First.pauzak);
+        }, MainClass.pauzak);
     }
     void ProveraBoje1() {
 
