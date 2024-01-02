@@ -1,6 +1,6 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.MainClass.audiodobitnik;
+import static com.example.Joker_Card.MainClass.audio_winner;
 import static com.example.Joker_Card.MainClass.button_deal;
 import static com.example.Joker_Card.MainClass.button_stop1;
 import static com.example.Joker_Card.MainClass.button_stop2;
@@ -816,7 +816,7 @@ public class Hand2 extends Activity {
                         throw new RuntimeException(e);
                     }
                     dobitakdb.setVisibility(View.VISIBLE);
-                    audiodobitnik.start();
+                    audio_winner.start();
                     button_stop1.setVisibility(View.INVISIBLE);
                     button_stop2.setVisibility(View.INVISIBLE);
                     button_stop3.setVisibility(View.INVISIBLE);

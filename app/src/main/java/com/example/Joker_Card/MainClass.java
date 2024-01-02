@@ -87,31 +87,30 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     static int interval;
     static int cheat;
     int hold;
-    MediaPlayer audiokredit;
-    MediaPlayer audioulog;
-    MediaPlayer audioautohold;
-    MediaPlayer audiodeljenje1;
-    MediaPlayer audioponistavanje;
-    MediaPlayer audiodeljenje2;
-    public static MediaPlayer audiokarta1;
-    public static MediaPlayer audiokarta2;
-    public static MediaPlayer audiokarta3;
-    public static MediaPlayer audiokarta4;
-    public static MediaPlayer audiokarta5;
-    public static MediaPlayer audiokarta12345;
-    public static MediaPlayer audiodobitnik;
-    public static MediaPlayer audiointro;
-    public static MediaPlayer audiocount1;
-    public static MediaPlayer audiocount100;
-    public static MediaPlayer audiostop;
-    public static MediaPlayer audiostop1;
-    public static MediaPlayer audiostop2;
-    public static MediaPlayer audiostop3;
-    public static MediaPlayer audiostop4;
-    public static MediaPlayer audiostop5;
-    public static MediaPlayer audiotief;
-    public static MediaPlayer audiohoch;
-    public static MediaPlayer audiobingo;
+    MediaPlayer audio_credit;
+    MediaPlayer audio_bet;
+    MediaPlayer audio_auto_hold;
+    MediaPlayer audio_deal_cards_1;
+    MediaPlayer audio_clear;
+    MediaPlayer audio_deal_cards_2;
+    public static MediaPlayer audio_card_1;
+    public static MediaPlayer audio_card_2;
+    public static MediaPlayer audio_card_3;
+    public static MediaPlayer audio_card_4;
+    public static MediaPlayer audio_card_5;
+    MediaPlayer audio_cards;
+    public static MediaPlayer audio_winner;
+    public static MediaPlayer audio_intro;
+    public static MediaPlayer audio_count_1;
+    public static MediaPlayer audio_count_100;
+    public static MediaPlayer audio_stop_1;
+    public static MediaPlayer audio_stop_2;
+    public static MediaPlayer audio_stop_3;
+    public static MediaPlayer audio_stop_4;
+    public static MediaPlayer audio_stop_5;
+    public static MediaPlayer audio_low;
+    public static MediaPlayer audio_high;
+    public static MediaPlayer audio_bingo;
     public TextView ah1;
     public static ImageView polje1;
     public static ImageView polje2;
@@ -168,8 +167,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static TextView dobitakdb;
     public static TextView tief;
     public static TextView hoch;
-    public TextView doubletief;
-    public TextView doublehoch;
     public static TextView tief1;
     public static TextView tief2;
     public static TextView tief3;
@@ -338,7 +335,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         timer3 = new Timer();
 
         intro();
-        audiointro.start();
+        audio_intro.start();
         Ulog();
         new Jokers();
         timer1.schedule(task1 = new TimerTask() {
@@ -745,7 +742,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         poljeD10.setImageResource(R.drawable.k53);
         poljeD11.setImageResource(R.drawable.k53);
         poljeD12.setImageResource(R.drawable.k53);
-        audiodobitnik.stop();
+        audio_winner.stop();
         interval= 400;
         doubling = 1;
         double_card = 1;
@@ -890,14 +887,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 public void run() {
                     if(doubling == 1) {
                         if(HochTief[0] == 1) {
-                            audiohoch.start();
+                            audio_high.start();
                             tief.setVisibility(View.INVISIBLE);
                             hoch.setVisibility(View.VISIBLE);
                             HochTief[0] = 2;
 
                         }
                         else {
-                            audiotief.start();
+                            audio_low.start();
                             hoch.setVisibility(View.INVISIBLE);
                             tief.setVisibility(View.VISIBLE);
                             HochTief[0] = 1;
@@ -910,30 +907,30 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
     }
     void intro() {
-        if (audiointro != null) {
-            audiointro.reset();
-            audiointro.release();
-            audiointro = null;
+        if (audio_intro != null) {
+            audio_intro.reset();
+            audio_intro.release();
+            audio_intro = null;
         }
-        audiointro = MediaPlayer.create(this, R.raw.intro);
+        audio_intro = MediaPlayer.create(this, R.raw.intro);
     }
     void kredit() {
         if (c == 0 && game == 0) {
             game = 1;
-            if(audiointro != null) {
-                audiointro.reset();
-                audiointro.release();
-                audiointro = null;
+            if(audio_intro != null) {
+                audio_intro.reset();
+                audio_intro.release();
+                audio_intro = null;
             }
         }
-        if (audiokredit != null) {
-            audiokredit.reset();
-            audiokredit.release();
-            audiokredit = null;
+        if (audio_credit != null) {
+            audio_credit.reset();
+            audio_credit.release();
+            audio_credit = null;
 
         }
-        audiokredit = MediaPlayer.create(this, R.raw.kredit);
-        audiokredit.start();
+        audio_credit = MediaPlayer.create(this, R.raw.kredit);
+        audio_credit.start();
     }
     void Ulog() {
         final TextView u1 = findViewById(R.id.vrednost_u);
@@ -973,30 +970,31 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         d_10.setText(String.format(Locale.getDefault(), "%d", (win10)));
     }
     void ulog() {
-        if (audioulog != null) {
-            audioulog.reset();
-            audioulog.release();
-            audioulog = null;
+        if (audio_bet != null) {
+            audio_bet.reset();
+            audio_bet.release();
+            audio_bet = null;
         }
-        audioulog = MediaPlayer.create(this, R.raw.ulog);
-        audioulog.start();
+        audio_bet = MediaPlayer.create(this, R.raw.ulog);
+        audio_bet.start();
     }
     void autohold() {
-        if (audioautohold != null) {
-            audioautohold.reset();
-            audioautohold.release();
-            audioautohold = null;
+        if (audio_auto_hold != null) {
+            audio_auto_hold.reset();
+            audio_auto_hold.release();
+            audio_auto_hold = null;
         }
-        audioautohold = MediaPlayer.create(this, R.raw.autohold);
-        audioautohold.start();
+        audio_auto_hold = MediaPlayer.create(this, R.raw.autohold);
+        audio_auto_hold.start();
     }
     void deljenje() {
-        if (audiodeljenje1 != null) {
-            audiodeljenje1.reset();
-            audiodeljenje1 = null;
+        if (audio_deal_cards_1 != null) {
+            audio_deal_cards_1.reset();
+            audio_deal_cards_1.release();
+            audio_deal_cards_1 = null;
         }
-        audiodeljenje1 = MediaPlayer.create(this, R.raw.deljenje1);
-        audiodeljenje1.start();
+        audio_deal_cards_1 = MediaPlayer.create(this, R.raw.deljenje1);
+        audio_deal_cards_1.start();
     }
     void deljenje1() {
 
@@ -1085,70 +1083,70 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }, 0,200);
     }
     void karta12345() {
-        if (audiokarta12345 != null) {
-            audiokarta12345.reset();
-            audiokarta12345 = null;
+        if (audio_cards != null) {
+            audio_cards.reset();
+            audio_cards = null;
         }
-        audiokarta12345 = MediaPlayer.create(this, R.raw.karte12345);
-        audiokarta12345.start();
+        audio_cards = MediaPlayer.create(this, R.raw.karte12345);
+        audio_cards.start();
     }
     void stopcard1() {
-        if (audiostop1 != null) {
-            audiostop1.reset();
-            audiostop1 = null;
+        if (audio_stop_1 != null) {
+            audio_stop_1.reset();
+            audio_stop_1 = null;
         }
-        audiostop1 = MediaPlayer.create(this, R.raw.stop1);
-        audiostop1.start();
+        audio_stop_1 = MediaPlayer.create(this, R.raw.stop1);
+        audio_stop_1.start();
         button_stop1.setBackgroundColor(Color.RED);
         Hand1.hold1 = 1;
     }
     void stopcard2() {
-        if (audiostop2 != null) {
-            audiostop2.reset();
-            audiostop2 = null;
+        if (audio_stop_2 != null) {
+            audio_stop_2.reset();
+            audio_stop_2 = null;
         }
-        audiostop2 = MediaPlayer.create(this, R.raw.stop2);
-        audiostop2.start();
+        audio_stop_2 = MediaPlayer.create(this, R.raw.stop2);
+        audio_stop_2.start();
         button_stop2.setBackgroundColor(Color.RED);
         Hand1.hold2 = 1;
     }
     void stopcard3() {
-        if (audiostop3 != null) {
-            audiostop3.reset();
-            audiostop3 = null;
+        if (audio_stop_3 != null) {
+            audio_stop_3.reset();
+            audio_stop_3 = null;
         }
-        audiostop3 = MediaPlayer.create(this, R.raw.stop3);
-        audiostop3.start();
+        audio_stop_3 = MediaPlayer.create(this, R.raw.stop3);
+        audio_stop_3.start();
         button_stop3.setBackgroundColor(Color.RED);
         Hand1.hold3 = 1;
     }
     void stopcard4() {
-        if (audiostop4 != null) {
-            audiostop4.reset();
-            audiostop4 = null;
+        if (audio_stop_4 != null) {
+            audio_stop_4.reset();
+            audio_stop_4 = null;
         }
-        audiostop4 = MediaPlayer.create(this, R.raw.stop4);
-        audiostop4.start();
+        audio_stop_4 = MediaPlayer.create(this, R.raw.stop4);
+        audio_stop_4.start();
         button_stop4.setBackgroundColor(Color.RED);
         Hand1.hold4 = 1;
     }
     void stopcard5() {
-        if (audiostop5 != null) {
-            audiostop5.reset();
-            audiostop5 = null;
+        if (audio_stop_5 != null) {
+            audio_stop_5.reset();
+            audio_stop_5 = null;
         }
-        audiostop5 = MediaPlayer.create(this, R.raw.stop5);
-        audiostop5.start();
+        audio_stop_5 = MediaPlayer.create(this, R.raw.stop5);
+        audio_stop_5.start();
         button_stop5.setBackgroundColor(Color.RED);
         Hand1.hold5 = 1;
     }
     void ponistavanje1() {
-        if (audioponistavanje != null) {
-            audioponistavanje.reset();
-            audioponistavanje = null;
+        if (audio_clear != null) {
+            audio_clear.reset();
+            audio_clear = null;
         }
-        audioponistavanje = MediaPlayer.create(this, R.raw.ponistavanje);
-        audioponistavanje.start();
+        audio_clear = MediaPlayer.create(this, R.raw.ponistavanje);
+        audio_clear.start();
     }
     public static void ponistavanje2() {
         button_stop1.setBackgroundColor(Color.parseColor("#000000"));
@@ -1158,83 +1156,83 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_stop5.setBackgroundColor(Color.parseColor("#000000"));
     }
     void deljenje2() {
-        if (audiodeljenje2 != null) {
-            audiodeljenje2.reset();
-            audiodeljenje2 = null;
+        if (audio_deal_cards_2 != null) {
+            audio_deal_cards_2.reset();
+            audio_deal_cards_2 = null;
         }
-        audiodeljenje2 = MediaPlayer.create(this, R.raw.deljenje2);
-        audiodeljenje2.start();
+        audio_deal_cards_2 = MediaPlayer.create(this, R.raw.deljenje2);
+        audio_deal_cards_2.start();
     }
     void karta1() {
-        if (audiokarta1 != null) {
-            audiokarta1.reset();
-            audiokarta1 = null;
+        if (audio_card_1 != null) {
+            audio_card_1.reset();
+            audio_card_1 = null;
         }
-        audiokarta1 = MediaPlayer.create(this, R.raw.karta1);
+        audio_card_1 = MediaPlayer.create(this, R.raw.karta1);
     }
     void karta2() {
-        if (audiokarta2 != null) {
-            audiokarta2.reset();
-            audiokarta2 = null;
+        if (audio_card_2 != null) {
+            audio_card_2.reset();
+            audio_card_2 = null;
         }
-        audiokarta2 = MediaPlayer.create(this, R.raw.karta2);
+        audio_card_2 = MediaPlayer.create(this, R.raw.karta2);
     }
     void karta3() {
-        if (audiokarta3 != null) {
-            audiokarta3.reset();
-            audiokarta3 = null;
+        if (audio_card_3 != null) {
+            audio_card_3.reset();
+            audio_card_3 = null;
         }
-        audiokarta3 = MediaPlayer.create(this, R.raw.karta3);
+        audio_card_3 = MediaPlayer.create(this, R.raw.karta3);
     }
     void karta4() {
-        if (audiokarta4 != null) {
-            audiokarta4.reset();
-            audiokarta4 = null;
+        if (audio_card_4 != null) {
+            audio_card_4.reset();
+            audio_card_4 = null;
         }
-        audiokarta4 = MediaPlayer.create(this, R.raw.karta4);
+        audio_card_4 = MediaPlayer.create(this, R.raw.karta4);
     }
     void karta5() {
-        if (audiokarta5 != null) {
-            audiokarta5.reset();
-            audiokarta5 = null;
+        if (audio_card_5 != null) {
+            audio_card_5.reset();
+            audio_card_5 = null;
         }
-        audiokarta5 = MediaPlayer.create(this, R.raw.karta5);
+        audio_card_5 = MediaPlayer.create(this, R.raw.karta5);
     }
     void dobitnik() {
-        if (audiodobitnik != null) {
-            audiodobitnik.reset();
-            audiodobitnik = null;
+        if (audio_winner != null) {
+            audio_winner.reset();
+            audio_winner = null;
         }
-        audiodobitnik = MediaPlayer.create(this, R.raw.dobitnik);
+        audio_winner = MediaPlayer.create(this, R.raw.dobitnik);
     }
 
     void count1() {
-        if (audiocount1 != null) {
-            audiocount1.reset();
-            audiocount1 = null;
+        if (audio_count_1 != null) {
+            audio_count_1.reset();
+            audio_count_1 = null;
         }
-        audiocount1 = MediaPlayer.create(this,R.raw.isplata1);
+        audio_count_1 = MediaPlayer.create(this,R.raw.isplata1);
     }
     void count100() {
-        if (audiocount100 != null) {
-            audiocount100.reset();
-            audiocount100 = null;
+        if (audio_count_100 != null) {
+            audio_count_100.reset();
+            audio_count_100 = null;
         }
-        audiocount100 = MediaPlayer.create(this, R.raw.isplata100);
+        audio_count_100 = MediaPlayer.create(this, R.raw.isplata100);
     }
     void Tief() {
-        if(audiotief != null) {
-            audiotief.reset();
-            audiotief = null;
+        if(audio_low != null) {
+            audio_low.reset();
+            audio_low = null;
         }
-        audiotief = MediaPlayer.create(this, R.raw.tief);
+        audio_low = MediaPlayer.create(this, R.raw.tief);
     }
     void Hoch() {
-        if(audiohoch != null) {
-            audiohoch.reset();
-            audiohoch = null;
+        if(audio_high != null) {
+            audio_high.reset();
+            audio_high = null;
         }
-        audiohoch = MediaPlayer.create(this, R.raw.hoch);
+        audio_high = MediaPlayer.create(this, R.raw.hoch);
     }
     public static void Bingo() {
         handler0.removeCallbacks(runnable0);
@@ -1242,17 +1240,17 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         dobitakdb.setText(String.format(Locale.getDefault(), "%d", (cash)));
         centar2.setText(R.string.win);
         centar2.setVisibility(View.VISIBLE);
-        audiobingo.start();
+        audio_bingo.start();
         interval -=25;
     }
     void bingo() {
-        if (audiobingo != null) {
-            audiobingo .reset();
-            audiobingo  = null;
+        if (audio_bingo != null) {
+            audio_bingo .reset();
+            audio_bingo  = null;
         }
         Hoch();
         Tief();
-        audiobingo  = MediaPlayer.create(this, R.raw.bingo);
+        audio_bingo  = MediaPlayer.create(this, R.raw.bingo);
     }
     void Kasa() {
         choice = 3;

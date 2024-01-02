@@ -4,7 +4,7 @@ import static com.example.Joker_Card.MainClass.k1;
 import static com.example.Joker_Card.MainClass.polje1;
 import static com.example.Joker_Card.MainClass.delaying;
 import static com.example.Joker_Card.MainClass.dealing;
-import static com.example.Joker_Card.MainClass.audiokarta1;
+import static com.example.Joker_Card.MainClass.audio_card_1;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -287,7 +287,7 @@ public class Card1 extends Activity {
                 }
                 polje1.setVisibility(View.VISIBLE);
                 if (dealing == 3) {
-                    audiokarta1.start();
+                    audio_card_1.start();
                 }
             }
         },delaying);

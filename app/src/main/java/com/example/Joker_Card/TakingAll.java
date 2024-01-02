@@ -1,9 +1,9 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.MainClass.audiocount1;
-import static com.example.Joker_Card.MainClass.audiocount100;
-import static com.example.Joker_Card.MainClass.audiodobitnik;
-import static com.example.Joker_Card.MainClass.audiointro;
+import static com.example.Joker_Card.MainClass.audio_count_1;
+import static com.example.Joker_Card.MainClass.audio_count_100;
+import static com.example.Joker_Card.MainClass.audio_winner;
+import static com.example.Joker_Card.MainClass.audio_intro;
 import static com.example.Joker_Card.MainClass.button_deal;
 import static com.example.Joker_Card.MainClass.button_take;
 import static com.example.Joker_Card.MainClass.centar2;
@@ -40,9 +40,9 @@ public class TakingAll extends Activity {
             }
         }
         else {
-            audiodobitnik.reset();
-            audiodobitnik.release();
-            audiodobitnik = null;
+            audio_winner.reset();
+            audio_winner.release();
+            audio_winner = null;
         }
         doubling = 0;
 
@@ -78,14 +78,14 @@ public class TakingAll extends Activity {
                 }
                 else  {
                     if(pobeda < 101) {
-                        audiocount100.start();
+                        audio_count_100.start();
                         try {
                             Thread.sleep(1000);
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     }
-                    audiointro.start();
+                    audio_intro.start();
                     profit = 1;
                 }
             }
@@ -97,7 +97,7 @@ public class TakingAll extends Activity {
         c1.setText(Integer.toString(c));
         cash -= 1;
         dobitakdb.setText(Integer.toString(cash));
-        audiocount1.start();
+        audio_count_1.start();
         if(cash == 0) {
             pobedio();
             button_deal.setText(R.string.deal_cards);
@@ -108,7 +108,7 @@ public class TakingAll extends Activity {
         c1.setText(Integer.toString(c));
         cash -= 100;
         dobitakdb.setText(Integer.toString(cash));
-        audiocount100.start();
+        audio_count_100.start();
         if(cash == 0) {
             pobedio();
             button_deal.setText(R.string.deal_cards);

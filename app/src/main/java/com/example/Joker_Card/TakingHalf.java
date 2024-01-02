@@ -1,8 +1,8 @@
 package com.example.Joker_Card;
 
 import static com.example.Joker_Card.MainClass.Duplanje;
-import static com.example.Joker_Card.MainClass.audiocount1;
-import static com.example.Joker_Card.MainClass.audiocount100;
+import static com.example.Joker_Card.MainClass.audio_count_1;
+import static com.example.Joker_Card.MainClass.audio_count_100;
 import static com.example.Joker_Card.MainClass.button_deal;
 import static com.example.Joker_Card.MainClass.button_take;
 import static com.example.Joker_Card.MainClass.c;
@@ -21,10 +21,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class TakingHalf extends Activity {
-    public static Handler handler0;
+    Handler handler16;
     Handler handler14;
     Handler handler15;
-    public static Runnable runnable0;
+    Runnable runnable16;
     Runnable runnable14;
     Runnable runnable15;
     Timer timer4;
@@ -50,7 +50,7 @@ public class TakingHalf extends Activity {
                 runOnUiThread(() -> new Handler(Looper.getMainLooper()).postDelayed(
                         () -> {
                             if(cash == pola) {
-                                handler0.removeCallbacks(runnable0);
+                                handler16.removeCallbacks(runnable16);
                                 centar2.setVisibility(View.VISIBLE);
                                 timer4.cancel();
                                 timer4.purge();
@@ -59,19 +59,19 @@ public class TakingHalf extends Activity {
             }
         }, 0, 20);
 
-        handler0 = new Handler();
-        runnable0 = new Runnable() {
+        handler16 = new Handler();
+        runnable16 = new Runnable() {
             boolean isVisible = true;
             @Override
             public void run() {
                 isVisible = !isVisible;
                 if(cash > 0) {
                     centar2.setVisibility(isVisible ? View.INVISIBLE : View.VISIBLE);
-                    handler0.postDelayed(this, 400);
+                    handler16.postDelayed(this, 400);
                 }
             }
         };
-        handler0.post(runnable0);
+        handler16.post(runnable16);
 
         if(cash < 200) {
             handler14 = new Handler();
@@ -85,8 +85,7 @@ public class TakingHalf extends Activity {
                         }
                         else {
                             countdown = 0;
-                            //handler14.postDelayed(this, 1000);
-                            audiocount100.start();
+                            audio_count_100.start();
                             pobedio();
                             try {
                                 Thread.sleep(1000);
@@ -143,14 +142,14 @@ public class TakingHalf extends Activity {
         c1.setText(Integer.toString(c));
         cash -= 1;
         dobitakdb.setText(Integer.toString(cash));
-        audiocount1.start();
+        audio_count_1.start();
     }
     void minussto() {
         c += 100;
         c1.setText(Integer.toString(c));
         cash -= 100;
         dobitakdb.setText(Integer.toString(cash));
-        audiocount100.start();
+        audio_count_100.start();
     }
     void prvideo() {
         c += pola1;
@@ -158,16 +157,17 @@ public class TakingHalf extends Activity {
         cash -= pola1;
         deo = cash;
         dobitakdb.setText(Integer.toString(cash));
-        audiocount100.start();
+        audio_count_100.start();
     }
     void drugideo() {
         c += pola2;
         c1.setText(Integer.toString(c));
         cash -= pola2;
         dobitakdb.setText(Integer.toString(cash));
-        audiocount100.start();
+        audio_count_100.start();
     }
     void pobedio() {
+        handler16.removeCallbacks(runnable16);
         centar2.setVisibility(View.INVISIBLE);
         doubling = 1;
         button_take.setText(R.string.take_all);

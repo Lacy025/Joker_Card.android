@@ -45,7 +45,6 @@ public class Cashed extends Activity {
                     Jokers.handler6.removeCallbacks(Jokers.runnable6);
                     Jokers.handler7.removeCallbacks(Jokers.runnable7);
                     Jokers.handler8.removeCallbacks(Jokers.runnable8);
-                    MainClass.handler0.removeCallbacks(MainClass.runnable0);
                     joker.setText(R.string.joker);
                     card.setText(R.string.card);
                     joker.setVisibility(View.VISIBLE);
