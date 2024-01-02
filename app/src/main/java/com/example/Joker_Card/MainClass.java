@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -27,8 +28,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static Button button_stop3;
     public static Button button_stop4;
     public static Button button_stop5;
-    static Button button_tief;
-    static Button button_hoch;
+    static Button button_low;
+    static Button button_high;
     public static int c = 0;
     public static TextView c1;
     int game;
@@ -242,10 +243,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_stop5 = (Button) findViewById(R.id.stop5);
         button_stop5.setOnClickListener(this);
 
-        button_tief = (Button) findViewById(R.id.double_tief);
-        button_tief.setOnClickListener(this);
-        button_hoch= (Button) findViewById(R.id.double_hoch);
-        button_hoch.setOnClickListener(this);
+        button_low = (Button) findViewById(R.id.double_tief);
+        button_low.setOnClickListener(this);
+        button_high = (Button) findViewById(R.id.double_hoch);
+        button_high.setOnClickListener(this);
 
         levodole1 = findViewById(R.id.levo);
         desnodole1 = findViewById(R.id.desno);
@@ -471,7 +472,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 kredit();
                 game = 1;
                 c += 100;
-                c1.setText(Integer.toString(c));
+                c1.setText(String.format(Locale.getDefault(), "%d", (c)));
             }
         }
         if(id == R.id.bet) {
@@ -510,8 +511,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             else if (doubling == 1) {
                 doubling = 0;
-                button_tief.setVisibility(View.INVISIBLE);
-                button_hoch.setVisibility(View.INVISIBLE);
+                button_low.setVisibility(View.INVISIBLE);
+                button_high.setVisibility(View.INVISIBLE);
                 tief.setVisibility(View.INVISIBLE);
                 hoch.setVisibility(View.INVISIBLE);
                 Kasa();
@@ -552,7 +553,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 centar1.setVisibility(View.INVISIBLE);
 
                 c = c - u;
-                c1.setText(Integer.toString(c));
+                c1.setText(String.format(Locale.getDefault(), "%d", (c)));
 
                 polje1.setVisibility(View.VISIBLE);
                 polje2.setVisibility(View.VISIBLE);
@@ -721,8 +722,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         desnodole2.setVisibility(View.INVISIBLE);
         button_take.setText(R.string.take_all);
         button_deal.setText(R.string.take_half);
-        button_tief.setVisibility(View.VISIBLE);
-        button_hoch.setVisibility(View.VISIBLE);
+        button_low.setVisibility(View.VISIBLE);
+        button_high.setVisibility(View.VISIBLE);
         intro();
         count1();
         count100();
@@ -948,7 +949,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         final TextView d_10 = findViewById(R.id.vrednost_10);
         dobitakdb = findViewById(R.id.vrednostdb);
 
-        u1.setText(Integer.toString(u));
+        u1.setText(String.format(Locale.getDefault(), "%d", (u)));
         win1 = d1 * u;
         win2 = d2 * u;
         win3 = d3 * u;
@@ -960,16 +961,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         win9 = d9 * u;
         win10 = d10 * u;
 
-        d_1.setText(Integer.toString(win1));
-        d_2.setText(Integer.toString(win2));
-        d_3.setText(Integer.toString(win3));
-        d_4.setText(Integer.toString(win4));
-        d_5.setText(Integer.toString(win5));
-        d_6.setText(Integer.toString(win6));
-        d_7.setText(Integer.toString(win7));
-        d_8.setText(Integer.toString(win8));
-        d_9.setText(Integer.toString(win9));
-        d_10.setText(Integer.toString(win10));
+        d_1.setText(String.format(Locale.getDefault(), "%d", (win1)));
+        d_2.setText(String.format(Locale.getDefault(), "%d", (win2)));
+        d_3.setText(String.format(Locale.getDefault(), "%d", (win3)));
+        d_4.setText(String.format(Locale.getDefault(), "%d", (win4)));
+        d_5.setText(String.format(Locale.getDefault(), "%d", (win5)));
+        d_6.setText(String.format(Locale.getDefault(), "%d", (win6)));
+        d_7.setText(String.format(Locale.getDefault(), "%d", (win7)));
+        d_8.setText(String.format(Locale.getDefault(), "%d", (win8)));
+        d_9.setText(String.format(Locale.getDefault(), "%d", (win9)));
+        d_10.setText(String.format(Locale.getDefault(), "%d", (win10)));
     }
     void ulog() {
         if (audioulog != null) {
@@ -1004,14 +1005,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-/**/
+/*
         k1=2;
 
         k2=14;
         k3=1;
         k4=9;
         k5=16;
-
+*/
 
     }
     void Deljenje1() {
@@ -1238,7 +1239,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static void Bingo() {
         handler0.removeCallbacks(runnable0);
         cash *= 2;
-        dobitakdb.setText(Integer.toString(cash));
+        dobitakdb.setText(String.format(Locale.getDefault(), "%d", (cash)));
         centar2.setText(R.string.win);
         centar2.setVisibility(View.VISIBLE);
         audiobingo.start();

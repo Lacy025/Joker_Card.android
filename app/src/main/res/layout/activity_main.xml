@@ -34,7 +34,7 @@
 
         <ImageView
             android:id="@+id/rucno3"
-            android:layout_marginTop="@dimen/_minus1sdp"
+            android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
             android:src="@drawable/rucno"
@@ -64,7 +64,7 @@
 
         <ImageView
             android:id="@+id/rucno6"
-            android:layout_marginTop="@dimen/_minus1sdp"
+            android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
             android:src="@drawable/rucno"
@@ -94,7 +94,7 @@
 
         <ImageView
             android:id="@+id/rucno9"
-            android:layout_marginTop="@dimen/_minus1sdp"
+            android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
             android:src="@drawable/rucno"

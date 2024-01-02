@@ -78,7 +78,7 @@ public class Clearing {
         MainClass.hoch9.setVisibility(View.INVISIBLE);
         MainClass.hoch10.setVisibility(View.INVISIBLE);
         MainClass.hoch11.setVisibility(View.INVISIBLE);
-        MainClass.button_tief.setVisibility(View.INVISIBLE);
-        MainClass.button_hoch.setVisibility(View.INVISIBLE);
+        MainClass.button_low.setVisibility(View.INVISIBLE);
+        MainClass.button_high.setVisibility(View.INVISIBLE);
     }
 }
