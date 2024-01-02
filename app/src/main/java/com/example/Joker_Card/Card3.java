@@ -2,8 +2,8 @@ package com.example.Joker_Card;
 
 import static com.example.Joker_Card.MainClass.k3;
 import static com.example.Joker_Card.MainClass.polje3;
-import static com.example.Joker_Card.MainClass.pauzak;
-import static com.example.Joker_Card.MainClass.deljenje;
+import static com.example.Joker_Card.MainClass.delaying;
+import static com.example.Joker_Card.MainClass.dealing;
 import static com.example.Joker_Card.MainClass.audiokarta3;
 
 import android.app.Activity;
@@ -286,10 +286,10 @@ public class Card3 extends Activity {
                     b3 = 4;
                 }
                 polje3.setVisibility(View.VISIBLE);
-                if (deljenje == 3) {
+                if (dealing == 3) {
                     audiokarta3.start();
                 }
             }
-        },pauzak);
+        },delaying);
     }
 }

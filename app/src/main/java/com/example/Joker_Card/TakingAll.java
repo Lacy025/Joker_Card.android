@@ -7,9 +7,9 @@ import static com.example.Joker_Card.MainClass.audiointro;
 import static com.example.Joker_Card.MainClass.button_deal;
 import static com.example.Joker_Card.MainClass.button_take;
 import static com.example.Joker_Card.MainClass.centar2;
-import static com.example.Joker_Card.MainClass.cifra;
-import static com.example.Joker_Card.MainClass.duplanje;
-import static com.example.Joker_Card.MainClass.kasirano;
+import static com.example.Joker_Card.MainClass.cash;
+import static com.example.Joker_Card.MainClass.doubling;
+import static com.example.Joker_Card.MainClass.profit;
 import static com.example.Joker_Card.MainClass.dobitakdb;
 import static com.example.Joker_Card.MainClass.c;
 import static com.example.Joker_Card.MainClass.c1;
@@ -25,14 +25,14 @@ public class TakingAll extends Activity {
     public static Runnable runnable10;
     TakingAll() throws InterruptedException {
 
-        int pobeda = cifra;
+        int pobeda = cash;
 
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
         centar2.setText(R.string.win);
         centar2.setVisibility(View.VISIBLE);
 
-        if(cifra > 9999 && duplanje == 0) {
+        if(cash > 9999 && doubling == 0) {
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
@@ -44,7 +44,7 @@ public class TakingAll extends Activity {
             audiodobitnik.release();
             audiodobitnik = null;
         }
-        duplanje = 0;
+        doubling = 0;
 
         handler9 = new Handler();
         runnable9 = new Runnable() {
@@ -52,7 +52,7 @@ public class TakingAll extends Activity {
             @Override
             public void run() {
                 isVisible = !isVisible;
-                if(cifra > 0) {
+                if(cash > 0) {
                     centar2.setVisibility(isVisible ? View.INVISIBLE : View.VISIBLE);
                     handler9.postDelayed(this, 400);
                 }
@@ -67,7 +67,7 @@ public class TakingAll extends Activity {
         runnable10 = new Runnable() {
             @Override
             public void run() {
-                double kasa = cifra;
+                double kasa = cash;
                 if(((int)(kasa/100) * 100) != ((kasa/100) * 100)) {
                     minusjedan();
                     handler10.postDelayed(this, 40);
@@ -86,7 +86,7 @@ public class TakingAll extends Activity {
                         }
                     }
                     audiointro.start();
-                    kasirano = 1;
+                    profit = 1;
                 }
             }
         };
@@ -95,10 +95,10 @@ public class TakingAll extends Activity {
     void minusjedan() {
         c += 1;
         c1.setText(Integer.toString(c));
-        cifra -= 1;
-        dobitakdb.setText(Integer.toString(cifra));
+        cash -= 1;
+        dobitakdb.setText(Integer.toString(cash));
         audiocount1.start();
-        if(cifra == 0) {
+        if(cash == 0) {
             pobedio();
             button_deal.setText(R.string.deal_cards);
         }
@@ -106,10 +106,10 @@ public class TakingAll extends Activity {
     void minussto() {
         c += 100;
         c1.setText(Integer.toString(c));
-        cifra -= 100;
-        dobitakdb.setText(Integer.toString(cifra));
+        cash -= 100;
+        dobitakdb.setText(Integer.toString(cash));
         audiocount100.start();
-        if(cifra == 0) {
+        if(cash == 0) {
             pobedio();
             button_deal.setText(R.string.deal_cards);
         }

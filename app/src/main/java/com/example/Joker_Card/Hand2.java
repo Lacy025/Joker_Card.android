@@ -9,18 +9,19 @@ import static com.example.Joker_Card.MainClass.button_stop4;
 import static com.example.Joker_Card.MainClass.button_stop5;
 import static com.example.Joker_Card.MainClass.button_take;
 import static com.example.Joker_Card.MainClass.centar2;
-import static com.example.Joker_Card.MainClass.dob1;
-import static com.example.Joker_Card.MainClass.dob10;
-import static com.example.Joker_Card.MainClass.dob2;
-import static com.example.Joker_Card.MainClass.dob3;
-import static com.example.Joker_Card.MainClass.dob4;
-import static com.example.Joker_Card.MainClass.dob5;
-import static com.example.Joker_Card.MainClass.dob6;
-import static com.example.Joker_Card.MainClass.dob7;
-import static com.example.Joker_Card.MainClass.dob8;
-import static com.example.Joker_Card.MainClass.dob9;
+import static com.example.Joker_Card.MainClass.delaying;
+import static com.example.Joker_Card.MainClass.win1;
+import static com.example.Joker_Card.MainClass.win10;
+import static com.example.Joker_Card.MainClass.win2;
+import static com.example.Joker_Card.MainClass.win3;
+import static com.example.Joker_Card.MainClass.win4;
+import static com.example.Joker_Card.MainClass.win5;
+import static com.example.Joker_Card.MainClass.win6;
+import static com.example.Joker_Card.MainClass.win7;
+import static com.example.Joker_Card.MainClass.win8;
+import static com.example.Joker_Card.MainClass.win9;
 import static com.example.Joker_Card.MainClass.dobitakdb;
-import static com.example.Joker_Card.MainClass.biodobitak;
+import static com.example.Joker_Card.MainClass.won;
 import static com.example.Joker_Card.MainClass.dobitak;
 import static com.example.Joker_Card.MainClass.dobitak1;
 import static com.example.Joker_Card.MainClass.dobitak2;
@@ -33,16 +34,17 @@ import static com.example.Joker_Card.MainClass.dobitak8;
 import static com.example.Joker_Card.MainClass.dobitak9;
 import static com.example.Joker_Card.MainClass.dobitak10;
 import static com.example.Joker_Card.MainClass.table;
-import static com.example.Joker_Card.MainClass.cifra;
-import static com.example.Joker_Card.MainClass.izbor;
-import static com.example.Joker_Card.MainClass.blokada;
+import static com.example.Joker_Card.MainClass.cash;
+import static com.example.Joker_Card.MainClass.choice;
+import static com.example.Joker_Card.MainClass.block;
 import static com.example.Joker_Card.MainClass.polje1;
 import static com.example.Joker_Card.MainClass.polje2;
 import static com.example.Joker_Card.MainClass.polje3;
 import static com.example.Joker_Card.MainClass.polje4;
 import static com.example.Joker_Card.MainClass.polje5;
-import static com.example.Joker_Card.MainClass.deljenje;
+import static com.example.Joker_Card.MainClass.dealing;
 import static com.example.Joker_Card.MainClass.ponistavanje2;
+import static com.example.Joker_Card.MainClass.win1;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -99,7 +101,7 @@ public class Hand2 extends Activity {
                 b4 = Card4.b4;
                 b5 = Card5.b5;
 
-                biodobitak = 0;
+                won = 0;
 
                 Fiveofakind = 0;
                 Royalflush = 0;
@@ -114,14 +116,14 @@ public class Hand2 extends Activity {
 
                 // FIVE OF A KIND
 
-                if (biodobitak == 0) {
+                if (won == 0) {
                     if (((n1 == n2) && (n2 == n3) && (n3 == n4) && (n5 == 0)) ||
                             ((n1 == n2) && (n2 == n3) && (n4 == 0) && (n3 == n5)) ||
                             ((n1 == n2) && (n3 == 0) && (n2 == n4) && (n4 == n5)) ||
                             ((n1 == n3) && (n2 == 0) && (n3 == n4) && (n4 == n5)) ||
                             ((n1 == 0) && (n2 == n3) && (n3 == n4) && (n4 == n5))) {
 
-                        biodobitak++;
+                        won++;
                         Fiveofakind = 1;
                     }
                 }
@@ -139,7 +141,7 @@ public class Hand2 extends Activity {
                 STRFL8 = 0;
                 STRFL9 = 0;
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         ROYAL++;
@@ -168,7 +170,7 @@ public class Hand2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 9-13
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL9++;
@@ -197,7 +199,7 @@ public class Hand2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 8-12
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL8++;
@@ -226,7 +228,7 @@ public class Hand2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 7-11
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL7++;
@@ -255,7 +257,7 @@ public class Hand2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 6-10
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL6++;
@@ -284,7 +286,7 @@ public class Hand2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 5-9
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL5++;
@@ -313,7 +315,7 @@ public class Hand2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 4-8
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL4++;
@@ -342,7 +344,7 @@ public class Hand2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 3-7
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL3++;
@@ -371,7 +373,7 @@ public class Hand2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 2-6
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL2++;
@@ -400,7 +402,7 @@ public class Hand2 extends Activity {
                 // STREET FLUSH OR STREET
                 // 1-5
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0 || n2 == 0 || n3 == 0 || n4 == 0 || n5 == 0) {
                         STRFL1++;
@@ -428,7 +430,7 @@ public class Hand2 extends Activity {
 
                 // POKER
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (((n1 == n2) && (n2 == n3) && (n3 == n4)) ||
                             ((n1 == n2) && (n2 == n3) && (n4 == 0)) ||
@@ -436,7 +438,7 @@ public class Hand2 extends Activity {
                             ((n1 == n3) && (n2 == 0) && (n3 == n4)) ||
                             ((n1 == 0) && (n2 == n3) && (n3 == n4))) {
 
-                        biodobitak++;
+                        won++;
                         Poker = 1;
                     }
 
@@ -446,7 +448,7 @@ public class Hand2 extends Activity {
                             ((n1 == n3) && (n2 == 0) && (n3 == n5)) ||
                             ((n1 == 0) && (n2 == n3) && (n3 == n5))) {
 
-                        biodobitak++;
+                        won++;
                         Poker = 1;
                     }
 
@@ -456,7 +458,7 @@ public class Hand2 extends Activity {
                             ((n1 == n4) && (n2 == 0) && (n4 == n5)) ||
                             ((n1 == 0) && (n2 == n4) && (n4 == n5))) {
 
-                        biodobitak++;
+                        won++;
                         Poker = 1;
                     }
 
@@ -466,7 +468,7 @@ public class Hand2 extends Activity {
                             ((n1 == n4) && (n3 == 0) && (n4 == n5)) ||
                             ((n1 == 0) && (n3 == n4) && (n4 == n5))) {
 
-                        biodobitak++;
+                        won++;
                         Poker = 1;
                     }
 
@@ -476,14 +478,14 @@ public class Hand2 extends Activity {
                             ((n2 == n4) && (n3 == 0) && (n4 == n5)) ||
                             ((n2 == 0) && (n3 == n4) && (n4 == n5))) {
 
-                        biodobitak++;
+                        won++;
                         Poker = 1;
                     }
                 }
 
                 //FULL HOUSE
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (((n1 == n2) && (n2 == n3) && (n4 == n5)) ||
                             ((n1 == n2) && (n3 == n4) && (n4 == n5)) ||
@@ -511,14 +513,14 @@ public class Hand2 extends Activity {
                             ((n1 == 0) && (n2 == n4) && (n3 == n5)) ||
                             ((n1 == 0) && (n2 == n5) && (n3 == n4))) {
 
-                        biodobitak++;
+                        won++;
                         Fullhouse = 1;
                     }
                 }
 
                 //FLUSH
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (((b1 == b2) && (b2 == b3) && (b3 == b4) && (b4 == b5)) ||
                             ((b1 == b2) && (b2 == b3) && (b3 == b4) && (n5 == 0)) ||
@@ -527,171 +529,171 @@ public class Hand2 extends Activity {
                             ((b1 == b3) && (n2 == 0) && (b3 == b4) && (b4 == b5)) ||
                             ((n1 == 0) && (b2 == b3) && (b3 == b4) && (b4 == b5))) {
 
-                        biodobitak++;
+                        won++;
                         Flush = 1;
                     }
                 }
 
                 //THREE OF A KIND
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (((n1 == n2) && (n2 == n3)) || ((n1 == n2) && (n3 == 0)) || ((n1 == n3) && (n2 == 0)) || ((n2 == n3) && (n1 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n2) && (n2 == n4)) || ((n1 == n2) && (n4 == 0)) || ((n1 == n4) && (n2 == 0)) || ((n2 == n4) && (n1 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n2) && (n2 == n5)) || ((n1 == n2) && (n5 == 0)) || ((n1 == n5) && (n2 == 0)) || ((n2 == n5) && (n1 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n3) && (n3 == n4)) || ((n1 == n3) && (n4 == 0)) || ((n1 == n4) && (n3 == 0)) || ((n3 == n4) && (n1 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n3) && (n3 == n5)) || ((n1 == n3) && (n5 == 0)) || ((n1 == n5) && (n3 == 0)) || ((n3 == n5) && (n1 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
 
                     if (((n1 == n4) && (n4 == n5)) || ((n1 == n4) && (n5 == 0)) || ((n1 == n5) && (n4 == 0)) || ((n4 == n5) && (n1 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
 
                     if (((n2 == n3) && (n3 == n4)) || ((n2 == n3) && (n4 == 0)) || ((n2 == n4) && (n3 == 0)) || ((n3 == n4) && (n2 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
 
                     if (((n2 == n3) && (n3 == n5)) || ((n2 == n3) && (n5 == 0)) || ((n2 == n5) && (n3 == 0)) || ((n3 == n5) && (n2 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
 
                     if (((n2 == n4) && (n4 == n5)) || ((n2 == n4) && (n5 == 0)) || ((n2 == n5) && (n4 == 0)) || ((n4 == n5) && (n2 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
 
                     if (((n3 == n4) && (n4 == n5)) || ((n3 == n4) && (n5 == 0)) || ((n3 == n5) && (n4 == 0)) || ((n4 == n5) && (n3 == 0))) {
 
-                        biodobitak++;
+                        won++;
                         Threeofakind = 1;
                     }
                 }
 
                 //2 PAIRS
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (((n1 == n2) && (n3 == n4)) || ((n1 == n3) && (n2 == n4)) || ((n1 == n4) && (n2 == n3))) {
 
-                        biodobitak++;
+                        won++;
                         Twopairs = 1;
                     }
 
                     if (((n1 == n2) && (n3 == n5)) || ((n1 == n3) && (n2 == n5)) || ((n1 == n5) && (n2 == n3))) {
 
-                        biodobitak++;
+                        won++;
                         Twopairs = 1;
                     }
 
                     if (((n1 == n2) && (n4 == n5)) || ((n1 == n5) && (n2 == n4)) || ((n1 == n4) && (n2 == n5))) {
 
-                        biodobitak++;
+                        won++;
                         Twopairs = 1;
                     }
 
                     if (((n1 == n3) && (n4 == n5)) || ((n1 == n5) && (n3 == n4)) || ((n1 == n4) && (n3 == n5))) {
 
-                        biodobitak++;
+                        won++;
                         Twopairs = 1;
                     }
 
                     if (((n2 == n3) && (n4 == n5)) || ((n3 == n5) && (n2 == n4)) || ((n3 == n4) && (n2 == n5))) {
 
-                        biodobitak++;
+                        won++;
                         Twopairs = 1;
                     }
                 }
 
                 //HIGH PAIR
 
-                if (biodobitak == 0) {
+                if (won == 0) {
                     if (n1 == n2) {
                         if (n1 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n1 == n3) {
                         if (n1 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n1 == n4) {
                         if (n1 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n1 == n5) {
                         if (n1 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n2 == n3) {
                         if (n2 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n2 == n4) {
                         if (n2 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n2 == n5) {
                         if (n2 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n3 == n4) {
                         if (n3 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n3 == n5) {
                         if (n3 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n4 == n5) {
                         if (n4 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
@@ -700,35 +702,35 @@ public class Hand2 extends Activity {
 
                 //HIGH PAIR WITH JOKER
 
-                if (biodobitak == 0) {
+                if (won == 0) {
 
                     if (n1 == 0) {
                         if (n2 > 10 || n3 > 10 || n4 > 10 || n5 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n2 == 0) {
                         if (n1 > 10 || n3 > 10 || n4 > 10 || n5 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n3 == 0) {
                         if (n1 > 10 || n2 > 10 || n4 > 10 || n5 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n4 == 0) {
                         if (n1 > 10 || n2 > 10 || n3 > 10 || n5 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
                     if (n5 == 0) {
                         if (n1 > 10 || n2 > 10 || n3 > 10 || n4 > 10) {
-                            biodobitak++;
+                            won++;
                             Highpair = 1;
                         }
                     }
@@ -739,74 +741,73 @@ public class Hand2 extends Activity {
                     table.setVisibility(View.VISIBLE);
                     dobitak1.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob1)));
-                    dobitakdb.setText(Integer.toString(dob1));
-                    cifra = dob1;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win1)));
+                    cash = win1;
                 }
                 if (Royalflush == 1) {
                     table.setVisibility(View.VISIBLE);
                     dobitak2.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob2)));
-                    cifra = dob2;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win2)));
+                    cash = win2;
                 }
                 if (Streetflush == 1) {
                     table.setVisibility(View.VISIBLE);
                     dobitak3.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob3)));
-                    cifra = dob3;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win3)));
+                    cash = win3;
                 }
                 if (Poker == 1) {
                     table.setVisibility(View.VISIBLE);
                     dobitak4.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob4)));
-                    cifra = dob4;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win4)));
+                    cash = win4;
                 }
                 if (Fullhouse == 1) {
                     table.setVisibility(View.VISIBLE);
                     dobitak5.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob5)));
-                    cifra = dob5;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win5)));
+                    cash = win5;
                 }
                 if (Flush == 1) {
                     table.setVisibility(View.VISIBLE);
                     dobitak6.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob6)));
-                    cifra = dob6;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win6)));
+                    cash = win6;
                 }
                 if (Street == 1) {
                     table.setVisibility(View.VISIBLE);
                     dobitak7.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob7)));
-                    cifra = dob7;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win7)));
+                    cash = win7;
                 }
                 if (Threeofakind == 1) {
                     table.setVisibility(View.VISIBLE);
                     dobitak8.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob8)));
-                    cifra = dob8;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win8)));
+                    cash = win8;
                 }
                 if (Twopairs == 1) {
                     table.setVisibility(View.VISIBLE);
                     dobitak9.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob9)));
-                    cifra = dob9;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win9)));
+                    cash = win9;
                 }
                 if (Highpair == 1) {
                     table.setVisibility(View.VISIBLE);
                     dobitak10.setVisibility(View.VISIBLE);
                     dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (dob10)));
-                    cifra = dob10;
+                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win10)));
+                    cash = win10;
                 }
-                if (biodobitak == 1) {
+                if (won == 1) {
                     button_take.setText(R.string.cash);
                     button_deal.setText(R.string.gamble);
                     try {
@@ -822,9 +823,9 @@ public class Hand2 extends Activity {
                     button_stop4.setVisibility(View.INVISIBLE);
                     button_stop5.setVisibility(View.INVISIBLE);
 
-                    izbor = 2;
-                    if(cifra > 9999) {
-                        blokada = 1;
+                    choice = 2;
+                    if(cash > 9999) {
+                        block = 1;
                         centar2.setText(R.string.win);
                         centar2.setVisibility(View.VISIBLE);
                         button_take.setText(R.string.win);
@@ -848,7 +849,7 @@ public class Hand2 extends Activity {
                     polje3.setVisibility(View.INVISIBLE);
                     polje4.setVisibility(View.INVISIBLE);
                     polje5.setVisibility(View.INVISIBLE);
-                    deljenje = 0;
+                    dealing = 0;
                     Jokers.handler1.removeCallbacks(Jokers.runnable1);
                     Jokers.handler2.removeCallbacks(Jokers.runnable2);
                     Jokers.handler3.removeCallbacks(Jokers.runnable3);
@@ -860,11 +861,11 @@ public class Hand2 extends Activity {
                     new Jokers();
                 }
             }
-        }, MainClass.pauzak);
+        }, delaying);
     }
     void ProveraBoje1() {
 
-        biodobitak++;
+        won++;
 
         if (((b1 == b2) && (b2 == b3) && (b3 == b4) && (n5 == 0)) ||
                 ((b1 == b2) && (b2 == b3) && (n4 == 0) && (b3 == b5)) ||
@@ -881,7 +882,7 @@ public class Hand2 extends Activity {
     }
     void ProveraBoje2() {
 
-        biodobitak++;
+        won++;
 
         if (((b1 == b2) && (b2 == b3) && (b3 == b4) && (n5 == 0)) ||
                 ((b1 == b2) && (b2 == b3) && (n4 == 0) && (b3 == b5)) ||

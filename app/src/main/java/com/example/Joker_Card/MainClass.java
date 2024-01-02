@@ -35,28 +35,28 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     int u = 1;
     static int ah = 1;
     final int d1 = 1100;
-    public static int dob1;
+    public static int win1;
     final int d2 = 500;
-    public static int dob2;
+    public static int win2;
     final int d3 = 100;
-    public static int dob3;
+    public static int win3;
     final int d4 = 40;
-    public static int dob4;
+    public static int win4;
     final int d5 = 10;
-    public static int dob5;
+    public static int win5;
     final int d6 = 7;
-    public static int dob6;
+    public static int win6;
     final int d7 = 5;
-    public static int dob7;
+    public static int win7;
     final int d8 = 3;
-    public static int dob8;
+    public static int win8;
     final int d9 = 2;
-    public static int dob9;
+    public static int win9;
     final int d10 = 1;
-    public static int dob10;
-    public static int deljenje;
+    public static int win10;
+    public static int dealing;
     public static int stop;
-    public static int izbor;
+    public static int choice;
     public static int k1;
     public static int k2;
     public static int k3;
@@ -74,16 +74,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static int dk9;
     public static int dk10;
     public static int dk11;
-    public static int pauzak;
-    public static int kasiranje;
-    public static int cifra;
-    public static int biodobitak;
-    public static int kasirano;
-    public static int blokada;
-    public static int duplanje;
-    public static int duplakarta;
-    public static int promasaj;
-    static int pauzad;
+    public static int delaying;
+    public static int taking;
+    public static int cash;
+    public static int won;
+    public static int profit;
+    public static int block;
+    public static int doubling;
+    public static int double_card;
+    public static int missed;
+    static int interval;
     static int cheat;
     int hold;
     MediaPlayer audiokredit;
@@ -214,10 +214,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        deljenje = 0;
+        dealing = 0;
         stop = 0;
-        izbor = 0;
-        cifra = 0;
+        choice = 0;
+        cash = 0;
 
         button_credit = (Button) findViewById(R.id.credit);
         button_credit.setOnClickListener(this);
@@ -364,12 +364,12 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 runOnUiThread(() -> {
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
-                                if(c == 0 && deljenje == 0) {
+                                if(c == 0 && dealing == 0) {
                                     levodole1.setText(R.string.lacika_baci);
                                     levodole1.setVisibility(View.VISIBLE);
                                     desnodole1.setVisibility(View.INVISIBLE);
                                 }
-                                if(c > 0 && deljenje == 0) {
+                                if(c > 0 && dealing == 0) {
                                     levodole1.setVisibility(View.INVISIBLE);
                                     desnodole1.setVisibility(View.INVISIBLE);
                                     centar1.setText(R.string.choose_bet);
@@ -377,31 +377,31 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                     button_take.setText(R.string.auto_hold);
                                     button_deal.setText(R.string.deal_cards);
                                 }
-                                if(c > 0 && deljenje == 2) {
+                                if(c > 0 && dealing == 2) {
                                     centar1.setText(R.string.pick_cards);
                                     centar1.setVisibility(View.VISIBLE);
                                     button_take.setText(R.string.clear_cards);
                                 }
-                                if(biodobitak == 1) {
+                                if(won == 1) {
                                     levodole2.setVisibility(View.VISIBLE);
                                     desnodole2.setVisibility(View.INVISIBLE);
                                 }
                             }, 1000);
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
-                                if(c == 0 && deljenje == 0) {
+                                if(c == 0 && dealing == 0) {
                                     levodole1.setVisibility(View.INVISIBLE);
                                     desnodole1.setText(R.string.serbia_2023);
                                     desnodole1.setVisibility(View.VISIBLE);
                                 }
-                                if((c > 0 && deljenje == 0) || (c > 0 && deljenje == 2)) {
+                                if((c > 0 && dealing == 0) || (c > 0 && dealing == 2)) {
                                     levodole1.setText("");
                                     levodole1.setVisibility(View.INVISIBLE);
                                     desnodole1.setVisibility(View.INVISIBLE);
                                     centar1.setText(R.string.press_deal_cards);
                                     centar1.setVisibility(View.VISIBLE);
                                 }
-                                if(biodobitak == 1) {
+                                if(won == 1) {
                                     levodole2.setVisibility(View.INVISIBLE);
                                     desnodole2.setVisibility(View.VISIBLE);
                                 }
@@ -419,40 +419,40 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         new Handler((Looper.getMainLooper())).postDelayed(
                                 new Runnable() {
                                     public void run() {
-                                        if(deljenje == 0 && c > 0 && u > c) {
+                                        if(dealing == 0 && c > 0 && u > c) {
                                             u = c;
                                             Ulog();
                                         }
-                                        if(deljenje == 0 && c==0 && game==1) {
+                                        if(dealing == 0 && c==0 && game==1) {
                                             u = 1;
                                             Ulog();
                                         }
-                                        if(deljenje == 1) {
-                                            deljenje = 2;
+                                        if(dealing == 1) {
+                                            dealing = 2;
                                             Deljenje1();
-                                            pauzak = 500;
+                                            delaying = 500;
                                             new Card1();
-                                            pauzak = 600;
+                                            delaying = 600;
                                             new Card2();
-                                            pauzak = 700;
+                                            delaying = 700;
                                             new Card3();
-                                            pauzak = 800;
+                                            delaying = 800;
                                             new Card4();
-                                            pauzak = 900;
+                                            delaying = 900;
                                             new Card5();
                                             new Hand1();
                                             if(ah == 1) {
                                                 Stop();
                                             }
                                             else {
-                                                izbor = 1;
+                                                choice = 1;
                                             }
                                         }
-                                        if(blokada == 1) {
-                                            blokada = 0;
+                                        if(block == 1) {
+                                            block = 0;
                                             Kasa();
                                         }
-                                        if(kasirano == 1) {
+                                        if(profit == 1) {
                                             new Cashed();
                                         }
                                     }
@@ -466,7 +466,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
         int id = view.getId();
         if(id == R.id.credit) {
-            if (c < 4901 && deljenje == 0) {
+            if (c < 4901 && dealing == 0) {
                 intro();
                 kredit();
                 game = 1;
@@ -475,7 +475,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
         }
         if(id == R.id.bet) {
-            if(c > 0 && deljenje==0) {
+            if(c > 0 && dealing == 0) {
                 ulog();
                 u += 1;
                 if(u==99 || u > c) {
@@ -485,7 +485,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
         }
         if(id == R.id.take) {
-            if (c > 0 && deljenje == 0) {
+            if (c > 0 && dealing == 0) {
                 if (ah == 1) {
                     ah1.setTextColor(Color.BLACK);
                     ah = 0;
@@ -496,7 +496,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 }
                 autohold();
             }
-            else if(izbor == 1) {
+            else if(choice == 1) {
                 ponistavanje1();
                 ponistavanje2();
                 Hand1.hold1 = 0;
@@ -505,11 +505,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 Hand1.hold4 = 0;
                 Hand1.hold5 = 0;
             }
-            else if(izbor == 2) {
+            else if(choice == 2) {
                 Kasa();
             }
-            else if (duplanje == 1) {
-                duplanje = 0;
+            else if (doubling == 1) {
+                doubling = 0;
                 button_tief.setVisibility(View.INVISIBLE);
                 button_hoch.setVisibility(View.INVISIBLE);
                 tief.setVisibility(View.INVISIBLE);
@@ -518,14 +518,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
         }
         if(id == R.id.deal) {
-            if((c > 0 && deljenje == 0) || (c > 0 && kasirano == 1)) {
-                if(kasirano == 1) {
+            if((c > 0 && dealing == 0) || (c > 0 && profit == 1)) {
+                if(profit == 1) {
                     intro();
                     Cashed.handler9.removeCallbacks(Cashed.runnable9);
-                    kasiranje = 0;
-                    biodobitak = 0;
-                    izbor = 0;
-                    kasirano = 0;
+                    taking = 0;
+                    won = 0;
+                    choice = 0;
+                    profit = 0;
 
                     new Clearing();
                 }
@@ -568,16 +568,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         k2 == k5 || k3 == k4 || k3 == k5 || k4 == k5) {
                     deljenje1();
                 }
-                deljenje = 1;
+                dealing = 1;
             }
-            else if(izbor == 1) {
+            else if(choice == 1) {
                 deljenje2();
-                izbor = 0;
-                deljenje = 3;
+                choice = 0;
+                dealing = 3;
                 centar1.setText("");
                 centar1.setVisibility(View.INVISIBLE);
                 hold = 300;
-                pauzak = 50;
+                delaying = 50;
                 rucno1.setVisibility(View.INVISIBLE);
                 rucno2.setVisibility(View.INVISIBLE);
                 rucno3.setVisibility(View.INVISIBLE);
@@ -598,7 +598,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         k1 = (int) Math.floor(Math.random() * 53);
                     }
                     karta1();
-                    pauzak = pauzak + hold;
+                    delaying = delaying + hold;
                     new Card1();
                 }
                 if(Hand1.hold2 == 0) {
@@ -610,7 +610,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         k2 = (int) Math.floor(Math.random() * 53);
                     }
                     karta2();
-                    pauzak = pauzak + hold;
+                    delaying = delaying + hold;
                     new Card2();
                 }
                 if(Hand1.hold3 == 0) {
@@ -622,7 +622,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         k3 = (int) Math.floor(Math.random() * 53);
                     }
                     karta3();
-                    pauzak = pauzak + hold;
+                    delaying = delaying + hold;
                     new Card3();
                 }
                 if(Hand1.hold4 == 0) {
@@ -634,7 +634,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         k4 = (int) Math.floor(Math.random() * 53);
                     }
                     karta4();
-                    pauzak = pauzak + hold;
+                    delaying = delaying + hold;
                     new Card4();
                 }
                 if(Hand1.hold5 == 0) {
@@ -646,16 +646,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         k5 = (int) Math.floor(Math.random() * 53);
                     }
                     karta5();
-                    pauzak = pauzak + hold;
+                    delaying = delaying + hold;
                     new Card5();
                 }
                 dobitnik();
                 new Hand2();
             }
-            else if(izbor==2) {
+            else if(choice == 2) {
                 duplanje();
             }
-            else if(duplanje == 1 && cifra > 1) {
+            else if(doubling == 1 && cash > 1) {
                 id = 0;
                 handler0.removeCallbacks(runnable0);
                 tief.setVisibility(View.INVISIBLE);
@@ -664,33 +664,33 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
         }
         if(id == R.id.stop1) {
-            if(izbor == 1) {
+            if(choice == 1) {
                 stopcard1();
             }
         }
         if(id == R.id.stop2) {
-            if(izbor == 1) {
+            if(choice == 1) {
                 stopcard2();
             }
         }
         if(id == R.id.stop3) {
-            if(izbor == 1) {
+            if(choice == 1) {
                 stopcard3();
             }
         }
         if(id == R.id.stop4) {
-            if(izbor == 1) {
+            if(choice == 1) {
                 stopcard4();
             }
         }
         if(id == R.id.stop5) {
-            if(izbor == 1) {
+            if(choice == 1) {
                 stopcard5();
             }
         }
         if(id == R.id.double_tief) {
-            if(duplanje == 1) {
-                duplanje = 0;
+            if(doubling == 1) {
+                doubling = 0;
                 tief.setVisibility(View.INVISIBLE);
                 hoch.setVisibility(View.INVISIBLE);
                 try {
@@ -701,8 +701,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
         }
         if(id == R.id.double_hoch) {
-            if(duplanje == 1) {
-                duplanje = 0;
+            if(doubling == 1) {
+                doubling = 0;
                 tief.setVisibility(View.INVISIBLE);
                 hoch.setVisibility(View.INVISIBLE);
                 try {
@@ -714,9 +714,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
     }
     void duplanje() {
-        izbor = 3;
-        biodobitak = 0;
-        pauzad = 400;
+        choice = 3;
+        won = 0;
+        interval = 400;
         levodole2.setVisibility(View.INVISIBLE);
         desnodole2.setVisibility(View.INVISIBLE);
         button_take.setText(R.string.take_all);
@@ -745,21 +745,21 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         poljeD11.setImageResource(R.drawable.k53);
         poljeD12.setImageResource(R.drawable.k53);
         audiodobitnik.stop();
-        pauzad = 400;
-        duplanje = 1;
-        duplakarta = 1;
+        interval= 400;
+        doubling = 1;
+        double_card = 1;
         dk = 0;
         Duplanje();
     }
     public static void Duplanje() {
 
-        if(duplakarta == 1) {
+        if(double_card == 1) {
             poljeD1.setVisibility(View.VISIBLE);
             dk1 = (int) Math.floor(Math.random() * 48) + 1;
             cheat = dk1;
             TiefHoch();
         }
-        if(duplakarta == 2) {
+        if(double_card == 2) {
             poljeD2.setVisibility(View.VISIBLE);
             dk2 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk2 == dk1) {
@@ -768,7 +768,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk2;
             TiefHoch();
         }
-        if(duplakarta == 3) {
+        if(double_card == 3) {
             poljeD3.setVisibility(View.VISIBLE);
             dk3 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk3 == dk1 || dk3 == dk2) {
@@ -777,7 +777,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk3;
             TiefHoch();
         }
-        if(duplakarta == 4) {
+        if(double_card == 4) {
             poljeD4.setVisibility(View.VISIBLE);
             dk4 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk4 == dk1 || dk4 == dk2 || dk4 == dk3) {
@@ -786,7 +786,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk4;
             TiefHoch();
         }
-        if(duplakarta == 5) {
+        if(double_card == 5) {
             poljeD5.setVisibility(View.VISIBLE);
             dk5 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk5 == dk1 || dk5 == dk2 ||
@@ -796,7 +796,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk5;
             TiefHoch();
         }
-        if(duplakarta == 6) {
+        if(double_card == 6) {
             poljeD6.setVisibility(View.VISIBLE);
             dk6 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk6 == dk1 || dk6 == dk2 || dk6 == dk3 ||
@@ -806,7 +806,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk6;
             TiefHoch();
         }
-        if(duplakarta == 7) {
+        if(double_card == 7) {
             poljeD7.setVisibility(View.VISIBLE);
             dk7 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk7 == dk1 || dk7 == dk2 || dk7 == dk3 ||
@@ -816,7 +816,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk7;
             TiefHoch();
         }
-        if(duplakarta == 8) {
+        if(double_card == 8) {
             poljeD8.setVisibility(View.VISIBLE);
             dk8 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk8 == dk1 || dk8 == dk2 || dk8 == dk3 || dk8 == dk4 ||
@@ -826,7 +826,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk8;
             TiefHoch();
         }
-        if(duplakarta == 9) {
+        if(double_card == 9) {
             poljeD9.setVisibility(View.VISIBLE);
             dk9 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk9 == dk1 || dk9 == dk2 || dk9 == dk3 || dk9 == dk4 ||
@@ -836,7 +836,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk9;
             TiefHoch();
         }
-        if(duplakarta == 10) {
+        if(double_card == 10) {
             poljeD10.setVisibility(View.VISIBLE);
             dk10 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk10 == dk1 || dk10 == dk2 || dk10 == dk3 ||
@@ -847,7 +847,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk10;
             TiefHoch();
         }
-        if(duplakarta == 11) {
+        if(double_card == 11) {
             poljeD11.setVisibility(View.VISIBLE);
             dk11 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk11 == dk1 || dk11 == dk2 || dk11 == dk3 || dk11 == dk4 ||
@@ -858,7 +858,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             cheat = dk11;
             TiefHoch();
         }
-        if(duplakarta == 12) {
+        if(double_card == 12) {
             handler0.removeCallbacks(runnable0);
             poljeD12.setVisibility(View.VISIBLE);
             Blokada();
@@ -877,7 +877,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             button_stop1.setVisibility(View.INVISIBLE);
         }
 */
-        if(cifra > 9999) {
+        if(cash > 9999) {
             Blokada();
         }
         else {
@@ -887,7 +887,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             runnable0 = new Runnable() {
                 @Override
                 public void run() {
-                    if(duplanje == 1) {
+                    if(doubling == 1) {
                         if(HochTief[0] == 1) {
                             audiohoch.start();
                             tief.setVisibility(View.INVISIBLE);
@@ -901,7 +901,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             tief.setVisibility(View.VISIBLE);
                             HochTief[0] = 1;
                         }
-                        handler0.postDelayed(this, pauzad);
+                        handler0.postDelayed(this, interval);
                     }
                 }
             };
@@ -949,27 +949,27 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         dobitakdb = findViewById(R.id.vrednostdb);
 
         u1.setText(Integer.toString(u));
-        dob1 = d1 * u;
-        dob2 = d2 * u;
-        dob3 = d3 * u;
-        dob4 = d4 * u;
-        dob5 = d5 * u;
-        dob6 = d6 * u;
-        dob7 = d7 * u;
-        dob8 = d8 * u;
-        dob9 = d9 * u;
-        dob10 = d10 * u;
+        win1 = d1 * u;
+        win2 = d2 * u;
+        win3 = d3 * u;
+        win4 = d4 * u;
+        win5 = d5 * u;
+        win6 = d6 * u;
+        win7 = d7 * u;
+        win8 = d8 * u;
+        win9 = d9 * u;
+        win10 = d10 * u;
 
-        d_1.setText(Integer.toString(dob1));
-        d_2.setText(Integer.toString(dob2));
-        d_3.setText(Integer.toString(dob3));
-        d_4.setText(Integer.toString(dob4));
-        d_5.setText(Integer.toString(dob5));
-        d_6.setText(Integer.toString(dob6));
-        d_7.setText(Integer.toString(dob7));
-        d_8.setText(Integer.toString(dob8));
-        d_9.setText(Integer.toString(dob9));
-        d_10.setText(Integer.toString(dob10));
+        d_1.setText(Integer.toString(win1));
+        d_2.setText(Integer.toString(win2));
+        d_3.setText(Integer.toString(win3));
+        d_4.setText(Integer.toString(win4));
+        d_5.setText(Integer.toString(win5));
+        d_6.setText(Integer.toString(win6));
+        d_7.setText(Integer.toString(win7));
+        d_8.setText(Integer.toString(win8));
+        d_9.setText(Integer.toString(win9));
+        d_10.setText(Integer.toString(win10));
     }
     void ulog() {
         if (audioulog != null) {
@@ -1004,14 +1004,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-/*
-        k1=0;
+/**/
+        k1=2;
 
-        k2=1;
-        k3=14;
-        k4=27;
-        k5=5;
-*/
+        k2=14;
+        k3=1;
+        k4=9;
+        k5=16;
+
 
     }
     void Deljenje1() {
@@ -1078,7 +1078,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    izbor = 1;
+                    choice = 1;
                 }
             }
         }, 0,200);
@@ -1237,12 +1237,12 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     }
     public static void Bingo() {
         handler0.removeCallbacks(runnable0);
-        cifra *= 2;
-        dobitakdb.setText(Integer.toString(cifra));
+        cash *= 2;
+        dobitakdb.setText(Integer.toString(cash));
         centar2.setText(R.string.win);
         centar2.setVisibility(View.VISIBLE);
         audiobingo.start();
-        pauzad -=25;
+        interval -=25;
     }
     void bingo() {
         if (audiobingo != null) {
@@ -1254,14 +1254,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audiobingo  = MediaPlayer.create(this, R.raw.bingo);
     }
     void Kasa() {
-        izbor = 3;
-        biodobitak = 0;
+        choice = 3;
+        won = 0;
         levodole2.setVisibility(View.INVISIBLE);
         desnodole2.setVisibility(View.INVISIBLE);
         intro();
         count1();
         count100();
-        kasiranje = 1;
+        taking = 1;
         try {
             new TakingAll();
         } catch (InterruptedException e) {
@@ -1269,10 +1269,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
     }
     static void Blokada() {
-        izbor = 3;
-        duplanje = 1;
-        biodobitak = 0;
-        kasiranje = 1;
+        choice = 3;
+        doubling = 1;
+        won = 0;
+        taking = 1;
         try {
             new TakingAll();
         } catch (InterruptedException e) {

@@ -1,6 +1,6 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.MainClass.duplakarta;
+import static com.example.Joker_Card.MainClass.double_card;
 import static com.example.Joker_Card.MainClass.dk1;
 import static com.example.Joker_Card.MainClass.dk2;
 import static com.example.Joker_Card.MainClass.dk3;
@@ -31,57 +31,57 @@ public class GambleCard {
     int dkx;
     ImageView poljeD;
     GambleCard() {
-        if(duplakarta == 1) {
+        if(double_card == 1) {
             dkx = dk1;
             poljeD = poljeD1;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 2) {
+        if(double_card == 2) {
             dkx = dk2;
             poljeD = poljeD2;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 3) {
+        if(double_card == 3) {
             dkx = dk3;
             poljeD = poljeD3;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 4) {
+        if(double_card == 4) {
             dkx = dk4;
             poljeD = poljeD4;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 5) {
+        if(double_card == 5) {
             dkx = dk5;
             poljeD = poljeD5;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 6) {
+        if(double_card == 6) {
             dkx = dk6;
             poljeD = poljeD6;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 7) {
+        if(double_card == 7) {
             dkx = dk7;
             poljeD = poljeD7;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 8) {
+        if(double_card == 8) {
             dkx = dk8;
             poljeD = poljeD8;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 9) {
+        if(double_card == 9) {
             dkx = dk9;
             poljeD = poljeD9;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 10) {
+        if(double_card == 10) {
             dkx = dk10;
             poljeD = poljeD10;
             poljeD.setVisibility(View.INVISIBLE);
         }
-        if(duplakarta == 11) {
+        if(double_card == 11) {
             dkx = dk11;
             poljeD = poljeD11;
             poljeD.setVisibility(View.INVISIBLE);
@@ -232,47 +232,47 @@ public class GambleCard {
             poljeD.setImageResource(R.drawable.k52);
         }
 
-        if(duplakarta == 1) {
+        if(double_card == 1) {
             poljeD1 = poljeD;
             poljeD1.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 2) {
+        if(double_card == 2) {
             poljeD2 = poljeD;
             poljeD2.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 3) {
+        if(double_card == 3) {
             poljeD3 = poljeD;
             poljeD3.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 4) {
+        if(double_card == 4) {
             poljeD4 = poljeD;
             poljeD4.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 5) {
+        if(double_card == 5) {
             poljeD5 = poljeD;
             poljeD5.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 6) {
+        if(double_card == 6) {
             poljeD6 = poljeD;
             poljeD6.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 7) {
+        if(double_card == 7) {
             poljeD7 = poljeD;
             poljeD7.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 8) {
+        if(double_card == 8) {
             poljeD8 = poljeD;
             poljeD8.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 9) {
+        if(double_card == 9) {
             poljeD9 = poljeD;
             poljeD9.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 10) {
+        if(double_card == 10) {
             poljeD10 = poljeD;
             poljeD10.setVisibility(View.VISIBLE);
         }
-        if(duplakarta == 11) {
+        if(double_card == 11) {
             poljeD11 = poljeD;
             poljeD11.setVisibility(View.VISIBLE);
         }

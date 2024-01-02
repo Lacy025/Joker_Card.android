@@ -1,6 +1,6 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.MainClass.deljenje;
+import static com.example.Joker_Card.MainClass.dealing;
 import static com.example.Joker_Card.MainClass.joker;
 import static com.example.Joker_Card.MainClass.card;
 import static com.example.Joker_Card.MainClass.polje1;
@@ -36,7 +36,7 @@ public class Jokers extends Activity {
     public static Runnable runnable7;
     public static Runnable runnable8;
     Jokers() {
-        if(deljenje==0) {
+        if(dealing == 0) {
             joker.setText(R.string.joker);
             card.setText(R.string.card);
             joker.setVisibility(View.VISIBLE);
@@ -49,7 +49,7 @@ public class Jokers extends Activity {
             @Override
             public void run() {
                 isVisible1 = !isVisible1;
-                if(deljenje == 0) {
+                if(dealing == 0) {
                     joker.setVisibility(isVisible1 ? View.INVISIBLE : View.VISIBLE);
                     card.setVisibility(isVisible1 ? View.INVISIBLE : View.VISIBLE);
                     handler1.postDelayed(this, 6000);
@@ -64,7 +64,7 @@ public class Jokers extends Activity {
             @Override
             public void run() {
                 isVisible2 = !isVisible2;
-                if(deljenje == 0) {
+                if(dealing == 0) {
                     polje1.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
                     polje2.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
                     polje3.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
@@ -82,7 +82,7 @@ public class Jokers extends Activity {
             @Override
             public void run() {
                 isVisible3 = !isVisible3;
-                if(deljenje == 0) {
+                if(dealing == 0) {
                     polje1.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
                     poljej1.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
                     polje2.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
@@ -101,7 +101,7 @@ public class Jokers extends Activity {
             @Override
             public void run() {
                 isVisible4 = !isVisible4;
-                if(deljenje == 0) {
+                if(dealing == 0) {
                     polje1.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
                     poljej1.setVisibility(View.INVISIBLE);
                     polje2.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
@@ -121,7 +121,7 @@ public class Jokers extends Activity {
             @Override
             public void run() {
                 isVisible5 = !isVisible5;
-                if(deljenje == 0) {
+                if(dealing == 0) {
                     polje1.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
                     polje2.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
                     poljej2.setVisibility(View.INVISIBLE);
@@ -141,7 +141,7 @@ public class Jokers extends Activity {
             @Override
             public void run() {
                 isVisible6 = !isVisible6;
-                if(deljenje == 0) {
+                if(dealing == 0) {
                     polje1.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
                     polje2.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
                     polje3.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
@@ -161,7 +161,7 @@ public class Jokers extends Activity {
             @Override
             public void run() {
                 isVisible7 = !isVisible7;
-                if(deljenje == 0) {
+                if(dealing == 0) {
                     polje1.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
                     polje2.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
                     polje3.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
@@ -181,7 +181,7 @@ public class Jokers extends Activity {
             @Override
             public void run() {
                 isVisible8 = !isVisible8;
-                if(deljenje == 0) {
+                if(dealing == 0) {
                     polje1.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
                     polje2.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
                     polje3.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);

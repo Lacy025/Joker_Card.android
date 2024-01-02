@@ -1,12 +1,12 @@
 package com.example.Joker_Card;
 
 import static com.example.Joker_Card.MainClass.button_deal;
-import static com.example.Joker_Card.MainClass.kasiranje;
-import static com.example.Joker_Card.MainClass.deljenje;
-import static com.example.Joker_Card.MainClass.kasirano;
-import static com.example.Joker_Card.MainClass.biodobitak;
-import static com.example.Joker_Card.MainClass.promasaj;
-import static com.example.Joker_Card.MainClass.izbor;
+import static com.example.Joker_Card.MainClass.taking;
+import static com.example.Joker_Card.MainClass.dealing;
+import static com.example.Joker_Card.MainClass.profit;
+import static com.example.Joker_Card.MainClass.won;
+import static com.example.Joker_Card.MainClass.missed;
+import static com.example.Joker_Card.MainClass.choice;
 import static com.example.Joker_Card.MainClass.joker;
 import static com.example.Joker_Card.MainClass.card;
 import static com.example.Joker_Card.MainClass.button_take;
@@ -19,7 +19,7 @@ public class Cashed extends Activity {
     public static Runnable runnable9;
     int pauzap;
     Cashed() {
-        if(promasaj == 1) {
+        if(missed == 1) {
             pauzap = 2000;
         }
         else {
@@ -27,16 +27,16 @@ public class Cashed extends Activity {
         }
         handler9 = new Handler();
         runnable9 = () -> {
-                if(kasiranje == 1 || promasaj == 1) {
-                    if(promasaj == 1) {
+                if(taking == 1 || missed == 1) {
+                    if(missed == 1) {
                         button_deal.setText(R.string.deal_cards);
                     }
-                    kasiranje = 0;
-                    promasaj = 0;
-                    deljenje = 0;
-                    kasirano = 0;
-                    biodobitak = 0;
-                    izbor = 0;
+                    taking = 0;
+                    missed = 0;
+                    dealing = 0;
+                    profit = 0;
+                    won = 0;
+                    choice = 0;
                     Jokers.handler1.removeCallbacks(Jokers.runnable1);
                     Jokers.handler2.removeCallbacks(Jokers.runnable2);
                     Jokers.handler3.removeCallbacks(Jokers.runnable3);

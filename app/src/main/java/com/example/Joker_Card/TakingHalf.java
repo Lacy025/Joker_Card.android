@@ -8,9 +8,9 @@ import static com.example.Joker_Card.MainClass.button_take;
 import static com.example.Joker_Card.MainClass.c;
 import static com.example.Joker_Card.MainClass.c1;
 import static com.example.Joker_Card.MainClass.centar2;
-import static com.example.Joker_Card.MainClass.cifra;
+import static com.example.Joker_Card.MainClass.cash;
 import static com.example.Joker_Card.MainClass.dobitakdb;
-import static com.example.Joker_Card.MainClass.duplanje;
+import static com.example.Joker_Card.MainClass.doubling;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -37,10 +37,10 @@ public class TakingHalf extends Activity {
     TakingHalf() {
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
-        pola = (Math.floor(cifra / 2));
+        pola = (Math.floor(cash / 2));
         centar2.setText(R.string.win);
         centar2.setVisibility(View.VISIBLE);
-        duplanje = 0;
+        doubling = 0;
         countdown = 1;
 
         timer4 = new Timer();
@@ -49,7 +49,7 @@ public class TakingHalf extends Activity {
             public void run() {
                 runOnUiThread(() -> new Handler(Looper.getMainLooper()).postDelayed(
                         () -> {
-                            if(cifra == pola) {
+                            if(cash == pola) {
                                 handler0.removeCallbacks(runnable0);
                                 centar2.setVisibility(View.VISIBLE);
                                 timer4.cancel();
@@ -65,7 +65,7 @@ public class TakingHalf extends Activity {
             @Override
             public void run() {
                 isVisible = !isVisible;
-                if(cifra > 0) {
+                if(cash > 0) {
                     centar2.setVisibility(isVisible ? View.INVISIBLE : View.VISIBLE);
                     handler0.postDelayed(this, 400);
                 }
@@ -73,13 +73,13 @@ public class TakingHalf extends Activity {
         };
         handler0.post(runnable0);
 
-        if(cifra < 200) {
+        if(cash < 200) {
             handler14 = new Handler();
             runnable14 = new Runnable() {
                 @Override
                 public void run() {
-                    if(cifra < 101) {
-                        if(cifra != pola) {
+                    if(cash < 101) {
+                        if(cash != pola) {
                             minusjedan();
                             handler14.postDelayed(this, 40);
                         }
@@ -96,8 +96,8 @@ public class TakingHalf extends Activity {
                             handler14.removeCallbacks(runnable14);
                         }
                     }
-                    else if(cifra > 100 && cifra < 200) {
-                        pola1 = cifra - 100;
+                    else if(cash > 100 && cash < 200) {
+                        pola1 = cash - 100;
                         prvideo();
                         handler14.postDelayed(this, 1000);
                     }
@@ -107,7 +107,7 @@ public class TakingHalf extends Activity {
             handler14.post(runnable14);
         }
         else {
-            deo = cifra;
+            deo = cash;
             handler15 = new Handler();
             runnable15 = new Runnable() {
                 @Override
@@ -118,16 +118,16 @@ public class TakingHalf extends Activity {
                         handler15.postDelayed(this, 1000);
                     }
                     else {
-                        if(cifra - pola > 99) {
+                        if(cash - pola > 99) {
                             minussto();
                             handler15.postDelayed(this, 1000);
                         }
-                        else if(cifra - pola > 0) {
-                            pola2 = cifra - pola;
+                        else if(cash - pola > 0) {
+                            pola2 = cash - pola;
                             drugideo();
                             handler15.postDelayed(this, 1000);
                         }
-                        else if(cifra - pola == 0) {
+                        else if(cash - pola == 0) {
                             handler15.postDelayed(this, 1000);
                             pobedio();
                             handler15.removeCallbacks(runnable15);
@@ -141,35 +141,35 @@ public class TakingHalf extends Activity {
     void minusjedan() {
         c += 1;
         c1.setText(Integer.toString(c));
-        cifra -= 1;
-        dobitakdb.setText(Integer.toString(cifra));
+        cash -= 1;
+        dobitakdb.setText(Integer.toString(cash));
         audiocount1.start();
     }
     void minussto() {
         c += 100;
         c1.setText(Integer.toString(c));
-        cifra -= 100;
-        dobitakdb.setText(Integer.toString(cifra));
+        cash -= 100;
+        dobitakdb.setText(Integer.toString(cash));
         audiocount100.start();
     }
     void prvideo() {
         c += pola1;
         c1.setText(Integer.toString(c));
-        cifra -= pola1;
-        deo = cifra;
-        dobitakdb.setText(Integer.toString(cifra));
+        cash -= pola1;
+        deo = cash;
+        dobitakdb.setText(Integer.toString(cash));
         audiocount100.start();
     }
     void drugideo() {
         c += pola2;
         c1.setText(Integer.toString(c));
-        cifra -= pola2;
-        dobitakdb.setText(Integer.toString(cifra));
+        cash -= pola2;
+        dobitakdb.setText(Integer.toString(cash));
         audiocount100.start();
     }
     void pobedio() {
         centar2.setVisibility(View.INVISIBLE);
-        duplanje = 1;
+        doubling = 1;
         button_take.setText(R.string.take_all);
         button_deal.setText(R.string.take_half);
         Duplanje();
