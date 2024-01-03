@@ -1,15 +1,15 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.MainClass.rucno1;
-import static com.example.Joker_Card.MainClass.rucno2;
-import static com.example.Joker_Card.MainClass.rucno3;
-import static com.example.Joker_Card.MainClass.rucno4;
-import static com.example.Joker_Card.MainClass.rucno5;
-import static com.example.Joker_Card.MainClass.rucno6;
-import static com.example.Joker_Card.MainClass.rucno7;
-import static com.example.Joker_Card.MainClass.rucno8;
-import static com.example.Joker_Card.MainClass.rucno9;
-import static com.example.Joker_Card.MainClass.rucno10;
+import static com.example.Joker_Card.MainClass.hand_1;
+import static com.example.Joker_Card.MainClass.hand_2;
+import static com.example.Joker_Card.MainClass.hand_3;
+import static com.example.Joker_Card.MainClass.hand_4;
+import static com.example.Joker_Card.MainClass.hand_5;
+import static com.example.Joker_Card.MainClass.hand_6;
+import static com.example.Joker_Card.MainClass.hand_7;
+import static com.example.Joker_Card.MainClass.hand_8;
+import static com.example.Joker_Card.MainClass.hand_9;
+import static com.example.Joker_Card.MainClass.hand_10;
 import static com.example.Joker_Card.MainClass.ah;
 import static com.example.Joker_Card.MainClass.stop;
 
@@ -1380,34 +1380,34 @@ public class Hand1 extends Activity {
                 }
 
                 if (Fiveofakind == 1) {
-                    rucno1.setVisibility(View.VISIBLE);
+                    hand_1.setVisibility(View.VISIBLE);
                 }
                 if (Royalflush == 1) {
-                    rucno2.setVisibility(View.VISIBLE);
+                    hand_2.setVisibility(View.VISIBLE);
                 }
                 if (Streetflush == 1) {
-                    rucno3.setVisibility(View.VISIBLE);
+                    hand_3.setVisibility(View.VISIBLE);
                 }
                 if (Poker == 1) {
-                    rucno4.setVisibility(View.VISIBLE);
+                    hand_4.setVisibility(View.VISIBLE);
                 }
                 if (Fullhouse == 1) {
-                    rucno5.setVisibility(View.VISIBLE);
+                    hand_5.setVisibility(View.VISIBLE);
                 }
                 if (Flush == 1) {
-                    rucno6.setVisibility(View.VISIBLE);
+                    hand_6.setVisibility(View.VISIBLE);
                 }
                 if (Street == 1) {
-                    rucno7.setVisibility(View.VISIBLE);
+                    hand_7.setVisibility(View.VISIBLE);
                 }
                 if (Threeofakind == 1) {
-                    rucno8.setVisibility(View.VISIBLE);
+                    hand_8.setVisibility(View.VISIBLE);
                 }
                 if (Twopairs == 1) {
-                    rucno9.setVisibility(View.VISIBLE);
+                    hand_9.setVisibility(View.VISIBLE);
                 }
                 if (Highpair == 1) {
-                    rucno10.setVisibility(View.VISIBLE);
+                    hand_10.setVisibility(View.VISIBLE);
                 }
                 if(ah==0) {
                     hold1=0;

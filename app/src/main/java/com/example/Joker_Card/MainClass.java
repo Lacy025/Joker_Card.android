@@ -122,29 +122,29 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static ImageView field_joker_3;
     public static ImageView field_joker_4;
     public static ImageView field_joker_5;
-    public static ImageView rucno1;
-    public static ImageView rucno2;
-    public static ImageView rucno3;
-    public static ImageView rucno4;
-    public static ImageView rucno5;
-    public static ImageView rucno6;
-    public static ImageView rucno7;
-    public static ImageView rucno8;
-    public static ImageView rucno9;
-    public static ImageView rucno10;
+    public static ImageView hand_1;
+    public static ImageView hand_2;
+    public static ImageView hand_3;
+    public static ImageView hand_4;
+    public static ImageView hand_5;
+    public static ImageView hand_6;
+    public static ImageView hand_7;
+    public static ImageView hand_8;
+    public static ImageView hand_9;
+    public static ImageView hand_10;
     public static ImageView table;
-    public static ImageView poljeD1;
-    public static ImageView poljeD2;
-    public static ImageView poljeD3;
-    public static ImageView poljeD4;
-    public static ImageView poljeD5;
-    public static ImageView poljeD6;
-    public static ImageView poljeD7;
-    public static ImageView poljeD8;
-    public static ImageView poljeD9;
-    public static ImageView poljeD10;
-    public static ImageView poljeD11;
-    public static ImageView poljeD12;
+    public static ImageView field_win_1;
+    public static ImageView field_win_2;
+    public static ImageView field_win_3;
+    public static ImageView field_win_4;
+    public static ImageView field_win_5;
+    public static ImageView field_win_6;
+    public static ImageView field_win_7;
+    public static ImageView field_win_8;
+    public static ImageView field_win_9;
+    public static ImageView field_win_10;
+    public static ImageView field_win_11;
+    public static ImageView field_win_12;
     public TextView levodole1;
     public TextView desnodole1;
     public static TextView levodole2;
@@ -269,16 +269,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         field_joker_4 = findViewById(R.id.polje_j4);
         field_joker_5 = findViewById(R.id.polje_j5);
 
-        rucno1 = findViewById(R.id.rucno1);
-        rucno2 = findViewById(R.id.rucno2);
-        rucno3 = findViewById(R.id.rucno3);
-        rucno4 = findViewById(R.id.rucno4);
-        rucno5 = findViewById(R.id.rucno5);
-        rucno6 = findViewById(R.id.rucno6);
-        rucno7 = findViewById(R.id.rucno7);
-        rucno8 = findViewById(R.id.rucno8);
-        rucno9 = findViewById(R.id.rucno9);
-        rucno10 = findViewById(R.id.rucno10);
+        hand_1 = findViewById(R.id.rucno1);
+        hand_2 = findViewById(R.id.rucno2);
+        hand_3 = findViewById(R.id.rucno3);
+        hand_4 = findViewById(R.id.rucno4);
+        hand_5 = findViewById(R.id.rucno5);
+        hand_6 = findViewById(R.id.rucno6);
+        hand_7 = findViewById(R.id.rucno7);
+        hand_8 = findViewById(R.id.rucno8);
+        hand_9 = findViewById(R.id.rucno9);
+        hand_10 = findViewById(R.id.rucno10);
 
         table = findViewById(R.id.table);
         dobitak1 = findViewById(R.id.dobitak1);
@@ -293,18 +293,18 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         dobitak10 = findViewById(R.id.dobitak10);
         dobitak = findViewById(R.id.dobitak);
 
-        poljeD1 = findViewById(R.id.polje_d1);
-        poljeD2 = findViewById(R.id.polje_d2);
-        poljeD3 = findViewById(R.id.polje_d3);
-        poljeD4 = findViewById(R.id.polje_d4);
-        poljeD5 = findViewById(R.id.polje_d5);
-        poljeD6 = findViewById(R.id.polje_d6);
-        poljeD7 = findViewById(R.id.polje_d7);
-        poljeD8 = findViewById(R.id.polje_d8);
-        poljeD9 = findViewById(R.id.polje_d9);
-        poljeD10 = findViewById(R.id.polje_d10);
-        poljeD11 = findViewById(R.id.polje_d11);
-        poljeD12 = findViewById(R.id.polje_d12);
+        field_win_1 = findViewById(R.id.polje_d1);
+        field_win_2 = findViewById(R.id.polje_d2);
+        field_win_3 = findViewById(R.id.polje_d3);
+        field_win_4 = findViewById(R.id.polje_d4);
+        field_win_5 = findViewById(R.id.polje_d5);
+        field_win_6 = findViewById(R.id.polje_d6);
+        field_win_7 = findViewById(R.id.polje_d7);
+        field_win_8 = findViewById(R.id.polje_d8);
+        field_win_9 = findViewById(R.id.polje_d9);
+        field_win_10 = findViewById(R.id.polje_d10);
+        field_win_11 = findViewById(R.id.polje_d11);
+        field_win_12 = findViewById(R.id.polje_d12);
 
         tief1 = findViewById(R.id.tief_1);
         tief2 = findViewById(R.id.tief_2);
@@ -576,16 +576,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 centar1.setVisibility(View.INVISIBLE);
                 hold = 300;
                 delaying = 50;
-                rucno1.setVisibility(View.INVISIBLE);
-                rucno2.setVisibility(View.INVISIBLE);
-                rucno3.setVisibility(View.INVISIBLE);
-                rucno4.setVisibility(View.INVISIBLE);
-                rucno5.setVisibility(View.INVISIBLE);
-                rucno6.setVisibility(View.INVISIBLE);
-                rucno7.setVisibility(View.INVISIBLE);
-                rucno8.setVisibility(View.INVISIBLE);
-                rucno9.setVisibility(View.INVISIBLE);
-                rucno10.setVisibility(View.INVISIBLE);
+                hand_1.setVisibility(View.INVISIBLE);
+                hand_2.setVisibility(View.INVISIBLE);
+                hand_3.setVisibility(View.INVISIBLE);
+                hand_4.setVisibility(View.INVISIBLE);
+                hand_5.setVisibility(View.INVISIBLE);
+                hand_6.setVisibility(View.INVISIBLE);
+                hand_7.setVisibility(View.INVISIBLE);
+                hand_8.setVisibility(View.INVISIBLE);
+                hand_9.setVisibility(View.INVISIBLE);
+                hand_10.setVisibility(View.INVISIBLE);
 
                 if(Hand1.hold1 == 0) {
                     field_card_1.setVisibility(View.INVISIBLE);
@@ -730,18 +730,18 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         field_card_3.setVisibility(View.INVISIBLE);
         field_card_4.setVisibility(View.INVISIBLE);
         field_card_5.setVisibility(View.INVISIBLE);
-        poljeD1.setImageResource(R.drawable.k53);
-        poljeD2.setImageResource(R.drawable.k53);
-        poljeD3.setImageResource(R.drawable.k53);
-        poljeD4.setImageResource(R.drawable.k53);
-        poljeD5.setImageResource(R.drawable.k53);
-        poljeD6.setImageResource(R.drawable.k53);
-        poljeD7.setImageResource(R.drawable.k53);
-        poljeD8.setImageResource(R.drawable.k53);
-        poljeD9.setImageResource(R.drawable.k53);
-        poljeD10.setImageResource(R.drawable.k53);
-        poljeD11.setImageResource(R.drawable.k53);
-        poljeD12.setImageResource(R.drawable.k53);
+        field_win_1.setImageResource(R.drawable.k53);
+        field_win_2.setImageResource(R.drawable.k53);
+        field_win_3.setImageResource(R.drawable.k53);
+        field_win_4.setImageResource(R.drawable.k53);
+        field_win_5.setImageResource(R.drawable.k53);
+        field_win_6.setImageResource(R.drawable.k53);
+        field_win_7.setImageResource(R.drawable.k53);
+        field_win_8.setImageResource(R.drawable.k53);
+        field_win_9.setImageResource(R.drawable.k53);
+        field_win_10.setImageResource(R.drawable.k53);
+        field_win_11.setImageResource(R.drawable.k53);
+        field_win_12.setImageResource(R.drawable.k53);
         audio_winner.stop();
         interval= 400;
         doubling = 1;
@@ -752,13 +752,13 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static void Duplanje() {
 
         if(double_card == 1) {
-            poljeD1.setVisibility(View.VISIBLE);
+            field_win_1.setVisibility(View.VISIBLE);
             dk1 = (int) Math.floor(Math.random() * 48) + 1;
             cheat = dk1;
             TiefHoch();
         }
         if(double_card == 2) {
-            poljeD2.setVisibility(View.VISIBLE);
+            field_win_2.setVisibility(View.VISIBLE);
             dk2 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk2 == dk1) {
                 dk2 = (int) Math.floor(Math.random() * 48) + 1;
@@ -767,7 +767,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             TiefHoch();
         }
         if(double_card == 3) {
-            poljeD3.setVisibility(View.VISIBLE);
+            field_win_3.setVisibility(View.VISIBLE);
             dk3 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk3 == dk1 || dk3 == dk2) {
                 dk3 = (int) Math.floor(Math.random() * 48) + 1;
@@ -776,7 +776,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             TiefHoch();
         }
         if(double_card == 4) {
-            poljeD4.setVisibility(View.VISIBLE);
+            field_win_4.setVisibility(View.VISIBLE);
             dk4 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk4 == dk1 || dk4 == dk2 || dk4 == dk3) {
                 dk4 = (int) Math.floor(Math.random() * 48) + 1;
@@ -785,7 +785,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             TiefHoch();
         }
         if(double_card == 5) {
-            poljeD5.setVisibility(View.VISIBLE);
+            field_win_5.setVisibility(View.VISIBLE);
             dk5 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk5 == dk1 || dk5 == dk2 ||
                     dk5 == dk3 || dk5 == dk4) {
@@ -795,7 +795,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             TiefHoch();
         }
         if(double_card == 6) {
-            poljeD6.setVisibility(View.VISIBLE);
+            field_win_6.setVisibility(View.VISIBLE);
             dk6 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk6 == dk1 || dk6 == dk2 || dk6 == dk3 ||
                     dk6 == dk4 || dk6 == dk5) {
@@ -805,7 +805,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             TiefHoch();
         }
         if(double_card == 7) {
-            poljeD7.setVisibility(View.VISIBLE);
+            field_win_7.setVisibility(View.VISIBLE);
             dk7 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk7 == dk1 || dk7 == dk2 || dk7 == dk3 ||
                     dk7 == dk4 || dk7 == dk5|| dk7 == dk6) {
@@ -815,7 +815,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             TiefHoch();
         }
         if(double_card == 8) {
-            poljeD8.setVisibility(View.VISIBLE);
+            field_win_8.setVisibility(View.VISIBLE);
             dk8 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk8 == dk1 || dk8 == dk2 || dk8 == dk3 || dk8 == dk4 ||
                     dk8 == dk5 || dk8 == dk6 || dk8 == dk7) {
@@ -825,7 +825,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             TiefHoch();
         }
         if(double_card == 9) {
-            poljeD9.setVisibility(View.VISIBLE);
+            field_win_9.setVisibility(View.VISIBLE);
             dk9 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk9 == dk1 || dk9 == dk2 || dk9 == dk3 || dk9 == dk4 ||
                     dk9 == dk5 || dk9 == dk6 || dk9 == dk7 || dk9 == dk8) {
@@ -835,7 +835,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             TiefHoch();
         }
         if(double_card == 10) {
-            poljeD10.setVisibility(View.VISIBLE);
+            field_win_10.setVisibility(View.VISIBLE);
             dk10 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk10 == dk1 || dk10 == dk2 || dk10 == dk3 ||
                     dk10 == dk4 || dk10 == dk5 || dk10 == dk6 ||
@@ -846,7 +846,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             TiefHoch();
         }
         if(double_card == 11) {
-            poljeD11.setVisibility(View.VISIBLE);
+            field_win_11.setVisibility(View.VISIBLE);
             dk11 = (int) Math.floor(Math.random() * 48) + 1;
             while(dk11 == dk1 || dk11 == dk2 || dk11 == dk3 || dk11 == dk4 ||
                     dk11 == dk5 || dk11 == dk6|| dk11 == dk7 || dk11 == dk8 ||
@@ -858,7 +858,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
         if(double_card == 12) {
             handler0.removeCallbacks(runnable0);
-            poljeD12.setVisibility(View.VISIBLE);
+            field_win_12.setVisibility(View.VISIBLE);
             Blokada();
         }
     }

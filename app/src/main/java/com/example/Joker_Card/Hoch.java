@@ -41,17 +41,17 @@ import static com.example.Joker_Card.MainClass.tief7;
 import static com.example.Joker_Card.MainClass.tief8;
 import static com.example.Joker_Card.MainClass.tief9;
 import static com.example.Joker_Card.MainClass.tief10;
-import static com.example.Joker_Card.MainClass.poljeD1;
-import static com.example.Joker_Card.MainClass.poljeD2;
-import static com.example.Joker_Card.MainClass.poljeD3;
-import static com.example.Joker_Card.MainClass.poljeD4;
-import static com.example.Joker_Card.MainClass.poljeD5;
-import static com.example.Joker_Card.MainClass.poljeD6;
-import static com.example.Joker_Card.MainClass.poljeD7;
-import static com.example.Joker_Card.MainClass.poljeD8;
-import static com.example.Joker_Card.MainClass.poljeD9;
-import static com.example.Joker_Card.MainClass.poljeD10;
-import static com.example.Joker_Card.MainClass.poljeD11;
+import static com.example.Joker_Card.MainClass.field_win_1;
+import static com.example.Joker_Card.MainClass.field_win_2;
+import static com.example.Joker_Card.MainClass.field_win_3;
+import static com.example.Joker_Card.MainClass.field_win_4;
+import static com.example.Joker_Card.MainClass.field_win_5;
+import static com.example.Joker_Card.MainClass.field_win_6;
+import static com.example.Joker_Card.MainClass.field_win_7;
+import static com.example.Joker_Card.MainClass.field_win_8;
+import static com.example.Joker_Card.MainClass.field_win_9;
+import static com.example.Joker_Card.MainClass.field_win_10;
+import static com.example.Joker_Card.MainClass.field_win_11;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -62,75 +62,75 @@ public class Hoch extends Activity {
     Hoch() throws InterruptedException {
 
         if(double_card == 1) {
-            poljeD1.setVisibility(View.INVISIBLE);
+            field_win_1.setVisibility(View.INVISIBLE);
             hoch1.setVisibility(View.VISIBLE);
             dk = dk1;
         }
         if(double_card == 2) {
-            poljeD2.setVisibility(View.INVISIBLE);
+            field_win_2.setVisibility(View.INVISIBLE);
             tief1.setVisibility(View.INVISIBLE);
             hoch1.setVisibility(View.INVISIBLE);
             hoch2.setVisibility(View.VISIBLE);
             dk = dk2;
         }
         if(double_card == 3) {
-            poljeD3.setVisibility(View.INVISIBLE);
+            field_win_3.setVisibility(View.INVISIBLE);
             tief2.setVisibility(View.INVISIBLE);
             hoch2.setVisibility(View.INVISIBLE);
             hoch3.setVisibility(View.VISIBLE);
             dk = dk3;
         }
         if(double_card == 4) {
-            poljeD4.setVisibility(View.INVISIBLE);
+            field_win_4.setVisibility(View.INVISIBLE);
             tief3.setVisibility(View.INVISIBLE);
             hoch3.setVisibility(View.INVISIBLE);
             hoch4.setVisibility(View.VISIBLE);
             dk = dk4;
         }
         if(double_card == 5) {
-            poljeD5.setVisibility(View.INVISIBLE);
+            field_win_5.setVisibility(View.INVISIBLE);
             tief4.setVisibility(View.INVISIBLE);
             hoch4.setVisibility(View.INVISIBLE);
             hoch5.setVisibility(View.VISIBLE);
             dk = dk5;
         }
         if(double_card == 6) {
-            poljeD6.setVisibility(View.INVISIBLE);
+            field_win_6.setVisibility(View.INVISIBLE);
             tief5.setVisibility(View.INVISIBLE);
             hoch5.setVisibility(View.INVISIBLE);
             hoch6.setVisibility(View.VISIBLE);
             dk = dk6;
         }
         if(double_card == 7) {
-            poljeD7.setVisibility(View.INVISIBLE);
+            field_win_7.setVisibility(View.INVISIBLE);
             tief6.setVisibility(View.INVISIBLE);
             hoch6.setVisibility(View.INVISIBLE);
             hoch7.setVisibility(View.VISIBLE);
             dk = dk7;
         }
         if(double_card == 8) {
-            poljeD8.setVisibility(View.INVISIBLE);
+            field_win_8.setVisibility(View.INVISIBLE);
             tief7.setVisibility(View.INVISIBLE);
             hoch7.setVisibility(View.INVISIBLE);
             hoch8.setVisibility(View.VISIBLE);
             dk = dk8;
         }
         if(double_card == 9) {
-            poljeD9.setVisibility(View.INVISIBLE);
+            field_win_9.setVisibility(View.INVISIBLE);
             tief8.setVisibility(View.INVISIBLE);
             hoch8.setVisibility(View.INVISIBLE);
             hoch9.setVisibility(View.VISIBLE);
             dk = dk9;
         }
         if(double_card == 10) {
-            poljeD10.setVisibility(View.INVISIBLE);
+            field_win_10.setVisibility(View.INVISIBLE);
             tief9.setVisibility(View.INVISIBLE);
             hoch9.setVisibility(View.INVISIBLE);
             hoch10.setVisibility(View.VISIBLE);
             dk = dk10;
         }
         if(double_card == 11) {
-            poljeD11.setVisibility(View.INVISIBLE);
+            field_win_11.setVisibility(View.INVISIBLE);
             tief10.setVisibility(View.INVISIBLE);
             hoch10.setVisibility(View.INVISIBLE);
             hoch11.setVisibility(View.VISIBLE);

@@ -12,17 +12,17 @@ import static com.example.Joker_Card.MainClass.dk8;
 import static com.example.Joker_Card.MainClass.dk9;
 import static com.example.Joker_Card.MainClass.dk10;
 import static com.example.Joker_Card.MainClass.dk11;
-import static com.example.Joker_Card.MainClass.poljeD1;
-import static com.example.Joker_Card.MainClass.poljeD2;
-import static com.example.Joker_Card.MainClass.poljeD3;
-import static com.example.Joker_Card.MainClass.poljeD4;
-import static com.example.Joker_Card.MainClass.poljeD5;
-import static com.example.Joker_Card.MainClass.poljeD6;
-import static com.example.Joker_Card.MainClass.poljeD7;
-import static com.example.Joker_Card.MainClass.poljeD8;
-import static com.example.Joker_Card.MainClass.poljeD9;
-import static com.example.Joker_Card.MainClass.poljeD10;
-import static com.example.Joker_Card.MainClass.poljeD11;
+import static com.example.Joker_Card.MainClass.field_win_1;
+import static com.example.Joker_Card.MainClass.field_win_2;
+import static com.example.Joker_Card.MainClass.field_win_3;
+import static com.example.Joker_Card.MainClass.field_win_4;
+import static com.example.Joker_Card.MainClass.field_win_5;
+import static com.example.Joker_Card.MainClass.field_win_6;
+import static com.example.Joker_Card.MainClass.field_win_7;
+import static com.example.Joker_Card.MainClass.field_win_8;
+import static com.example.Joker_Card.MainClass.field_win_9;
+import static com.example.Joker_Card.MainClass.field_win_10;
+import static com.example.Joker_Card.MainClass.field_win_11;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -33,57 +33,57 @@ public class GambleCard {
     GambleCard() {
         if(double_card == 1) {
             dkx = dk1;
-            poljeD = poljeD1;
+            poljeD = field_win_1;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 2) {
             dkx = dk2;
-            poljeD = poljeD2;
+            poljeD = field_win_2;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 3) {
             dkx = dk3;
-            poljeD = poljeD3;
+            poljeD = field_win_3;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 4) {
             dkx = dk4;
-            poljeD = poljeD4;
+            poljeD = field_win_4;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 5) {
             dkx = dk5;
-            poljeD = poljeD5;
+            poljeD = field_win_5;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 6) {
             dkx = dk6;
-            poljeD = poljeD6;
+            poljeD = field_win_6;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 7) {
             dkx = dk7;
-            poljeD = poljeD7;
+            poljeD = field_win_7;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 8) {
             dkx = dk8;
-            poljeD = poljeD8;
+            poljeD = field_win_8;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 9) {
             dkx = dk9;
-            poljeD = poljeD9;
+            poljeD = field_win_9;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 10) {
             dkx = dk10;
-            poljeD = poljeD10;
+            poljeD = field_win_10;
             poljeD.setVisibility(View.INVISIBLE);
         }
         if(double_card == 11) {
             dkx = dk11;
-            poljeD = poljeD11;
+            poljeD = field_win_11;
             poljeD.setVisibility(View.INVISIBLE);
         }
 
@@ -233,48 +233,48 @@ public class GambleCard {
         }
 
         if(double_card == 1) {
-            poljeD1 = poljeD;
-            poljeD1.setVisibility(View.VISIBLE);
+            field_win_1 = poljeD;
+            field_win_1.setVisibility(View.VISIBLE);
         }
         if(double_card == 2) {
-            poljeD2 = poljeD;
-            poljeD2.setVisibility(View.VISIBLE);
+            field_win_2 = poljeD;
+            field_win_2.setVisibility(View.VISIBLE);
         }
         if(double_card == 3) {
-            poljeD3 = poljeD;
-            poljeD3.setVisibility(View.VISIBLE);
+            field_win_3 = poljeD;
+            field_win_3.setVisibility(View.VISIBLE);
         }
         if(double_card == 4) {
-            poljeD4 = poljeD;
-            poljeD4.setVisibility(View.VISIBLE);
+            field_win_4 = poljeD;
+            field_win_4.setVisibility(View.VISIBLE);
         }
         if(double_card == 5) {
-            poljeD5 = poljeD;
-            poljeD5.setVisibility(View.VISIBLE);
+            field_win_5 = poljeD;
+            field_win_5.setVisibility(View.VISIBLE);
         }
         if(double_card == 6) {
-            poljeD6 = poljeD;
-            poljeD6.setVisibility(View.VISIBLE);
+            field_win_6 = poljeD;
+            field_win_6.setVisibility(View.VISIBLE);
         }
         if(double_card == 7) {
-            poljeD7 = poljeD;
-            poljeD7.setVisibility(View.VISIBLE);
+            field_win_7 = poljeD;
+            field_win_7.setVisibility(View.VISIBLE);
         }
         if(double_card == 8) {
-            poljeD8 = poljeD;
-            poljeD8.setVisibility(View.VISIBLE);
+            field_win_8 = poljeD;
+            field_win_8.setVisibility(View.VISIBLE);
         }
         if(double_card == 9) {
-            poljeD9 = poljeD;
-            poljeD9.setVisibility(View.VISIBLE);
+            field_win_9 = poljeD;
+            field_win_9.setVisibility(View.VISIBLE);
         }
         if(double_card == 10) {
-            poljeD10 = poljeD;
-            poljeD10.setVisibility(View.VISIBLE);
+            field_win_10 = poljeD;
+            field_win_10.setVisibility(View.VISIBLE);
         }
         if(double_card == 11) {
-            poljeD11 = poljeD;
-            poljeD11.setVisibility(View.VISIBLE);
+            field_win_11 = poljeD;
+            field_win_11.setVisibility(View.VISIBLE);
         }
     }
 }
