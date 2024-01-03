@@ -1,7 +1,7 @@
 package com.example.Joker_Card;
 
 import static com.example.Joker_Card.MainClass.k4;
-import static com.example.Joker_Card.MainClass.polje4;
+import static com.example.Joker_Card.MainClass.field_card_4;
 import static com.example.Joker_Card.MainClass.delaying;
 import static com.example.Joker_Card.MainClass.dealing;
 import static com.example.Joker_Card.MainClass.audio_card_4;
@@ -18,274 +18,274 @@ public class Card4 extends Activity {
             @Override
             public void run() {
 
-                polje4.setVisibility(View.INVISIBLE);
+                field_card_4.setVisibility(View.INVISIBLE);
 
                 if (k4 == 0) {
-                    polje4.setImageResource(R.drawable.k00);
+                    field_card_4.setImageResource(R.drawable.k00);
                     n4 = 0;
                     b4 = 0;
                 }
                 if (k4 == 1) {
-                    polje4.setImageResource(R.drawable.k01);
+                    field_card_4.setImageResource(R.drawable.k01);
                     n4 = 14;
                     b4 = 1;
                 }
                 if (k4 == 2) {
-                    polje4.setImageResource(R.drawable.k02);
+                    field_card_4.setImageResource(R.drawable.k02);
                     n4 = 2;
                     b4 = 1;
                 }
                 if (k4 == 3) {
-                    polje4.setImageResource(R.drawable.k03);
+                    field_card_4.setImageResource(R.drawable.k03);
                     n4 = 3;
                     b4 = 1;
                 }
                 if (k4 == 4) {
-                    polje4.setImageResource(R.drawable.k04);
+                    field_card_4.setImageResource(R.drawable.k04);
                     n4 = 4;
                     b4 = 1;
                 }
                 if (k4 == 5) {
-                    polje4.setImageResource(R.drawable.k05);
+                    field_card_4.setImageResource(R.drawable.k05);
                     n4 = 5;
                     b4 = 1;
                 }
                 if (k4 == 6) {
-                    polje4.setImageResource(R.drawable.k06);
+                    field_card_4.setImageResource(R.drawable.k06);
                     n4 = 6;
                     b4 = 1;
                 }
                 if (k4 == 7) {
-                    polje4.setImageResource(R.drawable.k07);
+                    field_card_4.setImageResource(R.drawable.k07);
                     n4 = 7;
                     b4 = 1;
                 }
                 if (k4 == 8) {
-                    polje4.setImageResource(R.drawable.k08);
+                    field_card_4.setImageResource(R.drawable.k08);
                     n4 = 8;
                     b4 = 1;
                 }
                 if (k4 == 9) {
-                    polje4.setImageResource(R.drawable.k09);
+                    field_card_4.setImageResource(R.drawable.k09);
                     n4 = 9;
                     b4 = 1;
                 }
                 if (k4 == 10) {
-                    polje4.setImageResource(R.drawable.k10);
+                    field_card_4.setImageResource(R.drawable.k10);
                     n4 = 10;
                     b4 = 1;
                 }
                 if (k4 == 11) {
-                    polje4.setImageResource(R.drawable.k11);
+                    field_card_4.setImageResource(R.drawable.k11);
                     n4 = 11;
                     b4 = 1;
                 }
                 if (k4 == 12) {
-                    polje4.setImageResource(R.drawable.k12);
+                    field_card_4.setImageResource(R.drawable.k12);
                     n4 = 12;
                     b4 = 1;
                 }
                 if (k4 == 13) {
-                    polje4.setImageResource(R.drawable.k13);
+                    field_card_4.setImageResource(R.drawable.k13);
                     n4 = 13;
                     b4 = 1;
                 }
                 if (k4 == 14) {
-                    polje4.setImageResource(R.drawable.k14);
+                    field_card_4.setImageResource(R.drawable.k14);
                     n4 = 14;
                     b4 = 2;
                 }
                 if (k4 == 15) {
-                    polje4.setImageResource(R.drawable.k15);
+                    field_card_4.setImageResource(R.drawable.k15);
                     n4 = 2;
                     b4 = 2;
                 }
                 if (k4 == 16) {
-                    polje4.setImageResource(R.drawable.k16);
+                    field_card_4.setImageResource(R.drawable.k16);
                     n4 = 3;
                     b4 = 2;
                 }
                 if (k4 == 17) {
-                    polje4.setImageResource(R.drawable.k17);
+                    field_card_4.setImageResource(R.drawable.k17);
                     n4 = 4;
                     b4 = 2;
                 }
                 if (k4 == 18) {
-                    polje4.setImageResource(R.drawable.k18);
+                    field_card_4.setImageResource(R.drawable.k18);
                     n4 = 5;
                     b4 = 2;
                 }
                 if (k4 == 19) {
-                    polje4.setImageResource(R.drawable.k19);
+                    field_card_4.setImageResource(R.drawable.k19);
                     n4 = 6;
                     b4 = 2;
                 }
                 if (k4 == 20) {
-                    polje4.setImageResource(R.drawable.k20);
+                    field_card_4.setImageResource(R.drawable.k20);
                     n4 = 7;
                     b4 = 2;
                 }
                 if (k4 == 21) {
-                    polje4.setImageResource(R.drawable.k21);
+                    field_card_4.setImageResource(R.drawable.k21);
                     n4 = 8;
                     b4 = 2;
                 }
                 if (k4 == 22) {
-                    polje4.setImageResource(R.drawable.k22);
+                    field_card_4.setImageResource(R.drawable.k22);
                     n4 = 9;
                     b4 = 2;
                 }
                 if (k4 == 23) {
-                    polje4.setImageResource(R.drawable.k23);
+                    field_card_4.setImageResource(R.drawable.k23);
                     n4 = 10;
                     b4 = 2;
                 }
                 if (k4 == 24) {
-                    polje4.setImageResource(R.drawable.k24);
+                    field_card_4.setImageResource(R.drawable.k24);
                     n4 = 11;
                     b4 = 2;
                 }
                 if (k4 == 25) {
-                    polje4.setImageResource(R.drawable.k25);
+                    field_card_4.setImageResource(R.drawable.k25);
                     n4 = 12;
                     b4 = 2;
                 }
                 if (k4 == 26) {
-                    polje4.setImageResource(R.drawable.k26);
+                    field_card_4.setImageResource(R.drawable.k26);
                     n4 = 13;
                     b4 = 2;
                 }
                 if (k4 == 27) {
-                    polje4.setImageResource(R.drawable.k27);
+                    field_card_4.setImageResource(R.drawable.k27);
                     n4 = 14;
                     b4 = 3;
                 }
                 if (k4 == 28) {
-                    polje4.setImageResource(R.drawable.k28);
+                    field_card_4.setImageResource(R.drawable.k28);
                     n4 = 2;
                     b4 = 3;
                 }
                 if (k4 == 29) {
-                    polje4.setImageResource(R.drawable.k29);
+                    field_card_4.setImageResource(R.drawable.k29);
                     n4 = 3;
                     b4 = 3;
                 }
                 if (k4 == 30) {
-                    polje4.setImageResource(R.drawable.k30);
+                    field_card_4.setImageResource(R.drawable.k30);
                     n4 = 4;
                     b4 = 3;
                 }
                 if (k4 == 31) {
-                    polje4.setImageResource(R.drawable.k31);
+                    field_card_4.setImageResource(R.drawable.k31);
                     n4 = 5;
                     b4 = 3;
                 }
                 if (k4 == 32) {
-                    polje4.setImageResource(R.drawable.k32);
+                    field_card_4.setImageResource(R.drawable.k32);
                     n4 = 6;
                     b4 = 3;
                 }
                 if (k4 == 33) {
-                    polje4.setImageResource(R.drawable.k33);
+                    field_card_4.setImageResource(R.drawable.k33);
                     n4 = 7;
                     b4 = 3;
                 }
                 if (k4 == 34) {
-                    polje4.setImageResource(R.drawable.k34);
+                    field_card_4.setImageResource(R.drawable.k34);
                     n4 = 8;
                     b4 = 3;
                 }
                 if (k4 == 35) {
-                    polje4.setImageResource(R.drawable.k35);
+                    field_card_4.setImageResource(R.drawable.k35);
                     n4 = 9;
                     b4 = 3;
                 }
                 if (k4 == 36) {
-                    polje4.setImageResource(R.drawable.k36);
+                    field_card_4.setImageResource(R.drawable.k36);
                     n4 = 10;
                     b4 = 3;
                 }
                 if (k4 == 37) {
-                    polje4.setImageResource(R.drawable.k37);
+                    field_card_4.setImageResource(R.drawable.k37);
                     n4 = 11;
                     b4 = 3;
                 }
                 if (k4 == 38) {
-                    polje4.setImageResource(R.drawable.k38);
+                    field_card_4.setImageResource(R.drawable.k38);
                     n4 = 12;
                     b4 = 3;
                 }
                 if (k4 == 39) {
-                    polje4.setImageResource(R.drawable.k39);
+                    field_card_4.setImageResource(R.drawable.k39);
                     n4 = 13;
                     b4 = 3;
                 }
                 if (k4 == 40) {
-                    polje4.setImageResource(R.drawable.k40);
+                    field_card_4.setImageResource(R.drawable.k40);
                     n4 = 14;
                     b4 = 4;
                 }
                 if (k4 == 41) {
-                    polje4.setImageResource(R.drawable.k41);
+                    field_card_4.setImageResource(R.drawable.k41);
                     n4 = 2;
                     b4 = 4;
                 }
                 if (k4 == 42) {
-                    polje4.setImageResource(R.drawable.k42);
+                    field_card_4.setImageResource(R.drawable.k42);
                     n4 = 3;
                     b4 = 4;
                 }
                 if (k4 == 43) {
-                    polje4.setImageResource(R.drawable.k43);
+                    field_card_4.setImageResource(R.drawable.k43);
                     n4 = 4;
                     b4 = 4;
                 }
                 if (k4 == 44) {
-                    polje4.setImageResource(R.drawable.k44);
+                    field_card_4.setImageResource(R.drawable.k44);
                     n4 = 5;
                     b4 = 4;
                 }
                 if (k4 == 45) {
-                    polje4.setImageResource(R.drawable.k45);
+                    field_card_4.setImageResource(R.drawable.k45);
                     n4 = 6;
                     b4 = 4;
                 }
                 if (k4 == 46) {
-                    polje4.setImageResource(R.drawable.k46);
+                    field_card_4.setImageResource(R.drawable.k46);
                     n4 = 7;
                     b4 = 4;
                 }
                 if (k4 == 47) {
-                    polje4.setImageResource(R.drawable.k47);
+                    field_card_4.setImageResource(R.drawable.k47);
                     n4 = 8;
                     b4 = 4;
                 }
                 if (k4 == 48) {
-                    polje4.setImageResource(R.drawable.k48);
+                    field_card_4.setImageResource(R.drawable.k48);
                     n4 = 9;
                     b4 = 4;
                 }
                 if (k4 == 49) {
-                    polje4.setImageResource(R.drawable.k49);
+                    field_card_4.setImageResource(R.drawable.k49);
                     n4 = 10;
                     b4 = 4;
                 }
                 if (k4 == 50) {
-                    polje4.setImageResource(R.drawable.k50);
+                    field_card_4.setImageResource(R.drawable.k50);
                     n4 = 11;
                     b4 = 4;
                 }
                 if (k4 == 51) {
-                    polje4.setImageResource(R.drawable.k51);
+                    field_card_4.setImageResource(R.drawable.k51);
                     n4 = 12;
                     b4 = 4;
                 }
                 if (k4 == 52) {
-                    polje4.setImageResource(R.drawable.k52);
+                    field_card_4.setImageResource(R.drawable.k52);
                     n4 = 13;
                     b4 = 4;
                 }
-                polje4.setVisibility(View.VISIBLE);
+                field_card_4.setVisibility(View.VISIBLE);
                 if (dealing == 3) {
                     audio_card_4.start();
                 }

@@ -112,16 +112,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static MediaPlayer audio_high;
     public static MediaPlayer audio_bingo;
     public TextView ah1;
-    public static ImageView polje1;
-    public static ImageView polje2;
-    public static ImageView polje3;
-    public static ImageView polje4;
-    public static ImageView polje5;
-    public static ImageView poljej1;
-    public static ImageView poljej2;
-    public static ImageView poljej3;
-    public static ImageView poljej4;
-    public static ImageView poljej5;
+    public static ImageView field_card_1;
+    public static ImageView field_card_2;
+    public static ImageView field_card_3;
+    public static ImageView field_card_4;
+    public static ImageView field_card_5;
+    public static ImageView field_joker_1;
+    public static ImageView field_joker_2;
+    public static ImageView field_joker_3;
+    public static ImageView field_joker_4;
+    public static ImageView field_joker_5;
     public static ImageView rucno1;
     public static ImageView rucno2;
     public static ImageView rucno3;
@@ -257,17 +257,17 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         tief = findViewById(R.id.tief);
         hoch = findViewById(R.id.hoch);
 
-        polje1 = findViewById(R.id.polje_1);
-        polje2 = findViewById(R.id.polje_2);
-        polje3 = findViewById(R.id.polje_3);
-        polje4 = findViewById(R.id.polje_4);
-        polje5 = findViewById(R.id.polje_5);
+        field_card_1 = findViewById(R.id.polje_1);
+        field_card_2 = findViewById(R.id.polje_2);
+        field_card_3 = findViewById(R.id.polje_3);
+        field_card_4 = findViewById(R.id.polje_4);
+        field_card_5 = findViewById(R.id.polje_5);
 
-        poljej1 = findViewById(R.id.polje_j1);
-        poljej2 = findViewById(R.id.polje_j2);
-        poljej3 = findViewById(R.id.polje_j3);
-        poljej4 = findViewById(R.id.polje_j4);
-        poljej5 = findViewById(R.id.polje_j5);
+        field_joker_1 = findViewById(R.id.polje_j1);
+        field_joker_2 = findViewById(R.id.polje_j2);
+        field_joker_3 = findViewById(R.id.polje_j3);
+        field_joker_4 = findViewById(R.id.polje_j4);
+        field_joker_5 = findViewById(R.id.polje_j5);
 
         rucno1 = findViewById(R.id.rucno1);
         rucno2 = findViewById(R.id.rucno2);
@@ -552,11 +552,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 c = c - u;
                 c1.setText(String.format(Locale.getDefault(), "%d", (c)));
 
-                polje1.setVisibility(View.VISIBLE);
-                polje2.setVisibility(View.VISIBLE);
-                polje3.setVisibility(View.VISIBLE);
-                polje4.setVisibility(View.VISIBLE);
-                polje5.setVisibility(View.VISIBLE);
+                field_card_1.setVisibility(View.VISIBLE);
+                field_card_2.setVisibility(View.VISIBLE);
+                field_card_3.setVisibility(View.VISIBLE);
+                field_card_4.setVisibility(View.VISIBLE);
+                field_card_5.setVisibility(View.VISIBLE);
 
                 deljenje1();
                 deljenje();
@@ -588,9 +588,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 rucno10.setVisibility(View.INVISIBLE);
 
                 if(Hand1.hold1 == 0) {
-                    polje1.setVisibility(View.INVISIBLE);
-                    polje1.setImageResource(R.drawable.k53);
-                    polje1.setVisibility(View.VISIBLE);
+                    field_card_1.setVisibility(View.INVISIBLE);
+                    field_card_1.setImageResource(R.drawable.k53);
+                    field_card_1.setVisibility(View.VISIBLE);
                     k1 = (int) Math.floor(Math.random() * 53);
                     while (k1 == k2 || k1 == k3 || k1 == k4 || k1 == k5) {
                         k1 = (int) Math.floor(Math.random() * 53);
@@ -600,9 +600,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Card1();
                 }
                 if(Hand1.hold2 == 0) {
-                    polje2.setVisibility(View.INVISIBLE);
-                    polje2.setImageResource(R.drawable.k53);
-                    polje2.setVisibility(View.VISIBLE);
+                    field_card_2.setVisibility(View.INVISIBLE);
+                    field_card_2.setImageResource(R.drawable.k53);
+                    field_card_2.setVisibility(View.VISIBLE);
                     k2 = (int) Math.floor(Math.random() * 53);
                     while (k2 == k1 || k2 == k3 || k2 == k4 || k2 == k5) {
                         k2 = (int) Math.floor(Math.random() * 53);
@@ -612,9 +612,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Card2();
                 }
                 if(Hand1.hold3 == 0) {
-                    polje3.setVisibility(View.INVISIBLE);
-                    polje3.setImageResource(R.drawable.k53);
-                    polje3.setVisibility(View.VISIBLE);
+                    field_card_3.setVisibility(View.INVISIBLE);
+                    field_card_3.setImageResource(R.drawable.k53);
+                    field_card_3.setVisibility(View.VISIBLE);
                     k3 = (int) Math.floor(Math.random() * 53);
                     while (k3 == k1 || k3 == k2 || k3 == k4 || k3 == k5) {
                         k3 = (int) Math.floor(Math.random() * 53);
@@ -624,9 +624,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Card3();
                 }
                 if(Hand1.hold4 == 0) {
-                    polje4.setVisibility(View.INVISIBLE);
-                    polje4.setImageResource(R.drawable.k53);
-                    polje4.setVisibility(View.VISIBLE);
+                    field_card_4.setVisibility(View.INVISIBLE);
+                    field_card_4.setImageResource(R.drawable.k53);
+                    field_card_4.setVisibility(View.VISIBLE);
                     k4 = (int) Math.floor(Math.random() * 53);
                     while (k4 == k1 || k4 == k2 || k4 == k3 || k4 == k5) {
                         k4 = (int) Math.floor(Math.random() * 53);
@@ -636,9 +636,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Card4();
                 }
                 if(Hand1.hold5 == 0) {
-                    polje5.setVisibility(View.INVISIBLE);
-                    polje5.setImageResource(R.drawable.k53);
-                    polje5.setVisibility(View.VISIBLE);
+                    field_card_5.setVisibility(View.INVISIBLE);
+                    field_card_5.setImageResource(R.drawable.k53);
+                    field_card_5.setVisibility(View.VISIBLE);
                     k5 = (int) Math.floor(Math.random() * 53);
                     while (k5 == k1 || k5 == k2 || k5 == k3 || k5 == k4) {
                         k5 = (int) Math.floor(Math.random() * 53);
@@ -725,11 +725,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         count1();
         count100();
         bingo();
-        polje1.setVisibility(View.INVISIBLE);
-        polje2.setVisibility(View.INVISIBLE);
-        polje3.setVisibility(View.INVISIBLE);
-        polje4.setVisibility(View.INVISIBLE);
-        polje5.setVisibility(View.INVISIBLE);
+        field_card_1.setVisibility(View.INVISIBLE);
+        field_card_2.setVisibility(View.INVISIBLE);
+        field_card_3.setVisibility(View.INVISIBLE);
+        field_card_4.setVisibility(View.INVISIBLE);
+        field_card_5.setVisibility(View.INVISIBLE);
         poljeD1.setImageResource(R.drawable.k53);
         poljeD2.setImageResource(R.drawable.k53);
         poljeD3.setImageResource(R.drawable.k53);

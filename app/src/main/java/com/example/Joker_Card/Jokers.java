@@ -3,16 +3,16 @@ package com.example.Joker_Card;
 import static com.example.Joker_Card.MainClass.dealing;
 import static com.example.Joker_Card.MainClass.joker;
 import static com.example.Joker_Card.MainClass.card;
-import static com.example.Joker_Card.MainClass.polje1;
-import static com.example.Joker_Card.MainClass.polje2;
-import static com.example.Joker_Card.MainClass.polje3;
-import static com.example.Joker_Card.MainClass.polje4;
-import static com.example.Joker_Card.MainClass.polje5;
-import static com.example.Joker_Card.MainClass.poljej1;
-import static com.example.Joker_Card.MainClass.poljej2;
-import static com.example.Joker_Card.MainClass.poljej3;
-import static com.example.Joker_Card.MainClass.poljej4;
-import static com.example.Joker_Card.MainClass.poljej5;
+import static com.example.Joker_Card.MainClass.field_card_1;
+import static com.example.Joker_Card.MainClass.field_card_2;
+import static com.example.Joker_Card.MainClass.field_card_3;
+import static com.example.Joker_Card.MainClass.field_card_4;
+import static com.example.Joker_Card.MainClass.field_card_5;
+import static com.example.Joker_Card.MainClass.field_joker_1;
+import static com.example.Joker_Card.MainClass.field_joker_2;
+import static com.example.Joker_Card.MainClass.field_joker_3;
+import static com.example.Joker_Card.MainClass.field_joker_4;
+import static com.example.Joker_Card.MainClass.field_joker_5;
 
 import android.app.Activity;
 import android.os.Handler;
@@ -65,11 +65,11 @@ public class Jokers extends Activity {
             public void run() {
                 isVisible2 = !isVisible2;
                 if(dealing == 0) {
-                    polje1.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
-                    polje2.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
-                    polje3.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
-                    polje4.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
-                    polje5.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_1.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_2.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_3.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_4.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_5.setVisibility(isVisible2 ? View.VISIBLE : View.INVISIBLE);
                     handler2.postDelayed(this, 6000);
                 }
             }
@@ -83,12 +83,12 @@ public class Jokers extends Activity {
             public void run() {
                 isVisible3 = !isVisible3;
                 if(dealing == 0) {
-                    polje1.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
-                    poljej1.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
-                    polje2.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
-                    polje3.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
-                    polje4.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
-                    polje5.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_1.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_1.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_2.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_3.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_4.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_5.setVisibility(isVisible3 ? View.VISIBLE : View.INVISIBLE);
                     handler3.postDelayed(this, 7000);
                 }
             }
@@ -102,13 +102,13 @@ public class Jokers extends Activity {
             public void run() {
                 isVisible4 = !isVisible4;
                 if(dealing == 0) {
-                    polje1.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
-                    poljej1.setVisibility(View.INVISIBLE);
-                    polje2.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
-                    poljej2.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
-                    polje3.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
-                    polje4.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
-                    polje5.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_1.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_1.setVisibility(View.INVISIBLE);
+                    field_card_2.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_2.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_3.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_4.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_5.setVisibility(isVisible4 ? View.VISIBLE : View.INVISIBLE);
                     handler4.postDelayed(this, 8000);
                 }
             }
@@ -122,13 +122,13 @@ public class Jokers extends Activity {
             public void run() {
                 isVisible5 = !isVisible5;
                 if(dealing == 0) {
-                    polje1.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
-                    polje2.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
-                    poljej2.setVisibility(View.INVISIBLE);
-                    polje3.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
-                    poljej3.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
-                    polje4.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
-                    polje5.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_1.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_2.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_2.setVisibility(View.INVISIBLE);
+                    field_card_3.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_3.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_4.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_5.setVisibility(isVisible5 ? View.VISIBLE : View.INVISIBLE);
                     handler5.postDelayed(this, 9000);
                 }
             }
@@ -142,13 +142,13 @@ public class Jokers extends Activity {
             public void run() {
                 isVisible6 = !isVisible6;
                 if(dealing == 0) {
-                    polje1.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
-                    polje2.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
-                    polje3.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
-                    poljej3.setVisibility(View.INVISIBLE);
-                    polje4.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
-                    poljej4.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
-                    polje5.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_1.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_2.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_3.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_3.setVisibility(View.INVISIBLE);
+                    field_card_4.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_4.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_5.setVisibility(isVisible6 ? View.VISIBLE : View.INVISIBLE);
                     handler6.postDelayed(this, 10000);
                 }
             }
@@ -162,13 +162,13 @@ public class Jokers extends Activity {
             public void run() {
                 isVisible7 = !isVisible7;
                 if(dealing == 0) {
-                    polje1.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
-                    polje2.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
-                    polje3.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
-                    polje4.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
-                    poljej4.setVisibility(View.INVISIBLE);
-                    polje5.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
-                    poljej5.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_1.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_2.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_3.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_4.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_4.setVisibility(View.INVISIBLE);
+                    field_card_5.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_5.setVisibility(isVisible7 ? View.VISIBLE : View.INVISIBLE);
                     handler7.postDelayed(this, 11000);
                 }
             }
@@ -182,12 +182,12 @@ public class Jokers extends Activity {
             public void run() {
                 isVisible8 = !isVisible8;
                 if(dealing == 0) {
-                    polje1.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
-                    polje2.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
-                    polje3.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
-                    polje4.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
-                    polje5.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
-                    poljej5.setVisibility(View.INVISIBLE);
+                    field_card_1.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_2.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_3.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_4.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
+                    field_card_5.setVisibility(isVisible8 ? View.VISIBLE : View.INVISIBLE);
+                    field_joker_5.setVisibility(View.INVISIBLE);
                     handler8.postDelayed(this, 12000);
                 }
             }
