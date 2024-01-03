@@ -8,7 +8,7 @@ import static com.example.Joker_Card.MainClass.button_stop3;
 import static com.example.Joker_Card.MainClass.button_stop4;
 import static com.example.Joker_Card.MainClass.button_stop5;
 import static com.example.Joker_Card.MainClass.button_take;
-import static com.example.Joker_Card.MainClass.centar2;
+import static com.example.Joker_Card.MainClass.center_2;
 import static com.example.Joker_Card.MainClass.delaying;
 import static com.example.Joker_Card.MainClass.win1;
 import static com.example.Joker_Card.MainClass.win10;
@@ -20,19 +20,19 @@ import static com.example.Joker_Card.MainClass.win6;
 import static com.example.Joker_Card.MainClass.win7;
 import static com.example.Joker_Card.MainClass.win8;
 import static com.example.Joker_Card.MainClass.win9;
-import static com.example.Joker_Card.MainClass.dobitakdb;
+import static com.example.Joker_Card.MainClass.winning_value;
 import static com.example.Joker_Card.MainClass.won;
-import static com.example.Joker_Card.MainClass.dobitak;
-import static com.example.Joker_Card.MainClass.dobitak1;
-import static com.example.Joker_Card.MainClass.dobitak2;
-import static com.example.Joker_Card.MainClass.dobitak3;
-import static com.example.Joker_Card.MainClass.dobitak4;
-import static com.example.Joker_Card.MainClass.dobitak5;
-import static com.example.Joker_Card.MainClass.dobitak6;
-import static com.example.Joker_Card.MainClass.dobitak7;
-import static com.example.Joker_Card.MainClass.dobitak8;
-import static com.example.Joker_Card.MainClass.dobitak9;
-import static com.example.Joker_Card.MainClass.dobitak10;
+import static com.example.Joker_Card.MainClass.winning;
+import static com.example.Joker_Card.MainClass.winning_1;
+import static com.example.Joker_Card.MainClass.winning_2;
+import static com.example.Joker_Card.MainClass.winning_3;
+import static com.example.Joker_Card.MainClass.winning_4;
+import static com.example.Joker_Card.MainClass.winning_5;
+import static com.example.Joker_Card.MainClass.winning_6;
+import static com.example.Joker_Card.MainClass.winning_7;
+import static com.example.Joker_Card.MainClass.winning_8;
+import static com.example.Joker_Card.MainClass.winning_9;
+import static com.example.Joker_Card.MainClass.winning_10;
 import static com.example.Joker_Card.MainClass.table;
 import static com.example.Joker_Card.MainClass.cash;
 import static com.example.Joker_Card.MainClass.choice;
@@ -739,72 +739,72 @@ public class Hand2 extends Activity {
 
                 if (Fiveofakind == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak1.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win1)));
+                    winning_1.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win1)));
                     cash = win1;
                 }
                 if (Royalflush == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak2.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win2)));
+                    winning_2.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win2)));
                     cash = win2;
                 }
                 if (Streetflush == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak3.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win3)));
+                    winning_3.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win3)));
                     cash = win3;
                 }
                 if (Poker == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak4.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win4)));
+                    winning_4.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win4)));
                     cash = win4;
                 }
                 if (Fullhouse == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak5.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win5)));
+                    winning_5.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win5)));
                     cash = win5;
                 }
                 if (Flush == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak6.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win6)));
+                    winning_6.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win6)));
                     cash = win6;
                 }
                 if (Street == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak7.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win7)));
+                    winning_7.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win7)));
                     cash = win7;
                 }
                 if (Threeofakind == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak8.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win8)));
+                    winning_8.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win8)));
                     cash = win8;
                 }
                 if (Twopairs == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak9.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win9)));
+                    winning_9.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win9)));
                     cash = win9;
                 }
                 if (Highpair == 1) {
                     table.setVisibility(View.VISIBLE);
-                    dobitak10.setVisibility(View.VISIBLE);
-                    dobitak.setVisibility(View.VISIBLE);
-                    dobitakdb.setText(String.format(Locale.getDefault(), "%d", (win10)));
+                    winning_10.setVisibility(View.VISIBLE);
+                    winning.setVisibility(View.VISIBLE);
+                    winning_value.setText(String.format(Locale.getDefault(), "%d", (win10)));
                     cash = win10;
                 }
                 if (won == 1) {
@@ -815,7 +815,7 @@ public class Hand2 extends Activity {
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    dobitakdb.setVisibility(View.VISIBLE);
+                    winning_value.setVisibility(View.VISIBLE);
                     audio_winner.start();
                     button_stop1.setVisibility(View.INVISIBLE);
                     button_stop2.setVisibility(View.INVISIBLE);
@@ -826,8 +826,8 @@ public class Hand2 extends Activity {
                     choice = 2;
                     if(cash > 9999) {
                         block = 1;
-                        centar2.setText(R.string.win);
-                        centar2.setVisibility(View.VISIBLE);
+                        center_2.setText(R.string.win);
+                        center_2.setVisibility(View.VISIBLE);
                         button_take.setText(R.string.win);
                         button_deal.setText(R.string.win);
                     }

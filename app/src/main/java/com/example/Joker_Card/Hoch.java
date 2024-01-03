@@ -2,9 +2,9 @@ package com.example.Joker_Card;
 
 import static com.example.Joker_Card.MainClass.Bingo;
 import static com.example.Joker_Card.MainClass.Duplanje;
-import static com.example.Joker_Card.MainClass.centar2;
+import static com.example.Joker_Card.MainClass.center_2;
 import static com.example.Joker_Card.MainClass.cash;
-import static com.example.Joker_Card.MainClass.dobitakdb;
+import static com.example.Joker_Card.MainClass.winning_value;
 import static com.example.Joker_Card.MainClass.doubling;
 import static com.example.Joker_Card.MainClass.double_card;
 import static com.example.Joker_Card.MainClass.missed;
@@ -152,7 +152,7 @@ public class Hoch extends Activity {
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    centar2.setVisibility(View.INVISIBLE);
+                    center_2.setVisibility(View.INVISIBLE);
                     doubling = 1;
                     handler12.removeCallbacks(runnable12);
                     double_card++;
@@ -160,7 +160,7 @@ public class Hoch extends Activity {
                 }
                 else {
                     cash = 0;
-                    dobitakdb.setText(Integer.toString(cash));
+                    winning_value.setText(Integer.toString(cash));
                     missed = 1;
                     new Cashed();
                 }

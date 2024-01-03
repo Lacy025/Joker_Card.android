@@ -6,11 +6,11 @@ import static com.example.Joker_Card.MainClass.audio_winner;
 import static com.example.Joker_Card.MainClass.audio_intro;
 import static com.example.Joker_Card.MainClass.button_deal;
 import static com.example.Joker_Card.MainClass.button_take;
-import static com.example.Joker_Card.MainClass.centar2;
+import static com.example.Joker_Card.MainClass.center_2;
 import static com.example.Joker_Card.MainClass.cash;
 import static com.example.Joker_Card.MainClass.doubling;
 import static com.example.Joker_Card.MainClass.profit;
-import static com.example.Joker_Card.MainClass.dobitakdb;
+import static com.example.Joker_Card.MainClass.winning_value;
 import static com.example.Joker_Card.MainClass.c;
 import static com.example.Joker_Card.MainClass.c1;
 
@@ -29,8 +29,8 @@ public class TakingAll extends Activity {
 
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
-        centar2.setText(R.string.win);
-        centar2.setVisibility(View.VISIBLE);
+        center_2.setText(R.string.win);
+        center_2.setVisibility(View.VISIBLE);
 
         if(cash > 9999 && doubling == 0) {
             try {
@@ -53,7 +53,7 @@ public class TakingAll extends Activity {
             public void run() {
                 isVisible = !isVisible;
                 if(cash > 0) {
-                    centar2.setVisibility(isVisible ? View.INVISIBLE : View.VISIBLE);
+                    center_2.setVisibility(isVisible ? View.INVISIBLE : View.VISIBLE);
                     handler9.postDelayed(this, 400);
                 }
             }
@@ -96,7 +96,7 @@ public class TakingAll extends Activity {
         c += 1;
         c1.setText(Integer.toString(c));
         cash -= 1;
-        dobitakdb.setText(Integer.toString(cash));
+        winning_value.setText(Integer.toString(cash));
         audio_count_1.start();
         if(cash == 0) {
             pobedio();
@@ -107,7 +107,7 @@ public class TakingAll extends Activity {
         c += 100;
         c1.setText(Integer.toString(c));
         cash -= 100;
-        dobitakdb.setText(Integer.toString(cash));
+        winning_value.setText(Integer.toString(cash));
         audio_count_100.start();
         if(cash == 0) {
             pobedio();
@@ -115,7 +115,7 @@ public class TakingAll extends Activity {
         }
     }
     void pobedio() {
-        centar2.setText(R.string.win);
-        centar2.setVisibility(View.VISIBLE);
+        center_2.setText(R.string.win);
+        center_2.setVisibility(View.VISIBLE);
     }
 }

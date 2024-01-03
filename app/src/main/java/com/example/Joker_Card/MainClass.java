@@ -145,26 +145,26 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static ImageView field_win_10;
     public static ImageView field_win_11;
     public static ImageView field_win_12;
-    public TextView levodole1;
-    public TextView desnodole1;
-    public static TextView levodole2;
-    public static TextView desnodole2;
+    public TextView down_left_1;
+    public TextView down_right_1;
+    public static TextView down_left_2;
+    public static TextView down_right_2;
     public static TextView joker;
     public static TextView card;
-    public TextView centar1;
-    public static TextView centar2;
-    public static TextView dobitak1;
-    public static TextView dobitak2;
-    public static TextView dobitak3;
-    public static TextView dobitak4;
-    public static TextView dobitak5;
-    public static TextView dobitak6;
-    public static TextView dobitak7;
-    public static TextView dobitak8;
-    public static TextView dobitak9;
-    public static TextView dobitak10;
-    public static TextView dobitak;
-    public static TextView dobitakdb;
+    public TextView center_1;
+    public static TextView center_2;
+    public static TextView winning_1;
+    public static TextView winning_2;
+    public static TextView winning_3;
+    public static TextView winning_4;
+    public static TextView winning_5;
+    public static TextView winning_6;
+    public static TextView winning_7;
+    public static TextView winning_8;
+    public static TextView winning_9;
+    public static TextView winning_10;
+    public static TextView winning;
+    public static TextView winning_value;
     public static TextView tief;
     public static TextView hoch;
     public static TextView tief1;
@@ -245,14 +245,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_high = (Button) findViewById(R.id.double_hoch);
         button_high.setOnClickListener(this);
 
-        levodole1 = findViewById(R.id.levo);
-        desnodole1 = findViewById(R.id.desno);
+        down_left_1 = findViewById(R.id.levo);
+        down_right_1 = findViewById(R.id.desno);
         joker = findViewById(R.id.joker);
         card = findViewById(R.id.card);
-        centar1 = findViewById(R.id.centar1);
-        centar2 = findViewById(R.id.win);
-        levodole2 = findViewById(R.id.gamble);
-        desnodole2 = findViewById(R.id.cash);
+        center_1 = findViewById(R.id.centar1);
+        center_2 = findViewById(R.id.win);
+        down_left_2 = findViewById(R.id.gamble);
+        down_right_2 = findViewById(R.id.cash);
 
         tief = findViewById(R.id.tief);
         hoch = findViewById(R.id.hoch);
@@ -281,17 +281,17 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         hand_10 = findViewById(R.id.rucno10);
 
         table = findViewById(R.id.table);
-        dobitak1 = findViewById(R.id.dobitak1);
-        dobitak2 = findViewById(R.id.dobitak2);
-        dobitak3 = findViewById(R.id.dobitak3);
-        dobitak4 = findViewById(R.id.dobitak4);
-        dobitak5 = findViewById(R.id.dobitak5);
-        dobitak6 = findViewById(R.id.dobitak6);
-        dobitak7 = findViewById(R.id.dobitak7);
-        dobitak8 = findViewById(R.id.dobitak8);
-        dobitak9 = findViewById(R.id.dobitak9);
-        dobitak10 = findViewById(R.id.dobitak10);
-        dobitak = findViewById(R.id.dobitak);
+        winning_1 = findViewById(R.id.dobitak1);
+        winning_2 = findViewById(R.id.dobitak2);
+        winning_3 = findViewById(R.id.dobitak3);
+        winning_4 = findViewById(R.id.dobitak4);
+        winning_5 = findViewById(R.id.dobitak5);
+        winning_6 = findViewById(R.id.dobitak6);
+        winning_7 = findViewById(R.id.dobitak7);
+        winning_8 = findViewById(R.id.dobitak8);
+        winning_9 = findViewById(R.id.dobitak9);
+        winning_10 = findViewById(R.id.dobitak10);
+        winning = findViewById(R.id.dobitak);
 
         field_win_1 = findViewById(R.id.polje_d1);
         field_win_2 = findViewById(R.id.polje_d2);
@@ -363,45 +363,45 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
                                 if(c == 0 && dealing == 0) {
-                                    levodole1.setText(R.string.lacika_baci);
-                                    levodole1.setVisibility(View.VISIBLE);
-                                    desnodole1.setVisibility(View.INVISIBLE);
+                                    down_left_1.setText(R.string.lacika_baci);
+                                    down_left_1.setVisibility(View.VISIBLE);
+                                    down_right_1.setVisibility(View.INVISIBLE);
                                 }
                                 if(c > 0 && dealing == 0) {
-                                    levodole1.setVisibility(View.INVISIBLE);
-                                    desnodole1.setVisibility(View.INVISIBLE);
-                                    centar1.setText(R.string.choose_bet);
-                                    centar1.setVisibility(View.VISIBLE);
+                                    down_left_1.setVisibility(View.INVISIBLE);
+                                    down_right_1.setVisibility(View.INVISIBLE);
+                                    center_1.setText(R.string.choose_bet);
+                                    center_1.setVisibility(View.VISIBLE);
                                     button_take.setText(R.string.auto_hold);
                                     button_deal.setText(R.string.deal_cards);
                                 }
                                 if(c > 0 && dealing == 2) {
-                                    centar1.setText(R.string.pick_cards);
-                                    centar1.setVisibility(View.VISIBLE);
+                                    center_1.setText(R.string.pick_cards);
+                                    center_1.setVisibility(View.VISIBLE);
                                     button_take.setText(R.string.clear_cards);
                                 }
                                 if(won == 1) {
-                                    levodole2.setVisibility(View.VISIBLE);
-                                    desnodole2.setVisibility(View.INVISIBLE);
+                                    down_left_2.setVisibility(View.VISIBLE);
+                                    down_right_2.setVisibility(View.INVISIBLE);
                                 }
                             }, 1000);
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
                                 if(c == 0 && dealing == 0) {
-                                    levodole1.setVisibility(View.INVISIBLE);
-                                    desnodole1.setText(R.string.serbia_2023);
-                                    desnodole1.setVisibility(View.VISIBLE);
+                                    down_left_1.setVisibility(View.INVISIBLE);
+                                    down_right_1.setText(R.string.serbia_2023);
+                                    down_right_1.setVisibility(View.VISIBLE);
                                 }
                                 if((c > 0 && dealing == 0) || (c > 0 && dealing == 2)) {
-                                    levodole1.setText("");
-                                    levodole1.setVisibility(View.INVISIBLE);
-                                    desnodole1.setVisibility(View.INVISIBLE);
-                                    centar1.setText(R.string.press_deal_cards);
-                                    centar1.setVisibility(View.VISIBLE);
+                                    down_left_1.setText("");
+                                    down_left_1.setVisibility(View.INVISIBLE);
+                                    down_right_1.setVisibility(View.INVISIBLE);
+                                    center_1.setText(R.string.press_deal_cards);
+                                    center_1.setVisibility(View.VISIBLE);
                                 }
                                 if(won == 1) {
-                                    levodole2.setVisibility(View.INVISIBLE);
-                                    desnodole2.setVisibility(View.VISIBLE);
+                                    down_left_2.setVisibility(View.INVISIBLE);
+                                    down_right_2.setVisibility(View.VISIBLE);
                                 }
                             }, 2000);
                 });
@@ -542,12 +542,12 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 joker.setVisibility(View.INVISIBLE);
                 card.setText("");
                 card.setVisibility(View.INVISIBLE);
-                levodole1.setText("");
-                levodole1.setVisibility(View.INVISIBLE);
-                desnodole1.setText("");
-                desnodole1.setVisibility(View.INVISIBLE);
-                centar1.setText("");
-                centar1.setVisibility(View.INVISIBLE);
+                down_left_1.setText("");
+                down_left_1.setVisibility(View.INVISIBLE);
+                down_right_1.setText("");
+                down_right_1.setVisibility(View.INVISIBLE);
+                center_1.setText("");
+                center_1.setVisibility(View.INVISIBLE);
 
                 c = c - u;
                 c1.setText(String.format(Locale.getDefault(), "%d", (c)));
@@ -572,8 +572,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 deljenje2();
                 choice = 0;
                 dealing = 3;
-                centar1.setText("");
-                centar1.setVisibility(View.INVISIBLE);
+                center_1.setText("");
+                center_1.setVisibility(View.INVISIBLE);
                 hold = 300;
                 delaying = 50;
                 hand_1.setVisibility(View.INVISIBLE);
@@ -715,8 +715,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         choice = 3;
         won = 0;
         interval = 400;
-        levodole2.setVisibility(View.INVISIBLE);
-        desnodole2.setVisibility(View.INVISIBLE);
+        down_left_2.setVisibility(View.INVISIBLE);
+        down_right_2.setVisibility(View.INVISIBLE);
         button_take.setText(R.string.take_all);
         button_deal.setText(R.string.take_half);
         button_low.setVisibility(View.VISIBLE);
@@ -944,7 +944,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         final TextView d_8 = findViewById(R.id.vrednost_8);
         final TextView d_9 = findViewById(R.id.vrednost_9);
         final TextView d_10 = findViewById(R.id.vrednost_10);
-        dobitakdb = findViewById(R.id.vrednostdb);
+        winning_value = findViewById(R.id.vrednostdb);
 
         u1.setText(String.format(Locale.getDefault(), "%d", (u)));
         win1 = d1 * u;
@@ -1237,9 +1237,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static void Bingo() {
         handler0.removeCallbacks(runnable0);
         cash *= 2;
-        dobitakdb.setText(String.format(Locale.getDefault(), "%d", (cash)));
-        centar2.setText(R.string.win);
-        centar2.setVisibility(View.VISIBLE);
+        winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
+        center_2.setText(R.string.win);
+        center_2.setVisibility(View.VISIBLE);
         audio_bingo.start();
         interval -=25;
     }
@@ -1255,8 +1255,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     void Kasa() {
         choice = 3;
         won = 0;
-        levodole2.setVisibility(View.INVISIBLE);
-        desnodole2.setVisibility(View.INVISIBLE);
+        down_left_2.setVisibility(View.INVISIBLE);
+        down_right_2.setVisibility(View.INVISIBLE);
         intro();
         count1();
         count100();

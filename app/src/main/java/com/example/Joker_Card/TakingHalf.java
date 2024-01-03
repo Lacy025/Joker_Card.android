@@ -7,9 +7,9 @@ import static com.example.Joker_Card.MainClass.button_deal;
 import static com.example.Joker_Card.MainClass.button_take;
 import static com.example.Joker_Card.MainClass.c;
 import static com.example.Joker_Card.MainClass.c1;
-import static com.example.Joker_Card.MainClass.centar2;
+import static com.example.Joker_Card.MainClass.center_2;
 import static com.example.Joker_Card.MainClass.cash;
-import static com.example.Joker_Card.MainClass.dobitakdb;
+import static com.example.Joker_Card.MainClass.winning_value;
 import static com.example.Joker_Card.MainClass.doubling;
 
 import android.app.Activity;
@@ -38,8 +38,8 @@ public class TakingHalf extends Activity {
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
         pola = (Math.floor(cash / 2));
-        centar2.setText(R.string.win);
-        centar2.setVisibility(View.VISIBLE);
+        center_2.setText(R.string.win);
+        center_2.setVisibility(View.VISIBLE);
         doubling = 0;
         countdown = 1;
 
@@ -51,7 +51,7 @@ public class TakingHalf extends Activity {
                         () -> {
                             if(cash == pola) {
                                 handler16.removeCallbacks(runnable16);
-                                centar2.setVisibility(View.VISIBLE);
+                                center_2.setVisibility(View.VISIBLE);
                                 timer4.cancel();
                                 timer4.purge();
                             }
@@ -66,7 +66,7 @@ public class TakingHalf extends Activity {
             public void run() {
                 isVisible = !isVisible;
                 if(cash > 0) {
-                    centar2.setVisibility(isVisible ? View.INVISIBLE : View.VISIBLE);
+                    center_2.setVisibility(isVisible ? View.INVISIBLE : View.VISIBLE);
                     handler16.postDelayed(this, 400);
                 }
             }
@@ -141,14 +141,14 @@ public class TakingHalf extends Activity {
         c += 1;
         c1.setText(Integer.toString(c));
         cash -= 1;
-        dobitakdb.setText(Integer.toString(cash));
+        winning_value.setText(Integer.toString(cash));
         audio_count_1.start();
     }
     void minussto() {
         c += 100;
         c1.setText(Integer.toString(c));
         cash -= 100;
-        dobitakdb.setText(Integer.toString(cash));
+        winning_value.setText(Integer.toString(cash));
         audio_count_100.start();
     }
     void prvideo() {
@@ -156,19 +156,19 @@ public class TakingHalf extends Activity {
         c1.setText(Integer.toString(c));
         cash -= pola1;
         deo = cash;
-        dobitakdb.setText(Integer.toString(cash));
+        winning_value.setText(Integer.toString(cash));
         audio_count_100.start();
     }
     void drugideo() {
         c += pola2;
         c1.setText(Integer.toString(c));
         cash -= pola2;
-        dobitakdb.setText(Integer.toString(cash));
+        winning_value.setText(Integer.toString(cash));
         audio_count_100.start();
     }
     void pobedio() {
         handler16.removeCallbacks(runnable16);
-        centar2.setVisibility(View.INVISIBLE);
+        center_2.setVisibility(View.INVISIBLE);
         doubling = 1;
         button_take.setText(R.string.take_all);
         button_deal.setText(R.string.take_half);
