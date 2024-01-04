@@ -165,30 +165,30 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static TextView winning_10;
     public static TextView winning;
     public static TextView winning_value;
-    public static TextView tief;
-    public static TextView hoch;
-    public static TextView tief1;
-    public static TextView tief2;
-    public static TextView tief3;
-    public static TextView tief4;
-    public static TextView tief5;
-    public static TextView tief6;
-    public static TextView tief7;
-    public static TextView tief8;
-    public static TextView tief9;
-    public static TextView tief10;
-    public static TextView tief11;
-    public static TextView hoch1;
-    public static TextView hoch2;
-    public static TextView hoch3;
-    public static TextView hoch4;
-    public static TextView hoch5;
-    public static TextView hoch6;
-    public static TextView hoch7;
-    public static TextView hoch8;
-    public static TextView hoch9;
-    public static TextView hoch10;
-    public static TextView hoch11;
+    public static TextView low;
+    public static TextView high;
+    public static TextView low_1;
+    public static TextView low_2;
+    public static TextView low_3;
+    public static TextView low_4;
+    public static TextView low_5;
+    public static TextView low_6;
+    public static TextView low_7;
+    public static TextView low_8;
+    public static TextView low_9;
+    public static TextView low_10;
+    public static TextView low_11;
+    public static TextView high_1;
+    public static TextView high_2;
+    public static TextView high_3;
+    public static TextView high_4;
+    public static TextView high_5;
+    public static TextView high_6;
+    public static TextView high_7;
+    public static TextView high_8;
+    public static TextView high_9;
+    public static TextView high_10;
+    public static TextView high_11;
     Timer timer1;
     TimerTask task1;
     Timer timer2;
@@ -254,8 +254,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         down_left_2 = findViewById(R.id.gamble);
         down_right_2 = findViewById(R.id.cash);
 
-        tief = findViewById(R.id.tief);
-        hoch = findViewById(R.id.hoch);
+        low = findViewById(R.id.tief);
+        high = findViewById(R.id.hoch);
 
         field_card_1 = findViewById(R.id.polje_1);
         field_card_2 = findViewById(R.id.polje_2);
@@ -306,29 +306,29 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         field_win_11 = findViewById(R.id.polje_d11);
         field_win_12 = findViewById(R.id.polje_d12);
 
-        tief1 = findViewById(R.id.tief_1);
-        tief2 = findViewById(R.id.tief_2);
-        tief3 = findViewById(R.id.tief_3);
-        tief4 = findViewById(R.id.tief_4);
-        tief5 = findViewById(R.id.tief_5);
-        tief6 = findViewById(R.id.tief_6);
-        tief7 = findViewById(R.id.tief_7);
-        tief8 = findViewById(R.id.tief_8);
-        tief9 = findViewById(R.id.tief_9);
-        tief10 = findViewById(R.id.tief_10);
-        tief11 = findViewById(R.id.tief_11);
+        low_1 = findViewById(R.id.tief_1);
+        low_2 = findViewById(R.id.tief_2);
+        low_3 = findViewById(R.id.tief_3);
+        low_4 = findViewById(R.id.tief_4);
+        low_5 = findViewById(R.id.tief_5);
+        low_6 = findViewById(R.id.tief_6);
+        low_7 = findViewById(R.id.tief_7);
+        low_8 = findViewById(R.id.tief_8);
+        low_9 = findViewById(R.id.tief_9);
+        low_10 = findViewById(R.id.tief_10);
+        low_11 = findViewById(R.id.tief_11);
 
-        hoch1 = findViewById(R.id.hoch_1);
-        hoch2 = findViewById(R.id.hoch_2);
-        hoch3 = findViewById(R.id.hoch_3);
-        hoch4 = findViewById(R.id.hoch_4);
-        hoch5 = findViewById(R.id.hoch_5);
-        hoch6 = findViewById(R.id.hoch_6);
-        hoch7 = findViewById(R.id.hoch_7);
-        hoch8 = findViewById(R.id.hoch_8);
-        hoch9 = findViewById(R.id.hoch_9);
-        hoch10 = findViewById(R.id.hoch_10);
-        hoch11 = findViewById(R.id.hoch_11);
+        high_1 = findViewById(R.id.hoch_1);
+        high_2 = findViewById(R.id.hoch_2);
+        high_3 = findViewById(R.id.hoch_3);
+        high_4 = findViewById(R.id.hoch_4);
+        high_5 = findViewById(R.id.hoch_5);
+        high_6 = findViewById(R.id.hoch_6);
+        high_7 = findViewById(R.id.hoch_7);
+        high_8 = findViewById(R.id.hoch_8);
+        high_9 = findViewById(R.id.hoch_9);
+        high_10 = findViewById(R.id.hoch_10);
+        high_11 = findViewById(R.id.hoch_11);
 
         timer1 = new Timer();
         timer2 = new Timer();
@@ -336,7 +336,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
 
         intro();
         audio_intro.start();
-        Ulog();
+        Bet();
         new Jokers();
         timer1.schedule(task1 = new TimerTask() {
             @Override
@@ -419,15 +419,15 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                     public void run() {
                                         if(dealing == 0 && c > 0 && u > c) {
                                             u = c;
-                                            Ulog();
+                                            Bet();
                                         }
                                         if(dealing == 0 && c==0 && game==1) {
                                             u = 1;
-                                            Ulog();
+                                            Bet();
                                         }
                                         if(dealing == 1) {
                                             dealing = 2;
-                                            Deljenje1();
+                                            Deal_Cards_1();
                                             delaying = 500;
                                             new Card1();
                                             delaying = 600;
@@ -448,7 +448,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                         }
                                         if(block == 1) {
                                             block = 0;
-                                            Kasa();
+                                            Cash();
                                         }
                                         if(profit == 1) {
                                             new Cashed();
@@ -462,27 +462,27 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     }
     @Override
     public void onClick(View view) {
-        int id = view.getId();
-        if(id == R.id.credit) {
+        int pressed = view.getId();
+        if(pressed == R.id.credit) {
             if (c < 4901 && dealing == 0) {
                 intro();
-                kredit();
+                credit();
                 game = 1;
                 c += 100;
                 c1.setText(String.format(Locale.getDefault(), "%d", (c)));
             }
         }
-        if(id == R.id.bet) {
+        if(pressed == R.id.bet) {
             if(c > 0 && dealing == 0) {
-                ulog();
+                bet();
                 u += 1;
                 if(u==99 || u > c) {
                     u = 1;
                 }
-                Ulog();
+                Bet();
             }
         }
-        if(id == R.id.take) {
+        if(pressed == R.id.take) {
             if (c > 0 && dealing == 0) {
                 if (ah == 1) {
                     ah1.setTextColor(Color.BLACK);
@@ -492,11 +492,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     ah1.setTextColor(Color.BLUE);
                     ah = 1;
                 }
-                autohold();
+                auto_hold();
             }
             else if(choice == 1) {
-                ponistavanje1();
-                ponistavanje2();
+                clearing_1();
+                clearing_2();
                 Hand1.hold1 = 0;
                 Hand1.hold2 = 0;
                 Hand1.hold3 = 0;
@@ -504,18 +504,18 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 Hand1.hold5 = 0;
             }
             else if(choice == 2) {
-                Kasa();
+                Cash();
             }
             else if (doubling == 1) {
                 doubling = 0;
                 button_low.setVisibility(View.INVISIBLE);
                 button_high.setVisibility(View.INVISIBLE);
-                tief.setVisibility(View.INVISIBLE);
-                hoch.setVisibility(View.INVISIBLE);
-                Kasa();
+                low.setVisibility(View.INVISIBLE);
+                high.setVisibility(View.INVISIBLE);
+                Cash();
             }
         }
-        if(id == R.id.deal) {
+        if(pressed == R.id.deal) {
             if((c > 0 && dealing == 0) || (c > 0 && profit == 1)) {
                 if(profit == 1) {
                     intro();
@@ -558,18 +558,18 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 field_card_4.setVisibility(View.VISIBLE);
                 field_card_5.setVisibility(View.VISIBLE);
 
-                deljenje1();
-                deljenje();
+                deal_cards_1();
+                deal_cards();
 
                 while(k1 == k2 || k1 == k3 || k1 == k4 ||
                         k1 == k5 || k2 == k3 || k2 == k4 ||
                         k2 == k5 || k3 == k4 || k3 == k5 || k4 == k5) {
-                    deljenje1();
+                    deal_cards_1();
                 }
                 dealing = 1;
             }
             else if(choice == 1) {
-                deljenje2();
+                deal_cards_2();
                 choice = 0;
                 dealing = 3;
                 center_1.setText("");
@@ -595,7 +595,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     while (k1 == k2 || k1 == k3 || k1 == k4 || k1 == k5) {
                         k1 = (int) Math.floor(Math.random() * 53);
                     }
-                    karta1();
+                    card_1();
                     delaying = delaying + hold;
                     new Card1();
                 }
@@ -607,7 +607,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     while (k2 == k1 || k2 == k3 || k2 == k4 || k2 == k5) {
                         k2 = (int) Math.floor(Math.random() * 53);
                     }
-                    karta2();
+                    card_2();
                     delaying = delaying + hold;
                     new Card2();
                 }
@@ -619,7 +619,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     while (k3 == k1 || k3 == k2 || k3 == k4 || k3 == k5) {
                         k3 = (int) Math.floor(Math.random() * 53);
                     }
-                    karta3();
+                    card_3();
                     delaying = delaying + hold;
                     new Card3();
                 }
@@ -631,7 +631,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     while (k4 == k1 || k4 == k2 || k4 == k3 || k4 == k5) {
                         k4 = (int) Math.floor(Math.random() * 53);
                     }
-                    karta4();
+                    card_4();
                     delaying = delaying + hold;
                     new Card4();
                 }
@@ -643,54 +643,54 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     while (k5 == k1 || k5 == k2 || k5 == k3 || k5 == k4) {
                         k5 = (int) Math.floor(Math.random() * 53);
                     }
-                    karta5();
+                    card_5();
                     delaying = delaying + hold;
                     new Card5();
                 }
-                dobitnik();
+                winner();
                 new Hand2();
             }
             else if(choice == 2) {
-                duplanje();
+                doubling();
             }
             else if(doubling == 1 && cash > 1) {
-                id = 0;
+                pressed = 0;
                 handler0.removeCallbacks(runnable0);
-                tief.setVisibility(View.INVISIBLE);
-                hoch.setVisibility(View.INVISIBLE);
+                low.setVisibility(View.INVISIBLE);
+                high.setVisibility(View.INVISIBLE);
                 new TakingHalf();
             }
         }
-        if(id == R.id.stop1) {
+        if(pressed == R.id.stop1) {
             if(choice == 1) {
-                stopcard1();
+                stop_card_1();
             }
         }
-        if(id == R.id.stop2) {
+        if(pressed == R.id.stop2) {
             if(choice == 1) {
-                stopcard2();
+                stop_card_2();
             }
         }
-        if(id == R.id.stop3) {
+        if(pressed == R.id.stop3) {
             if(choice == 1) {
-                stopcard3();
+                stop_card_3();
             }
         }
-        if(id == R.id.stop4) {
+        if(pressed == R.id.stop4) {
             if(choice == 1) {
-                stopcard4();
+                stop_card_4();
             }
         }
-        if(id == R.id.stop5) {
+        if(pressed == R.id.stop5) {
             if(choice == 1) {
-                stopcard5();
+                stop_card_5();
             }
         }
-        if(id == R.id.double_tief) {
+        if(pressed == R.id.double_tief) {
             if(doubling == 1) {
                 doubling = 0;
-                tief.setVisibility(View.INVISIBLE);
-                hoch.setVisibility(View.INVISIBLE);
+                low.setVisibility(View.INVISIBLE);
+                high.setVisibility(View.INVISIBLE);
                 try {
                     new Tief();
                 } catch (InterruptedException e) {
@@ -698,11 +698,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 }
             }
         }
-        if(id == R.id.double_hoch) {
+        if(pressed == R.id.double_hoch) {
             if(doubling == 1) {
                 doubling = 0;
-                tief.setVisibility(View.INVISIBLE);
-                hoch.setVisibility(View.INVISIBLE);
+                low.setVisibility(View.INVISIBLE);
+                high.setVisibility(View.INVISIBLE);
                 try {
                     new Hoch();
                 } catch (InterruptedException e) {
@@ -711,7 +711,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
         }
     }
-    void duplanje() {
+    void doubling() {
         choice = 3;
         won = 0;
         interval = 400;
@@ -722,8 +722,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_low.setVisibility(View.VISIBLE);
         button_high.setVisibility(View.VISIBLE);
         intro();
-        count1();
-        count100();
+        count_1();
+        count_100();
         bingo();
         field_card_1.setVisibility(View.INVISIBLE);
         field_card_2.setVisibility(View.INVISIBLE);
@@ -747,15 +747,15 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         doubling = 1;
         double_card = 1;
         dk = 0;
-        Duplanje();
+        Doubling();
     }
-    public static void Duplanje() {
+    public static void Doubling() {
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.VISIBLE);
             dk1 = (int) Math.floor(Math.random() * 48) + 1;
             cheat = dk1;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 2) {
             field_win_2.setVisibility(View.VISIBLE);
@@ -764,7 +764,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk2 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk2;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 3) {
             field_win_3.setVisibility(View.VISIBLE);
@@ -773,7 +773,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk3 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk3;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 4) {
             field_win_4.setVisibility(View.VISIBLE);
@@ -782,7 +782,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk4 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk4;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 5) {
             field_win_5.setVisibility(View.VISIBLE);
@@ -792,7 +792,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk5 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk5;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 6) {
             field_win_6.setVisibility(View.VISIBLE);
@@ -802,7 +802,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk6 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk6;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 7) {
             field_win_7.setVisibility(View.VISIBLE);
@@ -812,7 +812,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk7 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk7;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 8) {
             field_win_8.setVisibility(View.VISIBLE);
@@ -822,7 +822,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk8 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk8;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 9) {
             field_win_9.setVisibility(View.VISIBLE);
@@ -832,7 +832,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk9 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk9;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 10) {
             field_win_10.setVisibility(View.VISIBLE);
@@ -843,7 +843,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk10 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk10;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 11) {
             field_win_11.setVisibility(View.VISIBLE);
@@ -854,16 +854,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk11 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk11;
-            TiefHoch();
+            Low_High();
         }
         if(double_card == 12) {
             handler0.removeCallbacks(runnable0);
             field_win_12.setVisibility(View.VISIBLE);
-            Blokada();
+            Block();
         }
     }
 
-    static void TiefHoch() {
+    static void Low_High() {
         /*
 
         if(cheat < 25) {
@@ -876,28 +876,28 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
 */
         if(cash > 9999) {
-            Blokada();
+            Block();
         }
         else {
-            final int[] HochTief = {1};
+            final int[] high_low = {1};
 
             handler0 = new Handler();
             runnable0 = new Runnable() {
                 @Override
                 public void run() {
                     if(doubling == 1) {
-                        if(HochTief[0] == 1) {
+                        if(high_low[0] == 1) {
                             audio_high.start();
-                            tief.setVisibility(View.INVISIBLE);
-                            hoch.setVisibility(View.VISIBLE);
-                            HochTief[0] = 2;
+                            low.setVisibility(View.INVISIBLE);
+                            high.setVisibility(View.VISIBLE);
+                            high_low[0] = 2;
 
                         }
                         else {
                             audio_low.start();
-                            hoch.setVisibility(View.INVISIBLE);
-                            tief.setVisibility(View.VISIBLE);
-                            HochTief[0] = 1;
+                            high.setVisibility(View.INVISIBLE);
+                            low.setVisibility(View.VISIBLE);
+                            high_low[0] = 1;
                         }
                         handler0.postDelayed(this, interval);
                     }
@@ -914,7 +914,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
         audio_intro = MediaPlayer.create(this, R.raw.intro);
     }
-    void kredit() {
+    void credit() {
         if (c == 0 && game == 0) {
             game = 1;
             if(audio_intro != null) {
@@ -932,7 +932,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_credit = MediaPlayer.create(this, R.raw.kredit);
         audio_credit.start();
     }
-    void Ulog() {
+    void Bet() {
         final TextView u1 = findViewById(R.id.vrednost_u);
         final TextView d_1 = findViewById(R.id.vrednost_1);
         final TextView d_2 = findViewById(R.id.vrednost_2);
@@ -969,7 +969,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         d_9.setText(String.format(Locale.getDefault(), "%d", (win9)));
         d_10.setText(String.format(Locale.getDefault(), "%d", (win10)));
     }
-    void ulog() {
+    void bet() {
         if (audio_bet != null) {
             audio_bet.reset();
             audio_bet.release();
@@ -978,7 +978,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_bet = MediaPlayer.create(this, R.raw.ulog);
         audio_bet.start();
     }
-    void autohold() {
+    void auto_hold() {
         if (audio_auto_hold != null) {
             audio_auto_hold.reset();
             audio_auto_hold.release();
@@ -987,7 +987,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_auto_hold = MediaPlayer.create(this, R.raw.autohold);
         audio_auto_hold.start();
     }
-    void deljenje() {
+    void deal_cards() {
         if (audio_deal_cards_1 != null) {
             audio_deal_cards_1.reset();
             audio_deal_cards_1.release();
@@ -996,7 +996,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_deal_cards_1 = MediaPlayer.create(this, R.raw.deljenje1);
         audio_deal_cards_1.start();
     }
-    void deljenje1() {
+    void deal_cards_1() {
 
         k1 = (int) Math.floor(Math.random() * 53);
         k2 = (int) Math.floor(Math.random() * 53);
@@ -1013,11 +1013,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
 */
 
     }
-    void Deljenje1() {
+    void Deal_Cards_1() {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                karta12345();
+                cards12345();
             }
         }, 500);
     }
@@ -1038,7 +1038,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stopcard1();
+                        stop_card_1();
                     }
                     if (Hand1.hold2 == 1) {
                         try {
@@ -1046,7 +1046,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stopcard2();
+                        stop_card_2();
                     }
                     if (Hand1.hold3 == 1) {
                         try {
@@ -1054,7 +1054,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stopcard3();
+                        stop_card_3();
                     }
                     if (Hand1.hold4 == 1) {
                         try {
@@ -1062,7 +1062,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stopcard4();
+                        stop_card_4();
                     }
                     if (Hand1.hold5 == 1) {
                         try {
@@ -1070,7 +1070,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
-                        stopcard5();
+                        stop_card_5();
                     }
                     try {
                         Thread.sleep(200);
@@ -1082,7 +1082,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
         }, 0,200);
     }
-    void karta12345() {
+    void cards12345() {
         if (audio_cards != null) {
             audio_cards.reset();
             audio_cards = null;
@@ -1090,7 +1090,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_cards = MediaPlayer.create(this, R.raw.karte12345);
         audio_cards.start();
     }
-    void stopcard1() {
+    void stop_card_1() {
         if (audio_stop_1 != null) {
             audio_stop_1.reset();
             audio_stop_1 = null;
@@ -1100,7 +1100,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_stop1.setBackgroundColor(Color.RED);
         Hand1.hold1 = 1;
     }
-    void stopcard2() {
+    void stop_card_2() {
         if (audio_stop_2 != null) {
             audio_stop_2.reset();
             audio_stop_2 = null;
@@ -1110,7 +1110,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_stop2.setBackgroundColor(Color.RED);
         Hand1.hold2 = 1;
     }
-    void stopcard3() {
+    void stop_card_3() {
         if (audio_stop_3 != null) {
             audio_stop_3.reset();
             audio_stop_3 = null;
@@ -1120,7 +1120,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_stop3.setBackgroundColor(Color.RED);
         Hand1.hold3 = 1;
     }
-    void stopcard4() {
+    void stop_card_4() {
         if (audio_stop_4 != null) {
             audio_stop_4.reset();
             audio_stop_4 = null;
@@ -1130,7 +1130,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_stop4.setBackgroundColor(Color.RED);
         Hand1.hold4 = 1;
     }
-    void stopcard5() {
+    void stop_card_5() {
         if (audio_stop_5 != null) {
             audio_stop_5.reset();
             audio_stop_5 = null;
@@ -1140,7 +1140,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_stop5.setBackgroundColor(Color.RED);
         Hand1.hold5 = 1;
     }
-    void ponistavanje1() {
+    void clearing_1() {
         if (audio_clear != null) {
             audio_clear.reset();
             audio_clear = null;
@@ -1148,14 +1148,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_clear = MediaPlayer.create(this, R.raw.ponistavanje);
         audio_clear.start();
     }
-    public static void ponistavanje2() {
+    public static void clearing_2() {
         button_stop1.setBackgroundColor(Color.parseColor("#000000"));
         button_stop2.setBackgroundColor(Color.parseColor("#000000"));
         button_stop3.setBackgroundColor(Color.parseColor("#000000"));
         button_stop4.setBackgroundColor(Color.parseColor("#000000"));
         button_stop5.setBackgroundColor(Color.parseColor("#000000"));
     }
-    void deljenje2() {
+    void deal_cards_2() {
         if (audio_deal_cards_2 != null) {
             audio_deal_cards_2.reset();
             audio_deal_cards_2 = null;
@@ -1163,42 +1163,42 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_deal_cards_2 = MediaPlayer.create(this, R.raw.deljenje2);
         audio_deal_cards_2.start();
     }
-    void karta1() {
+    void card_1() {
         if (audio_card_1 != null) {
             audio_card_1.reset();
             audio_card_1 = null;
         }
         audio_card_1 = MediaPlayer.create(this, R.raw.karta1);
     }
-    void karta2() {
+    void card_2() {
         if (audio_card_2 != null) {
             audio_card_2.reset();
             audio_card_2 = null;
         }
         audio_card_2 = MediaPlayer.create(this, R.raw.karta2);
     }
-    void karta3() {
+    void card_3() {
         if (audio_card_3 != null) {
             audio_card_3.reset();
             audio_card_3 = null;
         }
         audio_card_3 = MediaPlayer.create(this, R.raw.karta3);
     }
-    void karta4() {
+    void card_4() {
         if (audio_card_4 != null) {
             audio_card_4.reset();
             audio_card_4 = null;
         }
         audio_card_4 = MediaPlayer.create(this, R.raw.karta4);
     }
-    void karta5() {
+    void card_5() {
         if (audio_card_5 != null) {
             audio_card_5.reset();
             audio_card_5 = null;
         }
         audio_card_5 = MediaPlayer.create(this, R.raw.karta5);
     }
-    void dobitnik() {
+    void winner() {
         if (audio_winner != null) {
             audio_winner.reset();
             audio_winner = null;
@@ -1206,28 +1206,28 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_winner = MediaPlayer.create(this, R.raw.dobitnik);
     }
 
-    void count1() {
+    void count_1() {
         if (audio_count_1 != null) {
             audio_count_1.reset();
             audio_count_1 = null;
         }
         audio_count_1 = MediaPlayer.create(this,R.raw.isplata1);
     }
-    void count100() {
+    void count_100() {
         if (audio_count_100 != null) {
             audio_count_100.reset();
             audio_count_100 = null;
         }
         audio_count_100 = MediaPlayer.create(this, R.raw.isplata100);
     }
-    void Tief() {
+    void Low() {
         if(audio_low != null) {
             audio_low.reset();
             audio_low = null;
         }
         audio_low = MediaPlayer.create(this, R.raw.tief);
     }
-    void Hoch() {
+    void High() {
         if(audio_high != null) {
             audio_high.reset();
             audio_high = null;
@@ -1248,18 +1248,18 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             audio_bingo .reset();
             audio_bingo  = null;
         }
-        Hoch();
-        Tief();
+        High();
+        Low();
         audio_bingo  = MediaPlayer.create(this, R.raw.bingo);
     }
-    void Kasa() {
+    void Cash() {
         choice = 3;
         won = 0;
         down_left_2.setVisibility(View.INVISIBLE);
         down_right_2.setVisibility(View.INVISIBLE);
         intro();
-        count1();
-        count100();
+        count_1();
+        count_100();
         taking = 1;
         try {
             new TakingAll();
@@ -1267,7 +1267,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             throw new RuntimeException(e);
         }
     }
-    static void Blokada() {
+    static void Block() {
         choice = 3;
         doubling = 1;
         won = 0;

@@ -43,7 +43,7 @@ import static com.example.Joker_Card.MainClass.field_card_3;
 import static com.example.Joker_Card.MainClass.field_card_4;
 import static com.example.Joker_Card.MainClass.field_card_5;
 import static com.example.Joker_Card.MainClass.dealing;
-import static com.example.Joker_Card.MainClass.ponistavanje2;
+import static com.example.Joker_Card.MainClass.clearing_2;
 import static com.example.Joker_Card.MainClass.win1;
 
 import android.app.Activity;
@@ -85,7 +85,7 @@ public class Hand2 extends Activity {
     int STRFL8;
     int STRFL9;
     Hand2() {
-        ponistavanje2();
+        clearing_2();
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -735,7 +735,7 @@ public class Hand2 extends Activity {
                         }
                     }
                 }
-                ponistavanje2();
+                clearing_2();
 
                 if (Fiveofakind == 1) {
                     table.setVisibility(View.VISIBLE);

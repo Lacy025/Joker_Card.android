@@ -1,7 +1,7 @@
 package com.example.Joker_Card;
 
 import static com.example.Joker_Card.MainClass.Bingo;
-import static com.example.Joker_Card.MainClass.Duplanje;
+import static com.example.Joker_Card.MainClass.Doubling;
 import static com.example.Joker_Card.MainClass.center_2;
 import static com.example.Joker_Card.MainClass.cash;
 import static com.example.Joker_Card.MainClass.winning_value;
@@ -20,27 +20,27 @@ import static com.example.Joker_Card.MainClass.dk8;
 import static com.example.Joker_Card.MainClass.dk9;
 import static com.example.Joker_Card.MainClass.dk10;
 import static com.example.Joker_Card.MainClass.dk11;
-import static com.example.Joker_Card.MainClass.hoch1;
-import static com.example.Joker_Card.MainClass.hoch2;
-import static com.example.Joker_Card.MainClass.hoch3;
-import static com.example.Joker_Card.MainClass.hoch4;
-import static com.example.Joker_Card.MainClass.hoch5;
-import static com.example.Joker_Card.MainClass.hoch6;
-import static com.example.Joker_Card.MainClass.hoch7;
-import static com.example.Joker_Card.MainClass.hoch8;
-import static com.example.Joker_Card.MainClass.hoch9;
-import static com.example.Joker_Card.MainClass.hoch10;
-import static com.example.Joker_Card.MainClass.hoch11;
-import static com.example.Joker_Card.MainClass.tief1;
-import static com.example.Joker_Card.MainClass.tief2;
-import static com.example.Joker_Card.MainClass.tief3;
-import static com.example.Joker_Card.MainClass.tief4;
-import static com.example.Joker_Card.MainClass.tief5;
-import static com.example.Joker_Card.MainClass.tief6;
-import static com.example.Joker_Card.MainClass.tief7;
-import static com.example.Joker_Card.MainClass.tief8;
-import static com.example.Joker_Card.MainClass.tief9;
-import static com.example.Joker_Card.MainClass.tief10;
+import static com.example.Joker_Card.MainClass.high_1;
+import static com.example.Joker_Card.MainClass.high_2;
+import static com.example.Joker_Card.MainClass.high_3;
+import static com.example.Joker_Card.MainClass.high_4;
+import static com.example.Joker_Card.MainClass.high_5;
+import static com.example.Joker_Card.MainClass.high_6;
+import static com.example.Joker_Card.MainClass.high_7;
+import static com.example.Joker_Card.MainClass.high_8;
+import static com.example.Joker_Card.MainClass.high_9;
+import static com.example.Joker_Card.MainClass.high_10;
+import static com.example.Joker_Card.MainClass.high_11;
+import static com.example.Joker_Card.MainClass.low_1;
+import static com.example.Joker_Card.MainClass.low_2;
+import static com.example.Joker_Card.MainClass.low_3;
+import static com.example.Joker_Card.MainClass.low_4;
+import static com.example.Joker_Card.MainClass.low_5;
+import static com.example.Joker_Card.MainClass.low_6;
+import static com.example.Joker_Card.MainClass.low_7;
+import static com.example.Joker_Card.MainClass.low_8;
+import static com.example.Joker_Card.MainClass.low_9;
+import static com.example.Joker_Card.MainClass.low_10;
 import static com.example.Joker_Card.MainClass.field_win_1;
 import static com.example.Joker_Card.MainClass.field_win_2;
 import static com.example.Joker_Card.MainClass.field_win_3;
@@ -63,77 +63,77 @@ public class Hoch extends Activity {
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.INVISIBLE);
-            hoch1.setVisibility(View.VISIBLE);
+            high_1.setVisibility(View.VISIBLE);
             dk = dk1;
         }
         if(double_card == 2) {
             field_win_2.setVisibility(View.INVISIBLE);
-            tief1.setVisibility(View.INVISIBLE);
-            hoch1.setVisibility(View.INVISIBLE);
-            hoch2.setVisibility(View.VISIBLE);
+            low_1.setVisibility(View.INVISIBLE);
+            high_1.setVisibility(View.INVISIBLE);
+            high_2.setVisibility(View.VISIBLE);
             dk = dk2;
         }
         if(double_card == 3) {
             field_win_3.setVisibility(View.INVISIBLE);
-            tief2.setVisibility(View.INVISIBLE);
-            hoch2.setVisibility(View.INVISIBLE);
-            hoch3.setVisibility(View.VISIBLE);
+            low_2.setVisibility(View.INVISIBLE);
+            high_2.setVisibility(View.INVISIBLE);
+            high_3.setVisibility(View.VISIBLE);
             dk = dk3;
         }
         if(double_card == 4) {
             field_win_4.setVisibility(View.INVISIBLE);
-            tief3.setVisibility(View.INVISIBLE);
-            hoch3.setVisibility(View.INVISIBLE);
-            hoch4.setVisibility(View.VISIBLE);
+            low_3.setVisibility(View.INVISIBLE);
+            high_3.setVisibility(View.INVISIBLE);
+            high_4.setVisibility(View.VISIBLE);
             dk = dk4;
         }
         if(double_card == 5) {
             field_win_5.setVisibility(View.INVISIBLE);
-            tief4.setVisibility(View.INVISIBLE);
-            hoch4.setVisibility(View.INVISIBLE);
-            hoch5.setVisibility(View.VISIBLE);
+            low_4.setVisibility(View.INVISIBLE);
+            high_4.setVisibility(View.INVISIBLE);
+            high_5.setVisibility(View.VISIBLE);
             dk = dk5;
         }
         if(double_card == 6) {
             field_win_6.setVisibility(View.INVISIBLE);
-            tief5.setVisibility(View.INVISIBLE);
-            hoch5.setVisibility(View.INVISIBLE);
-            hoch6.setVisibility(View.VISIBLE);
+            low_5.setVisibility(View.INVISIBLE);
+            high_5.setVisibility(View.INVISIBLE);
+            high_6.setVisibility(View.VISIBLE);
             dk = dk6;
         }
         if(double_card == 7) {
             field_win_7.setVisibility(View.INVISIBLE);
-            tief6.setVisibility(View.INVISIBLE);
-            hoch6.setVisibility(View.INVISIBLE);
-            hoch7.setVisibility(View.VISIBLE);
+            low_6.setVisibility(View.INVISIBLE);
+            high_6.setVisibility(View.INVISIBLE);
+            high_7.setVisibility(View.VISIBLE);
             dk = dk7;
         }
         if(double_card == 8) {
             field_win_8.setVisibility(View.INVISIBLE);
-            tief7.setVisibility(View.INVISIBLE);
-            hoch7.setVisibility(View.INVISIBLE);
-            hoch8.setVisibility(View.VISIBLE);
+            low_7.setVisibility(View.INVISIBLE);
+            high_7.setVisibility(View.INVISIBLE);
+            high_8.setVisibility(View.VISIBLE);
             dk = dk8;
         }
         if(double_card == 9) {
             field_win_9.setVisibility(View.INVISIBLE);
-            tief8.setVisibility(View.INVISIBLE);
-            hoch8.setVisibility(View.INVISIBLE);
-            hoch9.setVisibility(View.VISIBLE);
+            low_8.setVisibility(View.INVISIBLE);
+            high_8.setVisibility(View.INVISIBLE);
+            high_9.setVisibility(View.VISIBLE);
             dk = dk9;
         }
         if(double_card == 10) {
             field_win_10.setVisibility(View.INVISIBLE);
-            tief9.setVisibility(View.INVISIBLE);
-            hoch9.setVisibility(View.INVISIBLE);
-            hoch10.setVisibility(View.VISIBLE);
+            low_9.setVisibility(View.INVISIBLE);
+            high_9.setVisibility(View.INVISIBLE);
+            high_10.setVisibility(View.VISIBLE);
             dk = dk10;
         }
         if(double_card == 11) {
             field_win_11.setVisibility(View.INVISIBLE);
-            tief10.setVisibility(View.INVISIBLE);
-            hoch10.setVisibility(View.INVISIBLE);
-            hoch11.setVisibility(View.VISIBLE);
+            low_10.setVisibility(View.INVISIBLE);
+            high_10.setVisibility(View.INVISIBLE);
+            high_11.setVisibility(View.VISIBLE);
             dk = dk11;
         }
 
@@ -156,7 +156,7 @@ public class Hoch extends Activity {
                     doubling = 1;
                     handler12.removeCallbacks(runnable12);
                     double_card++;
-                    Duplanje();
+                    Doubling();
                 }
                 else {
                     cash = 0;

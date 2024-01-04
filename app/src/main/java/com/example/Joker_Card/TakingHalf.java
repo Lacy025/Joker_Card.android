@@ -1,6 +1,6 @@
 package com.example.Joker_Card;
 
-import static com.example.Joker_Card.MainClass.Duplanje;
+import static com.example.Joker_Card.MainClass.Doubling;
 import static com.example.Joker_Card.MainClass.audio_count_1;
 import static com.example.Joker_Card.MainClass.audio_count_100;
 import static com.example.Joker_Card.MainClass.button_deal;
@@ -172,6 +172,6 @@ public class TakingHalf extends Activity {
         doubling = 1;
         button_take.setText(R.string.take_all);
         button_deal.setText(R.string.take_half);
-        Duplanje();
+        Doubling();
     }
 }
