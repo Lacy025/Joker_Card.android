@@ -14,100 +14,100 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/rucno1"
+            android:id="@+id/hand_1"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
 
         <ImageView
-            android:id="@+id/rucno2"
+            android:id="@+id/hand_2"
             android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
 
         <ImageView
-            android:id="@+id/rucno3"
+            android:id="@+id/hand_3"
             android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
 
         <ImageView
-            android:id="@+id/rucno4"
+            android:id="@+id/hand_4"
             android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
 
         <ImageView
-            android:id="@+id/rucno5"
+            android:id="@+id/hand_5"
             android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
 
         <ImageView
-            android:id="@+id/rucno6"
+            android:id="@+id/hand_6"
             android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
 
         <ImageView
-            android:id="@+id/rucno7"
+            android:id="@+id/hand_7"
             android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
 
         <ImageView
-            android:id="@+id/rucno8"
+            android:id="@+id/hand_8"
             android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
 
         <ImageView
-            android:id="@+id/rucno9"
+            android:id="@+id/hand_9"
             android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
 
         <ImageView
-            android:id="@+id/rucno10"
+            android:id="@+id/hand_10"
             android:layout_marginTop="@dimen/_minus2sdp"
             android:layout_width="@dimen/_378sdp"
             android:layout_height="@dimen/_12sdp"
-            android:src="@drawable/rucno"
+            android:src="@drawable/hand"
             android:visibility="invisible"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
@@ -211,7 +211,7 @@
         tools:ignore="RtlHardcoded">
 
         <TextView
-            android:id="@+id/vrednost_1"
+            android:id="@+id/value_1"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -221,7 +221,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_2"
+            android:id="@+id/value_2"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -231,7 +231,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_3"
+            android:id="@+id/value_3"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -241,7 +241,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_4"
+            android:id="@+id/value_4"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -251,7 +251,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_5"
+            android:id="@+id/value_5"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -261,7 +261,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_6"
+            android:id="@+id/value_6"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -271,7 +271,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_7"
+            android:id="@+id/value_7"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -281,7 +281,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_8"
+            android:id="@+id/value_8"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -291,7 +291,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_9"
+            android:id="@+id/value_9"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -301,7 +301,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_10"
+            android:id="@+id/value_10"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
@@ -336,7 +336,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/dobitak1"
+            android:id="@+id/winning_1"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_3sdp"
@@ -348,7 +348,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak2"
+            android:id="@+id/winning_2"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
@@ -360,7 +360,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak3"
+            android:id="@+id/winning_3"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus41sdp"
@@ -372,7 +372,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak4"
+            android:id="@+id/winning_4"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
@@ -384,7 +384,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak5"
+            android:id="@+id/winning_5"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus41sdp"
@@ -396,7 +396,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak6"
+            android:id="@+id/winning_6"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
@@ -408,7 +408,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak7"
+            android:id="@+id/winning_7"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus41sdp"
@@ -420,7 +420,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak8"
+            android:id="@+id/winning_8"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
@@ -432,7 +432,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak9"
+            android:id="@+id/winning_9"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
@@ -444,7 +444,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak10"
+            android:id="@+id/winning_10"
             android:layout_width="@dimen/_320sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
@@ -456,7 +456,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/dobitak"
+            android:id="@+id/winning"
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_14sdp"
@@ -468,7 +468,7 @@
             tools:ignore="VisualLintBounds" />
 
         <TextView
-            android:id="@+id/vrednostdb"
+            android:id="@+id/winning_value"
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_minus50sdp"
@@ -513,7 +513,7 @@
             tools:ignore="SmallSp,TouchTargetSizeCheck,TextSizeCheck,VisualLintButtonSize" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/autohold"
+            android:id="@+id/auto_hold"
             android:layout_width="@dimen/_90sdp"
             android:layout_height="@dimen/_32sdp"
             android:background="#00000000"
@@ -535,7 +535,7 @@
         tools:ignore="RtlHardcoded">
 
         <TextView
-            android:id="@+id/vrednost_c"
+            android:id="@+id/credit_value"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_12sdp"
             android:layout_marginLeft="@dimen/_188sdp"
@@ -547,7 +547,7 @@
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_u"
+            android:id="@+id/bet_value"
             android:layout_width="@dimen/_45sdp"
             android:layout_height="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_20sdp"

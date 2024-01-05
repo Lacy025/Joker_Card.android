@@ -226,8 +226,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_deal = (Button) findViewById(R.id.deal);
         button_deal.setOnClickListener(this);
 
-        ah1 = findViewById(R.id.autohold);
-        c1 = findViewById(R.id.vrednost_c);
+        ah1 = findViewById(R.id.auto_hold);
+        c1 = findViewById(R.id.credit_value);
 
         button_stop1 = (Button) findViewById(R.id.stop1);
         button_stop1.setOnClickListener(this);
@@ -269,29 +269,29 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         field_joker_4 = findViewById(R.id.polje_j4);
         field_joker_5 = findViewById(R.id.polje_j5);
 
-        hand_1 = findViewById(R.id.rucno1);
-        hand_2 = findViewById(R.id.rucno2);
-        hand_3 = findViewById(R.id.rucno3);
-        hand_4 = findViewById(R.id.rucno4);
-        hand_5 = findViewById(R.id.rucno5);
-        hand_6 = findViewById(R.id.rucno6);
-        hand_7 = findViewById(R.id.rucno7);
-        hand_8 = findViewById(R.id.rucno8);
-        hand_9 = findViewById(R.id.rucno9);
-        hand_10 = findViewById(R.id.rucno10);
+        hand_1 = findViewById(R.id.hand_1);
+        hand_2 = findViewById(R.id.hand_2);
+        hand_3 = findViewById(R.id.hand_3);
+        hand_4 = findViewById(R.id.hand_4);
+        hand_5 = findViewById(R.id.hand_5);
+        hand_6 = findViewById(R.id.hand_6);
+        hand_7 = findViewById(R.id.hand_7);
+        hand_8 = findViewById(R.id.hand_8);
+        hand_9 = findViewById(R.id.hand_9);
+        hand_10 = findViewById(R.id.hand_10);
 
         table = findViewById(R.id.table);
-        winning_1 = findViewById(R.id.dobitak1);
-        winning_2 = findViewById(R.id.dobitak2);
-        winning_3 = findViewById(R.id.dobitak3);
-        winning_4 = findViewById(R.id.dobitak4);
-        winning_5 = findViewById(R.id.dobitak5);
-        winning_6 = findViewById(R.id.dobitak6);
-        winning_7 = findViewById(R.id.dobitak7);
-        winning_8 = findViewById(R.id.dobitak8);
-        winning_9 = findViewById(R.id.dobitak9);
-        winning_10 = findViewById(R.id.dobitak10);
-        winning = findViewById(R.id.dobitak);
+        winning_1 = findViewById(R.id.winning_1);
+        winning_2 = findViewById(R.id.winning_2);
+        winning_3 = findViewById(R.id.winning_3);
+        winning_4 = findViewById(R.id.winning_4);
+        winning_5 = findViewById(R.id.winning_5);
+        winning_6 = findViewById(R.id.winning_6);
+        winning_7 = findViewById(R.id.winning_7);
+        winning_8 = findViewById(R.id.winning_8);
+        winning_9 = findViewById(R.id.winning_9);
+        winning_10 = findViewById(R.id.winning_10);
+        winning = findViewById(R.id.winning);
 
         field_win_1 = findViewById(R.id.polje_d1);
         field_win_2 = findViewById(R.id.polje_d2);
@@ -933,18 +933,18 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_credit.start();
     }
     void Bet() {
-        final TextView u1 = findViewById(R.id.vrednost_u);
-        final TextView d_1 = findViewById(R.id.vrednost_1);
-        final TextView d_2 = findViewById(R.id.vrednost_2);
-        final TextView d_3 = findViewById(R.id.vrednost_3);
-        final TextView d_4 = findViewById(R.id.vrednost_4);
-        final TextView d_5 = findViewById(R.id.vrednost_5);
-        final TextView d_6 = findViewById(R.id.vrednost_6);
-        final TextView d_7 = findViewById(R.id.vrednost_7);
-        final TextView d_8 = findViewById(R.id.vrednost_8);
-        final TextView d_9 = findViewById(R.id.vrednost_9);
-        final TextView d_10 = findViewById(R.id.vrednost_10);
-        winning_value = findViewById(R.id.vrednostdb);
+        final TextView u1 = findViewById(R.id.bet_value);
+        final TextView d_1 = findViewById(R.id.value_1);
+        final TextView d_2 = findViewById(R.id.value_2);
+        final TextView d_3 = findViewById(R.id.value_3);
+        final TextView d_4 = findViewById(R.id.value_4);
+        final TextView d_5 = findViewById(R.id.value_5);
+        final TextView d_6 = findViewById(R.id.value_6);
+        final TextView d_7 = findViewById(R.id.value_7);
+        final TextView d_8 = findViewById(R.id.value_8);
+        final TextView d_9 = findViewById(R.id.value_9);
+        final TextView d_10 = findViewById(R.id.value_10);
+        winning_value = findViewById(R.id.winning_value);
 
         u1.setText(String.format(Locale.getDefault(), "%d", (u)));
         win1 = d1 * u;
