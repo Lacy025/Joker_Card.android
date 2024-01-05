@@ -18,7 +18,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 
-public class Hand1 extends Activity {
+public class Hand_1 extends Activity {
     int n1;
     int n2;
     int n3;
@@ -58,19 +58,19 @@ public class Hand1 extends Activity {
     public static int hold3;
     public static int hold4;
     public static int hold5;
-    Hand1() {
+    Hand_1() {
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
-            n1 = Card1.n1;
-            n2 = Card2.n2;
-            n3 = Card3.n3;
-            n4 = Card4.n4;
-            n5 = Card5.n5;
-            b1 = Card1.b1;
-            b2 = Card2.b2;
-            b3 = Card3.b3;
-            b4 = Card4.b4;
-            b5 = Card5.b5;
+            n1 = Card_1.n1;
+            n2 = Card_2.n2;
+            n3 = Card_3.n3;
+            n4 = Card_4.n4;
+            n5 = Card_5.n5;
+            b1 = Card_1.b1;
+            b2 = Card_2.b2;
+            b3 = Card_3.b3;
+            b4 = Card_4.b4;
+            b5 = Card_5.b5;
 
             first_win = 0;
             twins = 0;

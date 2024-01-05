@@ -43,43 +43,43 @@
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Card1"
+            android:name=".Card_1"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Card2"
+            android:name=".Card_2"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Card3"
+            android:name=".Card_3"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Card4"
+            android:name=".Card_4"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Card5"
+            android:name=".Card_5"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Hand1"
+            android:name=".Hand_1"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Hand2"
+            android:name=".Hand_2"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >

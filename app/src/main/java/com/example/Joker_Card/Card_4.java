@@ -10,10 +10,10 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-public class Card4 extends Activity {
+public class Card_4 extends Activity {
     public static int n4;
     public static int b4;
-    public Card4() {
+    public Card_4() {
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
             field_card_4.setVisibility(View.INVISIBLE);

@@ -429,16 +429,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                             dealing = 2;
                                             Deal_Cards_1();
                                             delaying = 500;
-                                            new Card1();
+                                            new Card_1();
                                             delaying = 600;
-                                            new Card2();
+                                            new Card_2();
                                             delaying = 700;
-                                            new Card3();
+                                            new Card_3();
                                             delaying = 800;
-                                            new Card4();
+                                            new Card_4();
                                             delaying = 900;
-                                            new Card5();
-                                            new Hand1();
+                                            new Card_5();
+                                            new Hand_1();
                                             if(ah == 1) {
                                                 Stop();
                                             }
@@ -497,11 +497,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             else if(choice == 1) {
                 clearing_1();
                 clearing_2();
-                Hand1.hold1 = 0;
-                Hand1.hold2 = 0;
-                Hand1.hold3 = 0;
-                Hand1.hold4 = 0;
-                Hand1.hold5 = 0;
+                Hand_1.hold1 = 0;
+                Hand_1.hold2 = 0;
+                Hand_1.hold3 = 0;
+                Hand_1.hold4 = 0;
+                Hand_1.hold5 = 0;
             }
             else if(choice == 2) {
                 Cash();
@@ -587,7 +587,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 hand_9.setVisibility(View.INVISIBLE);
                 hand_10.setVisibility(View.INVISIBLE);
 
-                if(Hand1.hold1 == 0) {
+                if(Hand_1.hold1 == 0) {
                     field_card_1.setVisibility(View.INVISIBLE);
                     field_card_1.setImageResource(R.drawable.k53);
                     field_card_1.setVisibility(View.VISIBLE);
@@ -597,9 +597,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_1();
                     delaying = delaying + hold;
-                    new Card1();
+                    new Card_1();
                 }
-                if(Hand1.hold2 == 0) {
+                if(Hand_1.hold2 == 0) {
                     field_card_2.setVisibility(View.INVISIBLE);
                     field_card_2.setImageResource(R.drawable.k53);
                     field_card_2.setVisibility(View.VISIBLE);
@@ -609,9 +609,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_2();
                     delaying = delaying + hold;
-                    new Card2();
+                    new Card_2();
                 }
-                if(Hand1.hold3 == 0) {
+                if(Hand_1.hold3 == 0) {
                     field_card_3.setVisibility(View.INVISIBLE);
                     field_card_3.setImageResource(R.drawable.k53);
                     field_card_3.setVisibility(View.VISIBLE);
@@ -621,9 +621,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_3();
                     delaying = delaying + hold;
-                    new Card3();
+                    new Card_3();
                 }
-                if(Hand1.hold4 == 0) {
+                if(Hand_1.hold4 == 0) {
                     field_card_4.setVisibility(View.INVISIBLE);
                     field_card_4.setImageResource(R.drawable.k53);
                     field_card_4.setVisibility(View.VISIBLE);
@@ -633,9 +633,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_4();
                     delaying = delaying + hold;
-                    new Card4();
+                    new Card_4();
                 }
-                if(Hand1.hold5 == 0) {
+                if(Hand_1.hold5 == 0) {
                     field_card_5.setVisibility(View.INVISIBLE);
                     field_card_5.setImageResource(R.drawable.k53);
                     field_card_5.setVisibility(View.VISIBLE);
@@ -645,10 +645,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_5();
                     delaying = delaying + hold;
-                    new Card5();
+                    new Card_5();
                 }
                 winner();
-                new Hand2();
+                new Hand_2();
             }
             else if(choice == 2) {
                 doubling();
@@ -1032,7 +1032,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    if (Hand1.hold1 == 1) {
+                    if (Hand_1.hold1 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1040,7 +1040,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         }
                         stop_card_1();
                     }
-                    if (Hand1.hold2 == 1) {
+                    if (Hand_1.hold2 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1048,7 +1048,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         }
                         stop_card_2();
                     }
-                    if (Hand1.hold3 == 1) {
+                    if (Hand_1.hold3 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1056,7 +1056,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         }
                         stop_card_3();
                     }
-                    if (Hand1.hold4 == 1) {
+                    if (Hand_1.hold4 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1064,7 +1064,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         }
                         stop_card_4();
                     }
-                    if (Hand1.hold5 == 1) {
+                    if (Hand_1.hold5 == 1) {
                         try {
                             Thread.sleep(230);
                         } catch (InterruptedException e) {
@@ -1098,7 +1098,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_stop_1 = MediaPlayer.create(this, R.raw.stop1);
         audio_stop_1.start();
         button_stop1.setBackgroundColor(Color.RED);
-        Hand1.hold1 = 1;
+        Hand_1.hold1 = 1;
     }
     void stop_card_2() {
         if (audio_stop_2 != null) {
@@ -1108,7 +1108,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_stop_2 = MediaPlayer.create(this, R.raw.stop2);
         audio_stop_2.start();
         button_stop2.setBackgroundColor(Color.RED);
-        Hand1.hold2 = 1;
+        Hand_1.hold2 = 1;
     }
     void stop_card_3() {
         if (audio_stop_3 != null) {
@@ -1118,7 +1118,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_stop_3 = MediaPlayer.create(this, R.raw.stop3);
         audio_stop_3.start();
         button_stop3.setBackgroundColor(Color.RED);
-        Hand1.hold3 = 1;
+        Hand_1.hold3 = 1;
     }
     void stop_card_4() {
         if (audio_stop_4 != null) {
@@ -1128,7 +1128,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_stop_4 = MediaPlayer.create(this, R.raw.stop4);
         audio_stop_4.start();
         button_stop4.setBackgroundColor(Color.RED);
-        Hand1.hold4 = 1;
+        Hand_1.hold4 = 1;
     }
     void stop_card_5() {
         if (audio_stop_5 != null) {
@@ -1138,7 +1138,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_stop_5 = MediaPlayer.create(this, R.raw.stop5);
         audio_stop_5.start();
         button_stop5.setBackgroundColor(Color.RED);
-        Hand1.hold5 = 1;
+        Hand_1.hold5 = 1;
     }
     void clearing_1() {
         if (audio_clear != null) {

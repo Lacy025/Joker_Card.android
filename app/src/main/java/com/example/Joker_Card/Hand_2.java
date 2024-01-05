@@ -52,7 +52,7 @@ import android.view.View;
 
 import java.util.Locale;
 
-public class Hand2 extends Activity {
+public class Hand_2 extends Activity {
     int n1;
     int n2;
     int n3;
@@ -83,20 +83,20 @@ public class Hand2 extends Activity {
     int Street_flush_7;
     int Street_flush_8;
     int Street_flush_9;
-    Hand2() {
+    Hand_2() {
         clearing_2();
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
-            n1 = Card1.n1;
-            n2 = Card2.n2;
-            n3 = Card3.n3;
-            n4 = Card4.n4;
-            n5 = Card5.n5;
-            b1 = Card1.b1;
-            b2 = Card2.b2;
-            b3 = Card3.b3;
-            b4 = Card4.b4;
-            b5 = Card5.b5;
+            n1 = Card_1.n1;
+            n2 = Card_2.n2;
+            n3 = Card_3.n3;
+            n4 = Card_4.n4;
+            n5 = Card_5.n5;
+            b1 = Card_1.b1;
+            b2 = Card_2.b2;
+            b3 = Card_3.b3;
+            b4 = Card_4.b4;
+            b5 = Card_5.b5;
 
             won = 0;
 
