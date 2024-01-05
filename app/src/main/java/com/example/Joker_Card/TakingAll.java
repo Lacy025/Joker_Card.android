@@ -18,6 +18,8 @@ import android.app.Activity;
 import android.os.Handler;
 import android.view.View;
 
+import java.util.Locale;
+
 public class TakingAll extends Activity {
     public static Handler handler9;
     public static Handler handler10;
@@ -25,7 +27,7 @@ public class TakingAll extends Activity {
     public static Runnable runnable10;
     TakingAll() throws InterruptedException {
 
-        int pobeda = cash;
+        int winning = cash;
 
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
@@ -60,24 +62,24 @@ public class TakingAll extends Activity {
         };
         handler9.post(runnable9);
 
-        minusjedan();
+        minus_1();
         Thread.sleep(40);
 
         handler10 = new Handler();
         runnable10 = new Runnable() {
             @Override
             public void run() {
-                double kasa = cash;
-                if(((int)(kasa/100) * 100) != ((kasa/100) * 100)) {
-                    minusjedan();
+                double winn = cash;
+                if(((int)(winn/100) * 100) != ((winn/100) * 100)) {
+                    minus_1();
                     handler10.postDelayed(this, 40);
                 }
-                else if((((int)(kasa/100) * 100) == ((kasa/100) * 100)) && kasa > 0) {
-                    minussto();
+                else if((((int)(winn/100) * 100) == ((winn/100) * 100)) && winn > 0) {
+                    minus_100();
                     handler10.postDelayed(this, 1000);
                 }
                 else  {
-                    if(pobeda < 101) {
+                    if(winning < 101) {
                         audio_count_100.start();
                         try {
                             Thread.sleep(1000);
@@ -92,29 +94,29 @@ public class TakingAll extends Activity {
         };
         handler10.post(runnable10);
     }
-    void minusjedan() {
+    void minus_1() {
         c += 1;
-        c1.setText(Integer.toString(c));
+        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= 1;
-        winning_value.setText(Integer.toString(cash));
+        winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_1.start();
         if(cash == 0) {
-            pobedio();
+            You_Win();
             button_deal.setText(R.string.deal_cards);
         }
     }
-    void minussto() {
+    void minus_100() {
         c += 100;
-        c1.setText(Integer.toString(c));
+        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= 100;
-        winning_value.setText(Integer.toString(cash));
+        winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
         if(cash == 0) {
-            pobedio();
+            You_Win();
             button_deal.setText(R.string.deal_cards);
         }
     }
-    void pobedio() {
+    void You_Win() {
         center_2.setText(R.string.win);
         center_2.setVisibility(View.VISIBLE);
     }

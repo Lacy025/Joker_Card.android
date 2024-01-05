@@ -692,7 +692,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 low.setVisibility(View.INVISIBLE);
                 high.setVisibility(View.INVISIBLE);
                 try {
-                    new Tief();
+                    new Low();
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -704,7 +704,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 low.setVisibility(View.INVISIBLE);
                 high.setVisibility(View.INVISIBLE);
                 try {
-                    new Hoch();
+                    new High();
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

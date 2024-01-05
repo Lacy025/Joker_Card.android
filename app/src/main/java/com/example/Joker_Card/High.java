@@ -56,10 +56,13 @@ import static com.example.Joker_Card.MainClass.field_win_11;
 import android.app.Activity;
 import android.os.Handler;
 import android.view.View;
-public class Hoch extends Activity {
+
+import java.util.Locale;
+
+public class High extends Activity {
     public static Handler handler12;
     public static Runnable runnable12;
-    Hoch() throws InterruptedException {
+    High() throws InterruptedException {
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.INVISIBLE);
@@ -143,27 +146,24 @@ public class Hoch extends Activity {
             Bingo();
         }
         handler12 = new Handler();
-        runnable12 = new Runnable() {
-            @Override
-            public void run() {
-                if (dk > 24) {
-                    try {
-                        Thread.sleep(1600);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
-                    center_2.setVisibility(View.INVISIBLE);
-                    doubling = 1;
-                    handler12.removeCallbacks(runnable12);
-                    double_card++;
-                    Doubling();
+        runnable12 = () -> {
+            if (dk > 24) {
+                try {
+                    Thread.sleep(1600);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
                 }
-                else {
-                    cash = 0;
-                    winning_value.setText(Integer.toString(cash));
-                    missed = 1;
-                    new Cashed();
-                }
+                center_2.setVisibility(View.INVISIBLE);
+                doubling = 1;
+                handler12.removeCallbacks(runnable12);
+                double_card++;
+                Doubling();
+            }
+            else {
+                cash = 0;
+                winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
+                missed = 1;
+                new Cashed();
             }
         };
         handler12.post(runnable12);

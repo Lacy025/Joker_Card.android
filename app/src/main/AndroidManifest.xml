@@ -109,13 +109,13 @@
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Tief"
+            android:name=".Low"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >
         </activity>
         <activity
-            android:name=".Hoch"
+            android:name=".High"
             android:exported="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" >

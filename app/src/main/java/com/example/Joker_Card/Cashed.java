@@ -17,13 +17,13 @@ import android.view.View;
 public class Cashed extends Activity {
     public static Handler handler9;
     public static Runnable runnable9;
-    int pauzap;
+    int pause;
     Cashed() {
         if(missed == 1) {
-            pauzap = 2000;
+            pause = 2000;
         }
         else {
-            pauzap = 3600;
+            pause = 3600;
         }
         handler9 = new Handler();
         runnable9 = () -> {
@@ -53,6 +53,6 @@ public class Cashed extends Activity {
                     new Clearing();
                 }
         };
-        handler9.postDelayed(runnable9, pauzap);
+        handler9.postDelayed(runnable9, pause);
     }
 }

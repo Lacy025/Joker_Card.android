@@ -17,6 +17,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 
+import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -29,15 +30,15 @@ public class TakingHalf extends Activity {
     Runnable runnable15;
     Timer timer4;
     TimerTask task4;
-    private double pola;
+    private final double half;
     private double deo;
-    private double pola1;
-    private double pola2;
+    private double half_1;
+    private double half_2;
     int countdown;
     TakingHalf() {
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
-        pola = (Math.floor(cash / 2));
+        half = Math.floor(cash / 2);  //DON'T CHANGE !
         center_2.setText(R.string.win);
         center_2.setVisibility(View.VISIBLE);
         doubling = 0;
@@ -49,7 +50,7 @@ public class TakingHalf extends Activity {
             public void run() {
                 runOnUiThread(() -> new Handler(Looper.getMainLooper()).postDelayed(
                         () -> {
-                            if(cash == pola) {
+                            if(cash == half) {
                                 handler16.removeCallbacks(runnable16);
                                 center_2.setVisibility(View.VISIBLE);
                                 timer4.cancel();
@@ -79,14 +80,14 @@ public class TakingHalf extends Activity {
                 @Override
                 public void run() {
                     if(cash < 101) {
-                        if(cash != pola) {
-                            minusjedan();
+                        if(cash != half) {
+                            minus_1();
                             handler14.postDelayed(this, 40);
                         }
                         else {
                             countdown = 0;
                             audio_count_100.start();
-                            pobedio();
+                            winner();
                             try {
                                 Thread.sleep(1000);
                             } catch (InterruptedException e) {
@@ -95,9 +96,9 @@ public class TakingHalf extends Activity {
                             handler14.removeCallbacks(runnable14);
                         }
                     }
-                    else if(cash > 100 && cash < 200) {
-                        pola1 = cash - 100;
-                        prvideo();
+                    else if(cash < 200) {
+                        half_1 = cash - 100;
+                        first_part();
                         handler14.postDelayed(this, 1000);
                     }
 
@@ -112,23 +113,23 @@ public class TakingHalf extends Activity {
                 @Override
                 public void run() {
                     if((Math.floor(deo/100)) != (deo/100)) {
-                        pola1 = Math.round(((deo/100)-(Math.floor(deo/100))) * 100);
-                        prvideo();
+                        half_1 = Math.round(((deo/100)-(Math.floor(deo/100))) * 100);
+                        first_part();
                         handler15.postDelayed(this, 1000);
                     }
                     else {
-                        if(cash - pola > 99) {
-                            minussto();
+                        if(cash - half > 99) {
+                            minus_100();
                             handler15.postDelayed(this, 1000);
                         }
-                        else if(cash - pola > 0) {
-                            pola2 = cash - pola;
-                            drugideo();
+                        else if(cash - half > 0) {
+                            half_2 = cash - half;
+                            second_part();
                             handler15.postDelayed(this, 1000);
                         }
-                        else if(cash - pola == 0) {
+                        else if(cash - half == 0) {
                             handler15.postDelayed(this, 1000);
-                            pobedio();
+                            winner();
                             handler15.removeCallbacks(runnable15);
                         }
                     }
@@ -137,36 +138,36 @@ public class TakingHalf extends Activity {
             handler15.post(runnable15);
         }
     }
-    void minusjedan() {
+    void minus_1() {
         c += 1;
-        c1.setText(Integer.toString(c));
+        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= 1;
-        winning_value.setText(Integer.toString(cash));
+        winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_1.start();
     }
-    void minussto() {
+    void minus_100() {
         c += 100;
-        c1.setText(Integer.toString(c));
+        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= 100;
-        winning_value.setText(Integer.toString(cash));
+        winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
     }
-    void prvideo() {
-        c += pola1;
-        c1.setText(Integer.toString(c));
-        cash -= pola1;
+    void first_part() {
+        c += half_1;
+        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+        cash -= half_1;
         deo = cash;
-        winning_value.setText(Integer.toString(cash));
+        winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
     }
-    void drugideo() {
-        c += pola2;
-        c1.setText(Integer.toString(c));
-        cash -= pola2;
-        winning_value.setText(Integer.toString(cash));
+    void second_part() {
+        c += half_2;
+        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+        cash -= half_2;
+        winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
     }
-    void pobedio() {
+    void winner() {
         handler16.removeCallbacks(runnable16);
         center_2.setVisibility(View.INVISIBLE);
         doubling = 1;
