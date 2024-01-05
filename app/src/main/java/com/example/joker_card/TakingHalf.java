@@ -1,16 +1,16 @@
-package com.example.Joker_Card;
+package com.example.joker_card;
 
-import static com.example.Joker_Card.MainClass.Doubling;
-import static com.example.Joker_Card.MainClass.audio_count_1;
-import static com.example.Joker_Card.MainClass.audio_count_100;
-import static com.example.Joker_Card.MainClass.button_deal;
-import static com.example.Joker_Card.MainClass.button_take;
-import static com.example.Joker_Card.MainClass.c;
-import static com.example.Joker_Card.MainClass.c1;
-import static com.example.Joker_Card.MainClass.center_2;
-import static com.example.Joker_Card.MainClass.cash;
-import static com.example.Joker_Card.MainClass.winning_value;
-import static com.example.Joker_Card.MainClass.doubling;
+import static com.example.joker_card.MainClass.Doubling;
+import static com.example.joker_card.MainClass.audio_count_1;
+import static com.example.joker_card.MainClass.audio_count_100;
+import static com.example.joker_card.MainClass.button_deal;
+import static com.example.joker_card.MainClass.button_take;
+import static com.example.joker_card.MainClass.c;
+import static com.example.joker_card.MainClass.c1;
+import static com.example.joker_card.MainClass.center_2;
+import static com.example.joker_card.MainClass.cash;
+import static com.example.joker_card.MainClass.winning_value;
+import static com.example.joker_card.MainClass.doubling;
 
 import android.app.Activity;
 import android.os.Handler;

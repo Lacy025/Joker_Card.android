@@ -1,4 +1,4 @@
-package com.example.Joker_Card;
+package com.example.joker_card;
 
 import androidx.appcompat.app.AppCompatActivity;
 

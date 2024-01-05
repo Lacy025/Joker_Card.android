@@ -1,18 +1,18 @@
-package com.example.Joker_Card;
+package com.example.joker_card;
 
-import static com.example.Joker_Card.MainClass.dealing;
-import static com.example.Joker_Card.MainClass.joker;
-import static com.example.Joker_Card.MainClass.card;
-import static com.example.Joker_Card.MainClass.field_card_1;
-import static com.example.Joker_Card.MainClass.field_card_2;
-import static com.example.Joker_Card.MainClass.field_card_3;
-import static com.example.Joker_Card.MainClass.field_card_4;
-import static com.example.Joker_Card.MainClass.field_card_5;
-import static com.example.Joker_Card.MainClass.field_joker_1;
-import static com.example.Joker_Card.MainClass.field_joker_2;
-import static com.example.Joker_Card.MainClass.field_joker_3;
-import static com.example.Joker_Card.MainClass.field_joker_4;
-import static com.example.Joker_Card.MainClass.field_joker_5;
+import static com.example.joker_card.MainClass.dealing;
+import static com.example.joker_card.MainClass.joker;
+import static com.example.joker_card.MainClass.card;
+import static com.example.joker_card.MainClass.field_card_1;
+import static com.example.joker_card.MainClass.field_card_2;
+import static com.example.joker_card.MainClass.field_card_3;
+import static com.example.joker_card.MainClass.field_card_4;
+import static com.example.joker_card.MainClass.field_card_5;
+import static com.example.joker_card.MainClass.field_joker_1;
+import static com.example.joker_card.MainClass.field_joker_2;
+import static com.example.joker_card.MainClass.field_joker_3;
+import static com.example.joker_card.MainClass.field_joker_4;
+import static com.example.joker_card.MainClass.field_joker_5;
 
 import android.app.Activity;
 import android.os.Handler;

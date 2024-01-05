@@ -1,10 +1,10 @@
-package com.example.Joker_Card;
+package com.example.joker_card;
 
-import static com.example.Joker_Card.MainClass.k5;
-import static com.example.Joker_Card.MainClass.field_card_5;
-import static com.example.Joker_Card.MainClass.delaying;
-import static com.example.Joker_Card.MainClass.dealing;
-import static com.example.Joker_Card.MainClass.audio_card_5;
+import static com.example.joker_card.MainClass.k5;
+import static com.example.joker_card.MainClass.field_card_5;
+import static com.example.joker_card.MainClass.delaying;
+import static com.example.joker_card.MainClass.dealing;
+import static com.example.joker_card.MainClass.audio_card_5;
 
 import android.app.Activity;
 import android.os.Handler;

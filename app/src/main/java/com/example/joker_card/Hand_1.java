@@ -1,17 +1,17 @@
-package com.example.Joker_Card;
+package com.example.joker_card;
 
-import static com.example.Joker_Card.MainClass.hand_1;
-import static com.example.Joker_Card.MainClass.hand_2;
-import static com.example.Joker_Card.MainClass.hand_3;
-import static com.example.Joker_Card.MainClass.hand_4;
-import static com.example.Joker_Card.MainClass.hand_5;
-import static com.example.Joker_Card.MainClass.hand_6;
-import static com.example.Joker_Card.MainClass.hand_7;
-import static com.example.Joker_Card.MainClass.hand_8;
-import static com.example.Joker_Card.MainClass.hand_9;
-import static com.example.Joker_Card.MainClass.hand_10;
-import static com.example.Joker_Card.MainClass.ah;
-import static com.example.Joker_Card.MainClass.stop;
+import static com.example.joker_card.MainClass.hand_1;
+import static com.example.joker_card.MainClass.hand_2;
+import static com.example.joker_card.MainClass.hand_3;
+import static com.example.joker_card.MainClass.hand_4;
+import static com.example.joker_card.MainClass.hand_5;
+import static com.example.joker_card.MainClass.hand_6;
+import static com.example.joker_card.MainClass.hand_7;
+import static com.example.joker_card.MainClass.hand_8;
+import static com.example.joker_card.MainClass.hand_9;
+import static com.example.joker_card.MainClass.hand_10;
+import static com.example.joker_card.MainClass.ah;
+import static com.example.joker_card.MainClass.stop;
 
 import android.app.Activity;
 import android.os.Handler;

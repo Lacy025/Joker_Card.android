@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.Joker_Card'
+    namespace 'com.example.joker_card'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.Joker_Card"
+        applicationId "com.example.joker_card"
         minSdk 29
         targetSdk 29
         versionCode 1

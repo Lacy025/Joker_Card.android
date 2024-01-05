@@ -1,15 +1,15 @@
-package com.example.Joker_Card;
+package com.example.joker_card;
 
-import static com.example.Joker_Card.MainClass.button_deal;
-import static com.example.Joker_Card.MainClass.taking;
-import static com.example.Joker_Card.MainClass.dealing;
-import static com.example.Joker_Card.MainClass.profit;
-import static com.example.Joker_Card.MainClass.won;
-import static com.example.Joker_Card.MainClass.missed;
-import static com.example.Joker_Card.MainClass.choice;
-import static com.example.Joker_Card.MainClass.joker;
-import static com.example.Joker_Card.MainClass.card;
-import static com.example.Joker_Card.MainClass.button_take;
+import static com.example.joker_card.MainClass.button_deal;
+import static com.example.joker_card.MainClass.taking;
+import static com.example.joker_card.MainClass.dealing;
+import static com.example.joker_card.MainClass.profit;
+import static com.example.joker_card.MainClass.won;
+import static com.example.joker_card.MainClass.missed;
+import static com.example.joker_card.MainClass.choice;
+import static com.example.joker_card.MainClass.joker;
+import static com.example.joker_card.MainClass.card;
+import static com.example.joker_card.MainClass.button_take;
 
 import android.app.Activity;
 import android.os.Handler;
