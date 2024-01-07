@@ -23,11 +23,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     Button button_bet;
     public static Button button_take;
     public static Button button_deal;
-    public static Button button_stop1;
-    public static Button button_stop2;
-    public static Button button_stop3;
-    public static Button button_stop4;
-    public static Button button_stop5;
+    public static Button button_hold_1;
+    public static Button button_hold_2;
+    public static Button button_hold_3;
+    public static Button button_hold_4;
+    public static Button button_hold_5;
     static Button button_low;
     static Button button_high;
     public static int c = 0;
@@ -229,45 +229,45 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         ah1 = findViewById(R.id.auto_hold);
         c1 = findViewById(R.id.credit_value);
 
-        button_stop1 = (Button) findViewById(R.id.stop1);
-        button_stop1.setOnClickListener(this);
-        button_stop2 = (Button) findViewById(R.id.stop2);
-        button_stop2.setOnClickListener(this);
-        button_stop3 = (Button) findViewById(R.id.stop3);
-        button_stop3.setOnClickListener(this);
-        button_stop4 = (Button) findViewById(R.id.stop4);
-        button_stop4.setOnClickListener(this);
-        button_stop5 = (Button) findViewById(R.id.stop5);
-        button_stop5.setOnClickListener(this);
+        button_hold_1 = (Button) findViewById(R.id.hold_1);
+        button_hold_1.setOnClickListener(this);
+        button_hold_2 = (Button) findViewById(R.id.hold_2);
+        button_hold_2.setOnClickListener(this);
+        button_hold_3 = (Button) findViewById(R.id.hold_3);
+        button_hold_3.setOnClickListener(this);
+        button_hold_4 = (Button) findViewById(R.id.hold_4);
+        button_hold_4.setOnClickListener(this);
+        button_hold_5 = (Button) findViewById(R.id.hold_5);
+        button_hold_5.setOnClickListener(this);
 
-        button_low = (Button) findViewById(R.id.double_tief);
+        button_low = (Button) findViewById(R.id.double_low);
         button_low.setOnClickListener(this);
-        button_high = (Button) findViewById(R.id.double_hoch);
+        button_high = (Button) findViewById(R.id.double_high);
         button_high.setOnClickListener(this);
 
-        down_left_1 = findViewById(R.id.levo);
-        down_right_1 = findViewById(R.id.desno);
+        down_left_1 = findViewById(R.id.left);
+        down_right_1 = findViewById(R.id.right);
         joker = findViewById(R.id.joker);
         card = findViewById(R.id.card);
-        center_1 = findViewById(R.id.centar1);
+        center_1 = findViewById(R.id.center_1);
         center_2 = findViewById(R.id.win);
         down_left_2 = findViewById(R.id.gamble);
         down_right_2 = findViewById(R.id.cash);
 
-        low = findViewById(R.id.tief);
-        high = findViewById(R.id.hoch);
+        low = findViewById(R.id.low);
+        high = findViewById(R.id.high);
 
-        field_card_1 = findViewById(R.id.polje_1);
-        field_card_2 = findViewById(R.id.polje_2);
-        field_card_3 = findViewById(R.id.polje_3);
-        field_card_4 = findViewById(R.id.polje_4);
-        field_card_5 = findViewById(R.id.polje_5);
+        field_card_1 = findViewById(R.id.field_card_1);
+        field_card_2 = findViewById(R.id.field_card_2);
+        field_card_3 = findViewById(R.id.field_card_3);
+        field_card_4 = findViewById(R.id.field_card_4);
+        field_card_5 = findViewById(R.id.field_card_5);
 
-        field_joker_1 = findViewById(R.id.polje_j1);
-        field_joker_2 = findViewById(R.id.polje_j2);
-        field_joker_3 = findViewById(R.id.polje_j3);
-        field_joker_4 = findViewById(R.id.polje_j4);
-        field_joker_5 = findViewById(R.id.polje_j5);
+        field_joker_1 = findViewById(R.id.field_joker_1);
+        field_joker_2 = findViewById(R.id.field_joker_2);
+        field_joker_3 = findViewById(R.id.field_joker_3);
+        field_joker_4 = findViewById(R.id.field_joker_4);
+        field_joker_5 = findViewById(R.id.field_joker_5);
 
         hand_1 = findViewById(R.id.hand_1);
         hand_2 = findViewById(R.id.hand_2);
@@ -293,42 +293,42 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         winning_10 = findViewById(R.id.winning_10);
         winning = findViewById(R.id.winning);
 
-        field_win_1 = findViewById(R.id.polje_d1);
-        field_win_2 = findViewById(R.id.polje_d2);
-        field_win_3 = findViewById(R.id.polje_d3);
-        field_win_4 = findViewById(R.id.polje_d4);
-        field_win_5 = findViewById(R.id.polje_d5);
-        field_win_6 = findViewById(R.id.polje_d6);
-        field_win_7 = findViewById(R.id.polje_d7);
-        field_win_8 = findViewById(R.id.polje_d8);
-        field_win_9 = findViewById(R.id.polje_d9);
-        field_win_10 = findViewById(R.id.polje_d10);
-        field_win_11 = findViewById(R.id.polje_d11);
-        field_win_12 = findViewById(R.id.polje_d12);
+        field_win_1 = findViewById(R.id.field_win_1);
+        field_win_2 = findViewById(R.id.field_win_2);
+        field_win_3 = findViewById(R.id.field_win_3);
+        field_win_4 = findViewById(R.id.field_win_4);
+        field_win_5 = findViewById(R.id.field_win_5);
+        field_win_6 = findViewById(R.id.field_win_6);
+        field_win_7 = findViewById(R.id.field_win_7);
+        field_win_8 = findViewById(R.id.field_win_8);
+        field_win_9 = findViewById(R.id.field_win_9);
+        field_win_10 = findViewById(R.id.field_win_10);
+        field_win_11 = findViewById(R.id.field_win_11);
+        field_win_12 = findViewById(R.id.field_win_12);
 
-        low_1 = findViewById(R.id.tief_1);
-        low_2 = findViewById(R.id.tief_2);
-        low_3 = findViewById(R.id.tief_3);
-        low_4 = findViewById(R.id.tief_4);
-        low_5 = findViewById(R.id.tief_5);
-        low_6 = findViewById(R.id.tief_6);
-        low_7 = findViewById(R.id.tief_7);
-        low_8 = findViewById(R.id.tief_8);
-        low_9 = findViewById(R.id.tief_9);
-        low_10 = findViewById(R.id.tief_10);
-        low_11 = findViewById(R.id.tief_11);
+        low_1 = findViewById(R.id.low_1);
+        low_2 = findViewById(R.id.low_2);
+        low_3 = findViewById(R.id.low_3);
+        low_4 = findViewById(R.id.low_4);
+        low_5 = findViewById(R.id.low_5);
+        low_6 = findViewById(R.id.low_6);
+        low_7 = findViewById(R.id.low_7);
+        low_8 = findViewById(R.id.low_8);
+        low_9 = findViewById(R.id.low_9);
+        low_10 = findViewById(R.id.low_10);
+        low_11 = findViewById(R.id.low_11);
 
-        high_1 = findViewById(R.id.hoch_1);
-        high_2 = findViewById(R.id.hoch_2);
-        high_3 = findViewById(R.id.hoch_3);
-        high_4 = findViewById(R.id.hoch_4);
-        high_5 = findViewById(R.id.hoch_5);
-        high_6 = findViewById(R.id.hoch_6);
-        high_7 = findViewById(R.id.hoch_7);
-        high_8 = findViewById(R.id.hoch_8);
-        high_9 = findViewById(R.id.hoch_9);
-        high_10 = findViewById(R.id.hoch_10);
-        high_11 = findViewById(R.id.hoch_11);
+        high_1 = findViewById(R.id.high_1);
+        high_2 = findViewById(R.id.high_2);
+        high_3 = findViewById(R.id.high_3);
+        high_4 = findViewById(R.id.high_4);
+        high_5 = findViewById(R.id.high_5);
+        high_6 = findViewById(R.id.high_6);
+        high_7 = findViewById(R.id.high_7);
+        high_8 = findViewById(R.id.high_8);
+        high_9 = findViewById(R.id.high_9);
+        high_10 = findViewById(R.id.high_10);
+        high_11 = findViewById(R.id.high_11);
 
         timer1 = new Timer();
         timer2 = new Timer();
@@ -661,32 +661,32 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 new TakingHalf();
             }
         }
-        if(pressed == R.id.stop1) {
+        if(pressed == R.id.hold_1) {
             if(choice == 1) {
                 stop_card_1();
             }
         }
-        if(pressed == R.id.stop2) {
+        if(pressed == R.id.hold_2) {
             if(choice == 1) {
                 stop_card_2();
             }
         }
-        if(pressed == R.id.stop3) {
+        if(pressed == R.id.hold_3) {
             if(choice == 1) {
                 stop_card_3();
             }
         }
-        if(pressed == R.id.stop4) {
+        if(pressed == R.id.hold_4) {
             if(choice == 1) {
                 stop_card_4();
             }
         }
-        if(pressed == R.id.stop5) {
+        if(pressed == R.id.hold_5) {
             if(choice == 1) {
                 stop_card_5();
             }
         }
-        if(pressed == R.id.double_tief) {
+        if(pressed == R.id.double_low) {
             if(doubling == 1) {
                 doubling = 0;
                 low.setVisibility(View.INVISIBLE);
@@ -698,7 +698,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 }
             }
         }
-        if(pressed == R.id.double_hoch) {
+        if(pressed == R.id.double_high) {
             if(doubling == 1) {
                 doubling = 0;
                 low.setVisibility(View.INVISIBLE);
@@ -1097,7 +1097,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
         audio_stop_1 = MediaPlayer.create(this, R.raw.stop1);
         audio_stop_1.start();
-        button_stop1.setBackgroundColor(Color.RED);
+        button_hold_1.setBackgroundColor(Color.RED);
         Hand_1.hold1 = 1;
     }
     void stop_card_2() {
@@ -1107,7 +1107,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
         audio_stop_2 = MediaPlayer.create(this, R.raw.stop2);
         audio_stop_2.start();
-        button_stop2.setBackgroundColor(Color.RED);
+        button_hold_2.setBackgroundColor(Color.RED);
         Hand_1.hold2 = 1;
     }
     void stop_card_3() {
@@ -1117,7 +1117,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
         audio_stop_3 = MediaPlayer.create(this, R.raw.stop3);
         audio_stop_3.start();
-        button_stop3.setBackgroundColor(Color.RED);
+        button_hold_3.setBackgroundColor(Color.RED);
         Hand_1.hold3 = 1;
     }
     void stop_card_4() {
@@ -1127,7 +1127,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
         audio_stop_4 = MediaPlayer.create(this, R.raw.stop4);
         audio_stop_4.start();
-        button_stop4.setBackgroundColor(Color.RED);
+        button_hold_4.setBackgroundColor(Color.RED);
         Hand_1.hold4 = 1;
     }
     void stop_card_5() {
@@ -1137,7 +1137,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
         audio_stop_5 = MediaPlayer.create(this, R.raw.stop5);
         audio_stop_5.start();
-        button_stop5.setBackgroundColor(Color.RED);
+        button_hold_5.setBackgroundColor(Color.RED);
         Hand_1.hold5 = 1;
     }
     void clearing_1() {
@@ -1149,11 +1149,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_clear.start();
     }
     public static void clearing_2() {
-        button_stop1.setBackgroundColor(Color.parseColor("#000000"));
-        button_stop2.setBackgroundColor(Color.parseColor("#000000"));
-        button_stop3.setBackgroundColor(Color.parseColor("#000000"));
-        button_stop4.setBackgroundColor(Color.parseColor("#000000"));
-        button_stop5.setBackgroundColor(Color.parseColor("#000000"));
+        button_hold_1.setBackgroundColor(Color.parseColor("#000000"));
+        button_hold_2.setBackgroundColor(Color.parseColor("#000000"));
+        button_hold_3.setBackgroundColor(Color.parseColor("#000000"));
+        button_hold_4.setBackgroundColor(Color.parseColor("#000000"));
+        button_hold_5.setBackgroundColor(Color.parseColor("#000000"));
     }
     void deal_cards_2() {
         if (audio_deal_cards_2 != null) {
@@ -1241,7 +1241,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         center_2.setText(R.string.win);
         center_2.setVisibility(View.VISIBLE);
         audio_bingo.start();
-        interval -=25;
+        interval -= 25;
     }
     void bingo() {
         if (audio_bingo != null) {

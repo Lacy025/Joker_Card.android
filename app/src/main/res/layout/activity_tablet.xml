@@ -961,26 +961,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_1"
+            android:id="@+id/high_1"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch1"
+            android:text="@string/high_1"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_1"
+            android:id="@+id/low_1"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief1"
+            android:text="@string/low_1"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1014,26 +1014,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_2"
+            android:id="@+id/high_2"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch2"
+            android:text="@string/high_2"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_2"
+            android:id="@+id/low_2"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief2"
+            android:text="@string/low_2"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1067,26 +1067,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_3"
+            android:id="@+id/high_3"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch3"
+            android:text="@string/high_3"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_3"
+            android:id="@+id/low_3"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief3"
+            android:text="@string/low_3"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1120,26 +1120,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_4"
+            android:id="@+id/high_4"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch4"
+            android:text="@string/high_4"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_4"
+            android:id="@+id/low_4"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief4"
+            android:text="@string/low_4"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1173,26 +1173,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_5"
+            android:id="@+id/high_5"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch5"
+            android:text="@string/high_5"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_5"
+            android:id="@+id/low__5"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief5"
+            android:text="@string/low_5"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1226,26 +1226,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_6"
+            android:id="@+id/high_6"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch6"
+            android:text="@string/high_6"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_6"
+            android:id="@+id/low_6"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief6"
+            android:text="@string/low_6"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1279,26 +1279,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_7"
+            android:id="@+id/high_7"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch7"
+            android:text="@string/high_7"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_7"
+            android:id="@+id/low_7"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief7"
+            android:text="@string/low_7"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1332,26 +1332,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_8"
+            android:id="@+id/high_8"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch8"
+            android:text="@string/high_8"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_8"
+            android:id="@+id/low_8"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="bottom|center"
-            android:text="@string/tief8"
+            android:text="@string/low_8"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1385,26 +1385,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_9"
+            android:id="@+id/high_9"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch9"
+            android:text="@string/high_9"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_9"
+            android:id="@+id/low_9"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief9"
+            android:text="@string/low_9"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1438,26 +1438,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_10"
+            android:id="@+id/high_10"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch10"
+            android:text="@string/high_10"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_10"
+            android:id="@+id/low_10"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief10"
+            android:text="@string/low_10"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1491,26 +1491,26 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch_11"
+            android:id="@+id/high_11"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/hoch11"
+            android:text="@string/high_11"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
             tools:ignore="VisualLintOverlap,VisualLintBounds" />
 
         <TextView
-            android:id="@+id/tief_11"
+            android:id="@+id/low_11"
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_minus10sdp"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
             android:fontFamily="arial"
             android:gravity="center"
-            android:text="@string/tief11"
+            android:text="@string/low_11"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_32sdp"
             android:visibility="invisible"
@@ -1544,12 +1544,12 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hoch"
+            android:id="@+id/high"
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_20sdp"
             android:fontFamily="arial"
             android:gravity="bottom|center"
-            android:text="@string/hoch"
+            android:text="@string/high"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_16sdp"
             android:visibility="invisible"
@@ -1565,12 +1565,12 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tief"
+            android:id="@+id/low"
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_20sdp"
             android:fontFamily="arial"
             android:gravity="bottom|center"
-            android:text="@string/tief"
+            android:text="@string/low"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_16sdp"
             android:visibility="invisible"

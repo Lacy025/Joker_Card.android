@@ -5,11 +5,11 @@ import android.view.View;
 public class Clearing {
     Clearing() {
         MainClass.center_2.setVisibility(View.VISIBLE);
-        MainClass.button_stop1.setVisibility(View.VISIBLE);
-        MainClass.button_stop2.setVisibility(View.VISIBLE);
-        MainClass.button_stop3.setVisibility(View.VISIBLE);
-        MainClass.button_stop4.setVisibility(View.VISIBLE);
-        MainClass.button_stop5.setVisibility(View.VISIBLE);
+        MainClass.button_hold_1.setVisibility(View.VISIBLE);
+        MainClass.button_hold_2.setVisibility(View.VISIBLE);
+        MainClass.button_hold_3.setVisibility(View.VISIBLE);
+        MainClass.button_hold_4.setVisibility(View.VISIBLE);
+        MainClass.button_hold_5.setVisibility(View.VISIBLE);
         MainClass.table.setVisibility(View.INVISIBLE);
         MainClass.winning.setVisibility(View.INVISIBLE);
         MainClass.winning_1.setVisibility(View.INVISIBLE);

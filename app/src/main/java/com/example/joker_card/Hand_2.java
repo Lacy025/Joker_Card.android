@@ -2,11 +2,11 @@ package com.example.joker_card;
 
 import static com.example.joker_card.MainClass.audio_winner;
 import static com.example.joker_card.MainClass.button_deal;
-import static com.example.joker_card.MainClass.button_stop1;
-import static com.example.joker_card.MainClass.button_stop2;
-import static com.example.joker_card.MainClass.button_stop3;
-import static com.example.joker_card.MainClass.button_stop4;
-import static com.example.joker_card.MainClass.button_stop5;
+import static com.example.joker_card.MainClass.button_hold_1;
+import static com.example.joker_card.MainClass.button_hold_2;
+import static com.example.joker_card.MainClass.button_hold_3;
+import static com.example.joker_card.MainClass.button_hold_4;
+import static com.example.joker_card.MainClass.button_hold_5;
 import static com.example.joker_card.MainClass.button_take;
 import static com.example.joker_card.MainClass.center_2;
 import static com.example.joker_card.MainClass.delaying;
@@ -814,11 +814,11 @@ public class Hand_2 extends Activity {
                 }
                 winning_value.setVisibility(View.VISIBLE);
                 audio_winner.start();
-                button_stop1.setVisibility(View.INVISIBLE);
-                button_stop2.setVisibility(View.INVISIBLE);
-                button_stop3.setVisibility(View.INVISIBLE);
-                button_stop4.setVisibility(View.INVISIBLE);
-                button_stop5.setVisibility(View.INVISIBLE);
+                button_hold_1.setVisibility(View.INVISIBLE);
+                button_hold_2.setVisibility(View.INVISIBLE);
+                button_hold_3.setVisibility(View.INVISIBLE);
+                button_hold_4.setVisibility(View.INVISIBLE);
+                button_hold_5.setVisibility(View.INVISIBLE);
 
                 choice = 2;
                 if(cash > 9999) {

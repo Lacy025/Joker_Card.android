@@ -75,30 +75,30 @@
     <string name="todo121212">TODO</string>
     <string name="doublehoch">HOCH</string>
     <string name="doubletief">TIEF</string>
-    <string name="hoch">8, 9, 10, J, Q, K = HOCH</string>
-    <string name="tief"> A, 2, 3, 4, 5, 6 = TIEF</string>
-    <string name="hoch1">HOCH</string>
-    <string name="tief1">TIEF</string>
-    <string name="hoch2">HOCH</string>
-    <string name="tief2">TIEF</string>
-    <string name="hoch3">HOCH</string>
-    <string name="tief3">TIEF</string>
-    <string name="hoch4">HOCH</string>
-    <string name="tief4">TIEF</string>
-    <string name="hoch5">HOCH</string>
-    <string name="tief5">TIEF</string>
-    <string name="hoch6">HOCH</string>
-    <string name="tief6">TIEF</string>
-    <string name="hoch7">HOCH</string>
-    <string name="tief7">TIEF</string>
-    <string name="hoch8">HOCH</string>
-    <string name="tief8">TIEF</string>
-    <string name="hoch9">HOCH</string>
-    <string name="tief9">TIEF</string>
-    <string name="hoch10">HOCH</string>
-    <string name="tief10">TIEF</string>
-    <string name="hoch11">HOCH</string>
-    <string name="tief11">TIEF</string>
+    <string name="high">8, 9, 10, J, Q, K = HOCH</string>
+    <string name="low"> A, 2, 3, 4, 5, 6 = TIEF</string>
+    <string name="high_1">HOCH</string>
+    <string name="low_1">TIEF</string>
+    <string name="high_2">HOCH</string>
+    <string name="low_2">TIEF</string>
+    <string name="high_3">HOCH</string>
+    <string name="low_3">TIEF</string>
+    <string name="high_4">HOCH</string>
+    <string name="low_4">TIEF</string>
+    <string name="high_5">HOCH</string>
+    <string name="low_5">TIEF</string>
+    <string name="high_6">HOCH</string>
+    <string name="low_6">TIEF</string>
+    <string name="high_7">HOCH</string>
+    <string name="low_7">TIEF</string>
+    <string name="high_8">HOCH</string>
+    <string name="low_8">TIEF</string>
+    <string name="high_9">HOCH</string>
+    <string name="low_9">TIEF</string>
+    <string name="high_10">HOCH</string>
+    <string name="low_10">TIEF</string>
+    <string name="high_11">HOCH</string>
+    <string name="low_11">TIEF</string>
     <string name="joker">JOKER</string>
     <string name="card">CARD</string>
     <string name="gamble">GAMBLE</string>
