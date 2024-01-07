@@ -40,11 +40,11 @@
     <string name="_1_2">1</string>
     <string name="auto_hold">AUTO HOLD</string>
     <string name="deal_cards">DEAL CARDS</string>
-    <string name="stop1">HOLD</string>
-    <string name="stop2">HOLD</string>
-    <string name="stop3">HOLD</string>
-    <string name="stop4">HOLD</string>
-    <string name="stop5">HOLD</string>
+    <string name="hold_1">HOLD</string>
+    <string name="hold_2">HOLD</string>
+    <string name="hold_3">HOLD</string>
+    <string name="hold_4">HOLD</string>
+    <string name="hold_5">HOLD</string>
     <string name="lacika_baci">LACIKA BAČI</string>
     <string name="choose_bet">CHOOSE BET</string>
     <string name="serbia_2023">SERBIA 2023</string>

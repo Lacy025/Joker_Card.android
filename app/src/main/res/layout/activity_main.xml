@@ -618,7 +618,7 @@
             android:layout_marginStart="@dimen/_6sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop1"
+            android:text="@string/hold_1"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
             tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds,DuplicateSpeakableTextCheck" />
@@ -630,7 +630,7 @@
             android:layout_marginStart="@dimen/_20sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop2"
+            android:text="@string/hold_2"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
             tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds" />
@@ -642,7 +642,7 @@
             android:layout_marginStart="@dimen/_22sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop3"
+            android:text="@string/hold_3"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
             tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds" />
@@ -654,7 +654,7 @@
             android:layout_marginStart="@dimen/_18sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop4"
+            android:text="@string/hold_4"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
             tools:ignore="TouchTargetSizeCheck,VisualLintBounds,TextSizeCheck" />
@@ -666,7 +666,7 @@
             android:layout_marginStart="@dimen/_20sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop5"
+            android:text="@string/hold_5"
             android:textColor="#FBF701"
             android:textSize="@dimen/_16sdp"
             tools:ignore="TouchTargetSizeCheck,VisualLintBounds,TextSizeCheck" />

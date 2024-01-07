@@ -626,61 +626,61 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/stop1"
+            android:id="@+id/hold_1"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_126sdp"
             android:layout_marginStart="@dimen/_8sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop1"
+            android:text="@string/hold_1"
             android:textColor="#FBF701"
             android:textSize="@dimen/_14sdp"
             tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds,DuplicateSpeakableTextCheck" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/stop2"
+            android:id="@+id/hold_2"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_126sdp"
             android:layout_marginStart="@dimen/_17sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop2"
+            android:text="@string/hold_2"
             android:textColor="#FBF701"
             android:textSize="@dimen/_14sdp"
             tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/stop3"
+            android:id="@+id/hold_3"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_126sdp"
             android:layout_marginStart="@dimen/_17sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop3"
+            android:text="@string/hold_3"
             android:textColor="#FBF701"
             android:textSize="@dimen/_14sdp"
             tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/stop4"
+            android:id="@+id/hold_4"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_126sdp"
             android:layout_marginStart="@dimen/_17sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop4"
+            android:text="@string/hold_4"
             android:textColor="#FBF701"
             android:textSize="@dimen/_14sdp"
             tools:ignore="TouchTargetSizeCheck,VisualLintBounds,TextSizeCheck" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/stop5"
+            android:id="@+id/hold_5"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_126sdp"
             android:layout_marginStart="@dimen/_17sdp"
             android:backgroundTint="#000000"
             android:gravity="bottom|center"
-            android:text="@string/stop5"
+            android:text="@string/hold_5"
             android:textColor="#FBF701"
             android:textSize="@dimen/_14sdp"
             tools:ignore="TouchTargetSizeCheck,VisualLintBounds,TextSizeCheck" />
