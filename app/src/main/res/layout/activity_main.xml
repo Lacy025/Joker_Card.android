@@ -215,7 +215,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_1100"
+            android:text="@string/value_1"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -225,7 +225,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_500"
+            android:text="@string/value_2"
             android:textColor="#FF0000"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -235,7 +235,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_100"
+            android:text="@string/value_3"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -245,7 +245,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_40"
+            android:text="@string/value_4"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -255,7 +255,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_10"
+            android:text="@string/value_5"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -265,7 +265,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_7"
+            android:text="@string/value_6"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -275,7 +275,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_5"
+            android:text="@string/value_7"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -285,7 +285,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_3"
+            android:text="@string/value_8"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -295,7 +295,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_2"
+            android:text="@string/value_9"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -305,7 +305,7 @@
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_10sdp"
             android:gravity="right"
-            android:text="@string/_1"
+            android:text="@string/value_10"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />

@@ -10,16 +10,16 @@
     <string name="three_of_a_kind">THREE OF A KIND</string>
     <string name="two_pairs">2 PAIRS</string>
     <string name="high_pair">HIGH PAIR</string>
-    <string name="_1100">1100</string>
-    <string name="_500">500</string>
-    <string name="_100">100</string>
-    <string name="_40">40</string>
-    <string name="_10">10</string>
-    <string name="_7">7</string>
-    <string name="_5">5</string>
-    <string name="_3">3</string>
-    <string name="_2">2</string>
-    <string name="_1">1</string>
+    <string name="value_1">1100</string>
+    <string name="value_2">500</string>
+    <string name="value_3">100</string>
+    <string name="value_4">40</string>
+    <string name="value_5">10</string>
+    <string name="value_6">7</string>
+    <string name="value_7">5</string>
+    <string name="value_8">3</string>
+    <string name="value_9">2</string>
+    <string name="value_10">1</string>
     <string name="table">TODO</string>
     <string name="winning">WIN =</string>
     <string name="winning_value">0</string>

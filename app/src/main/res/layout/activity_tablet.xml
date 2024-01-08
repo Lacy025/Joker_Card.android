@@ -218,101 +218,101 @@
         tools:ignore="RtlHardcoded">
 
         <TextView
-            android:id="@+id/vrednost_1"
+            android:id="@+id/value_1"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_1100"
+            android:text="@string/value_1"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_2"
+            android:id="@+id/value_2"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_500"
+            android:text="@string/value_2"
             android:textColor="#FF0000"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_3"
+            android:id="@+id/value_3"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_100"
+            android:text="@string/value_3"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_4"
+            android:id="@+id/value_4"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_40"
+            android:text="@string/value_4"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_5"
+            android:id="@+id/value_5"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_10"
+            android:text="@string/value_5"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_6"
+            android:id="@+id/value_6"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_7"
+            android:text="@string/value_6"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_7"
+            android:id="@+id/value_7"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_5"
+            android:text="@string/value_7"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_8"
+            android:id="@+id/value_8"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_3"
+            android:text="@string/value_8"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_9"
+            android:id="@+id/value_9"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_2"
+            android:text="@string/value_9"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/vrednost_10"
+            android:id="@+id/value_10"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_9sdp"
             android:gravity="right"
-            android:text="@string/_1"
+            android:text="@string/value_10"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
