@@ -576,6 +576,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 center_1.setVisibility(View.INVISIBLE);
                 hold = 300;
                 delaying = 50;
+
                 hand_1.setVisibility(View.INVISIBLE);
                 hand_2.setVisibility(View.INVISIBLE);
                 hand_3.setVisibility(View.INVISIBLE);
