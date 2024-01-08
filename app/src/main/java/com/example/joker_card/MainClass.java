@@ -864,15 +864,15 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     }
 
     static void Low_High() {
-        /*
 
+/*
         if(cheat < 25) {
-            button_stop1.setVisibility(View.VISIBLE);
-            button_stop5.setVisibility(View.INVISIBLE);
+            button_hold_1.setVisibility(View.VISIBLE);
+            button_hold_5.setVisibility(View.INVISIBLE);
         }
         else {
-            button_stop5.setVisibility(View.VISIBLE);
-            button_stop1.setVisibility(View.INVISIBLE);
+            button_hold_5.setVisibility(View.VISIBLE);
+            button_hold_1.setVisibility(View.INVISIBLE);
         }
 */
         if(cash > 9999) {
