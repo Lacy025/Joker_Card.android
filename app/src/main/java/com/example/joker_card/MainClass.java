@@ -363,7 +363,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
                                 if(c == 0 && dealing == 0) {
-                                    down_left_1.setText(R.string.lacika_baci);
+                                    down_left_1.setText(R.string.author);
                                     down_left_1.setVisibility(View.VISIBLE);
                                     down_right_1.setVisibility(View.INVISIBLE);
                                 }

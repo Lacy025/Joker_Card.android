@@ -25,7 +25,7 @@
     <string name="winning_value">0</string>
     <string name="credit">CREDIT</string>
     <string name="bet">BET</string>
-    <string name="autohold">AUTOHOLD</string>
+    <string name="auto">AUTOHOLD</string>
     <string name="credit_value">0</string>
     <string name="bet_value">1</string>
     <string name="auto_hold">AUTO HOLD</string>
@@ -35,7 +35,7 @@
     <string name="hold_3">HOLD</string>
     <string name="hold_4">HOLD</string>
     <string name="hold_5">HOLD</string>
-    <string name="lacika_baci">LACIKA BAČI</string>
+    <string name="author">LACIKA BAČI</string>
     <string name="choose_bet">CHOOSE BET</string>
     <string name="serbia_2023">SERBIA 2023</string>
     <string name="pick_cards">PICK CARDS</string>
@@ -63,8 +63,8 @@
     <string name="field_win_10">TODO</string>
     <string name="field_win_11">TODO</string>
     <string name="field_win_12">TODO</string>
-    <string name="doublehoch">HOCH</string>
-    <string name="doubletief">TIEF</string>
+    <string name="double_high">HOCH</string>
+    <string name="double_low">TIEF</string>
     <string name="high">8, 9, 10, J, Q, K = HOCH</string>
     <string name="low"> A, 2, 3, 4, 5, 6 = TIEF</string>
     <string name="high_1">HOCH</string>
