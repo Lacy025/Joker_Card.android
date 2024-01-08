@@ -188,7 +188,7 @@
         <TextView
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_10sdp"
-            android:text="@string/_2_pairs"
+            android:text="@string/two_pairs"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck,VisualLintBounds" />
@@ -324,7 +324,7 @@
             android:layout_height="@dimen/_106sdp"
             android:src="@drawable/table"
             android:visibility="invisible"
-            android:contentDescription="@string/todo"
+            android:contentDescription="@string/table"
             tools:ignore="ContentDescription,VisualLintBounds" />
 
     </LinearLayout>
@@ -341,7 +341,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_3sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/five_of_a_kind2"
+            android:text="@string/five_of_a_kind"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -353,7 +353,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/royal_flush2"
+            android:text="@string/royal_flush"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -365,7 +365,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus41sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/street_flush2"
+            android:text="@string/street_flush"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -377,7 +377,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/poker2"
+            android:text="@string/poker"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -389,7 +389,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus41sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/full_house2"
+            android:text="@string/full_house"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -401,7 +401,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/flush2"
+            android:text="@string/flush"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -413,7 +413,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus41sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/street2"
+            android:text="@string/street"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -425,7 +425,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/three_of_a_kind2"
+            android:text="@string/three_of_a_kind"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -437,7 +437,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/_2_pairs2"
+            android:text="@string/two_pairs"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -449,7 +449,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_minus40sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/high_pair2"
+            android:text="@string/high_pair"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -461,7 +461,7 @@
             android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_14sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@string/dobitak"
+            android:text="@string/winning"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -474,7 +474,7 @@
             android:layout_marginTop="@dimen/_minus50sdp"
             android:layout_marginStart="@dimen/_186sdp"
             android:gravity="right"
-            android:text="@string/_0"
+            android:text="@string/winning_value"
             android:textColor="#FFFF00"
             android:textSize="@dimen/_36sdp"
             android:visibility="invisible"
@@ -541,7 +541,7 @@
             android:layout_marginLeft="@dimen/_188sdp"
             android:layout_marginTop="@dimen/_20sdp"
             android:gravity="left"
-            android:text="@string/_0_2"
+            android:text="@string/credit_value"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -553,7 +553,7 @@
             android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginLeft="@dimen/_8sdp"
             android:gravity="left"
-            android:text="@string/_1_2"
+            android:text="@string/bet_value"
             android:textColor="#FAD2B3"
             android:textSize="@dimen/_8sdp"
             tools:ignore="SmallSp,TextSizeCheck" />
@@ -736,7 +736,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo1"
+            android:contentDescription="@string/field_card_1"
             tools:ignore="ContentDescription" />
 
         <ImageView
@@ -746,7 +746,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo2"
+            android:contentDescription="@string/field_card_2"
             tools:ignore="ContentDescription" />
 
         <ImageView
@@ -756,7 +756,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo3"
+            android:contentDescription="@string/field_card_3"
             tools:ignore="ContentDescription,VisualLintBounds" />
 
         <ImageView
@@ -766,7 +766,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo4"
+            android:contentDescription="@string/field_card_4"
             tools:ignore="ContentDescription,VisualLintBounds" />
 
         <ImageView
@@ -776,7 +776,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo5"
+            android:contentDescription="@string/field_card_5"
             tools:ignore="ContentDescription,VisualLintBounds" />
 
     </LinearLayout>
@@ -795,7 +795,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
-            android:contentDescription="@string/todo11"
+            android:contentDescription="@string/field_joker_1"
             tools:ignore="ContentDescription" />
 
         <ImageView
@@ -805,7 +805,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
-            android:contentDescription="@string/todo22"
+            android:contentDescription="@string/field_joker_2"
             tools:ignore="ContentDescription" />
 
         <ImageView
@@ -815,7 +815,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
-            android:contentDescription="@string/todo33"
+            android:contentDescription="@string/field_joker_3"
             tools:ignore="ContentDescription,VisualLintBounds" />
 
         <ImageView
@@ -825,7 +825,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
-            android:contentDescription="@string/todo44"
+            android:contentDescription="@string/field_joker_4"
             tools:ignore="ContentDescription,VisualLintBounds" />
 
         <ImageView
@@ -835,7 +835,7 @@
             android:layout_marginEnd="@dimen/_6sdp"
             android:src="@drawable/k00"
             android:visibility="invisible"
-            android:contentDescription="@string/todo55"
+            android:contentDescription="@string/field_joker_5"
             tools:ignore="ContentDescription,VisualLintBounds" />
 
 
@@ -937,7 +937,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo111"
+            android:contentDescription="@string/field_win_1"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -990,7 +990,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo222"
+            android:contentDescription="@string/field_win_2"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1043,7 +1043,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo333"
+            android:contentDescription="@string/field_win_3"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1096,7 +1096,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo444"
+            android:contentDescription="@string/field_win_4"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1149,7 +1149,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo555"
+            android:contentDescription="@string/field_win_5"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1202,7 +1202,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo666"
+            android:contentDescription="@string/field_win_6"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1255,7 +1255,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo777"
+            android:contentDescription="@string/field_win_7"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1308,7 +1308,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo888"
+            android:contentDescription="@string/field_win_8"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1361,7 +1361,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo999"
+            android:contentDescription="@string/field_win_9"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1414,7 +1414,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo101010"
+            android:contentDescription="@string/field_win_10"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1467,7 +1467,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo111111"
+            android:contentDescription="@string/field_win_11"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
@@ -1520,7 +1520,7 @@
             android:layout_height="@dimen/_170sdp"
             android:src="@drawable/k53"
             android:visibility="invisible"
-            android:contentDescription="@string/todo121212"
+            android:contentDescription="@string/field_win_12"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>
