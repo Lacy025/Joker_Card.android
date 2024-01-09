@@ -1,22 +1,14 @@
 package com.example.joker_card;
 
-import static com.example.joker_card.MainClass.hand_1;
-import static com.example.joker_card.MainClass.hand_2;
-import static com.example.joker_card.MainClass.hand_3;
-import static com.example.joker_card.MainClass.hand_4;
-import static com.example.joker_card.MainClass.hand_5;
-import static com.example.joker_card.MainClass.hand_6;
-import static com.example.joker_card.MainClass.hand_7;
-import static com.example.joker_card.MainClass.hand_8;
-import static com.example.joker_card.MainClass.hand_9;
-import static com.example.joker_card.MainClass.hand_10;
 import static com.example.joker_card.MainClass.ah;
 import static com.example.joker_card.MainClass.stop;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.ImageView;
 
 public class Hand_1 extends Activity {
     int n1;
@@ -58,7 +50,30 @@ public class Hand_1 extends Activity {
     public static int hold3;
     public static int hold4;
     public static int hold5;
-    Hand_1() {
+    Context context_hand_1;
+    Context context_hand_2;
+    Context context_hand_3;
+    Context context_hand_4;
+    Context context_hand_5;
+    Context context_hand_6;
+    Context context_hand_7;
+    Context context_hand_8;
+    Context context_hand_9;
+    Context context_hand_10;
+    Hand_1(Context context_hand_1, Context context_hand_2, Context context_hand_3, Context context_hand_4, Context context_hand_5,
+           Context context_hand_6, Context context_hand_7, Context context_hand_8, Context context_hand_9, Context context_hand_10) {
+
+        this.context_hand_1 = context_hand_1;
+        this.context_hand_2 = context_hand_2;
+        this.context_hand_3 = context_hand_3;
+        this.context_hand_4 = context_hand_4;
+        this.context_hand_5 = context_hand_5;
+        this.context_hand_6 = context_hand_6;
+        this.context_hand_7 = context_hand_7;
+        this.context_hand_8 = context_hand_8;
+        this.context_hand_9 = context_hand_9;
+        this.context_hand_10 = context_hand_10;
+
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
             n1 = Card_1.n1;
@@ -1378,33 +1393,43 @@ public class Hand_1 extends Activity {
             }
 
             if (Five_of_a_kind == 1) {
+                ImageView hand_1 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_1);
                 hand_1.setVisibility(View.VISIBLE);
             }
             if (Royal_flush == 1) {
+                ImageView hand_2 = (ImageView) ((Activity)context_hand_2).findViewById(R.id.hand_2);
                 hand_2.setVisibility(View.VISIBLE);
             }
             if (Street_flush == 1) {
+                ImageView hand_3 = (ImageView) ((Activity)context_hand_3).findViewById(R.id.hand_3);
                 hand_3.setVisibility(View.VISIBLE);
             }
             if (Poker == 1) {
+                ImageView hand_4 = (ImageView) ((Activity)context_hand_4).findViewById(R.id.hand_4);
                 hand_4.setVisibility(View.VISIBLE);
             }
             if (Full_house == 1) {
+                ImageView hand_5 = (ImageView) ((Activity)context_hand_5).findViewById(R.id.hand_5);
                 hand_5.setVisibility(View.VISIBLE);
             }
             if (Flush == 1) {
+                ImageView hand_6 = (ImageView) ((Activity)context_hand_6).findViewById(R.id.hand_6);
                 hand_6.setVisibility(View.VISIBLE);
             }
             if (Street == 1) {
+                ImageView hand_7 = (ImageView) ((Activity)context_hand_7).findViewById(R.id.hand_7);
                 hand_7.setVisibility(View.VISIBLE);
             }
             if (Three_of_a_kind == 1) {
+                ImageView hand_8 = (ImageView) ((Activity)context_hand_8).findViewById(R.id.hand_8);
                 hand_8.setVisibility(View.VISIBLE);
             }
             if (Two_pairs == 1) {
+                ImageView hand_9 = (ImageView) ((Activity)context_hand_9).findViewById(R.id.hand_9);
                 hand_9.setVisibility(View.VISIBLE);
             }
             if (High_pair == 1) {
+                ImageView hand_10 = (ImageView) ((Activity)context_hand_10).findViewById(R.id.hand_10);
                 hand_10.setVisibility(View.VISIBLE);
             }
             if(ah == 0) {

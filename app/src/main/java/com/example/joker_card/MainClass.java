@@ -122,16 +122,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static ImageView field_joker_3;
     public static ImageView field_joker_4;
     public static ImageView field_joker_5;
-    public static ImageView hand_1;
-    public static ImageView hand_2;
-    public static ImageView hand_3;
-    public static ImageView hand_4;
-    public static ImageView hand_5;
-    public static ImageView hand_6;
-    public static ImageView hand_7;
-    public static ImageView hand_8;
-    public static ImageView hand_9;
-    public static ImageView hand_10;
+    public ImageView hand_1;
+    public ImageView hand_2;
+    public ImageView hand_3;
+    public ImageView hand_4;
+    public ImageView hand_5;
+    public ImageView hand_6;
+    public ImageView hand_7;
+    public ImageView hand_8;
+    public ImageView hand_9;
+    public ImageView hand_10;
     public static ImageView table;
     public static ImageView field_win_1;
     public static ImageView field_win_2;
@@ -438,7 +438,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                             new Card_4();
                                             delaying = 900;
                                             new Card_5();
-                                            new Hand_1();
+                                            new Hand_1(hand_1.getContext(), hand_2.getContext(), hand_3.getContext(), hand_4.getContext(), hand_5.getContext(),
+                                                    hand_6.getContext(), hand_7.getContext(),hand_8.getContext(), hand_9.getContext(), hand_10.getContext());
                                             if(ah == 1) {
                                                 Stop();
                                             }
