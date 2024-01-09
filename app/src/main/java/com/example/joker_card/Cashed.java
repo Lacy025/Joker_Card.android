@@ -24,13 +24,16 @@ public class Cashed extends Activity {
     int pause;
     Context context_table;
     Context context_down_left_2;
-    Cashed(Context context_table, Context context_down_left_2) {
+    Context context_down_right_2;
+    Cashed(Context context_table, Context context_down_left_2, Context context_down_right_2) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
+        this.context_down_right_2 = context_down_right_2;
 
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
         TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
+        TextView down_right_2 = (TextView) ((Activity)context_down_right_2).findViewById(R.id.cash);
 
         if(missed == 1) {
             pause = 2000;
@@ -63,7 +66,7 @@ public class Cashed extends Activity {
                     joker.setVisibility(View.VISIBLE);
                     card.setVisibility(View.VISIBLE);
                     button_take.setText(R.string.auto_hold);
-                    new Clearing(table.getContext(), down_left_2.getContext());
+                    new Clearing(table.getContext(), down_left_2.getContext(), down_right_2.getContext());
                 }
         };
         handler9.postDelayed(runnable9, pause);

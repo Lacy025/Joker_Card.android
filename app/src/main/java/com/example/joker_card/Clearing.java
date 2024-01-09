@@ -9,12 +9,16 @@ import android.widget.TextView;
 public class Clearing extends Activity {
     Context context_table;
     Context context_down_left_2;
-    Clearing(Context context_table, Context context_down_left_2) {
+    Context context_down_right_2;
+    Clearing(Context context_table, Context context_down_left_2, Context context_down_right_2) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
+        this.context_down_right_2 = context_down_right_2;
+
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
         TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
+        TextView down_right_2 = (TextView) ((Activity)context_down_right_2).findViewById(R.id.cash);
 
         MainClass.center_2.setVisibility(View.VISIBLE);
         MainClass.button_hold_1.setVisibility(View.VISIBLE);
@@ -36,7 +40,7 @@ public class Clearing extends Activity {
         MainClass.winning_10.setVisibility(View.INVISIBLE);
         MainClass.winning_value.setVisibility(View.INVISIBLE);
         down_left_2.setVisibility(View.INVISIBLE);
-        MainClass.down_right_2.setVisibility(View.INVISIBLE);
+        down_right_2.setVisibility(View.INVISIBLE);
         MainClass.field_card_1.setVisibility(View.INVISIBLE);
         MainClass.field_card_2.setVisibility(View.INVISIBLE);
         MainClass.field_card_3.setVisibility(View.INVISIBLE);
