@@ -58,6 +58,7 @@ import android.content.Context;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -65,10 +66,14 @@ public class High extends Activity {
     public static Handler handler12;
     public static Runnable runnable12;
     Context context_table;
-    High(Context context_table) throws InterruptedException {
+    Context context_down_left_2;
+    High(Context context_table, Context context_down_left_2) throws InterruptedException {
 
         this.context_table = context_table;
+        this.context_down_left_2 = context_down_left_2;
+
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
+        TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.INVISIBLE);
@@ -169,7 +174,7 @@ public class High extends Activity {
                 cash = 0;
                 winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
                 missed = 1;
-                new Cashed(table.getContext());
+                new Cashed(table.getContext(), down_left_2.getContext());
             }
         };
         handler12.post(runnable12);

@@ -16,15 +16,21 @@ import android.content.Context;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Cashed extends Activity {
     public static Handler handler9;
     public static Runnable runnable9;
     int pause;
     Context context_table;
-    Cashed(Context context_table) {
+    Context context_down_left_2;
+    Cashed(Context context_table, Context context_down_left_2) {
 
         this.context_table = context_table;
+        this.context_down_left_2 = context_down_left_2;
+
+        ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
+        TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
 
         if(missed == 1) {
             pause = 2000;
@@ -57,8 +63,7 @@ public class Cashed extends Activity {
                     joker.setVisibility(View.VISIBLE);
                     card.setVisibility(View.VISIBLE);
                     button_take.setText(R.string.auto_hold);
-                    ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
-                    new Clearing(table.getContext());
+                    new Clearing(table.getContext(), down_left_2.getContext());
                 }
         };
         handler9.postDelayed(runnable9, pause);
