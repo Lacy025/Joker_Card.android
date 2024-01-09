@@ -1,16 +1,24 @@
 package com.example.joker_card;
 
+import android.app.Activity;
+import android.content.Context;
 import android.view.View;
+import android.widget.ImageView;
 
-public class Clearing {
-    Clearing() {
+public class Clearing extends Activity {
+    Context context_table;
+    Clearing(Context context_table) {
+
+        this.context_table = context_table;
+        ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
+
         MainClass.center_2.setVisibility(View.VISIBLE);
         MainClass.button_hold_1.setVisibility(View.VISIBLE);
         MainClass.button_hold_2.setVisibility(View.VISIBLE);
         MainClass.button_hold_3.setVisibility(View.VISIBLE);
         MainClass.button_hold_4.setVisibility(View.VISIBLE);
         MainClass.button_hold_5.setVisibility(View.VISIBLE);
-        MainClass.table.setVisibility(View.INVISIBLE);
+        table.setVisibility(View.INVISIBLE);
         MainClass.winning.setVisibility(View.INVISIBLE);
         MainClass.winning_1.setVisibility(View.INVISIBLE);
         MainClass.winning_2.setVisibility(View.INVISIBLE);

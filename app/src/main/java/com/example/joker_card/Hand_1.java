@@ -74,6 +74,17 @@ public class Hand_1 extends Activity {
         this.context_hand_9 = context_hand_9;
         this.context_hand_10 = context_hand_10;
 
+        ImageView hand_1 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_1);
+        ImageView hand_2 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_2);
+        ImageView hand_3 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_3);
+        ImageView hand_4 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_4);
+        ImageView hand_5 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_5);
+        ImageView hand_6 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_6);
+        ImageView hand_7 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_7);
+        ImageView hand_8 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_8);
+        ImageView hand_9 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_9);
+        ImageView hand_10 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_10);
+
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
             n1 = Card_1.n1;
@@ -1393,43 +1404,33 @@ public class Hand_1 extends Activity {
             }
 
             if (Five_of_a_kind == 1) {
-                ImageView hand_1 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_1);
                 hand_1.setVisibility(View.VISIBLE);
             }
             if (Royal_flush == 1) {
-                ImageView hand_2 = (ImageView) ((Activity)context_hand_2).findViewById(R.id.hand_2);
                 hand_2.setVisibility(View.VISIBLE);
             }
             if (Street_flush == 1) {
-                ImageView hand_3 = (ImageView) ((Activity)context_hand_3).findViewById(R.id.hand_3);
                 hand_3.setVisibility(View.VISIBLE);
             }
             if (Poker == 1) {
-                ImageView hand_4 = (ImageView) ((Activity)context_hand_4).findViewById(R.id.hand_4);
                 hand_4.setVisibility(View.VISIBLE);
             }
             if (Full_house == 1) {
-                ImageView hand_5 = (ImageView) ((Activity)context_hand_5).findViewById(R.id.hand_5);
                 hand_5.setVisibility(View.VISIBLE);
             }
             if (Flush == 1) {
-                ImageView hand_6 = (ImageView) ((Activity)context_hand_6).findViewById(R.id.hand_6);
                 hand_6.setVisibility(View.VISIBLE);
             }
             if (Street == 1) {
-                ImageView hand_7 = (ImageView) ((Activity)context_hand_7).findViewById(R.id.hand_7);
                 hand_7.setVisibility(View.VISIBLE);
             }
             if (Three_of_a_kind == 1) {
-                ImageView hand_8 = (ImageView) ((Activity)context_hand_8).findViewById(R.id.hand_8);
                 hand_8.setVisibility(View.VISIBLE);
             }
             if (Two_pairs == 1) {
-                ImageView hand_9 = (ImageView) ((Activity)context_hand_9).findViewById(R.id.hand_9);
                 hand_9.setVisibility(View.VISIBLE);
             }
             if (High_pair == 1) {
-                ImageView hand_10 = (ImageView) ((Activity)context_hand_10).findViewById(R.id.hand_10);
                 hand_10.setVisibility(View.VISIBLE);
             }
             if(ah == 0) {

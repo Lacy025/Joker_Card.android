@@ -33,7 +33,6 @@ import static com.example.joker_card.MainClass.winning_7;
 import static com.example.joker_card.MainClass.winning_8;
 import static com.example.joker_card.MainClass.winning_9;
 import static com.example.joker_card.MainClass.winning_10;
-import static com.example.joker_card.MainClass.table;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.choice;
 import static com.example.joker_card.MainClass.block;
@@ -46,9 +45,11 @@ import static com.example.joker_card.MainClass.dealing;
 import static com.example.joker_card.MainClass.clearing_2;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.ImageView;
 
 import java.util.Locale;
 
@@ -83,7 +84,12 @@ public class Hand_2 extends Activity {
     int Street_flush_7;
     int Street_flush_8;
     int Street_flush_9;
-    Hand_2() {
+    Context context_table;
+    Hand_2(Context context_table) {
+
+        this.context_table = context_table;
+        ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
+
         clearing_2();
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 

@@ -132,7 +132,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public ImageView hand_8;
     public ImageView hand_9;
     public ImageView hand_10;
-    public static ImageView table;
+    public ImageView table;
     public static ImageView field_win_1;
     public static ImageView field_win_2;
     public static ImageView field_win_3;
@@ -452,7 +452,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                             Cash();
                                         }
                                         if(profit == 1) {
-                                            new Cashed();
+                                            new Cashed(table.getContext());
                                         }
                                     }
                                 }, 100);
@@ -526,7 +526,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     choice = 0;
                     profit = 0;
 
-                    new Clearing();
+                    new Clearing(table.getContext());
                 }
                 Jokers.handler1.removeCallbacks(Jokers.runnable1);
                 Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -537,7 +537,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 Jokers.handler7.removeCallbacks(Jokers.runnable7);
                 Jokers.handler8.removeCallbacks(Jokers.runnable8);
 
-                new Clearing();
+                new Clearing(table.getContext());
 
                 joker.setText("");
                 joker.setVisibility(View.INVISIBLE);
@@ -650,7 +650,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Card_5();
                 }
                 winner();
-                new Hand_2();
+                new Hand_2(table.getContext());
             }
             else if(choice == 2) {
                 doubling();
@@ -694,7 +694,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 low.setVisibility(View.INVISIBLE);
                 high.setVisibility(View.INVISIBLE);
                 try {
-                    new Low();
+                    new Low(table.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -706,7 +706,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 low.setVisibility(View.INVISIBLE);
                 high.setVisibility(View.INVISIBLE);
                 try {
-                    new High();
+                    new High(table.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

@@ -54,15 +54,21 @@ import static com.example.joker_card.MainClass.field_win_10;
 import static com.example.joker_card.MainClass.field_win_11;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.widget.ImageView;
 
 import java.util.Locale;
 
 public class High extends Activity {
     public static Handler handler12;
     public static Runnable runnable12;
-    High() throws InterruptedException {
+    Context context_table;
+    High(Context context_table) throws InterruptedException {
+
+        this.context_table = context_table;
+        ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.INVISIBLE);
@@ -163,7 +169,7 @@ public class High extends Activity {
                 cash = 0;
                 winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
                 missed = 1;
-                new Cashed();
+                new Cashed(table.getContext());
             }
         };
         handler12.post(runnable12);

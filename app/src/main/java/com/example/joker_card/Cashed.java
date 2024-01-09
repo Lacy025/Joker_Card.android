@@ -12,13 +12,20 @@ import static com.example.joker_card.MainClass.card;
 import static com.example.joker_card.MainClass.button_take;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.widget.ImageView;
+
 public class Cashed extends Activity {
     public static Handler handler9;
     public static Runnable runnable9;
     int pause;
-    Cashed() {
+    Context context_table;
+    Cashed(Context context_table) {
+
+        this.context_table = context_table;
+
         if(missed == 1) {
             pause = 2000;
         }
@@ -50,7 +57,8 @@ public class Cashed extends Activity {
                     joker.setVisibility(View.VISIBLE);
                     card.setVisibility(View.VISIBLE);
                     button_take.setText(R.string.auto_hold);
-                    new Clearing();
+                    ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
+                    new Clearing(table.getContext());
                 }
         };
         handler9.postDelayed(runnable9, pause);
