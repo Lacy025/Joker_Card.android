@@ -1,7 +1,6 @@
 package com.example.joker_card;
 
 import static com.example.joker_card.MainClass.dealing;
-import static com.example.joker_card.MainClass.card;
 import static com.example.joker_card.MainClass.field_card_1;
 import static com.example.joker_card.MainClass.field_card_2;
 import static com.example.joker_card.MainClass.field_card_3;
@@ -37,11 +36,14 @@ public class Jokers extends Activity {
     public static Runnable runnable7;
     public static Runnable runnable8;
     Context context_joker;
-    Jokers(Context context_joker) {
+    Context context_card;
+    Jokers(Context context_joker, Context context_card) {
 
         this.context_joker = context_joker;
+        this.context_card = context_card;
 
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
+        TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
 
         if(dealing == 0) {
             joker.setText(R.string.joker);

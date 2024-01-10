@@ -7,7 +7,6 @@ import static com.example.joker_card.MainClass.profit;
 import static com.example.joker_card.MainClass.won;
 import static com.example.joker_card.MainClass.missed;
 import static com.example.joker_card.MainClass.choice;
-import static com.example.joker_card.MainClass.card;
 import static com.example.joker_card.MainClass.button_take;
 
 import android.app.Activity;
@@ -25,17 +24,22 @@ public class Cashed extends Activity {
     Context context_down_left_2;
     Context context_down_right_2;
     Context context_joker;
-    Cashed(Context context_table, Context context_down_left_2, Context context_down_right_2, Context context_joker) {
+    Context context_card;
+    Cashed(Context context_table, Context context_down_left_2,
+           Context context_down_right_2, Context context_joker,
+           Context context_card) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
         this.context_down_right_2 = context_down_right_2;
         this.context_joker = context_joker;
+        this.context_card = context_card;
 
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
         TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
         TextView down_right_2 = (TextView) ((Activity)context_down_right_2).findViewById(R.id.cash);
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
+        TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
 
         if(missed == 1) {
             pause = 2000;

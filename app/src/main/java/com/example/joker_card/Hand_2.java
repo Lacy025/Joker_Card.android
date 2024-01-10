@@ -87,13 +87,16 @@ public class Hand_2 extends Activity {
     int Street_flush_9;
     Context context_table;
     Context context_joker;
-    Hand_2(Context context_table, Context context_joker) {
+    Context context_card;
+    Hand_2(Context context_table, Context context_joker, Context context_card) {
 
         this.context_table = context_table;
         this.context_joker = context_joker;
+        this.context_card = context_card;
 
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
+        TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
 
         clearing_2();
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
@@ -866,7 +869,7 @@ public class Hand_2 extends Activity {
                 Jokers.handler6.removeCallbacks(Jokers.runnable6);
                 Jokers.handler7.removeCallbacks(Jokers.runnable7);
                 Jokers.handler8.removeCallbacks(Jokers.runnable8);
-                new Jokers(joker.getContext());
+                new Jokers(joker.getContext(), card.getContext());
             }
         }, delaying);
     }
