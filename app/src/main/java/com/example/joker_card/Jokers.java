@@ -1,7 +1,6 @@
 package com.example.joker_card;
 
 import static com.example.joker_card.MainClass.dealing;
-import static com.example.joker_card.MainClass.joker;
 import static com.example.joker_card.MainClass.card;
 import static com.example.joker_card.MainClass.field_card_1;
 import static com.example.joker_card.MainClass.field_card_2;
@@ -15,8 +14,10 @@ import static com.example.joker_card.MainClass.field_joker_4;
 import static com.example.joker_card.MainClass.field_joker_5;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.widget.TextView;
 
 public class Jokers extends Activity {
     public static Handler handler1;
@@ -35,7 +36,13 @@ public class Jokers extends Activity {
     public static Runnable runnable6;
     public static Runnable runnable7;
     public static Runnable runnable8;
-    Jokers() {
+    Context context_joker;
+    Jokers(Context context_joker) {
+
+        this.context_joker = context_joker;
+
+        TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
+
         if(dealing == 0) {
             joker.setText(R.string.joker);
             card.setText(R.string.card);

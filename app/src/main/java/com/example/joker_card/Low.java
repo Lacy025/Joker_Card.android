@@ -68,15 +68,19 @@ public class Low extends Activity {
     Context context_table;
     Context context_down_left_2;
     Context context_down_right_2;
-    Low(Context context_table, Context context_down_left_2, Context context_down_right_2) throws InterruptedException {
+    Context context_joker;
+    Low(Context context_table, Context context_down_left_2,
+        Context context_down_right_2,Context context_joker) throws InterruptedException {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
         this.context_down_right_2 = context_down_right_2;
+        this.context_joker = context_joker;
 
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
         TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
         TextView down_right_2 = (TextView) ((Activity)context_down_right_2).findViewById(R.id.cash);
+        TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.INVISIBLE);
@@ -177,7 +181,8 @@ public class Low extends Activity {
                 cash = 0;
                 winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
                 missed = 1;
-                new Cashed(table.getContext(), down_left_2.getContext(), down_right_2.getContext());
+                new Cashed(table.getContext(), down_left_2.getContext(),
+                        down_right_2.getContext(), joker.getContext());
             }
         };
         handler11.post(runnable11);

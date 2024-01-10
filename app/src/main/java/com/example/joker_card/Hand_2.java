@@ -50,6 +50,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -85,10 +86,14 @@ public class Hand_2 extends Activity {
     int Street_flush_8;
     int Street_flush_9;
     Context context_table;
-    Hand_2(Context context_table) {
+    Context context_joker;
+    Hand_2(Context context_table, Context context_joker) {
 
         this.context_table = context_table;
+        this.context_joker = context_joker;
+
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
+        TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
 
         clearing_2();
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
@@ -861,7 +866,7 @@ public class Hand_2 extends Activity {
                 Jokers.handler6.removeCallbacks(Jokers.runnable6);
                 Jokers.handler7.removeCallbacks(Jokers.runnable7);
                 Jokers.handler8.removeCallbacks(Jokers.runnable8);
-                new Jokers();
+                new Jokers(joker.getContext());
             }
         }, delaying);
     }

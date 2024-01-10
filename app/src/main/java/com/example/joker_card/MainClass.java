@@ -149,7 +149,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public TextView down_right_1;
     public TextView down_left_2;
     public TextView down_right_2;
-    public static TextView joker;
+    public TextView joker;
     public static TextView card;
     public TextView center_1;
     public static TextView center_2;
@@ -337,7 +337,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         intro();
         audio_intro.start();
         Bet();
-        new Jokers();
+        new Jokers(joker.getContext());
         timer1.schedule(task1 = new TimerTask() {
             @Override
             public void run() {
@@ -351,7 +351,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             Jokers.handler6.removeCallbacks(Jokers.runnable6);
                             Jokers.handler7.removeCallbacks(Jokers.runnable7);
                             Jokers.handler8.removeCallbacks(Jokers.runnable8);
-                            new Jokers();
+                            new Jokers(joker.getContext());
                         }, 0));
             }
         }, 0, 12000);
@@ -438,8 +438,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                             new Card_4();
                                             delaying = 900;
                                             new Card_5();
-                                            new Hand_1(hand_1.getContext(), hand_2.getContext(), hand_3.getContext(), hand_4.getContext(), hand_5.getContext(),
-                                                    hand_6.getContext(), hand_7.getContext(),hand_8.getContext(), hand_9.getContext(), hand_10.getContext());
+                                            new Hand_1(hand_1.getContext(), hand_2.getContext(),
+                                                    hand_3.getContext(), hand_4.getContext(),
+                                                    hand_5.getContext(), hand_6.getContext(),
+                                                    hand_7.getContext(),hand_8.getContext(),
+                                                    hand_9.getContext(), hand_10.getContext());
                                             if(ah == 1) {
                                                 Stop();
                                             }
@@ -452,7 +455,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                             Cash();
                                         }
                                         if(profit == 1) {
-                                            new Cashed(table.getContext(), down_left_2.getContext(), down_right_2.getContext());
+                                            new Cashed(table.getContext(), down_left_2.getContext(),
+                                                    down_right_2.getContext(), joker.getContext());
                                         }
                                     }
                                 }, 100);
@@ -650,7 +654,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Card_5();
                 }
                 winner();
-                new Hand_2(table.getContext());
+                new Hand_2(table.getContext(), joker.getContext());
             }
             else if(choice == 2) {
                 doubling();
@@ -694,7 +698,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 low.setVisibility(View.INVISIBLE);
                 high.setVisibility(View.INVISIBLE);
                 try {
-                    new Low(table.getContext(), down_left_2.getContext(), down_right_2.getContext());
+                    new Low(table.getContext(), down_left_2.getContext(),
+                            down_right_2.getContext(), joker.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -706,7 +711,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 low.setVisibility(View.INVISIBLE);
                 high.setVisibility(View.INVISIBLE);
                 try {
-                    new High(table.getContext(), down_left_2.getContext(), down_right_2.getContext());
+                    new High(table.getContext(), down_left_2.getContext(),
+                            down_right_2.getContext(), joker.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
