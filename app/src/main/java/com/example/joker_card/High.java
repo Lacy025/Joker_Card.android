@@ -41,17 +41,6 @@ import static com.example.joker_card.MainClass.low_7;
 import static com.example.joker_card.MainClass.low_8;
 import static com.example.joker_card.MainClass.low_9;
 import static com.example.joker_card.MainClass.low_10;
-import static com.example.joker_card.MainClass.field_win_1;
-import static com.example.joker_card.MainClass.field_win_2;
-import static com.example.joker_card.MainClass.field_win_3;
-import static com.example.joker_card.MainClass.field_win_4;
-import static com.example.joker_card.MainClass.field_win_5;
-import static com.example.joker_card.MainClass.field_win_6;
-import static com.example.joker_card.MainClass.field_win_7;
-import static com.example.joker_card.MainClass.field_win_8;
-import static com.example.joker_card.MainClass.field_win_9;
-import static com.example.joker_card.MainClass.field_win_10;
-import static com.example.joker_card.MainClass.field_win_11;
 
 import android.app.Activity;
 import android.content.Context;
@@ -80,11 +69,27 @@ public class High extends Activity {
     Context context_field_joker_3;
     Context context_field_joker_4;
     Context context_field_joker_5;
+    Context context_field_win_1;
+    Context context_field_win_2;
+    Context context_field_win_3;
+    Context context_field_win_4;
+    Context context_field_win_5;
+    Context context_field_win_6;
+    Context context_field_win_7;
+    Context context_field_win_8;
+    Context context_field_win_9;
+    Context context_field_win_10;
+    Context context_field_win_11;
+    Context context_field_win_12;
     High(Context context_table, Context context_down_left_2, Context context_down_right_2,
          Context context_joker, Context context_card, Context context_field_card_1,
          Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
          Context context_field_card_5, Context context_field_joker_1, Context context_field_joker_2,
-         Context context_field_joker_3, Context context_field_joker_4, Context context_field_joker_5) throws InterruptedException {
+         Context context_field_joker_3, Context context_field_joker_4, Context context_field_joker_5,
+         Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
+         Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
+         Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
+         Context context_field_win_10, Context context_field_win_11, Context context_field_win_12) throws InterruptedException {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -101,6 +106,18 @@ public class High extends Activity {
         this.context_field_joker_3 = context_field_joker_3;
         this.context_field_joker_4 = context_field_joker_4;
         this.context_field_joker_5 = context_field_joker_5;
+        this.context_field_win_1 = context_field_win_1;
+        this.context_field_win_2 = context_field_win_2;
+        this.context_field_win_3 = context_field_win_3;
+        this.context_field_win_4 = context_field_win_4;
+        this.context_field_win_5 = context_field_win_5;
+        this.context_field_win_6 = context_field_win_6;
+        this.context_field_win_7 = context_field_win_7;
+        this.context_field_win_8 = context_field_win_8;
+        this.context_field_win_9 = context_field_win_9;
+        this.context_field_win_10 = context_field_win_10;
+        this.context_field_win_11 = context_field_win_11;
+        this.context_field_win_12 = context_field_win_12;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -113,6 +130,18 @@ public class High extends Activity {
         ImageView field_joker_4 = (ImageView) ((Activity)context_field_joker_4).findViewById(R.id.field_joker_4);
         ImageView field_joker_5 = (ImageView) ((Activity)context_field_joker_5).findViewById(R.id.field_joker_5);
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
+        ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
+        ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
+        ImageView field_win_3 = (ImageView) ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
+        ImageView field_win_4 = (ImageView) ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
+        ImageView field_win_5 = (ImageView) ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
+        ImageView field_win_6 = (ImageView) ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
+        ImageView field_win_7 = (ImageView) ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
+        ImageView field_win_8 = (ImageView) ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
+        ImageView field_win_9 = (ImageView) ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
+        ImageView field_win_10 = (ImageView) ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
+        ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
+        ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
         TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
         TextView down_right_2 = (TextView) ((Activity)context_down_right_2).findViewById(R.id.cash);
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
@@ -194,7 +223,10 @@ public class High extends Activity {
             dk = dk11;
         }
 
-        new GambleCard();
+        new GambleCard(field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
+                field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
+                field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
+                field_win_10.getContext(), field_win_11.getContext());
 
         if (dk > 24) {
             Bingo();
@@ -211,7 +243,10 @@ public class High extends Activity {
                 doubling = 1;
                 handler12.removeCallbacks(runnable12);
                 double_card++;
-                Doubling();
+                Doubling(field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
+                        field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
+                        field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
+                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
             }
             else {
                 cash = 0;
@@ -221,7 +256,11 @@ public class High extends Activity {
                         joker.getContext(), card.getContext(), field_card_1.getContext(),
                         field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
                         field_card_5.getContext(), field_joker_1.getContext(), field_joker_2.getContext(),
-                        field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext());
+                        field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext(),
+                        field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
+                        field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
+                        field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
+                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
             }
         };
         handler12.post(runnable12);

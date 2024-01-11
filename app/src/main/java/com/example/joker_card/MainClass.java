@@ -2,6 +2,8 @@ package com.example.joker_card;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -133,18 +135,18 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public ImageView hand_9;
     public ImageView hand_10;
     public ImageView table;
-    public static ImageView field_win_1;
-    public static ImageView field_win_2;
-    public static ImageView field_win_3;
-    public static ImageView field_win_4;
-    public static ImageView field_win_5;
-    public static ImageView field_win_6;
-    public static ImageView field_win_7;
-    public static ImageView field_win_8;
-    public static ImageView field_win_9;
-    public static ImageView field_win_10;
-    public static ImageView field_win_11;
-    public static ImageView field_win_12;
+    public ImageView field_win_1;
+    public ImageView field_win_2;
+    public ImageView field_win_3;
+    public ImageView field_win_4;
+    public ImageView field_win_5;
+    public ImageView field_win_6;
+    public ImageView field_win_7;
+    public ImageView field_win_8;
+    public ImageView field_win_9;
+    public ImageView field_win_10;
+    public ImageView field_win_11;
+    public ImageView field_win_12;
     public TextView down_left_1;
     public TextView down_right_1;
     public TextView down_left_2;
@@ -460,14 +462,15 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                 Cash();
                             }
                             if(profit == 1) {
-                                new Cashed(table.getContext(), down_left_2.getContext(),
-                                        down_right_2.getContext(), joker.getContext(),
-                                        card.getContext(), field_card_1.getContext(),
-                                        field_card_2.getContext(), field_card_3.getContext(),
-                                        field_card_4.getContext(), field_card_5.getContext(),
-                                        field_joker_1.getContext(), field_joker_2.getContext(),
-                                        field_joker_3.getContext(), field_joker_4.getContext(),
-                                        field_joker_5.getContext());
+                                new Cashed(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
+                                        joker.getContext(), card.getContext(), field_card_1.getContext(),
+                                        field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
+                                        field_card_5.getContext(), field_joker_1.getContext(), field_joker_2.getContext(),
+                                        field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext(),
+                                        field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
+                                        field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
+                                        field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
+                                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
                             }
                         }, 100));
             }
@@ -542,7 +545,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
                             field_card_4.getContext(), field_card_5.getContext(), field_joker_1.getContext(),
                             field_joker_2.getContext(), field_joker_3.getContext(), field_joker_4.getContext(),
-                            field_joker_5.getContext());
+                            field_joker_5.getContext(), field_win_1.getContext(), field_win_2.getContext(),
+                            field_win_3.getContext(), field_win_4.getContext(), field_win_5.getContext(),
+                            field_win_6.getContext(), field_win_7.getContext(), field_win_8.getContext(),
+                            field_win_9.getContext(), field_win_10.getContext(), field_win_11.getContext(),
+                            field_win_12.getContext());
                 }
                 Jokers.handler1.removeCallbacks(Jokers.runnable1);
                 Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -557,7 +564,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
                         field_card_4.getContext(), field_card_5.getContext(), field_joker_1.getContext(),
                         field_joker_2.getContext(), field_joker_3.getContext(), field_joker_4.getContext(),
-                        field_joker_5.getContext());
+                        field_joker_5.getContext(), field_win_1.getContext(), field_win_2.getContext(),
+                        field_win_3.getContext(), field_win_4.getContext(), field_win_5.getContext(),
+                        field_win_6.getContext(), field_win_7.getContext(), field_win_8.getContext(),
+                        field_win_9.getContext(), field_win_10.getContext(), field_win_11.getContext(),
+                        field_win_12.getContext());
 
                 joker.setText("");
                 joker.setVisibility(View.INVISIBLE);
@@ -684,7 +695,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 handler0.removeCallbacks(runnable0);
                 low.setVisibility(View.INVISIBLE);
                 high.setVisibility(View.INVISIBLE);
-                new TakingHalf();
+                new TakingHalf(field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
+                        field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
+                        field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
+                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
             }
         }
         if(pressed == R.id.hold_1) {
@@ -722,7 +736,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             joker.getContext(), card.getContext(), field_card_1.getContext(),
                             field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
                             field_card_5.getContext(), field_joker_1.getContext(), field_joker_2.getContext(),
-                            field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext());
+                            field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext(),
+                            field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
+                            field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
+                            field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
+                            field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -738,7 +756,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             joker.getContext(), card.getContext(), field_card_1.getContext(),
                             field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
                             field_card_5.getContext(), field_joker_1.getContext(), field_joker_2.getContext(),
-                            field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext());
+                            field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext(),
+                            field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
+                            field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
+                            field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
+                            field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -781,9 +803,28 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         doubling = 1;
         double_card = 1;
         dk = 0;
-        Doubling();
+        Doubling(field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
+                field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
+                field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
+                field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
     }
-    public static void Doubling() {
+    public static void Doubling(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
+                                Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
+                                Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
+                                Context context_field_win_10, Context context_field_win_11, Context context_field_win_12) {
+
+        ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
+        ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
+        ImageView field_win_3 = (ImageView) ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
+        ImageView field_win_4 = (ImageView) ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
+        ImageView field_win_5 = (ImageView) ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
+        ImageView field_win_6 = (ImageView) ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
+        ImageView field_win_7 = (ImageView) ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
+        ImageView field_win_8 = (ImageView) ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
+        ImageView field_win_9 = (ImageView) ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
+        ImageView field_win_10 = (ImageView) ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
+        ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
+        ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.VISIBLE);
@@ -899,7 +940,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
 
     static void Low_High() {
 
-/*
+/**/
         if(cheat < 25) {
             button_hold_1.setVisibility(View.VISIBLE);
             button_hold_5.setVisibility(View.INVISIBLE);
@@ -908,7 +949,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             button_hold_5.setVisibility(View.VISIBLE);
             button_hold_1.setVisibility(View.INVISIBLE);
         }
-*/
+
         if(cash > 9999) {
             Block();
         }

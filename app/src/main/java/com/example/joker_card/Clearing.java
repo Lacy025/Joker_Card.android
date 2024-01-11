@@ -20,11 +20,27 @@ public class Clearing extends Activity {
     Context context_field_joker_3;
     Context context_field_joker_4;
     Context context_field_joker_5;
+    Context context_field_win_1;
+    Context context_field_win_2;
+    Context context_field_win_3;
+    Context context_field_win_4;
+    Context context_field_win_5;
+    Context context_field_win_6;
+    Context context_field_win_7;
+    Context context_field_win_8;
+    Context context_field_win_9;
+    Context context_field_win_10;
+    Context context_field_win_11;
+    Context context_field_win_12;
     Clearing(Context context_table, Context context_down_left_2, Context context_down_right_2,
              Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
              Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
              Context context_field_joker_2, Context context_field_joker_3, Context context_field_joker_4,
-             Context context_field_joker_5) {
+             Context context_field_joker_5, Context context_field_win_1, Context context_field_win_2,
+             Context context_field_win_3, Context context_field_win_4, Context context_field_win_5,
+             Context context_field_win_6, Context context_field_win_7, Context context_field_win_8,
+             Context context_field_win_9, Context context_field_win_10, Context context_field_win_11,
+             Context context_field_win_12) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -39,6 +55,18 @@ public class Clearing extends Activity {
         this.context_field_joker_3 = context_field_joker_3;
         this.context_field_joker_4 = context_field_joker_4;
         this.context_field_joker_5 = context_field_joker_5;
+        this.context_field_win_1 = context_field_win_1;
+        this.context_field_win_2 = context_field_win_2;
+        this.context_field_win_3 = context_field_win_3;
+        this.context_field_win_4 = context_field_win_4;
+        this.context_field_win_5 = context_field_win_5;
+        this.context_field_win_6 = context_field_win_6;
+        this.context_field_win_7 = context_field_win_7;
+        this.context_field_win_8 = context_field_win_8;
+        this.context_field_win_9 = context_field_win_9;
+        this.context_field_win_10 = context_field_win_10;
+        this.context_field_win_11 = context_field_win_11;
+        this.context_field_win_12 = context_field_win_12;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -51,6 +79,18 @@ public class Clearing extends Activity {
         ImageView field_joker_4 = (ImageView) ((Activity)context_field_joker_4).findViewById(R.id.field_joker_4);
         ImageView field_joker_5 = (ImageView) ((Activity)context_field_joker_5).findViewById(R.id.field_joker_5);
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
+        ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
+        ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
+        ImageView field_win_3 = (ImageView) ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
+        ImageView field_win_4 = (ImageView) ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
+        ImageView field_win_5 = (ImageView) ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
+        ImageView field_win_6 = (ImageView) ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
+        ImageView field_win_7 = (ImageView) ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
+        ImageView field_win_8 = (ImageView) ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
+        ImageView field_win_9 = (ImageView) ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
+        ImageView field_win_10 = (ImageView) ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
+        ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
+        ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
         TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
         TextView down_right_2 = (TextView) ((Activity)context_down_right_2).findViewById(R.id.cash);
 
@@ -85,18 +125,18 @@ public class Clearing extends Activity {
         field_joker_3.setVisibility(View.INVISIBLE);
         field_joker_4.setVisibility(View.INVISIBLE);
         field_joker_5.setVisibility(View.INVISIBLE);
-        MainClass.field_win_1.setVisibility(View.INVISIBLE);
-        MainClass.field_win_2.setVisibility(View.INVISIBLE);
-        MainClass.field_win_3.setVisibility(View.INVISIBLE);
-        MainClass.field_win_4.setVisibility(View.INVISIBLE);
-        MainClass.field_win_5.setVisibility(View.INVISIBLE);
-        MainClass.field_win_6.setVisibility(View.INVISIBLE);
-        MainClass.field_win_7.setVisibility(View.INVISIBLE);
-        MainClass.field_win_8.setVisibility(View.INVISIBLE);
-        MainClass.field_win_9.setVisibility(View.INVISIBLE);
-        MainClass.field_win_10.setVisibility(View.INVISIBLE);
-        MainClass.field_win_11.setVisibility(View.INVISIBLE);
-        MainClass.field_win_12.setVisibility(View.INVISIBLE);
+        field_win_1.setVisibility(View.INVISIBLE);
+        field_win_2.setVisibility(View.INVISIBLE);
+        field_win_3.setVisibility(View.INVISIBLE);
+        field_win_4.setVisibility(View.INVISIBLE);
+        field_win_5.setVisibility(View.INVISIBLE);
+        field_win_6.setVisibility(View.INVISIBLE);
+        field_win_7.setVisibility(View.INVISIBLE);
+        field_win_8.setVisibility(View.INVISIBLE);
+        field_win_9.setVisibility(View.INVISIBLE);
+        field_win_10.setVisibility(View.INVISIBLE);
+        field_win_11.setVisibility(View.INVISIBLE);
+        field_win_12.setVisibility(View.INVISIBLE);
         MainClass.center_2.setText("");
         MainClass.center_2.setVisibility(View.INVISIBLE);
         MainClass.center_2.setText("");

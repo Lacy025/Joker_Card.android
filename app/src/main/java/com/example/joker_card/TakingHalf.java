@@ -13,9 +13,11 @@ import static com.example.joker_card.MainClass.winning_value;
 import static com.example.joker_card.MainClass.doubling;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.ImageView;
 
 import java.util.Locale;
 import java.util.Timer;
@@ -35,7 +37,36 @@ public class TakingHalf extends Activity {
     private double half_1;
     private double half_2;
     int countdown;
-    TakingHalf() {
+    Context context_field_win_1;
+    Context context_field_win_2;
+    Context context_field_win_3;
+    Context context_field_win_4;
+    Context context_field_win_5;
+    Context context_field_win_6;
+    Context context_field_win_7;
+    Context context_field_win_8;
+    Context context_field_win_9;
+    Context context_field_win_10;
+    Context context_field_win_11;
+    Context context_field_win_12;
+    TakingHalf(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
+               Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
+               Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
+               Context context_field_win_10, Context context_field_win_11, Context context_field_win_12) {
+
+        this.context_field_win_1 = context_field_win_1;
+        this.context_field_win_2 = context_field_win_2;
+        this.context_field_win_3 = context_field_win_3;
+        this.context_field_win_4 = context_field_win_4;
+        this.context_field_win_5 = context_field_win_5;
+        this.context_field_win_6 = context_field_win_6;
+        this.context_field_win_7 = context_field_win_7;
+        this.context_field_win_8 = context_field_win_8;
+        this.context_field_win_9 = context_field_win_9;
+        this.context_field_win_10 = context_field_win_10;
+        this.context_field_win_11 = context_field_win_11;
+        this.context_field_win_12 = context_field_win_12;
+
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
         half = Math.floor(cash / 2);  //DON'T CHANGE !
@@ -87,7 +118,10 @@ public class TakingHalf extends Activity {
                         else {
                             countdown = 0;
                             audio_count_100.start();
-                            winner();
+                            winner(context_field_win_1, context_field_win_2, context_field_win_3,
+                                    context_field_win_4, context_field_win_5, context_field_win_6,
+                                    context_field_win_7, context_field_win_8, context_field_win_9,
+                                    context_field_win_10, context_field_win_11, context_field_win_12);
                             try {
                                 Thread.sleep(1000);
                             } catch (InterruptedException e) {
@@ -129,7 +163,10 @@ public class TakingHalf extends Activity {
                         }
                         else if(cash - half == 0) {
                             handler15.postDelayed(this, 1000);
-                            winner();
+                            winner(context_field_win_1, context_field_win_2, context_field_win_3,
+                                    context_field_win_4, context_field_win_5, context_field_win_6,
+                                    context_field_win_7, context_field_win_8, context_field_win_9,
+                                    context_field_win_10, context_field_win_11, context_field_win_12);
                             handler15.removeCallbacks(runnable15);
                         }
                     }
@@ -167,12 +204,32 @@ public class TakingHalf extends Activity {
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
     }
-    void winner() {
+    void winner(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
+                Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
+                Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
+                Context context_field_win_10, Context context_field_win_11, Context context_field_win_12) {
+
+        ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
+        ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
+        ImageView field_win_3 = (ImageView) ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
+        ImageView field_win_4 = (ImageView) ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
+        ImageView field_win_5 = (ImageView) ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
+        ImageView field_win_6 = (ImageView) ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
+        ImageView field_win_7 = (ImageView) ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
+        ImageView field_win_8 = (ImageView) ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
+        ImageView field_win_9 = (ImageView) ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
+        ImageView field_win_10 = (ImageView) ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
+        ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
+        ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
+
         handler16.removeCallbacks(runnable16);
         center_2.setVisibility(View.INVISIBLE);
         doubling = 1;
         button_take.setText(R.string.take_all);
         button_deal.setText(R.string.take_half);
-        Doubling();
+        Doubling(field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
+                field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
+                field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
+                field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
     }
 }

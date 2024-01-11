@@ -12,25 +12,55 @@ import static com.example.joker_card.MainClass.dk8;
 import static com.example.joker_card.MainClass.dk9;
 import static com.example.joker_card.MainClass.dk10;
 import static com.example.joker_card.MainClass.dk11;
-import static com.example.joker_card.MainClass.field_win_1;
-import static com.example.joker_card.MainClass.field_win_2;
-import static com.example.joker_card.MainClass.field_win_3;
-import static com.example.joker_card.MainClass.field_win_4;
-import static com.example.joker_card.MainClass.field_win_5;
-import static com.example.joker_card.MainClass.field_win_6;
-import static com.example.joker_card.MainClass.field_win_7;
-import static com.example.joker_card.MainClass.field_win_8;
-import static com.example.joker_card.MainClass.field_win_9;
-import static com.example.joker_card.MainClass.field_win_10;
-import static com.example.joker_card.MainClass.field_win_11;
 
+import android.app.Activity;
+import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
 
-public class GambleCard {
+public class GambleCard extends Activity {
     int dkx;
     ImageView field_gamble;
-    GambleCard() {
+    Context context_field_win_1;
+    Context context_field_win_2;
+    Context context_field_win_3;
+    Context context_field_win_4;
+    Context context_field_win_5;
+    Context context_field_win_6;
+    Context context_field_win_7;
+    Context context_field_win_8;
+    Context context_field_win_9;
+    Context context_field_win_10;
+    Context context_field_win_11;
+    GambleCard(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
+               Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
+               Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
+               Context context_field_win_10, Context context_field_win_11) {
+
+        this.context_field_win_1 = context_field_win_1;
+        this.context_field_win_2 = context_field_win_2;
+        this.context_field_win_3 = context_field_win_3;
+        this.context_field_win_4 = context_field_win_4;
+        this.context_field_win_5 = context_field_win_5;
+        this.context_field_win_6 = context_field_win_6;
+        this.context_field_win_7 = context_field_win_7;
+        this.context_field_win_8 = context_field_win_8;
+        this.context_field_win_9 = context_field_win_9;
+        this.context_field_win_10 = context_field_win_10;
+        this.context_field_win_11 = context_field_win_11;
+
+        ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
+        ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
+        ImageView field_win_3 = (ImageView) ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
+        ImageView field_win_4 = (ImageView) ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
+        ImageView field_win_5 = (ImageView) ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
+        ImageView field_win_6 = (ImageView) ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
+        ImageView field_win_7 = (ImageView) ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
+        ImageView field_win_8 = (ImageView) ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
+        ImageView field_win_9 = (ImageView) ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
+        ImageView field_win_10 = (ImageView) ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
+        ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
+
         if(double_card == 1) {
             dkx = dk1;
             field_gamble = field_win_1;
