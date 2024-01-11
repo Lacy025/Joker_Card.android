@@ -75,10 +75,16 @@ public class High extends Activity {
     Context context_field_card_3;
     Context context_field_card_4;
     Context context_field_card_5;
+    Context context_field_joker_1;
+    Context context_field_joker_2;
+    Context context_field_joker_3;
+    Context context_field_joker_4;
+    Context context_field_joker_5;
     High(Context context_table, Context context_down_left_2, Context context_down_right_2,
          Context context_joker, Context context_card, Context context_field_card_1,
-         Context context_field_card_2, Context context_field_card_3,
-         Context context_field_card_4, Context context_field_card_5) throws InterruptedException {
+         Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
+         Context context_field_card_5, Context context_field_joker_1, Context context_field_joker_2,
+         Context context_field_joker_3, Context context_field_joker_4, Context context_field_joker_5) throws InterruptedException {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -90,12 +96,22 @@ public class High extends Activity {
         this.context_field_card_3 = context_field_card_3;
         this.context_field_card_4 = context_field_card_4;
         this.context_field_card_5 = context_field_card_5;
+        this.context_field_joker_1 = context_field_joker_1;
+        this.context_field_joker_2 = context_field_joker_2;
+        this.context_field_joker_3 = context_field_joker_3;
+        this.context_field_joker_4 = context_field_joker_4;
+        this.context_field_joker_5 = context_field_joker_5;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
         ImageView field_card_3 = (ImageView) ((Activity)context_field_card_3).findViewById(R.id.field_card_3);
         ImageView field_card_4 = (ImageView) ((Activity)context_field_card_4).findViewById(R.id.field_card_4);
         ImageView field_card_5 = (ImageView) ((Activity)context_field_card_5).findViewById(R.id.field_card_5);
+        ImageView field_joker_1 = (ImageView) ((Activity)context_field_joker_1).findViewById(R.id.field_joker_1);
+        ImageView field_joker_2 = (ImageView) ((Activity)context_field_joker_2).findViewById(R.id.field_joker_2);
+        ImageView field_joker_3 = (ImageView) ((Activity)context_field_joker_3).findViewById(R.id.field_joker_3);
+        ImageView field_joker_4 = (ImageView) ((Activity)context_field_joker_4).findViewById(R.id.field_joker_4);
+        ImageView field_joker_5 = (ImageView) ((Activity)context_field_joker_5).findViewById(R.id.field_joker_5);
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
         TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
         TextView down_right_2 = (TextView) ((Activity)context_down_right_2).findViewById(R.id.cash);
@@ -204,7 +220,8 @@ public class High extends Activity {
                 new Cashed(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
                         joker.getContext(), card.getContext(), field_card_1.getContext(),
                         field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
-                        field_card_5.getContext());
+                        field_card_5.getContext(), field_joker_1.getContext(), field_joker_2.getContext(),
+                        field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext());
             }
         };
         handler12.post(runnable12);

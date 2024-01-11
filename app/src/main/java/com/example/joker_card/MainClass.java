@@ -117,11 +117,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public ImageView field_card_3;
     public ImageView field_card_4;
     public ImageView field_card_5;
-    public static ImageView field_joker_1;
-    public static ImageView field_joker_2;
-    public static ImageView field_joker_3;
-    public static ImageView field_joker_4;
-    public static ImageView field_joker_5;
+    public ImageView field_joker_1;
+    public ImageView field_joker_2;
+    public ImageView field_joker_3;
+    public ImageView field_joker_4;
+    public ImageView field_joker_5;
     public ImageView hand_1;
     public ImageView hand_2;
     public ImageView hand_3;
@@ -339,7 +339,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         Bet();
         new Jokers(joker.getContext(), card.getContext(),field_card_1.getContext(),
                 field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
-                field_card_5.getContext());
+                field_card_5.getContext(), field_joker_1.getContext(), field_joker_2.getContext(),
+                field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext());
         timer1.schedule(task1 = new TimerTask() {
             @Override
             public void run() {
@@ -355,7 +356,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             Jokers.handler8.removeCallbacks(Jokers.runnable8);
                             new Jokers(joker.getContext(), card.getContext(),field_card_1.getContext(),
                                     field_card_2.getContext(), field_card_3.getContext(),
-                                    field_card_4.getContext(), field_card_5.getContext());
+                                    field_card_4.getContext(), field_card_5.getContext(),
+                                    field_joker_1.getContext(), field_joker_2.getContext(),
+                                    field_joker_3.getContext(), field_joker_4.getContext(),
+                                    field_joker_5.getContext());
                         }, 0));
             }
         }, 0, 12000);
@@ -415,61 +419,57 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         timer3.schedule(task3 = new TimerTask() {
             @Override
             public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        new Handler((Looper.getMainLooper())).postDelayed(
-                                new Runnable() {
-                                    public void run() {
-                                        if(dealing == 0 && c > 0 && u > c) {
-                                            u = c;
-                                            Bet();
-                                        }
-                                        if(dealing == 0 && c==0 && game==1) {
-                                            u = 1;
-                                            Bet();
-                                        }
-                                        if(dealing == 1) {
-                                            dealing = 2;
-                                            Deal_Cards_1();
-                                            delaying = 500;
-                                            new Card_1(field_card_1.getContext());
-                                            delaying = 600;
-                                            new Card_2(field_card_2.getContext());
-                                            delaying = 700;
-                                            new Card_3(field_card_3.getContext());
-                                            delaying = 800;
-                                            new Card_4(field_card_4.getContext());
-                                            delaying = 900;
-                                            new Card_5(field_card_5.getContext());
+                runOnUiThread(() -> new Handler((Looper.getMainLooper())).postDelayed(
+                        () -> {
+                            if(dealing == 0 && c > 0 && u > c) {
+                                u = c;
+                                Bet();
+                            }
+                            if(dealing == 0 && c==0 && game==1) {
+                                u = 1;
+                                Bet();
+                            }
+                            if(dealing == 1) {
+                                dealing = 2;
+                                Deal_Cards_1();
+                                delaying = 500;
+                                new Card_1(field_card_1.getContext());
+                                delaying = 600;
+                                new Card_2(field_card_2.getContext());
+                                delaying = 700;
+                                new Card_3(field_card_3.getContext());
+                                delaying = 800;
+                                new Card_4(field_card_4.getContext());
+                                delaying = 900;
+                                new Card_5(field_card_5.getContext());
 
-                                            new Hand_1(hand_1.getContext(), hand_2.getContext(),
-                                                    hand_3.getContext(), hand_4.getContext(),
-                                                    hand_5.getContext(), hand_6.getContext(),
-                                                    hand_7.getContext(),hand_8.getContext(),
-                                                    hand_9.getContext(), hand_10.getContext());
-                                            if(ah == 1) {
-                                                Stop();
-                                            }
-                                            else {
-                                                choice = 1;
-                                            }
-                                        }
-                                        if(block == 1) {
-                                            block = 0;
-                                            Cash();
-                                        }
-                                        if(profit == 1) {
-                                            new Cashed(table.getContext(), down_left_2.getContext(),
-                                                    down_right_2.getContext(), joker.getContext(),
-                                                    card.getContext(), field_card_1.getContext(),
-                                                    field_card_2.getContext(), field_card_3.getContext(),
-                                                    field_card_4.getContext(), field_card_5.getContext());
-                                        }
-                                    }
-                                }, 100);
-                    }
-                });
+                                new Hand_1(hand_1.getContext(), hand_2.getContext(),
+                                        hand_3.getContext(), hand_4.getContext(),
+                                        hand_5.getContext(), hand_6.getContext(),
+                                        hand_7.getContext(),hand_8.getContext(),
+                                        hand_9.getContext(), hand_10.getContext());
+                                if(ah == 1) {
+                                    Stop();
+                                }
+                                else {
+                                    choice = 1;
+                                }
+                            }
+                            if(block == 1) {
+                                block = 0;
+                                Cash();
+                            }
+                            if(profit == 1) {
+                                new Cashed(table.getContext(), down_left_2.getContext(),
+                                        down_right_2.getContext(), joker.getContext(),
+                                        card.getContext(), field_card_1.getContext(),
+                                        field_card_2.getContext(), field_card_3.getContext(),
+                                        field_card_4.getContext(), field_card_5.getContext(),
+                                        field_joker_1.getContext(), field_joker_2.getContext(),
+                                        field_joker_3.getContext(), field_joker_4.getContext(),
+                                        field_joker_5.getContext());
+                            }
+                        }, 100));
             }
         }, 0, 100);
     }
@@ -540,7 +540,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
 
                     new Clearing(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
                             field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
-                            field_card_4.getContext(), field_card_5.getContext());
+                            field_card_4.getContext(), field_card_5.getContext(), field_joker_1.getContext(),
+                            field_joker_2.getContext(), field_joker_3.getContext(), field_joker_4.getContext(),
+                            field_joker_5.getContext());
                 }
                 Jokers.handler1.removeCallbacks(Jokers.runnable1);
                 Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -553,7 +555,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
 
                 new Clearing(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
                         field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
-                        field_card_4.getContext(), field_card_5.getContext());
+                        field_card_4.getContext(), field_card_5.getContext(), field_joker_1.getContext(),
+                        field_joker_2.getContext(), field_joker_3.getContext(), field_joker_4.getContext(),
+                        field_joker_5.getContext());
 
                 joker.setText("");
                 joker.setVisibility(View.INVISIBLE);
@@ -668,7 +672,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 winner();
                 new Hand_2(table.getContext(), joker.getContext(), card.getContext(),
                         field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
-                        field_card_4.getContext(), field_card_5.getContext());
+                        field_card_4.getContext(), field_card_5.getContext(), field_joker_1.getContext(),
+                        field_joker_2.getContext(), field_joker_3.getContext(), field_joker_4.getContext(),
+                        field_joker_5.getContext());
             }
             else if(choice == 2) {
                 doubling();
@@ -715,7 +721,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new Low(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
                             joker.getContext(), card.getContext(), field_card_1.getContext(),
                             field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
-                            field_card_5.getContext());
+                            field_card_5.getContext(), field_joker_1.getContext(), field_joker_2.getContext(),
+                            field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -730,7 +737,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     new High(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
                             joker.getContext(), card.getContext(), field_card_1.getContext(),
                             field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
-                            field_card_5.getContext());
+                            field_card_5.getContext(), field_joker_1.getContext(), field_joker_2.getContext(),
+                            field_joker_3.getContext(), field_joker_4.getContext(), field_joker_5.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
