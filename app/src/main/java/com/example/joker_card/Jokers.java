@@ -1,11 +1,6 @@
 package com.example.joker_card;
 
 import static com.example.joker_card.MainClass.dealing;
-import static com.example.joker_card.MainClass.field_card_1;
-import static com.example.joker_card.MainClass.field_card_2;
-import static com.example.joker_card.MainClass.field_card_3;
-import static com.example.joker_card.MainClass.field_card_4;
-import static com.example.joker_card.MainClass.field_card_5;
 import static com.example.joker_card.MainClass.field_joker_1;
 import static com.example.joker_card.MainClass.field_joker_2;
 import static com.example.joker_card.MainClass.field_joker_3;
@@ -16,6 +11,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Jokers extends Activity {
@@ -37,11 +33,28 @@ public class Jokers extends Activity {
     public static Runnable runnable8;
     Context context_joker;
     Context context_card;
-    Jokers(Context context_joker, Context context_card) {
+    Context context_field_card_1;
+    Context context_field_card_2;
+    Context context_field_card_3;
+    Context context_field_card_4;
+    Context context_field_card_5;
+    Jokers(Context context_joker, Context context_card, Context context_field_card_1,
+           Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
+           Context context_field_card_5) {
 
         this.context_joker = context_joker;
         this.context_card = context_card;
+        this.context_field_card_1 = context_field_card_1;
+        this.context_field_card_2 = context_field_card_2;
+        this.context_field_card_3 = context_field_card_3;
+        this.context_field_card_4 = context_field_card_4;
+        this.context_field_card_5 = context_field_card_5;
 
+        ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
+        ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
+        ImageView field_card_3 = (ImageView) ((Activity)context_field_card_3).findViewById(R.id.field_card_3);
+        ImageView field_card_4 = (ImageView) ((Activity)context_field_card_4).findViewById(R.id.field_card_4);
+        ImageView field_card_5 = (ImageView) ((Activity)context_field_card_5).findViewById(R.id.field_card_5);
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
         TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
 

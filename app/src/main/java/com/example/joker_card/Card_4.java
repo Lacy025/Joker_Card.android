@@ -1,19 +1,27 @@
 package com.example.joker_card;
 
 import static com.example.joker_card.MainClass.k4;
-import static com.example.joker_card.MainClass.field_card_4;
 import static com.example.joker_card.MainClass.delaying;
 import static com.example.joker_card.MainClass.dealing;
 import static com.example.joker_card.MainClass.audio_card_4;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.ImageView;
+
 public class Card_4 extends Activity {
     public static int n4;
     public static int b4;
-    public Card_4() {
+    Context context_field_card_4;
+    public Card_4(Context context_field_card_4) {
+
+        this.context_field_card_4 = context_field_card_4;
+
+        ImageView field_card_4 = (ImageView) ((Activity)context_field_card_4).findViewById(R.id.field_card_4);
+
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
             field_card_4.setVisibility(View.INVISIBLE);

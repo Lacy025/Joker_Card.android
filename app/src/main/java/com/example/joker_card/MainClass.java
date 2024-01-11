@@ -112,11 +112,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static MediaPlayer audio_high;
     public static MediaPlayer audio_bingo;
     public TextView ah1;
-    public static ImageView field_card_1;
-    public static ImageView field_card_2;
-    public static ImageView field_card_3;
-    public static ImageView field_card_4;
-    public static ImageView field_card_5;
+    public ImageView field_card_1;
+    public ImageView field_card_2;
+    public ImageView field_card_3;
+    public ImageView field_card_4;
+    public ImageView field_card_5;
     public static ImageView field_joker_1;
     public static ImageView field_joker_2;
     public static ImageView field_joker_3;
@@ -337,7 +337,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         intro();
         audio_intro.start();
         Bet();
-        new Jokers(joker.getContext(), card.getContext());
+        new Jokers(joker.getContext(), card.getContext(),field_card_1.getContext(),
+                field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
+                field_card_5.getContext());
         timer1.schedule(task1 = new TimerTask() {
             @Override
             public void run() {
@@ -351,7 +353,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             Jokers.handler6.removeCallbacks(Jokers.runnable6);
                             Jokers.handler7.removeCallbacks(Jokers.runnable7);
                             Jokers.handler8.removeCallbacks(Jokers.runnable8);
-                            new Jokers(joker.getContext(), card.getContext());
+                            new Jokers(joker.getContext(), card.getContext(),field_card_1.getContext(),
+                                    field_card_2.getContext(), field_card_3.getContext(),
+                                    field_card_4.getContext(), field_card_5.getContext());
                         }, 0));
             }
         }, 0, 12000);
@@ -429,15 +433,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                             dealing = 2;
                                             Deal_Cards_1();
                                             delaying = 500;
-                                            new Card_1();
+                                            new Card_1(field_card_1.getContext());
                                             delaying = 600;
-                                            new Card_2();
+                                            new Card_2(field_card_2.getContext());
                                             delaying = 700;
-                                            new Card_3();
+                                            new Card_3(field_card_3.getContext());
                                             delaying = 800;
-                                            new Card_4();
+                                            new Card_4(field_card_4.getContext());
                                             delaying = 900;
-                                            new Card_5();
+                                            new Card_5(field_card_5.getContext());
+
                                             new Hand_1(hand_1.getContext(), hand_2.getContext(),
                                                     hand_3.getContext(), hand_4.getContext(),
                                                     hand_5.getContext(), hand_6.getContext(),
@@ -457,7 +462,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                         if(profit == 1) {
                                             new Cashed(table.getContext(), down_left_2.getContext(),
                                                     down_right_2.getContext(), joker.getContext(),
-                                                    card.getContext());
+                                                    card.getContext(), field_card_1.getContext(),
+                                                    field_card_2.getContext(), field_card_3.getContext(),
+                                                    field_card_4.getContext(), field_card_5.getContext());
                                         }
                                     }
                                 }, 100);
@@ -531,7 +538,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     choice = 0;
                     profit = 0;
 
-                    new Clearing(table.getContext(), down_left_2.getContext(), down_right_2.getContext());
+                    new Clearing(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
+                            field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
+                            field_card_4.getContext(), field_card_5.getContext());
                 }
                 Jokers.handler1.removeCallbacks(Jokers.runnable1);
                 Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -542,7 +551,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 Jokers.handler7.removeCallbacks(Jokers.runnable7);
                 Jokers.handler8.removeCallbacks(Jokers.runnable8);
 
-                new Clearing(table.getContext(), down_left_2.getContext(), down_right_2.getContext());
+                new Clearing(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
+                        field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
+                        field_card_4.getContext(), field_card_5.getContext());
 
                 joker.setText("");
                 joker.setVisibility(View.INVISIBLE);
@@ -604,7 +615,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_1();
                     delaying = delaying + hold;
-                    new Card_1();
+                    new Card_1(field_card_1.getContext());
                 }
                 if(Hand_1.hold2 == 0) {
                     field_card_2.setVisibility(View.INVISIBLE);
@@ -616,7 +627,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_2();
                     delaying = delaying + hold;
-                    new Card_2();
+                    new Card_2(field_card_2.getContext());
                 }
                 if(Hand_1.hold3 == 0) {
                     field_card_3.setVisibility(View.INVISIBLE);
@@ -628,7 +639,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_3();
                     delaying = delaying + hold;
-                    new Card_3();
+                    new Card_3(field_card_3.getContext());
                 }
                 if(Hand_1.hold4 == 0) {
                     field_card_4.setVisibility(View.INVISIBLE);
@@ -640,7 +651,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_4();
                     delaying = delaying + hold;
-                    new Card_4();
+                    new Card_4(field_card_4.getContext());
                 }
                 if(Hand_1.hold5 == 0) {
                     field_card_5.setVisibility(View.INVISIBLE);
@@ -652,10 +663,12 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     }
                     card_5();
                     delaying = delaying + hold;
-                    new Card_5();
+                    new Card_5(field_card_5.getContext());
                 }
                 winner();
-                new Hand_2(table.getContext(), joker.getContext(), card.getContext());
+                new Hand_2(table.getContext(), joker.getContext(), card.getContext(),
+                        field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
+                        field_card_4.getContext(), field_card_5.getContext());
             }
             else if(choice == 2) {
                 doubling();
@@ -699,9 +712,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 low.setVisibility(View.INVISIBLE);
                 high.setVisibility(View.INVISIBLE);
                 try {
-                    new Low(table.getContext(), down_left_2.getContext(),
-                            down_right_2.getContext(), joker.getContext(),
-                            card.getContext());
+                    new Low(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
+                            joker.getContext(), card.getContext(), field_card_1.getContext(),
+                            field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
+                            field_card_5.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -713,9 +727,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 low.setVisibility(View.INVISIBLE);
                 high.setVisibility(View.INVISIBLE);
                 try {
-                    new High(table.getContext(), down_left_2.getContext(),
-                            down_right_2.getContext(), joker.getContext(),
-                            card.getContext());
+                    new High(table.getContext(), down_left_2.getContext(), down_right_2.getContext(),
+                            joker.getContext(), card.getContext(), field_card_1.getContext(),
+                            field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
+                            field_card_5.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

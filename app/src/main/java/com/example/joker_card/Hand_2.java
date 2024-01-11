@@ -36,11 +36,6 @@ import static com.example.joker_card.MainClass.winning_10;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.choice;
 import static com.example.joker_card.MainClass.block;
-import static com.example.joker_card.MainClass.field_card_1;
-import static com.example.joker_card.MainClass.field_card_2;
-import static com.example.joker_card.MainClass.field_card_3;
-import static com.example.joker_card.MainClass.field_card_4;
-import static com.example.joker_card.MainClass.field_card_5;
 import static com.example.joker_card.MainClass.dealing;
 import static com.example.joker_card.MainClass.clearing_2;
 
@@ -88,12 +83,29 @@ public class Hand_2 extends Activity {
     Context context_table;
     Context context_joker;
     Context context_card;
-    Hand_2(Context context_table, Context context_joker, Context context_card) {
+    Context context_field_card_1;
+    Context context_field_card_2;
+    Context context_field_card_3;
+    Context context_field_card_4;
+    Context context_field_card_5;
+    Hand_2(Context context_table, Context context_joker, Context context_card,
+           Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
+           Context context_field_card_4, Context context_field_card_5) {
 
         this.context_table = context_table;
         this.context_joker = context_joker;
         this.context_card = context_card;
+        this.context_field_card_1 = context_field_card_1;
+        this.context_field_card_2 = context_field_card_2;
+        this.context_field_card_3 = context_field_card_3;
+        this.context_field_card_4 = context_field_card_4;
+        this.context_field_card_5 = context_field_card_5;
 
+        ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
+        ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
+        ImageView field_card_3 = (ImageView) ((Activity)context_field_card_3).findViewById(R.id.field_card_3);
+        ImageView field_card_4 = (ImageView) ((Activity)context_field_card_4).findViewById(R.id.field_card_4);
+        ImageView field_card_5 = (ImageView) ((Activity)context_field_card_5).findViewById(R.id.field_card_5);
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
         TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
@@ -869,7 +881,9 @@ public class Hand_2 extends Activity {
                 Jokers.handler6.removeCallbacks(Jokers.runnable6);
                 Jokers.handler7.removeCallbacks(Jokers.runnable7);
                 Jokers.handler8.removeCallbacks(Jokers.runnable8);
-                new Jokers(joker.getContext(), card.getContext());
+                new Jokers(joker.getContext(), card.getContext(),field_card_1.getContext(),
+                        field_card_2.getContext(), field_card_3.getContext(), field_card_4.getContext(),
+                        field_card_5.getContext());
             }
         }, delaying);
     }

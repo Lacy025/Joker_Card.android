@@ -10,12 +10,29 @@ public class Clearing extends Activity {
     Context context_table;
     Context context_down_left_2;
     Context context_down_right_2;
-    Clearing(Context context_table, Context context_down_left_2, Context context_down_right_2) {
+    Context context_field_card_1;
+    Context context_field_card_2;
+    Context context_field_card_3;
+    Context context_field_card_4;
+    Context context_field_card_5;
+    Clearing(Context context_table, Context context_down_left_2, Context context_down_right_2,
+             Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
+             Context context_field_card_4, Context context_field_card_5) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
         this.context_down_right_2 = context_down_right_2;
+        this.context_field_card_1 = context_field_card_1;
+        this.context_field_card_2 = context_field_card_2;
+        this.context_field_card_3 = context_field_card_3;
+        this.context_field_card_4 = context_field_card_4;
+        this.context_field_card_5 = context_field_card_5;
 
+        ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
+        ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
+        ImageView field_card_3 = (ImageView) ((Activity)context_field_card_3).findViewById(R.id.field_card_3);
+        ImageView field_card_4 = (ImageView) ((Activity)context_field_card_4).findViewById(R.id.field_card_4);
+        ImageView field_card_5 = (ImageView) ((Activity)context_field_card_5).findViewById(R.id.field_card_5);
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
         TextView down_left_2 = (TextView) ((Activity)context_down_left_2).findViewById(R.id.gamble);
         TextView down_right_2 = (TextView) ((Activity)context_down_right_2).findViewById(R.id.cash);
@@ -41,11 +58,11 @@ public class Clearing extends Activity {
         MainClass.winning_value.setVisibility(View.INVISIBLE);
         down_left_2.setVisibility(View.INVISIBLE);
         down_right_2.setVisibility(View.INVISIBLE);
-        MainClass.field_card_1.setVisibility(View.INVISIBLE);
-        MainClass.field_card_2.setVisibility(View.INVISIBLE);
-        MainClass.field_card_3.setVisibility(View.INVISIBLE);
-        MainClass.field_card_4.setVisibility(View.INVISIBLE);
-        MainClass.field_card_5.setVisibility(View.INVISIBLE);
+        field_card_1.setVisibility(View.INVISIBLE);
+        field_card_2.setVisibility(View.INVISIBLE);
+        field_card_3.setVisibility(View.INVISIBLE);
+        field_card_4.setVisibility(View.INVISIBLE);
+        field_card_5.setVisibility(View.INVISIBLE);
         MainClass.field_joker_1.setVisibility(View.INVISIBLE);
         MainClass.field_joker_2.setVisibility(View.INVISIBLE);
         MainClass.field_joker_3.setVisibility(View.INVISIBLE);
@@ -67,11 +84,11 @@ public class Clearing extends Activity {
         MainClass.center_2.setVisibility(View.INVISIBLE);
         MainClass.center_2.setText("");
         MainClass.center_2.setVisibility(View.INVISIBLE);
-        MainClass.field_card_1.setImageResource(R.drawable.k53);
-        MainClass.field_card_2.setImageResource(R.drawable.k53);
-        MainClass.field_card_3.setImageResource(R.drawable.k53);
-        MainClass.field_card_4.setImageResource(R.drawable.k53);
-        MainClass.field_card_5.setImageResource(R.drawable.k53);
+        field_card_1.setImageResource(R.drawable.k53);
+        field_card_2.setImageResource(R.drawable.k53);
+        field_card_3.setImageResource(R.drawable.k53);
+        field_card_4.setImageResource(R.drawable.k53);
+        field_card_5.setImageResource(R.drawable.k53);
         MainClass.low_1.setVisibility(View.INVISIBLE);
         MainClass.low_2.setVisibility(View.INVISIBLE);
         MainClass.low_3.setVisibility(View.INVISIBLE);
