@@ -165,8 +165,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     TextView winning_8;
     TextView winning_9;
     TextView winning_10;
-    public static TextView winning;
-    public static TextView winning_value;
+    TextView winning;
+    TextView winning_value;
     public static TextView low;
     public static TextView high;
     public static TextView low_1;
@@ -474,7 +474,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                         center_2.getContext(), winning_1.getContext(), winning_2.getContext(),
                                         winning_3.getContext(), winning_4.getContext(), winning_5.getContext(),
                                         winning_6.getContext(), winning_7.getContext(), winning_8.getContext(),
-                                        winning_9.getContext(), winning_10.getContext());
+                                        winning_9.getContext(), winning_10.getContext(), winning.getContext(),
+                                        winning_value.getContext());
                             }
                         }, 100));
             }
@@ -556,7 +557,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             field_win_12.getContext(), center_2.getContext(), winning_1.getContext(),
                             winning_2.getContext(), winning_3.getContext(), winning_4.getContext(),
                             winning_5.getContext(), winning_6.getContext(), winning_7.getContext(),
-                            winning_8.getContext(), winning_9.getContext(), winning_10.getContext());
+                            winning_8.getContext(), winning_9.getContext(), winning_10.getContext(),
+                            winning.getContext(), winning_value.getContext());
                 }
                 Jokers.handler1.removeCallbacks(Jokers.runnable1);
                 Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -578,7 +580,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_win_12.getContext(), center_2.getContext(), winning_1.getContext(),
                         winning_2.getContext(), winning_3.getContext(), winning_4.getContext(),
                         winning_5.getContext(), winning_6.getContext(), winning_7.getContext(),
-                        winning_8.getContext(), winning_9.getContext(), winning_10.getContext());
+                        winning_8.getContext(), winning_9.getContext(), winning_10.getContext(),
+                        winning.getContext(), winning_value.getContext());
 
                 joker.setText("");
                 joker.setVisibility(View.INVISIBLE);
@@ -698,7 +701,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_joker_5.getContext(), center_2.getContext(), winning_1.getContext(),
                         winning_2.getContext(), winning_3.getContext(), winning_4.getContext(),
                         winning_5.getContext(), winning_6.getContext(), winning_7.getContext(),
-                        winning_8.getContext(), winning_9.getContext(), winning_10.getContext());
+                        winning_8.getContext(), winning_9.getContext(), winning_10.getContext(),
+                        winning.getContext(), winning_value.getContext());
             }
             else if(choice == 2) {
                 doubling();
@@ -712,7 +716,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                         field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
-                        center_2.getContext());
+                        center_2.getContext(), winning_value.getContext());
             }
         }
         if(pressed == R.id.hold_1) {
@@ -758,7 +762,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             center_2.getContext(), winning_1.getContext(), winning_2.getContext(),
                             winning_3.getContext(), winning_4.getContext(), winning_5.getContext(),
                             winning_6.getContext(), winning_7.getContext(), winning_8.getContext(),
-                            winning_9.getContext(), winning_10.getContext());
+                            winning_9.getContext(), winning_10.getContext(), winning.getContext(),
+                            winning_value.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -782,7 +787,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             center_2.getContext(), winning_1.getContext(), winning_2.getContext(),
                             winning_3.getContext(), winning_4.getContext(), winning_5.getContext(),
                             winning_6.getContext(), winning_7.getContext(), winning_8.getContext(),
-                            winning_9.getContext(), winning_10.getContext());
+                            winning_9.getContext(), winning_10.getContext(), winning.getContext(),
+                            winning_value.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -829,13 +835,13 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                 field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                 field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
-                center_2.getContext());
+                center_2.getContext(), winning_value.getContext());
     }
     public static void Doubling(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
                                 Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
                                 Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
                                 Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
-                                Context context_center_2) {
+                                Context context_center_2, Context context_winning_value) {
 
         ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
         ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
@@ -850,12 +856,13 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
         ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.VISIBLE);
             dk1 = (int) Math.floor(Math.random() * 48) + 1;
             cheat = dk1;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 2) {
             field_win_2.setVisibility(View.VISIBLE);
@@ -864,7 +871,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk2 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk2;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 3) {
             field_win_3.setVisibility(View.VISIBLE);
@@ -873,7 +880,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk3 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk3;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 4) {
             field_win_4.setVisibility(View.VISIBLE);
@@ -882,7 +889,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk4 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk4;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 5) {
             field_win_5.setVisibility(View.VISIBLE);
@@ -892,7 +899,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk5 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk5;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 6) {
             field_win_6.setVisibility(View.VISIBLE);
@@ -902,7 +909,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk6 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk6;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 7) {
             field_win_7.setVisibility(View.VISIBLE);
@@ -912,7 +919,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk7 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk7;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 8) {
             field_win_8.setVisibility(View.VISIBLE);
@@ -922,7 +929,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk8 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk8;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 9) {
             field_win_9.setVisibility(View.VISIBLE);
@@ -932,7 +939,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk9 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk9;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 10) {
             field_win_10.setVisibility(View.VISIBLE);
@@ -943,7 +950,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk10 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk10;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 11) {
             field_win_11.setVisibility(View.VISIBLE);
@@ -954,18 +961,19 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 dk11 = (int) Math.floor(Math.random() * 48) + 1;
             }
             cheat = dk11;
-            Low_High(center_2.getContext());
+            Low_High(center_2.getContext(), winning_value.getContext());
         }
         if(double_card == 12) {
             handler0.removeCallbacks(runnable0);
             field_win_12.setVisibility(View.VISIBLE);
-            Block(center_2.getContext());
+            Block(center_2.getContext(), winning_value.getContext());
         }
     }
 
-    static void Low_High(Context context_center_2) {
+    static void Low_High(Context context_center_2, Context context_winning_value) {
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
 /**/
         if(cheat < 25) {
@@ -978,7 +986,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
 
         if(cash > 9999) {
-            Block(center_2.getContext());
+            Block(center_2.getContext(), winning_value.getContext());
         }
         else {
             final int[] high_low = {1};
@@ -1336,9 +1344,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
         audio_high = MediaPlayer.create(this, R.raw.hoch);
     }
-    public static void Bingo(Context context_center_2) {
+    public static void Bingo(Context context_center_2, Context context_winning_value) {
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
         handler0.removeCallbacks(runnable0);
         cash *= 2;
@@ -1367,21 +1376,22 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         count_100();
         taking = 1;
         try {
-            new TakingAll(center_2.getContext());
+            new TakingAll(center_2.getContext(), winning_value.getContext());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
-    public static void Block(Context context_center_2) {
+    public static void Block(Context context_center_2, Context context_winning_value) {
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
         choice = 3;
         doubling = 1;
         won = 0;
         taking = 1;
         try {
-            new TakingAll(center_2.getContext());
+            new TakingAll(center_2.getContext(), winning_value.getContext());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

@@ -43,6 +43,8 @@ public class Clearing extends Activity {
     Context context_winning_8;
     Context context_winning_9;
     Context context_winning_10;
+    Context context_winning;
+    Context context_winning_value;
     Clearing(Context context_table, Context context_down_left_2, Context context_down_right_2,
              Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
              Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
@@ -54,7 +56,8 @@ public class Clearing extends Activity {
              Context context_field_win_12, Context context_center_2, Context context_winning_1,
              Context context_winning_2, Context context_winning_3, Context context_winning_4,
              Context context_winning_5, Context context_winning_6, Context context_winning_7,
-             Context context_winning_8, Context context_winning_9, Context context_winning_10) {
+             Context context_winning_8, Context context_winning_9, Context context_winning_10,
+             Context context_winning, Context context_winning_value) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -92,6 +95,8 @@ public class Clearing extends Activity {
         this.context_winning_8 = context_winning_8;
         this.context_winning_9 = context_winning_9;
         this.context_winning_10 = context_winning_10;
+        this.context_winning = context_winning;
+        this.context_winning_value = context_winning_value;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -129,6 +134,8 @@ public class Clearing extends Activity {
         TextView winning_8 = (TextView) ((Activity)context_winning_8).findViewById(R.id.winning_8);
         TextView winning_9 = (TextView) ((Activity)context_winning_9).findViewById(R.id.winning_9);
         TextView winning_10 = (TextView) ((Activity)context_winning_10).findViewById(R.id.winning_10);
+        TextView winning = (TextView) ((Activity)context_winning).findViewById(R.id.winning);
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
         center_2.setVisibility(View.VISIBLE);
         MainClass.button_hold_1.setVisibility(View.VISIBLE);
@@ -137,7 +144,7 @@ public class Clearing extends Activity {
         MainClass.button_hold_4.setVisibility(View.VISIBLE);
         MainClass.button_hold_5.setVisibility(View.VISIBLE);
         table.setVisibility(View.INVISIBLE);
-        MainClass.winning.setVisibility(View.INVISIBLE);
+        winning.setVisibility(View.INVISIBLE);
         winning_1.setVisibility(View.INVISIBLE);
         winning_2.setVisibility(View.INVISIBLE);
         winning_3.setVisibility(View.INVISIBLE);
@@ -148,7 +155,7 @@ public class Clearing extends Activity {
         winning_8.setVisibility(View.INVISIBLE);
         winning_9.setVisibility(View.INVISIBLE);
         winning_10.setVisibility(View.INVISIBLE);
-        MainClass.winning_value.setVisibility(View.INVISIBLE);
+        winning_value.setVisibility(View.INVISIBLE);
         down_left_2.setVisibility(View.INVISIBLE);
         down_right_2.setVisibility(View.INVISIBLE);
         field_card_1.setVisibility(View.INVISIBLE);

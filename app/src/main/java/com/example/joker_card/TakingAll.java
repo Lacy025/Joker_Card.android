@@ -9,7 +9,6 @@ import static com.example.joker_card.MainClass.button_take;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.doubling;
 import static com.example.joker_card.MainClass.profit;
-import static com.example.joker_card.MainClass.winning_value;
 import static com.example.joker_card.MainClass.c;
 import static com.example.joker_card.MainClass.c1;
 
@@ -27,9 +26,11 @@ public class TakingAll extends Activity {
     public static Runnable runnable9;
     public static Runnable runnable10;
     Context context_center_2;
-    TakingAll(Context context_center_2) throws InterruptedException {
+    Context context_winning_value;
+    TakingAll(Context context_center_2, Context context_winning_value) throws InterruptedException {
 
         this.context_center_2 = context_center_2;
+        this.context_winning_value = context_winning_value;
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
 
@@ -68,7 +69,7 @@ public class TakingAll extends Activity {
         };
         handler9.post(runnable9);
 
-        minus_1();
+        minus_1(context_winning_value);
         Thread.sleep(40);
 
         handler10 = new Handler();
@@ -77,11 +78,11 @@ public class TakingAll extends Activity {
             public void run() {
                 double winn = cash;
                 if(((int)(winn/100) * 100) != ((winn/100) * 100)) {
-                    minus_1();
+                    minus_1(context_winning_value);
                     handler10.postDelayed(this, 40);
                 }
                 else if((((int)(winn/100) * 100) == ((winn/100) * 100)) && winn > 0) {
-                    minus_100();
+                    minus_100(context_winning_value);
                     handler10.postDelayed(this, 1000);
                 }
                 else  {
@@ -100,7 +101,10 @@ public class TakingAll extends Activity {
         };
         handler10.post(runnable10);
     }
-    void minus_1() {
+    void minus_1(Context context_winning_value) {
+
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+
         c += 1;
         c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= 1;
@@ -111,7 +115,10 @@ public class TakingAll extends Activity {
             button_deal.setText(R.string.deal_cards);
         }
     }
-    void minus_100() {
+    void minus_100(Context context_winning_value) {
+
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+
         c += 100;
         c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= 100;

@@ -58,6 +58,8 @@ public class Cashed extends Activity {
     Context context_winning_8;
     Context context_winning_9;
     Context context_winning_10;
+    Context context_winning;
+    Context context_winning_value;
     Cashed(Context context_table, Context context_down_left_2, Context context_down_right_2,
            Context context_joker, Context context_card, Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
            Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
@@ -69,7 +71,8 @@ public class Cashed extends Activity {
            Context context_field_win_12, Context context_center_2, Context context_winning_1,
            Context context_winning_2, Context context_winning_3, Context context_winning_4,
            Context context_winning_5, Context context_winning_6, Context context_winning_7,
-           Context context_winning_8, Context context_winning_9, Context context_winning_10) {
+           Context context_winning_8, Context context_winning_9, Context context_winning_10,
+           Context context_winning, Context context_winning_value) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -109,6 +112,8 @@ public class Cashed extends Activity {
         this.context_winning_8 = context_winning_8;
         this.context_winning_9 = context_winning_9;
         this.context_winning_10 = context_winning_10;
+        this.context_winning = context_winning;
+        this.context_winning_value = context_winning_value;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -148,6 +153,8 @@ public class Cashed extends Activity {
         TextView winning_8 = (TextView) ((Activity)context_winning_8).findViewById(R.id.winning_8);
         TextView winning_9 = (TextView) ((Activity)context_winning_9).findViewById(R.id.winning_9);
         TextView winning_10 = (TextView) ((Activity)context_winning_10).findViewById(R.id.winning_10);
+        TextView winning = (TextView) ((Activity)context_winning).findViewById(R.id.winning);
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
         if(missed == 1) {
             pause = 2000;
@@ -191,7 +198,8 @@ public class Cashed extends Activity {
                             field_win_12.getContext(), center_2.getContext(), winning_1.getContext(),
                             winning_2.getContext(), winning_3.getContext(), winning_4.getContext(),
                             winning_5.getContext(), winning_6.getContext(), winning_7.getContext(),
-                            winning_8.getContext(), winning_9.getContext(), winning_10.getContext());
+                            winning_8.getContext(), winning_9.getContext(), winning_10.getContext(),
+                            winning.getContext(), winning_value.getContext());
                 }
         };
         handler9.postDelayed(runnable9, pause);

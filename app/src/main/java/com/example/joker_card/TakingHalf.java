@@ -8,7 +8,6 @@ import static com.example.joker_card.MainClass.button_take;
 import static com.example.joker_card.MainClass.c;
 import static com.example.joker_card.MainClass.c1;
 import static com.example.joker_card.MainClass.cash;
-import static com.example.joker_card.MainClass.winning_value;
 import static com.example.joker_card.MainClass.doubling;
 
 import android.app.Activity;
@@ -50,11 +49,12 @@ public class TakingHalf extends Activity {
     Context context_field_win_11;
     Context context_field_win_12;
     Context context_center_2;
+    Context context_winning_value;
     TakingHalf(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
                Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
                Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
                Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
-               Context context_center_2) {
+               Context context_center_2, Context context_winning_value) {
 
         this.context_field_win_1 = context_field_win_1;
         this.context_field_win_2 = context_field_win_2;
@@ -69,8 +69,10 @@ public class TakingHalf extends Activity {
         this.context_field_win_11 = context_field_win_11;
         this.context_field_win_12 = context_field_win_12;
         this.context_center_2 = context_center_2;
+        this.context_winning_value = context_winning_value;
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
@@ -117,7 +119,7 @@ public class TakingHalf extends Activity {
                 public void run() {
                     if(cash < 101) {
                         if(cash != half) {
-                            minus_1();
+                            minus_1(context_winning_value);
                             handler14.postDelayed(this, 40);
                         }
                         else {
@@ -127,7 +129,7 @@ public class TakingHalf extends Activity {
                                     context_field_win_4, context_field_win_5, context_field_win_6,
                                     context_field_win_7, context_field_win_8, context_field_win_9,
                                     context_field_win_10, context_field_win_11, context_field_win_12,
-                                    context_center_2);
+                                    context_center_2, winning_value.getContext());
                             try {
                                 Thread.sleep(1000);
                             } catch (InterruptedException e) {
@@ -138,7 +140,7 @@ public class TakingHalf extends Activity {
                     }
                     else if(cash < 200) {
                         half_1 = cash - 100;
-                        first_part();
+                        first_part(context_winning_value);
                         handler14.postDelayed(this, 1000);
                     }
 
@@ -154,17 +156,17 @@ public class TakingHalf extends Activity {
                 public void run() {
                     if((Math.floor(deo/100)) != (deo/100)) {
                         half_1 = Math.round(((deo/100)-(Math.floor(deo/100))) * 100);
-                        first_part();
+                        first_part(context_winning_value);
                         handler15.postDelayed(this, 1000);
                     }
                     else {
                         if(cash - half > 99) {
-                            minus_100();
+                            minus_100(context_winning_value);
                             handler15.postDelayed(this, 1000);
                         }
                         else if(cash - half > 0) {
                             half_2 = cash - half;
-                            second_part();
+                            second_part(context_winning_value);
                             handler15.postDelayed(this, 1000);
                         }
                         else if(cash - half == 0) {
@@ -173,7 +175,7 @@ public class TakingHalf extends Activity {
                                     context_field_win_4, context_field_win_5, context_field_win_6,
                                     context_field_win_7, context_field_win_8, context_field_win_9,
                                     context_field_win_10, context_field_win_11, context_field_win_12,
-                                    context_center_2);
+                                    context_center_2, winning_value.getContext());
                             handler15.removeCallbacks(runnable15);
                         }
                     }
@@ -182,21 +184,30 @@ public class TakingHalf extends Activity {
             handler15.post(runnable15);
         }
     }
-    void minus_1() {
+    void minus_1(Context context_winning_value) {
+
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+
         c += 1;
         c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= 1;
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_1.start();
     }
-    void minus_100() {
+    void minus_100(Context context_winning_value) {
+
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+
         c += 100;
         c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= 100;
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
     }
-    void first_part() {
+    void first_part(Context context_winning_value) {
+
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+
         c += half_1;
         c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= half_1;
@@ -204,7 +215,10 @@ public class TakingHalf extends Activity {
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
     }
-    void second_part() {
+    void second_part(Context context_winning_value) {
+
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+
         c += half_2;
         c1.setText(String.format(Locale.getDefault(), "%d", (c)));
         cash -= half_2;
@@ -215,7 +229,7 @@ public class TakingHalf extends Activity {
                 Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
                 Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
                 Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
-                Context context_center_2) {
+                Context context_center_2, Context context_winning_value) {
 
         ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
         ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
@@ -230,16 +244,18 @@ public class TakingHalf extends Activity {
         ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
         ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
         handler16.removeCallbacks(runnable16);
         center_2.setVisibility(View.INVISIBLE);
         doubling = 1;
         button_take.setText(R.string.take_all);
         button_deal.setText(R.string.take_half);
+
         Doubling(field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
                 field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                 field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                 field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
-                center_2.getContext());
+                center_2.getContext(), winning_value.getContext());
     }
 }

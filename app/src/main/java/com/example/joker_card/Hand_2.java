@@ -19,9 +19,7 @@ import static com.example.joker_card.MainClass.win7;
 import static com.example.joker_card.MainClass.win8;
 import static com.example.joker_card.MainClass.win9;
 import static com.example.joker_card.MainClass.win10;
-import static com.example.joker_card.MainClass.winning_value;
 import static com.example.joker_card.MainClass.won;
-import static com.example.joker_card.MainClass.winning;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.choice;
 import static com.example.joker_card.MainClass.block;
@@ -93,6 +91,8 @@ public class Hand_2 extends Activity {
     Context context_winning_8;
     Context context_winning_9;
     Context context_winning_10;
+    Context context_winning;
+    Context context_winning_value;
     Hand_2(Context context_table, Context context_joker, Context context_card,
            Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
            Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
@@ -100,7 +100,8 @@ public class Hand_2 extends Activity {
            Context context_field_joker_5, Context context_center_2, Context context_winning_1,
            Context context_winning_2, Context context_winning_3, Context context_winning_4,
            Context context_winning_5, Context context_winning_6, Context context_winning_7,
-           Context context_winning_8, Context context_winning_9, Context context_winning_10) {
+           Context context_winning_8, Context context_winning_9, Context context_winning_10,
+           Context context_winning, Context context_winning_value) {
 
         this.context_table = context_table;
         this.context_joker = context_joker;
@@ -126,6 +127,8 @@ public class Hand_2 extends Activity {
         this.context_winning_8 = context_winning_8;
         this.context_winning_9 = context_winning_9;
         this.context_winning_10 = context_winning_10;
+        this.context_winning = context_winning;
+        this.context_winning_value = context_winning_value;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -151,6 +154,8 @@ public class Hand_2 extends Activity {
         TextView winning_8 = (TextView) ((Activity)context_winning_8).findViewById(R.id.winning_8);
         TextView winning_9 = (TextView) ((Activity)context_winning_9).findViewById(R.id.winning_9);
         TextView winning_10 = (TextView) ((Activity)context_winning_10).findViewById(R.id.winning_10);
+        TextView winning = (TextView) ((Activity)context_winning).findViewById(R.id.winning);
+        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
         clearing_2();
 
