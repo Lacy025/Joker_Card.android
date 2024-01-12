@@ -470,7 +470,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                         field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
                                         field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
-                                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
+                                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
+                                        center_2.getContext());
                             }
                         }, 100));
             }
@@ -549,7 +550,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             field_win_3.getContext(), field_win_4.getContext(), field_win_5.getContext(),
                             field_win_6.getContext(), field_win_7.getContext(), field_win_8.getContext(),
                             field_win_9.getContext(), field_win_10.getContext(), field_win_11.getContext(),
-                            field_win_12.getContext());
+                            field_win_12.getContext(), center_2.getContext());
                 }
                 Jokers.handler1.removeCallbacks(Jokers.runnable1);
                 Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -568,7 +569,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_win_3.getContext(), field_win_4.getContext(), field_win_5.getContext(),
                         field_win_6.getContext(), field_win_7.getContext(), field_win_8.getContext(),
                         field_win_9.getContext(), field_win_10.getContext(), field_win_11.getContext(),
-                        field_win_12.getContext());
+                        field_win_12.getContext(), center_2.getContext());
 
                 joker.setText("");
                 joker.setVisibility(View.INVISIBLE);
@@ -685,7 +686,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
                         field_card_4.getContext(), field_card_5.getContext(), field_joker_1.getContext(),
                         field_joker_2.getContext(), field_joker_3.getContext(), field_joker_4.getContext(),
-                        field_joker_5.getContext());
+                        field_joker_5.getContext(), center_2.getContext());
             }
             else if(choice == 2) {
                 doubling();
@@ -698,7 +699,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 new TakingHalf(field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
                         field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
-                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
+                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
+                        center_2.getContext());
             }
         }
         if(pressed == R.id.hold_1) {
@@ -740,7 +742,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
                             field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                             field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
-                            field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
+                            field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
+                            center_2.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -760,7 +763,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
                             field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                             field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
-                            field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
+                            field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
+                            center_2.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -1337,18 +1341,18 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         count_100();
         taking = 1;
         try {
-            new TakingAll();
+            new TakingAll(center_2.getContext());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
-    static void Block() {
+    public static void Block() {
         choice = 3;
         doubling = 1;
         won = 0;
         taking = 1;
         try {
-            new TakingAll();
+            new TakingAll(center_2.getContext());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

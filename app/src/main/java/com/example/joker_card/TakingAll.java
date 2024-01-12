@@ -6,7 +6,6 @@ import static com.example.joker_card.MainClass.audio_winner;
 import static com.example.joker_card.MainClass.audio_intro;
 import static com.example.joker_card.MainClass.button_deal;
 import static com.example.joker_card.MainClass.button_take;
-import static com.example.joker_card.MainClass.center_2;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.doubling;
 import static com.example.joker_card.MainClass.profit;
@@ -15,8 +14,10 @@ import static com.example.joker_card.MainClass.c;
 import static com.example.joker_card.MainClass.c1;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -25,7 +26,12 @@ public class TakingAll extends Activity {
     public static Handler handler10;
     public static Runnable runnable9;
     public static Runnable runnable10;
-    TakingAll() throws InterruptedException {
+    Context context_center_2;
+    TakingAll(Context context_center_2) throws InterruptedException {
+
+        this.context_center_2 = context_center_2;
+
+        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
 
         int winning = cash;
 
@@ -101,7 +107,7 @@ public class TakingAll extends Activity {
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_1.start();
         if(cash == 0) {
-            You_Win();
+            You_Win(context_center_2);
             button_deal.setText(R.string.deal_cards);
         }
     }
@@ -112,11 +118,14 @@ public class TakingAll extends Activity {
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
         if(cash == 0) {
-            You_Win();
+            You_Win(context_center_2);
             button_deal.setText(R.string.deal_cards);
         }
     }
-    void You_Win() {
+    void You_Win(Context context_center_2) {
+
+        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+
         center_2.setText(R.string.win);
         center_2.setVisibility(View.VISIBLE);
     }

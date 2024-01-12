@@ -2,7 +2,6 @@ package com.example.joker_card;
 
 import static com.example.joker_card.MainClass.Bingo;
 import static com.example.joker_card.MainClass.Doubling;
-import static com.example.joker_card.MainClass.center_2;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.winning_value;
 import static com.example.joker_card.MainClass.doubling;
@@ -81,6 +80,7 @@ public class Low extends Activity {
     Context context_field_win_10;
     Context context_field_win_11;
     Context context_field_win_12;
+    Context context_center_2;
     Low(Context context_table, Context context_down_left_2, Context context_down_right_2,
         Context context_joker, Context context_card, Context context_field_card_1,
         Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
@@ -89,7 +89,8 @@ public class Low extends Activity {
         Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
         Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
         Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
-        Context context_field_win_10, Context context_field_win_11, Context context_field_win_12) throws InterruptedException {
+        Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
+        Context context_center_2) throws InterruptedException {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -118,6 +119,7 @@ public class Low extends Activity {
         this.context_field_win_10 = context_field_win_10;
         this.context_field_win_11 = context_field_win_11;
         this.context_field_win_12 = context_field_win_12;
+        this.context_center_2 = context_center_2;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -146,6 +148,7 @@ public class Low extends Activity {
         TextView down_right_2 = (TextView) ((Activity)context_down_right_2).findViewById(R.id.cash);
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
         TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
+        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.INVISIBLE);
@@ -260,7 +263,8 @@ public class Low extends Activity {
                         field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
                         field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
-                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
+                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
+                        center_2.getContext());
             }
         };
         handler11.post(runnable11);

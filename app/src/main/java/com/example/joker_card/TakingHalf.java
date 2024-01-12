@@ -7,7 +7,6 @@ import static com.example.joker_card.MainClass.button_deal;
 import static com.example.joker_card.MainClass.button_take;
 import static com.example.joker_card.MainClass.c;
 import static com.example.joker_card.MainClass.c1;
-import static com.example.joker_card.MainClass.center_2;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.winning_value;
 import static com.example.joker_card.MainClass.doubling;
@@ -18,6 +17,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Locale;
 import java.util.Timer;
@@ -49,10 +49,12 @@ public class TakingHalf extends Activity {
     Context context_field_win_10;
     Context context_field_win_11;
     Context context_field_win_12;
+    Context context_center_2;
     TakingHalf(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
                Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
                Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
-               Context context_field_win_10, Context context_field_win_11, Context context_field_win_12) {
+               Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
+               Context context_center_2) {
 
         this.context_field_win_1 = context_field_win_1;
         this.context_field_win_2 = context_field_win_2;
@@ -66,6 +68,9 @@ public class TakingHalf extends Activity {
         this.context_field_win_10 = context_field_win_10;
         this.context_field_win_11 = context_field_win_11;
         this.context_field_win_12 = context_field_win_12;
+        this.context_center_2 = context_center_2;
+
+        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
 
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
@@ -121,7 +126,8 @@ public class TakingHalf extends Activity {
                             winner(context_field_win_1, context_field_win_2, context_field_win_3,
                                     context_field_win_4, context_field_win_5, context_field_win_6,
                                     context_field_win_7, context_field_win_8, context_field_win_9,
-                                    context_field_win_10, context_field_win_11, context_field_win_12);
+                                    context_field_win_10, context_field_win_11, context_field_win_12,
+                                    context_center_2);
                             try {
                                 Thread.sleep(1000);
                             } catch (InterruptedException e) {
@@ -166,7 +172,8 @@ public class TakingHalf extends Activity {
                             winner(context_field_win_1, context_field_win_2, context_field_win_3,
                                     context_field_win_4, context_field_win_5, context_field_win_6,
                                     context_field_win_7, context_field_win_8, context_field_win_9,
-                                    context_field_win_10, context_field_win_11, context_field_win_12);
+                                    context_field_win_10, context_field_win_11, context_field_win_12,
+                                    context_center_2);
                             handler15.removeCallbacks(runnable15);
                         }
                     }
@@ -207,7 +214,8 @@ public class TakingHalf extends Activity {
     void winner(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
                 Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
                 Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
-                Context context_field_win_10, Context context_field_win_11, Context context_field_win_12) {
+                Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
+                Context context_center_2) {
 
         ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
         ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
@@ -221,6 +229,7 @@ public class TakingHalf extends Activity {
         ImageView field_win_10 = (ImageView) ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
         ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
         ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
+        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
 
         handler16.removeCallbacks(runnable16);
         center_2.setVisibility(View.INVISIBLE);

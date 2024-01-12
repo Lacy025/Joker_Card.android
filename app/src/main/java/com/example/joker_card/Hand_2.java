@@ -8,7 +8,6 @@ import static com.example.joker_card.MainClass.button_hold_3;
 import static com.example.joker_card.MainClass.button_hold_4;
 import static com.example.joker_card.MainClass.button_hold_5;
 import static com.example.joker_card.MainClass.button_take;
-import static com.example.joker_card.MainClass.center_2;
 import static com.example.joker_card.MainClass.delaying;
 import static com.example.joker_card.MainClass.win1;
 import static com.example.joker_card.MainClass.win2;
@@ -93,11 +92,12 @@ public class Hand_2 extends Activity {
     Context context_field_joker_3;
     Context context_field_joker_4;
     Context context_field_joker_5;
+    Context context_center_2;
     Hand_2(Context context_table, Context context_joker, Context context_card,
            Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
            Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
            Context context_field_joker_2, Context context_field_joker_3, Context context_field_joker_4,
-           Context context_field_joker_5) {
+           Context context_field_joker_5, Context context_center_2) {
 
         this.context_table = context_table;
         this.context_joker = context_joker;
@@ -112,6 +112,7 @@ public class Hand_2 extends Activity {
         this.context_field_joker_3 = context_field_joker_3;
         this.context_field_joker_4 = context_field_joker_4;
         this.context_field_joker_5 = context_field_joker_5;
+        this.context_center_2 = context_center_2;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -126,6 +127,7 @@ public class Hand_2 extends Activity {
         ImageView table = (ImageView) ((Activity)context_table).findViewById(R.id.table);
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
         TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
+        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
 
         clearing_2();
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
