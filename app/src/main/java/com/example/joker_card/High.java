@@ -18,27 +18,6 @@ import static com.example.joker_card.MainClass.dk8;
 import static com.example.joker_card.MainClass.dk9;
 import static com.example.joker_card.MainClass.dk10;
 import static com.example.joker_card.MainClass.dk11;
-import static com.example.joker_card.MainClass.high_1;
-import static com.example.joker_card.MainClass.high_2;
-import static com.example.joker_card.MainClass.high_3;
-import static com.example.joker_card.MainClass.high_4;
-import static com.example.joker_card.MainClass.high_5;
-import static com.example.joker_card.MainClass.high_6;
-import static com.example.joker_card.MainClass.high_7;
-import static com.example.joker_card.MainClass.high_8;
-import static com.example.joker_card.MainClass.high_9;
-import static com.example.joker_card.MainClass.high_10;
-import static com.example.joker_card.MainClass.high_11;
-import static com.example.joker_card.MainClass.low_1;
-import static com.example.joker_card.MainClass.low_2;
-import static com.example.joker_card.MainClass.low_3;
-import static com.example.joker_card.MainClass.low_4;
-import static com.example.joker_card.MainClass.low_5;
-import static com.example.joker_card.MainClass.low_6;
-import static com.example.joker_card.MainClass.low_7;
-import static com.example.joker_card.MainClass.low_8;
-import static com.example.joker_card.MainClass.low_9;
-import static com.example.joker_card.MainClass.low_10;
 
 import android.app.Activity;
 import android.content.Context;
@@ -92,6 +71,28 @@ public class High extends Activity {
     Context context_winning_10;
     Context context_winning;
     Context context_winning_value;
+    Context context_low_1;
+    Context context_low_2;
+    Context context_low_3;
+    Context context_low_4;
+    Context context_low_5;
+    Context context_low_6;
+    Context context_low_7;
+    Context context_low_8;
+    Context context_low_9;
+    Context context_low_10;
+    Context context_low_11;
+    Context context_high_1;
+    Context context_high_2;
+    Context context_high_3;
+    Context context_high_4;
+    Context context_high_5;
+    Context context_high_6;
+    Context context_high_7;
+    Context context_high_8;
+    Context context_high_9;
+    Context context_high_10;
+    Context context_high_11;
     High(Context context_table, Context context_down_left_2, Context context_down_right_2,
          Context context_joker, Context context_card, Context context_field_card_1,
          Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
@@ -105,7 +106,12 @@ public class High extends Activity {
          Context context_winning_3, Context context_winning_4, Context context_winning_5,
          Context context_winning_6, Context context_winning_7, Context context_winning_8,
          Context context_winning_9, Context context_winning_10, Context context_winning,
-         Context context_winning_value) throws InterruptedException {
+         Context context_winning_value, Context context_low_1, Context context_low_2, Context context_low_3,
+         Context context_low_4, Context context_low_5, Context context_low_6, Context context_low_7,
+         Context context_low_8, Context context_low_9, Context context_low_10, Context context_low_11,
+         Context context_high_1, Context context_high_2, Context context_high_3, Context context_high_4,
+         Context context_high_5, Context context_high_6, Context context_high_7, Context context_high_8,
+         Context context_high_9, Context context_high_10, Context context_high_11) throws InterruptedException {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -147,6 +153,28 @@ public class High extends Activity {
         this.context_winning_10 = context_winning_10;
         this.context_winning = context_winning;
         this.context_winning_value = context_winning_value;
+        this.context_low_1 = context_low_1;
+        this.context_low_2 = context_low_2;
+        this.context_low_3 = context_low_3;
+        this.context_low_4 = context_low_4;
+        this.context_low_5 = context_low_5;
+        this.context_low_6 = context_low_6;
+        this.context_low_7 = context_low_7;
+        this.context_low_8 = context_low_8;
+        this.context_low_9 = context_low_9;
+        this.context_low_10 = context_low_10;
+        this.context_low_11 = context_low_11;
+        this.context_high_1 = context_high_1;
+        this.context_high_2 = context_high_2;
+        this.context_high_3 = context_high_3;
+        this.context_high_4 = context_high_4;
+        this.context_high_5 = context_high_5;
+        this.context_high_6 = context_high_6;
+        this.context_high_7 = context_high_7;
+        this.context_high_8 = context_high_8;
+        this.context_high_9 = context_high_9;
+        this.context_high_10 = context_high_10;
+        this.context_high_11 = context_high_11;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -188,6 +216,28 @@ public class High extends Activity {
         TextView winning_10 = (TextView) ((Activity)context_winning_10).findViewById(R.id.winning_10);
         TextView winning = (TextView) ((Activity)context_winning).findViewById(R.id.winning);
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView low_1 = (TextView) ((Activity)context_low_1).findViewById(R.id.low_1);
+        TextView low_2 = (TextView) ((Activity)context_low_2).findViewById(R.id.low_2);
+        TextView low_3 = (TextView) ((Activity)context_low_3).findViewById(R.id.low_3);
+        TextView low_4 = (TextView) ((Activity)context_low_4).findViewById(R.id.low_4);
+        TextView low_5 = (TextView) ((Activity)context_low_5).findViewById(R.id.low_5);
+        TextView low_6 = (TextView) ((Activity)context_low_6).findViewById(R.id.low_6);
+        TextView low_7 = (TextView) ((Activity)context_low_7).findViewById(R.id.low_7);
+        TextView low_8 = (TextView) ((Activity)context_low_8).findViewById(R.id.low_8);
+        TextView low_9 = (TextView) ((Activity)context_low_9).findViewById(R.id.low_9);
+        TextView low_10 = (TextView) ((Activity)context_low_10).findViewById(R.id.low_10);
+        TextView low_11 = (TextView) ((Activity)context_low_11).findViewById(R.id.low_11);
+        TextView high_1 = (TextView) ((Activity)context_high_1).findViewById(R.id.high_1);
+        TextView high_2 = (TextView) ((Activity)context_high_2).findViewById(R.id.high_2);
+        TextView high_3 = (TextView) ((Activity)context_high_3).findViewById(R.id.high_3);
+        TextView high_4 = (TextView) ((Activity)context_high_4).findViewById(R.id.high_4);
+        TextView high_5 = (TextView) ((Activity)context_high_5).findViewById(R.id.high_5);
+        TextView high_6 = (TextView) ((Activity)context_high_6).findViewById(R.id.high_6);
+        TextView high_7 = (TextView) ((Activity)context_high_7).findViewById(R.id.high_7);
+        TextView high_8 = (TextView) ((Activity)context_high_8).findViewById(R.id.high_8);
+        TextView high_9 = (TextView) ((Activity)context_high_9).findViewById(R.id.high_9);
+        TextView high_10 = (TextView) ((Activity)context_high_10).findViewById(R.id.high_10);
+        TextView high_11 = (TextView) ((Activity)context_high_11).findViewById(R.id.high_11);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.INVISIBLE);
@@ -308,7 +358,12 @@ public class High extends Activity {
                         winning_3.getContext(), winning_4.getContext(), winning_5.getContext(),
                         winning_6.getContext(), winning_7.getContext(), winning_8.getContext(),
                         winning_9.getContext(), winning_10.getContext(), winning.getContext(),
-                        winning_value.getContext());
+                        winning_value.getContext(), low_1.getContext(), low_2.getContext(), low_3.getContext(),
+                        low_4.getContext(), low_5.getContext(), low_6.getContext(), low_7.getContext(),
+                        low_8.getContext(), low_9.getContext(), low_10.getContext(), low_11.getContext(),
+                        high_1.getContext(), high_2.getContext(), high_3.getContext(), high_4.getContext(),
+                        high_5.getContext(), high_6.getContext(), high_7.getContext(), high_8.getContext(),
+                        high_9.getContext(), high_10.getContext(), high_11.getContext());
             }
         };
         handler12.post(runnable12);
