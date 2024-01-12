@@ -232,7 +232,7 @@ public class Low extends Activity {
                 field_win_10.getContext(), field_win_11.getContext());
 
         if (dk < 25) {
-            Bingo();
+            Bingo(center_2.getContext());
         }
         handler11 = new Handler();
         runnable11 = () -> {
@@ -249,7 +249,8 @@ public class Low extends Activity {
                 Doubling(field_win_1.getContext(), field_win_2.getContext(), field_win_3.getContext(),
                         field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
-                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext());
+                        field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
+                        center_2.getContext());
             }
             else {
                 cash = 0;
