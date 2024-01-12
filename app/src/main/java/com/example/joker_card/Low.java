@@ -81,6 +81,16 @@ public class Low extends Activity {
     Context context_field_win_11;
     Context context_field_win_12;
     Context context_center_2;
+    Context context_winning_1;
+    Context context_winning_2;
+    Context context_winning_3;
+    Context context_winning_4;
+    Context context_winning_5;
+    Context context_winning_6;
+    Context context_winning_7;
+    Context context_winning_8;
+    Context context_winning_9;
+    Context context_winning_10;
     Low(Context context_table, Context context_down_left_2, Context context_down_right_2,
         Context context_joker, Context context_card, Context context_field_card_1,
         Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
@@ -90,7 +100,10 @@ public class Low extends Activity {
         Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
         Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
         Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
-        Context context_center_2) throws InterruptedException {
+        Context context_center_2, Context context_winning_1, Context context_winning_2,
+        Context context_winning_3, Context context_winning_4, Context context_winning_5,
+        Context context_winning_6, Context context_winning_7, Context context_winning_8,
+        Context context_winning_9, Context context_winning_10) throws InterruptedException {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -120,6 +133,16 @@ public class Low extends Activity {
         this.context_field_win_11 = context_field_win_11;
         this.context_field_win_12 = context_field_win_12;
         this.context_center_2 = context_center_2;
+        this.context_winning_1 = context_winning_1;
+        this.context_winning_2 = context_winning_2;
+        this.context_winning_3 = context_winning_3;
+        this.context_winning_4 = context_winning_4;
+        this.context_winning_5 = context_winning_5;
+        this.context_winning_6 = context_winning_6;
+        this.context_winning_7 = context_winning_7;
+        this.context_winning_8 = context_winning_8;
+        this.context_winning_9 = context_winning_9;
+        this.context_winning_10 = context_winning_10;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -149,6 +172,16 @@ public class Low extends Activity {
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
         TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_1 = (TextView) ((Activity)context_winning_1).findViewById(R.id.winning_1);
+        TextView winning_2 = (TextView) ((Activity)context_winning_2).findViewById(R.id.winning_2);
+        TextView winning_3 = (TextView) ((Activity)context_winning_3).findViewById(R.id.winning_3);
+        TextView winning_4 = (TextView) ((Activity)context_winning_4).findViewById(R.id.winning_4);
+        TextView winning_5 = (TextView) ((Activity)context_winning_5).findViewById(R.id.winning_5);
+        TextView winning_6 = (TextView) ((Activity)context_winning_6).findViewById(R.id.winning_6);
+        TextView winning_7 = (TextView) ((Activity)context_winning_7).findViewById(R.id.winning_7);
+        TextView winning_8 = (TextView) ((Activity)context_winning_8).findViewById(R.id.winning_8);
+        TextView winning_9 = (TextView) ((Activity)context_winning_9).findViewById(R.id.winning_9);
+        TextView winning_10 = (TextView) ((Activity)context_winning_10).findViewById(R.id.winning_10);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.INVISIBLE);
@@ -265,7 +298,10 @@ public class Low extends Activity {
                         field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                         field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
-                        center_2.getContext());
+                        center_2.getContext(), winning_1.getContext(), winning_2.getContext(),
+                        winning_3.getContext(), winning_4.getContext(), winning_5.getContext(),
+                        winning_6.getContext(), winning_7.getContext(), winning_8.getContext(),
+                        winning_9.getContext(), winning_10.getContext());
             }
         };
         handler11.post(runnable11);

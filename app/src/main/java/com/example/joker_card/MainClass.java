@@ -155,16 +155,16 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     TextView card;
     TextView center_1;
     TextView center_2;
-    public static TextView winning_1;
-    public static TextView winning_2;
-    public static TextView winning_3;
-    public static TextView winning_4;
-    public static TextView winning_5;
-    public static TextView winning_6;
-    public static TextView winning_7;
-    public static TextView winning_8;
-    public static TextView winning_9;
-    public static TextView winning_10;
+    TextView winning_1;
+    TextView winning_2;
+    TextView winning_3;
+    TextView winning_4;
+    TextView winning_5;
+    TextView winning_6;
+    TextView winning_7;
+    TextView winning_8;
+    TextView winning_9;
+    TextView winning_10;
     public static TextView winning;
     public static TextView winning_value;
     public static TextView low;
@@ -471,7 +471,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                         field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                                         field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
-                                        center_2.getContext());
+                                        center_2.getContext(), winning_1.getContext(), winning_2.getContext(),
+                                        winning_3.getContext(), winning_4.getContext(), winning_5.getContext(),
+                                        winning_6.getContext(), winning_7.getContext(), winning_8.getContext(),
+                                        winning_9.getContext(), winning_10.getContext());
                             }
                         }, 100));
             }
@@ -550,7 +553,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             field_win_3.getContext(), field_win_4.getContext(), field_win_5.getContext(),
                             field_win_6.getContext(), field_win_7.getContext(), field_win_8.getContext(),
                             field_win_9.getContext(), field_win_10.getContext(), field_win_11.getContext(),
-                            field_win_12.getContext(), center_2.getContext());
+                            field_win_12.getContext(), center_2.getContext(), winning_1.getContext(),
+                            winning_2.getContext(), winning_3.getContext(), winning_4.getContext(),
+                            winning_5.getContext(), winning_6.getContext(), winning_7.getContext(),
+                            winning_8.getContext(), winning_9.getContext(), winning_10.getContext());
                 }
                 Jokers.handler1.removeCallbacks(Jokers.runnable1);
                 Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -569,7 +575,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_win_3.getContext(), field_win_4.getContext(), field_win_5.getContext(),
                         field_win_6.getContext(), field_win_7.getContext(), field_win_8.getContext(),
                         field_win_9.getContext(), field_win_10.getContext(), field_win_11.getContext(),
-                        field_win_12.getContext(), center_2.getContext());
+                        field_win_12.getContext(), center_2.getContext(), winning_1.getContext(),
+                        winning_2.getContext(), winning_3.getContext(), winning_4.getContext(),
+                        winning_5.getContext(), winning_6.getContext(), winning_7.getContext(),
+                        winning_8.getContext(), winning_9.getContext(), winning_10.getContext());
 
                 joker.setText("");
                 joker.setVisibility(View.INVISIBLE);
@@ -686,7 +695,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_card_1.getContext(), field_card_2.getContext(), field_card_3.getContext(),
                         field_card_4.getContext(), field_card_5.getContext(), field_joker_1.getContext(),
                         field_joker_2.getContext(), field_joker_3.getContext(), field_joker_4.getContext(),
-                        field_joker_5.getContext(), center_2.getContext());
+                        field_joker_5.getContext(), center_2.getContext(), winning_1.getContext(),
+                        winning_2.getContext(), winning_3.getContext(), winning_4.getContext(),
+                        winning_5.getContext(), winning_6.getContext(), winning_7.getContext(),
+                        winning_8.getContext(), winning_9.getContext(), winning_10.getContext());
             }
             else if(choice == 2) {
                 doubling();
@@ -743,7 +755,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                             field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                             field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
-                            center_2.getContext());
+                            center_2.getContext(), winning_1.getContext(), winning_2.getContext(),
+                            winning_3.getContext(), winning_4.getContext(), winning_5.getContext(),
+                            winning_6.getContext(), winning_7.getContext(), winning_8.getContext(),
+                            winning_9.getContext(), winning_10.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -764,7 +779,10 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                             field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                             field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
-                            center_2.getContext());
+                            center_2.getContext(), winning_1.getContext(), winning_2.getContext(),
+                            winning_3.getContext(), winning_4.getContext(), winning_5.getContext(),
+                            winning_6.getContext(), winning_7.getContext(), winning_8.getContext(),
+                            winning_9.getContext(), winning_10.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

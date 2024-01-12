@@ -22,16 +22,6 @@ import static com.example.joker_card.MainClass.win10;
 import static com.example.joker_card.MainClass.winning_value;
 import static com.example.joker_card.MainClass.won;
 import static com.example.joker_card.MainClass.winning;
-import static com.example.joker_card.MainClass.winning_1;
-import static com.example.joker_card.MainClass.winning_2;
-import static com.example.joker_card.MainClass.winning_3;
-import static com.example.joker_card.MainClass.winning_4;
-import static com.example.joker_card.MainClass.winning_5;
-import static com.example.joker_card.MainClass.winning_6;
-import static com.example.joker_card.MainClass.winning_7;
-import static com.example.joker_card.MainClass.winning_8;
-import static com.example.joker_card.MainClass.winning_9;
-import static com.example.joker_card.MainClass.winning_10;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.choice;
 import static com.example.joker_card.MainClass.block;
@@ -93,11 +83,24 @@ public class Hand_2 extends Activity {
     Context context_field_joker_4;
     Context context_field_joker_5;
     Context context_center_2;
+    Context context_winning_1;
+    Context context_winning_2;
+    Context context_winning_3;
+    Context context_winning_4;
+    Context context_winning_5;
+    Context context_winning_6;
+    Context context_winning_7;
+    Context context_winning_8;
+    Context context_winning_9;
+    Context context_winning_10;
     Hand_2(Context context_table, Context context_joker, Context context_card,
            Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
            Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
            Context context_field_joker_2, Context context_field_joker_3, Context context_field_joker_4,
-           Context context_field_joker_5, Context context_center_2) {
+           Context context_field_joker_5, Context context_center_2, Context context_winning_1,
+           Context context_winning_2, Context context_winning_3, Context context_winning_4,
+           Context context_winning_5, Context context_winning_6, Context context_winning_7,
+           Context context_winning_8, Context context_winning_9, Context context_winning_10) {
 
         this.context_table = context_table;
         this.context_joker = context_joker;
@@ -113,6 +116,16 @@ public class Hand_2 extends Activity {
         this.context_field_joker_4 = context_field_joker_4;
         this.context_field_joker_5 = context_field_joker_5;
         this.context_center_2 = context_center_2;
+        this.context_winning_1 = context_winning_1;
+        this.context_winning_2 = context_winning_2;
+        this.context_winning_3 = context_winning_3;
+        this.context_winning_4 = context_winning_4;
+        this.context_winning_5 = context_winning_5;
+        this.context_winning_6 = context_winning_6;
+        this.context_winning_7 = context_winning_7;
+        this.context_winning_8 = context_winning_8;
+        this.context_winning_9 = context_winning_9;
+        this.context_winning_10 = context_winning_10;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -128,8 +141,19 @@ public class Hand_2 extends Activity {
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
         TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_1 = (TextView) ((Activity)context_winning_1).findViewById(R.id.winning_1);
+        TextView winning_2 = (TextView) ((Activity)context_winning_2).findViewById(R.id.winning_2);
+        TextView winning_3 = (TextView) ((Activity)context_winning_3).findViewById(R.id.winning_3);
+        TextView winning_4 = (TextView) ((Activity)context_winning_4).findViewById(R.id.winning_4);
+        TextView winning_5 = (TextView) ((Activity)context_winning_5).findViewById(R.id.winning_5);
+        TextView winning_6 = (TextView) ((Activity)context_winning_6).findViewById(R.id.winning_6);
+        TextView winning_7 = (TextView) ((Activity)context_winning_7).findViewById(R.id.winning_7);
+        TextView winning_8 = (TextView) ((Activity)context_winning_8).findViewById(R.id.winning_8);
+        TextView winning_9 = (TextView) ((Activity)context_winning_9).findViewById(R.id.winning_9);
+        TextView winning_10 = (TextView) ((Activity)context_winning_10).findViewById(R.id.winning_10);
 
         clearing_2();
+
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
             n1 = Card_1.n1;
