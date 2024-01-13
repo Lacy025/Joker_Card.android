@@ -32,8 +32,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     Button button_hold_5;
     Button button_low;
     Button button_high;
-    public static int c;
-    public static TextView c1;
+    public static int money;
+    public static TextView credit_value;
     int game;
     int u;
     static int ah;
@@ -226,7 +226,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_deal.setOnClickListener(this);
 
         ah1 = findViewById(R.id.auto_hold);
-        c1 = findViewById(R.id.credit_value);
+        credit_value = findViewById(R.id.credit_value);
 
         button_hold_1 = (Button) findViewById(R.id.hold_1);
         button_hold_1.setOnClickListener(this);
@@ -369,14 +369,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 runOnUiThread(() -> {
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
-                                if(c == 0 && dealing == 0) {
+                                if(money == 0 && dealing == 0) {
                                     down_left_1.setText(R.string.author);
                                     down_left_1.setVisibility(View.VISIBLE);
                                     down_right_1.setVisibility(View.INVISIBLE);
                                     ah1.setTextColor(Color.BLUE);
                                     ah = 1;
                                 }
-                                if(c > 0 && dealing == 0) {
+                                if(money > 0 && dealing == 0) {
                                     down_left_1.setVisibility(View.INVISIBLE);
                                     down_right_1.setVisibility(View.INVISIBLE);
                                     center_1.setText(R.string.choose_bet);
@@ -384,7 +384,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                     button_take.setText(R.string.auto_hold);
                                     button_deal.setText(R.string.deal_cards);
                                 }
-                                if(c > 0 && dealing == 2) {
+                                if(money > 0 && dealing == 2) {
                                     center_1.setText(R.string.pick_cards);
                                     center_1.setVisibility(View.VISIBLE);
                                     button_take.setText(R.string.clear_cards);
@@ -396,14 +396,14 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             }, 1000);
                     new Handler(Looper.getMainLooper()).postDelayed(
                             () -> {
-                                if(c == 0 && dealing == 0) {
+                                if(money == 0 && dealing == 0) {
                                     down_left_1.setVisibility(View.INVISIBLE);
                                     down_right_1.setText(R.string.serbia_2023);
                                     down_right_1.setVisibility(View.VISIBLE);
                                     ah1.setTextColor(Color.BLUE);
                                     ah = 1;
                                 }
-                                if((c > 0 && dealing == 0) || (c > 0 && dealing == 2)) {
+                                if((money > 0 && dealing == 0) || (money > 0 && dealing == 2)) {
                                     down_left_1.setText("");
                                     down_left_1.setVisibility(View.INVISIBLE);
                                     down_right_1.setVisibility(View.INVISIBLE);
@@ -424,11 +424,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             public void run() {
                 runOnUiThread(() -> new Handler((Looper.getMainLooper())).postDelayed(
                         () -> {
-                            if(dealing == 0 && c > 0 && u > c) {
-                                u = c;
+                            if(dealing == 0 && money > 0 && u > money) {
+                                u = money;
                                 Bet();
                             }
-                            if(dealing == 0 && c==0 && game == 1) {
+                            if(dealing == 0 && money==0 && game == 1) {
                                 u = 1;
                                 Bet();
                             }
@@ -492,26 +492,26 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
         int pressed = view.getId();
         if(pressed == R.id.credit) {
-            if (c < 4901 && dealing == 0) {
+            if (money < 4901 && dealing == 0) {
                 intro();
                 credit();
                 game = 1;
-                c += 100;
-                c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+                money += 100;
+                credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
             }
         }
         if(pressed == R.id.bet) {
-            if(c > 0 && dealing == 0) {
+            if(money > 0 && dealing == 0) {
                 bet();
                 u += 1;
-                if(u==99 || u > c) {
+                if(u==99 || u > money) {
                     u = 1;
                 }
                 Bet();
             }
         }
         if(pressed == R.id.take) {
-            if (c > 0 && dealing == 0) {
+            if (money > 0 && dealing == 0) {
                 if (ah == 1) {
                     ah1.setTextColor(Color.BLACK);
                     ah = 0;
@@ -548,7 +548,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
         }
         if(pressed == R.id.deal) {
-            if((c > 0 && dealing == 0) || (c > 0 && profit == 1)) {
+            if((money > 0 && dealing == 0) || (money > 0 && profit == 1)) {
                 if(profit == 1) {
                     intro();
                     Cashed.handler9.removeCallbacks(Cashed.runnable9);
@@ -621,8 +621,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 center_1.setText("");
                 center_1.setVisibility(View.INVISIBLE);
 
-                c = c - u;
-                c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+                money = money - u;
+                credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
 
                 field_card_1.setVisibility(View.VISIBLE);
                 field_card_2.setVisibility(View.VISIBLE);
@@ -1087,7 +1087,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
     }
     void Start() {
-        c = 0;
+        money = 0;
         u = 1;
         ah = 1;
         dealing = 0;
@@ -1115,7 +1115,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         audio_intro = MediaPlayer.create(this, R.raw.intro);
     }
     void credit() {
-        if (c == 0 && game == 0) {
+        if (money == 0 && game == 0) {
             game = 1;
             if(audio_intro != null) {
                 audio_intro.reset();

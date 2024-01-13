@@ -3,8 +3,8 @@ package com.example.joker_card;
 import static com.example.joker_card.MainClass.Doubling;
 import static com.example.joker_card.MainClass.audio_count_1;
 import static com.example.joker_card.MainClass.audio_count_100;
-import static com.example.joker_card.MainClass.c;
-import static com.example.joker_card.MainClass.c1;
+import static com.example.joker_card.MainClass.money;
+import static com.example.joker_card.MainClass.credit_value;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.doubling;
 
@@ -202,8 +202,8 @@ public class TakingHalf extends Activity {
 
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
-        c += 1;
-        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+        money += 1;
+        credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
         cash -= 1;
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_1.start();
@@ -212,8 +212,8 @@ public class TakingHalf extends Activity {
 
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
-        c += 100;
-        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+        money += 100;
+        credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
         cash -= 100;
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
@@ -222,8 +222,8 @@ public class TakingHalf extends Activity {
 
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
-        c += half_1;
-        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+        money += half_1;
+        credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
         cash -= half_1;
         deo = cash;
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
@@ -233,8 +233,8 @@ public class TakingHalf extends Activity {
 
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
-        c += half_2;
-        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+        money += half_2;
+        credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
         cash -= half_2;
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();

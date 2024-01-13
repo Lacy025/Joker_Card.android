@@ -7,8 +7,8 @@ import static com.example.joker_card.MainClass.audio_intro;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.doubling;
 import static com.example.joker_card.MainClass.profit;
-import static com.example.joker_card.MainClass.c;
-import static com.example.joker_card.MainClass.c1;
+import static com.example.joker_card.MainClass.money;
+import static com.example.joker_card.MainClass.credit_value;
 
 import android.app.Activity;
 import android.content.Context;
@@ -112,8 +112,8 @@ public class TakingAll extends Activity {
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
-        c += 1;
-        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+        money += 1;
+        credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
         cash -= 1;
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_1.start();
@@ -127,8 +127,8 @@ public class TakingAll extends Activity {
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
-        c += 100;
-        c1.setText(String.format(Locale.getDefault(), "%d", (c)));
+        money += 100;
+        credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
         cash -= 100;
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
