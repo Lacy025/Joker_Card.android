@@ -35,7 +35,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static int money;
     public static TextView credit_value;
     int game;
-    int u;
+    int bet_value;
     static int ah;
     int d1;
     int d2;
@@ -424,12 +424,12 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             public void run() {
                 runOnUiThread(() -> new Handler((Looper.getMainLooper())).postDelayed(
                         () -> {
-                            if(dealing == 0 && money > 0 && u > money) {
-                                u = money;
+                            if(dealing == 0 && money > 0 && bet_value > money) {
+                                bet_value = money;
                                 Bet();
                             }
                             if(dealing == 0 && money==0 && game == 1) {
-                                u = 1;
+                                bet_value = 1;
                                 Bet();
                             }
                             if(dealing == 1) {
@@ -503,9 +503,9 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         if(pressed == R.id.bet) {
             if(money > 0 && dealing == 0) {
                 bet();
-                u += 1;
-                if(u==99 || u > money) {
-                    u = 1;
+                bet_value += 1;
+                if(bet_value == 99 || bet_value > money) {
+                    bet_value = 1;
                 }
                 Bet();
             }
@@ -621,7 +621,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 center_1.setText("");
                 center_1.setVisibility(View.INVISIBLE);
 
-                money = money - u;
+                money = money - bet_value;
                 credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
 
                 field_card_1.setVisibility(View.VISIBLE);
@@ -1088,7 +1088,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     }
     void Start() {
         money = 0;
-        u = 1;
+        bet_value = 1;
         ah = 1;
         dealing = 0;
         stop = 0;
@@ -1146,17 +1146,17 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         final TextView d_10 = findViewById(R.id.value_10);
         winning_value = findViewById(R.id.winning_value);
 
-        u1.setText(String.format(Locale.getDefault(), "%d", (u)));
-        win1 = d1 * u;
-        win2 = d2 * u;
-        win3 = d3 * u;
-        win4 = d4 * u;
-        win5 = d5 * u;
-        win6 = d6 * u;
-        win7 = d7 * u;
-        win8 = d8 * u;
-        win9 = d9 * u;
-        win10 = d10 * u;
+        u1.setText(String.format(Locale.getDefault(), "%d", (bet_value)));
+        win1 = d1 * bet_value;
+        win2 = d2 * bet_value;
+        win3 = d3 * bet_value;
+        win4 = d4 * bet_value;
+        win5 = d5 * bet_value;
+        win6 = d6 * bet_value;
+        win7 = d7 * bet_value;
+        win8 = d8 * bet_value;
+        win9 = d9 * bet_value;
+        win10 = d10 * bet_value;
 
         d_1.setText(String.format(Locale.getDefault(), "%d", (win1)));
         d_2.setText(String.format(Locale.getDefault(), "%d", (win2)));
