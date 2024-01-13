@@ -51,12 +51,14 @@ public class TakingHalf extends Activity {
     Context context_winning_value;
     Context context_button_take;
     Context context_button_deal;
+    Context context_button_hold_1;
+    Context context_button_hold_5;
     TakingHalf(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
                Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
                Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
                Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
                Context context_center_2, Context context_winning_value, Context context_button_take,
-               Context context_button_deal) {
+               Context context_button_deal, Context context_button_hold_1, Context context_button_hold_5) {
 
         this.context_field_win_1 = context_field_win_1;
         this.context_field_win_2 = context_field_win_2;
@@ -74,11 +76,15 @@ public class TakingHalf extends Activity {
         this.context_winning_value = context_winning_value;
         this.context_button_take = context_button_take;
         this.context_button_deal = context_button_deal;
+        this.context_button_hold_1 = context_button_hold_1;
+        this.context_button_hold_5 = context_button_hold_5;
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
         Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        Button button_hold_1 = (Button) ((Activity)context_button_hold_1).findViewById(R.id.hold_1);
+        Button button_hold_5 = (Button) ((Activity)context_button_hold_5).findViewById(R.id.hold_5);
 
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
@@ -136,7 +142,7 @@ public class TakingHalf extends Activity {
                                     context_field_win_7, context_field_win_8, context_field_win_9,
                                     context_field_win_10, context_field_win_11, context_field_win_12,
                                     context_center_2, winning_value.getContext(), button_take.getContext(),
-                                    button_deal.getContext());
+                                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
                             try {
                                 Thread.sleep(1000);
                             } catch (InterruptedException e) {
@@ -183,7 +189,7 @@ public class TakingHalf extends Activity {
                                     context_field_win_7, context_field_win_8, context_field_win_9,
                                     context_field_win_10, context_field_win_11, context_field_win_12,
                                     context_center_2, winning_value.getContext(), button_take.getContext(),
-                                    button_deal.getContext());
+                                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
                             handler15.removeCallbacks(runnable15);
                         }
                     }
@@ -238,7 +244,7 @@ public class TakingHalf extends Activity {
                 Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
                 Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
                 Context context_center_2, Context context_winning_value, Context context_button_take,
-                Context context_button_deal) {
+                Context context_button_deal, Context context_button_hold_1, Context context_button_hold_5) {
 
         ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
         ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
@@ -256,6 +262,8 @@ public class TakingHalf extends Activity {
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
         Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        Button button_hold_1 = (Button) ((Activity)context_button_hold_1).findViewById(R.id.hold_1);
+        Button button_hold_5 = (Button) ((Activity)context_button_hold_5).findViewById(R.id.hold_5);
 
         handler16.removeCallbacks(runnable16);
         center_2.setVisibility(View.INVISIBLE);
@@ -268,6 +276,6 @@ public class TakingHalf extends Activity {
                 field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                 field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
                 center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                button_deal.getContext());
+                button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
     }
 }

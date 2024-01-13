@@ -3,6 +3,7 @@ package com.example.joker_card;
 import android.app.Activity;
 import android.content.Context;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -67,6 +68,11 @@ public class Clearing extends Activity {
     Context context_high_9;
     Context context_high_10;
     Context context_high_11;
+    Context context_button_hold_1;
+    Context context_button_hold_2;
+    Context context_button_hold_3;
+    Context context_button_hold_4;
+    Context context_button_hold_5;
     Clearing(Context context_table, Context context_down_left_2, Context context_down_right_2,
              Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
              Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
@@ -85,7 +91,8 @@ public class Clearing extends Activity {
              Context context_low_10, Context context_low_11, Context context_high_1, Context context_high_2,
              Context context_high_3, Context context_high_4, Context context_high_5, Context context_high_6,
              Context context_high_7, Context context_high_8, Context context_high_9, Context context_high_10,
-             Context context_high_11) {
+             Context context_high_11, Context context_button_hold_1, Context context_button_hold_2,
+             Context context_button_hold_3, Context context_button_hold_4, Context context_button_hold_5) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -147,6 +154,11 @@ public class Clearing extends Activity {
         this.context_high_9 = context_high_9;
         this.context_high_10 = context_high_10;
         this.context_high_11 = context_high_11;
+        this.context_button_hold_1 = context_button_hold_1;
+        this.context_button_hold_2 = context_button_hold_2;
+        this.context_button_hold_3 = context_button_hold_3;
+        this.context_button_hold_4 = context_button_hold_4;
+        this.context_button_hold_5 = context_button_hold_5;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -208,13 +220,18 @@ public class Clearing extends Activity {
         TextView high_9 = (TextView) ((Activity)context_high_9).findViewById(R.id.high_9);
         TextView high_10 = (TextView) ((Activity)context_high_10).findViewById(R.id.high_10);
         TextView high_11 = (TextView) ((Activity)context_high_11).findViewById(R.id.high_11);
+        Button button_hold_1 = (Button) ((Activity)context_button_hold_1).findViewById(R.id.hold_1);
+        Button button_hold_2 = (Button) ((Activity)context_button_hold_2).findViewById(R.id.hold_2);
+        Button button_hold_3 = (Button) ((Activity)context_button_hold_3).findViewById(R.id.hold_3);
+        Button button_hold_4 = (Button) ((Activity)context_button_hold_4).findViewById(R.id.hold_4);
+        Button button_hold_5 = (Button) ((Activity)context_button_hold_5).findViewById(R.id.hold_5);
 
         center_2.setVisibility(View.VISIBLE);
-        MainClass.button_hold_1.setVisibility(View.VISIBLE);
-        MainClass.button_hold_2.setVisibility(View.VISIBLE);
-        MainClass.button_hold_3.setVisibility(View.VISIBLE);
-        MainClass.button_hold_4.setVisibility(View.VISIBLE);
-        MainClass.button_hold_5.setVisibility(View.VISIBLE);
+        button_hold_1.setVisibility(View.VISIBLE);
+        button_hold_2.setVisibility(View.VISIBLE);
+        button_hold_3.setVisibility(View.VISIBLE);
+        button_hold_4.setVisibility(View.VISIBLE);
+        button_hold_5.setVisibility(View.VISIBLE);
         table.setVisibility(View.INVISIBLE);
         winning.setVisibility(View.INVISIBLE);
         winning_1.setVisibility(View.INVISIBLE);

@@ -1,11 +1,6 @@
 package com.example.joker_card;
 
 import static com.example.joker_card.MainClass.audio_winner;
-import static com.example.joker_card.MainClass.button_hold_1;
-import static com.example.joker_card.MainClass.button_hold_2;
-import static com.example.joker_card.MainClass.button_hold_3;
-import static com.example.joker_card.MainClass.button_hold_4;
-import static com.example.joker_card.MainClass.button_hold_5;
 import static com.example.joker_card.MainClass.delaying;
 import static com.example.joker_card.MainClass.win1;
 import static com.example.joker_card.MainClass.win2;
@@ -22,10 +17,10 @@ import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.choice;
 import static com.example.joker_card.MainClass.block;
 import static com.example.joker_card.MainClass.dealing;
-import static com.example.joker_card.MainClass.clearing_2;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
@@ -94,6 +89,11 @@ public class Hand_2 extends Activity {
     Context context_winning_value;
     Context context_button_take;
     Context context_button_deal;
+    Context context_button_hold_1;
+    Context context_button_hold_2;
+    Context context_button_hold_3;
+    Context context_button_hold_4;
+    Context context_button_hold_5;
     Hand_2(Context context_table, Context context_joker, Context context_card,
            Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
            Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
@@ -103,7 +103,8 @@ public class Hand_2 extends Activity {
            Context context_winning_5, Context context_winning_6, Context context_winning_7,
            Context context_winning_8, Context context_winning_9, Context context_winning_10,
            Context context_winning, Context context_winning_value, Context context_button_take,
-           Context context_button_deal) {
+           Context context_button_deal, Context context_button_hold_1, Context context_button_hold_2,
+           Context context_button_hold_3, Context context_button_hold_4, Context context_button_hold_5) {
 
         this.context_table = context_table;
         this.context_joker = context_joker;
@@ -133,6 +134,11 @@ public class Hand_2 extends Activity {
         this.context_winning_value = context_winning_value;
         this.context_button_take = context_button_take;
         this.context_button_deal = context_button_deal;
+        this.context_button_hold_1 = context_button_hold_1;
+        this.context_button_hold_2 = context_button_hold_2;
+        this.context_button_hold_3 = context_button_hold_3;
+        this.context_button_hold_4 = context_button_hold_4;
+        this.context_button_hold_5 = context_button_hold_5;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -162,8 +168,17 @@ public class Hand_2 extends Activity {
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
         Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        Button button_hold_1 = (Button) ((Activity)context_button_hold_1).findViewById(R.id.hold_1);
+        Button button_hold_2 = (Button) ((Activity)context_button_hold_2).findViewById(R.id.hold_2);
+        Button button_hold_3 = (Button) ((Activity)context_button_hold_3).findViewById(R.id.hold_3);
+        Button button_hold_4 = (Button) ((Activity)context_button_hold_4).findViewById(R.id.hold_4);
+        Button button_hold_5 = (Button) ((Activity)context_button_hold_5).findViewById(R.id.hold_5);
 
-        clearing_2();
+        button_hold_1.setBackgroundColor(Color.parseColor("#000000"));
+        button_hold_2.setBackgroundColor(Color.parseColor("#000000"));
+        button_hold_3.setBackgroundColor(Color.parseColor("#000000"));
+        button_hold_4.setBackgroundColor(Color.parseColor("#000000"));
+        button_hold_5.setBackgroundColor(Color.parseColor("#000000"));
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
@@ -812,7 +827,11 @@ public class Hand_2 extends Activity {
                     }
                 }
             }
-            clearing_2();
+            button_hold_1.setBackgroundColor(Color.parseColor("#000000"));
+            button_hold_2.setBackgroundColor(Color.parseColor("#000000"));
+            button_hold_3.setBackgroundColor(Color.parseColor("#000000"));
+            button_hold_4.setBackgroundColor(Color.parseColor("#000000"));
+            button_hold_5.setBackgroundColor(Color.parseColor("#000000"));
 
             if (Five_of_a_kind == 1) {
                 table.setVisibility(View.VISIBLE);
