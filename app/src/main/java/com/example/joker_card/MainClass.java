@@ -37,25 +37,25 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     int game;
     int u;
     static int ah;
-    final int d1 = 1100;
+    int d1;
+    int d2;
+    int d3;
+    int d4;
+    int d5;
+    int d6;
+    int d7;
+    int d8;
+    int d9;
+    int d10;
     public static int win1;
-    final int d2 = 500;
     public static int win2;
-    final int d3 = 100;
     public static int win3;
-    final int d4 = 40;
     public static int win4;
-    final int d5 = 10;
     public static int win5;
-    final int d6 = 7;
     public static int win6;
-    final int d7 = 5;
     public static int win7;
-    final int d8 = 3;
     public static int win8;
-    final int d9 = 2;
     public static int win9;
-    final int d10 = 1;
     public static int win10;
     public static int dealing;
     public static int stop;
@@ -373,6 +373,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                     down_left_1.setText(R.string.author);
                                     down_left_1.setVisibility(View.VISIBLE);
                                     down_right_1.setVisibility(View.INVISIBLE);
+                                    ah1.setTextColor(Color.BLUE);
+                                    ah = 1;
                                 }
                                 if(c > 0 && dealing == 0) {
                                     down_left_1.setVisibility(View.INVISIBLE);
@@ -398,6 +400,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                     down_left_1.setVisibility(View.INVISIBLE);
                                     down_right_1.setText(R.string.serbia_2023);
                                     down_right_1.setVisibility(View.VISIBLE);
+                                    ah1.setTextColor(Color.BLUE);
+                                    ah = 1;
                                 }
                                 if((c > 0 && dealing == 0) || (c > 0 && dealing == 2)) {
                                     down_left_1.setText("");
@@ -424,7 +428,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                 u = c;
                                 Bet();
                             }
-                            if(dealing == 0 && c==0 && game==1) {
+                            if(dealing == 0 && c==0 && game == 1) {
                                 u = 1;
                                 Bet();
                             }
@@ -1090,6 +1094,17 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         stop = 0;
         choice = 0;
         cash = 0;
+
+        d1 = 1100;
+        d2 = 500;
+        d3 = 100;
+        d4 = 40;
+        d5 = 10;
+        d6 = 7;
+        d7 = 5;
+        d8 = 3;
+        d9 = 2;
+        d10 = 1;
     }
     void intro() {
         if (audio_intro != null) {
