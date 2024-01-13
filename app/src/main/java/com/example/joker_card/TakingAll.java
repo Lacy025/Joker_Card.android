@@ -8,7 +8,6 @@ import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.doubling;
 import static com.example.joker_card.MainClass.profit;
 import static com.example.joker_card.MainClass.money;
-import static com.example.joker_card.MainClass.credit_value;
 
 import android.app.Activity;
 import android.content.Context;
@@ -28,13 +27,16 @@ public class TakingAll extends Activity {
     Context context_winning_value;
     Context context_button_take;
     Context context_button_deal;
+    Context context_credit_value;
     TakingAll(Context context_center_2, Context context_winning_value,
-              Context context_button_take, Context context_button_deal) throws InterruptedException {
+              Context context_button_take, Context context_button_deal,
+              Context context_credit_value) throws InterruptedException {
 
         this.context_center_2 = context_center_2;
         this.context_winning_value = context_winning_value;
         this.context_button_take = context_button_take;
         this.context_button_deal = context_button_deal;
+        this.context_credit_value = context_credit_value;
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
         Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
@@ -110,6 +112,7 @@ public class TakingAll extends Activity {
     void minus_1(Context context_winning_value, Context context_button_deal) {
 
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
         money += 1;
@@ -125,6 +128,7 @@ public class TakingAll extends Activity {
     void minus_100(Context context_winning_value, Context context_button_deal) {
 
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
         money += 100;

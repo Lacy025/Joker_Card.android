@@ -103,6 +103,9 @@ public class High extends Activity {
     Context context_button_hold_5;
     Context context_button_low;
     Context context_button_high;
+    Context context_credit_value;
+    Context context_low;
+    Context context_high;
     High(Context context_table, Context context_down_left_2, Context context_down_right_2,
          Context context_joker, Context context_card, Context context_field_card_1,
          Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
@@ -124,7 +127,8 @@ public class High extends Activity {
          Context context_high_9, Context context_high_10, Context context_high_11, Context context_button_take,
          Context context_button_deal, Context context_button_hold_1, Context context_button_hold_2,
          Context context_button_hold_3, Context context_button_hold_4, Context context_button_hold_5,
-         Context context_button_low, Context context_button_high) throws InterruptedException {
+         Context context_button_low, Context context_button_high, Context context_credit_value,
+         Context context_low, Context context_high) throws InterruptedException {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -197,6 +201,9 @@ public class High extends Activity {
         this.context_button_hold_5 = context_button_hold_5;
         this.context_button_low = context_button_low;
         this.context_button_high = context_button_high;
+        this.context_credit_value = context_credit_value;
+        this.context_low = context_low;
+        this.context_high = context_high;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -226,6 +233,8 @@ public class High extends Activity {
         TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
         TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView low = (TextView) ((Activity)context_low).findViewById(R.id.low);
+        TextView high = (TextView) ((Activity)context_high).findViewById(R.id.high);
         TextView winning_1 = (TextView) ((Activity)context_winning_1).findViewById(R.id.winning_1);
         TextView winning_2 = (TextView) ((Activity)context_winning_2).findViewById(R.id.winning_2);
         TextView winning_3 = (TextView) ((Activity)context_winning_3).findViewById(R.id.winning_3);
@@ -238,6 +247,7 @@ public class High extends Activity {
         TextView winning_10 = (TextView) ((Activity)context_winning_10).findViewById(R.id.winning_10);
         TextView winning = (TextView) ((Activity)context_winning).findViewById(R.id.winning);
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
         TextView low_1 = (TextView) ((Activity)context_low_1).findViewById(R.id.low_1);
         TextView low_2 = (TextView) ((Activity)context_low_2).findViewById(R.id.low_2);
         TextView low_3 = (TextView) ((Activity)context_low_3).findViewById(R.id.low_3);
@@ -371,7 +381,7 @@ public class High extends Activity {
                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                         field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
                         center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                        button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                        button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
             }
             else {
                 cash = 0;

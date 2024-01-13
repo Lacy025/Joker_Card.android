@@ -33,7 +33,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     Button button_low;
     Button button_high;
     public static int money;
-    public static TextView credit_value;
+    TextView credit_value;
     int game;
     int bet_value;
     static int auto_hold_value;
@@ -167,8 +167,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     TextView winning_10;
     TextView winning;
     TextView winning_value;
-    static TextView low;
-    static TextView high;
+    TextView low;
+    TextView high;
     TextView low_1;
     TextView low_2;
     TextView low_3;
@@ -746,7 +746,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                         field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
                         center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                        button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                        button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext(),
+                        credit_value.getContext(), low.getContext(), high.getContext());
             }
         }
         if(pressed == R.id.hold_1) {
@@ -801,7 +802,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             high_9.getContext(), high_10.getContext(), high_11.getContext(), button_take.getContext(),
                             button_deal.getContext(), button_hold_1.getContext(), button_hold_2.getContext(),
                             button_hold_3.getContext(), button_hold_4.getContext(), button_hold_5.getContext(),
-                            button_low.getContext(), button_high.getContext());
+                            button_low.getContext(), button_high.getContext(), credit_value.getContext(),
+                            low.getContext(), high.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -834,7 +836,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             high_9.getContext(), high_10.getContext(), high_11.getContext(), button_take.getContext(),
                             button_deal.getContext(), button_hold_1.getContext(), button_hold_2.getContext(),
                             button_hold_3.getContext(), button_hold_4.getContext(), button_hold_5.getContext(),
-                            button_low.getContext(), button_high.getContext());
+                            button_low.getContext(), button_high.getContext(), credit_value.getContext(),
+                            low.getContext(), high.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -882,14 +885,15 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                 field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
                 center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
     }
     public static void Doubling(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
                                 Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
                                 Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
                                 Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
                                 Context context_center_2, Context context_winning_value, Context context_button_take,
-                                Context context_button_deal, Context context_button_hold_1, Context context_button_hold_5) {
+                                Context context_button_deal, Context context_credit_value,
+                                Context context_low, Context context_high) {
 
         ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
         ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
@@ -904,18 +908,19 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
         ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView low = (TextView) ((Activity)context_low).findViewById(R.id.low);
+        TextView high = (TextView) ((Activity)context_high).findViewById(R.id.high);
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
         Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
-        Button button_hold_1 = (Button) ((Activity)context_button_hold_1).findViewById(R.id.hold_1);
-        Button button_hold_5 = (Button) ((Activity)context_button_hold_5).findViewById(R.id.hold_5);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.VISIBLE);
             dk1 = (int) Math.floor(Math.random() * 48) + 1;
             cheat = dk1;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 2) {
             field_win_2.setVisibility(View.VISIBLE);
@@ -925,7 +930,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk2;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 3) {
             field_win_3.setVisibility(View.VISIBLE);
@@ -935,7 +940,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk3;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 4) {
             field_win_4.setVisibility(View.VISIBLE);
@@ -945,7 +950,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk4;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 5) {
             field_win_5.setVisibility(View.VISIBLE);
@@ -956,7 +961,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk5;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 6) {
             field_win_6.setVisibility(View.VISIBLE);
@@ -967,7 +972,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk6;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 7) {
             field_win_7.setVisibility(View.VISIBLE);
@@ -978,7 +983,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk7;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 8) {
             field_win_8.setVisibility(View.VISIBLE);
@@ -989,7 +994,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk8;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 9) {
             field_win_9.setVisibility(View.VISIBLE);
@@ -1000,7 +1005,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk9;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 10) {
             field_win_10.setVisibility(View.VISIBLE);
@@ -1012,7 +1017,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk10;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 11) {
             field_win_11.setVisibility(View.VISIBLE);
@@ -1024,39 +1029,33 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             }
             cheat = dk11;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                    button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext());
+                    button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
         if(double_card == 12) {
             handler0.removeCallbacks(runnable0);
             field_win_12.setVisibility(View.VISIBLE);
             Block(center_2.getContext(), winning_value.getContext(),
-                    button_take.getContext(), button_deal.getContext());
+                    button_take.getContext(), button_deal.getContext(),
+                    credit_value.getContext());
         }
     }
 
     static void Low_High(Context context_center_2, Context context_winning_value, Context context_button_take,
-                         Context context_button_deal, Context context_button_hold_1, Context context_button_hold_5) {
+                         Context context_button_deal, Context context_credit_value, Context context_low,
+                         Context context_high) {
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView low = (TextView) ((Activity)context_low).findViewById(R.id.low);
+        TextView high = (TextView) ((Activity)context_high).findViewById(R.id.high);
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
         Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
-        Button button_hold_1 = (Button) ((Activity)context_button_hold_1).findViewById(R.id.hold_1);
-        Button button_hold_5 = (Button) ((Activity)context_button_hold_5).findViewById(R.id.hold_5);
-
-/**/
-        if(cheat < 25) {
-            button_hold_1.setVisibility(View.VISIBLE);
-            button_hold_5.setVisibility(View.INVISIBLE);
-        }
-        else {
-            button_hold_5.setVisibility(View.VISIBLE);
-            button_hold_1.setVisibility(View.INVISIBLE);
-        }
 
         if(cash > 9999) {
             Block(center_2.getContext(), winning_value.getContext(),
-                    button_take.getContext(), button_deal.getContext());
+                    button_take.getContext(), button_deal.getContext(),
+                    credit_value.getContext());
         }
         else {
             final int[] high_low = {1};
@@ -1203,14 +1202,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         k3 = (int) Math.floor(Math.random() * 53);
         k4 = (int) Math.floor(Math.random() * 53);
         k5 = (int) Math.floor(Math.random() * 53);
-/*
-        k1=2;
-
-        k2=14;
-        k3=1;
-        k4=9;
-        k5=16;
-*/
 
     }
     void Deal_Cards_1() {
@@ -1460,16 +1451,18 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         taking = 1;
         try {
             new TakingAll(center_2.getContext(), winning_value.getContext(),
-                    button_take.getContext(), button_deal.getContext());
+                    button_take.getContext(), button_deal.getContext(), credit_value.getContext());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
     public static void Block(Context context_center_2, Context context_winning_value,
-                             Context context_button_take, Context context_button_deal) {
+                             Context context_button_take, Context context_button_deal,
+                             Context context_credit_value) {
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
         Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
         Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
@@ -1479,7 +1472,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         taking = 1;
         try {
             new TakingAll(center_2.getContext(), winning_value.getContext(),
-                    button_take.getContext(), button_deal.getContext());
+                    button_take.getContext(), button_deal.getContext(),
+                    credit_value.getContext());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
