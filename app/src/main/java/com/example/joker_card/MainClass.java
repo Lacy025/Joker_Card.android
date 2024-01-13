@@ -36,7 +36,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static TextView credit_value;
     int game;
     int bet_value;
-    static int ah;
+    static int auto_hold_value;
     int d1;
     int d2;
     int d3;
@@ -113,7 +113,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static MediaPlayer audio_low;
     public static MediaPlayer audio_high;
     public static MediaPlayer audio_bingo;
-    public TextView ah1;
+    public TextView auto_hold_view;
     ImageView field_card_1;
     ImageView field_card_2;
     ImageView field_card_3;
@@ -225,7 +225,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         button_deal = (Button) findViewById(R.id.deal);
         button_deal.setOnClickListener(this);
 
-        ah1 = findViewById(R.id.auto_hold);
+        auto_hold_view = findViewById(R.id.auto_hold);
         credit_value = findViewById(R.id.credit_value);
 
         button_hold_1 = (Button) findViewById(R.id.hold_1);
@@ -373,8 +373,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                     down_left_1.setText(R.string.author);
                                     down_left_1.setVisibility(View.VISIBLE);
                                     down_right_1.setVisibility(View.INVISIBLE);
-                                    ah1.setTextColor(Color.BLUE);
-                                    ah = 1;
+                                    auto_hold_view.setTextColor(Color.BLUE);
+                                    auto_hold_value = 1;
                                 }
                                 if(money > 0 && dealing == 0) {
                                     down_left_1.setVisibility(View.INVISIBLE);
@@ -400,8 +400,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                     down_left_1.setVisibility(View.INVISIBLE);
                                     down_right_1.setText(R.string.serbia_2023);
                                     down_right_1.setVisibility(View.VISIBLE);
-                                    ah1.setTextColor(Color.BLUE);
-                                    ah = 1;
+                                    auto_hold_view.setTextColor(Color.BLUE);
+                                    auto_hold_value = 1;
                                 }
                                 if((money > 0 && dealing == 0) || (money > 0 && dealing == 2)) {
                                     down_left_1.setText("");
@@ -451,7 +451,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                         hand_5.getContext(), hand_6.getContext(),
                                         hand_7.getContext(),hand_8.getContext(),
                                         hand_9.getContext(), hand_10.getContext());
-                                if(ah == 1) {
+                                if(auto_hold_value == 1) {
                                     Stop();
                                 }
                                 else {
@@ -512,13 +512,13 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         }
         if(pressed == R.id.take) {
             if (money > 0 && dealing == 0) {
-                if (ah == 1) {
-                    ah1.setTextColor(Color.BLACK);
-                    ah = 0;
+                if (auto_hold_value == 1) {
+                    auto_hold_view.setTextColor(Color.BLACK);
+                    auto_hold_value = 0;
                 }
                 else {
-                    ah1.setTextColor(Color.BLUE);
-                    ah = 1;
+                    auto_hold_view.setTextColor(Color.BLUE);
+                    auto_hold_value = 1;
                 }
                 auto_hold();
             }
@@ -1089,7 +1089,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     void Start() {
         money = 0;
         bet_value = 1;
-        ah = 1;
+        auto_hold_value = 1;
         dealing = 0;
         stop = 0;
         choice = 0;

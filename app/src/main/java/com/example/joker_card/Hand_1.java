@@ -1,6 +1,6 @@
 package com.example.joker_card;
 
-import static com.example.joker_card.MainClass.ah;
+import static com.example.joker_card.MainClass.auto_hold_value;
 import static com.example.joker_card.MainClass.stop;
 
 import android.app.Activity;
@@ -1433,7 +1433,7 @@ public class Hand_1 extends Activity {
             if (High_pair == 1) {
                 hand_10.setVisibility(View.VISIBLE);
             }
-            if(ah == 0) {
+            if(auto_hold_value == 0) {
                 hold1 = 0;
                 hold2 = 0;
                 hold3 = 0;
