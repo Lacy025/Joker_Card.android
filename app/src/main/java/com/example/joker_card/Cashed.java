@@ -88,6 +88,8 @@ public class Cashed extends Activity {
     Context context_button_hold_3;
     Context context_button_hold_4;
     Context context_button_hold_5;
+    Context context_button_low;
+    Context context_button_high;
     Cashed(Context context_table, Context context_down_left_2, Context context_down_right_2,
            Context context_joker, Context context_card, Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
            Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
@@ -108,7 +110,8 @@ public class Cashed extends Activity {
            Context context_high_7, Context context_high_8, Context context_high_9, Context context_high_10,
            Context context_high_11, Context context_button_take, Context context_button_deal,
            Context context_button_hold_1, Context context_button_hold_2, Context context_button_hold_3,
-           Context context_button_hold_4, Context context_button_hold_5) {
+           Context context_button_hold_4, Context context_button_hold_5, Context context_button_low,
+           Context context_button_high) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -179,6 +182,8 @@ public class Cashed extends Activity {
         this.context_button_hold_3 = context_button_hold_3;
         this.context_button_hold_4 = context_button_hold_4;
         this.context_button_hold_5 = context_button_hold_5;
+        this.context_button_low = context_button_low;
+        this.context_button_high = context_button_high;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -249,6 +254,8 @@ public class Cashed extends Activity {
         Button button_hold_3 = (Button) ((Activity)context_button_hold_3).findViewById(R.id.hold_3);
         Button button_hold_4 = (Button) ((Activity)context_button_hold_4).findViewById(R.id.hold_4);
         Button button_hold_5 = (Button) ((Activity)context_button_hold_5).findViewById(R.id.hold_5);
+        Button button_low = (Button) ((Activity)context_button_low).findViewById(R.id.double_low);
+        Button button_high = (Button) ((Activity)context_button_high).findViewById(R.id.double_high);
 
         if(missed == 1) {
             pause = 2000;
@@ -300,7 +307,8 @@ public class Cashed extends Activity {
                             high_4.getContext(), high_5.getContext(), high_6.getContext(), high_7.getContext(),
                             high_8.getContext(), high_9.getContext(), high_10.getContext(), high_11.getContext(),
                             button_hold_1.getContext(), button_hold_2.getContext(), button_hold_3.getContext(),
-                            button_hold_4.getContext(), button_hold_5.getContext());
+                            button_hold_4.getContext(), button_hold_5.getContext(), button_low.getContext(),
+                            button_high.getContext());
                 }
         };
         handler9.postDelayed(runnable9, pause);

@@ -30,13 +30,13 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     Button button_hold_3;
     Button button_hold_4;
     Button button_hold_5;
-    static Button button_low;
-    static Button button_high;
-    public static int c = 0;
+    Button button_low;
+    Button button_high;
+    public static int c;
     public static TextView c1;
     int game;
-    int u = 1;
-    static int ah = 1;
+    int u;
+    static int ah;
     final int d1 = 1100;
     public static int win1;
     final int d2 = 500;
@@ -214,10 +214,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        dealing = 0;
-        stop = 0;
-        choice = 0;
-        cash = 0;
+        Start();
 
         button_credit = (Button) findViewById(R.id.credit);
         button_credit.setOnClickListener(this);
@@ -480,7 +477,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                         high_5.getContext(), high_6.getContext(), high_7.getContext(), high_8.getContext(), high_9.getContext(),
                                         high_10.getContext(), high_11.getContext(), button_take.getContext(), button_deal.getContext(),
                                         button_hold_1.getContext(), button_hold_2.getContext(), button_hold_3.getContext(),
-                                        button_hold_4.getContext(), button_hold_5.getContext());
+                                        button_hold_4.getContext(), button_hold_5.getContext(), button_low.getContext(),
+                                        button_high.getContext());
                             }
                         }, 100));
             }
@@ -574,7 +572,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             high_4.getContext(), high_5.getContext(), high_6.getContext(), high_7.getContext(),
                             high_8.getContext(), high_9.getContext(), high_10.getContext(), high_11.getContext(),
                             button_hold_1.getContext(), button_hold_2.getContext(), button_hold_3.getContext(),
-                            button_hold_4.getContext(), button_hold_5.getContext());
+                            button_hold_4.getContext(), button_hold_5.getContext(), button_low.getContext(),
+                            button_high.getContext());
                 }
                 Jokers.handler1.removeCallbacks(Jokers.runnable1);
                 Jokers.handler2.removeCallbacks(Jokers.runnable2);
@@ -604,7 +603,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         high_4.getContext(), high_5.getContext(), high_6.getContext(), high_7.getContext(),
                         high_8.getContext(), high_9.getContext(), high_10.getContext(), high_11.getContext(),
                         button_hold_1.getContext(), button_hold_2.getContext(), button_hold_3.getContext(),
-                        button_hold_4.getContext(), button_hold_5.getContext());
+                        button_hold_4.getContext(), button_hold_5.getContext(), button_low.getContext(),
+                        button_high.getContext());
 
                 joker.setText("");
                 joker.setVisibility(View.INVISIBLE);
@@ -796,7 +796,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             high_5.getContext(), high_6.getContext(), high_7.getContext(), high_8.getContext(),
                             high_9.getContext(), high_10.getContext(), high_11.getContext(), button_take.getContext(),
                             button_deal.getContext(), button_hold_1.getContext(), button_hold_2.getContext(),
-                            button_hold_3.getContext(), button_hold_4.getContext(), button_hold_5.getContext());
+                            button_hold_3.getContext(), button_hold_4.getContext(), button_hold_5.getContext(),
+                            button_low.getContext(), button_high.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -828,7 +829,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                             high_5.getContext(), high_6.getContext(), high_7.getContext(), high_8.getContext(),
                             high_9.getContext(), high_10.getContext(), high_11.getContext(), button_take.getContext(),
                             button_deal.getContext(), button_hold_1.getContext(), button_hold_2.getContext(),
-                            button_hold_3.getContext(), button_hold_4.getContext(), button_hold_5.getContext());
+                            button_hold_3.getContext(), button_hold_4.getContext(), button_hold_5.getContext(),
+                            button_low.getContext(), button_high.getContext());
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -1079,6 +1081,15 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             };
             handler0.post(runnable0);
         }
+    }
+    void Start() {
+        c = 0;
+        u = 1;
+        ah = 1;
+        dealing = 0;
+        stop = 0;
+        choice = 0;
+        cash = 0;
     }
     void intro() {
         if (audio_intro != null) {

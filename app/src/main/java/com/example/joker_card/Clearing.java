@@ -73,6 +73,8 @@ public class Clearing extends Activity {
     Context context_button_hold_3;
     Context context_button_hold_4;
     Context context_button_hold_5;
+    Context context_button_low;
+    Context context_button_high;
     Clearing(Context context_table, Context context_down_left_2, Context context_down_right_2,
              Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
              Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
@@ -92,7 +94,8 @@ public class Clearing extends Activity {
              Context context_high_3, Context context_high_4, Context context_high_5, Context context_high_6,
              Context context_high_7, Context context_high_8, Context context_high_9, Context context_high_10,
              Context context_high_11, Context context_button_hold_1, Context context_button_hold_2,
-             Context context_button_hold_3, Context context_button_hold_4, Context context_button_hold_5) {
+             Context context_button_hold_3, Context context_button_hold_4, Context context_button_hold_5,
+             Context context_button_low, Context context_button_high) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -159,6 +162,8 @@ public class Clearing extends Activity {
         this.context_button_hold_3 = context_button_hold_3;
         this.context_button_hold_4 = context_button_hold_4;
         this.context_button_hold_5 = context_button_hold_5;
+        this.context_button_low = context_button_low;
+        this.context_button_high = context_button_high;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -225,6 +230,8 @@ public class Clearing extends Activity {
         Button button_hold_3 = (Button) ((Activity)context_button_hold_3).findViewById(R.id.hold_3);
         Button button_hold_4 = (Button) ((Activity)context_button_hold_4).findViewById(R.id.hold_4);
         Button button_hold_5 = (Button) ((Activity)context_button_hold_5).findViewById(R.id.hold_5);
+        Button button_low = (Button) ((Activity)context_button_low).findViewById(R.id.double_low);
+        Button button_high = (Button) ((Activity)context_button_high).findViewById(R.id.double_high);
 
         center_2.setVisibility(View.VISIBLE);
         button_hold_1.setVisibility(View.VISIBLE);
@@ -300,7 +307,7 @@ public class Clearing extends Activity {
         high_9.setVisibility(View.INVISIBLE);
         high_10.setVisibility(View.INVISIBLE);
         high_11.setVisibility(View.INVISIBLE);
-        MainClass.button_low.setVisibility(View.INVISIBLE);
-        MainClass.button_high.setVisibility(View.INVISIBLE);
+        button_low.setVisibility(View.INVISIBLE);
+        button_high.setVisibility(View.INVISIBLE);
     }
 }
