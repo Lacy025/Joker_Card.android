@@ -4,8 +4,6 @@ import static com.example.joker_card.MainClass.audio_count_1;
 import static com.example.joker_card.MainClass.audio_count_100;
 import static com.example.joker_card.MainClass.audio_winner;
 import static com.example.joker_card.MainClass.audio_intro;
-import static com.example.joker_card.MainClass.button_deal;
-import static com.example.joker_card.MainClass.button_take;
 import static com.example.joker_card.MainClass.cash;
 import static com.example.joker_card.MainClass.doubling;
 import static com.example.joker_card.MainClass.profit;
@@ -16,6 +14,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -27,12 +26,19 @@ public class TakingAll extends Activity {
     public static Runnable runnable10;
     Context context_center_2;
     Context context_winning_value;
-    TakingAll(Context context_center_2, Context context_winning_value) throws InterruptedException {
+    Context context_button_take;
+    Context context_button_deal;
+    TakingAll(Context context_center_2, Context context_winning_value,
+              Context context_button_take, Context context_button_deal) throws InterruptedException {
 
         this.context_center_2 = context_center_2;
         this.context_winning_value = context_winning_value;
+        this.context_button_take = context_button_take;
+        this.context_button_deal = context_button_deal;
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
+        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
         int winning = cash;
 
@@ -69,7 +75,7 @@ public class TakingAll extends Activity {
         };
         handler9.post(runnable9);
 
-        minus_1(context_winning_value);
+        minus_1(context_winning_value, context_button_deal);
         Thread.sleep(40);
 
         handler10 = new Handler();
@@ -78,11 +84,11 @@ public class TakingAll extends Activity {
             public void run() {
                 double winn = cash;
                 if(((int)(winn/100) * 100) != ((winn/100) * 100)) {
-                    minus_1(context_winning_value);
+                    minus_1(context_winning_value, context_button_deal);
                     handler10.postDelayed(this, 40);
                 }
                 else if((((int)(winn/100) * 100) == ((winn/100) * 100)) && winn > 0) {
-                    minus_100(context_winning_value);
+                    minus_100(context_winning_value, context_button_deal);
                     handler10.postDelayed(this, 1000);
                 }
                 else  {
@@ -101,9 +107,10 @@ public class TakingAll extends Activity {
         };
         handler10.post(runnable10);
     }
-    void minus_1(Context context_winning_value) {
+    void minus_1(Context context_winning_value, Context context_button_deal) {
 
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
         c += 1;
         c1.setText(String.format(Locale.getDefault(), "%d", (c)));
@@ -115,9 +122,10 @@ public class TakingAll extends Activity {
             button_deal.setText(R.string.deal_cards);
         }
     }
-    void minus_100(Context context_winning_value) {
+    void minus_100(Context context_winning_value, Context context_button_deal) {
 
         TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
         c += 100;
         c1.setText(String.format(Locale.getDefault(), "%d", (c)));

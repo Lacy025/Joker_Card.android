@@ -23,6 +23,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -93,6 +94,8 @@ public class Low extends Activity {
     Context context_high_9;
     Context context_high_10;
     Context context_high_11;
+    Context context_button_take;
+    Context context_button_deal;
     Low(Context context_table, Context context_down_left_2, Context context_down_right_2,
         Context context_joker, Context context_card, Context context_field_card_1,
         Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
@@ -111,7 +114,8 @@ public class Low extends Activity {
         Context context_low_8, Context context_low_9, Context context_low_10, Context context_low_11,
         Context context_high_1, Context context_high_2, Context context_high_3, Context context_high_4,
         Context context_high_5, Context context_high_6, Context context_high_7, Context context_high_8,
-        Context context_high_9, Context context_high_10, Context context_high_11) throws InterruptedException {
+        Context context_high_9, Context context_high_10, Context context_high_11, Context context_button_take,
+        Context context_button_deal) throws InterruptedException {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -175,6 +179,8 @@ public class Low extends Activity {
         this.context_high_9 = context_high_9;
         this.context_high_10 = context_high_10;
         this.context_high_11 = context_high_11;
+        this.context_button_take = context_button_take;
+        this.context_button_deal = context_button_deal;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -238,6 +244,8 @@ public class Low extends Activity {
         TextView high_9 = (TextView) ((Activity)context_high_9).findViewById(R.id.high_9);
         TextView high_10 = (TextView) ((Activity)context_high_10).findViewById(R.id.high_10);
         TextView high_11 = (TextView) ((Activity)context_high_11).findViewById(R.id.high_11);
+        Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
+        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.INVISIBLE);
@@ -339,7 +347,8 @@ public class Low extends Activity {
                         field_win_4.getContext(), field_win_5.getContext(), field_win_6.getContext(),
                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                         field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
-                        center_2.getContext(), winning_value.getContext());
+                        center_2.getContext(), winning_value.getContext(), button_take.getContext(),
+                        button_deal.getContext());
             }
             else {
                 cash = 0;
@@ -363,7 +372,8 @@ public class Low extends Activity {
                         low_8.getContext(), low_9.getContext(), low_10.getContext(), low_11.getContext(),
                         high_1.getContext(), high_2.getContext(), high_3.getContext(), high_4.getContext(),
                         high_5.getContext(), high_6.getContext(), high_7.getContext(), high_8.getContext(),
-                        high_9.getContext(), high_10.getContext(), high_11.getContext());
+                        high_9.getContext(), high_10.getContext(), high_11.getContext(), button_take.getContext(),
+                        button_deal.getContext());
             }
         };
         handler11.post(runnable11);

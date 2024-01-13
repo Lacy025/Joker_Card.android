@@ -1,18 +1,17 @@
 package com.example.joker_card;
 
-import static com.example.joker_card.MainClass.button_deal;
 import static com.example.joker_card.MainClass.taking;
 import static com.example.joker_card.MainClass.dealing;
 import static com.example.joker_card.MainClass.profit;
 import static com.example.joker_card.MainClass.won;
 import static com.example.joker_card.MainClass.missed;
 import static com.example.joker_card.MainClass.choice;
-import static com.example.joker_card.MainClass.button_take;
 
 import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -82,6 +81,8 @@ public class Cashed extends Activity {
     Context context_high_9;
     Context context_high_10;
     Context context_high_11;
+    Context context_button_take;
+    Context context_button_deal;
     Cashed(Context context_table, Context context_down_left_2, Context context_down_right_2,
            Context context_joker, Context context_card, Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
            Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
@@ -100,7 +101,7 @@ public class Cashed extends Activity {
            Context context_low_10, Context context_low_11, Context context_high_1, Context context_high_2,
            Context context_high_3, Context context_high_4, Context context_high_5, Context context_high_6,
            Context context_high_7, Context context_high_8, Context context_high_9, Context context_high_10,
-           Context context_high_11) {
+           Context context_high_11, Context context_button_take, Context context_button_deal) {
 
         this.context_table = context_table;
         this.context_down_left_2 = context_down_left_2;
@@ -164,6 +165,8 @@ public class Cashed extends Activity {
         this.context_high_9 = context_high_9;
         this.context_high_10 = context_high_10;
         this.context_high_11 = context_high_11;
+        this.context_button_take = context_button_take;
+        this.context_button_deal = context_button_deal;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
@@ -227,6 +230,8 @@ public class Cashed extends Activity {
         TextView high_9 = (TextView) ((Activity)context_high_9).findViewById(R.id.high_9);
         TextView high_10 = (TextView) ((Activity)context_high_10).findViewById(R.id.high_10);
         TextView high_11 = (TextView) ((Activity)context_high_11).findViewById(R.id.high_11);
+        Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
+        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
 
         if(missed == 1) {
             pause = 2000;
