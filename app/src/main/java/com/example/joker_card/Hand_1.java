@@ -50,16 +50,16 @@ public class Hand_1 extends Activity {
     public static int hold3;
     public static int hold4;
     public static int hold5;
-    Context context_hand_1;
-    Context context_hand_2;
-    Context context_hand_3;
-    Context context_hand_4;
-    Context context_hand_5;
-    Context context_hand_6;
-    Context context_hand_7;
-    Context context_hand_8;
-    Context context_hand_9;
-    Context context_hand_10;
+    final Context context_hand_1;
+    final Context context_hand_2;
+    final Context context_hand_3;
+    final Context context_hand_4;
+    final Context context_hand_5;
+    final Context context_hand_6;
+    final Context context_hand_7;
+    final Context context_hand_8;
+    final Context context_hand_9;
+    final Context context_hand_10;
     Hand_1(Context context_hand_1, Context context_hand_2, Context context_hand_3, Context context_hand_4, Context context_hand_5,
            Context context_hand_6, Context context_hand_7, Context context_hand_8, Context context_hand_9, Context context_hand_10) {
 

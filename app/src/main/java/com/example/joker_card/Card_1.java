@@ -15,7 +15,7 @@ import android.widget.ImageView;
 public class Card_1 extends Activity {
     public static int n1;
     public static int b1;
-    Context context_field_card_1;
+    final Context context_field_card_1;
     public Card_1(Context context_field_card_1) {
 
         this.context_field_card_1 = context_field_card_1;

@@ -21,17 +21,17 @@ import android.widget.ImageView;
 public class GambleCard extends Activity {
     int dkx;
     ImageView field_gamble;
-    Context context_field_win_1;
-    Context context_field_win_2;
-    Context context_field_win_3;
-    Context context_field_win_4;
-    Context context_field_win_5;
-    Context context_field_win_6;
-    Context context_field_win_7;
-    Context context_field_win_8;
-    Context context_field_win_9;
-    Context context_field_win_10;
-    Context context_field_win_11;
+    final Context context_field_win_1;
+    final Context context_field_win_2;
+    final Context context_field_win_3;
+    final Context context_field_win_4;
+    final Context context_field_win_5;
+    final Context context_field_win_6;
+    final Context context_field_win_7;
+    final Context context_field_win_8;
+    final Context context_field_win_9;
+    final Context context_field_win_10;
+    final Context context_field_win_11;
     GambleCard(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
                Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
                Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,

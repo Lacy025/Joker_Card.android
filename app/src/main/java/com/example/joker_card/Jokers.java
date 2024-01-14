@@ -26,18 +26,18 @@ public class Jokers extends Activity {
     public static Runnable runnable6;
     public static Runnable runnable7;
     public static Runnable runnable8;
-    Context context_joker;
-    Context context_card;
-    Context context_field_card_1;
-    Context context_field_card_2;
-    Context context_field_card_3;
-    Context context_field_card_4;
-    Context context_field_card_5;
-    Context context_field_joker_1;
-    Context context_field_joker_2;
-    Context context_field_joker_3;
-    Context context_field_joker_4;
-    Context context_field_joker_5;
+    final Context context_joker;
+    final Context context_card;
+    final Context context_field_card_1;
+    final Context context_field_card_2;
+    final Context context_field_card_3;
+    final Context context_field_card_4;
+    final Context context_field_card_5;
+    final Context context_field_joker_1;
+    final Context context_field_joker_2;
+    final Context context_field_joker_3;
+    final Context context_field_joker_4;
+    final Context context_field_joker_5;
     Jokers(Context context_joker, Context context_card, Context context_field_card_1,
            Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
            Context context_field_card_5, Context context_field_joker_1, Context context_field_joker_2,

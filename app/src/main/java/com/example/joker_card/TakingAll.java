@@ -23,11 +23,11 @@ public class TakingAll extends Activity {
     public static Handler handler10;
     public static Runnable runnable9;
     public static Runnable runnable10;
-    Context context_center_2;
-    Context context_winning_value;
-    Context context_button_take;
-    Context context_button_deal;
-    Context context_credit_value;
+    final Context context_center_2;
+    final Context context_winning_value;
+    final Context context_button_take;
+    final Context context_button_deal;
+    final Context context_credit_value;
     TakingAll(Context context_center_2, Context context_winning_value,
               Context context_button_take, Context context_button_deal,
               Context context_credit_value) throws InterruptedException {
