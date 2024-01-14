@@ -87,7 +87,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     public static int double_card;
     public static int missed;
     static int interval;
-    static int cheat;
     int hold;
     MediaPlayer audio_credit;
     MediaPlayer audio_bet;
@@ -918,7 +917,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         if(double_card == 1) {
             field_win_1.setVisibility(View.VISIBLE);
             dk1 = (int) Math.floor(Math.random() * 48) + 1;
-            cheat = dk1;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -928,7 +926,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             while(dk2 == dk1) {
                 dk2 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk2;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -938,7 +935,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             while(dk3 == dk1 || dk3 == dk2) {
                 dk3 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk3;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -948,7 +944,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
             while(dk4 == dk1 || dk4 == dk2 || dk4 == dk3) {
                 dk4 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk4;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -959,7 +954,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     dk5 == dk3 || dk5 == dk4) {
                 dk5 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk5;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -970,7 +964,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     dk6 == dk4 || dk6 == dk5) {
                 dk6 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk6;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -981,7 +974,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     dk7 == dk4 || dk7 == dk5|| dk7 == dk6) {
                 dk7 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk7;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -992,7 +984,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     dk8 == dk5 || dk8 == dk6 || dk8 == dk7) {
                 dk8 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk8;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -1003,7 +994,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     dk9 == dk5 || dk9 == dk6 || dk9 == dk7 || dk9 == dk8) {
                 dk9 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk9;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -1015,7 +1005,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     dk10 == dk7 || dk10 == dk8 || dk10 == dk9) {
                 dk10 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk10;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
@@ -1027,7 +1016,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                     dk11 == dk9 || dk11 == dk10) {
                 dk11 = (int) Math.floor(Math.random() * 48) + 1;
             }
-            cheat = dk11;
             Low_High(center_2.getContext(), winning_value.getContext(), button_take.getContext(),
                     button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
         }
