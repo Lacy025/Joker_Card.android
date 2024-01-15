@@ -577,7 +577,7 @@
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_96sdp"
         android:layout_marginStart="@dimen/_400sdp"
         android:layout_width="@dimen/_84sdp"
         android:layout_height="@dimen/_50sdp"
@@ -599,7 +599,7 @@
 
     <LinearLayout
         android:layout_alignParentTop="true"
-        android:layout_marginTop="@dimen/_156sdp"
+        android:layout_marginTop="@dimen/_152sdp"
         android:layout_marginStart="@dimen/_400sdp"
         android:layout_width="@dimen/_84sdp"
         android:layout_height="@dimen/_50sdp"
@@ -636,7 +636,7 @@
             android:text="@string/hold_1"
             android:textColor="#FBF701"
             android:textSize="@dimen/_12sdp"
-            tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds,DuplicateSpeakableTextCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextSizeCheck,VisualLintBounds,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/hold_2"
@@ -684,7 +684,7 @@
             android:text="@string/hold_5"
             android:textColor="#FBF701"
             android:textSize="@dimen/_12sdp"
-            tools:ignore="TouchTargetSizeCheck,VisualLintBounds,TextSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,VisualLintBounds,TextSizeCheck,TextContrastCheck" />
 
     </LinearLayout>
 
@@ -1582,16 +1582,16 @@
     <LinearLayout
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/_206sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_width="@dimen/_102sdp"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_46sdp"
         android:orientation="horizontal"
         tools:ignore="VisualLintBounds">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/double_low"
             android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_46sdp"
             android:backgroundTint="#FF0303"
             android:gravity="center"
             android:text="@string/double_low"
@@ -1605,16 +1605,16 @@
     <LinearLayout
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/_206sdp"
-        android:layout_marginStart="@dimen/_300sdp"
-        android:layout_width="@dimen/_102sdp"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_294sdp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_46sdp"
         android:orientation="horizontal"
         tools:ignore="VisualLintBounds">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/double_high"
             android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_46sdp"
             android:backgroundTint="#FF0303"
             android:gravity="center"
             android:text="@string/double_high"
