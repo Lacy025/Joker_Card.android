@@ -26,35 +26,11 @@ public class Jokers extends Activity {
     public static Runnable runnable6;
     public static Runnable runnable7;
     public static Runnable runnable8;
-    final Context context_joker;
-    final Context context_card;
-    final Context context_field_card_1;
-    final Context context_field_card_2;
-    final Context context_field_card_3;
-    final Context context_field_card_4;
-    final Context context_field_card_5;
-    final Context context_field_joker_1;
-    final Context context_field_joker_2;
-    final Context context_field_joker_3;
-    final Context context_field_joker_4;
-    final Context context_field_joker_5;
+
     Jokers(Context context_joker, Context context_card, Context context_field_card_1,
            Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,
            Context context_field_card_5, Context context_field_joker_1, Context context_field_joker_2,
            Context context_field_joker_3, Context context_field_joker_4, Context context_field_joker_5) {
-
-        this.context_joker = context_joker;
-        this.context_card = context_card;
-        this.context_field_card_1 = context_field_card_1;
-        this.context_field_card_2 = context_field_card_2;
-        this.context_field_card_3 = context_field_card_3;
-        this.context_field_card_4 = context_field_card_4;
-        this.context_field_card_5 = context_field_card_5;
-        this.context_field_joker_1 = context_field_joker_1;
-        this.context_field_joker_2 = context_field_joker_2;
-        this.context_field_joker_3 = context_field_joker_3;
-        this.context_field_joker_4 = context_field_joker_4;
-        this.context_field_joker_5 = context_field_joker_5;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);

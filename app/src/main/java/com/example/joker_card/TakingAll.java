@@ -24,18 +24,12 @@ public class TakingAll extends Activity {
     public static Runnable runnable9;
     public static Runnable runnable10;
     final Context context_center_2;
-    final Context context_winning_value;
-    final Context context_button_take;
-    final Context context_button_deal;
     final Context context_credit_value;
     TakingAll(Context context_center_2, Context context_winning_value,
               Context context_button_take, Context context_button_deal,
               Context context_credit_value) throws InterruptedException {
 
         this.context_center_2 = context_center_2;
-        this.context_winning_value = context_winning_value;
-        this.context_button_take = context_button_take;
-        this.context_button_deal = context_button_deal;
         this.context_credit_value = context_credit_value;
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);

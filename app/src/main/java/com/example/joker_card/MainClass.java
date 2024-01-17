@@ -445,11 +445,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                 delaying = 900;
                                 new Card_5(field_card_5.getContext());
 
-                                new Hand_1(hand_1.getContext(), hand_2.getContext(),
-                                        hand_3.getContext(), hand_4.getContext(),
-                                        hand_5.getContext(), hand_6.getContext(),
-                                        hand_7.getContext(),hand_8.getContext(),
-                                        hand_9.getContext(), hand_10.getContext());
+                                new Hand_1(hand_1.getContext());
                                 if(auto_hold_value == 1) {
                                     Stop();
                                 }
@@ -745,8 +741,7 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                         field_win_7.getContext(), field_win_8.getContext(), field_win_9.getContext(),
                         field_win_10.getContext(), field_win_11.getContext(), field_win_12.getContext(),
                         center_2.getContext(), winning_value.getContext(), button_take.getContext(),
-                        button_deal.getContext(), button_hold_1.getContext(), button_hold_5.getContext(),
-                        credit_value.getContext(), low.getContext(), high.getContext());
+                        button_deal.getContext(), credit_value.getContext(), low.getContext(), high.getContext());
             }
         }
         if(pressed == R.id.hold_1) {

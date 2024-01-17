@@ -22,7 +22,6 @@ public class Hand_1 extends Activity {
     int b4;
     int b5;
     int first_win;
-    int twins;
     int four_colors;
     int Five_of_a_kind;
     int Royal_flush;
@@ -50,29 +49,8 @@ public class Hand_1 extends Activity {
     public static int hold3;
     public static int hold4;
     public static int hold5;
-    final Context context_hand_1;
-    final Context context_hand_2;
-    final Context context_hand_3;
-    final Context context_hand_4;
-    final Context context_hand_5;
-    final Context context_hand_6;
-    final Context context_hand_7;
-    final Context context_hand_8;
-    final Context context_hand_9;
-    final Context context_hand_10;
-    Hand_1(Context context_hand_1, Context context_hand_2, Context context_hand_3, Context context_hand_4, Context context_hand_5,
-           Context context_hand_6, Context context_hand_7, Context context_hand_8, Context context_hand_9, Context context_hand_10) {
 
-        this.context_hand_1 = context_hand_1;
-        this.context_hand_2 = context_hand_2;
-        this.context_hand_3 = context_hand_3;
-        this.context_hand_4 = context_hand_4;
-        this.context_hand_5 = context_hand_5;
-        this.context_hand_6 = context_hand_6;
-        this.context_hand_7 = context_hand_7;
-        this.context_hand_8 = context_hand_8;
-        this.context_hand_9 = context_hand_9;
-        this.context_hand_10 = context_hand_10;
+    Hand_1(Context context_hand_1) {
 
         ImageView hand_1 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_1);
         ImageView hand_2 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_2);
@@ -99,7 +77,6 @@ public class Hand_1 extends Activity {
             b5 = Card_5.b5;
 
             first_win = 0;
-            twins = 0;
             four_colors = 0;
 
             Five_of_a_kind = 0;
@@ -950,9 +927,6 @@ public class Hand_1 extends Activity {
                         first_win++;
                         High_pair = 1;
                     }
-                    if (n1 < 11) {
-                        twins = 1;
-                    }
                 }
                 if (n1 == n3) {
                     if (half_street == 0) {
@@ -965,9 +939,6 @@ public class Hand_1 extends Activity {
                     if (n1 > 10) {
                         first_win++;
                         High_pair = 1;
-                    }
-                    if (n1 < 11) {
-                        twins = 1;
                     }
                 }
                 if (n1 == n4) {
@@ -982,9 +953,6 @@ public class Hand_1 extends Activity {
                         first_win++;
                         High_pair = 1;
                     }
-                    if (n1 < 11) {
-                        twins = 1;
-                    }
                 }
                 if (n1 == n5) {
                     if (half_street == 0) {
@@ -997,9 +965,6 @@ public class Hand_1 extends Activity {
                     if (n1 > 10) {
                         first_win++;
                         High_pair = 1;
-                    }
-                    if (n1 < 11) {
-                        twins = 1;
                     }
                 }
                 if (n2 == n3) {
@@ -1014,9 +979,6 @@ public class Hand_1 extends Activity {
                         first_win++;
                         High_pair = 1;
                     }
-                    if (n2 < 11) {
-                        twins = 1;
-                    }
                 }
                 if (n2 == n4) {
                     if (half_street == 0) {
@@ -1029,9 +991,6 @@ public class Hand_1 extends Activity {
                     if (n2 > 10) {
                         first_win++;
                         High_pair = 1;
-                    }
-                    if (n2 < 11) {
-                        twins = 1;
                     }
                 }
                 if (n2 == n5) {
@@ -1046,9 +1005,6 @@ public class Hand_1 extends Activity {
                         first_win++;
                         High_pair = 1;
                     }
-                    if (n2 < 11) {
-                        twins = 1;
-                    }
                 }
                 if (n3 == n4) {
                     if (half_street == 0) {
@@ -1061,9 +1017,6 @@ public class Hand_1 extends Activity {
                     if (n3 > 10) {
                         first_win++;
                         High_pair = 1;
-                    }
-                    if (n3 < 11) {
-                        twins = 1;
                     }
                 }
                 if (n3 == n5) {
@@ -1078,9 +1031,6 @@ public class Hand_1 extends Activity {
                         first_win++;
                         High_pair = 1;
                     }
-                    if (n3 < 11) {
-                        twins = 1;
-                    }
                 }
                 if (n4 == n5) {
                     if (half_street == 0) {
@@ -1093,9 +1043,6 @@ public class Hand_1 extends Activity {
                     if (n4 > 10) {
                         first_win++;
                         High_pair = 1;
-                    }
-                    if (n4 < 11) {
-                        twins = 1;
                     }
                 }
 

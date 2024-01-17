@@ -61,39 +61,7 @@ public class Hand_2 extends Activity {
     int Street_flush_7;
     int Street_flush_8;
     int Street_flush_9;
-    final Context context_table;
-    final Context context_joker;
-    final Context context_card;
-    final Context context_field_card_1;
-    final Context context_field_card_2;
-    final Context context_field_card_3;
-    final Context context_field_card_4;
-    final Context context_field_card_5;
-    final Context context_field_joker_1;
-    final Context context_field_joker_2;
-    final Context context_field_joker_3;
-    final Context context_field_joker_4;
-    final Context context_field_joker_5;
-    final Context context_center_2;
-    final Context context_winning_1;
-    final Context context_winning_2;
-    final Context context_winning_3;
-    final Context context_winning_4;
-    final Context context_winning_5;
-    final Context context_winning_6;
-    final Context context_winning_7;
-    final Context context_winning_8;
-    final Context context_winning_9;
-    final Context context_winning_10;
-    final Context context_winning;
-    final Context context_winning_value;
-    final Context context_button_take;
-    final Context context_button_deal;
-    final Context context_button_hold_1;
-    final Context context_button_hold_2;
-    final Context context_button_hold_3;
-    final Context context_button_hold_4;
-    final Context context_button_hold_5;
+
     Hand_2(Context context_table, Context context_joker, Context context_card,
            Context context_field_card_1, Context context_field_card_2, Context context_field_card_3,
            Context context_field_card_4, Context context_field_card_5, Context context_field_joker_1,
@@ -105,40 +73,6 @@ public class Hand_2 extends Activity {
            Context context_winning, Context context_winning_value, Context context_button_take,
            Context context_button_deal, Context context_button_hold_1, Context context_button_hold_2,
            Context context_button_hold_3, Context context_button_hold_4, Context context_button_hold_5) {
-
-        this.context_table = context_table;
-        this.context_joker = context_joker;
-        this.context_card = context_card;
-        this.context_field_card_1 = context_field_card_1;
-        this.context_field_card_2 = context_field_card_2;
-        this.context_field_card_3 = context_field_card_3;
-        this.context_field_card_4 = context_field_card_4;
-        this.context_field_card_5 = context_field_card_5;
-        this.context_field_joker_1 = context_field_joker_1;
-        this.context_field_joker_2 = context_field_joker_2;
-        this.context_field_joker_3 = context_field_joker_3;
-        this.context_field_joker_4 = context_field_joker_4;
-        this.context_field_joker_5 = context_field_joker_5;
-        this.context_center_2 = context_center_2;
-        this.context_winning_1 = context_winning_1;
-        this.context_winning_2 = context_winning_2;
-        this.context_winning_3 = context_winning_3;
-        this.context_winning_4 = context_winning_4;
-        this.context_winning_5 = context_winning_5;
-        this.context_winning_6 = context_winning_6;
-        this.context_winning_7 = context_winning_7;
-        this.context_winning_8 = context_winning_8;
-        this.context_winning_9 = context_winning_9;
-        this.context_winning_10 = context_winning_10;
-        this.context_winning = context_winning;
-        this.context_winning_value = context_winning_value;
-        this.context_button_take = context_button_take;
-        this.context_button_deal = context_button_deal;
-        this.context_button_hold_1 = context_button_hold_1;
-        this.context_button_hold_2 = context_button_hold_2;
-        this.context_button_hold_3 = context_button_hold_3;
-        this.context_button_hold_4 = context_button_hold_4;
-        this.context_button_hold_5 = context_button_hold_5;
 
         ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
         ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);

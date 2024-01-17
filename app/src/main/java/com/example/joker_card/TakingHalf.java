@@ -33,57 +33,14 @@ public class TakingHalf extends Activity {
     private double deo;
     private double half_1;
     private double half_2;
-    int countdown;
-    final Context context_field_win_1;
-    final Context context_field_win_2;
-    final Context context_field_win_3;
-    final Context context_field_win_4;
-    final Context context_field_win_5;
-    final Context context_field_win_6;
-    final Context context_field_win_7;
-    final Context context_field_win_8;
-    final Context context_field_win_9;
-    final Context context_field_win_10;
-    final Context context_field_win_11;
-    final Context context_field_win_12;
-    final Context context_center_2;
-    final Context context_winning_value;
-    final Context context_button_take;
-    final Context context_button_deal;
-    final Context context_button_hold_1;
-    final Context context_button_hold_5;
-    final Context context_credit_value;
-    final Context context_low;
-    final Context context_high;
+
     TakingHalf(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
                Context context_field_win_4, Context context_field_win_5, Context context_field_win_6,
                Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
                Context context_field_win_10, Context context_field_win_11, Context context_field_win_12,
                Context context_center_2, Context context_winning_value, Context context_button_take,
-               Context context_button_deal, Context context_button_hold_1, Context context_button_hold_5,
-               Context context_credit_value, Context context_low, Context context_high) {
-
-        this.context_field_win_1 = context_field_win_1;
-        this.context_field_win_2 = context_field_win_2;
-        this.context_field_win_3 = context_field_win_3;
-        this.context_field_win_4 = context_field_win_4;
-        this.context_field_win_5 = context_field_win_5;
-        this.context_field_win_6 = context_field_win_6;
-        this.context_field_win_7 = context_field_win_7;
-        this.context_field_win_8 = context_field_win_8;
-        this.context_field_win_9 = context_field_win_9;
-        this.context_field_win_10 = context_field_win_10;
-        this.context_field_win_11 = context_field_win_11;
-        this.context_field_win_12 = context_field_win_12;
-        this.context_center_2 = context_center_2;
-        this.context_winning_value = context_winning_value;
-        this.context_button_take = context_button_take;
-        this.context_button_deal = context_button_deal;
-        this.context_button_hold_1 = context_button_hold_1;
-        this.context_button_hold_5 = context_button_hold_5;
-        this.context_credit_value = context_credit_value;
-        this.context_low = context_low;
-        this.context_high = context_high;
+               Context context_button_deal, Context context_credit_value, Context context_low,
+               Context context_high) {
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
         TextView low = (TextView) ((Activity)context_low).findViewById(R.id.low);
@@ -99,7 +56,6 @@ public class TakingHalf extends Activity {
         center_2.setText(R.string.win);
         center_2.setVisibility(View.VISIBLE);
         doubling = 0;
-        countdown = 1;
 
         timer4 = new Timer();
         timer4.schedule(task4 = new TimerTask() {
@@ -142,7 +98,6 @@ public class TakingHalf extends Activity {
                             handler14.postDelayed(this, 40);
                         }
                         else {
-                            countdown = 0;
                             audio_count_100.start();
                             winner(context_field_win_1, context_field_win_2, context_field_win_3,
                                     context_field_win_4, context_field_win_5, context_field_win_6,
