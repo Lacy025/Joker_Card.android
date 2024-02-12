@@ -32,7 +32,6 @@ import java.util.Locale;
 public class Low extends Activity {
     public static Handler handler11;
     public static Runnable runnable11;
-
     Low(Context context_table, Context context_down_left_2, Context context_down_right_2,
         Context context_joker, Context context_card, Context context_field_card_1,
         Context context_field_card_2, Context context_field_card_3, Context context_field_card_4,

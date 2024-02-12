@@ -169,7 +169,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 10 || n5 == 11 || n5 == 12 || n5 == 13 || n5 == 14) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -197,7 +196,6 @@ public class Hand_1 extends Activity {
                 if (n1 == 13 || n2 == 13 || n3 == 13 || n4 == 13 || n5 == 13) {
                     Street_flush_9++;
                 }
-
                 if (Street_flush_9 == 5) {
                     Color_Check_2();
                 }
@@ -218,7 +216,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 9 || n5 == 10 || n5 == 11 || n5 == 12 || n5 == 13) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -246,7 +243,6 @@ public class Hand_1 extends Activity {
                 if (n1 == 12 || n2 == 12 || n3 == 12 || n4 == 12 || n5 == 12) {
                     Street_flush_8++;
                 }
-
                 if (Street_flush_8 == 5) {
                     Color_Check_2();
                 }
@@ -267,7 +263,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 8 || n5 == 9 || n5 == 10 || n5 == 11 || n5 == 12) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -295,7 +290,6 @@ public class Hand_1 extends Activity {
                 if (n1 == 11 || n2 == 11 || n3 == 11 || n4 == 11 || n5 == 11) {
                     Street_flush_7++;
                 }
-
                 if (Street_flush_7 == 5) {
                     Color_Check_2();
                 }
@@ -316,7 +310,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 7 || n5 == 8 || n5 == 9 || n5 == 10 || n5 == 11) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -344,7 +337,6 @@ public class Hand_1 extends Activity {
                 if (n1 == 10 || n2 == 10 || n3 == 10 || n4 == 10 || n5 == 10) {
                     Street_flush_6++;
                 }
-
                 if (Street_flush_6 == 5) {
                     Color_Check_2();
                 }
@@ -365,7 +357,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 6 || n5 == 7 || n5 == 8 || n5 == 9 || n5 == 10) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -393,7 +384,6 @@ public class Hand_1 extends Activity {
                 if (n1 == 9 || n2 == 9 || n3 == 9 || n4 == 9 || n5 == 9) {
                     Street_flush_5++;
                 }
-
                 if (Street_flush_5 == 5) {
                     Color_Check_2();
                 }
@@ -414,7 +404,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 5 || n5 == 6 || n5 == 7 || n5 == 8 || n5 == 9) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -442,7 +431,6 @@ public class Hand_1 extends Activity {
                 if (n1 == 8 || n2 == 8 || n3 == 8 || n4 == 8 || n5 == 8) {
                     Street_flush_4++;
                 }
-
                 if (Street_flush_4 == 5) {
                     Color_Check_2();
                 }
@@ -463,7 +451,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 4 || n5 == 5 || n5 == 6 || n5 == 7 || n5 == 8) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -491,7 +478,6 @@ public class Hand_1 extends Activity {
                 if (n1 == 7 || n2 == 7 || n3 == 7 || n4 == 7 || n5 == 7) {
                     Street_flush_3++;
                 }
-
                 if (Street_flush_3 == 5) {
                     Color_Check_2();
                 }
@@ -512,7 +498,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 3 || n5 == 4 || n5 == 5 || n5 == 6 || n5 == 7) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -540,7 +525,6 @@ public class Hand_1 extends Activity {
                 if (n1 == 6 || n2 == 6 || n3 == 6 || n4 == 6 || n5 == 6) {
                     Street_flush_2++;
                 }
-
                 if (Street_flush_2 == 5) {
                     Color_Check_2();
                 }
@@ -561,7 +545,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 2 || n5 == 3 || n5 == 4 || n5 == 5 || n5 == 6) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -589,7 +572,6 @@ public class Hand_1 extends Activity {
                 if (n1 == 5 || n2 == 5 || n3 == 5 || n4 == 5 || n5 == 5) {
                     Street_flush_1++;
                 }
-
                 if (Street_flush_1 == 5) {
                     Color_Check_2();
                 }
@@ -610,7 +592,6 @@ public class Hand_1 extends Activity {
                     if (n5 == 0 || n5 == 14 || n5 == 2 || n5 == 3 || n5 == 4 || n5 == 5) {
                         hold5 = 1;
                     }
-
                     twins();
                 }
             }
@@ -632,7 +613,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Poker = 1;
                 }
-
                 if (((n1 == n2) && (n2 == n3) && (n3 == n5)) ||
                         ((n1 == n2) && (n2 == n3) && (n5 == 0)) ||
                         ((n1 == n2) && (n3 == 0) && (n2 == n5)) ||
@@ -646,7 +626,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Poker = 1;
                 }
-
                 if (((n1 == n2) && (n2 == n4) && (n4 == n5)) ||
                         ((n1 == n2) && (n2 == n4) && (n5 == 0)) ||
                         ((n1 == n2) && (n4 == 0) && (n2 == n5)) ||
@@ -660,7 +639,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Poker = 1;
                 }
-
                 if (((n1 == n3) && (n3 == n4) && (n4 == n5)) ||
                         ((n1 == n3) && (n3 == n4) && (n5 == 0)) ||
                         ((n1 == n3) && (n4 == 0) && (n3 == n5)) ||
@@ -674,7 +652,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Poker = 1;
                 }
-
                 if (((n2 == n3) && (n3 == n4) && (n4 == n5)) ||
                         ((n2 == n3) && (n3 == n4) && (n5 == 0)) ||
                         ((n2 == n3) && (n4 == 0) && (n3 == n5)) ||
@@ -764,7 +741,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Three_of_a_kind = 1;
                 }
-
                 if (((n1 == n2) && (n2 == n4)) || ((n1 == n2) && (n4 == 0)) || ((n1 == n4) && (n2 == 0)) || ((n2 == n4) && (n1 == 0))) {
                     hold1 = 1;
                     hold2 = 1;
@@ -774,7 +750,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Three_of_a_kind = 1;
                 }
-
                 if (((n1 == n2) && (n2 == n5)) || ((n1 == n2) && (n5 == 0)) || ((n1 == n5) && (n2 == 0)) || ((n2 == n5) && (n1 == 0))) {
                     hold1 = 1;
                     hold2 = 1;
@@ -784,7 +759,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Three_of_a_kind = 1;
                 }
-
                 if (((n1 == n3) && (n3 == n4)) || ((n1 == n3) && (n4 == 0)) || ((n1 == n4) && (n3 == 0)) || ((n3 == n4) && (n1 == 0))) {
                     hold1 = 1;
                     hold2 = 0;
@@ -794,7 +768,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Three_of_a_kind = 1;
                 }
-
                 if (((n1 == n3) && (n3 == n5)) || ((n1 == n3) && (n5 == 0)) || ((n1 == n5) && (n3 == 0)) || ((n3 == n5) && (n1 == 0))) {
                     hold1 = 1;
                     hold2 = 0;
@@ -804,7 +777,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Three_of_a_kind = 1;
                 }
-
                 if (((n1 == n4) && (n4 == n5)) || ((n1 == n4) && (n5 == 0)) || ((n1 == n5) && (n4 == 0)) || ((n4 == n5) && (n1 == 0))) {
                     hold1 = 1;
                     hold2 = 0;
@@ -814,7 +786,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Three_of_a_kind = 1;
                 }
-
                 if (((n2 == n3) && (n3 == n4)) || ((n2 == n3) && (n4 == 0)) || ((n2 == n4) && (n3 == 0)) || ((n3 == n4) && (n2 == 0))) {
                     hold1 = 0;
                     hold2 = 1;
@@ -824,7 +795,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Three_of_a_kind = 1;
                 }
-
                 if (((n2 == n3) && (n3 == n5)) || ((n2 == n3) && (n5 == 0)) || ((n2 == n5) && (n3 == 0)) || ((n3 == n5) && (n2 == 0))) {
                     hold1 = 0;
                     hold2 = 1;
@@ -834,7 +804,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Three_of_a_kind = 1;
                 }
-
                 if (((n2 == n4) && (n4 == n5)) || ((n2 == n4) && (n5 == 0)) || ((n2 == n5) && (n4 == 0)) || ((n4 == n5) && (n2 == 0))) {
                     hold1 = 0;
                     hold2 = 1;
@@ -844,7 +813,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Three_of_a_kind = 1;
                 }
-
                 if (((n3 == n4) && (n4 == n5)) || ((n3 == n4) && (n5 == 0)) || ((n3 == n5) && (n4 == 0)) || ((n4 == n5) && (n3 == 0))) {
                     hold1 = 0;
                     hold2 = 0;
@@ -869,7 +837,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Two_pairs = 1;
                 }
-
                 if (((n1 == n2) && (n3 == n5)) || ((n1 == n3) && (n2 == n5)) || ((n1 == n5) && (n2 == n3))) {
                     hold1 = 1;
                     hold2 = 1;
@@ -879,7 +846,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Two_pairs = 1;
                 }
-
                 if (((n1 == n2) && (n4 == n5)) || ((n1 == n5) && (n2 == n4)) || ((n1 == n4) && (n2 == n5))) {
                     hold1 = 1;
                     hold2 = 1;
@@ -889,7 +855,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Two_pairs = 1;
                 }
-
                 if (((n1 == n3) && (n4 == n5)) || ((n1 == n5) && (n3 == n4)) || ((n1 == n4) && (n3 == n5))) {
                     hold1 = 1;
                     hold2 = 0;
@@ -899,7 +864,6 @@ public class Hand_1 extends Activity {
                     first_win++;
                     Two_pairs = 1;
                 }
-
                 if (((n2 == n3) && (n4 == n5)) || ((n3 == n5) && (n2 == n4)) || ((n3 == n4) && (n2 == n5))) {
                     hold1 = 0;
                     hold2 = 1;
@@ -1277,7 +1241,6 @@ public class Hand_1 extends Activity {
                     hold5 = 0;
                     four_colors++;
                 }
-
                 if (((b1 == b2) && (b2 == b3) && (b3 == b5)) ||
                         ((b1 == b2) && (b2 == b3) && (b5 == 0)) ||
                         ((b1 == b2) && (b3 == 0) && (b2 == b5)) ||
@@ -1290,7 +1253,6 @@ public class Hand_1 extends Activity {
                     hold5 = 1;
                     four_colors++;
                 }
-
                 if (((b1 == b2) && (b2 == b4) && (b4 == b5)) ||
                         ((b1 == b2) && (b2 == b4) && (b5 == 0)) ||
                         ((b1 == b2) && (b4 == 0) && (b2 == b5)) ||
@@ -1303,7 +1265,6 @@ public class Hand_1 extends Activity {
                     hold5 = 1;
                     four_colors++;
                 }
-
                 if (((b1 == b3) && (b3 == b4) && (b4 == b5)) ||
                         ((b1 == b3) && (b3 == b4) && (b5 == 0)) ||
                         ((b1 == b3) && (b4 == 0) && (b3 == b5)) ||
@@ -1316,7 +1277,6 @@ public class Hand_1 extends Activity {
                     hold5 = 1;
                     four_colors++;
                 }
-
                 if (((b2 == b3) && (b3 == b4) && (b4 == b5)) ||
                         ((b2 == b3) && (b3 == b4) && (b5 == 0)) ||
                         ((b2 == b3) && (b4 == 0) && (b3 == b5)) ||
@@ -1347,7 +1307,6 @@ public class Hand_1 extends Activity {
                 if (half_street == 0 && four_colors == 0 && n5 == 0) {
                     hold5 = 1;
                 }
-
             }
 
             if (Five_of_a_kind == 1) {

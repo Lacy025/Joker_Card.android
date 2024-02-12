@@ -138,7 +138,6 @@ public class TakingAll extends Activity {
     void You_Win(Context context_center_2) {
 
         TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
-
         center_2.setText(R.string.win);
         center_2.setVisibility(View.VISIBLE);
     }

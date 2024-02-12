@@ -19,7 +19,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class GambleCard extends Activity {
-    int dkx;
+    int gamble_card;
     ImageView field_gamble;
 
     GambleCard(Context context_field_win_1, Context context_field_win_2, Context context_field_win_3,
@@ -40,203 +40,203 @@ public class GambleCard extends Activity {
         ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
 
         if(double_card == 1) {
-            dkx = dk1;
+            gamble_card = dk1;
             field_gamble = field_win_1;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 2) {
-            dkx = dk2;
+            gamble_card = dk2;
             field_gamble = field_win_2;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 3) {
-            dkx = dk3;
+            gamble_card = dk3;
             field_gamble = field_win_3;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 4) {
-            dkx = dk4;
+            gamble_card = dk4;
             field_gamble = field_win_4;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 5) {
-            dkx = dk5;
+            gamble_card = dk5;
             field_gamble = field_win_5;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 6) {
-            dkx = dk6;
+            gamble_card = dk6;
             field_gamble = field_win_6;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 7) {
-            dkx = dk7;
+            gamble_card = dk7;
             field_gamble = field_win_7;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 8) {
-            dkx = dk8;
+            gamble_card = dk8;
             field_gamble = field_win_8;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 9) {
-            dkx = dk9;
+            gamble_card = dk9;
             field_gamble = field_win_9;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 10) {
-            dkx = dk10;
+            gamble_card = dk10;
             field_gamble = field_win_10;
             field_gamble.setVisibility(View.INVISIBLE);
         }
         if(double_card == 11) {
-            dkx = dk11;
+            gamble_card = dk11;
             field_gamble = field_win_11;
             field_gamble.setVisibility(View.INVISIBLE);
         }
 
-        if (dkx == 1) {
+        if (gamble_card == 1) {
             field_gamble.setImageResource(R.drawable.k01);
         }
-        if (dkx == 2) {
+        if (gamble_card == 2) {
             field_gamble.setImageResource(R.drawable.k02);
         }
-        if (dkx == 3) {
+        if (gamble_card == 3) {
             field_gamble.setImageResource(R.drawable.k03);
         }
-        if (dkx == 4) {
+        if (gamble_card == 4) {
             field_gamble.setImageResource(R.drawable.k04);
         }
-        if (dkx == 5) {
+        if (gamble_card == 5) {
             field_gamble.setImageResource(R.drawable.k05);
         }
-        if (dkx == 6) {
+        if (gamble_card == 6) {
             field_gamble.setImageResource(R.drawable.k06);
         }
-        if (dkx == 7) {
+        if (gamble_card == 7) {
             field_gamble.setImageResource(R.drawable.k14);
         }
-        if (dkx == 8) {
+        if (gamble_card == 8) {
             field_gamble.setImageResource(R.drawable.k15);
         }
-        if (dkx == 9) {
+        if (gamble_card == 9) {
             field_gamble.setImageResource(R.drawable.k16);
         }
-        if (dkx == 10) {
+        if (gamble_card == 10) {
             field_gamble.setImageResource(R.drawable.k17);
         }
-        if (dkx == 11) {
+        if (gamble_card == 11) {
             field_gamble.setImageResource(R.drawable.k18);
         }
-        if (dkx == 12) {
+        if (gamble_card == 12) {
             field_gamble.setImageResource(R.drawable.k19);
         }
-        if (dkx == 13) {
+        if (gamble_card == 13) {
             field_gamble.setImageResource(R.drawable.k27);
         }
-        if (dkx == 14) {
+        if (gamble_card == 14) {
             field_gamble.setImageResource(R.drawable.k28);
         }
-        if (dkx == 15) {
+        if (gamble_card == 15) {
             field_gamble.setImageResource(R.drawable.k29);
         }
-        if (dkx == 16) {
+        if (gamble_card == 16) {
             field_gamble.setImageResource(R.drawable.k30);
         }
-        if (dkx == 17) {
+        if (gamble_card == 17) {
             field_gamble.setImageResource(R.drawable.k31);
         }
-        if (dkx == 18) {
+        if (gamble_card == 18) {
             field_gamble.setImageResource(R.drawable.k32);
         }
-        if (dkx == 19) {
+        if (gamble_card == 19) {
             field_gamble.setImageResource(R.drawable.k40);
         }
-        if (dkx == 20) {
+        if (gamble_card == 20) {
             field_gamble.setImageResource(R.drawable.k41);
         }
-        if (dkx == 21) {
+        if (gamble_card == 21) {
             field_gamble.setImageResource(R.drawable.k42);
         }
-        if (dkx == 22) {
+        if (gamble_card == 22) {
             field_gamble.setImageResource(R.drawable.k43);
         }
-        if (dkx == 23) {
+        if (gamble_card == 23) {
             field_gamble.setImageResource(R.drawable.k44);
         }
-        if (dkx == 24) {
+        if (gamble_card == 24) {
             field_gamble.setImageResource(R.drawable.k45);
         }
-        if (dkx == 25) {
+        if (gamble_card == 25) {
             field_gamble.setImageResource(R.drawable.k08);
         }
-        if (dkx == 26) {
+        if (gamble_card == 26) {
             field_gamble.setImageResource(R.drawable.k09);
         }
-        if (dkx == 27) {
+        if (gamble_card == 27) {
             field_gamble.setImageResource(R.drawable.k10);
         }
-        if (dkx == 28) {
+        if (gamble_card == 28) {
             field_gamble.setImageResource(R.drawable.k11);
         }
-        if (dkx == 29) {
+        if (gamble_card == 29) {
             field_gamble.setImageResource(R.drawable.k12);
         }
-        if (dkx == 30) {
+        if (gamble_card == 30) {
             field_gamble.setImageResource(R.drawable.k13);
         }
-        if (dkx == 31) {
+        if (gamble_card == 31) {
             field_gamble.setImageResource(R.drawable.k21);
         }
-        if (dkx == 32) {
+        if (gamble_card == 32) {
             field_gamble.setImageResource(R.drawable.k22);
         }
-        if (dkx == 33) {
+        if (gamble_card == 33) {
             field_gamble.setImageResource(R.drawable.k23);
         }
-        if (dkx == 34) {
+        if (gamble_card == 34) {
             field_gamble.setImageResource(R.drawable.k24);
         }
-        if (dkx == 35) {
+        if (gamble_card == 35) {
             field_gamble.setImageResource(R.drawable.k25);
         }
-        if (dkx == 36) {
+        if (gamble_card == 36) {
             field_gamble.setImageResource(R.drawable.k26);
         }
-        if (dkx == 37) {
+        if (gamble_card == 37) {
             field_gamble.setImageResource(R.drawable.k34);
         }
-        if (dkx == 38) {
+        if (gamble_card == 38) {
             field_gamble.setImageResource(R.drawable.k35);
         }
-        if (dkx == 39) {
+        if (gamble_card == 39) {
             field_gamble.setImageResource(R.drawable.k36);
         }
-        if (dkx == 40) {
+        if (gamble_card == 40) {
             field_gamble.setImageResource(R.drawable.k37);
         }
-        if (dkx == 41) {
+        if (gamble_card == 41) {
             field_gamble.setImageResource(R.drawable.k38);
         }
-        if (dkx == 42) {
+        if (gamble_card == 42) {
             field_gamble.setImageResource(R.drawable.k39);
         }
-        if (dkx == 43) {
+        if (gamble_card == 43) {
             field_gamble.setImageResource(R.drawable.k47);
         }
-        if (dkx == 44) {
+        if (gamble_card == 44) {
             field_gamble.setImageResource(R.drawable.k48);
         }
-        if (dkx == 45) {
+        if (gamble_card == 45) {
             field_gamble.setImageResource(R.drawable.k49);
         }
-        if (dkx == 46) {
+        if (gamble_card == 46) {
             field_gamble.setImageResource(R.drawable.k50);
         }
-        if (dkx == 47) {
+        if (gamble_card == 47) {
             field_gamble.setImageResource(R.drawable.k51);
         }
-        if (dkx == 48) {
+        if (gamble_card == 48) {
             field_gamble.setImageResource(R.drawable.k52);
         }
 

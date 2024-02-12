@@ -30,7 +30,7 @@ public class TakingHalf extends Activity {
     final Timer timer4;
     final TimerTask task4;
     private final double half;
-    private double deo;
+    private double part;
     private double half_1;
     private double half_2;
 
@@ -125,13 +125,13 @@ public class TakingHalf extends Activity {
             handler14.post(runnable14);
         }
         else {
-            deo = cash;
+            part = cash;
             handler15 = new Handler();
             runnable15 = new Runnable() {
                 @Override
                 public void run() {
-                    if((Math.floor(deo/100)) != (deo/100)) {
-                        half_1 = Math.round(((deo/100)-(Math.floor(deo/100))) * 100);
+                    if((Math.floor(part / 100)) != (part / 100)) {
+                        half_1 = Math.round(((part / 100) - (Math.floor(part / 100))) * 100);
                         first_part(context_winning_value, context_credit_value);
                         handler15.postDelayed(this, 1000);
                     }
@@ -192,7 +192,7 @@ public class TakingHalf extends Activity {
         money += half_1;
         credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
         cash -= half_1;
-        deo = cash;
+        part = cash;
         winning_value.setText(String.format(Locale.getDefault(), "%d", (cash)));
         audio_count_100.start();
     }

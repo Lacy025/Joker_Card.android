@@ -52,7 +52,6 @@ public class Jokers extends Activity {
             joker.setVisibility(View.VISIBLE);
             card.setVisibility(View.VISIBLE);
         }
-
         handler1 = new Handler();
         runnable1 = new Runnable() {
             boolean isVisible1 = true;
