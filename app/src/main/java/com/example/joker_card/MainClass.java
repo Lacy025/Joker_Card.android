@@ -215,32 +215,32 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
 
         Start();
 
-        button_credit = (Button) findViewById(R.id.credit);
+        button_credit = findViewById(R.id.credit);
         button_credit.setOnClickListener(this);
-        button_bet = (Button) findViewById(R.id.bet);
+        button_bet = findViewById(R.id.bet);
         button_bet.setOnClickListener(this);
-        button_take = (Button) findViewById(R.id.take);
+        button_take = findViewById(R.id.take);
         button_take.setOnClickListener(this);
-        button_deal = (Button) findViewById(R.id.deal);
+        button_deal = findViewById(R.id.deal);
         button_deal.setOnClickListener(this);
 
         auto_hold_view = findViewById(R.id.auto_hold);
         credit_value = findViewById(R.id.credit_value);
 
-        button_hold_1 = (Button) findViewById(R.id.hold_1);
+        button_hold_1 = findViewById(R.id.hold_1);
         button_hold_1.setOnClickListener(this);
-        button_hold_2 = (Button) findViewById(R.id.hold_2);
+        button_hold_2 = findViewById(R.id.hold_2);
         button_hold_2.setOnClickListener(this);
-        button_hold_3 = (Button) findViewById(R.id.hold_3);
+        button_hold_3 = findViewById(R.id.hold_3);
         button_hold_3.setOnClickListener(this);
-        button_hold_4 = (Button) findViewById(R.id.hold_4);
+        button_hold_4 = findViewById(R.id.hold_4);
         button_hold_4.setOnClickListener(this);
-        button_hold_5 = (Button) findViewById(R.id.hold_5);
+        button_hold_5 = findViewById(R.id.hold_5);
         button_hold_5.setOnClickListener(this);
 
-        button_low = (Button) findViewById(R.id.double_low);
+        button_low = findViewById(R.id.double_low);
         button_low.setOnClickListener(this);
-        button_high = (Button) findViewById(R.id.double_high);
+        button_high = findViewById(R.id.double_high);
         button_high.setOnClickListener(this);
 
         down_left_1 = findViewById(R.id.left);
@@ -628,9 +628,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 deal_cards_1();
                 deal_cards();
 
-                while(k1 == k2 || k1 == k3 || k1 == k4 ||
-                        k1 == k5 || k2 == k3 || k2 == k4 ||
-                        k2 == k5 || k3 == k4 || k3 == k5 || k4 == k5) {
+                while(k1 == k2 || k1 == k3 || k1 == k4 || k1 == k5 || k2 == k3 ||
+                        k2 == k4 || k2 == k5 || k3 == k4 || k3 == k5 || k4 == k5) {
                     deal_cards_1();
                 }
                 dealing = 1;
@@ -889,25 +888,25 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                 Context context_button_deal, Context context_credit_value,
                                 Context context_low, Context context_high) {
 
-        ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
-        ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
-        ImageView field_win_3 = (ImageView) ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
-        ImageView field_win_4 = (ImageView) ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
-        ImageView field_win_5 = (ImageView) ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
-        ImageView field_win_6 = (ImageView) ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
-        ImageView field_win_7 = (ImageView) ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
-        ImageView field_win_8 = (ImageView) ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
-        ImageView field_win_9 = (ImageView) ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
-        ImageView field_win_10 = (ImageView) ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
-        ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
-        ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
-        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
-        TextView low = (TextView) ((Activity)context_low).findViewById(R.id.low);
-        TextView high = (TextView) ((Activity)context_high).findViewById(R.id.high);
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
-        Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
-        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        ImageView field_win_1 = ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
+        ImageView field_win_2 = ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
+        ImageView field_win_3 = ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
+        ImageView field_win_4 = ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
+        ImageView field_win_5 = ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
+        ImageView field_win_6 = ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
+        ImageView field_win_7 = ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
+        ImageView field_win_8 = ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
+        ImageView field_win_9 = ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
+        ImageView field_win_10 = ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
+        ImageView field_win_11 = ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
+        ImageView field_win_12 = ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
+        TextView center_2 = ((Activity)context_center_2).findViewById(R.id.win);
+        TextView low = ((Activity)context_low).findViewById(R.id.low);
+        TextView high = ((Activity)context_high).findViewById(R.id.high);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        Button button_take = ((Activity)context_button_take).findViewById(R.id.take);
+        Button button_deal = ((Activity)context_button_deal).findViewById(R.id.deal);
 
         if(double_card == 1) {
             field_win_1.setVisibility(View.VISIBLE);
@@ -1027,13 +1026,13 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                          Context context_button_deal, Context context_credit_value, Context context_low,
                          Context context_high) {
 
-        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
-        TextView low = (TextView) ((Activity)context_low).findViewById(R.id.low);
-        TextView high = (TextView) ((Activity)context_high).findViewById(R.id.high);
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
-        Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
-        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        TextView center_2 = ((Activity)context_center_2).findViewById(R.id.win);
+        TextView low = ((Activity)context_low).findViewById(R.id.low);
+        TextView high = ((Activity)context_high).findViewById(R.id.high);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        Button button_take = ((Activity)context_button_take).findViewById(R.id.take);
+        Button button_deal = ((Activity)context_button_deal).findViewById(R.id.deal);
 
         if(cash > 9999) {
             Block(center_2.getContext(), winning_value.getContext(),
@@ -1403,8 +1402,8 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     }
     public static void Bingo(Context context_center_2, Context context_winning_value) {
 
-        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView center_2 = ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
 
         handler0.removeCallbacks(runnable0);
         cash *= 2;
@@ -1443,11 +1442,11 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                              Context context_button_take, Context context_button_deal,
                              Context context_credit_value) {
 
-        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
-        Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
-        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        TextView center_2 = ((Activity)context_center_2).findViewById(R.id.win);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        Button button_take = ((Activity)context_button_take).findViewById(R.id.take);
+        Button button_deal = ((Activity)context_button_deal).findViewById(R.id.deal);
 
         choice = 3;
         doubling = 1;

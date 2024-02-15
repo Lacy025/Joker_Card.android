@@ -42,13 +42,13 @@ public class TakingHalf extends Activity {
                Context context_button_deal, Context context_credit_value, Context context_low,
                Context context_high) {
 
-        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
-        TextView low = (TextView) ((Activity)context_low).findViewById(R.id.low);
-        TextView high = (TextView) ((Activity)context_high).findViewById(R.id.high);
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
-        Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
-        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        TextView center_2 = ((Activity)context_center_2).findViewById(R.id.win);
+        TextView low = ((Activity)context_low).findViewById(R.id.low);
+        TextView high = ((Activity)context_high).findViewById(R.id.high);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        Button button_take = ((Activity)context_button_take).findViewById(R.id.take);
+        Button button_deal = ((Activity)context_button_deal).findViewById(R.id.deal);
 
         button_take.setText(R.string.win_win);
         button_deal.setText(R.string.win_win);
@@ -164,8 +164,8 @@ public class TakingHalf extends Activity {
     }
     void minus_1(Context context_winning_value, Context context_credit_value) {
 
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
 
         money += 1;
         credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
@@ -175,8 +175,8 @@ public class TakingHalf extends Activity {
     }
     void minus_100(Context context_winning_value, Context context_credit_value) {
 
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
 
         money += 100;
         credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
@@ -186,8 +186,8 @@ public class TakingHalf extends Activity {
     }
     void first_part(Context context_winning_value, Context context_credit_value) {
 
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
 
         money += half_1;
         credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
@@ -198,8 +198,8 @@ public class TakingHalf extends Activity {
     }
     void second_part(Context context_winning_value, Context context_credit_value) {
 
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
 
         money += half_2;
         credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
@@ -214,25 +214,25 @@ public class TakingHalf extends Activity {
                 Context context_center_2, Context context_winning_value, Context context_button_take,
                 Context context_button_deal, Context context_credit_value, Context context_low, Context context_high) {
 
-        ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
-        ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
-        ImageView field_win_3 = (ImageView) ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
-        ImageView field_win_4 = (ImageView) ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
-        ImageView field_win_5 = (ImageView) ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
-        ImageView field_win_6 = (ImageView) ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
-        ImageView field_win_7 = (ImageView) ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
-        ImageView field_win_8 = (ImageView) ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
-        ImageView field_win_9 = (ImageView) ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
-        ImageView field_win_10 = (ImageView) ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
-        ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
-        ImageView field_win_12 = (ImageView) ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
-        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
-        TextView low = (TextView) ((Activity)context_low).findViewById(R.id.low);
-        TextView high = (TextView) ((Activity)context_high).findViewById(R.id.high);
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
-        Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
-        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        ImageView field_win_1 = ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
+        ImageView field_win_2 = ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
+        ImageView field_win_3 = ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
+        ImageView field_win_4 = ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
+        ImageView field_win_5 = ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
+        ImageView field_win_6 = ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
+        ImageView field_win_7 = ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
+        ImageView field_win_8 = ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
+        ImageView field_win_9 = ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
+        ImageView field_win_10 = ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
+        ImageView field_win_11 = ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
+        ImageView field_win_12 = ((Activity)context_field_win_12).findViewById(R.id.field_win_12);
+        TextView center_2 = ((Activity)context_center_2).findViewById(R.id.win);
+        TextView low = ((Activity)context_low).findViewById(R.id.low);
+        TextView high = ((Activity)context_high).findViewById(R.id.high);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        Button button_take = ((Activity)context_button_take).findViewById(R.id.take);
+        Button button_deal = ((Activity)context_button_deal).findViewById(R.id.deal);
 
         handler16.removeCallbacks(runnable16);
         center_2.setVisibility(View.INVISIBLE);

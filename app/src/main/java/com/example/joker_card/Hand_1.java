@@ -52,16 +52,16 @@ public class Hand_1 extends Activity {
 
     Hand_1(Context context_hand_1) {
 
-        ImageView hand_1 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_1);
-        ImageView hand_2 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_2);
-        ImageView hand_3 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_3);
-        ImageView hand_4 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_4);
-        ImageView hand_5 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_5);
-        ImageView hand_6 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_6);
-        ImageView hand_7 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_7);
-        ImageView hand_8 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_8);
-        ImageView hand_9 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_9);
-        ImageView hand_10 = (ImageView) ((Activity)context_hand_1).findViewById(R.id.hand_10);
+        ImageView hand_1 = ((Activity)context_hand_1).findViewById(R.id.hand_1);
+        ImageView hand_2 = ((Activity)context_hand_1).findViewById(R.id.hand_2);
+        ImageView hand_3 = ((Activity)context_hand_1).findViewById(R.id.hand_3);
+        ImageView hand_4 = ((Activity)context_hand_1).findViewById(R.id.hand_4);
+        ImageView hand_5 = ((Activity)context_hand_1).findViewById(R.id.hand_5);
+        ImageView hand_6 = ((Activity)context_hand_1).findViewById(R.id.hand_6);
+        ImageView hand_7 = ((Activity)context_hand_1).findViewById(R.id.hand_7);
+        ImageView hand_8 = ((Activity)context_hand_1).findViewById(R.id.hand_8);
+        ImageView hand_9 = ((Activity)context_hand_1).findViewById(R.id.hand_9);
+        ImageView hand_10 = ((Activity)context_hand_1).findViewById(R.id.hand_10);
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 

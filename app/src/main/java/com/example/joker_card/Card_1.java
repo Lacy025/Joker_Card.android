@@ -18,7 +18,7 @@ public class Card_1 extends Activity {
 
     public Card_1(Context context_field_card_1) {
 
-        ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
+        ImageView field_card_1 = ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 

@@ -32,9 +32,9 @@ public class TakingAll extends Activity {
         this.context_center_2 = context_center_2;
         this.context_credit_value = context_credit_value;
 
-        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
-        Button button_take = (Button) ((Activity)context_button_take).findViewById(R.id.take);
-        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        TextView center_2 = ((Activity)context_center_2).findViewById(R.id.win);
+        Button button_take = ((Activity)context_button_take).findViewById(R.id.take);
+        Button button_deal = ((Activity)context_button_deal).findViewById(R.id.deal);
 
         int winning = cash;
 
@@ -105,9 +105,9 @@ public class TakingAll extends Activity {
     }
     void minus_1(Context context_winning_value, Context context_button_deal) {
 
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
-        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        Button button_deal = ((Activity)context_button_deal).findViewById(R.id.deal);
 
         money += 1;
         credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
@@ -121,9 +121,9 @@ public class TakingAll extends Activity {
     }
     void minus_100(Context context_winning_value, Context context_button_deal) {
 
-        TextView winning_value = (TextView) ((Activity)context_winning_value).findViewById(R.id.winning_value);
-        TextView credit_value = (TextView) ((Activity)context_credit_value).findViewById(R.id.credit_value);
-        Button button_deal = (Button) ((Activity)context_button_deal).findViewById(R.id.deal);
+        TextView winning_value = ((Activity)context_winning_value).findViewById(R.id.winning_value);
+        TextView credit_value = ((Activity)context_credit_value).findViewById(R.id.credit_value);
+        Button button_deal = ((Activity)context_button_deal).findViewById(R.id.deal);
 
         money += 100;
         credit_value.setText(String.format(Locale.getDefault(), "%d", (money)));
@@ -137,7 +137,7 @@ public class TakingAll extends Activity {
     }
     void You_Win(Context context_center_2) {
 
-        TextView center_2 = (TextView) ((Activity)context_center_2).findViewById(R.id.win);
+        TextView center_2 = ((Activity)context_center_2).findViewById(R.id.win);
         center_2.setText(R.string.win);
         center_2.setVisibility(View.VISIBLE);
     }

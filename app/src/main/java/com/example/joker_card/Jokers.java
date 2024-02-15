@@ -32,19 +32,18 @@ public class Jokers extends Activity {
            Context context_field_card_5, Context context_field_joker_1, Context context_field_joker_2,
            Context context_field_joker_3, Context context_field_joker_4, Context context_field_joker_5) {
 
-        ImageView field_card_1 = (ImageView) ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
-        ImageView field_card_2 = (ImageView) ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
-        ImageView field_card_3 = (ImageView) ((Activity)context_field_card_3).findViewById(R.id.field_card_3);
-        ImageView field_card_4 = (ImageView) ((Activity)context_field_card_4).findViewById(R.id.field_card_4);
-        ImageView field_card_5 = (ImageView) ((Activity)context_field_card_5).findViewById(R.id.field_card_5);
-        ImageView field_joker_1 = (ImageView) ((Activity)context_field_joker_1).findViewById(R.id.field_joker_1);
-        ImageView field_joker_2 = (ImageView) ((Activity)context_field_joker_2).findViewById(R.id.field_joker_2);
-        ImageView field_joker_3 = (ImageView) ((Activity)context_field_joker_3).findViewById(R.id.field_joker_3);
-        ImageView field_joker_4 = (ImageView) ((Activity)context_field_joker_4).findViewById(R.id.field_joker_4);
-        ImageView field_joker_5 = (ImageView) ((Activity)context_field_joker_5).findViewById(R.id.field_joker_5);
-
-        TextView joker = (TextView) ((Activity)context_joker).findViewById(R.id.joker);
-        TextView card = (TextView) ((Activity)context_card).findViewById(R.id.card);
+        ImageView field_card_1 = ((Activity)context_field_card_1).findViewById(R.id.field_card_1);
+        ImageView field_card_2 = ((Activity)context_field_card_2).findViewById(R.id.field_card_2);
+        ImageView field_card_3 = ((Activity)context_field_card_3).findViewById(R.id.field_card_3);
+        ImageView field_card_4 = ((Activity)context_field_card_4).findViewById(R.id.field_card_4);
+        ImageView field_card_5 = ((Activity)context_field_card_5).findViewById(R.id.field_card_5);
+        ImageView field_joker_1 = ((Activity)context_field_joker_1).findViewById(R.id.field_joker_1);
+        ImageView field_joker_2 = ((Activity)context_field_joker_2).findViewById(R.id.field_joker_2);
+        ImageView field_joker_3 = ((Activity)context_field_joker_3).findViewById(R.id.field_joker_3);
+        ImageView field_joker_4 = ((Activity)context_field_joker_4).findViewById(R.id.field_joker_4);
+        ImageView field_joker_5 = ((Activity)context_field_joker_5).findViewById(R.id.field_joker_5);
+        TextView joker = ((Activity)context_joker).findViewById(R.id.joker);
+        TextView card = ((Activity)context_card).findViewById(R.id.card);
 
         if(dealing == 0) {
             joker.setText(R.string.joker);

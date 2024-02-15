@@ -27,17 +27,17 @@ public class GambleCard extends Activity {
                Context context_field_win_7, Context context_field_win_8, Context context_field_win_9,
                Context context_field_win_10, Context context_field_win_11) {
 
-        ImageView field_win_1 = (ImageView) ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
-        ImageView field_win_2 = (ImageView) ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
-        ImageView field_win_3 = (ImageView) ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
-        ImageView field_win_4 = (ImageView) ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
-        ImageView field_win_5 = (ImageView) ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
-        ImageView field_win_6 = (ImageView) ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
-        ImageView field_win_7 = (ImageView) ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
-        ImageView field_win_8 = (ImageView) ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
-        ImageView field_win_9 = (ImageView) ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
-        ImageView field_win_10 = (ImageView) ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
-        ImageView field_win_11 = (ImageView) ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
+        ImageView field_win_1 = ((Activity)context_field_win_1).findViewById(R.id.field_win_1);
+        ImageView field_win_2 = ((Activity)context_field_win_2).findViewById(R.id.field_win_2);
+        ImageView field_win_3 = ((Activity)context_field_win_3).findViewById(R.id.field_win_3);
+        ImageView field_win_4 = ((Activity)context_field_win_4).findViewById(R.id.field_win_4);
+        ImageView field_win_5 = ((Activity)context_field_win_5).findViewById(R.id.field_win_5);
+        ImageView field_win_6 = ((Activity)context_field_win_6).findViewById(R.id.field_win_6);
+        ImageView field_win_7 = ((Activity)context_field_win_7).findViewById(R.id.field_win_7);
+        ImageView field_win_8 = ((Activity)context_field_win_8).findViewById(R.id.field_win_8);
+        ImageView field_win_9 = ((Activity)context_field_win_9).findViewById(R.id.field_win_9);
+        ImageView field_win_10 = ((Activity)context_field_win_10).findViewById(R.id.field_win_10);
+        ImageView field_win_11 = ((Activity)context_field_win_11).findViewById(R.id.field_win_11);
 
         if(double_card == 1) {
             gamble_card = dk1;
