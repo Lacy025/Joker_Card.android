@@ -112,6 +112,26 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     static MediaPlayer audio_low;
     static MediaPlayer audio_high;
     static MediaPlayer audio_bingo;
+    TextView hand_1;
+    TextView hand_2;
+    TextView hand_3;
+    TextView hand_4;
+    TextView hand_5;
+    TextView hand_6;
+    TextView hand_7;
+    TextView hand_8;
+    TextView hand_9;
+    TextView hand_10;
+    TextView d_1;
+    TextView d_2;
+    TextView d_3;
+    TextView d_4;
+    TextView d_5;
+    TextView d_6;
+    TextView d_7;
+    TextView d_8;
+    TextView d_9;
+    TextView d_10;
     TextView auto_hold_view;
     ImageView field_card_1;
     ImageView field_card_2;
@@ -123,16 +143,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     ImageView field_joker_3;
     ImageView field_joker_4;
     ImageView field_joker_5;
-    ImageView hand_1;
-    ImageView hand_2;
-    ImageView hand_3;
-    ImageView hand_4;
-    ImageView hand_5;
-    ImageView hand_6;
-    ImageView hand_7;
-    ImageView hand_8;
-    ImageView hand_9;
-    ImageView hand_10;
     ImageView table;
     ImageView field_win_1;
     ImageView field_win_2;
@@ -277,6 +287,17 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
         hand_8 = findViewById(R.id.hand_8);
         hand_9 = findViewById(R.id.hand_9);
         hand_10 = findViewById(R.id.hand_10);
+
+        d_1 = findViewById(R.id.value_1);
+        d_2 = findViewById(R.id.value_2);
+        d_3 = findViewById(R.id.value_3);
+        d_4 = findViewById(R.id.value_4);
+        d_5 = findViewById(R.id.value_5);
+        d_6 = findViewById(R.id.value_6);
+        d_7 = findViewById(R.id.value_7);
+        d_8 = findViewById(R.id.value_8);
+        d_9 = findViewById(R.id.value_9);
+        d_10 = findViewById(R.id.value_10);
 
         table = findViewById(R.id.table);
         winning_1 = findViewById(R.id.winning_1);
@@ -445,7 +466,12 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                                 delaying = 900;
                                 new Card_5(field_card_5.getContext());
 
-                                new Hand_1(hand_1.getContext());
+                                new Hand_1(hand_1.getContext(), hand_2.getContext(), hand_3.getContext(),
+                                        hand_4.getContext(), hand_5.getContext(), hand_6.getContext(),
+                                        hand_7.getContext(), hand_8.getContext(), hand_9.getContext(),
+                                        hand_10.getContext(), d_1.getContext(), d_2.getContext(), d_3.getContext(),
+                                        d_4.getContext(), d_5.getContext(), d_6.getContext(), d_7.getContext(),
+                                        d_8.getContext(), d_9.getContext(), d_10.getContext());
                                 if(auto_hold_value == 1) {
                                     Stop();
                                 }
@@ -643,16 +669,26 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
                 hold = 300;
                 delaying = 50;
 
-                hand_1.setVisibility(View.INVISIBLE);
-                hand_2.setVisibility(View.INVISIBLE);
-                hand_3.setVisibility(View.INVISIBLE);
-                hand_4.setVisibility(View.INVISIBLE);
-                hand_5.setVisibility(View.INVISIBLE);
-                hand_6.setVisibility(View.INVISIBLE);
-                hand_7.setVisibility(View.INVISIBLE);
-                hand_8.setVisibility(View.INVISIBLE);
-                hand_9.setVisibility(View.INVISIBLE);
-                hand_10.setVisibility(View.INVISIBLE);
+                hand_1.setBackgroundColor(Color.BLACK);
+                hand_2.setBackgroundColor(Color.BLACK);
+                hand_3.setBackgroundColor(Color.BLACK);
+                hand_4.setBackgroundColor(Color.BLACK);
+                hand_5.setBackgroundColor(Color.BLACK);
+                hand_6.setBackgroundColor(Color.BLACK);
+                hand_7.setBackgroundColor(Color.BLACK);
+                hand_8.setBackgroundColor(Color.BLACK);
+                hand_9.setBackgroundColor(Color.BLACK);
+                hand_10.setBackgroundColor(Color.BLACK);
+                d_1.setBackgroundColor(Color.BLACK);
+                d_2.setBackgroundColor(Color.BLACK);
+                d_3.setBackgroundColor(Color.BLACK);
+                d_4.setBackgroundColor(Color.BLACK);
+                d_5.setBackgroundColor(Color.BLACK);
+                d_6.setBackgroundColor(Color.BLACK);
+                d_7.setBackgroundColor(Color.BLACK);
+                d_8.setBackgroundColor(Color.BLACK);
+                d_9.setBackgroundColor(Color.BLACK);
+                d_10.setBackgroundColor(Color.BLACK);
 
                 if(Hand_1.hold1 == 0) {
                     field_card_1.setVisibility(View.INVISIBLE);
@@ -1115,16 +1151,6 @@ public class MainClass extends AppCompatActivity implements View.OnClickListener
     }
     void Bet() {
         final TextView u1 = findViewById(R.id.bet_value);
-        final TextView d_1 = findViewById(R.id.value_1);
-        final TextView d_2 = findViewById(R.id.value_2);
-        final TextView d_3 = findViewById(R.id.value_3);
-        final TextView d_4 = findViewById(R.id.value_4);
-        final TextView d_5 = findViewById(R.id.value_5);
-        final TextView d_6 = findViewById(R.id.value_6);
-        final TextView d_7 = findViewById(R.id.value_7);
-        final TextView d_8 = findViewById(R.id.value_8);
-        final TextView d_9 = findViewById(R.id.value_9);
-        final TextView d_10 = findViewById(R.id.value_10);
         winning_value = findViewById(R.id.winning_value);
 
         u1.setText(String.format(Locale.getDefault(), "%d", (bet_value)));

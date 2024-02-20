@@ -5,10 +5,10 @@ import static com.example.joker_card.MainClass.stop;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Handler;
 import android.os.Looper;
-import android.view.View;
-import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Hand_1 extends Activity {
     int n1;
@@ -50,18 +50,35 @@ public class Hand_1 extends Activity {
     public static int hold4;
     public static int hold5;
 
-    Hand_1(Context context_hand_1) {
+    Hand_1(Context context_hand_1, Context context_hand_2, Context context_hand_3,
+           Context context_hand_4, Context context_hand_5, Context context_hand_6,
+           Context context_hand_7, Context context_hand_8, Context context_hand_9,
+           Context context_hand_10, Context context_d_1, Context context_d_2,
+           Context context_d_3, Context context_d_4, Context context_d_5,
+           Context context_d_6, Context context_d_7, Context context_d_8,
+           Context context_d_9, Context context_d_10) {
 
-        ImageView hand_1 = ((Activity)context_hand_1).findViewById(R.id.hand_1);
-        ImageView hand_2 = ((Activity)context_hand_1).findViewById(R.id.hand_2);
-        ImageView hand_3 = ((Activity)context_hand_1).findViewById(R.id.hand_3);
-        ImageView hand_4 = ((Activity)context_hand_1).findViewById(R.id.hand_4);
-        ImageView hand_5 = ((Activity)context_hand_1).findViewById(R.id.hand_5);
-        ImageView hand_6 = ((Activity)context_hand_1).findViewById(R.id.hand_6);
-        ImageView hand_7 = ((Activity)context_hand_1).findViewById(R.id.hand_7);
-        ImageView hand_8 = ((Activity)context_hand_1).findViewById(R.id.hand_8);
-        ImageView hand_9 = ((Activity)context_hand_1).findViewById(R.id.hand_9);
-        ImageView hand_10 = ((Activity)context_hand_1).findViewById(R.id.hand_10);
+        TextView hand_1 = ((Activity)context_hand_1).findViewById(R.id.hand_1);
+        TextView hand_2 = ((Activity)context_hand_2).findViewById(R.id.hand_2);
+        TextView hand_3 = ((Activity)context_hand_3).findViewById(R.id.hand_3);
+        TextView hand_4 = ((Activity)context_hand_4).findViewById(R.id.hand_4);
+        TextView hand_5 = ((Activity)context_hand_5).findViewById(R.id.hand_5);
+        TextView hand_6 = ((Activity)context_hand_6).findViewById(R.id.hand_6);
+        TextView hand_7 = ((Activity)context_hand_7).findViewById(R.id.hand_7);
+        TextView hand_8 = ((Activity)context_hand_8).findViewById(R.id.hand_8);
+        TextView hand_9 = ((Activity)context_hand_9).findViewById(R.id.hand_9);
+        TextView hand_10 = ((Activity)context_hand_10).findViewById(R.id.hand_10);
+
+        TextView d_1 = ((Activity)context_d_1).findViewById(R.id.value_1);
+        TextView d_2 = ((Activity)context_d_2).findViewById(R.id.value_2);
+        TextView d_3 = ((Activity)context_d_3).findViewById(R.id.value_3);
+        TextView d_4 = ((Activity)context_d_4).findViewById(R.id.value_4);
+        TextView d_5 = ((Activity)context_d_5).findViewById(R.id.value_5);
+        TextView d_6 = ((Activity)context_d_6).findViewById(R.id.value_6);
+        TextView d_7 = ((Activity)context_d_7).findViewById(R.id.value_7);
+        TextView d_8 = ((Activity)context_d_8).findViewById(R.id.value_8);
+        TextView d_9 = ((Activity)context_d_9).findViewById(R.id.value_9);
+        TextView d_10 = ((Activity)context_d_10).findViewById(R.id.value_10);
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
 
@@ -1310,34 +1327,44 @@ public class Hand_1 extends Activity {
             }
 
             if (Five_of_a_kind == 1) {
-                hand_1.setVisibility(View.VISIBLE);
+                hand_1.setBackgroundColor(Color.BLUE);
+                d_1.setBackgroundColor(Color.BLUE);
             }
             if (Royal_flush == 1) {
-                hand_2.setVisibility(View.VISIBLE);
+                hand_2.setBackgroundColor(Color.BLUE);
+                d_2.setBackgroundColor(Color.BLUE);
             }
             if (Street_flush == 1) {
-                hand_3.setVisibility(View.VISIBLE);
+                hand_3.setBackgroundColor(Color.BLUE);
+                d_3.setBackgroundColor(Color.BLUE);
             }
             if (Poker == 1) {
-                hand_4.setVisibility(View.VISIBLE);
+                hand_4.setBackgroundColor(Color.BLUE);
+                d_4.setBackgroundColor(Color.BLUE);
             }
             if (Full_house == 1) {
-                hand_5.setVisibility(View.VISIBLE);
+                hand_5.setBackgroundColor(Color.BLUE);
+                d_5.setBackgroundColor(Color.BLUE);
             }
             if (Flush == 1) {
-                hand_6.setVisibility(View.VISIBLE);
+                hand_6.setBackgroundColor(Color.BLUE);
+                d_6.setBackgroundColor(Color.BLUE);
             }
             if (Street == 1) {
-                hand_7.setVisibility(View.VISIBLE);
+                hand_7.setBackgroundColor(Color.BLUE);
+                d_7.setBackgroundColor(Color.BLUE);
             }
             if (Three_of_a_kind == 1) {
-                hand_8.setVisibility(View.VISIBLE);
+                hand_8.setBackgroundColor(Color.BLUE);
+                d_8.setBackgroundColor(Color.BLUE);
             }
             if (Two_pairs == 1) {
-                hand_9.setVisibility(View.VISIBLE);
+                hand_9.setBackgroundColor(Color.BLUE);
+                d_9.setBackgroundColor(Color.BLUE);
             }
             if (High_pair == 1) {
-                hand_10.setVisibility(View.VISIBLE);
+                hand_10.setBackgroundColor(Color.BLUE);
+                d_10.setBackgroundColor(Color.BLUE);
             }
             if(auto_hold_value == 0) {
                 hold1 = 0;
